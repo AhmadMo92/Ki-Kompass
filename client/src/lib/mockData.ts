@@ -28,11 +28,11 @@ export interface RoleData {
 
 // Map key: "Sector-RoleGroup"
 // Sectors: ["Health", "IT", "Logistics", "Administration"]
-// Role Groups: ["Program & Ops", "Analytical", "Service", "Technical"]
+// Role Groups: ["Program Project Manager", "Talent Acquisition", "Software Developer", "Data Analyst"]
 
 export const mockRoleData: Record<string, RoleData> = {
   // --- HEALTH ---
-  "Health-Program & Ops": {
+  "Health-Program Project Manager": {
     augmented: 55, automated: 15, stable: 30,
     augmentationBalance: "Mostly Augmenting",
     skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:35}, {year:'Q3', intensity:40}, {year:'Q4', intensity:45}, {year:'Q5', intensity:50}, {year:'Q6', intensity:55}],
@@ -44,19 +44,7 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Requires local fluency and regulatory knowledge.",
     changePressure: "Medium", opportunitySurface: "High"
   },
-  "Health-Analytical": {
-    augmented: 70, automated: 20, stable: 10,
-    augmentationBalance: "Mostly Augmenting",
-    skillIntensity: [{year:'Q1', intensity:40}, {year:'Q2', intensity:50}, {year:'Q3', intensity:60}, {year:'Q4', intensity:70}, {year:'Q5', intensity:75}, {year:'Q6', intensity:80}],
-    demandSignal: "Growing",
-    demandDescription: "Data-driven diagnostics are booming.",
-    opportunityAlignment: 85,
-    opportunityDescription: "Critical need for health informatics.",
-    languageSensitivity: "Medium", credentialDependency: "High",
-    contextDescription: "Technical skills transferable, but credentials key.",
-    changePressure: "High", opportunitySurface: "High"
-  },
-  "Health-Service": {
+  "Health-Talent Acquisition": {
     augmented: 40, automated: 10, stable: 50,
     augmentationBalance: "Mostly Augmenting",
     skillIntensity: [{year:'Q1', intensity:20}, {year:'Q2', intensity:25}, {year:'Q3', intensity:30}, {year:'Q4', intensity:35}, {year:'Q5', intensity:40}, {year:'Q6', intensity:45}],
@@ -68,7 +56,7 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Communication is paramount.",
     changePressure: "Low", opportunitySurface: "High"
   },
-  "Health-Technical": {
+  "Health-Software Developer": {
     augmented: 60, automated: 20, stable: 20,
     augmentationBalance: "Mostly Augmenting",
     skillIntensity: [{year:'Q1', intensity:50}, {year:'Q2', intensity:60}, {year:'Q3', intensity:70}, {year:'Q4', intensity:75}, {year:'Q5', intensity:80}, {year:'Q6', intensity:85}],
@@ -80,9 +68,21 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Certifications are mandatory.",
     changePressure: "High", opportunitySurface: "High"
   },
+  "Health-Data Analyst": {
+    augmented: 70, automated: 20, stable: 10,
+    augmentationBalance: "Mostly Augmenting",
+    skillIntensity: [{year:'Q1', intensity:40}, {year:'Q2', intensity:50}, {year:'Q3', intensity:60}, {year:'Q4', intensity:70}, {year:'Q5', intensity:75}, {year:'Q6', intensity:80}],
+    demandSignal: "Growing",
+    demandDescription: "Data-driven diagnostics are booming.",
+    opportunityAlignment: 85,
+    opportunityDescription: "Critical need for health informatics.",
+    languageSensitivity: "Medium", credentialDependency: "High",
+    contextDescription: "Technical skills transferable, but credentials key.",
+    changePressure: "High", opportunitySurface: "High"
+  },
 
   // --- IT ---
-  "IT-Program & Ops": {
+  "IT-Program Project Manager": {
     augmented: 65, automated: 25, stable: 10,
     augmentationBalance: "Mostly Augmenting",
     skillIntensity: [{year:'Q1', intensity:40}, {year:'Q2', intensity:50}, {year:'Q3', intensity:55}, {year:'Q4', intensity:60}, {year:'Q5', intensity:65}, {year:'Q6', intensity:70}],
@@ -94,19 +94,7 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Experience often outweighs degrees.",
     changePressure: "Medium", opportunitySurface: "Medium"
   },
-  "IT-Analytical": {
-    augmented: 60, automated: 30, stable: 10,
-    augmentationBalance: "Mixed",
-    skillIntensity: [{year:'Q1', intensity:60}, {year:'Q2', intensity:70}, {year:'Q3', intensity:80}, {year:'Q4', intensity:85}, {year:'Q5', intensity:90}, {year:'Q6', intensity:95}],
-    demandSignal: "Growing",
-    demandDescription: "AI & Data roles are exploding.",
-    opportunityAlignment: 95,
-    opportunityDescription: "Highest growth sector for data skills.",
-    languageSensitivity: "Low", credentialDependency: "Medium",
-    contextDescription: "Technical English is the global standard.",
-    changePressure: "High", opportunitySurface: "High"
-  },
-  "IT-Service": {
+  "IT-Talent Acquisition": {
     augmented: 30, automated: 60, stable: 10,
     augmentationBalance: "Mostly Automating",
     skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:40}, {year:'Q3', intensity:50}, {year:'Q4', intensity:60}, {year:'Q5', intensity:70}, {year:'Q6', intensity:80}],
@@ -118,7 +106,7 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Remote support requires clear communication.",
     changePressure: "High", opportunitySurface: "Low"
   },
-  "IT-Technical": {
+  "IT-Software Developer": {
     augmented: 80, automated: 10, stable: 10,
     augmentationBalance: "Mostly Augmenting",
     skillIntensity: [{year:'Q1', intensity:50}, {year:'Q2', intensity:60}, {year:'Q3', intensity:70}, {year:'Q4', intensity:80}, {year:'Q5', intensity:85}, {year:'Q6', intensity:90}],
@@ -130,9 +118,21 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Code is the universal language.",
     changePressure: "High", opportunitySurface: "High"
   },
+  "IT-Data Analyst": {
+    augmented: 60, automated: 30, stable: 10,
+    augmentationBalance: "Mixed",
+    skillIntensity: [{year:'Q1', intensity:60}, {year:'Q2', intensity:70}, {year:'Q3', intensity:80}, {year:'Q4', intensity:85}, {year:'Q5', intensity:90}, {year:'Q6', intensity:95}],
+    demandSignal: "Growing",
+    demandDescription: "AI & Data roles are exploding.",
+    opportunityAlignment: 95,
+    opportunityDescription: "Highest growth sector for data skills.",
+    languageSensitivity: "Low", credentialDependency: "Medium",
+    contextDescription: "Technical English is the global standard.",
+    changePressure: "High", opportunitySurface: "High"
+  },
 
   // --- LOGISTICS ---
-  "Logistics-Program & Ops": {
+  "Logistics-Program Project Manager": {
     augmented: 50, automated: 30, stable: 20,
     augmentationBalance: "Mixed",
     skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:35}, {year:'Q3', intensity:45}, {year:'Q4', intensity:50}, {year:'Q5', intensity:55}, {year:'Q6', intensity:60}],
@@ -144,19 +144,7 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Operational experience is highly valued.",
     changePressure: "Medium", opportunitySurface: "Medium"
   },
-  "Logistics-Analytical": {
-    augmented: 60, automated: 30, stable: 10,
-    augmentationBalance: "Mixed",
-    skillIntensity: [{year:'Q1', intensity:40}, {year:'Q2', intensity:50}, {year:'Q3', intensity:55}, {year:'Q4', intensity:60}, {year:'Q5', intensity:65}, {year:'Q6', intensity:70}],
-    demandSignal: "Growing",
-    demandDescription: "Route optimization needs data analysts.",
-    opportunityAlignment: 70,
-    opportunityDescription: "Growing need for predictive logistics.",
-    languageSensitivity: "Medium", credentialDependency: "Medium",
-    contextDescription: "Analytical tools require training.",
-    changePressure: "Medium", opportunitySurface: "High"
-  },
-  "Logistics-Service": {
+  "Logistics-Talent Acquisition": {
     augmented: 20, automated: 50, stable: 30,
     augmentationBalance: "Mostly Automating",
     skillIntensity: [{year:'Q1', intensity:20}, {year:'Q2', intensity:25}, {year:'Q3', intensity:30}, {year:'Q4', intensity:40}, {year:'Q5', intensity:50}, {year:'Q6', intensity:60}],
@@ -168,7 +156,7 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Customer interaction is reducing.",
     changePressure: "High", opportunitySurface: "Low"
   },
-  "Logistics-Technical": {
+  "Logistics-Software Developer": {
     augmented: 40, automated: 40, stable: 20,
     augmentationBalance: "Mixed",
     skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:40}, {year:'Q3', intensity:50}, {year:'Q4', intensity:55}, {year:'Q5', intensity:60}, {year:'Q6', intensity:65}],
@@ -180,9 +168,21 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Technical manuals are standard.",
     changePressure: "Medium", opportunitySurface: "Medium"
   },
+  "Logistics-Data Analyst": {
+    augmented: 60, automated: 30, stable: 10,
+    augmentationBalance: "Mixed",
+    skillIntensity: [{year:'Q1', intensity:40}, {year:'Q2', intensity:50}, {year:'Q3', intensity:55}, {year:'Q4', intensity:60}, {year:'Q5', intensity:65}, {year:'Q6', intensity:70}],
+    demandSignal: "Growing",
+    demandDescription: "Route optimization needs data analysts.",
+    opportunityAlignment: 70,
+    opportunityDescription: "Growing need for predictive logistics.",
+    languageSensitivity: "Medium", credentialDependency: "Medium",
+    contextDescription: "Analytical tools require training.",
+    changePressure: "Medium", opportunitySurface: "High"
+  },
 
   // --- ADMINISTRATION ---
-  "Administration-Program & Ops": {
+  "Administration-Program Project Manager": {
     augmented: 50, automated: 40, stable: 10,
     augmentationBalance: "Mostly Automating",
     skillIntensity: [{year:'Q1', intensity:20}, {year:'Q2', intensity:30}, {year:'Q3', intensity:40}, {year:'Q4', intensity:50}, {year:'Q5', intensity:60}, {year:'Q6', intensity:70}],
@@ -194,19 +194,7 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Cultural nuance is key for high-level support.",
     changePressure: "High", opportunitySurface: "Low"
   },
-  "Administration-Analytical": {
-    augmented: 70, automated: 20, stable: 10,
-    augmentationBalance: "Mostly Augmenting",
-    skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:40}, {year:'Q3', intensity:50}, {year:'Q4', intensity:60}, {year:'Q5', intensity:65}, {year:'Q6', intensity:70}],
-    demandSignal: "Stable",
-    demandDescription: "Business intelligence is standard.",
-    opportunityAlignment: 75,
-    opportunityDescription: "Data literacy is now baseline.",
-    languageSensitivity: "Medium", credentialDependency: "High",
-    contextDescription: "Reporting requires precision.",
-    changePressure: "Medium", opportunitySurface: "Medium"
-  },
-  "Administration-Service": {
+  "Administration-Talent Acquisition": {
     augmented: 30, automated: 60, stable: 10,
     augmentationBalance: "Mostly Automating",
     skillIntensity: [{year:'Q1', intensity:20}, {year:'Q2', intensity:30}, {year:'Q3', intensity:40}, {year:'Q4', intensity:50}, {year:'Q5', intensity:60}, {year:'Q6', intensity:70}],
@@ -218,7 +206,7 @@ export const mockRoleData: Record<string, RoleData> = {
     contextDescription: "Face-to-face roles diminishing.",
     changePressure: "High", opportunitySurface: "Low"
   },
-  "Administration-Technical": {
+  "Administration-Software Developer": {
     augmented: 50, automated: 20, stable: 30,
     augmentationBalance: "Mixed",
     skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:35}, {year:'Q3', intensity:40}, {year:'Q4', intensity:45}, {year:'Q5', intensity:50}, {year:'Q6', intensity:55}],
@@ -228,6 +216,18 @@ export const mockRoleData: Record<string, RoleData> = {
     opportunityDescription: "SaaS management skills needed.",
     languageSensitivity: "Medium", credentialDependency: "Medium",
     contextDescription: "System admin certifications help.",
+    changePressure: "Medium", opportunitySurface: "Medium"
+  },
+  "Administration-Data Analyst": {
+    augmented: 70, automated: 20, stable: 10,
+    augmentationBalance: "Mostly Augmenting",
+    skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:40}, {year:'Q3', intensity:50}, {year:'Q4', intensity:60}, {year:'Q5', intensity:65}, {year:'Q6', intensity:70}],
+    demandSignal: "Stable",
+    demandDescription: "Business intelligence is standard.",
+    opportunityAlignment: 75,
+    opportunityDescription: "Data literacy is now baseline.",
+    languageSensitivity: "Medium", credentialDependency: "High",
+    contextDescription: "Reporting requires precision.",
     changePressure: "Medium", opportunitySurface: "Medium"
   }
 };
@@ -240,7 +240,7 @@ export const sectorExposureData = [
 ];
 
 export const sectors = ["Health", "IT", "Logistics", "Administration"];
-export const roleGroups = ["Program & Ops", "Analytical", "Service", "Technical"];
+export const roleGroups = ["Program Project Manager", "Talent Acquisition", "Software Developer", "Data Analyst"];
 export const roleContexts = ["Current role", "Previous role", "Target role"];
 export const regions = ["Global", "North America", "Europe", "Asia Pacific"];
 

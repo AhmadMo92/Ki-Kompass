@@ -17,20 +17,20 @@ import { TrendingUp, ArrowRight, ArrowRightLeft } from "lucide-react";
 export default function Home() {
   // State
   const [selectedSector, setSelectedSector] = useState("Health");
-  const [selectedRole, setSelectedRole] = useState("Program & Ops");
+  const [selectedRole, setSelectedRole] = useState("Program Project Manager");
   const [roleContext, setRoleContext] = useState("Current role");
   const [selectedRegion, setSelectedRegion] = useState("Global");
   const [showContext, setShowContext] = useState(false);
   
   // Comparison State
   const [compareMode, setCompareMode] = useState(false);
-  const [compareRole, setCompareRole] = useState("Analytical");
+  const [compareRole, setCompareRole] = useState("Data Analyst");
 
   // Derived Data Logic
   const primaryDataKey = `${selectedSector}-${selectedRole}`;
   const compareDataKey = `${selectedSector}-${compareRole}`;
 
-  const primaryData = mockRoleData[primaryDataKey] || mockRoleData["Health-Program & Ops"]; // Fallback
+  const primaryData = mockRoleData[primaryDataKey] || mockRoleData["Health-Program Project Manager"]; // Fallback
   const compareData = mockRoleData[compareDataKey]; // Can be undefined
 
   // Summary Text Logic
