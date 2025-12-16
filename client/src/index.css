@@ -9,17 +9,17 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   
-  /* Color Palette - Calm, Research-Oriented, Neutral */
+  /* Color Palette - Updated for more vibrancy but still professional */
   /* Base - Paper-like warmth */
   --color-background: hsl(210 20% 98%); 
-  --color-foreground: hsl(215 25% 27%); /* Slate 800 - softer than black */
+  --color-foreground: hsl(215 25% 27%);
 
   /* Surface - Clean White */
   --color-card: hsl(0 0% 100%);
   --color-card-foreground: hsl(215 25% 27%);
 
-  /* Primary - Trustworthy Blue */
-  --color-primary: hsl(215 32% 45%); /* Muted Slate Blue */
+  /* Primary - Deeper, more authoritative Blue */
+  --color-primary: hsl(222 47% 31%);
   --color-primary-foreground: hsl(210 40% 98%);
 
   /* Secondary - Soft Neutral */
@@ -39,16 +39,21 @@
   --color-input: hsl(214 20% 90%);
   --color-ring: hsl(215 32% 45%);
 
-  /* Semantic / Charts - Non-alarmist */
-  --color-chart-1: hsl(215 32% 55%); /* Augmented (Blue-ish) */
-  --color-chart-2: hsl(150 10% 60%); /* Stable (Sage Green-ish) */
-  --color-chart-3: hsl(240 5% 70%);  /* Automated (Neutral Gray) */
-  --color-chart-4: hsl(30 20% 60%);  /* Warning/Change (Muted Tan/Orange) */
-  --color-chart-5: hsl(280 10% 60%); /* Other (Muted Purple) */
+  /* Semantic / Charts - Distinct and Interactive */
+  /* Augmented: Vibrant Blue */
+  --color-chart-1: hsl(217 91% 60%); 
+  /* Stable: Calming Teal */
+  --color-chart-2: hsl(172 66% 50%); 
+  /* Automated: Neutral Slate/Purple tint */
+  --color-chart-3: hsl(262 52% 47%);  
+  /* Warning/Change: Warm Orange */
+  --color-chart-4: hsl(24 94% 50%);  
+  /* Other: Soft Pink/Purple */
+  --color-chart-5: hsl(320 60% 60%); 
 
   --color-popover: hsl(0 0% 100%);
   --color-popover-foreground: hsl(215 25% 27%);
-  --color-destructive: hsl(0 60% 60%); /* Softened Red */
+  --color-destructive: hsl(0 60% 60%);
   --color-destructive-foreground: hsl(0 0% 98%);
 
   --color-sidebar: hsl(210 20% 98%);
