@@ -18,7 +18,7 @@ export default function Landing() {
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary tracking-tight leading-tight drop-shadow-sm">
             AI is not replacing most jobs.<br />
-            It is <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">reshaping</span> tasks, skills, and expectations.
+            It is <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-violet-500 to-fuchsia-500 font-extrabold animate-in fade-in duration-1000 drop-shadow-[0_0_25px_rgba(168,85,247,0.6)] filter brightness-110">reshaping</span> tasks, skills, and expectations.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
             This platform helps you understand how AI is changing work — based on tasks, skills, and real labor-market evidence.
@@ -67,9 +67,9 @@ export default function Landing() {
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
             
             {/* CARD 1: EXPLORE ROLES */}
-            <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-border/60 hover:border-blue-200 group h-full flex flex-col bg-white/80 backdrop-blur-sm">
+            <Card className="hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.4)] hover:-translate-y-1 transition-all duration-300 border-border/60 hover:border-blue-400 group h-full flex flex-col bg-white/80 backdrop-blur-sm">
               <CardHeader>
-                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-blue-600">
+                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-blue-600 group-hover:text-blue-500 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all">
                   <Layout className="w-5 h-5" />
                 </div>
                 <CardTitle className="font-serif text-2xl group-hover:text-blue-700 transition-colors">Explore roles like mine</CardTitle>
@@ -93,12 +93,12 @@ export default function Landing() {
             </Card>
 
             {/* CARD 2: UNDERSTAND TASKS (EMPHASIZED) */}
-            <Card className="hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-indigo-200 bg-gradient-to-b from-white to-indigo-50/30 group relative h-full flex flex-col transform md:-translate-y-6 ring-1 ring-indigo-100">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+            <Card className="hover:shadow-[0_0_50px_-10px_rgba(99,102,241,0.6)] hover:-translate-y-2 transition-all duration-300 border-indigo-300 bg-gradient-to-b from-white to-indigo-50/50 group relative h-full flex flex-col transform md:-translate-y-6 shadow-[0_0_20px_-5px_rgba(99,102,241,0.3)]">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-[0_0_20px_rgba(168,85,247,0.6)] border border-white/20">
                 Start Here
               </div>
               <CardHeader>
-                <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 text-indigo-600">
+                <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 text-indigo-600 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] transition-all duration-300">
                   <ListChecks className="w-5 h-5" />
                 </div>
                 <CardTitle className="font-serif text-2xl text-indigo-900">Understand my tasks</CardTitle>
@@ -114,7 +114,7 @@ export default function Landing() {
               </CardContent>
               <CardFooter>
                 <Link href="/my-role">
-                  <Button size="lg" className="w-full shadow-lg shadow-indigo-200/50 bg-indigo-600 hover:bg-indigo-700 transition-all text-white">
+                  <Button size="lg" className="w-full shadow-lg shadow-indigo-200/50 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 transition-all text-white border-0">
                     Describe my role <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
@@ -122,9 +122,9 @@ export default function Landing() {
             </Card>
 
             {/* CARD 3: BIG PICTURE */}
-            <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-border/60 hover:border-teal-200 group h-full flex flex-col bg-white/80 backdrop-blur-sm">
+            <Card className="hover:shadow-[0_0_30px_-5px_rgba(20,184,166,0.4)] hover:-translate-y-1 transition-all duration-300 border-border/60 hover:border-teal-400 group h-full flex flex-col bg-white/80 backdrop-blur-sm">
               <CardHeader>
-                <div className="w-10 h-10 bg-teal-50 rounded-lg flex items-center justify-center mb-4 text-teal-600">
+                <div className="w-10 h-10 bg-teal-50 rounded-lg flex items-center justify-center mb-4 text-teal-600 group-hover:text-teal-500 group-hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-all">
                   <Brain className="w-5 h-5" />
                 </div>
                 <CardTitle className="font-serif text-2xl group-hover:text-teal-700 transition-colors">Understand the bigger picture</CardTitle>
