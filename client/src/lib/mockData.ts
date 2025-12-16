@@ -1,4 +1,13 @@
 // Data types
+export interface ContextData {
+  languageSensitivity: "Low" | "Medium" | "High";
+  credentialDependency: "Low" | "Medium" | "High";
+  description: string;
+  augmentationBalance?: string;
+  laborDemand?: string;
+  laborDemandDescription?: string;
+}
+
 export interface RoleData {
   augmented: number;
   automated: number;
@@ -234,3 +243,30 @@ export const sectors = ["Health", "IT", "Logistics", "Administration"];
 export const roleGroups = ["Program & Ops", "Analytical", "Service", "Technical"];
 export const roleContexts = ["Current role", "Previous role", "Target role"];
 export const regions = ["Global", "North America", "Europe", "Asia Pacific"];
+
+// Legacy/Fallback Exports for Chart Components
+export const taskTransformationData = [
+  { name: "Augmented", augmented: 55, stable: 0, automated: 0 },
+  { name: "Stable", augmented: 0, stable: 30, automated: 0 },
+  { name: "Automated", augmented: 0, stable: 0, automated: 15 },
+  // Keeping original structure for compatibility if needed, but adapting to the new data model
+  { name: "Total", augmented: 55, stable: 30, automated: 15 }
+];
+
+export const skillDynamicsData = [
+  { year: 'Q1', intensity: 30 }, 
+  { year: 'Q2', intensity: 35 }, 
+  { year: 'Q3', intensity: 40 }, 
+  { year: 'Q4', intensity: 45 }, 
+  { year: 'Q5', intensity: 50 }, 
+  { year: 'Q6', intensity: 55 }
+];
+
+export const sectorContextData = sectorExposureData;
+
+export const opportunityData = [
+  { role: "AI Ethics Specialist", sector: "Tech & Legal", growth: "High" },
+  { role: "Human-Centric Care", sector: "Healthcare", growth: "Very High" },
+  { role: "Green Energy Tech", sector: "Energy", growth: "High" },
+  { role: "Personalized Ed. Guide", sector: "Education", growth: "Medium" },
+];

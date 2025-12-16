@@ -8,7 +8,7 @@ import { ContextAccessPanel } from "@/components/dashboard/ContextAccessPanel";
 import { AugmentationBalancePanel } from "@/components/dashboard/AugmentationBalancePanel";
 import { LaborDemandPanel } from "@/components/dashboard/LaborDemandPanel";
 import { QuadrantChart } from "@/components/dashboard/QuadrantChart";
-import { mockRoleData, sectorExposureData, contextAccessData } from "@/lib/mockData";
+import { mockRoleData, sectorExposureData } from "@/lib/mockData";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
