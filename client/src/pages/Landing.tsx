@@ -6,15 +6,10 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-background font-sans selection:bg-primary/10 flex flex-col relative overflow-hidden">
+    <div className="min-h-screen bg-white font-sans selection:bg-primary/10 flex flex-col">
       
-      {/* Background Decor */}
-      <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-blue-50/80 via-indigo-50/30 to-background -z-10" />
-      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-purple-100/40 rounded-full blur-3xl -z-10" />
-      <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] bg-blue-100/40 rounded-full blur-3xl -z-10" />
-
       {/* SECTION 1: HERO */}
-      <section className="flex-1 flex flex-col items-center justify-center py-24 px-6 text-center max-w-5xl mx-auto space-y-10 animate-in fade-in zoom-in-95 duration-700">
+      <section className="flex-1 flex flex-col items-center justify-center py-32 px-6 text-center max-w-5xl mx-auto space-y-10 animate-in fade-in zoom-in-95 duration-700">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary tracking-tight leading-tight drop-shadow-sm">
             AI is not replacing most jobs.<br />
@@ -25,42 +20,13 @@ export default function Landing() {
           </p>
         </div>
         
-        <div className="text-sm font-medium text-primary/80 bg-white/60 backdrop-blur-sm px-5 py-2.5 rounded-full border border-primary/10 shadow-sm inline-block">
+        <div className="text-sm font-medium text-primary/80 bg-white border border-primary/10 px-5 py-2.5 rounded-full shadow-sm inline-block">
           Explains structural patterns. Does not predict individual outcomes.
         </div>
       </section>
 
-      {/* SECTION 2: WHAT THIS PLATFORM DOES */}
-      <section className="bg-white/40 border-y border-border/40 py-16 backdrop-blur-sm">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-3 p-4 rounded-xl hover:bg-white/50 transition-colors">
-              <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto shadow-sm border border-blue-100 text-blue-600">
-                <ListChecks className="w-6 h-6" />
-              </div>
-              <h3 className="font-bold text-foreground text-lg">Task-based analysis</h3>
-              <p className="text-muted-foreground leading-relaxed">Focus on activities, not alarming job loss headlines.</p>
-            </div>
-            <div className="space-y-3 p-4 rounded-xl hover:bg-white/50 transition-colors">
-              <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center mx-auto shadow-sm border border-indigo-100 text-indigo-600">
-                <Brain className="w-6 h-6" />
-              </div>
-              <h3 className="font-bold text-foreground text-lg">Research-backed insights</h3>
-              <p className="text-muted-foreground leading-relaxed">Built on data from OECD, IAB, and labor economics.</p>
-            </div>
-            <div className="space-y-3 p-4 rounded-xl hover:bg-white/50 transition-colors">
-              <div className="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto shadow-sm border border-teal-100 text-teal-600">
-                <Layout className="w-6 h-6" />
-              </div>
-              <h3 className="font-bold text-foreground text-lg">Calm explanations</h3>
-              <p className="text-muted-foreground leading-relaxed">Clear context without predictions or career advice.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: EXPLORE PATHS */}
-      <section className="py-24 px-6">
+      {/* SECTION 2: EXPLORE PATHS */}
+      <section className="py-24 px-6 bg-white border-t border-border/40">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-serif font-bold text-center text-primary mb-16">Choose how you want to explore</h2>
           
