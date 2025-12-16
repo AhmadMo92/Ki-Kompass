@@ -1,0 +1,174 @@
+Create a NEW ENTRY / LANDING PAGE for the
+"AI & Workforce Intelligence Platform".
+
+This page is NOT a dashboard.
+It is an ORIENTATION & DISCOVERY PAGE.
+
+The goal is to:
+- immediately reframe fear around AI and work
+- clearly explain what this platform helps users understand
+- invite users into exploration paths
+- feel modern, calm, and intellectually serious
+
+================================
+CORE PRODUCT PRINCIPLE
+================================
+Users should feel:
+"Okay, this is interesting. I want to explore."
+
+NOT:
+"I need to understand charts."
+
+================================
+PAGE STRUCTURE
+================================
+
+--------------------------------
+SECTION 1 — HERO (NO CHARTS)
+--------------------------------
+
+Centered content. Clean. Calm.
+
+MAIN HEADLINE (large, bold):
+"AI is not replacing most jobs.
+It is reshaping tasks, skills, and expectations."
+
+SUBHEADLINE (1–2 lines):
+"This platform helps you understand how AI is changing work —
+based on tasks, skills, and real labor-market evidence."
+
+SMALL DISCLAIMER (subtle):
+"Explains structural patterns. Does not predict individual outcomes."
+
+Optional subtle background visual (abstract, not data-heavy).
+
+--------------------------------
+SECTION 2 — WHAT THIS PLATFORM DOES (VERY SHORT)
+--------------------------------
+
+Three short bullets or icons:
+
+- Task-based analysis (not job loss headlines)
+- Research-backed insights (OECD, IAB, labor economics)
+- Calm explanations, not predictions or advice
+
+Keep this tight. No jargon.
+
+--------------------------------
+SECTION 3 — CHOOSE HOW YOU WANT TO EXPLORE (KEY SECTION)
+--------------------------------
+
+Display THREE LARGE, CLICKABLE CARDS
+(equal size, visually strong, plenty of space).
+
+--------------------------------
+CARD 1 — EXPLORE BY ROLE
+--------------------------------
+
+Title:
+"Explore roles like mine"
+
+Description:
+"See how AI typically affects tasks, skills, and demand
+across roles and sectors."
+
+What users will see (small caption):
+"Task transformation • Skill change • Demand context"
+
+CTA Button:
+"Explore roles →"
+
+On click:
+Navigate to the main role-based dashboard view.
+
+--------------------------------
+CARD 2 — UNDERSTAND MY TASKS (PRIMARY CTA)
+--------------------------------
+
+Visually emphasize this card slightly more than others.
+
+Title:
+"Understand what happens to my tasks"
+
+Description:
+"Select a role or confirm typical tasks.
+See which parts of the work are supported by AI,
+automated, or remain human."
+
+Caption:
+"Job-Futuromat-style • No CV • No predictions"
+
+CTA Button:
+"Describe my role →"
+
+On click:
+Navigate to the role → task → AI impact flow.
+
+--------------------------------
+CARD 3 — SEE THE BIG PICTURE
+--------------------------------
+
+Title:
+"Understand the bigger picture"
+
+Description:
+"A research-based view of how AI is reshaping
+skills, hiring, and labor demand overall."
+
+Caption:
+"Trends • Patterns • Context"
+
+CTA Button:
+"See the big picture →"
+
+On click:
+Navigate to a high-level narrative / explainer page
+(no detailed dashboard yet).
+
+--------------------------------
+SECTION 4 — TRUST & POSITIONING (SUBTLE)
+--------------------------------
+
+Small text block or footer-style content:
+
+- "Built on labor-market research, not hype"
+- "Task- and skill-based, not job predictions"
+- "Designed for workers, migrants, educators, and policymakers"
+
+Optional links:
+- Methodology
+- Sources
+- About
+
+--------------------------------
+DESIGN REQUIREMENTS
+--------------------------------
+
+- NO charts on this page
+- NO indicators on this page
+- NO filters on this page
+- Calm colors, lots of whitespace
+- Strong typography hierarchy
+- Feels more like an explainer than a dashboard
+- Mobile-friendly
+
+--------------------------------
+ENGINEERING NOTES
+--------------------------------
+
+- Implement as a separate page/component:
+  pages/index.tsx or pages/entry.tsx
+- Keep navigation clean and explicit
+- Buttons should route to existing prototype pages
+- No backend logic required
+
+--------------------------------
+OUTPUT REQUIRED
+--------------------------------
+
+1) Frontend code for the entry page
+2) Clean component structure
+3) Short explanation of how this page:
+   - improves first impression
+   - increases engagement
+   - prepares users for dashboards
