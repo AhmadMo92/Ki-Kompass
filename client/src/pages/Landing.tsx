@@ -16,19 +16,33 @@ export default function Landing() {
       </div>
 
       {/* SECTION 1: HERO */}
-      <section className="flex-1 flex flex-col items-center justify-center py-32 px-6 text-center max-w-5xl mx-auto space-y-10 animate-in fade-in zoom-in-95 duration-700 relative z-10">
+      <section className="flex-1 flex flex-col items-center justify-center py-32 px-6 text-center max-w-5xl mx-auto space-y-12 animate-in fade-in zoom-in-95 duration-700 relative z-10">
+        <div className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50/50 px-3 py-1 text-sm font-medium text-indigo-800 backdrop-blur-sm mb-4">
+          <span className="flex h-2 w-2 rounded-full bg-indigo-600 mr-2 animate-pulse"></span>
+          Updated with 2025 Labor Market Data
+        </div>
+
         <div className="space-y-6">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary tracking-tight leading-tight drop-shadow-sm">
+          <h1 className="text-5xl md:text-7xl font-serif font-bold text-slate-900 tracking-tight leading-tight drop-shadow-sm">
             AI is not replacing most jobs.<br />
-            It is <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-violet-500 to-fuchsia-500 font-extrabold animate-in fade-in duration-1000 drop-shadow-[0_0_30px_rgba(168,85,247,0.5)] filter brightness-110 pb-2">reshaping</span> tasks.
+            It is <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-violet-500 to-fuchsia-500 font-extrabold animate-in fade-in duration-1000 drop-shadow-[0_0_30px_rgba(168,85,247,0.5)] filter brightness-110 pb-2">reshaping</span> tasks, skills, and expectations.
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed">
             This platform helps you understand how AI is changing work — based on tasks, skills, and real labor-market evidence.
           </p>
         </div>
         
-        <div className="text-sm font-medium text-primary/80 bg-white/50 backdrop-blur-md border border-primary/10 px-6 py-3 rounded-full shadow-sm inline-block">
-          Explains structural patterns. Does not predict individual outcomes.
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-4">
+           <Link href="/my-role">
+             <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-slate-900 hover:bg-slate-800 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+               Analyze My Role
+             </Button>
+           </Link>
+           <Link href="/big-picture">
+             <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-slate-200 hover:bg-white hover:text-slate-900 shadow-sm hover:shadow-md transition-all">
+               View Market Trends
+             </Button>
+           </Link>
         </div>
       </section>
 
