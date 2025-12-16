@@ -1,19 +1,16 @@
 import { useState, useMemo } from "react";
 import { TaskTransformationChart } from "@/components/dashboard/TaskTransformationChart";
-import { SkillDynamicsChart } from "@/components/dashboard/SkillDynamicsChart";
-import { SectorContextChart } from "@/components/dashboard/SectorContextChart";
 import { InterpretationPanel } from "@/components/dashboard/InterpretationPanel";
 import { FilterBar } from "@/components/dashboard/FilterBar";
-import { ContextAccessPanel } from "@/components/dashboard/ContextAccessPanel";
-import { AugmentationBalancePanel } from "@/components/dashboard/AugmentationBalancePanel";
-import { LaborDemandPanel } from "@/components/dashboard/LaborDemandPanel";
-import { QuadrantChart } from "@/components/dashboard/QuadrantChart";
 import { MyRoleTasks } from "@/components/role-descriptor/MyRoleTasks";
-import { mockRoleData, sectorExposureData } from "@/lib/mockData";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { mockRoleData } from "@/lib/mockData";
 import { Separator } from "@/components/ui/separator";
-import { TrendingUp, ArrowRight, ArrowRightLeft } from "lucide-react";
+
+// New Components
+import { InsightHero } from "@/components/dashboard/InsightHero";
+import { PracticeExplanation } from "@/components/dashboard/PracticeExplanation";
+import { SkillDemandContext } from "@/components/dashboard/SkillDemandContext";
+import { DeepDiveSection } from "@/components/dashboard/DeepDiveSection";
 
 export default function Home() {
   // State
@@ -21,29 +18,17 @@ export default function Home() {
   const [selectedRole, setSelectedRole] = useState("Program Project Manager");
   const [roleContext, setRoleContext] = useState("Current role");
   const [selectedRegion, setSelectedRegion] = useState("Global");
-  const [showContext, setShowContext] = useState(false);
+  const [showContext, setShowContext] = useState(false); // Kept for prop compatibility, though UI changed
   
-  // Comparison State
+  // Comparison State (kept for filter bar compatibility)
   const [compareMode, setCompareMode] = useState(false);
   const [compareRole, setCompareRole] = useState("Data Analyst");
 
   // Derived Data Logic
   const primaryDataKey = `${selectedSector}-${selectedRole}`;
-  const compareDataKey = `${selectedSector}-${compareRole}`;
+  const primaryData = mockRoleData[primaryDataKey] || mockRoleData["Health-Program Project Manager"];
 
-  const primaryData = mockRoleData[primaryDataKey] || mockRoleData["Health-Program Project Manager"]; // Fallback
-  const compareData = mockRoleData[compareDataKey]; // Can be undefined
-
-  // Summary Text Logic
-  const summaryText = useMemo(() => {
-    return {
-      impact: `is mainly ${primaryData.augmentationBalance.toLowerCase()}`,
-      skill: primaryData.skillIntensity[5].intensity > 70 ? "rapidly" : "moderately",
-      demand: primaryData.demandSignal.toLowerCase()
-    };
-  }, [primaryData]);
-
-  // Context Data Construction (Bridging old component prop structure)
+  // Context Data Construction
   const contextData = {
     languageSensitivity: primaryData.languageSensitivity,
     credentialDependency: primaryData.credentialDependency,
@@ -53,36 +38,31 @@ export default function Home() {
     laborDemandDescription: primaryData.demandDescription
   };
 
-  // Helper to map Low/Med/High to 0-100 for charts
-  const mapLevelToNum = (level: string) => {
-    if (level === "High") return 85;
-    if (level === "Medium") return 50;
-    return 15;
-  };
+  // Generate explanatory text for Section 2
+  const explanationText = useMemo(() => {
+    if (primaryData.augmentationBalance === "Mostly Automating") {
+      return `In this ${selectedRole} role, AI is increasingly handling routine coordination and standardized processing. The core value shifts towards managing these systems, handling exceptions, and complex stakeholder engagement.`;
+    }
+    return `In this ${selectedRole} role, AI is mainly used to support documentation, coordination, and analytical preparation. Core responsibilities such as decision-making, accountability, and stakeholder trust remain human.`;
+  }, [selectedRole, primaryData.augmentationBalance]);
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/10 pb-20">
       {/* A) HEADER */}
-      <header className="border-b border-border/60 bg-white/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-5 max-w-7xl">
-          <h1 className="text-2xl md:text-3xl font-serif font-medium text-primary mb-1">
-            AI, Work, and Skill Transformation
-          </h1>
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
-            <p className="text-base text-muted-foreground font-light">
-              A task-based, research-backed view of how AI reshapes work
-            </p>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground/70 font-medium">
-              Research Prototype v2.0
-            </div>
+      <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-border/40">
+        <div className="container mx-auto px-6 py-4 max-w-7xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+             <h1 className="text-xl font-serif font-medium text-primary">
+              AI & Workforce Intelligence
+            </h1>
+            <p className="text-xs text-muted-foreground">Guided Explanation Interface v2.0</p>
           </div>
-          <div className="mt-2 text-xs text-muted-foreground bg-secondary/30 inline-block px-2 py-1 rounded border border-border/40">
-            Explains structural patterns. Does not predict individual outcomes.
-          </div>
+          
+           {/* Compact Filter Bar embedded in header or just below */}
         </div>
       </header>
 
-      {/* B) FILTER BAR */}
+      {/* B) FILTER BAR (Sticky) */}
       <FilterBar 
         selectedSector={selectedSector}
         setSelectedSector={setSelectedSector}
@@ -100,138 +80,56 @@ export default function Home() {
         setCompareRole={setCompareRole}
       />
 
-      <main className="container mx-auto px-6 py-8 max-w-7xl space-y-8">
-        
-        {/* D) TOP SUMMARY STRIP */}
-        <section className="bg-primary/5 border border-primary/10 rounded-xl p-6 md:p-8 relative overflow-hidden transition-all duration-500 ease-in-out">
-           <div className="absolute top-0 left-0 w-1 h-full bg-primary/30"></div>
-           <div className="grid md:grid-cols-3 gap-6 text-sm md:text-base">
-             <div className="space-y-1">
-               <span className="text-xs font-semibold text-primary/60 uppercase tracking-wider">Impact Type</span>
-               <p className="font-medium text-foreground">In this context, AI <span className="text-primary font-semibold border-b border-primary/30">{summaryText.impact}</span>.</p>
-             </div>
-             <div className="space-y-1">
-               <span className="text-xs font-semibold text-primary/60 uppercase tracking-wider">Skill Pressure</span>
-               <p className="font-medium text-foreground">Skill requirements are changing <span className="text-amber-600/80 font-semibold border-b border-amber-600/20">{summaryText.skill}</span>.</p>
-             </div>
-             <div className="space-y-1">
-                <span className="text-xs font-semibold text-primary/60 uppercase tracking-wider">Demand Signal</span>
-                <p className="font-medium text-foreground">Labor demand is <span className="text-emerald-600/80 font-semibold border-b border-emerald-600/20">{summaryText.demand}</span> in this role group.</p>
-             </div>
-           </div>
-        </section>
+      {/* SECTION 1: INSIGHT HERO (Above the Fold) */}
+      <InsightHero 
+        role={selectedRole}
+        balance={primaryData.augmentationBalance}
+        skillPressure={primaryData.changePressure}
+        demandSignal={primaryData.demandSignal}
+      />
 
-        {/* COMPARISON BANNER (Optional) */}
-        {compareMode && (
-          <div className="bg-secondary/30 border border-border/50 rounded-lg p-3 flex items-center justify-center gap-4 text-sm text-muted-foreground animate-in fade-in slide-in-from-top-2">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-primary"></span>
-              <span className="font-medium text-foreground">{selectedRole}</span>
-            </div>
-            <ArrowRightLeft className="w-4 h-4 opacity-50" />
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-orange-500"></span>
-              <span className="font-medium text-foreground">{compareRole}</span>
-            </div>
+      <main className="container mx-auto px-6 py-12 max-w-7xl space-y-16">
+        
+        {/* SECTION 2: WHY THIS IS HAPPENING */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-serif text-primary">Why this role is changing</h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {explanationText}
+            </p>
           </div>
-        )}
-
-        {/* MAIN DASHBOARD PANELS (GRID A-G) */}
-        
-        {/* ROW 1: Task Focus */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* G.1) TASK TRANSFORMATION */}
-          <div className="md:col-span-2">
+          <div className="bg-white p-6 rounded-xl border border-border/40 shadow-sm">
+             <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 text-center">Typical Task Transformation</h4>
              <TaskTransformationChart />
           </div>
-          {/* G.2) AUGMENTATION VS AUTOMATION */}
-          <div>
-            <AugmentationBalancePanel status={primaryData.augmentationBalance} />
-          </div>
-        </div>
+        </section>
 
-        {/* ROW 2: Strategic & Skill */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* F) QUADRANT CHART */}
-           <div>
-             <QuadrantChart 
-                primaryRole={{
-                  changePressure: mapLevelToNum(primaryData.changePressure),
-                  opportunityAlignment: primaryData.opportunityAlignment,
-                  label: selectedRole
-                }}
-                secondaryRole={compareMode && compareData ? {
-                  changePressure: mapLevelToNum(compareData.changePressure),
-                  opportunityAlignment: compareData.opportunityAlignment,
-                  label: compareRole
-                } : null}
-             />
-           </div>
+        {/* SECTION 3 & 4: PRACTICE & CONTEXT */}
+        <section className="grid md:grid-cols-2 gap-8">
+           <PracticeExplanation balance={primaryData.augmentationBalance} />
+           <SkillDemandContext 
+              skillPressure={primaryData.changePressure}
+              demandSignal={primaryData.demandSignal}
+           />
+        </section>
 
-          {/* G.3) SKILL CHANGE DYNAMICS */}
-          <div className="md:col-span-2 h-[350px]">
-             <SkillDynamicsChart />
-          </div>
-        </div>
+        {/* SECTION 5: DEEP DIVE (Progressive) */}
+        <DeepDiveSection 
+          balance={primaryData.augmentationBalance}
+          contextData={contextData}
+        />
 
-        {/* ROW 3: Market & Context */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-           {/* G.4) SECTOR EXPOSURE */}
-           <div className="h-[350px]">
-             <SectorContextChart />
-           </div>
-
-           {/* G.5 & G.6) DEMAND & OPPORTUNITY */}
-           <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-             <LaborDemandPanel 
-                status={primaryData.demandSignal} 
-                description={primaryData.demandDescription}
-             />
-             
-             <Card className="h-full border-none shadow-sm bg-white/50 backdrop-blur-sm hover:shadow-md transition-shadow duration-300">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg text-primary font-serif flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5" />
-                    Opportunity Alignment
-                  </CardTitle>
-                  <CardDescription>
-                    Degree of overlap with high-growth areas.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-4 flex flex-col items-center justify-center">
-                   <div className="text-4xl font-bold text-primary mb-2">
-                     {primaryData.opportunityAlignment}<span className="text-lg text-muted-foreground font-normal">/100</span>
-                   </div>
-                   <p className="text-sm text-center text-muted-foreground px-4">
-                     {primaryData.opportunityDescription}
-                   </p>
-                   {compareMode && compareData && (
-                     <div className="mt-4 pt-4 border-t border-border/40 w-full flex justify-between text-xs text-muted-foreground">
-                        <span>vs {compareRole}:</span>
-                        <span className="font-bold text-orange-600">{compareData.opportunityAlignment}/100</span>
-                     </div>
-                   )}
-                </CardContent>
-             </Card>
-           </div>
-        </div>
-
-        {/* G.7) CONTEXT & ACCESS (TOGGLEABLE) */}
-        {showContext && (
-          <div className="animate-in fade-in slide-in-from-top-4 duration-500">
-            <ContextAccessPanel data={contextData} />
-          </div>
-        )}
-
-        {/* H) INTERPRETATION PANEL */}
+        {/* SECTION 6: INTERPRETATION */}
         <InterpretationPanel />
+
+        {/* MY ROLE TASKS FEATURE */}
+        <div className="pt-8 border-t border-border/60">
+           <MyRoleTasks />
+        </div>
 
       </main>
 
-      {/* NEW SECTION: MY ROLE TASKS */}
-      <MyRoleTasks />
-
-      {/* I) FOOTER */}
+      {/* FOOTER */}
       <footer className="bg-white border-t border-border/60 py-12 mt-12">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
