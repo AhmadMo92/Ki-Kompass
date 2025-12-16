@@ -1,0 +1,182 @@
+You are building a LOW-FIDELITY prototype of an interactive
+"AI & Workforce Intelligence Dashboard".
+
+This prototype is for DESIGN EXPLORATION ONLY.
+Indicators are placeholders but must be conceptually correct.
+
+The platform explains how AI reshapes work through TASKS, SKILLS,
+and LABOR MARKET CONTEXT — not job loss or individual predictions.
+
+### CORE DESIGN PRINCIPLES
+- Research-backed tone (OECD / IAB style)
+- Calm, non-alarmist language
+- Tasks and skills, not jobs disappearing
+- Clear separation between:
+  data → interpretation → uncertainty
+- Suitable for a general workforce audience, including migrants
+
+---
+
+## DASHBOARD GOAL
+
+Help a user understand in 3–5 minutes:
+1) How AI interacts with tasks in their context
+2) How skill requirements are changing
+3) Where labor market opportunities exist
+4) What this DOES and DOES NOT mean
+
+---
+
+## REQUIRED INDICATORS (USE PLACEHOLDER DATA)
+
+Implement the following conceptual indicators:
+
+1. Task AI Exposure
+   - % of tasks likely to be augmented
+   - % of tasks potentially automated
+   - % of tasks largely stable
+
+2. Augmentation vs Automation Balance
+   - Qualitative indicator: "Mostly Augmenting / Mixed / Mostly Automating"
+
+3. Skill Change Intensity
+   - Low / Medium / High (time-based trend)
+
+4. Sector AI Exposure
+   - Relative exposure by sector (bar chart)
+
+5. Labor Demand Signal
+   - Stable / Growing / Declining (by sector or role group)
+
+6. Opportunity Alignment
+   - Overlap between:
+     - skill profile
+     - growing demand sectors
+     - augmentation-heavy tasks
+
+7. Context Sensitivity (optional toggle)
+   - Language dependency: Low / Medium / High
+   - Credential dependency: Low / Medium / High
+
+---
+
+## DASHBOARD STRUCTURE
+
+### 1. HEADER
+- Title: "AI, Work, and Skill Transformation"
+- Subtitle: "A task-based, research-backed view of how AI reshapes work"
+- Disclaimer (small text):
+  "This platform explains structural patterns and trends.
+   It does not predict individual outcomes."
+
+---
+
+### 2. FILTER BAR (INTERACTIVE)
+Allow user to select:
+- Sector (dropdown)
+- Broad role group (dropdown)
+- Region (optional placeholder)
+- Toggle: "Show integration context"
+
+Changing filters updates all indicators.
+
+---
+
+### 3. SUMMARY INSIGHT STRIP (TOP)
+Dynamic text summary that updates based on filters.
+
+Example structure:
+"In this context, AI is mainly augmenting tasks.
+Skill requirements are changing at a moderate pace.
+Labor demand remains strong in adjacent roles."
+
+This is TEXT, not a score.
+
+---
+
+### 4. MAIN DASHBOARD PANELS
+
+#### PANEL A — TASK TRANSFORMATION
+- Stacked bar or donut chart:
+  - Augmented tasks
+  - Automated tasks
+  - Stable human tasks
+- Tooltip:
+  "AI affects tasks within jobs, not entire occupations."
+
+---
+
+#### PANEL B — SKILL CHANGE DYNAMICS
+- Line or band chart showing Skill Change Intensity over time
+- Explanatory caption:
+  "This reflects how quickly skill requirements evolve,
+   not the risk of job loss."
+
+---
+
+#### PANEL C — SECTOR CONTEXT
+- Bar chart of AI exposure by sector
+- Neutral color palette
+- No red/green danger colors
+
+---
+
+#### PANEL D — OPPORTUNITY SIGNALS
+- Simple visual or list showing:
+  - Sectors with rising demand
+  - Adjacent roles with similar task profiles
+- Caption:
+  "These are structural opportunity areas, not guarantees."
+
+---
+
+#### PANEL E — CONTEXT & ACCESS (TOGGLEABLE)
+Visible only if "Show integration context" is ON.
+
+Show:
+- Language sensitivity indicator
+- Credential dependency indicator
+
+Caption:
+"Access to opportunities depends on language,
+credential recognition, and institutional context."
+
+---
+
+### 5. INTERPRETATION & LIMITATIONS PANEL
+
+Title:
+"What this means — and what it doesn't"
+
+Include:
+- 3 bullet points: What the indicators suggest
+- 2 bullet points: What they do NOT mean
+- One paragraph on uncertainty and context-dependence
+
+---
+
+### 6. FOOTER / TRUST ELEMENTS
+- Data sources (placeholders: OECD, IAB, ILO)
+- Methodology & limitations
+- About this platform
+
+---
+
+## DESIGN STYLE
+- Calm, minimal layout
+- Soft blues / greys
+- Plenty of whitespace
+- No alerts, no warnings, no scores
+
+---
+
+## IMPORTANT
+- Use dummy data
+- Do NOT include career advice
+- Do NOT calculate individual risk
+- Focus on interpretability and flow
+
+Generate:
+1) The frontend code (any simple framework is fine)
+2) A short explanation of how the dashboard helps users
+   understand AI-driven change responsibly.
