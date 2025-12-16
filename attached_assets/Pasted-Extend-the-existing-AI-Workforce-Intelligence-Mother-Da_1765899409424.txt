@@ -1,0 +1,206 @@
+Extend the existing "AI & Workforce Intelligence – Mother Dashboard"
+by adding a NEW FEATURE called:
+
+"My Role & Tasks"
+
+This feature should work similarly to Germany’s Job-Futuromat,
+but adapted for AI AUGMENTATION (not only automation).
+
+The goal is to make it EASY for users:
+- no manual skill typing
+- no CV upload
+- no personal evaluation
+- only role recognition and task confirmation
+
+========================
+FEATURE GOAL
+========================
+Help users understand how AI typically interacts with the TASKS
+of a role they recognize as theirs.
+
+This feature explains PATTERNS, not individual outcomes.
+
+========================
+USER FLOW (VERY IMPORTANT)
+========================
+
+STEP 1 — ROLE SELECTION (DEFAULT ENTRY)
+
+Show a search + select component:
+
+Label:
+"Select a role similar to yours"
+
+Options:
+- Searchable role list (mock data):
+  ["Program Manager", "Project Coordinator", "Product Operations",
+   "HR Generalist", "Logistics Coordinator", "Policy Officer"]
+
+Also show:
+- Sector dropdown (required):
+  ["Health", "IT", "Administration", "Logistics", "Education"]
+- Role Context selector:
+  ["Current role", "Previous role"]
+
+Button:
+"Continue"
+
+------------------------
+
+STEP 2 — TASK CONFIRMATION (KEY UX STEP)
+
+After role selection, show:
+
+Title:
+"People in this role typically do the following tasks"
+
+Display a LIST of TASKS with CHECKBOXES (checked by default).
+Example for Program Manager:
+
+- Coordinating stakeholders and partners
+- Planning programs and timelines
+- Writing reports and documentation
+- Monitoring budgets and progress
+- Supporting decision-making
+
+Allow users to:
+- uncheck tasks that do not fit
+- add ONE optional custom task (free text, optional)
+
+Add a small note:
+"You don’t need to be exact. This is about patterns, not precision."
+
+Button:
+"Analyze tasks"
+
+------------------------
+
+STEP 3 — AI TASK INTERACTION (OUTPUT)
+
+After clicking "Analyze tasks", show the results.
+
+========================
+OUTPUT PANELS
+========================
+
+PANEL 1 — TASK INTERACTION OVERVIEW
+
+Visual:
+- Donut or stacked bar chart with:
+  - Augmented tasks (%)
+  - Automated tasks (%)
+  - Mostly human tasks (%)
+
+Text below chart:
+"Based on typical AI use for these tasks."
+
+Tooltip:
+"AI affects tasks within roles, not entire jobs."
+
+------------------------
+
+PANEL 2 — TASK CATEGORY BREAKDOWN
+
+Show a simple list/table:
+
+Task category → Typical AI interaction
+
+Examples:
+- Documentation & reporting → Mostly augmented
+- Routine coordination → Partially automated
+- Analysis & planning → Augmented
+- Decision-making & accountability → Human-dominant
+
+------------------------
+
+PANEL 3 — WHAT THIS MEANS (MANDATORY)
+
+Title:
+"What this means — and what it doesn’t"
+
+Include:
+- 3 bullet points explaining:
+  - how AI supports these tasks
+  - how work may change
+  - why human responsibility remains
+- 2 bullet points explaining:
+  - this is NOT job loss prediction
+  - this is NOT a hiring decision
+
+Explicit sentence:
+"Augmentation usually changes HOW work is done,
+not WHETHER the role exists."
+
+------------------------
+
+PANEL 4 — CONTINUE EXPLORING
+
+Text:
+"You can compare this task profile with typical roles
+and sectors in the main dashboard."
+
+Button:
+"Compare with typical roles"
+
+========================
+DATA & LOGIC (MOCK, EXPLAINABLE)
+========================
+
+Use predefined role → task profiles stored in a file:
+data/roleTaskProfiles.json
+
+Example structure:
+{
+  "Program Manager": {
+    "tasks": [
+      { "category": "Coordination & Communication", "weight": 0.25 },
+      { "category": "Planning & Analysis", "weight": 0.20 },
+      { "category": "Documentation & Reporting", "weight": 0.20 },
+      { "category": "Monitoring & Control", "weight": 0.15 },
+      { "category": "Decision Support", "weight": 0.20 }
+    ]
+  }
+}
+
+Use a separate mapping:
+task category → AI interaction type
+(e.g. augmented / automated / human)
+
+All logic must be:
+- deterministic
+- rule-based
+- commented
+- explainable
+
+========================
+DESIGN & ETHICS RULES
+========================
+
+- NO skill input fields
+- NO risk scores
+- NO employability language
+- NO predictions
+- NO personal data storage
+- Calm, neutral language only
+
+========================
+ENGINEERING NOTES
+========================
+
+- Create a new component:
+  components/MyRoleTasks.tsx
+- Keep task logic in:
+  utils/taskImpactLogic.ts
+- Reuse existing chart components
+- Keep UI clean, calm, and readable
+- Use mock data only
+
+========================
+OUTPUT REQUIRED
+========================
+
+1) Updated frontend code with this feature implemented
+2) Mock role → task profile data
+3) Mock task → AI interaction mapping
+4) Short explanation of how this mirrors Job-Futuromat
+   but extends it to AI augmentation

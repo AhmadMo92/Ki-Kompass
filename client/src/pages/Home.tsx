@@ -8,7 +8,7 @@ import { ContextAccessPanel } from "@/components/dashboard/ContextAccessPanel";
 import { AugmentationBalancePanel } from "@/components/dashboard/AugmentationBalancePanel";
 import { LaborDemandPanel } from "@/components/dashboard/LaborDemandPanel";
 import { QuadrantChart } from "@/components/dashboard/QuadrantChart";
-import { RoleDescriptor } from "@/components/role-descriptor/RoleDescriptor";
+import { MyRoleTasks } from "@/components/role-descriptor/MyRoleTasks";
 import { mockRoleData, sectorExposureData } from "@/lib/mockData";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -228,8 +228,8 @@ export default function Home() {
 
       </main>
 
-      {/* NEW SECTION: ROLE DESCRIPTOR */}
-      <RoleDescriptor />
+      {/* NEW SECTION: MY ROLE TASKS */}
+      <MyRoleTasks />
 
       {/* I) FOOTER */}
       <footer className="bg-white border-t border-border/60 py-12 mt-12">
