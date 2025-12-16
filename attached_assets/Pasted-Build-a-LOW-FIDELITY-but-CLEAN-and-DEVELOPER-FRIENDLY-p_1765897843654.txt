@@ -1,0 +1,113 @@
+Build a LOW-FIDELITY but CLEAN and DEVELOPER-FRIENDLY prototype of the
+"AI & Workforce Intelligence – Mother Dashboard" as a single-page interactive web app.
+
+This is a DESIGN/UX + STRUCTURE prototype, not a production system.
+Use mock/sample data only, but keep indicators conceptually correct.
+
+IMPORTANT: This is NOT a job board, NOT a career advice tool, and NOT a prediction engine.
+Avoid alarmist language and avoid risk scores. Explain patterns and uncertainty.
+
+========================
+GOALS (3–5 minutes)
+========================
+Help users understand:
+1) How AI interacts with tasks (augmentation vs automation vs stable human)
+2) How fast skills are changing
+3) Where labor demand is growing/stable/declining
+4) How “change pressure” and “opportunity alignment” can coexist
+5) What this does and does not mean
+
+========================
+UI REQUIREMENTS
+========================
+A) Header
+- Title: "AI, Work, and Skill Transformation"
+- Subtitle: "A task-based, research-backed view of how AI reshapes work"
+- Small disclaimer: "Explains structural patterns. Does not predict individual outcomes."
+
+B) Filter Bar (interactive)
+Include:
+- Sector dropdown: ["Health", "IT", "Logistics", "Administration"]
+- Role Group dropdown: ["Program & Ops", "Analytical", "Service", "Technical"]
+- Role Context toggle: ["Current role", "Previous role", "Target role"]
+- Optional: Region dropdown (placeholder values)
+- Toggle switch: "Show integration context"
+
+Changing filters must update all panels.
+
+C) Role Comparison (lightweight)
+Add an optional "Compare with..." dropdown that lets the user pick a second role group.
+When enabled, show side-by-side values for key indicators (Task Exposure, Skill Change, Demand).
+
+D) Top Summary Strip (dynamic text, not a score)
+Generate 2–3 sentences that summarize the selected context, example tone:
+"In this context, AI is mainly augmenting tasks. Skill requirements are changing at a moderate pace.
+Labor demand is growing in adjacent roles."
+
+E) Dashboard Layout (clean, calm)
+Use cards with whitespace. No red/green danger colors. No “risk %”.
+
+========================
+INDICATORS (8 TOTAL)
+========================
+Use mock data structured by (sector, roleGroup, roleContext).
+1) Task AI Exposure: augmented %, automated %, stable %
+2) Augmentation vs Automation Balance: label (Mostly Augmenting / Mixed / Mostly Automating)
+3) Skill Change Intensity: low/medium/high + simple time series (last 6 quarters)
+4) Sector AI Exposure: bar chart across sectors (relative exposure index)
+5) Labor Demand Signal: growing/stable/declining + small trend sparkline
+6) Opportunity Alignment: overlap index (0–100) + explanation
+7) Language Sensitivity: low/medium/high (context indicator)
+8) Credential Dependency: low/medium/high (context indicator)
+
+Create a simple derived metric:
+- Change Pressure (Low/Medium/High) derived from automated% + skill intensity (rule-based, not ML)
+- Opportunity Surface (Low/Medium/High) derived from demand signal + opportunity alignment
+
+F) Add a 2x2 Quadrant (conceptual)
+"Change Pressure" (x-axis low→high) vs "Opportunity Alignment" (y-axis low→high).
+Plot the selected role as a single dot. If comparison role is enabled, plot a second dot.
+Add short text explaining how to read it (no deterministic claims).
+
+G) Panels (cards)
+1) Task Transformation (stacked bar or donut)
+2) Augmentation vs Automation (label + short explanation)
+3) Skill Change Dynamics (line chart)
+4) Sector AI Exposure (bar chart)
+5) Labor Demand (label + sparkline)
+6) Opportunity Alignment (gauge/bar + short explanation)
+7) Context & Access (only visible if "Show integration context" ON)
+   - Language Sensitivity
+   - Credential Dependency
+
+H) Interpretation & Limitations Panel (mandatory)
+Title: "What this means — and what it doesn’t"
+Include:
+- 3 bullets: what the indicators suggest (pattern language)
+- 2 bullets: what they do NOT mean (no personal prediction)
+- 1 short paragraph on uncertainty/assumptions
+
+I) Footer
+- Links/placeholders: "Data sources", "Methodology", "About"
+
+========================
+ENGINEERING REQUIREMENTS
+========================
+- Create a sensible project structure (components/, data/, utils/)
+- Use a simple chart library (e.g., Recharts or Chart.js)
+- Keep code readable and modular (no giant files)
+- Use TypeScript if possible
+- Mock data should live in a separate file (e.g., data/mockData.ts)
+- No backend needed; everything client-side for now
+
+========================
+OUTPUT
+========================
+1) Generate the full code for the app
+2) Include mock data for at least:
+   - 4 sectors
+   - 4 role groups
+   - 3 role contexts
+3) Provide brief run instructions and a short explanation of how the filters update indicators
+
+Remember: calm tone, research-style framing, no advice, no predictive claims.

@@ -1,132 +1,236 @@
 // Data types
-export interface TaskData {
-  name: string;
+export interface RoleData {
   augmented: number;
-  stable: number;
   automated: number;
-}
-
-export interface SkillData {
-  year: string;
-  intensity: number;
-}
-
-export interface SectorData {
-  sector: string;
-  exposure: number;
-}
-
-export interface OpportunityData {
-  role: string;
-  sector: string;
-  growth: string;
-}
-
-export interface ContextData {
+  stable: number;
+  augmentationBalance: "Mostly Augmenting" | "Mixed" | "Mostly Automating";
+  skillIntensity: { year: string; intensity: number }[];
+  demandSignal: "Growing" | "Stable" | "Declining";
+  demandDescription: string;
+  opportunityAlignment: number; // 0-100
+  opportunityDescription: string;
   languageSensitivity: "Low" | "Medium" | "High";
   credentialDependency: "Low" | "Medium" | "High";
-  description: string;
-  // Added for detailed panel support
-  augmentationBalance: "Mostly Augmenting" | "Mixed" | "Mostly Automating";
-  laborDemand: "Growing" | "Stable" | "Declining";
-  laborDemandDescription: string;
+  contextDescription: string;
+  // Derived metrics
+  changePressure: "Low" | "Medium" | "High";
+  opportunitySurface: "Low" | "Medium" | "High";
 }
 
-// Mock Data Sets
-export const taskTransformationData: TaskData[] = [
-  { name: "Admin Support", augmented: 45, stable: 30, automated: 25 },
-  { name: "Data Analysis", augmented: 60, stable: 20, automated: 20 },
-  { name: "Creative Design", augmented: 55, stable: 35, automated: 10 },
-  { name: "Customer Service", augmented: 40, stable: 25, automated: 35 },
-  { name: "Software Dev", augmented: 65, stable: 25, automated: 10 },
-];
+// Map key: "Sector-RoleGroup"
+// Sectors: ["Health", "IT", "Logistics", "Administration"]
+// Role Groups: ["Program & Ops", "Analytical", "Service", "Technical"]
 
-export const skillDynamicsData: SkillData[] = [
-  { year: "2020", intensity: 20 },
-  { year: "2021", intensity: 25 },
-  { year: "2022", intensity: 35 },
-  { year: "2023", intensity: 55 },
-  { year: "2024", intensity: 70 },
-  { year: "2025", intensity: 85 },
-];
-
-export const sectorContextData: SectorData[] = [
-  { sector: "Healthcare", exposure: 30 },
-  { sector: "Finance", exposure: 65 },
-  { sector: "Education", exposure: 40 },
-  { sector: "Manufacturing", exposure: 45 },
-  { sector: "Retail", exposure: 25 },
-  { sector: "Tech", exposure: 80 },
-];
-
-export const opportunityData: OpportunityData[] = [
-  { role: "AI Ethics Specialist", sector: "Tech & Legal", growth: "High" },
-  { role: "Human-Centric Care", sector: "Healthcare", growth: "Very High" },
-  { role: "Green Energy Tech", sector: "Energy", growth: "High" },
-  { role: "Personalized Ed. Guide", sector: "Education", growth: "Medium" },
-];
-
-// New Context Data (Enhanced for Mother Dashboard)
-export const contextAccessData: Record<string, ContextData> = {
-  default: {
-    languageSensitivity: "Medium",
-    credentialDependency: "Medium",
-    description: "Access to opportunities depends on language, credential recognition, and institutional context.",
-    augmentationBalance: "Mixed",
-    laborDemand: "Stable",
-    laborDemandDescription: "Demand reflects current labor market conditions across sectors."
-  },
-  healthcare: {
-    languageSensitivity: "High",
-    credentialDependency: "High",
-    description: "Healthcare roles often require specific certifications and high language proficiency for patient communication.",
+export const mockRoleData: Record<string, RoleData> = {
+  // --- HEALTH ---
+  "Health-Program & Ops": {
+    augmented: 55, automated: 15, stable: 30,
     augmentationBalance: "Mostly Augmenting",
-    laborDemand: "Growing",
-    laborDemandDescription: "Aging populations and specialized care needs are driving strong demand."
+    skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:35}, {year:'Q3', intensity:40}, {year:'Q4', intensity:45}, {year:'Q5', intensity:50}, {year:'Q6', intensity:55}],
+    demandSignal: "Growing",
+    demandDescription: "Healthcare operations are expanding with patient volume.",
+    opportunityAlignment: 75,
+    opportunityDescription: "High overlap with management skills.",
+    languageSensitivity: "High", credentialDependency: "High",
+    contextDescription: "Requires local fluency and regulatory knowledge.",
+    changePressure: "Medium", opportunitySurface: "High"
   },
-  tech: {
-    languageSensitivity: "Medium",
-    credentialDependency: "Low",
-    description: "Tech roles often prioritize demonstrated skills over formal credentials, but technical English is essential.",
+  "Health-Analytical": {
+    augmented: 70, automated: 20, stable: 10,
     augmentationBalance: "Mostly Augmenting",
-    laborDemand: "Growing",
-    laborDemandDescription: "Rapid digitalization continues to create new specialized roles."
+    skillIntensity: [{year:'Q1', intensity:40}, {year:'Q2', intensity:50}, {year:'Q3', intensity:60}, {year:'Q4', intensity:70}, {year:'Q5', intensity:75}, {year:'Q6', intensity:80}],
+    demandSignal: "Growing",
+    demandDescription: "Data-driven diagnostics are booming.",
+    opportunityAlignment: 85,
+    opportunityDescription: "Critical need for health informatics.",
+    languageSensitivity: "Medium", credentialDependency: "High",
+    contextDescription: "Technical skills transferable, but credentials key.",
+    changePressure: "High", opportunitySurface: "High"
   },
-  retail: {
-    languageSensitivity: "Medium",
-    credentialDependency: "Low",
-    description: "Retail roles generally have lower credential barriers but require local language fluency.",
+  "Health-Service": {
+    augmented: 40, automated: 10, stable: 50,
+    augmentationBalance: "Mostly Augmenting",
+    skillIntensity: [{year:'Q1', intensity:20}, {year:'Q2', intensity:25}, {year:'Q3', intensity:30}, {year:'Q4', intensity:35}, {year:'Q5', intensity:40}, {year:'Q6', intensity:45}],
+    demandSignal: "Growing",
+    demandDescription: "Patient care remains highly human-centric.",
+    opportunityAlignment: 90,
+    opportunityDescription: "Direct care roles are automation-resistant.",
+    languageSensitivity: "High", credentialDependency: "Medium",
+    contextDescription: "Communication is paramount.",
+    changePressure: "Low", opportunitySurface: "High"
+  },
+  "Health-Technical": {
+    augmented: 60, automated: 20, stable: 20,
+    augmentationBalance: "Mostly Augmenting",
+    skillIntensity: [{year:'Q1', intensity:50}, {year:'Q2', intensity:60}, {year:'Q3', intensity:70}, {year:'Q4', intensity:75}, {year:'Q5', intensity:80}, {year:'Q6', intensity:85}],
+    demandSignal: "Growing",
+    demandDescription: "Med-tech integration is a key driver.",
+    opportunityAlignment: 80,
+    opportunityDescription: "Specialized equipment operation in demand.",
+    languageSensitivity: "Medium", credentialDependency: "High",
+    contextDescription: "Certifications are mandatory.",
+    changePressure: "High", opportunitySurface: "High"
+  },
+
+  // --- IT ---
+  "IT-Program & Ops": {
+    augmented: 65, automated: 25, stable: 10,
+    augmentationBalance: "Mostly Augmenting",
+    skillIntensity: [{year:'Q1', intensity:40}, {year:'Q2', intensity:50}, {year:'Q3', intensity:55}, {year:'Q4', intensity:60}, {year:'Q5', intensity:65}, {year:'Q6', intensity:70}],
+    demandSignal: "Stable",
+    demandDescription: "Agile management remains relevant.",
+    opportunityAlignment: 65,
+    opportunityDescription: "Shift towards product-led growth.",
+    languageSensitivity: "Medium", credentialDependency: "Medium",
+    contextDescription: "Experience often outweighs degrees.",
+    changePressure: "Medium", opportunitySurface: "Medium"
+  },
+  "IT-Analytical": {
+    augmented: 60, automated: 30, stable: 10,
     augmentationBalance: "Mixed",
-    laborDemand: "Stable",
-    laborDemandDescription: "E-commerce shifts are balancing out physical store demand."
+    skillIntensity: [{year:'Q1', intensity:60}, {year:'Q2', intensity:70}, {year:'Q3', intensity:80}, {year:'Q4', intensity:85}, {year:'Q5', intensity:90}, {year:'Q6', intensity:95}],
+    demandSignal: "Growing",
+    demandDescription: "AI & Data roles are exploding.",
+    opportunityAlignment: 95,
+    opportunityDescription: "Highest growth sector for data skills.",
+    languageSensitivity: "Low", credentialDependency: "Medium",
+    contextDescription: "Technical English is the global standard.",
+    changePressure: "High", opportunitySurface: "High"
   },
-  finance: {
-    languageSensitivity: "High",
-    credentialDependency: "High",
-    description: "Finance requires strict regulatory knowledge and professional communication.",
+  "IT-Service": {
+    augmented: 30, automated: 60, stable: 10,
     augmentationBalance: "Mostly Automating",
-    laborDemand: "Stable",
-    laborDemandDescription: "Efficiency gains are stabilizing headcount despite volume growth."
+    skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:40}, {year:'Q3', intensity:50}, {year:'Q4', intensity:60}, {year:'Q5', intensity:70}, {year:'Q6', intensity:80}],
+    demandSignal: "Declining",
+    demandDescription: "L1 support is being heavily automated.",
+    opportunityAlignment: 30,
+    opportunityDescription: "Shift required to L2/L3 or specialized support.",
+    languageSensitivity: "Medium", credentialDependency: "Low",
+    contextDescription: "Remote support requires clear communication.",
+    changePressure: "High", opportunitySurface: "Low"
   },
-  education: {
-    languageSensitivity: "High",
-    credentialDependency: "High",
-    description: "Education is highly regulated and communication-centric.",
+  "IT-Technical": {
+    augmented: 80, automated: 10, stable: 10,
     augmentationBalance: "Mostly Augmenting",
-    laborDemand: "Growing",
-    laborDemandDescription: "Personalized learning models are increasing demand for educators."
+    skillIntensity: [{year:'Q1', intensity:50}, {year:'Q2', intensity:60}, {year:'Q3', intensity:70}, {year:'Q4', intensity:80}, {year:'Q5', intensity:85}, {year:'Q6', intensity:90}],
+    demandSignal: "Growing",
+    demandDescription: "Core engineering remains critical.",
+    opportunityAlignment: 85,
+    opportunityDescription: "AI-assisted coding increases output.",
+    languageSensitivity: "Low", credentialDependency: "Medium",
+    contextDescription: "Code is the universal language.",
+    changePressure: "High", opportunitySurface: "High"
   },
-  manufacturing: {
-    languageSensitivity: "Low",
-    credentialDependency: "Medium",
-    description: "Manufacturing values technical certifications and safety protocols.",
+
+  // --- LOGISTICS ---
+  "Logistics-Program & Ops": {
+    augmented: 50, automated: 30, stable: 20,
     augmentationBalance: "Mixed",
-    laborDemand: "Declining",
-    laborDemandDescription: "Automation of routine physical tasks is reshaping workforce needs."
+    skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:35}, {year:'Q3', intensity:45}, {year:'Q4', intensity:50}, {year:'Q5', intensity:55}, {year:'Q6', intensity:60}],
+    demandSignal: "Stable",
+    demandDescription: "Supply chain complexity requires human oversight.",
+    opportunityAlignment: 60,
+    opportunityDescription: "Digital supply chain skills in demand.",
+    languageSensitivity: "Medium", credentialDependency: "Low",
+    contextDescription: "Operational experience is highly valued.",
+    changePressure: "Medium", opportunitySurface: "Medium"
+  },
+  "Logistics-Analytical": {
+    augmented: 60, automated: 30, stable: 10,
+    augmentationBalance: "Mixed",
+    skillIntensity: [{year:'Q1', intensity:40}, {year:'Q2', intensity:50}, {year:'Q3', intensity:55}, {year:'Q4', intensity:60}, {year:'Q5', intensity:65}, {year:'Q6', intensity:70}],
+    demandSignal: "Growing",
+    demandDescription: "Route optimization needs data analysts.",
+    opportunityAlignment: 70,
+    opportunityDescription: "Growing need for predictive logistics.",
+    languageSensitivity: "Medium", credentialDependency: "Medium",
+    contextDescription: "Analytical tools require training.",
+    changePressure: "Medium", opportunitySurface: "High"
+  },
+  "Logistics-Service": {
+    augmented: 20, automated: 50, stable: 30,
+    augmentationBalance: "Mostly Automating",
+    skillIntensity: [{year:'Q1', intensity:20}, {year:'Q2', intensity:25}, {year:'Q3', intensity:30}, {year:'Q4', intensity:40}, {year:'Q5', intensity:50}, {year:'Q6', intensity:60}],
+    demandSignal: "Declining",
+    demandDescription: "Tracking inquiries are automated.",
+    opportunityAlignment: 40,
+    opportunityDescription: "Shift to exception handling.",
+    languageSensitivity: "Medium", credentialDependency: "Low",
+    contextDescription: "Customer interaction is reducing.",
+    changePressure: "High", opportunitySurface: "Low"
+  },
+  "Logistics-Technical": {
+    augmented: 40, automated: 40, stable: 20,
+    augmentationBalance: "Mixed",
+    skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:40}, {year:'Q3', intensity:50}, {year:'Q4', intensity:55}, {year:'Q5', intensity:60}, {year:'Q6', intensity:65}],
+    demandSignal: "Stable",
+    demandDescription: "Warehouse automation maintenance.",
+    opportunityAlignment: 65,
+    opportunityDescription: "Robotics maintenance skills needed.",
+    languageSensitivity: "Low", credentialDependency: "Medium",
+    contextDescription: "Technical manuals are standard.",
+    changePressure: "Medium", opportunitySurface: "Medium"
+  },
+
+  // --- ADMINISTRATION ---
+  "Administration-Program & Ops": {
+    augmented: 50, automated: 40, stable: 10,
+    augmentationBalance: "Mostly Automating",
+    skillIntensity: [{year:'Q1', intensity:20}, {year:'Q2', intensity:30}, {year:'Q3', intensity:40}, {year:'Q4', intensity:50}, {year:'Q5', intensity:60}, {year:'Q6', intensity:70}],
+    demandSignal: "Declining",
+    demandDescription: "Scheduling and coordination are automated.",
+    opportunityAlignment: 45,
+    opportunityDescription: "Move to strategic support.",
+    languageSensitivity: "High", credentialDependency: "Medium",
+    contextDescription: "Cultural nuance is key for high-level support.",
+    changePressure: "High", opportunitySurface: "Low"
+  },
+  "Administration-Analytical": {
+    augmented: 70, automated: 20, stable: 10,
+    augmentationBalance: "Mostly Augmenting",
+    skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:40}, {year:'Q3', intensity:50}, {year:'Q4', intensity:60}, {year:'Q5', intensity:65}, {year:'Q6', intensity:70}],
+    demandSignal: "Stable",
+    demandDescription: "Business intelligence is standard.",
+    opportunityAlignment: 75,
+    opportunityDescription: "Data literacy is now baseline.",
+    languageSensitivity: "Medium", credentialDependency: "High",
+    contextDescription: "Reporting requires precision.",
+    changePressure: "Medium", opportunitySurface: "Medium"
+  },
+  "Administration-Service": {
+    augmented: 30, automated: 60, stable: 10,
+    augmentationBalance: "Mostly Automating",
+    skillIntensity: [{year:'Q1', intensity:20}, {year:'Q2', intensity:30}, {year:'Q3', intensity:40}, {year:'Q4', intensity:50}, {year:'Q5', intensity:60}, {year:'Q6', intensity:70}],
+    demandSignal: "Declining",
+    demandDescription: "Front-desk and entry roles declining.",
+    opportunityAlignment: 35,
+    opportunityDescription: "Need to upskill to specialized admin.",
+    languageSensitivity: "High", credentialDependency: "Low",
+    contextDescription: "Face-to-face roles diminishing.",
+    changePressure: "High", opportunitySurface: "Low"
+  },
+  "Administration-Technical": {
+    augmented: 50, automated: 20, stable: 30,
+    augmentationBalance: "Mixed",
+    skillIntensity: [{year:'Q1', intensity:30}, {year:'Q2', intensity:35}, {year:'Q3', intensity:40}, {year:'Q4', intensity:45}, {year:'Q5', intensity:50}, {year:'Q6', intensity:55}],
+    demandSignal: "Stable",
+    demandDescription: "Office IT and system management.",
+    opportunityAlignment: 60,
+    opportunityDescription: "SaaS management skills needed.",
+    languageSensitivity: "Medium", credentialDependency: "Medium",
+    contextDescription: "System admin certifications help.",
+    changePressure: "Medium", opportunitySurface: "Medium"
   }
 };
 
-// Filter Options
-export const sectors = ["All Sectors", "Healthcare", "Finance", "Education", "Manufacturing", "Retail", "Tech"];
-export const roles = ["All Roles", "Administrative", "Technical", "Creative", "Service", "Manual"];
+export const sectorExposureData = [
+  { sector: "Health", exposure: 40 },
+  { sector: "IT", exposure: 85 },
+  { sector: "Logistics", exposure: 55 },
+  { sector: "Administration", exposure: 70 },
+];
+
+export const sectors = ["Health", "IT", "Logistics", "Administration"];
+export const roleGroups = ["Program & Ops", "Analytical", "Service", "Technical"];
+export const roleContexts = ["Current role", "Previous role", "Target role"];
 export const regions = ["Global", "North America", "Europe", "Asia Pacific"];
