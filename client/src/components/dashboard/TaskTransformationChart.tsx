@@ -30,21 +30,21 @@ export function TaskTransformationChart() {
                 }
               }}
             >
-              <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="hsl(var(--border))" />
+              <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="var(--color-border)" />
               <XAxis type="number" hide />
               <YAxis 
                 dataKey="name" 
                 type="category" 
                 width={100} 
-                tick={{ fill: 'hsl(var(--foreground))', fontSize: 12 }}
+                tick={{ fill: 'var(--color-foreground)', fontSize: 12 }}
                 axisLine={false}
                 tickLine={false}
               />
               <Tooltip 
-                cursor={{ fill: 'hsl(var(--accent))', opacity: 0.2 }}
+                cursor={{ fill: 'var(--color-accent)', opacity: 0.2 }}
                 contentStyle={{ 
-                  backgroundColor: 'hsl(var(--popover))', 
-                  border: '1px solid hsl(var(--border))',
+                  backgroundColor: 'var(--color-popover)', 
+                  border: '1px solid var(--color-border)',
                   borderRadius: 'var(--radius)',
                   boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
                 }}
@@ -54,7 +54,7 @@ export function TaskTransformationChart() {
                 dataKey="augmented" 
                 stackId="a" 
                 name="Augmented" 
-                fill="hsl(var(--chart-1))" 
+                fill="var(--color-chart-1)" 
                 radius={[0, 0, 0, 0]} 
                 fillOpacity={0.9}
               />
@@ -62,7 +62,7 @@ export function TaskTransformationChart() {
                 dataKey="stable" 
                 stackId="a" 
                 name="Stable Human" 
-                fill="hsl(var(--chart-2))" 
+                fill="var(--color-chart-2)" 
                 radius={[0, 0, 0, 0]}
                 fillOpacity={0.9}
               />
@@ -70,7 +70,7 @@ export function TaskTransformationChart() {
                 dataKey="automated" 
                 stackId="a" 
                 name="Automated" 
-                fill="hsl(var(--chart-3))" 
+                fill="var(--color-chart-3)" 
                 radius={[0, 4, 4, 0]} 
                 fillOpacity={0.9}
               />

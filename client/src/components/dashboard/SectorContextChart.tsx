@@ -29,20 +29,20 @@ export function SectorContextChart() {
               }}
               onMouseLeave={() => setFocusBar(null)}
             >
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--color-border)" />
               <XAxis 
                 dataKey="sector" 
                 tickLine={false} 
                 axisLine={false}
-                tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+                tick={{ fill: 'var(--color-muted-foreground)', fontSize: 12 }}
                 dy={10}
               />
               <YAxis hide />
               <Tooltip 
                 cursor={{ fill: 'transparent' }}
                 contentStyle={{ 
-                  backgroundColor: 'hsl(var(--popover))', 
-                  border: '1px solid hsl(var(--border))',
+                  backgroundColor: 'var(--color-popover)', 
+                  border: '1px solid var(--color-border)',
                   borderRadius: 'var(--radius)',
                   boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
                 }}
@@ -56,7 +56,7 @@ export function SectorContextChart() {
                 {sectorContextData.map((entry, index) => (
                   <Cell 
                     key={`cell-${index}`} 
-                    fill={focusBar === index ? "hsl(var(--chart-4))" : "hsl(var(--primary))"}
+                    fill={focusBar === index ? "var(--color-chart-4)" : "var(--color-primary)"}
                     opacity={focusBar === index ? 1 : 0.7}
                     className="transition-all duration-300"
                   />

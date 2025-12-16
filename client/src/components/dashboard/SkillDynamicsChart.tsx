@@ -20,16 +20,16 @@ export function SkillDynamicsChart() {
             >
               <defs>
                 <linearGradient id="colorIntensity" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="hsl(var(--chart-1))" stopOpacity={0.4}/>
-                  <stop offset="95%" stopColor="hsl(var(--chart-1))" stopOpacity={0.05}/>
+                  <stop offset="5%" stopColor="var(--color-chart-1)" stopOpacity={0.4}/>
+                  <stop offset="95%" stopColor="var(--color-chart-1)" stopOpacity={0.05}/>
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--color-border)" />
               <XAxis 
                 dataKey="year" 
                 tickLine={false} 
                 axisLine={false} 
-                tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+                tick={{ fill: 'var(--color-muted-foreground)', fontSize: 12 }}
                 dy={10}
               />
               <YAxis 
@@ -38,8 +38,8 @@ export function SkillDynamicsChart() {
               />
               <Tooltip 
                  contentStyle={{ 
-                  backgroundColor: 'hsl(var(--popover))', 
-                  border: '1px solid hsl(var(--border))',
+                  backgroundColor: 'var(--color-popover)', 
+                  border: '1px solid var(--color-border)',
                   borderRadius: 'var(--radius)',
                   boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
                 }}
@@ -47,7 +47,7 @@ export function SkillDynamicsChart() {
               <Area 
                 type="monotone" 
                 dataKey="intensity" 
-                stroke="hsl(var(--chart-1))" 
+                stroke="var(--color-chart-1)" 
                 fillOpacity={1} 
                 fill="url(#colorIntensity)" 
                 strokeWidth={3}
