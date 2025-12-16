@@ -8,6 +8,7 @@ import { ContextAccessPanel } from "@/components/dashboard/ContextAccessPanel";
 import { AugmentationBalancePanel } from "@/components/dashboard/AugmentationBalancePanel";
 import { LaborDemandPanel } from "@/components/dashboard/LaborDemandPanel";
 import { QuadrantChart } from "@/components/dashboard/QuadrantChart";
+import { RoleDescriptor } from "@/components/role-descriptor/RoleDescriptor";
 import { mockRoleData, sectorExposureData } from "@/lib/mockData";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -141,8 +142,6 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* G.1) TASK TRANSFORMATION */}
           <div className="md:col-span-2">
-             {/* Note: Passing props to update chart based on selection would go here. For prototype, we use the component which reads mock data. 
-                 Ideally, we'd refactor TaskTransformationChart to accept data props. */}
              <TaskTransformationChart />
           </div>
           {/* G.2) AUGMENTATION VS AUTOMATION */}
@@ -228,6 +227,9 @@ export default function Home() {
         <InterpretationPanel />
 
       </main>
+
+      {/* NEW SECTION: ROLE DESCRIPTOR */}
+      <RoleDescriptor />
 
       {/* I) FOOTER */}
       <footer className="bg-white border-t border-border/60 py-12 mt-12">

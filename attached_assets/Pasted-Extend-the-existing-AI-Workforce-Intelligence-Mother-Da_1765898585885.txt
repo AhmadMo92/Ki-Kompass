@@ -1,0 +1,184 @@
+Extend the existing "AI & Workforce Intelligence – Mother Dashboard"
+by adding a NEW SECTION called:
+
+"Describe Your Role"
+
+This section allows users to describe their own role in plain language
+(no CV upload, no personal data storage).
+
+The goal is to:
+- map a user-described role to task categories
+- show task-level AI interaction:
+  Augmented vs Automated vs Stable Human
+- follow a logic similar to Germany’s Job-Futuromat,
+  but adapted to AI augmentation (not only automation)
+
+This is a LOW-RISK, EXPLORATORY FEATURE.
+Use mock logic and transparent assumptions.
+
+========================
+SECTION PURPOSE
+========================
+Help users understand:
+- how AI may interact with the tasks they perform
+- which parts of their work are more likely to be supported, automated, or remain human
+- without predicting job loss or employability
+
+========================
+UI DESIGN
+========================
+
+Add a new section BELOW the main dashboard:
+
+### Section Title
+"Describe Your Role"
+
+Subtitle:
+"Describe what you do. We analyze task patterns, not people."
+
+Small disclaimer:
+"This is an interpretive tool based on research patterns.
+It does not predict individual outcomes."
+
+------------------------
+INPUT COMPONENTS
+------------------------
+
+1) Role Description Input
+- Large text area
+- Placeholder text:
+  "Describe your role and main tasks.
+   Example: managing programs, coordinating stakeholders,
+   writing reports, tracking budgets, planning timelines..."
+
+2) Sector Selector (required)
+- Dropdown:
+  ["Health", "IT", "Logistics", "Administration", "Education", "Other"]
+
+3) Role Context Selector
+- Radio buttons:
+  ["Current role", "Previous role"]
+
+4) Optional: Task Emphasis Slider (optional, mock)
+- Slider with labels:
+  "More coordination ←→ More technical"
+
+------------------------
+PROCESSING LOGIC (MOCK)
+------------------------
+
+When the user clicks "Analyze role":
+
+1) Extract task signals from the text:
+   - coordination & communication
+   - analysis & planning
+   - documentation & reporting
+   - operational execution
+   - people management
+   - creative / judgment-based tasks
+
+2) Map extracted task categories to
+   mock AI task interaction patterns:
+
+   Example mapping logic (simplified):
+   - Documentation & reporting → Mostly augmented
+   - Routine coordination → Partially automated
+   - Analysis & planning → Augmented
+   - People management & judgment → Mostly human
+   - Creative / strategic decisions → Human-dominant
+
+3) Combine with selected sector to slightly adjust exposure
+   (e.g. health vs admin vs IT)
+
+All mappings must be explainable and transparent.
+
+========================
+OUTPUT PANELS
+========================
+
+After analysis, show:
+
+### PANEL 1 — TASK INTERACTION BREAKDOWN
+Visual:
+- Donut or stacked bar chart with:
+  - Augmented tasks (%)
+  - Automated tasks (%)
+  - Mostly human tasks (%)
+
+Label text:
+"Based on the tasks described in your role."
+
+Tooltip:
+"AI affects tasks within roles, not entire jobs."
+
+------------------------
+
+### PANEL 2 — TASK CATEGORY VIEW
+Simple list or bars showing:
+- Task categories detected
+- Their typical AI interaction type:
+  - Supported (Augmented)
+  - Automatable
+  - Human-dominant
+
+Example:
+- Reporting & documentation → Augmented
+- Stakeholder coordination → Partially automated
+- Decision-making & accountability → Human-dominant
+
+------------------------
+
+### PANEL 3 — INTERPRETATION (MANDATORY)
+Title:
+"What this means — and what it doesn’t"
+
+Include:
+- 3 bullets explaining what the pattern suggests
+- 2 bullets explaining what it does NOT mean
+- Explicit statement:
+  "Augmentation usually changes how work is done,
+   not whether the role exists."
+
+------------------------
+
+### PANEL 4 — LINK BACK TO MAIN DASHBOARD
+Text:
+"You can explore how similar task profiles behave
+across sectors and roles in the main dashboard above."
+
+Button:
+"Compare with typical roles"
+
+========================
+DESIGN & ETHICAL RULES
+========================
+
+- No risk scores
+- No employability claims
+- No job-loss language
+- No personal data storage
+- Show assumptions clearly
+- Allow the system to say:
+  "The evidence here is mixed"
+
+========================
+ENGINEERING NOTES
+========================
+
+- Implement as a new component:
+  components/RoleDescriptor.tsx
+- Keep mock task-extraction logic in:
+  utils/taskMapping.ts
+- Use deterministic, rule-based mapping (no ML)
+- All logic must be readable and explainable
+- Charts should reuse existing chart components
+
+========================
+OUTPUT REQUIRED
+========================
+
+1) Updated frontend code including this new section
+2) Mock task-mapping logic (commented)
+3) Sample outputs for 2 example role descriptions
+4) Short explanation of how this mirrors
+   Job-Futuromat logic while extending it to AI augmentation
