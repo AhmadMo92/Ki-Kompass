@@ -75,7 +75,7 @@ export default function Landing() {
                  </div>
               </CardContent>
               <CardFooter className="pb-8">
-                <Link href="/dashboard">
+                <Link href="/explore-roles">
                   <Button variant="ghost" className="w-full justify-between text-blue-600 hover:text-blue-700 hover:bg-blue-50 group-hover:pr-2 transition-all font-medium text-base">
                     Browse Catalog <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>

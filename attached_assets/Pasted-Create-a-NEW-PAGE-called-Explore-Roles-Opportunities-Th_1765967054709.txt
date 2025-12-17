@@ -1,0 +1,203 @@
+Create a NEW PAGE called:
+
+"Explore Roles & Opportunities"
+
+This page helps users understand
+HOW roles, skills, and industries are shifting under AI —
+without giving career advice or predictions.
+
+This is a STRUCTURAL EXPLORATION tool, not a recommendation engine.
+
+================================
+CORE USER QUESTION
+================================
+"What kinds of roles and skills are becoming more relevant,
+and which ones face higher change pressure?"
+
+================================
+DESIGN PRINCIPLES
+================================
+- Calm, research-based framing
+- No personal scoring
+- No 'you should' language
+- Show patterns, not prescriptions
+- Emphasize opportunity AND adaptation pressure together
+
+================================
+PAGE STRUCTURE
+================================
+
+--------------------------------
+SECTION 1 — ORIENTATION (NO DATA YET)
+--------------------------------
+
+Title:
+"How AI is reshaping roles and opportunities"
+
+Short explanation (2–3 lines):
+"This view shows how roles and skill profiles are shifting
+based on task transformation, skill demand, and labor-market signals.
+It highlights patterns — not individual outcomes."
+
+Small disclaimer:
+"These are structural trends, not hiring predictions."
+
+--------------------------------
+SECTION 2 — FILTER & EXPLORE CONTEXT
+--------------------------------
+
+Provide FILTER CONTROLS at the top:
+
+- Sector (dropdown)
+  ["Health", "IT", "Logistics", "Administration", "Education", "Manufacturing"]
+
+- Role Group (dropdown)
+  ["Analytical", "Program & Ops", "Service", "Technical", "Support"]
+
+- Region (dropdown)
+  ["Germany", "Europe", "Global"]
+
+Optional toggle:
+"Compare with another role"
+
+--------------------------------
+SECTION 3 — ROLE LANDSCAPE OVERVIEW (KEY VISUAL)
+--------------------------------
+
+Display a GRID or LIST of ROLE CARDS
+(based on selected filters).
+
+Each ROLE CARD shows:
+
+- Role name
+- Sector
+- THREE STRUCTURAL SIGNALS (icons or labels):
+
+  1) Task impact:
+     Mostly augmenting / Mixed / Higher automation exposure
+
+  2) Skill change intensity:
+     Low / Moderate / High
+
+  3) Demand signal:
+     Growing / Stable / Declining
+
+Use calm labels, no scores.
+
+--------------------------------
+SECTION 4 — OPPORTUNITY & CHANGE PRESSURE VIEW
+--------------------------------
+
+When a role card is clicked, open a DETAIL PANEL.
+
+Title:
+"Structural context for this role"
+
+Include TWO clearly separated blocks:
+
+BLOCK A — Opportunity surfaces
+- Examples:
+  - "AI supports core tasks rather than replacing them"
+  - "Skill clusters remain in demand across sectors"
+  - "Role aligns with growing or stable labor demand"
+
+BLOCK B — Change pressure
+- Examples:
+  - "Increased expectations for analytical or digital fluency"
+  - "Routine elements increasingly supported by AI tools"
+  - "Higher adaptability required over time"
+
+Explicit sentence:
+"Opportunity and change pressure often coexist."
+
+--------------------------------
+SECTION 5 — SKILL CLUSTERS (NOT SKILLS LIST)
+--------------------------------
+
+Show inferred SKILL CLUSTERS for the role
+(based on task profiles).
+
+Examples:
+- Analytical reasoning
+- Coordination & communication
+- Documentation & synthesis
+- Domain knowledge
+- Judgment & decision-making
+
+For each cluster, show:
+- Typical AI interaction: Supportive / Complementary / Minimal
+
+NO skill-level assessment.
+NO learning recommendations.
+
+--------------------------------
+SECTION 6 — CONTEXTUAL COMPARISON (OPTIONAL)
+--------------------------------
+
+Allow users to compare:
+- two roles
+OR
+- role vs role group average
+
+Show differences in:
+- task mix
+- skill change intensity
+- demand signal
+
+Use simple side-by-side labels.
+
+--------------------------------
+SECTION 7 — WHAT THIS MEANS (INTERPRETATION)
+--------------------------------
+
+Mandatory interpretation block:
+
+Title:
+"How to read these signals"
+
+Include:
+- 3 bullets explaining how opportunity signals emerge
+- 2 bullets explaining limits and uncertainty
+- Explicit note:
+  "This view supports orientation and exploration,
+   not career or hiring decisions."
+
+--------------------------------
+DATA & LOGIC REQUIREMENTS
+--------------------------------
+
+Use mock but realistic data from:
+
+/data
+- role_task_profiles.json
+- indicators_by_role.csv
+- demand_signals.csv
+
+Logic should be:
+- rule-based
+- explainable
+- reusable across pages
+
+NO ML.
+NO personalization.
+
+--------------------------------
+ENGINEERING NOTES
+--------------------------------
+
+- Implement as: pages/explore-roles.tsx
+- Reuse existing indicator logic
+- Role cards should be modular components
+- Keep UI readable and lightweight
+
+--------------------------------
+OUTPUT REQUIRED
+--------------------------------
+
+1) Complete page implementation
+2) Mock data structures used
+3) Clear inline comments explaining logic
+4) Short explanation of how this differs from:
+   - career advice tools
+   - job boards
+   - forecasting dashboards

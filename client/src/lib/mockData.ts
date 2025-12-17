@@ -270,3 +270,92 @@ export const opportunityData = [
   { role: "Green Energy Tech", sector: "Energy", growth: "High" },
   { role: "Personalized Ed. Guide", sector: "Education", growth: "Medium" },
 ];
+
+export interface SkillCluster {
+  name: string;
+  interaction: "Supportive" | "Complementary" | "Minimal";
+  description?: string;
+}
+
+export const roleSkillClusters: Record<string, SkillCluster[]> = {
+  "Health-Program Project Manager": [
+    { name: "Clinical Coordination", interaction: "Supportive" },
+    { name: "Resource Allocation", interaction: "Complementary" },
+    { name: "Stakeholder Communication", interaction: "Minimal" }
+  ],
+  "Health-Talent Acquisition": [
+    { name: "Candidate Assessment", interaction: "Supportive" },
+    { name: "Empathy & Negotiation", interaction: "Minimal" },
+    { name: "Sourcing Strategy", interaction: "Complementary" }
+  ],
+  "Health-Software Developer": [
+    { name: "Medical Imaging Algos", interaction: "Complementary" },
+    { name: "System Compliance", interaction: "Supportive" },
+    { name: "Code Optimization", interaction: "Complementary" }
+  ],
+  "Health-Data Analyst": [
+    { name: "Patient Data Privacy", interaction: "Minimal" },
+    { name: "Predictive Modeling", interaction: "Complementary" },
+    { name: "Reporting Automation", interaction: "Supportive" }
+  ],
+  "IT-Program Project Manager": [
+    { name: "Agile Methodologies", interaction: "Supportive" },
+    { name: "Team Leadership", interaction: "Minimal" },
+    { name: "Risk Management", interaction: "Complementary" }
+  ],
+  "IT-Talent Acquisition": [
+    { name: "Resume Screening", interaction: "Supportive" },
+    { name: "Interviewing", interaction: "Minimal" },
+    { name: "Pipeline Analytics", interaction: "Complementary" }
+  ],
+  "IT-Software Developer": [
+    { name: "Code Generation", interaction: "Complementary" },
+    { name: "Debugging", interaction: "Supportive" },
+    { name: "System Architecture", interaction: "Minimal" }
+  ],
+  "IT-Data Analyst": [
+    { name: "Data Cleaning", interaction: "Supportive" },
+    { name: "Statistical Analysis", interaction: "Complementary" },
+    { name: "Strategic Insight", interaction: "Minimal" }
+  ],
+  "Logistics-Program Project Manager": [
+    { name: "Supply Chain Opt.", interaction: "Complementary" },
+    { name: "Vendor Relations", interaction: "Minimal" },
+    { name: "Process Scheduling", interaction: "Supportive" }
+  ],
+  "Logistics-Talent Acquisition": [
+    { name: "Volume Hiring", interaction: "Supportive" },
+    { name: "Local Recruitment", interaction: "Minimal" },
+    { name: "Onboarding flow", interaction: "Complementary" }
+  ],
+  "Logistics-Software Developer": [
+    { name: "IoT Integration", interaction: "Complementary" },
+    { name: "Warehouse Systems", interaction: "Supportive" },
+    { name: "Real-time Tracking", interaction: "Complementary" }
+  ],
+  "Logistics-Data Analyst": [
+    { name: "Route Optimization", interaction: "Complementary" },
+    { name: "Inventory Forecasting", interaction: "Supportive" },
+    { name: "Cost Analysis", interaction: "Complementary" }
+  ],
+  "Administration-Program Project Manager": [
+    { name: "Meeting Facilitation", interaction: "Minimal" },
+    { name: "Document Management", interaction: "Supportive" },
+    { name: "Process Standards", interaction: "Complementary" }
+  ],
+  "Administration-Talent Acquisition": [
+    { name: "Scheduling", interaction: "Supportive" },
+    { name: "Candidate Experience", interaction: "Minimal" },
+    { name: "Database Mgmt", interaction: "Supportive" }
+  ],
+  "Administration-Software Developer": [
+    { name: "Internal Tools", interaction: "Complementary" },
+    { name: "Legacy Integration", interaction: "Supportive" },
+    { name: "User Support", interaction: "Minimal" }
+  ],
+  "Administration-Data Analyst": [
+    { name: "KPI Dashboards", interaction: "Supportive" },
+    { name: "Trend Analysis", interaction: "Complementary" },
+    { name: "Presentation", interaction: "Minimal" }
+  ]
+};

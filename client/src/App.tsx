@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Landing from "@/pages/Landing";
 import MyRole from "@/pages/MyRole";
+import ExploreRoles from "@/pages/ExploreRoles";
 import BigPicture from "@/pages/BigPicture";
 
 function Router() {
@@ -14,6 +15,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Landing} />
       <Route path="/dashboard" component={Home}/>
+      <Route path="/explore-roles" component={ExploreRoles} />
       <Route path="/my-role" component={MyRole} />
       <Route path="/big-picture" component={BigPicture} />
       <Route component={NotFound} />
