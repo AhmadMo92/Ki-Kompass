@@ -70,8 +70,15 @@ export function MyRoleTasks() {
       if (role) {
         // Use new dynamic task generation logic
         const tasks = getTasksForRole(role.id, role.group);
-        setActiveTasks(tasks);
-        setCheckedTaskIds(new Set(tasks.map(t => t.id)));
+        
+        // Localize tasks based on current language selection
+        const localizedTasks = tasks.map(t => ({
+           ...t,
+           label: language === 'en' ? (t.labelEn || t.label) : (t.labelDe || t.label)
+        }));
+        
+        setActiveTasks(localizedTasks);
+        setCheckedTaskIds(new Set(localizedTasks.map(t => t.id)));
         setStep(2);
       }
     }

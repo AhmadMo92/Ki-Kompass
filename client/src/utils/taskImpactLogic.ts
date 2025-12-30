@@ -1,9 +1,13 @@
+import { competencies } from "@/lib/occupations";
+
 // Mock Data: Role -> Task Profiles
 // This simulates a database of standard role definitions and their typical tasks.
 
 export interface TaskDefinition {
   id: string;
-  label: string;
+  label: string; // Default label (English preferred)
+  labelDe?: string; // German label
+  labelEn?: string; // English label
   category: string;
   defaultWeight: number;
 }
@@ -19,83 +23,76 @@ export interface AIInteraction {
   description: string;
 }
 
-// 1. Role Definitions (Legacy specific profiles)
-export const ROLE_PROFILES: Record<string, RoleProfile> = {
-  "program_manager": {
-    id: "program_manager",
-    label: "Program Manager",
-    defaultTasks: [
-      { id: "t1", label: "Coordinating stakeholders and partners", category: "Coordination", defaultWeight: 0.25 },
-      { id: "t2", label: "Planning programs and timelines", category: "Planning", defaultWeight: 0.20 },
-      { id: "t3", label: "Writing reports and documentation", category: "Documentation", defaultWeight: 0.20 },
-      { id: "t4", label: "Monitoring budgets and progress", category: "Monitoring", defaultWeight: 0.15 },
-      { id: "t5", label: "Supporting decision-making", category: "Decision Support", defaultWeight: 0.20 }
-    ]
-  },
-  // ... (keeping legacy for compatibility if needed, but we will mostly use dynamic generation below)
-};
+// Deterministic random number generator seeded by string
+function sfc32(a: number, b: number, c: number, d: number) {
+  return function() {
+    a >>>= 0; b >>>= 0; c >>>= 0; d >>>= 0; 
+    var t = (a + b) | 0;
+    a = b ^ b >>> 9;
+    b = c + (c << 3) | 0;
+    c = (c << 21 | c >>> 11);
+    d = (d + 1) | 0;
+    t = (t + d) | 0;
+    c = (c + t) | 0;
+    return (t >>> 0) / 4294967296;
+  }
+}
 
-// Archetype Tasks by Group
-export const GROUP_ARCHETYPES: Record<string, TaskDefinition[]> = {
-  "Agriculture & Forestry": [
-    { id: "ag_1", label: "Monitoring crop/forest health", category: "Monitoring", defaultWeight: 0.3 },
-    { id: "ag_2", label: "Operating machinery/tools", category: "Manual Operation", defaultWeight: 0.4 },
-    { id: "ag_3", label: "Planning harvest schedules", category: "Planning", defaultWeight: 0.2 },
-    { id: "ag_4", label: "Documentation of yields/stock", category: "Documentation", defaultWeight: 0.1 }
-  ],
-  "IT & Digital": [
-    { id: "it_1", label: "Writing and reviewing code", category: "Analysis", defaultWeight: 0.4 },
-    { id: "it_2", label: "Debugging and troubleshooting", category: "Problem Solving", defaultWeight: 0.3 },
-    { id: "it_3", label: "System documentation", category: "Documentation", defaultWeight: 0.1 },
-    { id: "it_4", label: "Team coordination (Agile/Scrum)", category: "Coordination", defaultWeight: 0.2 }
-  ],
-  "Health & Care": [
-    { id: "hc_1", label: "Direct patient care/assistance", category: "Human Interaction", defaultWeight: 0.5 },
-    { id: "hc_2", label: "Medical documentation", category: "Documentation", defaultWeight: 0.2 },
-    { id: "hc_3", label: "Monitoring patient vitals/status", category: "Monitoring", defaultWeight: 0.2 },
-    { id: "hc_4", label: "Coordinating with medical team", category: "Coordination", defaultWeight: 0.1 }
-  ],
-  "Sales & Marketing": [
-    { id: "sm_1", label: "Client communication/sales calls", category: "Human Interaction", defaultWeight: 0.4 },
-    { id: "sm_2", label: "Market research & analysis", category: "Analysis", defaultWeight: 0.2 },
-    { id: "sm_3", label: "CRM management & data entry", category: "Admin", defaultWeight: 0.2 },
-    { id: "sm_4", label: "Creating promotional content", category: "Documentation", defaultWeight: 0.2 }
-  ],
-  "Engineering & Technical": [
-    { id: "eng_1", label: "System design & prototyping", category: "Analysis", defaultWeight: 0.35 },
-    { id: "eng_2", label: "Maintenance & repair", category: "Problem Solving", defaultWeight: 0.35 },
-    { id: "eng_3", label: "Technical documentation", category: "Documentation", defaultWeight: 0.15 },
-    { id: "eng_4", label: "Project planning", category: "Planning", defaultWeight: 0.15 }
-  ],
-  "Education": [
-    { id: "edu_1", label: "Delivering instruction/training", category: "Human Interaction", defaultWeight: 0.4 },
-    { id: "edu_2", label: "Curriculum planning", category: "Planning", defaultWeight: 0.2 },
-    { id: "edu_3", label: "Grading and assessment", category: "Analysis", defaultWeight: 0.2 },
-    { id: "edu_4", label: "Student mentorship", category: "Human Interaction", defaultWeight: 0.2 }
-  ]
-};
+function getSeededRandom(seed: string) {
+  // Simple hash to get seed numbers
+  let h = 0xdeadbeef;
+  for(let i = 0; i < seed.length; i++)
+    h = Math.imul(h ^ seed.charCodeAt(i), 2654435761);
+  
+  const seed1 = (h ^ (h >>> 16)) >>> 0;
+  const seed2 = (h ^ (h >>> 12)) >>> 0;
+  const seed3 = (h ^ (h >>> 8)) >>> 0;
+  const seed4 = (h ^ (h >>> 4)) >>> 0;
+  
+  return sfc32(seed1, seed2, seed3, seed4);
+}
 
-export const getTasksForRole = (roleId: string, group: string): TaskDefinition[] => {
-  // 1. Check if specific profile exists
-  if (ROLE_PROFILES[roleId]) {
-    return ROLE_PROFILES[roleId].defaultTasks;
+// Generate tasks from competencies based on role ID
+function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
+  const rand = getSeededRandom(roleId);
+  
+  // Pick 5-8 random competencies
+  const numTasks = Math.floor(rand() * 4) + 5;
+  const tasks: TaskDefinition[] = [];
+  const usedIndices = new Set<number>();
+  
+  const categories = ["Analysis", "Coordination", "Documentation", "Problem Solving", "Planning", "Monitoring"];
+
+  for (let i = 0; i < numTasks; i++) {
+    let index = Math.floor(rand() * competencies.length);
+    while (usedIndices.has(index)) {
+      index = (index + 1) % competencies.length;
+    }
+    usedIndices.add(index);
+    
+    const comp = competencies[index];
+    // Assign a random category
+    const category = categories[Math.floor(rand() * categories.length)];
+    
+    tasks.push({
+      id: comp.id,
+      label: comp.nameEn || comp.nameDe, 
+      labelEn: comp.nameEn,
+      labelDe: comp.nameDe,
+      category: category,
+      defaultWeight: 0.2
+    });
   }
   
-  // 2. Return archetype tasks based on group
-  if (GROUP_ARCHETYPES[group]) {
-    return GROUP_ARCHETYPES[group];
-  }
+  return tasks;
+}
 
-  // 3. Fallback generic tasks
-  return [
-    { id: "gen_1", label: "Core role execution", category: "Analysis", defaultWeight: 0.4 },
-    { id: "gen_2", label: "Communication & meetings", category: "Communication", defaultWeight: 0.3 },
-    { id: "gen_3", label: "Administrative tasks", category: "Admin", defaultWeight: 0.2 },
-    { id: "gen_4", label: "Planning & organization", category: "Planning", defaultWeight: 0.1 }
-  ];
+export const getTasksForRole = (roleId: string, group: string): TaskDefinition[] => {
+  // Use the new dynamic generator
+  return generateTasksFromCompetencies(roleId);
 };
 
-export const AVAILABLE_ROLES = Object.values(ROLE_PROFILES).map(r => ({ id: r.id, label: r.label }));
+export const AVAILABLE_ROLES = []; // Not used directly anymore as we use the full list
 
 // 2. Task Category -> AI Interaction Mapping
 export const CATEGORY_INTERACTIONS: Record<string, AIInteraction> = {
@@ -151,9 +148,9 @@ export function analyzeTaskProfile(tasks: TaskDefinition[]): ImpactResult {
   });
 
   // Normalize to 100%
-  const augmentedPct = Math.round((augmentedWeight / totalWeight) * 100);
-  const automatedPct = Math.round((automatedWeight / totalWeight) * 100);
-  const humanPct = 100 - augmentedPct - automatedPct;
+  const augmentedPct = totalWeight ? Math.round((augmentedWeight / totalWeight) * 100) : 0;
+  const automatedPct = totalWeight ? Math.round((automatedWeight / totalWeight) * 100) : 0;
+  const humanPct = totalWeight ? 100 - augmentedPct - automatedPct : 0;
 
   return {
     breakdown: {
