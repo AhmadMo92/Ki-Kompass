@@ -26,6 +26,8 @@ export const occupations: Occupation[] = (allOccupationsRaw as any[]).map(o => (
   code: o.code
 }));
 
+console.log(`[Occupations] Loaded ${occupations.length} roles.`);
+
 // Use the parsed competencies from the XML
 export const competencies: Competency[] = occupationsData.competencies.map((c: any) => ({
   id: c.id,

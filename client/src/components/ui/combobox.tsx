@@ -46,13 +46,13 @@ export function Combobox({
   // Optimization: Filter items before rendering to avoid rendering thousands of DOM nodes
   // This mimics a virtual list for the purpose of the Combobox
   const filteredItems = React.useMemo(() => {
-    if (!searchTerm) return items.slice(0, 50); // Show top 50 by default
+    if (!searchTerm) return items.slice(0, 500); // Increased limit to 500
     
     const lowerTerm = searchTerm.toLowerCase();
     const matches = items.filter(item => 
       item.label.toLowerCase().includes(lowerTerm)
     );
-    return matches.slice(0, 50); // Limit to top 50 matches for performance
+    return matches.slice(0, 500); // Increased limit
   }, [items, searchTerm]);
 
   // Find the selected label safely
@@ -105,6 +105,11 @@ export function Combobox({
                   {item.label}
                 </CommandItem>
               ))}
+              {filteredItems.length === 500 && (
+                 <div className="p-2 text-xs text-center text-muted-foreground border-t mt-1">
+                    Showing top 500 results. Type to search for more specific roles.
+                 </div>
+              )}
             </CommandGroup>
           </CommandList>
         </Command>
