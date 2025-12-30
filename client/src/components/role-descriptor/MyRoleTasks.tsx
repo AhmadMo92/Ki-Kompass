@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -6,14 +6,14 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
-import { TaskBreakdownChart } from "./TaskBreakdownChart"; // Reusing existing chart
+import { TaskBreakdownChart } from "./TaskBreakdownChart";
+import { Combobox } from "@/components/ui/combobox";
+import { occupations } from "@/lib/occupations";
 import { 
-  ROLE_PROFILES, 
-  AVAILABLE_ROLES, 
   analyzeTaskProfile, 
+  getTasksForRole,
   TaskDefinition, 
   ImpactResult 
 } from "@/utils/taskImpactLogic";
@@ -25,7 +25,6 @@ import {
   Brain, 
   Users, 
   ArrowUpRight, 
-  Search,
   RotateCcw
 } from "lucide-react";
 
@@ -35,7 +34,7 @@ export function MyRoleTasks() {
 
   // Data State
   const [selectedRoleId, setSelectedRoleId] = useState<string>("");
-  const [selectedSector, setSelectedSector] = useState<string>("");
+  const [selectedGroup, setSelectedGroup] = useState<string>("");
   const [roleContext, setRoleContext] = useState<string>("Current role");
   
   const [activeTasks, setActiveTasks] = useState<TaskDefinition[]>([]);
@@ -43,33 +42,33 @@ export function MyRoleTasks() {
 
   const [result, setResult] = useState<ImpactResult | null>(null);
 
+  // Derived Data
+  const groups = useMemo(() => Array.from(new Set(occupations.map(o => o.group))), []);
+  
+  const filteredRoles = useMemo(() => {
+    return occupations.filter(o => !selectedGroup || o.group === selectedGroup);
+  }, [selectedGroup]);
+
   // Handlers
-  const handleRoleSelect = () => {
-    if (selectedRoleId && ROLE_PROFILES[selectedRoleId]) {
-      setActiveTasks([...ROLE_PROFILES[selectedRoleId].defaultTasks]);
-      setStep(2);
-    }
+  const handleGroupChange = (group: string) => {
+    setSelectedGroup(group);
+    setSelectedRoleId(""); // Reset role when group changes
   };
 
-  const toggleTask = (taskId: string) => {
-    // Only toggle if it's already in the list (don't remove, just filter for analysis later? 
-    // Actually, UI shows checkboxes. If unchecked, we remove from "activeTasks" logic, 
-    // but we need to keep the original list to show them as unchecked.
-    // Let's simplify: activeTasks IS the list of checked tasks.
-    // Wait, better to keep all tasks and have a "checked" state.
-    // For simplicity in this mock, let's just use a list of IDs for checked items.
-  };
-  
   // Better approach for Step 2: Keep all potential tasks and a set of checked IDs
   const [checkedTaskIds, setCheckedTaskIds] = useState<Set<string>>(new Set());
 
   // When entering Step 2, initialize checked IDs
   const initializeStep2 = () => {
-    if (selectedRoleId && ROLE_PROFILES[selectedRoleId]) {
-      const tasks = ROLE_PROFILES[selectedRoleId].defaultTasks;
-      setActiveTasks(tasks);
-      setCheckedTaskIds(new Set(tasks.map(t => t.id)));
-      setStep(2);
+    if (selectedRoleId) {
+      const role = occupations.find(o => o.id === selectedRoleId);
+      if (role) {
+        // Use new dynamic task generation logic
+        const tasks = getTasksForRole(role.id, role.group);
+        setActiveTasks(tasks);
+        setCheckedTaskIds(new Set(tasks.map(t => t.id)));
+        setStep(2);
+      }
     }
   };
 
@@ -87,12 +86,12 @@ export function MyRoleTasks() {
     // Filter active tasks based on checked IDs
     const tasksToAnalyze = activeTasks.filter(t => checkedTaskIds.has(t.id));
     
-    // Add custom task if present (mock category)
+    // Add custom task if present
     if (customTask.trim()) {
       tasksToAnalyze.push({
         id: "custom",
         label: customTask,
-        category: "Planning", // Default mock category for custom input
+        category: "Specific", 
         defaultWeight: 0.2
       });
     }
@@ -105,19 +104,10 @@ export function MyRoleTasks() {
   const handleReset = () => {
     setStep(1);
     setSelectedRoleId("");
-    setSelectedSector("");
+    setSelectedGroup("");
     setRoleContext("Current role");
     setResult(null);
     setCustomTask("");
-  };
-
-  const getIcon = (type: string) => {
-    switch (type) {
-      case "Augmented": return <Bot className="w-4 h-4 text-blue-500" />;
-      case "Automated": return <CheckCircle2 className="w-4 h-4 text-purple-500" />;
-      case "Human-Dominant": return <Users className="w-4 h-4 text-teal-500" />;
-      default: return <Brain className="w-4 h-4 text-gray-500" />;
-    }
   };
 
   return (
@@ -160,37 +150,40 @@ export function MyRoleTasks() {
           {step === 1 && (
             <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500">
               <CardHeader>
-                <CardTitle className="font-serif">Select a role similar to yours</CardTitle>
-                <CardDescription>Start by choosing a standard role profile. We'll customize it in the next step.</CardDescription>
+                <CardTitle className="font-serif">Select your role</CardTitle>
+                <CardDescription>Start by choosing a profession group, then find your specific role.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
+                  
+                  {/* 1. Group Selection */}
                   <div className="space-y-2">
-                    <Label>Role Title</Label>
-                    <Select value={selectedRoleId} onValueChange={setSelectedRoleId}>
-                      <SelectTrigger className="h-11">
-                        <SelectValue placeholder="Search or select a role..." />
+                    <Label>Profession Group</Label>
+                    <Select value={selectedGroup} onValueChange={handleGroupChange}>
+                      <SelectTrigger className="h-11 bg-white">
+                        <SelectValue placeholder="Select a group..." />
                       </SelectTrigger>
                       <SelectContent>
-                        {AVAILABLE_ROLES.map(role => (
-                          <SelectItem key={role.id} value={role.id}>{role.label}</SelectItem>
+                        {groups.map(g => (
+                          <SelectItem key={g} value={g}>{g}</SelectItem>
                         ))}
                       </SelectContent>
                     </Select>
                   </div>
 
+                  {/* 2. Role Selection (Filtered) */}
                   <div className="space-y-2">
-                    <Label>Sector</Label>
-                    <Select value={selectedSector} onValueChange={setSelectedSector}>
-                      <SelectTrigger className="h-11">
-                        <SelectValue placeholder="Select sector..." />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {["Health", "IT", "Administration", "Logistics", "Education"].map(s => (
-                          <SelectItem key={s} value={s}>{s}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    <Label>Specific Role</Label>
+                    <Combobox 
+                      items={filteredRoles.map(r => ({ value: r.id, label: r.nameEn }))}
+                      value={selectedRoleId}
+                      onValueChange={setSelectedRoleId}
+                      placeholder={selectedGroup ? "Search role..." : "Select a group first"}
+                      searchPlaceholder="Type to search..."
+                      emptyText="No roles found"
+                      width="w-full"
+                      className="h-11 bg-white"
+                    />
                   </div>
                 </div>
 
@@ -212,7 +205,7 @@ export function MyRoleTasks() {
                   <Button 
                     size="lg" 
                     onClick={initializeStep2}
-                    disabled={!selectedRoleId || !selectedSector}
+                    disabled={!selectedRoleId}
                     className="w-full md:w-auto px-8"
                   >
                     Continue <ArrowRight className="ml-2 w-4 h-4" />
@@ -228,8 +221,7 @@ export function MyRoleTasks() {
               <CardHeader>
                 <CardTitle className="font-serif">Confirm your typical tasks</CardTitle>
                 <CardDescription>
-                  People in the <strong>{ROLE_PROFILES[selectedRoleId]?.label}</strong> role typically do these tasks. 
-                  Uncheck any that don't apply to you.
+                  Based on the role profile, select the tasks that match your actual daily work.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -283,10 +275,6 @@ export function MyRoleTasks() {
                     Analyze Tasks <Sparkles className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
-                
-                <p className="text-center text-xs text-muted-foreground italic">
-                  "You don’t need to be exact. This is about patterns, not precision."
-                </p>
               </CardContent>
             </Card>
           )}
@@ -346,7 +334,7 @@ export function MyRoleTasks() {
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-primary mt-1">•</span>
-                        <span><strong>{result.breakdown.automated}%</strong> of routine coordination could be automated, freeing up focus time.</span>
+                        <span><strong>{result.breakdown.automated}%</strong> of routine work could be automated, freeing up focus time.</span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-primary mt-1">•</span>

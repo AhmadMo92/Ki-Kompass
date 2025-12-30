@@ -19,7 +19,7 @@ export interface AIInteraction {
   description: string;
 }
 
-// 1. Role Definitions
+// 1. Role Definitions (Legacy specific profiles)
 export const ROLE_PROFILES: Record<string, RoleProfile> = {
   "program_manager": {
     id: "program_manager",
@@ -32,56 +32,67 @@ export const ROLE_PROFILES: Record<string, RoleProfile> = {
       { id: "t5", label: "Supporting decision-making", category: "Decision Support", defaultWeight: 0.20 }
     ]
   },
-  "project_coordinator": {
-    id: "project_coordinator",
-    label: "Project Coordinator",
-    defaultTasks: [
-      { id: "t6", label: "Scheduling meetings and logistics", category: "Coordination", defaultWeight: 0.30 },
-      { id: "t7", label: "Tracking project status", category: "Monitoring", defaultWeight: 0.25 },
-      { id: "t8", label: "Maintaining project documentation", category: "Documentation", defaultWeight: 0.25 },
-      { id: "t9", label: "Communicating updates to team", category: "Communication", defaultWeight: 0.20 }
-    ]
-  },
-  "product_operations": {
-    id: "product_operations",
-    label: "Product Operations",
-    defaultTasks: [
-      { id: "t10", label: "Analyzing user feedback data", category: "Analysis", defaultWeight: 0.30 },
-      { id: "t11", label: "Managing launch checklists", category: "Coordination", defaultWeight: 0.20 },
-      { id: "t12", label: "Creating internal documentation", category: "Documentation", defaultWeight: 0.25 },
-      { id: "t13", label: "Facilitating cross-team alignment", category: "Communication", defaultWeight: 0.25 }
-    ]
-  },
-  "hr_generalist": {
-    id: "hr_generalist",
-    label: "HR Generalist",
-    defaultTasks: [
-      { id: "t14", label: "Screening candidate resumes", category: "Analysis", defaultWeight: 0.20 },
-      { id: "t15", label: "Onboarding new employees", category: "Coordination", defaultWeight: 0.25 },
-      { id: "t16", label: "Resolving employee relations issues", category: "Human Interaction", defaultWeight: 0.35 },
-      { id: "t17", label: "Managing benefits administration", category: "Admin", defaultWeight: 0.20 }
-    ]
-  },
-  "logistics_coordinator": {
-    id: "logistics_coordinator",
-    label: "Logistics Coordinator",
-    defaultTasks: [
-      { id: "t18", label: "Tracking shipments and inventory", category: "Monitoring", defaultWeight: 0.35 },
-      { id: "t19", label: "Coordinating with carriers", category: "Coordination", defaultWeight: 0.30 },
-      { id: "t20", label: "Resolving delivery exceptions", category: "Problem Solving", defaultWeight: 0.20 },
-      { id: "t21", label: "Preparing shipping documentation", category: "Documentation", defaultWeight: 0.15 }
-    ]
-  },
-  "policy_officer": {
-    id: "policy_officer",
-    label: "Policy Officer",
-    defaultTasks: [
-      { id: "t22", label: "Researching regulatory changes", category: "Analysis", defaultWeight: 0.30 },
-      { id: "t23", label: "Drafting policy documents", category: "Documentation", defaultWeight: 0.30 },
-      { id: "t24", label: "Consulting with stakeholders", category: "Human Interaction", defaultWeight: 0.25 },
-      { id: "t25", label: "Evaluating policy impact", category: "Analysis", defaultWeight: 0.15 }
-    ]
+  // ... (keeping legacy for compatibility if needed, but we will mostly use dynamic generation below)
+};
+
+// Archetype Tasks by Group
+export const GROUP_ARCHETYPES: Record<string, TaskDefinition[]> = {
+  "Agriculture & Forestry": [
+    { id: "ag_1", label: "Monitoring crop/forest health", category: "Monitoring", defaultWeight: 0.3 },
+    { id: "ag_2", label: "Operating machinery/tools", category: "Manual Operation", defaultWeight: 0.4 },
+    { id: "ag_3", label: "Planning harvest schedules", category: "Planning", defaultWeight: 0.2 },
+    { id: "ag_4", label: "Documentation of yields/stock", category: "Documentation", defaultWeight: 0.1 }
+  ],
+  "IT & Digital": [
+    { id: "it_1", label: "Writing and reviewing code", category: "Analysis", defaultWeight: 0.4 },
+    { id: "it_2", label: "Debugging and troubleshooting", category: "Problem Solving", defaultWeight: 0.3 },
+    { id: "it_3", label: "System documentation", category: "Documentation", defaultWeight: 0.1 },
+    { id: "it_4", label: "Team coordination (Agile/Scrum)", category: "Coordination", defaultWeight: 0.2 }
+  ],
+  "Health & Care": [
+    { id: "hc_1", label: "Direct patient care/assistance", category: "Human Interaction", defaultWeight: 0.5 },
+    { id: "hc_2", label: "Medical documentation", category: "Documentation", defaultWeight: 0.2 },
+    { id: "hc_3", label: "Monitoring patient vitals/status", category: "Monitoring", defaultWeight: 0.2 },
+    { id: "hc_4", label: "Coordinating with medical team", category: "Coordination", defaultWeight: 0.1 }
+  ],
+  "Sales & Marketing": [
+    { id: "sm_1", label: "Client communication/sales calls", category: "Human Interaction", defaultWeight: 0.4 },
+    { id: "sm_2", label: "Market research & analysis", category: "Analysis", defaultWeight: 0.2 },
+    { id: "sm_3", label: "CRM management & data entry", category: "Admin", defaultWeight: 0.2 },
+    { id: "sm_4", label: "Creating promotional content", category: "Documentation", defaultWeight: 0.2 }
+  ],
+  "Engineering & Technical": [
+    { id: "eng_1", label: "System design & prototyping", category: "Analysis", defaultWeight: 0.35 },
+    { id: "eng_2", label: "Maintenance & repair", category: "Problem Solving", defaultWeight: 0.35 },
+    { id: "eng_3", label: "Technical documentation", category: "Documentation", defaultWeight: 0.15 },
+    { id: "eng_4", label: "Project planning", category: "Planning", defaultWeight: 0.15 }
+  ],
+  "Education": [
+    { id: "edu_1", label: "Delivering instruction/training", category: "Human Interaction", defaultWeight: 0.4 },
+    { id: "edu_2", label: "Curriculum planning", category: "Planning", defaultWeight: 0.2 },
+    { id: "edu_3", label: "Grading and assessment", category: "Analysis", defaultWeight: 0.2 },
+    { id: "edu_4", label: "Student mentorship", category: "Human Interaction", defaultWeight: 0.2 }
+  ]
+};
+
+export const getTasksForRole = (roleId: string, group: string): TaskDefinition[] => {
+  // 1. Check if specific profile exists
+  if (ROLE_PROFILES[roleId]) {
+    return ROLE_PROFILES[roleId].defaultTasks;
   }
+  
+  // 2. Return archetype tasks based on group
+  if (GROUP_ARCHETYPES[group]) {
+    return GROUP_ARCHETYPES[group];
+  }
+
+  // 3. Fallback generic tasks
+  return [
+    { id: "gen_1", label: "Core role execution", category: "Analysis", defaultWeight: 0.4 },
+    { id: "gen_2", label: "Communication & meetings", category: "Communication", defaultWeight: 0.3 },
+    { id: "gen_3", label: "Administrative tasks", category: "Admin", defaultWeight: 0.2 },
+    { id: "gen_4", label: "Planning & organization", category: "Planning", defaultWeight: 0.1 }
+  ];
 };
 
 export const AVAILABLE_ROLES = Object.values(ROLE_PROFILES).map(r => ({ id: r.id, label: r.label }));
@@ -97,7 +108,8 @@ export const CATEGORY_INTERACTIONS: Record<string, AIInteraction> = {
   "Analysis": { type: "Augmented", description: "AI processes data, human interprets insights." },
   "Human Interaction": { type: "Human-Dominant", description: "Empathy and negotiation are strictly human." },
   "Admin": { type: "Automated", description: "Routine processing is highly automatable." },
-  "Problem Solving": { type: "Human-Dominant", description: "Handling novel exceptions requires human adaptability." }
+  "Problem Solving": { type: "Human-Dominant", description: "Handling novel exceptions requires human adaptability." },
+  "Manual Operation": { type: "Augmented", description: "Robotics/AI assist physical tasks but don't fully replace." }
 };
 
 // 3. Analysis Logic
@@ -152,3 +164,4 @@ export function analyzeTaskProfile(tasks: TaskDefinition[]): ImpactResult {
     taskDetails
   };
 }
+
