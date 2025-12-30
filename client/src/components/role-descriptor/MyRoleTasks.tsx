@@ -10,7 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { TaskBreakdownChart } from "./TaskBreakdownChart";
 import { Combobox } from "@/components/ui/combobox";
-import { occupations } from "@/lib/occupations";
+import { occupations, competencies } from "@/lib/occupations";
 import { 
   analyzeTaskProfile, 
   getTasksForRole,
@@ -41,11 +41,26 @@ export function MyRoleTasks() {
   
   const [activeTasks, setActiveTasks] = useState<TaskDefinition[]>([]);
   const [customTask, setCustomTask] = useState<string>("");
-
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  
   const [result, setResult] = useState<ImpactResult | null>(null);
 
   // Language State
   const [language, setLanguage] = useState<"en" | "de">("en");
+
+  // Suggestion Logic
+  const taskSuggestions = useMemo(() => {
+    if (!customTask || customTask.length < 2) return [];
+    const lower = customTask.toLowerCase();
+    // Filter top 10 matches from competencies
+    return competencies
+      .filter(c => (language === 'en' ? c.nameEn : c.nameDe).toLowerCase().includes(lower))
+      .slice(0, 8)
+      .map(c => ({
+        id: c.id,
+        label: language === 'en' ? c.nameEn : c.nameDe
+      }));
+  }, [customTask, language]);
 
   // Derived Data
   const groups = useMemo(() => Array.from(new Set(occupations.map(o => o.group))), []);
@@ -302,16 +317,44 @@ export function MyRoleTasks() {
                   </ScrollArea>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 relative">
                   <Label className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
                     {language === 'en' ? "Add a custom task (Optional)" : "Eigene Aufgabe hinzufügen (Optional)"}
                   </Label>
                   <Input 
-                    placeholder={language === 'en' ? "e.g. Managing crisis communications..." : "z.B. Krisenkommunikation managen..."}
+                    placeholder={language === 'en' ? "Type to search tasks..." : "Tippen Sie, um Aufgaben zu suchen..."}
                     value={customTask}
-                    onChange={(e) => setCustomTask(e.target.value)}
+                    onChange={(e) => {
+                      setCustomTask(e.target.value);
+                      setShowSuggestions(true);
+                    }}
+                    onFocus={() => setShowSuggestions(true)}
                     className="bg-white"
                   />
+                  {/* Smart Suggestions Dropdown */}
+                  {showSuggestions && taskSuggestions.length > 0 && (
+                    <div className="absolute z-10 w-full bg-popover text-popover-foreground border rounded-md shadow-md mt-1 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+                      <div className="p-1">
+                        {taskSuggestions.map((suggestion) => (
+                          <div
+                            key={suggestion.id}
+                            className="flex items-center px-3 py-2 text-sm rounded-sm cursor-pointer hover:bg-accent hover:text-accent-foreground"
+                            onClick={() => {
+                              setCustomTask(suggestion.label);
+                              setShowSuggestions(false);
+                            }}
+                          >
+                            <Sparkles className="w-3 h-3 mr-2 text-primary/50" />
+                            {suggestion.label}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {/* Backdrop to close suggestions */}
+                  {showSuggestions && (
+                    <div className="fixed inset-0 z-0" onClick={() => setShowSuggestions(false)} style={{ display: taskSuggestions.length > 0 ? 'block' : 'none', pointerEvents: taskSuggestions.length > 0 ? 'auto' : 'none', background: 'transparent' }} />
+                  )}
                 </div>
 
                 <div className="flex items-center justify-between pt-4">

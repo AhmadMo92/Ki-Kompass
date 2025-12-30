@@ -89,9 +89,10 @@ function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
         if(roleTokens.has(t)) score += 10; // Strong match
         // Partial match check (slower but better)
         else {
-           for(const rt of roleTokens) {
+           // Iterate manually to avoid downlevelIteration issues with Set
+           roleTokens.forEach(rt => {
              if(t.includes(rt) || rt.includes(t)) score += 2;
-           }
+           });
         }
       }
       return { comp, score };
