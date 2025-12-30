@@ -41,6 +41,19 @@ export function Combobox({
   width = "w-[200px]"
 }: ComboboxProps) {
   const [open, setOpen] = React.useState(false)
+  const [searchTerm, setSearchTerm] = React.useState("")
+
+  // Optimization: Filter items before rendering to avoid rendering thousands of DOM nodes
+  // This mimics a virtual list for the purpose of the Combobox
+  const filteredItems = React.useMemo(() => {
+    if (!searchTerm) return items.slice(0, 50); // Show top 50 by default
+    
+    const lowerTerm = searchTerm.toLowerCase();
+    const matches = items.filter(item => 
+      item.label.toLowerCase().includes(lowerTerm)
+    );
+    return matches.slice(0, 50); // Limit to top 50 matches for performance
+  }, [items, searchTerm]);
 
   // Find the selected label safely
   const selectedLabel = React.useMemo(() => {
@@ -63,18 +76,24 @@ export function Combobox({
         </Button>
       </PopoverTrigger>
       <PopoverContent className={cn("p-0", width)} align="start">
-        <Command>
-          <CommandInput placeholder={searchPlaceholder} />
+        <Command shouldFilter={false}> 
+          {/* We handle filtering manually above for performance */}
+          <CommandInput 
+            placeholder={searchPlaceholder} 
+            value={searchTerm}
+            onValueChange={setSearchTerm}
+          />
           <CommandList>
-            <CommandEmpty>{emptyText}</CommandEmpty>
+            {filteredItems.length === 0 && <CommandEmpty>{emptyText}</CommandEmpty>}
             <CommandGroup>
-              {items.map((item) => (
+              {filteredItems.map((item) => (
                 <CommandItem
                   key={item.value}
-                  value={item.label} // Use label for search matching
+                  value={item.value} // Use unique ID for key/value tracking
                   onSelect={() => {
-                    onValueChange(item.value) // Return the actual ID/Value
+                    onValueChange(item.value)
                     setOpen(false)
+                    setSearchTerm("") // Reset search on select
                   }}
                 >
                   <Check

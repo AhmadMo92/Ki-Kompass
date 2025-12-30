@@ -2,140 +2,140 @@
   {
     "id": "4233",
     "nameDe": "Abbrucharbeiter/in",
-    "nameEn": "Abbrucharbeiter/in",
+    "nameEn": "Demolition worker",
     "group": "Construction & Architecture",
     "code": "B 32101-10600"
   },
   {
     "id": "112558",
     "nameDe": "Abdichter/in (Dachdeckerei)",
-    "nameEn": "Abdichter/in (Dachdeckerei)",
+    "nameEn": "Sealer (roofing)",
     "group": "Construction & Architecture",
     "code": "B 33232-10700"
   },
   {
     "id": "118800",
     "nameDe": "Abdichtungspolier/in (Bauwerks- und Asphaltabdichtung)",
-    "nameEn": "Abdichtungspolier/in (Bauwerks- und Asphaltabdichtung)",
+    "nameEn": "Sealing polisher (building and asphalt sealing)",
     "group": "Construction & Architecture",
     "code": "B 33393-12900"
   },
   {
     "id": "8202",
     "nameDe": "Abfallbeauftragte/r",
-    "nameEn": "Abfallbeauftragte/r",
+    "nameEn": "Waste representative",
     "group": "Natural Sciences & Engineering",
     "code": "B 42324-10300"
   },
   {
     "id": "10154",
     "nameDe": "Abfallberater/in",
-    "nameEn": "Abfallberater/in",
+    "nameEn": "Waste consultant",
     "group": "Natural Sciences & Engineering",
     "code": "B 42313-10300"
   },
   {
     "id": "111112",
     "nameDe": "Abfallbeseitiger/in",
-    "nameEn": "Abfallbeseitiger/in",
+    "nameEn": "Waste disposer",
     "group": "Construction & Architecture",
     "code": "B 34301-12300"
   },
   {
     "id": "105088",
     "nameDe": "Abfalltechniker/in",
-    "nameEn": "Abfalltechniker/in",
+    "nameEn": "Waste technician",
     "group": "Construction & Architecture",
     "code": "B 34333-10100"
   },
   {
     "id": "9607",
     "nameDe": "Abfalltechniker/in in Schulung, Einweisung, Fortbildung",
-    "nameEn": "Abfalltechniker/in in Schulung, Einweisung, Fortbildung",
+    "nameEn": "Waste technician in training, instruction, advanced training",
     "group": "Education & Social",
     "code": "B 84483-10300"
   },
   {
     "id": "108116",
     "nameDe": "Abfallwirtschaftsberater/in",
-    "nameEn": "Abfallwirtschaftsberater/in",
+    "nameEn": "Waste management consultant",
     "group": "Construction & Architecture",
     "code": "B 34333-10300"
   },
   {
     "id": "105966",
     "nameDe": "Abfallwirtschaftsingenieur/in",
-    "nameEn": "Abfallwirtschaftsingenieur/in",
+    "nameEn": "Waste management engineer",
     "group": "Construction & Architecture",
     "code": "B 34334-10400"
   },
   {
     "id": "4710",
     "nameDe": "Abfüller/in",
-    "nameEn": "Abfüller/in",
+    "nameEn": "Bottler",
     "group": "Logistics, Safety & Traffic",
     "code": "B 51311-10300"
   },
   {
     "id": "106331",
     "nameDe": "Abfüllmaschinenbediener/in",
-    "nameEn": "Abfüllmaschinenbediener/in",
+    "nameEn": "Filling machine operator",
     "group": "Logistics, Safety & Traffic",
     "code": "B 51311-12700"
   },
   {
     "id": "90855",
     "nameDe": "Abgeordnete/r",
-    "nameEn": "Abgeordnete/r",
+    "nameEn": "MP",
     "group": "Business, Admin & Law",
     "code": "B 71214-11400"
   },
   {
     "id": "2885",
     "nameDe": "Abgleicher/in (Nachrichtentechnik)",
-    "nameEn": "Abgleicher/in (Nachrichtentechnik)",
+    "nameEn": "Comparator (communications technology)",
     "group": "Production & Manufacturing",
     "code": "B 26312-11700"
   },
   {
     "id": "107245",
     "nameDe": "Abiturientenberater/in",
-    "nameEn": "Abiturientenberater/in",
+    "nameEn": "Graduate advisor",
     "group": "Business, Admin & Law",
     "code": "B 71524-11600"
   },
   {
     "id": "106273",
     "nameDe": "Abkantpresser/in",
-    "nameEn": "Abkantpresser/in",
+    "nameEn": "Press braker",
     "group": "Production & Manufacturing",
     "code": "B 24212-13300"
   },
   {
     "id": "112611",
     "nameDe": "Ablauforganisator/in",
-    "nameEn": "Ablauforganisator/in",
+    "nameEn": "Process organizer",
     "group": "Business, Admin & Law",
     "code": "B 71314-11000"
   },
   {
     "id": "108580",
     "nameDe": "Ableser/in (Gas, Strom, Wasser)",
-    "nameEn": "Ableser/in (Gas, Strom, Wasser)",
+    "nameEn": "Meter reader (gas, electricity, water)",
     "group": "Production & Manufacturing",
     "code": "B 25131-10100"
   },
   {
     "id": "112844",
     "nameDe": "Abnahmefahrer/in",
-    "nameEn": "Abnahmefahrer/in",
+    "nameEn": "Acceptance driver",
     "group": "Production & Manufacturing",
     "code": "B 27312-19700"
   },
   {
     "id": "106516",
     "nameDe": "Abnahmelokomotivführer/in",
-    "nameEn": "Abnahmelokomotivführer/in",
+    "nameEn": "Acceptance locomotive driver",
     "group": "Logistics, Safety & Traffic",
     "code": "B 52202-10400"
   },
@@ -149,203 +149,203 @@
   {
     "id": "119274",
     "nameDe": "Abpackmaschinenbediener/in",
-    "nameEn": "Abpackmaschinenbediener/in",
+    "nameEn": "Packaging machine operator",
     "group": "Logistics, Safety & Traffic",
     "code": "B 51312-16600"
   },
   {
     "id": "116830",
     "nameDe": "Abraumbaggerführer/in",
-    "nameEn": "Abraumbaggerführer/in",
+    "nameEn": "Overburden excavator operator",
     "group": "Logistics, Safety & Traffic",
     "code": "B 52522-11300"
   },
   {
     "id": "7515",
     "nameDe": "Absatz- und Werbewirtschaftler/in",
-    "nameEn": "Absatz- und Werbewirtschaftler/in",
+    "nameEn": "Sales and advertising economist",
     "group": "Arts, Culture & Media",
     "code": "B 92113-11700"
   },
   {
     "id": "106735",
     "nameDe": "Absatzplaner/in",
-    "nameEn": "Absatzplaner/in",
+    "nameEn": "Sales planner",
     "group": "Sales, Marketing & Tourism",
     "code": "B 61124-13400"
   },
   {
     "id": "107921",
     "nameDe": "Abschleifer/in (Metallschleifen)",
-    "nameEn": "Abschleifer/in (Metallschleifen)",
+    "nameEn": "Grinder (metal grinding)",
     "group": "Production & Manufacturing",
     "code": "B 24222-13000"
   },
   {
     "id": "106033",
     "nameDe": "Abschnittsleiter/in (Sozialversicherung)",
-    "nameEn": "Abschnittsleiter/in (Sozialversicherung)",
+    "nameEn": "Head of section (social insurance)",
     "group": "Business, Admin & Law",
     "code": "B 73293-10400"
   },
   {
     "id": "4778",
     "nameDe": "Absetzapparateführer/in",
-    "nameEn": "Absetzapparateführer/in",
+    "nameEn": "Weaning apparatus operator",
     "group": "Production & Manufacturing",
     "code": "B 25122-10400"
   },
   {
     "id": "109029",
     "nameDe": "Absprenger/in (Naturstein)",
-    "nameEn": "Absprenger/in (Naturstein)",
+    "nameEn": "Sprinkler (natural stone)",
     "group": "Production & Manufacturing",
     "code": "B 21122-10200"
   },
   {
     "id": "102121",
     "nameDe": "Abspüler/in",
-    "nameEn": "Abspüler/in",
+    "nameEn": "Dishwasher",
     "group": "Sales, Marketing & Tourism",
     "code": "B 63301-10800"
   },
   {
     "id": "108349",
     "nameDe": "ABS-Spezialist/in (Fondsmanager/in)",
-    "nameEn": "ABS-Spezialist/in (Fondsmanager/in)",
+    "nameEn": "ABS specialist (fund manager)",
     "group": "Business, Admin & Law",
     "code": "B 72124-11000"
   },
   {
     "id": "90733",
     "nameDe": "Abt/Äbtissin",
-    "nameEn": "Abt/Äbtissin",
+    "nameEn": "Abbot/Abbess",
     "group": "Health & Care",
     "code": "B 83333-10200"
   },
   {
     "id": "104523",
     "nameDe": "Abteilungskellner/in",
-    "nameEn": "Abteilungskellner/in",
+    "nameEn": "Department waiter",
     "group": "Sales, Marketing & Tourism",
     "code": "B 63303-10400"
   },
   {
     "id": "6113",
     "nameDe": "Abteilungsleiter/in (Fleisch - Wurst - Fleischwirtschaft)",
-    "nameEn": "Abteilungsleiter/in (Fleisch - Wurst - Fleischwirtschaft)",
+    "nameEn": "Head of department (meat - sausage - meat industry)",
     "group": "Production & Manufacturing",
     "code": "B 29294-10300"
   },
   {
     "id": "90729",
     "nameDe": "Abteilungsleiter/in - Gewerbeaufsicht",
-    "nameEn": "Abteilungsleiter/in - Gewerbeaufsicht",
+    "nameEn": "Head of Department - Trade Inspection",
     "group": "Logistics, Safety & Traffic",
     "code": "B 53394-10000"
   },
   {
     "id": "9444",
     "nameDe": "Abteilungsleiter/in (Musikschule)",
-    "nameEn": "Abteilungsleiter/in (Musikschule)",
+    "nameEn": "Head of department (music school)",
     "group": "Education & Social",
     "code": "B 84494-10000"
   },
   {
     "id": "5681",
     "nameDe": "Abteilungsleiter/in (Bauzeichenbüro)",
-    "nameEn": "Abteilungsleiter/in (Bauzeichenbüro)",
+    "nameEn": "Head of department (construction drawing office)",
     "group": "Production & Manufacturing",
     "code": "B 27293-10200"
   },
   {
     "id": "6107",
     "nameDe": "Abteilungsleiter/in (Brennerei)",
-    "nameEn": "Abteilungsleiter/in (Brennerei)",
+    "nameEn": "Department manager (distillery)",
     "group": "Production & Manufacturing",
     "code": "B 29193-10700"
   },
   {
     "id": "5770",
     "nameDe": "Abteilungsleiter/in (Hüttentechnik)",
-    "nameEn": "Abteilungsleiter/in (Hüttentechnik)",
+    "nameEn": "Head of department (metallurgical technology)",
     "group": "Production & Manufacturing",
     "code": "B 24193-10300"
   },
   {
     "id": "6118",
     "nameDe": "Abteilungsleiter/in (Milchwirtschaft)",
-    "nameEn": "Abteilungsleiter/in (Milchwirtschaft)",
+    "nameEn": "Head of department (dairy industry)",
     "group": "Production & Manufacturing",
     "code": "B 29294-10400"
   },
   {
     "id": "108862",
     "nameDe": "Abteilungsleiter/in - Statistik",
-    "nameEn": "Abteilungsleiter/in - Statistik",
+    "nameEn": "Head of Department - Statistics",
     "group": "Natural Sciences & Engineering",
     "code": "B 41194-10100"
   },
   {
     "id": "6106",
     "nameDe": "Abteilungsleiter/in (Keramische Industrie)",
-    "nameEn": "Abteilungsleiter/in (Keramische Industrie)",
+    "nameEn": "Head of Department (Ceramic Industry)",
     "group": "Production & Manufacturing",
     "code": "B 21493-10000"
   },
   {
     "id": "5829",
     "nameDe": "Abteilungsleiter/in (Korrosionsschutztechnik)",
-    "nameEn": "Abteilungsleiter/in (Korrosionsschutztechnik)",
+    "nameEn": "Head of department (corrosion protection technology)",
     "group": "Production & Manufacturing",
     "code": "B 24393-10300"
   },
   {
     "id": "6109",
     "nameDe": "Abteilungsleiter/in (Kunststoff)",
-    "nameEn": "Abteilungsleiter/in (Kunststoff)",
+    "nameEn": "Head of Department (Plastics)",
     "group": "Production & Manufacturing",
     "code": "B 22193-10100"
   },
   {
     "id": "6119",
     "nameDe": "Abteilungsleiter/in (Kunststoff- und Kautschuktechnik)",
-    "nameEn": "Abteilungsleiter/in (Kunststoff- und Kautschuktechnik)",
+    "nameEn": "Head of department (plastics and rubber technology)",
     "group": "Production & Manufacturing",
     "code": "B 22193-10200"
   },
   {
     "id": "6117",
     "nameDe": "Abteilungsleiter/in (Lackiererei/Oberflächenbehandlung)",
-    "nameEn": "Abteilungsleiter/in (Lackiererei/Oberflächenbehandlung)",
+    "nameEn": "Head of department (paint shop/surface treatment)",
     "group": "Production & Manufacturing",
     "code": "B 22293-10100"
   },
   {
     "id": "6142",
     "nameDe": "Abteilungsleiter/in (Maschinenbau)",
-    "nameEn": "Abteilungsleiter/in (Maschinenbau)",
+    "nameEn": "Head of Department (Mechanical Engineering)",
     "group": "Production & Manufacturing",
     "code": "B 25194-10100"
   },
   {
     "id": "6163",
     "nameDe": "Abteilungsleiter/in (Metall- und Schiffbautechnik)",
-    "nameEn": "Abteilungsleiter/in (Metall- und Schiffbautechnik)",
+    "nameEn": "Head of department (metal and shipbuilding technology)",
     "group": "Production & Manufacturing",
     "code": "B 24493-10700"
   },
   {
     "id": "5830",
     "nameDe": "Abteilungsleiter/in (Metallographie)",
-    "nameEn": "Abteilungsleiter/in (Metallographie)",
+    "nameEn": "Head of Department (Metallography)",
     "group": "Natural Sciences & Engineering",
     "code": "B 41494-10200"
   },
   {
     "id": "6853",
     "nameDe": "Abteilungsleiter/in (Versicherung)",
-    "nameEn": "Abteilungsleiter/in (Versicherung)",
+    "nameEn": "Head of Department (Insurance)",
     "group": "Business, Admin & Law",
     "code": "B 72194-11300"
   },

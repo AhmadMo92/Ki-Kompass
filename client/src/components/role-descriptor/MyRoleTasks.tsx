@@ -25,8 +25,10 @@ import {
   Brain, 
   Users, 
   ArrowUpRight, 
-  RotateCcw
+  RotateCcw,
+  Languages
 } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
 
 export function MyRoleTasks() {
   // Step State
@@ -41,6 +43,9 @@ export function MyRoleTasks() {
   const [customTask, setCustomTask] = useState<string>("");
 
   const [result, setResult] = useState<ImpactResult | null>(null);
+
+  // Language State
+  const [language, setLanguage] = useState<"en" | "de">("en");
 
   // Derived Data
   const groups = useMemo(() => Array.from(new Set(occupations.map(o => o.group))), []);
@@ -116,30 +121,49 @@ export function MyRoleTasks() {
         
         {/* HEADER */}
         <div className="mb-10 text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-xs font-medium mb-4">
-            <Sparkles className="w-3 h-3" />
-            New Feature
+          <div className="flex items-center justify-between mb-4">
+             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-xs font-medium">
+              <Sparkles className="w-3 h-3" />
+              New Feature
+            </div>
+            
+            <div className="flex items-center gap-2">
+              <Languages className="w-4 h-4 text-muted-foreground" />
+              <div className="flex items-center space-x-2">
+                <span className={`text-sm ${language === 'de' ? 'font-bold text-primary' : 'text-muted-foreground'}`}>DE</span>
+                <Switch 
+                  checked={language === 'en'}
+                  onCheckedChange={(checked) => setLanguage(checked ? 'en' : 'de')}
+                />
+                <span className={`text-sm ${language === 'en' ? 'font-bold text-primary' : 'text-muted-foreground'}`}>EN</span>
+              </div>
+            </div>
           </div>
-          <h2 className="text-3xl font-serif text-primary mb-3">My Role & Tasks</h2>
+
+          <h2 className="text-3xl font-serif text-primary mb-3">
+            {language === 'en' ? "My Role & Tasks" : "Meine Rolle & Aufgaben"}
+          </h2>
           <p className="text-lg text-muted-foreground font-light mb-4">
-            Understand how AI typically interacts with the tasks you do.
+            {language === 'en' 
+              ? "Understand how AI typically interacts with the tasks you do." 
+              : "Verstehen Sie, wie KI typischerweise mit Ihren Aufgaben interagiert."}
           </p>
           
           {/* Progress Steps */}
           <div className="flex items-center justify-center gap-4 mt-6 text-sm font-medium">
             <div className={`flex items-center gap-2 ${step >= 1 ? "text-primary" : "text-muted-foreground"}`}>
               <div className={`w-6 h-6 rounded-full flex items-center justify-center border ${step >= 1 ? "bg-primary text-primary-foreground border-primary" : "border-border"}`}>1</div>
-              Role
+              {language === 'en' ? "Role" : "Rolle"}
             </div>
             <div className="w-8 h-px bg-border"></div>
             <div className={`flex items-center gap-2 ${step >= 2 ? "text-primary" : "text-muted-foreground"}`}>
               <div className={`w-6 h-6 rounded-full flex items-center justify-center border ${step >= 2 ? "bg-primary text-primary-foreground border-primary" : "border-border"}`}>2</div>
-              Tasks
+              {language === 'en' ? "Tasks" : "Aufgaben"}
             </div>
             <div className="w-8 h-px bg-border"></div>
             <div className={`flex items-center gap-2 ${step >= 3 ? "text-primary" : "text-muted-foreground"}`}>
               <div className={`w-6 h-6 rounded-full flex items-center justify-center border ${step >= 3 ? "bg-primary text-primary-foreground border-primary" : "border-border"}`}>3</div>
-              Results
+              {language === 'en' ? "Results" : "Ergebnisse"}
             </div>
           </div>
         </div>
@@ -150,18 +174,24 @@ export function MyRoleTasks() {
           {step === 1 && (
             <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500">
               <CardHeader>
-                <CardTitle className="font-serif">Select your role</CardTitle>
-                <CardDescription>Start by choosing a profession group, then find your specific role.</CardDescription>
+                <CardTitle className="font-serif">
+                  {language === 'en' ? "Select your role" : "Wählen Sie Ihre Rolle"}
+                </CardTitle>
+                <CardDescription>
+                  {language === 'en' 
+                    ? "Start by choosing a profession group, then find your specific role." 
+                    : "Wählen Sie zunächst eine Berufsgruppe und dann Ihre spezifische Rolle."}
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   
                   {/* 1. Group Selection */}
                   <div className="space-y-2">
-                    <Label>Profession Group</Label>
+                    <Label>{language === 'en' ? "Profession Group" : "Berufsgruppe"}</Label>
                     <Select value={selectedGroup} onValueChange={handleGroupChange}>
                       <SelectTrigger className="h-11 bg-white">
-                        <SelectValue placeholder="Select a group..." />
+                        <SelectValue placeholder={language === 'en' ? "Select a group..." : "Gruppe wählen..."} />
                       </SelectTrigger>
                       <SelectContent>
                         {groups.map(g => (
@@ -173,14 +203,17 @@ export function MyRoleTasks() {
 
                   {/* 2. Role Selection (Filtered) */}
                   <div className="space-y-2">
-                    <Label>Specific Role</Label>
+                    <Label>{language === 'en' ? "Specific Role" : "Spezifische Rolle"}</Label>
                     <Combobox 
-                      items={filteredRoles.map(r => ({ value: r.id, label: r.nameEn }))}
+                      items={filteredRoles.map(r => ({ 
+                        value: r.id, 
+                        label: language === 'en' ? r.nameEn : r.nameDe 
+                      }))}
                       value={selectedRoleId}
                       onValueChange={setSelectedRoleId}
-                      placeholder={selectedGroup ? "Search role..." : "Select a group first"}
-                      searchPlaceholder="Type to search..."
-                      emptyText="No roles found"
+                      placeholder={selectedGroup ? (language === 'en' ? "Search role..." : "Rolle suchen...") : (language === 'en' ? "Select a group first" : "Erst Gruppe wählen")}
+                      searchPlaceholder={language === 'en' ? "Type to search..." : "Suchen..."}
+                      emptyText={language === 'en' ? "No roles found" : "Keine Rollen gefunden"}
                       width="w-full"
                       className="h-11 bg-white"
                     />
@@ -188,15 +221,19 @@ export function MyRoleTasks() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label>Context</Label>
+                  <Label>{language === 'en' ? "Context" : "Kontext"}</Label>
                   <RadioGroup value={roleContext} onValueChange={setRoleContext} className="flex gap-6">
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="Current role" id="ctx1" />
-                      <Label htmlFor="ctx1" className="font-normal cursor-pointer">Current role</Label>
+                      <Label htmlFor="ctx1" className="font-normal cursor-pointer">
+                        {language === 'en' ? "Current role" : "Aktuelle Rolle"}
+                      </Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="Previous role" id="ctx2" />
-                      <Label htmlFor="ctx2" className="font-normal cursor-pointer">Previous role</Label>
+                      <Label htmlFor="ctx2" className="font-normal cursor-pointer">
+                        {language === 'en' ? "Previous role" : "Frühere Rolle"}
+                      </Label>
                     </div>
                   </RadioGroup>
                 </div>
@@ -208,7 +245,7 @@ export function MyRoleTasks() {
                     disabled={!selectedRoleId}
                     className="w-full md:w-auto px-8"
                   >
-                    Continue <ArrowRight className="ml-2 w-4 h-4" />
+                    {language === 'en' ? "Continue" : "Weiter"} <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
               </CardContent>
@@ -219,9 +256,13 @@ export function MyRoleTasks() {
           {step === 2 && (
             <Card className="animate-in fade-in slide-in-from-right-4 duration-500">
               <CardHeader>
-                <CardTitle className="font-serif">Confirm your typical tasks</CardTitle>
+                <CardTitle className="font-serif">
+                  {language === 'en' ? "Confirm your typical tasks" : "Bestätigen Sie Ihre typischen Aufgaben"}
+                </CardTitle>
                 <CardDescription>
-                  Based on the role profile, select the tasks that match your actual daily work.
+                  {language === 'en' 
+                    ? "Based on the role profile, select the tasks that match your actual daily work." 
+                    : "Wählen Sie basierend auf dem Rollenprofil die Aufgaben aus, die Ihrer täglichen Arbeit entsprechen."}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -255,9 +296,11 @@ export function MyRoleTasks() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Add a custom task (Optional)</Label>
+                  <Label className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
+                    {language === 'en' ? "Add a custom task (Optional)" : "Eigene Aufgabe hinzufügen (Optional)"}
+                  </Label>
                   <Input 
-                    placeholder="e.g. Managing crisis communications..." 
+                    placeholder={language === 'en' ? "e.g. Managing crisis communications..." : "z.B. Krisenkommunikation managen..."}
                     value={customTask}
                     onChange={(e) => setCustomTask(e.target.value)}
                     className="bg-white"
@@ -265,16 +308,24 @@ export function MyRoleTasks() {
                 </div>
 
                 <div className="flex items-center justify-between pt-4">
-                  <Button variant="ghost" onClick={() => setStep(1)}>Back</Button>
+                  <Button variant="ghost" onClick={() => setStep(1)}>
+                    {language === 'en' ? "Back" : "Zurück"}
+                  </Button>
                   <Button 
                     size="lg" 
                     onClick={handleAnalyze}
                     disabled={checkedTaskIds.size === 0}
                     className="px-8"
                   >
-                    Analyze Tasks <Sparkles className="ml-2 w-4 h-4" />
+                    {language === 'en' ? "Analyze Tasks" : "Aufgaben analysieren"} <Sparkles className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
+                
+                <p className="text-center text-xs text-muted-foreground italic">
+                  {language === 'en' 
+                    ? "\"You don’t need to be exact. This is about patterns, not precision.\"" 
+                    : "\"Es muss nicht exakt sein. Es geht um Muster, nicht um Präzision.\""}
+                </p>
               </CardContent>
             </Card>
           )}
@@ -292,8 +343,14 @@ export function MyRoleTasks() {
                 {/* Panel 2: List */}
                 <Card className="md:col-span-7 h-full border-none shadow-sm bg-white/60">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-lg font-serif text-primary">Task Category Breakdown</CardTitle>
-                    <CardDescription>Typical AI interaction for your confirmed tasks.</CardDescription>
+                    <CardTitle className="text-lg font-serif text-primary">
+                      {language === 'en' ? "Task Category Breakdown" : "Aufgabenverteilung nach Kategorie"}
+                    </CardTitle>
+                    <CardDescription>
+                      {language === 'en' 
+                        ? "Typical AI interaction for your confirmed tasks." 
+                        : "Typische KI-Interaktion für Ihre bestätigten Aufgaben."}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ScrollArea className="h-[200px] pr-4">
@@ -322,36 +379,63 @@ export function MyRoleTasks() {
               {/* Panel 3: Interpretation */}
               <Card className="bg-primary/5 border-primary/10">
                 <CardHeader>
-                  <CardTitle className="text-lg font-serif text-primary">What this means — and what it doesn’t</CardTitle>
+                  <CardTitle className="text-lg font-serif text-primary">
+                    {language === 'en' ? "What this means — and what it doesn’t" : "Was das bedeutet – und was nicht"}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-3">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">The Pattern</h4>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                      {language === 'en' ? "The Pattern" : "Das Muster"}
+                    </h4>
                     <ul className="space-y-2 text-sm">
                       <li className="flex gap-2 items-start">
                         <span className="text-primary mt-1">•</span>
-                        <span>AI supports <strong>{result.breakdown.augmented}%</strong> of these tasks, likely increasing speed and quality.</span>
+                        <span>
+                          {language === 'en' ? "AI supports " : "KI unterstützt "}
+                          <strong>{result.breakdown.augmented}%</strong>
+                          {language === 'en' ? " of these tasks, likely increasing speed and quality." : " dieser Aufgaben, was wahrscheinlich Geschwindigkeit und Qualität erhöht."}
+                        </span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-primary mt-1">•</span>
-                        <span><strong>{result.breakdown.automated}%</strong> of routine work could be automated, freeing up focus time.</span>
+                        <span>
+                          <strong>{result.breakdown.automated}%</strong>
+                          {language === 'en' 
+                            ? " of routine coordination could be automated, freeing up focus time." 
+                            : " der Routinekoordination könnten automatisiert werden, was Fokuszeit freisetzt."}
+                        </span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-primary mt-1">•</span>
-                        <span>Human responsibility remains dominant in <strong>{result.breakdown.human}%</strong> of the work, especially in judgment and empathy.</span>
+                        <span>
+                          {language === 'en' ? "Human responsibility remains dominant in " : "Menschliche Verantwortung bleibt dominant in "}
+                          <strong>{result.breakdown.human}%</strong>
+                          {language === 'en' ? " of the work, especially in judgment and empathy." : " der Arbeit, besonders bei Urteilsvermögen und Empathie."}
+                        </span>
                       </li>
                     </ul>
                   </div>
                   <div className="space-y-3">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">The Reality</h4>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                      {language === 'en' ? "The Reality" : "Die Realität"}
+                    </h4>
                     <ul className="space-y-2 text-sm">
                       <li className="flex gap-2 items-start">
                         <span className="text-amber-600 mt-1">•</span>
-                        <span>This is <strong>not</strong> a job loss prediction or employability score.</span>
+                        <span>
+                          {language === 'en' 
+                            ? "This is not a job loss prediction or employability score." 
+                            : "Dies ist keine Vorhersage über Jobverlust oder Beschäftigungsfähigkeit."}
+                        </span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-amber-600 mt-1">•</span>
-                        <span>Augmentation usually changes <strong>HOW</strong> work is done, not <strong>WHETHER</strong> the role exists.</span>
+                        <span>
+                          {language === 'en' 
+                            ? "Augmentation usually changes HOW work is done, not WHETHER the role exists." 
+                            : "Augmentierung verändert meist, WIE Arbeit erledigt wird, nicht OB die Rolle existiert."}
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -360,10 +444,11 @@ export function MyRoleTasks() {
 
               <div className="flex justify-between items-center pt-4">
                 <Button variant="outline" onClick={handleReset} className="text-muted-foreground">
-                  <RotateCcw className="mr-2 w-4 h-4" /> Start Over
+                  <RotateCcw className="mr-2 w-4 h-4" /> 
+                  {language === 'en' ? "Start Over" : "Neu starten"}
                 </Button>
                 <Button variant="link" className="text-primary gap-2">
-                  Compare with typical roles in dashboard above <ArrowUpRight className="w-4 h-4" />
+                  {language === 'en' ? "Compare with typical roles in dashboard above" : "Mit typischen Rollen im Dashboard vergleichen"} <ArrowUpRight className="w-4 h-4" />
                 </Button>
               </div>
 
