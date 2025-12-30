@@ -1,4 +1,4 @@
-import { competencies } from "@/lib/occupations";
+import { competencies, occupations } from "@/lib/occupations";
 
 // Mock Data: Role -> Task Profiles
 // This simulates a database of standard role definitions and their typical tasks.
@@ -52,39 +52,88 @@ function getSeededRandom(seed: string) {
   return sfc32(seed1, seed2, seed3, seed4);
 }
 
+function tokenize(text: string): string[] {
+  if (!text) return [];
+  return text.toLowerCase()
+    .replace(/[^\w\säöüß]/g, '') // Keep German chars
+    .split(/\s+/)
+    .filter(w => w.length > 3); // Skip small words to avoid noise
+}
+
 // Generate tasks from competencies based on role ID
 function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
+  const role = occupations.find(o => o.id === roleId);
   const rand = getSeededRandom(roleId);
-  
-  // Pick 5-8 random competencies
-  const numTasks = Math.floor(rand() * 4) + 5;
-  const tasks: TaskDefinition[] = [];
-  const usedIndices = new Set<number>();
-  
   const categories = ["Analysis", "Coordination", "Documentation", "Problem Solving", "Planning", "Monitoring"];
+  
+  // Strategy: Semantic Matching
+  // Since we don't have a direct mapping file, we match words in the Role Name 
+  // with words in the Competency Name.
+  
+  let selectedCompetencies: any[] = [];
+  
+  if (role) {
+    const roleTokens = new Set([
+      ...tokenize(role.nameDe),
+      ...tokenize(role.nameEn)
+    ]);
 
-  for (let i = 0; i < numTasks; i++) {
-    let index = Math.floor(rand() * competencies.length);
-    while (usedIndices.has(index)) {
-      index = (index + 1) % competencies.length;
+    // Simple Scoring: +1 for each matching token
+    // We only scan a random subset to improve performance if list is huge, 
+    // but 9k is fast enough for modern JS engines (approx 2-5ms).
+    const scored = competencies.map(comp => {
+      let score = 0;
+      const compTokens = tokenize(comp.nameDe + " " + comp.nameEn);
+      
+      for(const t of compTokens) {
+        if(roleTokens.has(t)) score += 10; // Strong match
+        // Partial match check (slower but better)
+        else {
+           for(const rt of roleTokens) {
+             if(t.includes(rt) || rt.includes(t)) score += 2;
+           }
+        }
+      }
+      return { comp, score };
+    });
+
+    // Sort by score descending
+    scored.sort((a, b) => b.score - a.score);
+    
+    // Take top 5 relevant matches
+    const topMatches = scored.filter(s => s.score > 0).slice(0, 5).map(s => s.comp);
+    selectedCompetencies = [...topMatches];
+  }
+
+  // Fill the rest with random competencies to reach 6-9 tasks
+  // We use the seeded random so it's consistent for the same role
+  const targetCount = Math.floor(rand() * 4) + 6;
+  const usedIds = new Set(selectedCompetencies.map(c => c.id));
+  
+  while (selectedCompetencies.length < targetCount) {
+    const index = Math.floor(rand() * competencies.length);
+    const candidate = competencies[index];
+    if (!usedIds.has(candidate.id)) {
+      selectedCompetencies.push(candidate);
+      usedIds.add(candidate.id);
     }
-    usedIndices.add(index);
+  }
+
+  // Map to TaskDefinition
+  return selectedCompetencies.map(comp => {
+    // Deterministically assign a category
+    const catIndex = Math.floor(rand() * categories.length);
+    const category = categories[catIndex];
     
-    const comp = competencies[index];
-    // Assign a random category
-    const category = categories[Math.floor(rand() * categories.length)];
-    
-    tasks.push({
+    return {
       id: comp.id,
       label: comp.nameEn || comp.nameDe, 
       labelEn: comp.nameEn,
       labelDe: comp.nameDe,
       category: category,
       defaultWeight: 0.2
-    });
-  }
-  
-  return tasks;
+    };
+  });
 }
 
 export const getTasksForRole = (roleId: string, group: string): TaskDefinition[] => {
