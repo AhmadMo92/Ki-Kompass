@@ -244,32 +244,93 @@ export const roleGroups = ["Program Project Manager", "Talent Acquisition", "Sof
 export const roleContexts = ["Current role", "Previous role", "Target role"];
 export const regions = ["Global", "North America", "Europe", "Asia Pacific"];
 
-// Legacy/Fallback Exports for Chart Components
-export const taskTransformationData = [
-  { name: "Augmented", augmented: 55, stable: 0, automated: 0 },
-  { name: "Stable", augmented: 0, stable: 30, automated: 0 },
-  { name: "Automated", augmented: 0, stable: 0, automated: 15 },
-  // Keeping original structure for compatibility if needed, but adapting to the new data model
-  { name: "Total", augmented: 55, stable: 30, automated: 15 }
-];
+// Helper to determine status colors
+export const getStatusColor = (status: string) => {
+  switch (status) {
+    case "Growing": return "text-emerald-600 bg-emerald-50 border-emerald-200";
+    case "Stable": return "text-blue-600 bg-blue-50 border-blue-200";
+    case "Declining": return "text-amber-600 bg-amber-50 border-amber-200";
+    case "High": return "text-orange-600 bg-orange-50 border-orange-200";
+    case "Medium": return "text-blue-600 bg-blue-50 border-blue-200";
+    case "Low": return "text-slate-600 bg-slate-50 border-slate-200";
+    default: return "text-slate-600 bg-slate-50 border-slate-200";
+  }
+};
 
-export const skillDynamicsData = [
-  { year: 'Q1', intensity: 30 }, 
-  { year: 'Q2', intensity: 35 }, 
-  { year: 'Q3', intensity: 40 }, 
-  { year: 'Q4', intensity: 45 }, 
-  { year: 'Q5', intensity: 50 }, 
-  { year: 'Q6', intensity: 55 }
-];
+export const getImpactColor = (balance: string) => {
+  if (balance === "Mostly Augmenting") return "text-indigo-600 bg-indigo-50 border-indigo-200";
+  if (balance === "Mostly Automating") return "text-rose-600 bg-rose-50 border-rose-200";
+  return "text-purple-600 bg-purple-50 border-purple-200";
+};
 
-export const sectorContextData = sectorExposureData;
+// Deterministic Pseudo-Random Generator based on string seed
+function seededRandom(seed: string) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < seed.length; i++) {
+    h ^= seed.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return function() {
+    h = Math.imul(h ^ (h >>> 16), 2246822507);
+    h = Math.imul(h ^ (h >>> 13), 3266489909);
+    return ((h ^= h >>> 16) >>> 0) / 4294967296;
+  }
+}
 
-export const opportunityData = [
-  { role: "AI Ethics Specialist", sector: "Tech & Legal", growth: "High" },
-  { role: "Human-Centric Care", sector: "Healthcare", growth: "Very High" },
-  { role: "Green Energy Tech", sector: "Energy", growth: "High" },
-  { role: "Personalized Ed. Guide", sector: "Education", growth: "Medium" },
-];
+// Generate deterministic data for any occupation ID
+export const generateRoleData = (id: string, name: string, group: string): RoleData => {
+  const rng = seededRandom(id + name); // Consistent seed
+  
+  const isTech = group.includes("IT") || group.includes("Mechatronics") || group.includes("Technical");
+  const isCare = group.includes("Health") || group.includes("Care") || group.includes("Education");
+  const isManual = group.includes("Agriculture") || group.includes("Sales");
+
+  // Bias data based on group "archetypes"
+  let augmentationBase = 0.5;
+  if (isTech) augmentationBase = 0.7; // Tech is highly augmented
+  if (isCare) augmentationBase = 0.3; // Care is less automated/augmented, more human
+  if (isManual) augmentationBase = 0.4;
+
+  const augmented = Math.floor(rng() * 40) + (augmentationBase * 50); 
+  const automated = Math.floor(rng() * 30) + (isManual ? 20 : 5);
+  const stable = 100 - augmented - automated;
+
+  const demandSignals = ["Growing", "Stable", "Declining"];
+  const demandSignal = demandSignals[Math.floor(rng() * demandSignals.length)] as "Growing" | "Stable" | "Declining";
+
+  const balances = ["Mostly Augmenting", "Mixed", "Mostly Automating"];
+  let balance = balances[1];
+  if (augmented > 55) balance = balances[0];
+  if (automated > 40) balance = balances[2];
+
+  return {
+    augmented: Math.round(augmented),
+    automated: Math.round(automated),
+    stable: Math.round(stable),
+    augmentationBalance: balance as any,
+    skillIntensity: [
+      {year: 'Q1', intensity: 20 + rng() * 10},
+      {year: 'Q2', intensity: 25 + rng() * 10},
+      {year: 'Q3', intensity: 30 + rng() * 15},
+      {year: 'Q4', intensity: 35 + rng() * 20},
+      {year: 'Q5', intensity: 40 + rng() * 20},
+      {year: 'Q6', intensity: 45 + rng() * 25},
+    ],
+    demandSignal: demandSignal,
+    demandDescription: isTech ? "High demand for specialized technical skills." : 
+                       isCare ? "Demographic shifts driving long-term growth." :
+                       "Market shifting towards higher efficiency.",
+    opportunityAlignment: Math.floor(rng() * 40) + 50,
+    opportunityDescription: isTech ? "New tools enabling higher complexity work." :
+                            isCare ? "Human-centric tasks gaining premium value." :
+                            "Efficiency gains opening new service models.",
+    languageSensitivity: isCare || group.includes("Sales") ? "High" : "Medium",
+    credentialDependency: isTech || isCare ? "High" : "Medium",
+    contextDescription: isCare ? "Regulatory requirements are increasing." : "Rapid tool evolution requires constant learning.",
+    changePressure: (rng() > 0.5 ? "High" : "Medium") as any,
+    opportunitySurface: (rng() > 0.4 ? "High" : "Medium") as any
+  };
+};
 
 export interface SkillCluster {
   name: string;
@@ -277,85 +338,19 @@ export interface SkillCluster {
   description?: string;
 }
 
-export const roleSkillClusters: Record<string, SkillCluster[]> = {
-  "Health-Program Project Manager": [
-    { name: "Clinical Coordination", interaction: "Supportive" },
-    { name: "Resource Allocation", interaction: "Complementary" },
-    { name: "Stakeholder Communication", interaction: "Minimal" }
-  ],
-  "Health-Talent Acquisition": [
-    { name: "Candidate Assessment", interaction: "Supportive" },
-    { name: "Empathy & Negotiation", interaction: "Minimal" },
-    { name: "Sourcing Strategy", interaction: "Complementary" }
-  ],
-  "Health-Software Developer": [
-    { name: "Medical Imaging Algos", interaction: "Complementary" },
-    { name: "System Compliance", interaction: "Supportive" },
-    { name: "Code Optimization", interaction: "Complementary" }
-  ],
-  "Health-Data Analyst": [
-    { name: "Patient Data Privacy", interaction: "Minimal" },
-    { name: "Predictive Modeling", interaction: "Complementary" },
-    { name: "Reporting Automation", interaction: "Supportive" }
-  ],
-  "IT-Program Project Manager": [
-    { name: "Agile Methodologies", interaction: "Supportive" },
-    { name: "Team Leadership", interaction: "Minimal" },
-    { name: "Risk Management", interaction: "Complementary" }
-  ],
-  "IT-Talent Acquisition": [
-    { name: "Resume Screening", interaction: "Supportive" },
-    { name: "Interviewing", interaction: "Minimal" },
-    { name: "Pipeline Analytics", interaction: "Complementary" }
-  ],
-  "IT-Software Developer": [
-    { name: "Code Generation", interaction: "Complementary" },
-    { name: "Debugging", interaction: "Supportive" },
-    { name: "System Architecture", interaction: "Minimal" }
-  ],
-  "IT-Data Analyst": [
-    { name: "Data Cleaning", interaction: "Supportive" },
-    { name: "Statistical Analysis", interaction: "Complementary" },
-    { name: "Strategic Insight", interaction: "Minimal" }
-  ],
-  "Logistics-Program Project Manager": [
-    { name: "Supply Chain Opt.", interaction: "Complementary" },
-    { name: "Vendor Relations", interaction: "Minimal" },
-    { name: "Process Scheduling", interaction: "Supportive" }
-  ],
-  "Logistics-Talent Acquisition": [
-    { name: "Volume Hiring", interaction: "Supportive" },
-    { name: "Local Recruitment", interaction: "Minimal" },
-    { name: "Onboarding flow", interaction: "Complementary" }
-  ],
-  "Logistics-Software Developer": [
-    { name: "IoT Integration", interaction: "Complementary" },
-    { name: "Warehouse Systems", interaction: "Supportive" },
-    { name: "Real-time Tracking", interaction: "Complementary" }
-  ],
-  "Logistics-Data Analyst": [
-    { name: "Route Optimization", interaction: "Complementary" },
-    { name: "Inventory Forecasting", interaction: "Supportive" },
-    { name: "Cost Analysis", interaction: "Complementary" }
-  ],
-  "Administration-Program Project Manager": [
-    { name: "Meeting Facilitation", interaction: "Minimal" },
-    { name: "Document Management", interaction: "Supportive" },
-    { name: "Process Standards", interaction: "Complementary" }
-  ],
-  "Administration-Talent Acquisition": [
-    { name: "Scheduling", interaction: "Supportive" },
-    { name: "Candidate Experience", interaction: "Minimal" },
-    { name: "Database Mgmt", interaction: "Supportive" }
-  ],
-  "Administration-Software Developer": [
-    { name: "Internal Tools", interaction: "Complementary" },
-    { name: "Legacy Integration", interaction: "Supportive" },
-    { name: "User Support", interaction: "Minimal" }
-  ],
-  "Administration-Data Analyst": [
-    { name: "KPI Dashboards", interaction: "Supportive" },
-    { name: "Trend Analysis", interaction: "Complementary" },
-    { name: "Presentation", interaction: "Minimal" }
-  ]
+export const getSkillClustersForRole = (roleName: string, group: string): SkillCluster[] => {
+   const rng = seededRandom(roleName);
+   const clusters: SkillCluster[] = [
+     { name: "Digital Literacy", interaction: "Supportive" },
+     { name: "Process Management", interaction: "Complementary" },
+     { name: "Problem Solving", interaction: "Minimal" },
+     { name: group.split(" ")[0] + " Domain Knowledge", interaction: "Complementary" }
+   ];
+   
+   // Randomly shuffle interaction types
+   const types = ["Supportive", "Complementary", "Minimal"];
+   return clusters.map(c => ({
+     ...c,
+     interaction: types[Math.floor(rng() * types.length)] as any
+   }));
 };
