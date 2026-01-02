@@ -109,18 +109,41 @@ export function MyRoleTasks() {
     setCheckedTaskIds(newChecked);
   };
 
+  const handleAddCustomTask = (label: string, id?: string) => {
+    if (!label.trim()) return;
+
+    // Create new task
+    const newTask: TaskDefinition = {
+      id: id || `custom-${Date.now()}`,
+      label: label,
+      category: "Specific",
+      defaultWeight: 0.2
+    };
+
+    // Add to active tasks and checked set
+    setActiveTasks(prev => [...prev, newTask]);
+    setCheckedTaskIds(prev => new Set(prev).add(newTask.id));
+    
+    // Clear input
+    setCustomTask("");
+    setShowSuggestions(false);
+  };
+
   const handleAnalyze = () => {
     // Filter active tasks based on checked IDs
     const tasksToAnalyze = activeTasks.filter(t => checkedTaskIds.has(t.id));
     
-    // Add custom task if present
+    // Note: customTask input is now handled via handleAddCustomTask immediately, 
+    // so we don't need to check the input field here anymore unless we want to auto-add on analyze.
+    // Let's auto-add if there's pending text.
     if (customTask.trim()) {
-      tasksToAnalyze.push({
-        id: "custom",
+      const newTask: TaskDefinition = {
+        id: `custom-${Date.now()}`,
         label: customTask,
-        category: "Specific", 
+        category: "Specific",
         defaultWeight: 0.2
-      });
+      };
+      tasksToAnalyze.push(newTask);
     }
 
     const analysis = analyzeTaskProfile(tasksToAnalyze);
@@ -321,16 +344,26 @@ export function MyRoleTasks() {
                   <Label className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
                     {language === 'en' ? "Add a custom task (Optional)" : "Eigene Aufgabe hinzufügen (Optional)"}
                   </Label>
-                  <Input 
-                    placeholder={language === 'en' ? "Type to search tasks..." : "Tippen Sie, um Aufgaben zu suchen..."}
-                    value={customTask}
-                    onChange={(e) => {
-                      setCustomTask(e.target.value);
-                      setShowSuggestions(true);
-                    }}
-                    onFocus={() => setShowSuggestions(true)}
-                    className="bg-white"
-                  />
+                  <div className="flex gap-2">
+                    <Input 
+                      placeholder={language === 'en' ? "Type to search tasks..." : "Tippen Sie, um Aufgaben zu suchen..."}
+                      value={customTask}
+                      onChange={(e) => {
+                        setCustomTask(e.target.value);
+                        setShowSuggestions(true);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          handleAddCustomTask(customTask);
+                        }
+                      }}
+                      onFocus={() => setShowSuggestions(true)}
+                      className="bg-white flex-1"
+                    />
+                    <Button onClick={() => handleAddCustomTask(customTask)} disabled={!customTask.trim()}>
+                      {language === 'en' ? "Add" : "Hinzufügen"}
+                    </Button>
+                  </div>
                   {/* Smart Suggestions Dropdown */}
                   {showSuggestions && taskSuggestions.length > 0 && (
                     <div className="absolute z-10 w-full bg-popover text-popover-foreground border rounded-md shadow-md mt-1 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
@@ -339,10 +372,7 @@ export function MyRoleTasks() {
                           <div
                             key={suggestion.id}
                             className="flex items-center px-3 py-2 text-sm rounded-sm cursor-pointer hover:bg-accent hover:text-accent-foreground"
-                            onClick={() => {
-                              setCustomTask(suggestion.label);
-                              setShowSuggestions(false);
-                            }}
+                            onClick={() => handleAddCustomTask(suggestion.label, suggestion.id)}
                           >
                             <Sparkles className="w-3 h-3 mr-2 text-primary/50" />
                             {suggestion.label}
