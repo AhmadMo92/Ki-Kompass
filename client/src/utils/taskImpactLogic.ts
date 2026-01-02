@@ -145,6 +145,21 @@ function applyHeuristics(roleName: string, tasks: TaskDefinition[]): TaskDefinit
   return newTasks;
 }
 
+// 5. GENERIC "SAFE" TASKS
+// Used as a fallback instead of random selection to prevent "odd" matches.
+const GENERIC_TASKS: TaskDefinition[] = [
+  { id: "gen-1", label: "Project Coordination", labelDe: "Projektkoordination", labelEn: "Project Coordination", category: "Coordination", defaultWeight: 0.2 },
+  { id: "gen-2", label: "Team Communication", labelDe: "Teamkommunikation", labelEn: "Team Communication", category: "Human Interaction", defaultWeight: 0.2 },
+  { id: "gen-3", label: "Documentation & Reporting", labelDe: "Dokumentation & Berichtswesen", labelEn: "Documentation & Reporting", category: "Documentation", defaultWeight: 0.2 },
+  { id: "gen-4", label: "Quality Assurance", labelDe: "Qualitätssicherung", labelEn: "Quality Assurance", category: "Monitoring", defaultWeight: 0.2 },
+  { id: "gen-5", label: "Problem Solving", labelDe: "Problemlösung", labelEn: "Problem Solving", category: "Problem Solving", defaultWeight: 0.2 },
+  { id: "gen-6", label: "Workflow Planning", labelDe: "Arbeitsablaufplanung", labelEn: "Workflow Planning", category: "Planning", defaultWeight: 0.2 },
+  { id: "gen-7", label: "Data Management", labelDe: "Datenverwaltung", labelEn: "Data Management", category: "Analysis", defaultWeight: 0.2 },
+  { id: "gen-8", label: "Client/Stakeholder Support", labelDe: "Kunden-/Stakeholder-Betreuung", labelEn: "Client/Stakeholder Support", category: "Human Interaction", defaultWeight: 0.2 },
+  { id: "gen-9", label: "Compliance Monitoring", labelDe: "Einhaltung von Richtlinien", labelEn: "Compliance Monitoring", category: "Monitoring", defaultWeight: 0.2 },
+  { id: "gen-10", label: "Strategic Alignment", labelDe: "Strategische Ausrichtung", labelEn: "Strategic Alignment", category: "Planning", defaultWeight: 0.2 }
+];
+
 // Generate tasks from competencies based on role ID
 function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
   const role = occupations.find(o => o.id === roleId);
@@ -186,69 +201,62 @@ function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
     // Sort by score descending
     scored.sort((a, b) => b.score - a.score);
     
-    // Take top 5 relevant matches
-    const topMatches = scored.filter(s => s.score > 0).slice(0, 5).map(s => s.comp);
+    // Take top 5 relevant matches (only if they have a decent score)
+    const topMatches = scored.filter(s => s.score >= 10).slice(0, 5).map(s => s.comp);
     selectedCompetencies = [...topMatches];
   }
   
-  // Safe Fallback Keywords: These indicate general professional tasks applicable to many roles
-  const safeKeywords = ["dokumentation", "planung", "organisation", "verwaltung", "bericht", "analyse", "beratung", "koordination", "überwachung", "daten", "documentation", "planning", "organization", "administration", "report", "analysis", "consulting", "coordination", "monitoring", "data"];
-
-  // Filter competencies to create a "Safe Pool"
-  const safePool = competencies.filter(c => {
-     const name = (c.nameDe + " " + c.nameEn).toLowerCase();
-     return safeKeywords.some(k => name.includes(k));
-  });
-
-  // Fill the rest with SAFE competencies (not completely random) to reach 6-9 tasks
-  // We use the seeded random so it's consistent for the same role
-  const targetCount = Math.floor(rand() * 4) + 6;
-  const usedIds = new Set(selectedCompetencies.map(c => c.id));
+  // Fill the rest with GENERIC SAFE TASKS
+  // We prioritize high-quality general tasks over random database hits
+  const targetCount = Math.floor(rand() * 3) + 6; // 6 to 8 tasks total
   
-  // Try to fill from Safe Pool first
-  let attempts = 0;
-  while (selectedCompetencies.length < targetCount && attempts < 50) {
-    attempts++;
-    const index = Math.floor(rand() * safePool.length);
-    const candidate = safePool[index];
-    if (candidate && !usedIds.has(candidate.id)) {
-      selectedCompetencies.push(candidate);
-      usedIds.add(candidate.id);
-    }
-  }
+  // Create a pool of generic tasks
+  const genericPool = [...GENERIC_TASKS];
   
-  // If still need more (unlikely), fill from full pool
-  while (selectedCompetencies.length < targetCount) {
-    const index = Math.floor(rand() * competencies.length);
-    const candidate = competencies[index];
-    if (!usedIds.has(candidate.id)) {
-      selectedCompetencies.push(candidate);
-      usedIds.add(candidate.id);
-    }
+  // Shuffle generic pool deterministically
+  for (let i = genericPool.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [genericPool[i], genericPool[j]] = [genericPool[j], genericPool[i]];
   }
 
-  // Map to TaskDefinition
-  let finalTasks = selectedCompetencies.map(comp => {
-    // Deterministically assign a category
+  // Map generic tasks to match TaskDefinition structure (just in case)
+  // But GENERIC_TASKS is already TaskDefinition, so we need to be careful mixing types
+  // Actually, selectedCompetencies are "Competency" type, we map them later.
+  // Let's map everything to TaskDefinition at the end.
+  
+  // We need to keep track of what we have. 
+  // selectedCompetencies contains "Competency" objects.
+  
+  const finalTasks: TaskDefinition[] = selectedCompetencies.map(comp => {
     const catIndex = Math.floor(rand() * categories.length);
-    const category = categories[catIndex];
-    
     return {
       id: comp.id,
-      label: comp.nameEn || comp.nameDe, 
+      label: comp.nameEn || comp.nameDe,
       labelEn: comp.nameEn,
       labelDe: comp.nameDe,
-      category: category,
+      category: categories[catIndex],
       defaultWeight: 0.2
     };
   });
 
-  // Apply Heuristic Rules
-  if (role) {
-    finalTasks = applyHeuristics(role.nameEn + " " + role.nameDe, finalTasks);
+  // Now fill with Generic Tasks until we reach target
+  let genIndex = 0;
+  while (finalTasks.length < targetCount && genIndex < genericPool.length) {
+    // Avoid duplicates by label check (simple)
+    const candidate = genericPool[genIndex];
+    if (!finalTasks.some(t => t.label === candidate.label)) {
+      finalTasks.push(candidate);
+    }
+    genIndex++;
   }
 
-  return finalTasks;
+  // Apply Heuristic Rules (these add very specific high-value tasks)
+  let tasksWithHeuristics = finalTasks;
+  if (role) {
+    tasksWithHeuristics = applyHeuristics(role.nameEn + " " + role.nameDe, finalTasks);
+  }
+
+  return tasksWithHeuristics;
 }
 
 // 4. API Integration for Real AI Generation
