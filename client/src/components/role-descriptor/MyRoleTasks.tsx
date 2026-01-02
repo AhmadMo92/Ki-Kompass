@@ -14,6 +14,7 @@ import { occupations, competencies } from "@/lib/occupations";
 import { 
   analyzeTaskProfile, 
   getTasksForRole,
+  generateTasksWithAI,
   TaskDefinition, 
   ImpactResult 
 } from "@/utils/taskImpactLogic";
@@ -42,6 +43,7 @@ export function MyRoleTasks() {
   const [activeTasks, setActiveTasks] = useState<TaskDefinition[]>([]);
   const [customTask, setCustomTask] = useState<string>("");
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [isGenerating, setIsGenerating] = useState(false);
   
   const [result, setResult] = useState<ImpactResult | null>(null);
 
@@ -95,8 +97,28 @@ export function MyRoleTasks() {
         setActiveTasks(localizedTasks);
         setCheckedTaskIds(new Set(localizedTasks.map(t => t.id)));
         setStep(2);
+
+        // Optional: Trigger AI generation automatically or offer it
       }
     }
+  };
+
+  const handleSmartGenerate = async () => {
+    if (!selectedRoleId) return;
+    const role = occupations.find(o => o.id === selectedRoleId);
+    if (!role) return;
+
+    setIsGenerating(true);
+    // Use role name based on current language
+    const roleName = language === 'en' ? role.nameEn : role.nameDe;
+    
+    const aiTasks = await generateTasksWithAI(roleName, language);
+    
+    if (aiTasks.length > 0) {
+      setActiveTasks(aiTasks);
+      setCheckedTaskIds(new Set(aiTasks.map(t => t.id)));
+    }
+    setIsGenerating(false);
   };
 
   const handleToggleTask = (taskId: string) => {
@@ -301,18 +323,44 @@ export function MyRoleTasks() {
           {step === 2 && (
             <Card className="animate-in fade-in slide-in-from-right-4 duration-500">
               <CardHeader>
-                <CardTitle className="font-serif">
-                  {language === 'en' ? "Confirm your typical tasks" : "Bestätigen Sie Ihre typischen Aufgaben"}
-                </CardTitle>
-                <CardDescription>
-                  {language === 'en' 
-                    ? "Based on the role profile, select the tasks that match your actual daily work." 
-                    : "Wählen Sie basierend auf dem Rollenprofil die Aufgaben aus, die Ihrer täglichen Arbeit entsprechen."}
-                </CardDescription>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <CardTitle className="font-serif">
+                      {language === 'en' ? "Confirm your typical tasks" : "Bestätigen Sie Ihre typischen Aufgaben"}
+                    </CardTitle>
+                    <CardDescription>
+                      {language === 'en' 
+                        ? "Based on the role profile, select the tasks that match your actual daily work." 
+                        : "Wählen Sie basierend auf dem Rollenprofil die Aufgaben aus, die Ihrer täglichen Arbeit entsprechen."}
+                    </CardDescription>
+                  </div>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="gap-2 border-primary/20 hover:bg-primary/5 text-primary"
+                    onClick={handleSmartGenerate}
+                    disabled={isGenerating}
+                  >
+                    {isGenerating ? (
+                      <Sparkles className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <Sparkles className="w-4 h-4" />
+                    )}
+                    {language === 'en' ? "Smart Generate with AI" : "Mit KI generieren"}
+                  </Button>
+                </div>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="bg-secondary/20 rounded-lg p-1 border border-border/40">
                   <ScrollArea className="h-[300px] pr-4">
+                    {isGenerating ? (
+                      <div className="h-full flex flex-col items-center justify-center space-y-4 text-muted-foreground p-8">
+                         <Bot className="w-8 h-8 animate-bounce text-primary/50" />
+                         <p className="text-sm">
+                           {language === 'en' ? "Analyzing role & generating specific tasks..." : "Analysiere Rolle & generiere Aufgaben..."}
+                         </p>
+                      </div>
+                    ) : (
                     <div className="space-y-1 p-2">
                       {activeTasks.map((task) => (
                         <div 
@@ -337,6 +385,7 @@ export function MyRoleTasks() {
                         </div>
                       ))}
                     </div>
+                    )}
                   </ScrollArea>
                 </div>
 

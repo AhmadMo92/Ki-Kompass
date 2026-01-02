@@ -251,6 +251,38 @@ function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
   return finalTasks;
 }
 
+// 4. API Integration for Real AI Generation
+export async function generateTasksWithAI(roleName: string, language: "en" | "de"): Promise<TaskDefinition[]> {
+  try {
+    const response = await fetch("/api/generate-tasks", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ roleName, language })
+    });
+
+    if (!response.ok) {
+       // If 503, it means no API key, so we fall back to local generation silently or throw specific error
+       if (response.status === 503) {
+         console.warn("AI Generation unavailable (no key), falling back to rule-based.");
+         return [];
+       }
+       throw new Error("Failed to fetch tasks");
+    }
+
+    const data = await response.json();
+    return data.tasks.map((t: any, index: number) => ({
+      id: `ai-${Date.now()}-${index}`,
+      label: t.label,
+      category: t.category,
+      defaultWeight: 0.2
+    }));
+
+  } catch (error) {
+    console.error("AI Task Generation failed:", error);
+    return [];
+  }
+}
+
 export const getTasksForRole = (roleId: string, group: string): TaskDefinition[] => {
   // Use the new dynamic generator
   return generateTasksFromCompetencies(roleId);
