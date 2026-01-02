@@ -54,10 +54,43 @@ function getSeededRandom(seed: string) {
 
 function tokenize(text: string): string[] {
   if (!text) return [];
-  return text.toLowerCase()
+  
+  const rawTokens = text.toLowerCase()
     .replace(/[^\w\säöüß]/g, '') // Keep German chars
     .split(/\s+/)
-    .filter(w => w.length > 3); // Skip small words to avoid noise
+    .filter(w => w.length > 3); // Skip small words
+
+  // Synonym Expansion
+  const expandedTokens: string[] = [];
+  
+  const SYNONYMS: Record<string, string[]> = {
+    // English -> German/Synonyms
+    "manager": ["leitung", "führung", "management", "head", "leader", "leiter"],
+    "engineer": ["ingenieur", "technik", "engineering", "technical"],
+    "developer": ["entwickler", "software", "programmer", "it", "coding", "programmierer"],
+    "teacher": ["lehrer", "education", "bildung", "schulung", "tutor", "pädagoge"],
+    "nurse": ["pflege", "krankenschwester", "health", "gesundheit", "patient", "medical"],
+    "assistant": ["assistenz", "support", "unterstützung", "sekretär", "admin"],
+    "consultant": ["berater", "consulting", "beratung"],
+    "driver": ["fahrer", "transport", "logistik", "truck"],
+    "sales": ["vertrieb", "verkauf", "sales", "kunden"],
+    "marketing": ["marketing", "werbung", "pr", "market"],
+    // German -> English/Synonyms
+    "leitung": ["manager", "management", "head", "leader"],
+    "entwickler": ["developer", "software", "it"],
+    "lehrer": ["teacher", "education", "school"],
+    "pflege": ["nurse", "care", "health"],
+    "vertrieb": ["sales", "selling"]
+  };
+
+  rawTokens.forEach(t => {
+    expandedTokens.push(t);
+    if (SYNONYMS[t]) {
+      expandedTokens.push(...SYNONYMS[t]);
+    }
+  });
+
+  return expandedTokens;
 }
 
 // Generate tasks from competencies based on role ID
