@@ -15,6 +15,7 @@ import {
   analyzeTaskProfile, 
   getTasksForRole,
   generateTasksWithAI,
+  translateText,
   TaskDefinition, 
   ImpactResult 
 } from "@/utils/taskImpactLogic";
@@ -98,9 +99,31 @@ export function MyRoleTasks() {
         setCheckedTaskIds(new Set(localizedTasks.map(t => t.id)));
         setStep(2);
 
-        // Optional: Trigger AI generation automatically or offer it
+        // Auto-translate if needed (only for EN mode where En==De)
+        if (language === 'en') {
+          const tasksToTranslate = localizedTasks.filter(t => t.labelEn === t.labelDe && !t.id.startsWith("gen-") && !t.id.startsWith("h-"));
+          if (tasksToTranslate.length > 0) {
+             translateTasksBackground(tasksToTranslate);
+          }
+        }
       }
     }
+  };
+
+  const translateTasksBackground = async (tasks: TaskDefinition[]) => {
+    // Translate in parallel
+    const updates = await Promise.all(tasks.map(async (t) => {
+      const translated = await translateText(t.label, 'en');
+      return { id: t.id, newLabel: translated };
+    }));
+
+    setActiveTasks(prev => prev.map(t => {
+      const update = updates.find(u => u.id === t.id);
+      if (update && update.newLabel !== t.label) {
+        return { ...t, label: update.newLabel, labelEn: update.newLabel };
+      }
+      return t;
+    }));
   };
 
   const handleSmartGenerate = async () => {

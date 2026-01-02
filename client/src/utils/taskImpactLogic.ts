@@ -291,6 +291,23 @@ export async function generateTasksWithAI(roleName: string, language: "en" | "de
   }
 }
 
+export async function translateText(text: string, targetLanguage: "en" | "de"): Promise<string> {
+  try {
+    const response = await fetch("/api/translate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text, targetLanguage })
+    });
+    
+    if (!response.ok) return text;
+    
+    const data = await response.json();
+    return data.translatedText || text;
+  } catch (e) {
+    return text;
+  }
+}
+
 export const getTasksForRole = (roleId: string, group: string): TaskDefinition[] => {
   // Use the new dynamic generator
   return generateTasksFromCompetencies(roleId);

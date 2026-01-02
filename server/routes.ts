@@ -61,6 +61,42 @@ export async function registerRoutes(
     }
   });
 
+  app.post("/api/translate", async (req, res) => {
+    try {
+      const { text, targetLanguage } = req.body;
+      
+      if (!text || !targetLanguage) {
+        return res.status(400).json({ error: "Text and targetLanguage are required" });
+      }
+
+      // Check if API key is configured
+      if (!process.env.OPENAI_API_KEY) {
+        return res.status(503).json({ 
+          error: "OpenAI API key not configured", 
+          mock: true,
+          translatedText: text // Fallback: return original
+        });
+      }
+
+      const systemPrompt = `Translate the following professional task/competency to ${targetLanguage === 'de' ? 'German' : 'English'}. Return ONLY the translation, no quotes or explanation.`;
+
+      const completion = await openai.chat.completions.create({
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: text }
+        ],
+        model: "gpt-4o-mini", // Use mini for speed/cost
+      });
+
+      const translatedText = completion.choices[0].message.content?.trim();
+      res.json({ translatedText });
+
+    } catch (error: any) {
+      console.error("Translation Error:", error);
+      res.status(500).json({ error: error.message || "Failed to translate" });
+    }
+  });
+
   // use storage to perform CRUD operations on the storage interface
   // e.g. storage.insertUser(user) or storage.getUserByUsername(username)
 
