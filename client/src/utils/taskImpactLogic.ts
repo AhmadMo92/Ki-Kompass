@@ -93,6 +93,58 @@ function tokenize(text: string): string[] {
   return expandedTokens;
 }
 
+// Heuristic Rules to inject specific tasks based on role seniority/type
+function applyHeuristics(roleName: string, tasks: TaskDefinition[]): TaskDefinition[] {
+  const lowerName = roleName.toLowerCase();
+  const newTasks = [...tasks];
+  
+  // Rule 1: Management Roles get Strategy & Leadership
+  if (lowerName.includes("manager") || lowerName.includes("leitung") || lowerName.includes("head") || lowerName.includes("chef")) {
+    newTasks.unshift({
+      id: "h-strat",
+      label: "Strategic Planning & Goal Setting",
+      labelDe: "Strategische Planung & Zielsetzung",
+      labelEn: "Strategic Planning & Goal Setting",
+      category: "Planning",
+      defaultWeight: 0.3
+    });
+    newTasks.unshift({
+      id: "h-lead",
+      label: "Team Leadership & Development",
+      labelDe: "Teamführung & Entwicklung",
+      labelEn: "Team Leadership & Development",
+      category: "Human Interaction",
+      defaultWeight: 0.3
+    });
+  }
+
+  // Rule 2: Senior Roles get Mentoring
+  if (lowerName.includes("senior") || lowerName.includes("lead")) {
+    newTasks.push({
+      id: "h-mentor",
+      label: "Mentoring Junior Staff",
+      labelDe: "Mentoring von Junior-Mitarbeitern",
+      labelEn: "Mentoring Junior Staff",
+      category: "Human Interaction",
+      defaultWeight: 0.15
+    });
+  }
+
+  // Rule 3: Assistant/Support Roles get Scheduling
+  if (lowerName.includes("assistant") || lowerName.includes("assistenz") || lowerName.includes("support")) {
+    newTasks.push({
+      id: "h-sched",
+      label: "Schedule & Calendar Management",
+      labelDe: "Termin- & Kalenderverwaltung",
+      labelEn: "Schedule & Calendar Management",
+      category: "Coordination",
+      defaultWeight: 0.2
+    });
+  }
+
+  return newTasks;
+}
+
 // Generate tasks from competencies based on role ID
 function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
   const role = occupations.find(o => o.id === roleId);
@@ -176,7 +228,7 @@ function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
   }
 
   // Map to TaskDefinition
-  return selectedCompetencies.map(comp => {
+  let finalTasks = selectedCompetencies.map(comp => {
     // Deterministically assign a category
     const catIndex = Math.floor(rand() * categories.length);
     const category = categories[catIndex];
@@ -190,6 +242,13 @@ function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
       defaultWeight: 0.2
     };
   });
+
+  // Apply Heuristic Rules
+  if (role) {
+    finalTasks = applyHeuristics(role.nameEn + " " + role.nameDe, finalTasks);
+  }
+
+  return finalTasks;
 }
 
 export const getTasksForRole = (roleId: string, group: string): TaskDefinition[] => {
