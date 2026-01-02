@@ -105,12 +105,34 @@ function generateTasksFromCompetencies(roleId: string): TaskDefinition[] {
     const topMatches = scored.filter(s => s.score > 0).slice(0, 5).map(s => s.comp);
     selectedCompetencies = [...topMatches];
   }
+  
+  // Safe Fallback Keywords: These indicate general professional tasks applicable to many roles
+  const safeKeywords = ["dokumentation", "planung", "organisation", "verwaltung", "bericht", "analyse", "beratung", "koordination", "überwachung", "daten", "documentation", "planning", "organization", "administration", "report", "analysis", "consulting", "coordination", "monitoring", "data"];
 
-  // Fill the rest with random competencies to reach 6-9 tasks
+  // Filter competencies to create a "Safe Pool"
+  const safePool = competencies.filter(c => {
+     const name = (c.nameDe + " " + c.nameEn).toLowerCase();
+     return safeKeywords.some(k => name.includes(k));
+  });
+
+  // Fill the rest with SAFE competencies (not completely random) to reach 6-9 tasks
   // We use the seeded random so it's consistent for the same role
   const targetCount = Math.floor(rand() * 4) + 6;
   const usedIds = new Set(selectedCompetencies.map(c => c.id));
   
+  // Try to fill from Safe Pool first
+  let attempts = 0;
+  while (selectedCompetencies.length < targetCount && attempts < 50) {
+    attempts++;
+    const index = Math.floor(rand() * safePool.length);
+    const candidate = safePool[index];
+    if (candidate && !usedIds.has(candidate.id)) {
+      selectedCompetencies.push(candidate);
+      usedIds.add(candidate.id);
+    }
+  }
+  
+  // If still need more (unlikely), fill from full pool
   while (selectedCompetencies.length < targetCount) {
     const index = Math.floor(rand() * competencies.length);
     const candidate = competencies[index];
