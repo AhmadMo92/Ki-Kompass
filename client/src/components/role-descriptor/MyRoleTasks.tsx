@@ -1,220 +1,63 @@
 import { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { TaskBreakdownChart } from "./TaskBreakdownChart";
 import { Combobox } from "@/components/ui/combobox";
-import { occupations, competencies } from "@/lib/occupations";
-import { 
-  analyzeTaskProfile, 
-  getTasksForRole,
-  generateTasksWithAI,
-  translateText,
-  TaskDefinition, 
-  ImpactResult 
-} from "@/utils/taskImpactLogic";
+import { jobs, sectors, searchJobs, getJobById, CATEGORIES, Job } from "@/lib/data";
 import { 
   Sparkles, 
   ArrowRight, 
-  CheckCircle2, 
-  Bot, 
-  Brain, 
   Users, 
-  ArrowUpRight, 
+  Bot,
+  Cog,
   RotateCcw,
-  Languages
+  Languages,
+  TrendingUp,
+  Building2
 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
 export function MyRoleTasks() {
-  // Step State
-  const [step, setStep] = useState<1 | 2 | 3>(1);
-
-  // Data State
-  const [selectedRoleId, setSelectedRoleId] = useState<string>("");
-  const [selectedGroup, setSelectedGroup] = useState<string>("");
-  const [roleContext, setRoleContext] = useState<string>("Current role");
-  
-  const [activeTasks, setActiveTasks] = useState<TaskDefinition[]>([]);
-  const [customTask, setCustomTask] = useState<string>("");
-  const [showSuggestions, setShowSuggestions] = useState(false);
-  const [isGenerating, setIsGenerating] = useState(false);
-  
-  const [result, setResult] = useState<ImpactResult | null>(null);
-
-  // Language State
+  const [step, setStep] = useState<1 | 2>(1);
+  const [selectedJobId, setSelectedJobId] = useState<string>("");
   const [language, setLanguage] = useState<"en" | "de">("en");
 
-  // Suggestion Logic
-  const taskSuggestions = useMemo(() => {
-    if (!customTask || customTask.length < 2) return [];
-    const lower = customTask.toLowerCase();
-    // Filter top 10 matches from competencies
-    return competencies
-      .filter(c => (language === 'en' ? c.nameEn : c.nameDe).toLowerCase().includes(lower))
-      .slice(0, 8)
-      .map(c => ({
-        id: c.id,
-        label: language === 'en' ? c.nameEn : c.nameDe
-      }));
-  }, [customTask, language]);
+  const selectedJob = useMemo(() => {
+    return selectedJobId ? getJobById(selectedJobId) : undefined;
+  }, [selectedJobId]);
 
-  // Derived Data
-  const groups = useMemo(() => Array.from(new Set(occupations.map(o => o.group))), []);
-  
-  const filteredRoles = useMemo(() => {
-    return occupations.filter(o => !selectedGroup || o.group === selectedGroup);
-  }, [selectedGroup]);
-
-  // Handlers
-  const handleGroupChange = (group: string) => {
-    setSelectedGroup(group);
-    setSelectedRoleId(""); // Reset role when group changes
-  };
-
-  // Better approach for Step 2: Keep all potential tasks and a set of checked IDs
-  const [checkedTaskIds, setCheckedTaskIds] = useState<Set<string>>(new Set());
-
-  // When entering Step 2, initialize checked IDs
-  const initializeStep2 = () => {
-    if (selectedRoleId) {
-      const role = occupations.find(o => o.id === selectedRoleId);
-      if (role) {
-        // Use new dynamic task generation logic
-        const tasks = getTasksForRole(role.id, role.group);
-        
-        // Localize tasks based on current language selection
-        const localizedTasks = tasks.map(t => ({
-           ...t,
-           label: language === 'en' ? (t.labelEn || t.label) : (t.labelDe || t.label)
-        }));
-        
-        setActiveTasks(localizedTasks);
-        setCheckedTaskIds(new Set(localizedTasks.map(t => t.id)));
-        setStep(2);
-
-        // Auto-translate if needed (only for EN mode where En==De)
-        if (language === 'en') {
-          const tasksToTranslate = localizedTasks.filter(t => t.labelEn === t.labelDe && !t.id.startsWith("gen-") && !t.id.startsWith("h-"));
-          if (tasksToTranslate.length > 0) {
-             translateTasksBackground(tasksToTranslate);
-          }
-        }
-      }
-    }
-  };
-
-  const translateTasksBackground = async (tasks: TaskDefinition[]) => {
-    // Translate in parallel
-    const updates = await Promise.all(tasks.map(async (t) => {
-      const translated = await translateText(t.label, 'en');
-      return { id: t.id, newLabel: translated };
-    }));
-
-    setActiveTasks(prev => prev.map(t => {
-      const update = updates.find(u => u.id === t.id);
-      if (update && update.newLabel !== t.label) {
-        return { ...t, label: update.newLabel, labelEn: update.newLabel };
-      }
-      return t;
-    }));
-  };
-
-  const handleSmartGenerate = async () => {
-    if (!selectedRoleId) return;
-    const role = occupations.find(o => o.id === selectedRoleId);
-    if (!role) return;
-
-    setIsGenerating(true);
-    // Use role name based on current language
-    const roleName = language === 'en' ? role.nameEn : role.nameDe;
-    
-    const aiTasks = await generateTasksWithAI(roleName, language);
-    
-    if (aiTasks.length > 0) {
-      setActiveTasks(aiTasks);
-      setCheckedTaskIds(new Set(aiTasks.map(t => t.id)));
-    }
-    setIsGenerating(false);
-  };
-
-  const handleToggleTask = (taskId: string) => {
-    const newChecked = new Set(checkedTaskIds);
-    if (newChecked.has(taskId)) {
-      newChecked.delete(taskId);
-    } else {
-      newChecked.add(taskId);
-    }
-    setCheckedTaskIds(newChecked);
-  };
-
-  const handleAddCustomTask = (label: string, id?: string) => {
-    if (!label.trim()) return;
-
-    // Create new task
-    const newTask: TaskDefinition = {
-      id: id || `custom-${Date.now()}`,
-      label: label,
-      category: "Specific",
-      defaultWeight: 0.2
-    };
-
-    // Add to active tasks and checked set
-    setActiveTasks(prev => [...prev, newTask]);
-    setCheckedTaskIds(prev => new Set(prev).add(newTask.id));
-    
-    // Clear input
-    setCustomTask("");
-    setShowSuggestions(false);
-  };
+  const sectorData = useMemo(() => {
+    if (!selectedJob) return undefined;
+    return sectors.find(s => s.sector_name === selectedJob.sector);
+  }, [selectedJob]);
 
   const handleAnalyze = () => {
-    // Filter active tasks based on checked IDs
-    const tasksToAnalyze = activeTasks.filter(t => checkedTaskIds.has(t.id));
-    
-    // Note: customTask input is now handled via handleAddCustomTask immediately, 
-    // so we don't need to check the input field here anymore unless we want to auto-add on analyze.
-    // Let's auto-add if there's pending text.
-    if (customTask.trim()) {
-      const newTask: TaskDefinition = {
-        id: `custom-${Date.now()}`,
-        label: customTask,
-        category: "Specific",
-        defaultWeight: 0.2
-      };
-      tasksToAnalyze.push(newTask);
+    if (selectedJob) {
+      setStep(2);
     }
-
-    const analysis = analyzeTaskProfile(tasksToAnalyze);
-    setResult(analysis);
-    setStep(3);
   };
 
   const handleReset = () => {
     setStep(1);
-    setSelectedRoleId("");
-    setSelectedGroup("");
-    setRoleContext("Current role");
-    setResult(null);
-    setCustomTask("");
+    setSelectedJobId("");
+  };
+
+  const getCategoryStyle = (dominant: string) => {
+    const cat = CATEGORIES[dominant as keyof typeof CATEGORIES];
+    return cat || CATEGORIES["Mixed"];
   };
 
   return (
-    <section className="bg-gradient-to-b from-background to-secondary/20 border-t border-border/60 py-16">
+    <section className="bg-gradient-to-b from-background to-secondary/20 border-t border-border/60 py-16" data-testid="my-role-tasks-section">
       <div className="container mx-auto px-6 max-w-7xl">
         
-        {/* HEADER */}
         <div className="mb-10 text-center max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-4">
-             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-xs font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-xs font-medium">
               <Sparkles className="w-3 h-3" />
-              New Feature
+              {language === "en" ? "Research Data" : "Forschungsdaten"}
             </div>
             
             <div className="flex items-center gap-2">
@@ -224,6 +67,7 @@ export function MyRoleTasks() {
                 <Switch 
                   checked={language === 'en'}
                   onCheckedChange={(checked) => setLanguage(checked ? 'en' : 'de')}
+                  data-testid="language-toggle"
                 />
                 <span className={`text-sm ${language === 'en' ? 'font-bold text-primary' : 'text-muted-foreground'}`}>EN</span>
               </div>
@@ -231,382 +75,278 @@ export function MyRoleTasks() {
           </div>
 
           <h2 className="text-3xl font-serif text-primary mb-3">
-            {language === 'en' ? "My Role & Tasks" : "Meine Rolle & Aufgaben"}
+            {language === 'en' ? "AI Workforce Intelligence" : "KI-Arbeitskräfte-Intelligenz"}
           </h2>
           <p className="text-lg text-muted-foreground font-light mb-4">
             {language === 'en' 
-              ? "Understand how AI typically interacts with the tasks you do." 
-              : "Verstehen Sie, wie KI typischerweise mit Ihren Aufgaben interagiert."}
+              ? `Research-based AI exposure analysis for ${jobs.length.toLocaleString()} German occupations.` 
+              : `Forschungsbasierte KI-Expositionsanalyse für ${jobs.length.toLocaleString()} deutsche Berufe.`}
           </p>
           
-          {/* Progress Steps */}
           <div className="flex items-center justify-center gap-4 mt-6 text-sm font-medium">
             <div className={`flex items-center gap-2 ${step >= 1 ? "text-primary" : "text-muted-foreground"}`}>
               <div className={`w-6 h-6 rounded-full flex items-center justify-center border ${step >= 1 ? "bg-primary text-primary-foreground border-primary" : "border-border"}`}>1</div>
-              {language === 'en' ? "Role" : "Rolle"}
+              {language === 'en' ? "Select Role" : "Rolle wählen"}
             </div>
             <div className="w-8 h-px bg-border"></div>
             <div className={`flex items-center gap-2 ${step >= 2 ? "text-primary" : "text-muted-foreground"}`}>
               <div className={`w-6 h-6 rounded-full flex items-center justify-center border ${step >= 2 ? "bg-primary text-primary-foreground border-primary" : "border-border"}`}>2</div>
-              {language === 'en' ? "Tasks" : "Aufgaben"}
-            </div>
-            <div className="w-8 h-px bg-border"></div>
-            <div className={`flex items-center gap-2 ${step >= 3 ? "text-primary" : "text-muted-foreground"}`}>
-              <div className={`w-6 h-6 rounded-full flex items-center justify-center border ${step >= 3 ? "bg-primary text-primary-foreground border-primary" : "border-border"}`}>3</div>
-              {language === 'en' ? "Results" : "Ergebnisse"}
+              {language === 'en' ? "View Analysis" : "Analyse ansehen"}
             </div>
           </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
           
-          {/* STEP 1: ROLE SELECTION */}
           {step === 1 && (
-            <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500" data-testid="step-1-card">
               <CardHeader>
                 <CardTitle className="font-serif">
-                  {language === 'en' ? "Select your role" : "Wählen Sie Ihre Rolle"}
+                  {language === 'en' ? "Find your occupation" : "Finden Sie Ihren Beruf"}
                 </CardTitle>
                 <CardDescription>
                   {language === 'en' 
-                    ? "Start by choosing a profession group, then find your specific role." 
-                    : "Wählen Sie zunächst eine Berufsgruppe und dann Ihre spezifische Rolle."}
+                    ? "Search from 2,027 German white-collar occupations with pre-computed AI exposure scores." 
+                    : "Suchen Sie aus 2.027 deutschen Berufen mit vorberechneten KI-Expositionswerten."}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  
-                  {/* 1. Group Selection */}
-                  <div className="space-y-2">
-                    <Label>{language === 'en' ? "Profession Group" : "Berufsgruppe"}</Label>
-                    <Select value={selectedGroup} onValueChange={handleGroupChange}>
-                      <SelectTrigger className="h-11 bg-white">
-                        <SelectValue placeholder={language === 'en' ? "Select a group..." : "Gruppe wählen..."} />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {groups.map(g => (
-                          <SelectItem key={g} value={g}>{g}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  {/* 2. Role Selection (Filtered) */}
-                  <div className="space-y-2">
-                    <Label>{language === 'en' ? "Specific Role" : "Spezifische Rolle"}</Label>
-                    <Combobox 
-                      items={filteredRoles.map(r => ({ 
-                        value: r.id, 
-                        label: language === 'en' ? r.nameEn : r.nameDe 
-                      }))}
-                      value={selectedRoleId}
-                      onValueChange={setSelectedRoleId}
-                      placeholder={selectedGroup ? (language === 'en' ? "Search role..." : "Rolle suchen...") : (language === 'en' ? "Select a group first" : "Erst Gruppe wählen")}
-                      searchPlaceholder={language === 'en' ? "Type to search..." : "Suchen..."}
-                      emptyText={language === 'en' ? "No roles found" : "Keine Rollen gefunden"}
-                      width="w-full"
-                      className="h-11 bg-white"
-                    />
-                  </div>
-                </div>
-
                 <div className="space-y-2">
-                  <Label>{language === 'en' ? "Context" : "Kontext"}</Label>
-                  <RadioGroup value={roleContext} onValueChange={setRoleContext} className="flex gap-6">
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="Current role" id="ctx1" />
-                      <Label htmlFor="ctx1" className="font-normal cursor-pointer">
-                        {language === 'en' ? "Current role" : "Aktuelle Rolle"}
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="Previous role" id="ctx2" />
-                      <Label htmlFor="ctx2" className="font-normal cursor-pointer">
-                        {language === 'en' ? "Previous role" : "Frühere Rolle"}
-                      </Label>
-                    </div>
-                  </RadioGroup>
+                  <Label>{language === 'en' ? "Occupation" : "Beruf"}</Label>
+                  <Combobox 
+                    items={jobs.map(j => ({ 
+                      value: j.id, 
+                      label: language === 'en' ? j.en : j.de 
+                    }))}
+                    value={selectedJobId}
+                    onValueChange={setSelectedJobId}
+                    placeholder={language === 'en' ? "Search occupations..." : "Berufe suchen..."}
+                    searchPlaceholder={language === 'en' ? "Type to search..." : "Suchen..."}
+                    emptyText={language === 'en' ? "No occupations found" : "Keine Berufe gefunden"}
+                    width="w-full"
+                    className="h-11 bg-white"
+                  />
                 </div>
+
+                {selectedJob && (
+                  <div className="p-4 rounded-lg bg-secondary/30 border border-border/40 animate-in fade-in duration-300" data-testid="selected-job-preview">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h4 className="font-medium text-primary">
+                          {language === 'en' ? selectedJob.en : selectedJob.de}
+                        </h4>
+                        <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
+                          <Building2 className="w-3 h-3" />
+                          {selectedJob.sector}
+                        </p>
+                      </div>
+                      <Badge 
+                        className="text-white"
+                        style={{ backgroundColor: getCategoryStyle(selectedJob.dominant).color }}
+                      >
+                        {selectedJob.dominant}
+                      </Badge>
+                    </div>
+                    
+                    <div className="mt-4 grid grid-cols-3 gap-3 text-center">
+                      <div className="p-2 rounded bg-green-50 border border-green-200">
+                        <Users className="w-4 h-4 mx-auto text-green-600 mb-1" />
+                        <div className="text-lg font-bold text-green-700">{selectedJob.human}%</div>
+                        <div className="text-xs text-green-600">{language === 'en' ? 'Human' : 'Mensch'}</div>
+                      </div>
+                      <div className="p-2 rounded bg-blue-50 border border-blue-200">
+                        <Bot className="w-4 h-4 mx-auto text-blue-600 mb-1" />
+                        <div className="text-lg font-bold text-blue-700">{selectedJob.ai}%</div>
+                        <div className="text-xs text-blue-600">{language === 'en' ? 'AI-Augmented' : 'KI-Unterstützt'}</div>
+                      </div>
+                      <div className="p-2 rounded bg-amber-50 border border-amber-200">
+                        <Cog className="w-4 h-4 mx-auto text-amber-600 mb-1" />
+                        <div className="text-lg font-bold text-amber-700">{selectedJob.auto}%</div>
+                        <div className="text-xs text-amber-600">{language === 'en' ? 'Automation' : 'Automatisierung'}</div>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 <div className="pt-4 flex justify-end">
                   <Button 
                     size="lg" 
-                    onClick={initializeStep2}
-                    disabled={!selectedRoleId}
-                    className="w-full md:w-auto px-8"
-                  >
-                    {language === 'en' ? "Continue" : "Weiter"} <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          )}
-
-          {/* STEP 2: TASK CONFIRMATION */}
-          {step === 2 && (
-            <Card className="animate-in fade-in slide-in-from-right-4 duration-500">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <CardTitle className="font-serif">
-                      {language === 'en' ? "Confirm your typical tasks" : "Bestätigen Sie Ihre typischen Aufgaben"}
-                    </CardTitle>
-                    <CardDescription>
-                      {language === 'en' 
-                        ? "Based on the role profile, select the tasks that match your actual daily work." 
-                        : "Wählen Sie basierend auf dem Rollenprofil die Aufgaben aus, die Ihrer täglichen Arbeit entsprechen."}
-                    </CardDescription>
-                  </div>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="gap-2 border-primary/20 hover:bg-primary/5 text-primary"
-                    onClick={handleSmartGenerate}
-                    disabled={isGenerating}
-                  >
-                    {isGenerating ? (
-                      <Sparkles className="w-4 h-4 animate-spin" />
-                    ) : (
-                      <Sparkles className="w-4 h-4" />
-                    )}
-                    {language === 'en' ? "Smart Generate with AI" : "Mit KI generieren"}
-                  </Button>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="bg-secondary/20 rounded-lg p-1 border border-border/40">
-                  <ScrollArea className="h-[300px] pr-4">
-                    {isGenerating ? (
-                      <div className="h-full flex flex-col items-center justify-center space-y-4 text-muted-foreground p-8">
-                         <Bot className="w-8 h-8 animate-bounce text-primary/50" />
-                         <p className="text-sm">
-                           {language === 'en' ? "Analyzing role & generating specific tasks..." : "Analysiere Rolle & generiere Aufgaben..."}
-                         </p>
-                      </div>
-                    ) : (
-                    <div className="space-y-1 p-2">
-                      {activeTasks.map((task) => (
-                        <div 
-                          key={task.id} 
-                          className={`flex items-start space-x-3 p-3 rounded-md transition-colors ${checkedTaskIds.has(task.id) ? "bg-white shadow-sm" : "opacity-60 hover:opacity-80"}`}
-                        >
-                          <Checkbox 
-                            id={task.id} 
-                            checked={checkedTaskIds.has(task.id)}
-                            onCheckedChange={() => handleToggleTask(task.id)}
-                            className="mt-1"
-                          />
-                          <div className="grid gap-1.5 leading-none">
-                            <Label 
-                              htmlFor={task.id} 
-                              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
-                            >
-                              {task.label}
-                            </Label>
-                            <span className="text-xs text-muted-foreground">{task.category}</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    )}
-                  </ScrollArea>
-                </div>
-
-                <div className="space-y-2 relative">
-                  <Label className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">
-                    {language === 'en' ? "Add a custom task (Optional)" : "Eigene Aufgabe hinzufügen (Optional)"}
-                  </Label>
-                  <div className="flex gap-2">
-                    <Input 
-                      placeholder={language === 'en' ? "Type to search tasks..." : "Tippen Sie, um Aufgaben zu suchen..."}
-                      value={customTask}
-                      onChange={(e) => {
-                        setCustomTask(e.target.value);
-                        setShowSuggestions(true);
-                      }}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                          handleAddCustomTask(customTask);
-                        }
-                      }}
-                      onFocus={() => setShowSuggestions(true)}
-                      className="bg-white flex-1"
-                    />
-                    <Button onClick={() => handleAddCustomTask(customTask)} disabled={!customTask.trim()}>
-                      {language === 'en' ? "Add" : "Hinzufügen"}
-                    </Button>
-                  </div>
-                  {/* Smart Suggestions Dropdown */}
-                  {showSuggestions && taskSuggestions.length > 0 && (
-                    <div className="absolute z-10 w-full bg-popover text-popover-foreground border rounded-md shadow-md mt-1 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-                      <div className="p-1">
-                        {taskSuggestions.map((suggestion) => (
-                          <div
-                            key={suggestion.id}
-                            className="flex items-center px-3 py-2 text-sm rounded-sm cursor-pointer hover:bg-accent hover:text-accent-foreground"
-                            onClick={() => handleAddCustomTask(suggestion.label, suggestion.id)}
-                          >
-                            <Sparkles className="w-3 h-3 mr-2 text-primary/50" />
-                            {suggestion.label}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {/* Backdrop to close suggestions */}
-                  {showSuggestions && (
-                    <div className="fixed inset-0 z-0" onClick={() => setShowSuggestions(false)} style={{ display: taskSuggestions.length > 0 ? 'block' : 'none', pointerEvents: taskSuggestions.length > 0 ? 'auto' : 'none', background: 'transparent' }} />
-                  )}
-                </div>
-
-                <div className="flex items-center justify-between pt-4">
-                  <Button variant="ghost" onClick={() => setStep(1)}>
-                    {language === 'en' ? "Back" : "Zurück"}
-                  </Button>
-                  <Button 
-                    size="lg" 
                     onClick={handleAnalyze}
-                    disabled={checkedTaskIds.size === 0}
-                    className="px-8"
+                    disabled={!selectedJobId}
+                    className="w-full md:w-auto px-8"
+                    data-testid="analyze-button"
                   >
-                    {language === 'en' ? "Analyze Tasks" : "Aufgaben analysieren"} <Sparkles className="ml-2 w-4 h-4" />
+                    {language === 'en' ? "View Full Analysis" : "Vollständige Analyse"} <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
-                
-                <p className="text-center text-xs text-muted-foreground italic">
-                  {language === 'en' 
-                    ? "\"You don’t need to be exact. This is about patterns, not precision.\"" 
-                    : "\"Es muss nicht exakt sein. Es geht um Muster, nicht um Präzision.\""}
-                </p>
               </CardContent>
             </Card>
           )}
 
-          {/* STEP 3: RESULTS */}
-          {step === 3 && result && (
-            <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
+          {step === 2 && selectedJob && (
+            <div className="space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-700" data-testid="step-2-analysis">
               
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-2xl font-serif text-primary">
+                    {language === 'en' ? selectedJob.en : selectedJob.de}
+                  </h3>
+                  <p className="text-muted-foreground flex items-center gap-2 mt-1">
+                    <Building2 className="w-4 h-4" />
+                    {selectedJob.sector}
+                    <span className="text-border">•</span>
+                    <span className="text-xs">ID: {selectedJob.id}</span>
+                  </p>
+                </div>
+                <Button variant="outline" onClick={handleReset} className="gap-2" data-testid="reset-button">
+                  <RotateCcw className="w-4 h-4" />
+                  {language === 'en' ? "New Search" : "Neue Suche"}
+                </Button>
+              </div>
+
               <div className="grid md:grid-cols-12 gap-6">
-                {/* Panel 1: Chart */}
                 <div className="md:col-span-5">
-                   <TaskBreakdownChart data={result.breakdown} />
+                  <TaskBreakdownChart 
+                    data={{
+                      augmented: selectedJob.ai,
+                      automated: selectedJob.auto,
+                      human: selectedJob.human
+                    }} 
+                  />
                 </div>
 
-                {/* Panel 2: List */}
-                <Card className="md:col-span-7 h-full border-none shadow-sm bg-white/60">
+                <Card className="md:col-span-7 border-none shadow-sm bg-white/60">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-lg font-serif text-primary">
-                      {language === 'en' ? "Task Category Breakdown" : "Aufgabenverteilung nach Kategorie"}
+                    <CardTitle className="text-lg font-serif text-primary flex items-center gap-2">
+                      <TrendingUp className="w-5 h-5" />
+                      {language === 'en' ? "AI Exposure Analysis" : "KI-Expositionsanalyse"}
                     </CardTitle>
                     <CardDescription>
                       {language === 'en' 
-                        ? "Typical AI interaction for your confirmed tasks." 
-                        : "Typische KI-Interaktion für Ihre bestätigten Aufgaben."}
+                        ? "Research-based task distribution for this occupation." 
+                        : "Forschungsbasierte Aufgabenverteilung für diesen Beruf."}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <ScrollArea className="h-[200px] pr-4">
-                      <div className="space-y-3">
-                        {result.taskDetails.map((detail, idx) => (
-                          <div key={idx} className="flex items-start justify-between text-sm p-2 rounded hover:bg-secondary/30 transition-colors">
-                            <div className="space-y-0.5">
-                              <span className="font-medium block">{detail.category}</span>
-                              <span className="text-xs text-muted-foreground block max-w-[200px] truncate" title={detail.taskLabel}>
-                                Ex: {detail.taskLabel}
-                              </span>
+                  <CardContent className="space-y-4">
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between p-3 rounded-lg bg-green-50 border border-green-200">
+                        <div className="flex items-center gap-3">
+                          <Users className="w-5 h-5 text-green-600" />
+                          <div>
+                            <div className="font-medium text-green-800">
+                              {language === 'en' ? 'Human-Centric Tasks' : 'Menschenzentrierte Aufgaben'}
                             </div>
-                            <div className="text-right">
-                              <Badge variant="outline" className="mb-1 bg-white">
-                                {detail.interactionType}
-                              </Badge>
+                            <div className="text-xs text-green-600">
+                              {language === 'en' 
+                                ? 'Requiring judgment, empathy, or physical presence' 
+                                : 'Erfordern Urteilsvermögen, Empathie oder physische Präsenz'}
                             </div>
                           </div>
-                        ))}
+                        </div>
+                        <div className="text-2xl font-bold text-green-700">{selectedJob.human}%</div>
                       </div>
-                    </ScrollArea>
+
+                      <div className="flex items-center justify-between p-3 rounded-lg bg-blue-50 border border-blue-200">
+                        <div className="flex items-center gap-3">
+                          <Bot className="w-5 h-5 text-blue-600" />
+                          <div>
+                            <div className="font-medium text-blue-800">
+                              {language === 'en' ? 'AI-Augmentable Tasks' : 'KI-Unterstützbare Aufgaben'}
+                            </div>
+                            <div className="text-xs text-blue-600">
+                              {language === 'en' 
+                                ? 'AI tools can assist and enhance productivity' 
+                                : 'KI-Tools können die Produktivität steigern'}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-2xl font-bold text-blue-700">{selectedJob.ai}%</div>
+                      </div>
+
+                      {selectedJob.auto > 0 && (
+                        <div className="flex items-center justify-between p-3 rounded-lg bg-amber-50 border border-amber-200">
+                          <div className="flex items-center gap-3">
+                            <Cog className="w-5 h-5 text-amber-600" />
+                            <div>
+                              <div className="font-medium text-amber-800">
+                                {language === 'en' ? 'High Automation Exposure' : 'Hohe Automatisierungsexposition'}
+                              </div>
+                              <div className="text-xs text-amber-600">
+                                {language === 'en' 
+                                  ? 'Routine tasks with high automation potential' 
+                                  : 'Routineaufgaben mit hohem Automatisierungspotenzial'}
+                              </div>
+                            </div>
+                          </div>
+                          <div className="text-2xl font-bold text-amber-700">{selectedJob.auto}%</div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="pt-4 border-t">
+                      <Badge 
+                        className="text-white text-sm px-3 py-1"
+                        style={{ backgroundColor: getCategoryStyle(selectedJob.dominant).color }}
+                      >
+                        {language === 'en' ? 'Primary Category: ' : 'Hauptkategorie: '}{selectedJob.dominant}
+                      </Badge>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Panel 3: Interpretation */}
-              <Card className="bg-primary/5 border-primary/10">
-                <CardHeader>
-                  <CardTitle className="text-lg font-serif text-primary">
-                    {language === 'en' ? "What this means — and what it doesn’t" : "Was das bedeutet – und was nicht"}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                      {language === 'en' ? "The Pattern" : "Das Muster"}
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex gap-2 items-start">
-                        <span className="text-primary mt-1">•</span>
-                        <span>
-                          {language === 'en' ? "AI supports " : "KI unterstützt "}
-                          <strong>{result.breakdown.augmented}%</strong>
-                          {language === 'en' ? " of these tasks, likely increasing speed and quality." : " dieser Aufgaben, was wahrscheinlich Geschwindigkeit und Qualität erhöht."}
-                        </span>
-                      </li>
-                      <li className="flex gap-2 items-start">
-                        <span className="text-primary mt-1">•</span>
-                        <span>
-                          <strong>{result.breakdown.automated}%</strong>
-                          {language === 'en' 
-                            ? " of routine coordination could be automated, freeing up focus time." 
-                            : " der Routinekoordination könnten automatisiert werden, was Fokuszeit freisetzt."}
-                        </span>
-                      </li>
-                      <li className="flex gap-2 items-start">
-                        <span className="text-primary mt-1">•</span>
-                        <span>
-                          {language === 'en' ? "Human responsibility remains dominant in " : "Menschliche Verantwortung bleibt dominant in "}
-                          <strong>{result.breakdown.human}%</strong>
-                          {language === 'en' ? " of the work, especially in judgment and empathy." : " der Arbeit, besonders bei Urteilsvermögen und Empathie."}
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="space-y-3">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                      {language === 'en' ? "The Reality" : "Die Realität"}
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex gap-2 items-start">
-                        <span className="text-amber-600 mt-1">•</span>
-                        <span>
-                          {language === 'en' 
-                            ? "This is not a job loss prediction or employability score." 
-                            : "Dies ist keine Vorhersage über Jobverlust oder Beschäftigungsfähigkeit."}
-                        </span>
-                      </li>
-                      <li className="flex gap-2 items-start">
-                        <span className="text-amber-600 mt-1">•</span>
-                        <span>
-                          {language === 'en' 
-                            ? "Augmentation usually changes HOW work is done, not WHETHER the role exists." 
-                            : "Augmentierung verändert meist, WIE Arbeit erledigt wird, nicht OB die Rolle existiert."}
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
+              {sectorData && (
+                <Card className="border-none shadow-sm bg-white/60" data-testid="sector-comparison">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg font-serif text-primary flex items-center gap-2">
+                      <Building2 className="w-5 h-5" />
+                      {language === 'en' ? 'Sector Comparison' : 'Sektorvergleich'}: {selectedJob.sector}
+                    </CardTitle>
+                    <CardDescription>
+                      {language === 'en' 
+                        ? `How this role compares to ${sectorData.job_count} other occupations in the sector.` 
+                        : `Wie diese Rolle im Vergleich zu ${sectorData.job_count} anderen Berufen im Sektor abschneidet.`}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="p-4 rounded-lg bg-secondary/30">
+                        <div className="text-sm text-muted-foreground mb-1">
+                          {language === 'en' ? 'Your Role: Human Tasks' : 'Ihre Rolle: Menschliche Aufgaben'}
+                        </div>
+                        <div className="text-2xl font-bold text-green-600">{selectedJob.human}%</div>
+                        <div className="text-xs text-muted-foreground mt-1">
+                          {language === 'en' ? 'Sector avg: ' : 'Sektor-Ø: '}{sectorData.avg_human.toFixed(1)}%
+                          {selectedJob.human > sectorData.avg_human 
+                            ? ` (+${(selectedJob.human - sectorData.avg_human).toFixed(1)}%)` 
+                            : ` (${(selectedJob.human - sectorData.avg_human).toFixed(1)}%)`}
+                        </div>
+                      </div>
+                      <div className="p-4 rounded-lg bg-secondary/30">
+                        <div className="text-sm text-muted-foreground mb-1">
+                          {language === 'en' ? 'Your Role: AI Tasks' : 'Ihre Rolle: KI-Aufgaben'}
+                        </div>
+                        <div className="text-2xl font-bold text-blue-600">{selectedJob.ai}%</div>
+                        <div className="text-xs text-muted-foreground mt-1">
+                          {language === 'en' ? 'Sector avg: ' : 'Sektor-Ø: '}{sectorData.avg_ai.toFixed(1)}%
+                          {selectedJob.ai > sectorData.avg_ai 
+                            ? ` (+${(selectedJob.ai - sectorData.avg_ai).toFixed(1)}%)` 
+                            : ` (${(selectedJob.ai - sectorData.avg_ai).toFixed(1)}%)`}
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
 
-              <div className="flex justify-between items-center pt-4">
-                <Button variant="outline" onClick={handleReset} className="text-muted-foreground">
-                  <RotateCcw className="mr-2 w-4 h-4" /> 
-                  {language === 'en' ? "Start Over" : "Neu starten"}
-                </Button>
-                <Button variant="link" className="text-primary gap-2">
-                  {language === 'en' ? "Compare with typical roles in dashboard above" : "Mit typischen Rollen im Dashboard vergleichen"} <ArrowUpRight className="w-4 h-4" />
-                </Button>
-              </div>
-
+              <p className="text-center text-xs text-muted-foreground">
+                {language === 'en' 
+                  ? "Data based on German Federal Employment Agency (BA) KldB 2010 classification and O*NET skill requirements." 
+                  : "Daten basierend auf der KldB 2010 Klassifikation der Bundesagentur für Arbeit und O*NET Kompetenzanforderungen."}
+              </p>
             </div>
           )}
-
         </div>
       </div>
     </section>
