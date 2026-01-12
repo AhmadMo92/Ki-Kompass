@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { TaskBreakdownChart } from "./TaskBreakdownChart";
 import { JobCombobox } from "@/components/ui/job-combobox";
-import { TaskSelectorModal } from "./TaskSelectorModal";
+import { TaskSelectorModal, TaskPreview } from "./TaskSelectorModal";
 import { PersonalizedResults } from "./PersonalizedResults";
 import { jobs, sectors, getJobById, CATEGORIES, Job, getTasksForJob, calculatePersonalExposure, Task } from "@/lib/data";
 import { 
@@ -384,30 +384,49 @@ export function MyRoleTasks() {
                   onReset={handleResetPersonalization}
                 />
               ) : jobTasks.length > 0 ? (
-                <button
-                  onClick={handleOpenPersonalize}
-                  className="w-full p-4 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg hover:border-blue-400 hover:shadow-md transition-all group"
-                  data-testid="personalize-button"
-                >
-                  <div className="flex items-center justify-between">
+                <Card className="border-2 border-dashed border-blue-200 bg-gradient-to-r from-blue-50/50 to-purple-50/50" data-testid="personalize-section">
+                  <CardHeader className="pb-2">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
                         <Target className="w-5 h-5 text-white" />
                       </div>
-                      <div className="text-left">
-                        <div className="font-semibold text-primary group-hover:text-blue-700">
+                      <div>
+                        <CardTitle className="font-serif text-lg">
                           {language === 'en' ? 'Personalize Your Analysis' : 'Personalisieren Sie Ihre Analyse'}
-                        </div>
-                        <div className="text-sm text-muted-foreground">
+                        </CardTitle>
+                        <CardDescription>
                           {language === 'en' 
-                            ? `Select from ${jobTasks.length} tasks you actually do` 
-                            : `Wählen Sie aus ${jobTasks.length} Aufgaben, die Sie tatsächlich ausführen`}
-                        </div>
+                            ? 'Uncheck tasks you don\'t do to see YOUR specific AI exposure' 
+                            : 'Deaktivieren Sie Aufgaben, die Sie nicht ausführen'}
+                        </CardDescription>
                       </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </button>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <TaskPreview
+                      tasks={jobTasks}
+                      selectedTaskIds={selectedTaskIds}
+                      onToggleTask={(taskId) => {
+                        const newSelection = new Set(selectedTaskIds);
+                        if (newSelection.has(taskId)) {
+                          newSelection.delete(taskId);
+                        } else {
+                          newSelection.add(taskId);
+                        }
+                        setSelectedTaskIds(newSelection);
+                      }}
+                      onOpenFull={handleOpenPersonalize}
+                      language={language}
+                    />
+                    
+                    <div className="flex justify-end pt-2 border-t">
+                      <Button onClick={handleConfirmTasks} disabled={selectedTaskIds.size === 0}>
+                        {language === 'en' ? 'Calculate My Exposure' : 'Meine Exposition berechnen'}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
               ) : null}
 
               <TaskSelectorModal

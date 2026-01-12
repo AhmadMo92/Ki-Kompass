@@ -3,8 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { CheckCircle2, Circle } from "lucide-react";
+import { CheckCircle2, Circle, ChevronDown } from "lucide-react";
 
 interface Task {
   id: string;
@@ -61,8 +60,8 @@ export function TaskSelectorModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[85vh] flex flex-col" data-testid="task-selector-modal">
-        <DialogHeader>
+      <DialogContent className="max-w-2xl max-h-[85vh] flex flex-col overflow-hidden" data-testid="task-selector-modal">
+        <DialogHeader className="flex-shrink-0">
           <DialogTitle className="font-serif text-xl">
             {language === "en" ? "Select Your Tasks" : "Wählen Sie Ihre Aufgaben"}
           </DialogTitle>
@@ -73,7 +72,7 @@ export function TaskSelectorModal({
           </DialogDescription>
         </DialogHeader>
 
-        <div className="flex items-center justify-between py-2 border-b">
+        <div className="flex items-center justify-between py-2 border-b flex-shrink-0">
           <div className="text-sm text-muted-foreground">
             {selectedCount} / {totalCount} {language === "en" ? "tasks selected" : "Aufgaben ausgewählt"}
           </div>
@@ -87,7 +86,7 @@ export function TaskSelectorModal({
           </div>
         </div>
 
-        <ScrollArea className="flex-1 pr-4 -mr-4">
+        <div className="flex-1 overflow-y-auto min-h-0 pr-2" style={{ maxHeight: 'calc(85vh - 220px)' }}>
           <div className="space-y-2 py-4">
             {tasks.map((task) => {
               const isSelected = selectedTaskIds.has(task.id);
@@ -121,9 +120,9 @@ export function TaskSelectorModal({
               );
             })}
           </div>
-        </ScrollArea>
+        </div>
 
-        <DialogFooter className="border-t pt-4">
+        <DialogFooter className="border-t pt-4 flex-shrink-0">
           <Button variant="outline" onClick={() => onOpenChange(false)}>
             {language === "en" ? "Cancel" : "Abbrechen"}
           </Button>
@@ -137,5 +136,73 @@ export function TaskSelectorModal({
         </DialogFooter>
       </DialogContent>
     </Dialog>
+  );
+}
+
+interface TaskPreviewProps {
+  tasks: Task[];
+  selectedTaskIds: Set<string>;
+  onToggleTask: (taskId: string) => void;
+  onOpenFull: () => void;
+  language: "en" | "de";
+}
+
+export function TaskPreview({ tasks, selectedTaskIds, onToggleTask, onOpenFull, language }: TaskPreviewProps) {
+  const previewTasks = tasks.slice(0, 12);
+  const remainingCount = tasks.length - 12;
+  const selectedCount = selectedTaskIds.size;
+
+  return (
+    <div className="space-y-3" data-testid="task-preview">
+      <div className="flex items-center justify-between">
+        <h4 className="text-sm font-medium text-muted-foreground">
+          {language === "en" ? "Quick Task Selection" : "Schnelle Aufgabenauswahl"}
+          <span className="ml-2 text-xs">({selectedCount}/{tasks.length})</span>
+        </h4>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        {previewTasks.map((task) => {
+          const isSelected = selectedTaskIds.has(task.id);
+          const style = CATEGORY_STYLES[task.category];
+          
+          return (
+            <div
+              key={task.id}
+              className={`flex items-center gap-2 p-2 rounded-lg border cursor-pointer transition-all text-sm ${
+                isSelected 
+                  ? "bg-secondary/50 border-primary/30" 
+                  : "bg-secondary/20 border-transparent opacity-60"
+              }`}
+              onClick={() => onToggleTask(task.id)}
+              data-testid={`preview-task-${task.id}`}
+            >
+              <Checkbox
+                checked={isSelected}
+                onCheckedChange={() => onToggleTask(task.id)}
+                className="shrink-0"
+              />
+              <span className={`flex-1 truncate ${isSelected ? "text-foreground" : "text-muted-foreground"}`}>
+                {task.de}
+              </span>
+              <div className={`w-2 h-2 rounded-full shrink-0 ${style.bg.replace('100', '500')}`} title={style.label[language]} />
+            </div>
+          );
+        })}
+      </div>
+      
+      {remainingCount > 0 && (
+        <Button 
+          variant="ghost" 
+          className="w-full text-muted-foreground hover:text-primary"
+          onClick={onOpenFull}
+        >
+          <ChevronDown className="w-4 h-4 mr-2" />
+          {language === "en" 
+            ? `Show ${remainingCount} more tasks...` 
+            : `${remainingCount} weitere Aufgaben anzeigen...`}
+        </Button>
+      )}
+    </div>
   );
 }
