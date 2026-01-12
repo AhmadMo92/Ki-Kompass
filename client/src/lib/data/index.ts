@@ -1,6 +1,5 @@
 import jobsData from "./jobs.json";
 import sectorsData from "./sectors.json";
-import searchIndexData from "./search_index.json";
 
 export interface Job {
   id: string;
@@ -11,6 +10,7 @@ export interface Job {
   ai: number;
   auto: number;
   dominant: "Human-Centric" | "AI-Augmentable" | "High Automation Exposure" | "Mixed";
+  aliases: string[];
 }
 
 export interface Sector {
@@ -20,25 +20,53 @@ export interface Sector {
   job_count: number;
 }
 
-export interface SearchEntry {
-  id: string;
-  de: string;
-  en: string;
+export interface SearchResult extends Job {
+  matchType: "alias_exact" | "alias_partial" | "title";
+  matchedAlias?: string;
 }
 
 export const jobs: Job[] = jobsData as Job[];
 export const sectors: Sector[] = sectorsData as Sector[];
-export const searchIndex: SearchEntry[] = searchIndexData as SearchEntry[];
 
-console.log(`[Research Data] Loaded ${jobs.length} jobs with AI exposure scores`);
+console.log(`[Research Data] Loaded ${jobs.length} jobs with AI exposure scores and aliases`);
 
-export function searchJobs(query: string, language: "en" | "de" = "en", limit = 50): Job[] {
-  if (!query || query.length < 2) return [];
-  const q = query.toLowerCase();
-  return jobs.filter(job => {
+export function searchJobs(query: string, language: "en" | "de" = "en", limit = 50): SearchResult[] {
+  const q = query.toLowerCase().trim();
+  if (!q || q.length < 2) return [];
+  
+  const results: SearchResult[] = [];
+  const addedIds = new Set<string>();
+
+  for (const job of jobs) {
+    if (addedIds.has(job.id)) continue;
+    const aliases = job.aliases || [];
+    const exactMatch = aliases.find(a => a.toLowerCase() === q);
+    if (exactMatch) {
+      results.push({ ...job, matchType: "alias_exact", matchedAlias: exactMatch });
+      addedIds.add(job.id);
+    }
+  }
+
+  for (const job of jobs) {
+    if (addedIds.has(job.id)) continue;
+    const aliases = job.aliases || [];
+    const partialMatch = aliases.find(a => a.toLowerCase().includes(q));
+    if (partialMatch) {
+      results.push({ ...job, matchType: "alias_partial", matchedAlias: partialMatch });
+      addedIds.add(job.id);
+    }
+  }
+
+  for (const job of jobs) {
+    if (addedIds.has(job.id)) continue;
     const title = language === "de" ? job.de : job.en;
-    return title.toLowerCase().includes(q);
-  }).slice(0, limit);
+    if (title.toLowerCase().includes(q) || job.en.toLowerCase().includes(q) || job.de.toLowerCase().includes(q)) {
+      results.push({ ...job, matchType: "title" });
+      addedIds.add(job.id);
+    }
+  }
+
+  return results.slice(0, limit);
 }
 
 export function getJobById(jobId: string): Job | undefined {

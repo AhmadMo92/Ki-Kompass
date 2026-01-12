@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { TaskBreakdownChart } from "./TaskBreakdownChart";
-import { Combobox } from "@/components/ui/combobox";
-import { jobs, sectors, searchJobs, getJobById, CATEGORIES, Job } from "@/lib/data";
+import { JobCombobox } from "@/components/ui/job-combobox";
+import { jobs, sectors, getJobById, CATEGORIES, Job } from "@/lib/data";
 import { 
   Sparkles, 
   ArrowRight, 
@@ -113,17 +113,13 @@ export function MyRoleTasks() {
               <CardContent className="space-y-6">
                 <div className="space-y-2">
                   <Label>{language === 'en' ? "Occupation" : "Beruf"}</Label>
-                  <Combobox 
-                    items={jobs.map(j => ({ 
-                      value: j.id, 
-                      label: language === 'en' ? j.en : j.de 
-                    }))}
+                  <JobCombobox 
                     value={selectedJobId}
                     onValueChange={setSelectedJobId}
+                    language={language}
                     placeholder={language === 'en' ? "Search occupations..." : "Berufe suchen..."}
-                    searchPlaceholder={language === 'en' ? "Type to search..." : "Suchen..."}
+                    searchPlaceholder={language === 'en' ? "Type to search (try: UX Designer, CTO, Data Engineer)..." : "Suchen (z.B.: UX Designer, CTO, Data Engineer)..."}
                     emptyText={language === 'en' ? "No occupations found" : "Keine Berufe gefunden"}
-                    width="w-full"
                     className="h-11 bg-white"
                   />
                 </div>
