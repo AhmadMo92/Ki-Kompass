@@ -29,6 +29,7 @@ export function MyRoleTasks() {
   
   const [showTaskSelector, setShowTaskSelector] = useState(false);
   const [selectedTaskIds, setSelectedTaskIds] = useState<Set<string>>(new Set());
+  const [customTasks, setCustomTasks] = useState<Task[]>([]);
   const [personalizedExposure, setPersonalizedExposure] = useState<{ human: number; ai_assisted: number; automation: number } | null>(null);
 
   const selectedJob = useMemo(() => {
@@ -59,6 +60,7 @@ export function MyRoleTasks() {
     setSelectedJobId("");
     setPersonalizedExposure(null);
     setSelectedTaskIds(new Set());
+    setCustomTasks([]);
   };
 
   const handleOpenPersonalize = () => {
@@ -69,10 +71,28 @@ export function MyRoleTasks() {
   };
 
   const handleConfirmTasks = () => {
-    const selectedTasks = jobTasks.filter(t => selectedTaskIds.has(t.id));
+    const allTasks = [...jobTasks, ...customTasks];
+    const selectedTasks = allTasks.filter(t => selectedTaskIds.has(t.id));
     const exposure = calculatePersonalExposure(selectedTasks);
     setPersonalizedExposure(exposure);
     setShowTaskSelector(false);
+  };
+
+  const handleAddCustomTask = (task: Task) => {
+    if (customTasks.length >= 12) return;
+    if (!customTasks.find(t => t.id === task.id)) {
+      setCustomTasks(prev => [...prev, task]);
+      setSelectedTaskIds(prev => new Set([...Array.from(prev), task.id]));
+    }
+  };
+
+  const handleRemoveCustomTask = (taskId: string) => {
+    setCustomTasks(prev => prev.filter(t => t.id !== taskId));
+    setSelectedTaskIds(prev => {
+      const next = new Set(prev);
+      next.delete(taskId);
+      return next;
+    });
   };
 
   const handleResetPersonalization = () => {
@@ -379,7 +399,7 @@ export function MyRoleTasks() {
                     ai_assisted: selectedJob.ai_assisted,
                     automation: selectedJob.automation,
                   }}
-                  taskCount={{ selected: selectedTaskIds.size, total: jobTasks.length }}
+                  taskCount={{ selected: selectedTaskIds.size, total: jobTasks.length + customTasks.length }}
                   language={language}
                   onReset={handleResetPersonalization}
                 />
@@ -406,6 +426,7 @@ export function MyRoleTasks() {
                     <TaskPreview
                       tasks={jobTasks}
                       selectedTaskIds={selectedTaskIds}
+                      customTasks={customTasks}
                       onToggleTask={(taskId) => {
                         const newSelection = new Set(selectedTaskIds);
                         if (newSelection.has(taskId)) {
@@ -415,6 +436,8 @@ export function MyRoleTasks() {
                         }
                         setSelectedTaskIds(newSelection);
                       }}
+                      onAddCustomTask={handleAddCustomTask}
+                      onRemoveCustomTask={handleRemoveCustomTask}
                       onOpenFull={handleOpenPersonalize}
                       language={language}
                     />

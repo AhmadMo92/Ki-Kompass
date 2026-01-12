@@ -32,6 +32,49 @@ export function calculatePersonalExposure(selectedTasks: Task[]): { human: numbe
   };
 }
 
+export interface TaskWithSource extends Task {
+  jobCategory: string;
+  jobDe: string;
+  jobEn: string;
+}
+
+let allTasksCache: TaskWithSource[] | null = null;
+
+export function getAllTasks(): TaskWithSource[] {
+  if (allTasksCache) return allTasksCache;
+  
+  const allTasks: TaskWithSource[] = [];
+  for (const [categoryCode, jobData] of Object.entries(tasksByJob)) {
+    for (const task of jobData.tasks) {
+      allTasks.push({
+        ...task,
+        jobCategory: categoryCode,
+        jobDe: jobData.job_de,
+        jobEn: jobData.job_en,
+      });
+    }
+  }
+  allTasksCache = allTasks;
+  return allTasks;
+}
+
+export function searchTasks(query: string, limit = 20): TaskWithSource[] {
+  const q = query.toLowerCase().trim();
+  if (!q || q.length < 2) return [];
+  
+  const allTasks = getAllTasks();
+  const results: TaskWithSource[] = [];
+  
+  for (const task of allTasks) {
+    if (task.de.toLowerCase().includes(q)) {
+      results.push(task);
+      if (results.length >= limit) break;
+    }
+  }
+  
+  return results;
+}
+
 export interface Job {
   id: string;
   de: string;

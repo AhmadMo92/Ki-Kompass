@@ -1,9 +1,11 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Circle, ChevronDown } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { CheckCircle2, Circle, ChevronDown, Search, Plus, X } from "lucide-react";
+import { searchTasks, TaskWithSource } from "@/lib/data";
 
 interface Task {
   id: string;
@@ -142,67 +144,194 @@ export function TaskSelectorModal({
 interface TaskPreviewProps {
   tasks: Task[];
   selectedTaskIds: Set<string>;
+  customTasks: Task[];
   onToggleTask: (taskId: string) => void;
+  onAddCustomTask: (task: Task) => void;
+  onRemoveCustomTask: (taskId: string) => void;
   onOpenFull: () => void;
   language: "en" | "de";
 }
 
-export function TaskPreview({ tasks, selectedTaskIds, onToggleTask, onOpenFull, language }: TaskPreviewProps) {
-  const previewTasks = tasks.slice(0, 12);
-  const remainingCount = tasks.length - 12;
-  const selectedCount = selectedTaskIds.size;
+export function TaskPreview({ 
+  tasks, 
+  selectedTaskIds, 
+  customTasks,
+  onToggleTask, 
+  onAddCustomTask,
+  onRemoveCustomTask,
+  onOpenFull, 
+  language 
+}: TaskPreviewProps) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<TaskWithSource[]>([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const allTaskIds = new Set([...tasks.map(t => t.id), ...customTasks.map(t => t.id)]);
+  const totalSelected = Array.from(selectedTaskIds).filter(id => allTaskIds.has(id)).length;
+  const totalTasks = tasks.length + customTasks.length;
+
+  useEffect(() => {
+    if (searchQuery.length >= 2) {
+      const results = searchTasks(searchQuery, 8);
+      const filtered = results.filter(r => !allTaskIds.has(r.id));
+      setSearchResults(filtered);
+      setShowDropdown(filtered.length > 0);
+    } else {
+      setSearchResults([]);
+      setShowDropdown(false);
+    }
+  }, [searchQuery]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node) &&
+          inputRef.current && !inputRef.current.contains(e.target as Node)) {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleAddTask = (task: TaskWithSource) => {
+    onAddCustomTask({
+      id: task.id,
+      de: task.de,
+      category: task.category,
+    });
+    setSearchQuery("");
+    setShowDropdown(false);
+  };
+
+  const previewTasks = tasks.slice(0, Math.max(0, 12 - customTasks.length));
+  const remainingCount = tasks.length - previewTasks.length;
 
   return (
-    <div className="space-y-3" data-testid="task-preview">
-      <div className="flex items-center justify-between">
-        <h4 className="text-sm font-medium text-muted-foreground">
-          {language === "en" ? "Quick Task Selection" : "Schnelle Aufgabenauswahl"}
-          <span className="ml-2 text-xs">({selectedCount}/{tasks.length})</span>
-        </h4>
+    <div className="space-y-4" data-testid="task-preview">
+      <div className="relative">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+          <Input
+            ref={inputRef}
+            type="text"
+            placeholder={language === "en" ? "Search and add tasks from other roles..." : "Aufgaben aus anderen Berufen suchen..."}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="pl-10 pr-4"
+            data-testid="task-search-input"
+          />
+        </div>
+        
+        {showDropdown && (
+          <div 
+            ref={dropdownRef}
+            className="absolute z-50 w-full mt-1 bg-background border rounded-lg shadow-lg max-h-64 overflow-y-auto"
+          >
+            {searchResults.map((task) => {
+              const style = CATEGORY_STYLES[task.category];
+              return (
+                <div
+                  key={task.id}
+                  className="flex items-center gap-2 p-3 hover:bg-secondary/50 cursor-pointer border-b last:border-b-0"
+                  onClick={() => handleAddTask(task)}
+                  data-testid={`search-result-${task.id}`}
+                >
+                  <Plus className="w-4 h-4 text-primary shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm truncate">{task.de}</p>
+                    <p className="text-xs text-muted-foreground truncate">{task.jobDe}</p>
+                  </div>
+                  <Badge className={`${style.bg} ${style.text} text-xs shrink-0`}>
+                    {style.label[language]}
+                  </Badge>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        {previewTasks.map((task) => {
-          const isSelected = selectedTaskIds.has(task.id);
-          const style = CATEGORY_STYLES[task.category];
-          
-          return (
-            <div
-              key={task.id}
-              className={`flex items-center gap-2 p-2 rounded-lg border cursor-pointer transition-all text-sm ${
-                isSelected 
-                  ? "bg-secondary/50 border-primary/30" 
-                  : "bg-secondary/20 border-transparent opacity-60"
-              }`}
-              onClick={() => onToggleTask(task.id)}
-              data-testid={`preview-task-${task.id}`}
-            >
-              <Checkbox
-                checked={isSelected}
-                onCheckedChange={() => onToggleTask(task.id)}
-                className="shrink-0"
-              />
-              <span className={`flex-1 truncate ${isSelected ? "text-foreground" : "text-muted-foreground"}`}>
-                {task.de}
-              </span>
-              <div className={`w-2 h-2 rounded-full shrink-0 ${style.bg.replace('100', '500')}`} title={style.label[language]} />
-            </div>
-          );
-        })}
-      </div>
-      
-      {remainingCount > 0 && (
-        <Button 
-          variant="ghost" 
-          className="w-full text-muted-foreground hover:text-primary"
-          onClick={onOpenFull}
-        >
-          <ChevronDown className="w-4 h-4 mr-2" />
-          {language === "en" 
-            ? `Show ${remainingCount} more tasks...` 
-            : `${remainingCount} weitere Aufgaben anzeigen...`}
-        </Button>
+
+      {customTasks.length > 0 && (
+        <div className="space-y-2">
+          <h4 className="text-xs font-medium text-primary uppercase tracking-wide">
+            {language === "en" ? "Added Tasks" : "Hinzugefügte Aufgaben"}
+          </h4>
+          <div className="flex flex-wrap gap-2">
+            {customTasks.map((task) => {
+              const style = CATEGORY_STYLES[task.category];
+              return (
+                <div
+                  key={task.id}
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-full border ${style.bg} ${style.text} text-sm`}
+                  data-testid={`custom-task-${task.id}`}
+                >
+                  <span className="truncate max-w-48">{task.de}</span>
+                  <button
+                    onClick={() => onRemoveCustomTask(task.id)}
+                    className="hover:bg-black/10 rounded-full p-0.5"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       )}
+
+      <div className="space-y-2">
+        <div className="flex items-center justify-between">
+          <h4 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+            {language === "en" ? "Role Tasks" : "Berufsaufgaben"}
+            <span className="ml-2 normal-case">({totalSelected}/{totalTasks})</span>
+          </h4>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          {previewTasks.map((task) => {
+            const isSelected = selectedTaskIds.has(task.id);
+            const style = CATEGORY_STYLES[task.category];
+            
+            return (
+              <div
+                key={task.id}
+                className={`flex items-center gap-2 p-2 rounded-lg border cursor-pointer transition-all text-sm ${
+                  isSelected 
+                    ? "bg-secondary/50 border-primary/30" 
+                    : "bg-secondary/20 border-transparent opacity-60"
+                }`}
+                onClick={() => onToggleTask(task.id)}
+                data-testid={`preview-task-${task.id}`}
+              >
+                <Checkbox
+                  checked={isSelected}
+                  onCheckedChange={() => onToggleTask(task.id)}
+                  className="shrink-0"
+                />
+                <span className={`flex-1 truncate ${isSelected ? "text-foreground" : "text-muted-foreground"}`}>
+                  {task.de}
+                </span>
+                <div className={`w-2 h-2 rounded-full shrink-0 ${style.bg.replace('100', '500')}`} title={style.label[language]} />
+              </div>
+            );
+          })}
+        </div>
+        
+        {remainingCount > 0 && (
+          <Button 
+            variant="ghost" 
+            className="w-full text-muted-foreground hover:text-primary"
+            onClick={onOpenFull}
+          >
+            <ChevronDown className="w-4 h-4 mr-2" />
+            {language === "en" 
+              ? `Show ${remainingCount} more tasks...` 
+              : `${remainingCount} weitere Aufgaben anzeigen...`}
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
