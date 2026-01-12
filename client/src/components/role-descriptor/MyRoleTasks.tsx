@@ -15,7 +15,8 @@ import {
   RotateCcw,
   Languages,
   TrendingUp,
-  Building2
+  Building2,
+  Zap
 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
@@ -144,7 +145,7 @@ export function MyRoleTasks() {
                       </Badge>
                     </div>
                     
-                    <div className="mt-4 grid grid-cols-3 gap-3 text-center">
+                    <div className="mt-4 grid grid-cols-4 gap-2 text-center">
                       <div className="p-2 rounded bg-green-50 border border-green-200">
                         <Users className="w-4 h-4 mx-auto text-green-600 mb-1" />
                         <div className="text-lg font-bold text-green-700">{selectedJob.human}%</div>
@@ -152,13 +153,18 @@ export function MyRoleTasks() {
                       </div>
                       <div className="p-2 rounded bg-blue-50 border border-blue-200">
                         <Bot className="w-4 h-4 mx-auto text-blue-600 mb-1" />
-                        <div className="text-lg font-bold text-blue-700">{selectedJob.ai}%</div>
-                        <div className="text-xs text-blue-600">{language === 'en' ? 'AI-Augmented' : 'KI-Unterstützt'}</div>
+                        <div className="text-lg font-bold text-blue-700">{selectedJob.ai_assisted}%</div>
+                        <div className="text-xs text-blue-600">{language === 'en' ? 'AI-Assisted' : 'KI-Assistiert'}</div>
+                      </div>
+                      <div className="p-2 rounded bg-purple-50 border border-purple-200">
+                        <Zap className="w-4 h-4 mx-auto text-purple-600 mb-1" />
+                        <div className="text-lg font-bold text-purple-700">{selectedJob.agentic}%</div>
+                        <div className="text-xs text-purple-600">{language === 'en' ? 'Agentic' : 'Agentisch'}</div>
                       </div>
                       <div className="p-2 rounded bg-amber-50 border border-amber-200">
                         <Cog className="w-4 h-4 mx-auto text-amber-600 mb-1" />
                         <div className="text-lg font-bold text-amber-700">{selectedJob.auto}%</div>
-                        <div className="text-xs text-amber-600">{language === 'en' ? 'Automation' : 'Automatisierung'}</div>
+                        <div className="text-xs text-amber-600">{language === 'en' ? 'Auto' : 'Auto'}</div>
                       </div>
                     </div>
                   </div>
@@ -204,9 +210,10 @@ export function MyRoleTasks() {
                 <div className="md:col-span-5">
                   <TaskBreakdownChart 
                     data={{
-                      augmented: selectedJob.ai,
-                      automated: selectedJob.auto,
-                      human: selectedJob.human
+                      human: selectedJob.human,
+                      augmented: selectedJob.ai_assisted,
+                      agentic: selectedJob.agentic,
+                      automated: selectedJob.auto
                     }} 
                   />
                 </div>
@@ -248,17 +255,36 @@ export function MyRoleTasks() {
                           <Bot className="w-5 h-5 text-blue-600" />
                           <div>
                             <div className="font-medium text-blue-800">
-                              {language === 'en' ? 'AI-Augmentable Tasks' : 'KI-Unterstützbare Aufgaben'}
+                              {language === 'en' ? 'AI-Assisted Tasks' : 'KI-Assistierte Aufgaben'}
                             </div>
                             <div className="text-xs text-blue-600">
                               {language === 'en' 
-                                ? 'AI tools can assist and enhance productivity' 
-                                : 'KI-Tools können die Produktivität steigern'}
+                                ? 'Complex work where AI tools enhance productivity' 
+                                : 'Komplexe Arbeit, bei der KI-Tools die Produktivität steigern'}
                             </div>
                           </div>
                         </div>
-                        <div className="text-2xl font-bold text-blue-700">{selectedJob.ai}%</div>
+                        <div className="text-2xl font-bold text-blue-700">{selectedJob.ai_assisted}%</div>
                       </div>
+
+                      {selectedJob.agentic > 0 && (
+                        <div className="flex items-center justify-between p-3 rounded-lg bg-purple-50 border border-purple-200">
+                          <div className="flex items-center gap-3">
+                            <Zap className="w-5 h-5 text-purple-600" />
+                            <div>
+                              <div className="font-medium text-purple-800">
+                                {language === 'en' ? 'Agentic Potential' : 'Agentisches Potenzial'}
+                              </div>
+                              <div className="text-xs text-purple-600">
+                                {language === 'en' 
+                                  ? 'Tasks AI agents can handle with minimal oversight' 
+                                  : 'Aufgaben, die KI-Agenten mit minimaler Aufsicht erledigen können'}
+                              </div>
+                            </div>
+                          </div>
+                          <div className="text-2xl font-bold text-purple-700">{selectedJob.agentic}%</div>
+                        </div>
+                      )}
 
                       {selectedJob.auto > 0 && (
                         <div className="flex items-center justify-between p-3 rounded-lg bg-amber-50 border border-amber-200">
@@ -266,7 +292,7 @@ export function MyRoleTasks() {
                             <Cog className="w-5 h-5 text-amber-600" />
                             <div>
                               <div className="font-medium text-amber-800">
-                                {language === 'en' ? 'High Automation Exposure' : 'Hohe Automatisierungsexposition'}
+                                {language === 'en' ? 'High Automation' : 'Hohe Automatisierung'}
                               </div>
                               <div className="text-xs text-amber-600">
                                 {language === 'en' 
@@ -321,14 +347,14 @@ export function MyRoleTasks() {
                       </div>
                       <div className="p-4 rounded-lg bg-secondary/30">
                         <div className="text-sm text-muted-foreground mb-1">
-                          {language === 'en' ? 'Your Role: AI Tasks' : 'Ihre Rolle: KI-Aufgaben'}
+                          {language === 'en' ? 'Your Role: AI-Assisted Tasks' : 'Ihre Rolle: KI-Assistierte Aufgaben'}
                         </div>
-                        <div className="text-2xl font-bold text-blue-600">{selectedJob.ai}%</div>
+                        <div className="text-2xl font-bold text-blue-600">{selectedJob.ai_assisted}%</div>
                         <div className="text-xs text-muted-foreground mt-1">
                           {language === 'en' ? 'Sector avg: ' : 'Sektor-Ø: '}{sectorData.avg_ai.toFixed(1)}%
-                          {selectedJob.ai > sectorData.avg_ai 
-                            ? ` (+${(selectedJob.ai - sectorData.avg_ai).toFixed(1)}%)` 
-                            : ` (${(selectedJob.ai - sectorData.avg_ai).toFixed(1)}%)`}
+                          {selectedJob.ai_assisted > sectorData.avg_ai 
+                            ? ` (+${(selectedJob.ai_assisted - sectorData.avg_ai).toFixed(1)}%)` 
+                            : ` (${(selectedJob.ai_assisted - sectorData.avg_ai).toFixed(1)}%)`}
                         </div>
                       </div>
                     </div>

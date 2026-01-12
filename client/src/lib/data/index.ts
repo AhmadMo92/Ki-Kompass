@@ -7,9 +7,10 @@ export interface Job {
   en: string;
   sector: string;
   human: number;
-  ai: number;
+  ai_assisted: number;
+  agentic: number;
   auto: number;
-  dominant: "Human-Centric" | "AI-Augmentable" | "High Automation Exposure" | "Mixed";
+  dominant: "Human-Centric" | "AI-Assisted" | "Agentic Potential" | "High Automation" | "Mixed";
   aliases: string[];
 }
 
@@ -28,7 +29,7 @@ export interface SearchResult extends Job {
 export const jobs: Job[] = jobsData as Job[];
 export const sectors: Sector[] = sectorsData as Sector[];
 
-console.log(`[Research Data] Loaded ${jobs.length} jobs with AI exposure scores and aliases`);
+console.log(`[Research Data] Loaded ${jobs.length} jobs with 4-category AI exposure scores`);
 
 export function searchJobs(query: string, language: "en" | "de" = "en", limit = 50): SearchResult[] {
   const q = query.toLowerCase().trim();
@@ -85,21 +86,56 @@ export const CATEGORIES = {
   "Human-Centric": {
     color: "#22c55e",
     bgColor: "bg-green-500",
-    description: "Tasks requiring human presence, judgment, or interpersonal skills",
+    borderColor: "border-green-200",
+    bgLight: "bg-green-50",
+    textColor: "text-green-600",
+    textBold: "text-green-700",
+    icon: "👤",
+    description: "Tasks requiring human presence, judgment, empathy, or physical interaction",
+    examples: "Patient care, negotiations, teaching, creative direction",
   },
-  "AI-Augmentable": {
+  "AI-Assisted": {
     color: "#3b82f6",
     bgColor: "bg-blue-500",
-    description: "Tasks where AI tools can assist and enhance productivity",
+    borderColor: "border-blue-200",
+    bgLight: "bg-blue-50",
+    textColor: "text-blue-600",
+    textBold: "text-blue-700",
+    icon: "🤝",
+    description: "Complex work where AI tools enhance productivity but humans lead",
+    examples: "Strategic analysis, architecture design, complex problem-solving",
   },
-  "High Automation Exposure": {
-    color: "#f59e0b",
-    bgColor: "bg-amber-500",
-    description: "Routine tasks with high potential for automation",
-  },
-  "Mixed": {
+  "Agentic Potential": {
     color: "#8b5cf6",
     bgColor: "bg-purple-500",
+    borderColor: "border-purple-200",
+    bgLight: "bg-purple-50",
+    textColor: "text-purple-600",
+    textBold: "text-purple-700",
+    icon: "🤖",
+    description: "Tasks AI agents can handle autonomously with minimal oversight",
+    examples: "Code generation, data processing, report writing, scheduling",
+  },
+  "High Automation": {
+    color: "#f59e0b",
+    bgColor: "bg-amber-500",
+    borderColor: "border-amber-200",
+    bgLight: "bg-amber-50",
+    textColor: "text-amber-600",
+    textBold: "text-amber-700",
+    icon: "⚙️",
+    description: "Routine digital tasks with high potential for full automation",
+    examples: "Data entry, filing, form processing",
+  },
+  "Mixed": {
+    color: "#6b7280",
+    bgColor: "bg-gray-500",
+    borderColor: "border-gray-200",
+    bgLight: "bg-gray-50",
+    textColor: "text-gray-600",
+    textBold: "text-gray-700",
+    icon: "🔀",
     description: "Varied task profile across categories",
+    examples: "Various tasks",
   },
 };

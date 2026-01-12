@@ -1,27 +1,36 @@
-import { Bar, BarChart, CartesianGrid, Cell, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface TaskBreakdownChartProps {
   data: {
-    augmented: number;
-    automated: number;
     human: number;
+    augmented: number;
+    agentic?: number;
+    automated: number;
   };
 }
 
+const COLORS = {
+  human: "#22c55e",
+  augmented: "#3b82f6",
+  agentic: "#8b5cf6",
+  automated: "#f59e0b",
+};
+
 export function TaskBreakdownChart({ data }: TaskBreakdownChartProps) {
   const chartData = [
-    { name: "Augmented", value: data.augmented, fill: "var(--color-chart-1)" },
-    { name: "Automated", value: data.automated, fill: "var(--color-chart-3)" },
-    { name: "Stable Human", value: data.human, fill: "var(--color-chart-2)" },
+    { name: "Human-Centric", value: data.human, fill: COLORS.human },
+    { name: "AI-Assisted", value: data.augmented, fill: COLORS.augmented },
+    ...(data.agentic && data.agentic > 0 ? [{ name: "Agentic", value: data.agentic, fill: COLORS.agentic }] : []),
+    ...(data.automated > 0 ? [{ name: "Automation", value: data.automated, fill: COLORS.automated }] : []),
   ];
 
   return (
     <Card className="h-full border-none shadow-sm bg-white/50 backdrop-blur-sm">
       <CardHeader>
-        <CardTitle className="text-lg text-primary font-serif">Task Interaction Breakdown</CardTitle>
+        <CardTitle className="text-lg text-primary font-serif">AI Exposure Breakdown</CardTitle>
         <CardDescription>
-          Based on the tasks described in your role.
+          Task distribution across AI interaction categories.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -30,16 +39,16 @@ export function TaskBreakdownChart({ data }: TaskBreakdownChartProps) {
             <BarChart
               data={chartData}
               layout="vertical"
-              margin={{ top: 5, right: 30, left: 40, bottom: 5 }}
-              barSize={30}
+              margin={{ top: 5, right: 30, left: 60, bottom: 5 }}
+              barSize={28}
             >
               <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="var(--color-border)" />
               <XAxis type="number" domain={[0, 100]} hide />
               <YAxis 
                 dataKey="name" 
                 type="category" 
-                width={100} 
-                tick={{ fill: 'var(--color-foreground)', fontSize: 12 }}
+                width={90} 
+                tick={{ fill: 'var(--color-foreground)', fontSize: 11 }}
                 axisLine={false}
                 tickLine={false}
               />
