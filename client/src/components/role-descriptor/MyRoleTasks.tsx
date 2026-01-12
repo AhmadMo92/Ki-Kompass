@@ -260,101 +260,97 @@ export function MyRoleTasks() {
                 </Button>
               </div>
 
-              {(() => {
-                const displayData = typicalExposure || { human: selectedJob.human, ai_assisted: selectedJob.ai_assisted, automation: selectedJob.automation };
-                const getDominant = () => {
-                  if (displayData.human >= displayData.ai_assisted && displayData.human >= displayData.automation) return "Human-Centric";
-                  if (displayData.ai_assisted >= displayData.human && displayData.ai_assisted >= displayData.automation) return "AI-Assisted";
-                  return "Automation";
-                };
-                return (
-                  <div className="grid md:grid-cols-12 gap-6">
-                    <div className="md:col-span-5">
-                      <TaskBreakdownChart data={displayData} />
+              <div className="grid md:grid-cols-12 gap-6">
+                <div className="md:col-span-5">
+                  <TaskBreakdownChart 
+                    data={{
+                      human: selectedJob.human,
+                      ai_assisted: selectedJob.ai_assisted,
+                      automation: selectedJob.automation
+                    }} 
+                  />
+                </div>
+
+                <Card className="md:col-span-7 border-none shadow-sm bg-white/60">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-lg font-serif text-primary flex items-center gap-2">
+                      <TrendingUp className="w-5 h-5" />
+                      {language === 'en' ? "AI Exposure Analysis" : "KI-Expositionsanalyse"}
+                    </CardTitle>
+                    <CardDescription>
+                      {language === 'en' 
+                        ? "Research-based task distribution for this occupation." 
+                        : "Forschungsbasierte Aufgabenverteilung für diesen Beruf."}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between p-3 rounded-lg bg-green-50 border border-green-200">
+                        <div className="flex items-center gap-3">
+                          <Users className="w-5 h-5 text-green-600" />
+                          <div>
+                            <div className="font-medium text-green-800">
+                              {language === 'en' ? 'Human-Centric Tasks' : 'Menschenzentrierte Aufgaben'}
+                            </div>
+                            <div className="text-xs text-green-600">
+                              {language === 'en' 
+                                ? 'Requiring judgment, empathy, or physical presence' 
+                                : 'Erfordern Urteilsvermögen, Empathie oder physische Präsenz'}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-2xl font-bold text-green-700">{selectedJob.human}%</div>
+                      </div>
+
+                      <div className="flex items-center justify-between p-3 rounded-lg bg-blue-50 border border-blue-200">
+                        <div className="flex items-center gap-3">
+                          <Bot className="w-5 h-5 text-blue-600" />
+                          <div>
+                            <div className="font-medium text-blue-800">
+                              {language === 'en' ? 'AI-Assisted Tasks' : 'KI-Assistierte Aufgaben'}
+                            </div>
+                            <div className="text-xs text-blue-600">
+                              {language === 'en' 
+                                ? 'Complex work where AI tools enhance productivity' 
+                                : 'Komplexe Arbeit, bei der KI-Tools die Produktivität steigern'}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-2xl font-bold text-blue-700">{selectedJob.ai_assisted}%</div>
+                      </div>
+
+                      {selectedJob.automation > 0 && (
+                        <div className="flex items-center justify-between p-3 rounded-lg bg-amber-50 border border-amber-200">
+                          <div className="flex items-center gap-3">
+                            <Cog className="w-5 h-5 text-amber-600" />
+                            <div>
+                              <div className="font-medium text-amber-800">
+                                {language === 'en' ? 'Automation (Agents + Routine)' : 'Automatisierung (Agenten + Routine)'}
+                              </div>
+                              <div className="text-xs text-amber-600">
+                                {language === 'en' 
+                                  ? 'Tasks AI agents can handle or routine tasks for automation' 
+                                  : 'Aufgaben für KI-Agenten oder Routine-Automatisierung'}
+                              </div>
+                            </div>
+                          </div>
+                          <div className="text-2xl font-bold text-amber-700">{selectedJob.automation}%</div>
+                        </div>
+                      )}
                     </div>
 
-                    <Card className="md:col-span-7 border-none shadow-sm bg-white/60">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-lg font-serif text-primary flex items-center gap-2">
-                          <TrendingUp className="w-5 h-5" />
-                          {language === 'en' ? "AI Exposure Analysis" : "KI-Expositionsanalyse"}
-                        </CardTitle>
-                        <CardDescription>
-                          {language === 'en' 
-                            ? `Based on ${jobTasks.length} tasks for this occupation.` 
-                            : `Basierend auf ${jobTasks.length} Aufgaben für diesen Beruf.`}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        
-                        <div className="space-y-3">
-                          <div className="flex items-center justify-between p-3 rounded-lg bg-green-50 border border-green-200">
-                            <div className="flex items-center gap-3">
-                              <Users className="w-5 h-5 text-green-600" />
-                              <div>
-                                <div className="font-medium text-green-800">
-                                  {language === 'en' ? 'Human-Centric Tasks' : 'Menschenzentrierte Aufgaben'}
-                                </div>
-                                <div className="text-xs text-green-600">
-                                  {language === 'en' 
-                                    ? 'Requiring judgment, empathy, or physical presence' 
-                                    : 'Erfordern Urteilsvermögen, Empathie oder physische Präsenz'}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="text-2xl font-bold text-green-700">{displayData.human.toFixed(1)}%</div>
-                          </div>
-
-                          <div className="flex items-center justify-between p-3 rounded-lg bg-blue-50 border border-blue-200">
-                            <div className="flex items-center gap-3">
-                              <Bot className="w-5 h-5 text-blue-600" />
-                              <div>
-                                <div className="font-medium text-blue-800">
-                                  {language === 'en' ? 'AI-Assisted Tasks' : 'KI-Assistierte Aufgaben'}
-                                </div>
-                                <div className="text-xs text-blue-600">
-                                  {language === 'en' 
-                                    ? 'Complex work where AI tools enhance productivity' 
-                                    : 'Komplexe Arbeit, bei der KI-Tools die Produktivität steigern'}
-                                </div>
-                              </div>
-                            </div>
-                            <div className="text-2xl font-bold text-blue-700">{displayData.ai_assisted.toFixed(1)}%</div>
-                          </div>
-
-                          {displayData.automation > 0 && (
-                            <div className="flex items-center justify-between p-3 rounded-lg bg-amber-50 border border-amber-200">
-                              <div className="flex items-center gap-3">
-                                <Cog className="w-5 h-5 text-amber-600" />
-                                <div>
-                                  <div className="font-medium text-amber-800">
-                                    {language === 'en' ? 'Automation (Agents + Routine)' : 'Automatisierung (Agenten + Routine)'}
-                                  </div>
-                                  <div className="text-xs text-amber-600">
-                                    {language === 'en' 
-                                      ? 'Tasks AI agents can handle or routine tasks for automation' 
-                                      : 'Aufgaben für KI-Agenten oder Routine-Automatisierung'}
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="text-2xl font-bold text-amber-700">{displayData.automation.toFixed(1)}%</div>
-                            </div>
-                          )}
-                        </div>
-
-                        <div className="pt-4 border-t">
-                          <Badge 
-                            className="text-white text-sm px-3 py-1"
-                            style={{ backgroundColor: getCategoryStyle(getDominant()).color }}
-                          >
-                            {language === 'en' ? 'Primary Category: ' : 'Hauptkategorie: '}{getDominant()}
-                          </Badge>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                );
-              })()}
+                    <div className="pt-4 border-t">
+                      <Badge 
+                        className="text-white text-sm px-3 py-1"
+                        style={{ backgroundColor: getCategoryStyle(selectedJob.dominant).color }}
+                      >
+                        {language === 'en' ? 'Primary Category: ' : 'Hauptkategorie: '}{selectedJob.dominant}
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
               {sectorData && (
                 <Card className="border-none shadow-sm bg-white/60" data-testid="sector-comparison">
@@ -400,10 +396,14 @@ export function MyRoleTasks() {
                 </Card>
               )}
 
-              {personalizedExposure && typicalExposure ? (
+              {personalizedExposure ? (
                 <PersonalizedResults
                   personal={personalizedExposure}
-                  typical={typicalExposure}
+                  typical={{
+                    human: selectedJob.human,
+                    ai_assisted: selectedJob.ai_assisted,
+                    automation: selectedJob.automation,
+                  }}
                   taskCount={{ selected: selectedTaskIds.size, total: jobTasks.length + customTasks.length }}
                   language={language}
                   onReset={handleResetPersonalization}
