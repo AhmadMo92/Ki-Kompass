@@ -8,9 +8,8 @@ export interface Job {
   sector: string;
   human: number;
   ai_assisted: number;
-  agentic: number;
-  auto: number;
-  dominant: "Human-Centric" | "AI-Assisted" | "Agentic Potential" | "High Automation" | "Mixed";
+  automation: number;
+  dominant: "Human-Centric" | "AI-Assisted" | "Automation" | "Mixed";
   aliases: string[];
 }
 
@@ -29,7 +28,7 @@ export interface SearchResult extends Job {
 export const jobs: Job[] = jobsData as Job[];
 export const sectors: Sector[] = sectorsData as Sector[];
 
-console.log(`[Research Data] Loaded ${jobs.length} jobs with 4-category AI exposure scores`);
+console.log(`[Research Data] Loaded ${jobs.length} jobs with 3-category AI exposure scores`);
 
 export function searchJobs(query: string, language: "en" | "de" = "en", limit = 50): SearchResult[] {
   const q = query.toLowerCase().trim();
@@ -102,30 +101,19 @@ export const CATEGORIES = {
     textColor: "text-blue-600",
     textBold: "text-blue-700",
     icon: "🤝",
-    description: "Complex work where AI tools enhance productivity but humans lead",
-    examples: "Strategic analysis, architecture design, complex problem-solving",
+    description: "Complex work where AI tools enhance productivity but humans lead decision-making",
+    examples: "Strategic analysis, architecture design, complex problem-solving, research",
   },
-  "Agentic Potential": {
-    color: "#8b5cf6",
-    bgColor: "bg-purple-500",
-    borderColor: "border-purple-200",
-    bgLight: "bg-purple-50",
-    textColor: "text-purple-600",
-    textBold: "text-purple-700",
-    icon: "🤖",
-    description: "Tasks AI agents can handle autonomously with minimal oversight",
-    examples: "Code generation, data processing, report writing, scheduling",
-  },
-  "High Automation": {
+  "Automation": {
     color: "#f59e0b",
     bgColor: "bg-amber-500",
     borderColor: "border-amber-200",
     bgLight: "bg-amber-50",
     textColor: "text-amber-600",
     textBold: "text-amber-700",
-    icon: "⚙️",
-    description: "Routine digital tasks with high potential for full automation",
-    examples: "Data entry, filing, form processing",
+    icon: "🤖",
+    description: "Tasks that AI agents can handle autonomously or routine tasks suitable for full automation",
+    examples: "Code generation, data processing, scheduling, report writing, data entry",
   },
   "Mixed": {
     color: "#6b7280",

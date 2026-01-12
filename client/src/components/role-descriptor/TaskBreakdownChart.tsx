@@ -4,25 +4,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 interface TaskBreakdownChartProps {
   data: {
     human: number;
-    augmented: number;
-    agentic?: number;
-    automated: number;
+    ai_assisted: number;
+    automation: number;
   };
 }
 
 const COLORS = {
   human: "#22c55e",
-  augmented: "#3b82f6",
-  agentic: "#8b5cf6",
-  automated: "#f59e0b",
+  ai_assisted: "#3b82f6",
+  automation: "#f59e0b",
 };
 
 export function TaskBreakdownChart({ data }: TaskBreakdownChartProps) {
   const chartData = [
     { name: "Human-Centric", value: data.human, fill: COLORS.human },
-    { name: "AI-Assisted", value: data.augmented, fill: COLORS.augmented },
-    ...(data.agentic && data.agentic > 0 ? [{ name: "Agentic", value: data.agentic, fill: COLORS.agentic }] : []),
-    ...(data.automated > 0 ? [{ name: "Automation", value: data.automated, fill: COLORS.automated }] : []),
+    { name: "AI-Assisted", value: data.ai_assisted, fill: COLORS.ai_assisted },
+    ...(data.automation > 0 ? [{ name: "Automation", value: data.automation, fill: COLORS.automation }] : []),
   ];
 
   return (
@@ -34,13 +31,13 @@ export function TaskBreakdownChart({ data }: TaskBreakdownChartProps) {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="h-[250px] w-full">
+        <div className="h-[220px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={chartData}
               layout="vertical"
               margin={{ top: 5, right: 30, left: 60, bottom: 5 }}
-              barSize={28}
+              barSize={32}
             >
               <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="var(--color-border)" />
               <XAxis type="number" domain={[0, 100]} hide />
@@ -48,7 +45,7 @@ export function TaskBreakdownChart({ data }: TaskBreakdownChartProps) {
                 dataKey="name" 
                 type="category" 
                 width={90} 
-                tick={{ fill: 'var(--color-foreground)', fontSize: 11 }}
+                tick={{ fill: 'var(--color-foreground)', fontSize: 12 }}
                 axisLine={false}
                 tickLine={false}
               />
