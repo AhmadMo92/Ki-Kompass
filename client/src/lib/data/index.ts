@@ -1,5 +1,36 @@
 import jobsData from "./jobs.json";
 import sectorsData from "./sectors.json";
+import tasksData from "./tasks_by_job.json";
+
+export interface Task {
+  id: string;
+  de: string;
+  category: "human" | "ai_assisted" | "automation";
+}
+
+export interface JobTasks {
+  job_de: string;
+  job_en: string;
+  tasks: Task[];
+}
+
+export const tasksByJob: Record<string, JobTasks> = tasksData as Record<string, JobTasks>;
+
+export function getTasksForJob(jobId: string): Task[] {
+  const categoryCode = jobId.split('-')[0];
+  return tasksByJob[categoryCode]?.tasks || [];
+}
+
+export function calculatePersonalExposure(selectedTasks: Task[]): { human: number; ai_assisted: number; automation: number } {
+  const total = selectedTasks.length;
+  if (total === 0) return { human: 0, ai_assisted: 0, automation: 0 };
+  
+  return {
+    human: (selectedTasks.filter(t => t.category === 'human').length / total) * 100,
+    ai_assisted: (selectedTasks.filter(t => t.category === 'ai_assisted').length / total) * 100,
+    automation: (selectedTasks.filter(t => t.category === 'automation').length / total) * 100,
+  };
+}
 
 export interface Job {
   id: string;
@@ -29,6 +60,7 @@ export const jobs: Job[] = jobsData as Job[];
 export const sectors: Sector[] = sectorsData as Sector[];
 
 console.log(`[Research Data] Loaded ${jobs.length} jobs with 3-category AI exposure scores`);
+console.log(`[Research Data] Loaded ${Object.keys(tasksByJob).length} job categories with task-level data`);
 
 export function searchJobs(query: string, language: "en" | "de" = "en", limit = 50): SearchResult[] {
   const q = query.toLowerCase().trim();

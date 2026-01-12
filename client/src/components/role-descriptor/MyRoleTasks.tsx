@@ -5,7 +5,9 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { TaskBreakdownChart } from "./TaskBreakdownChart";
 import { JobCombobox } from "@/components/ui/job-combobox";
-import { jobs, sectors, getJobById, CATEGORIES, Job } from "@/lib/data";
+import { TaskSelectorModal } from "./TaskSelectorModal";
+import { PersonalizedResults } from "./PersonalizedResults";
+import { jobs, sectors, getJobById, CATEGORIES, Job, getTasksForJob, calculatePersonalExposure, Task } from "@/lib/data";
 import { 
   Sparkles, 
   ArrowRight, 
@@ -15,7 +17,8 @@ import {
   RotateCcw,
   Languages,
   TrendingUp,
-  Building2
+  Building2,
+  Target
 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
@@ -23,9 +26,17 @@ export function MyRoleTasks() {
   const [step, setStep] = useState<1 | 2>(1);
   const [selectedJobId, setSelectedJobId] = useState<string>("");
   const [language, setLanguage] = useState<"en" | "de">("en");
+  
+  const [showTaskSelector, setShowTaskSelector] = useState(false);
+  const [selectedTaskIds, setSelectedTaskIds] = useState<Set<string>>(new Set());
+  const [personalizedExposure, setPersonalizedExposure] = useState<{ human: number; ai_assisted: number; automation: number } | null>(null);
 
   const selectedJob = useMemo(() => {
     return selectedJobId ? getJobById(selectedJobId) : undefined;
+  }, [selectedJobId]);
+
+  const jobTasks = useMemo(() => {
+    return selectedJobId ? getTasksForJob(selectedJobId) : [];
   }, [selectedJobId]);
 
   const sectorData = useMemo(() => {
@@ -36,12 +47,36 @@ export function MyRoleTasks() {
   const handleAnalyze = () => {
     if (selectedJob) {
       setStep(2);
+      setPersonalizedExposure(null);
+      if (jobTasks.length > 0) {
+        setSelectedTaskIds(new Set(jobTasks.map(t => t.id)));
+      }
     }
   };
 
   const handleReset = () => {
     setStep(1);
     setSelectedJobId("");
+    setPersonalizedExposure(null);
+    setSelectedTaskIds(new Set());
+  };
+
+  const handleOpenPersonalize = () => {
+    if (jobTasks.length > 0) {
+      setSelectedTaskIds(new Set(jobTasks.map(t => t.id)));
+    }
+    setShowTaskSelector(true);
+  };
+
+  const handleConfirmTasks = () => {
+    const selectedTasks = jobTasks.filter(t => selectedTaskIds.has(t.id));
+    const exposure = calculatePersonalExposure(selectedTasks);
+    setPersonalizedExposure(exposure);
+    setShowTaskSelector(false);
+  };
+
+  const handleResetPersonalization = () => {
+    setShowTaskSelector(true);
   };
 
   const getCategoryStyle = (dominant: string) => {
@@ -335,6 +370,55 @@ export function MyRoleTasks() {
                   </CardContent>
                 </Card>
               )}
+
+              {personalizedExposure ? (
+                <PersonalizedResults
+                  personal={personalizedExposure}
+                  typical={{
+                    human: selectedJob.human,
+                    ai_assisted: selectedJob.ai_assisted,
+                    automation: selectedJob.automation,
+                  }}
+                  taskCount={{ selected: selectedTaskIds.size, total: jobTasks.length }}
+                  language={language}
+                  onReset={handleResetPersonalization}
+                />
+              ) : jobTasks.length > 0 ? (
+                <button
+                  onClick={handleOpenPersonalize}
+                  className="w-full p-4 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg hover:border-blue-400 hover:shadow-md transition-all group"
+                  data-testid="personalize-button"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                        <Target className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="text-left">
+                        <div className="font-semibold text-primary group-hover:text-blue-700">
+                          {language === 'en' ? 'Personalize Your Analysis' : 'Personalisieren Sie Ihre Analyse'}
+                        </div>
+                        <div className="text-sm text-muted-foreground">
+                          {language === 'en' 
+                            ? `Select from ${jobTasks.length} tasks you actually do` 
+                            : `Wählen Sie aus ${jobTasks.length} Aufgaben, die Sie tatsächlich ausführen`}
+                        </div>
+                      </div>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </button>
+              ) : null}
+
+              <TaskSelectorModal
+                open={showTaskSelector}
+                onOpenChange={setShowTaskSelector}
+                tasks={jobTasks}
+                selectedTaskIds={selectedTaskIds}
+                onSelectionChange={setSelectedTaskIds}
+                onConfirm={handleConfirmTasks}
+                language={language}
+              />
 
               <p className="text-center text-xs text-muted-foreground">
                 {language === 'en' 
