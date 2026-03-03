@@ -73,7 +73,7 @@ for (let i = 1; i < lines.length; i++) {
     /\bwork with\b/i,
     /\bcollaborat/i,
     /\bcooperat/i,
-    /\bcoordinat.*\bwith\b/i,
+    /\bcoordinat/i,
     /\bconsult.*\bwith\b/i,
     /\bliaise\b/i,
     /\badvise\b/i,

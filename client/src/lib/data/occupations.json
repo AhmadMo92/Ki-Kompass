@@ -291,14 +291,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0029",
-        "text_de": "Die Kommunikation im Vertrieb koordinieren.",
-        "text_en": "Coordinate communication in sales.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0032",
         "text_de": "Vertriebspotenziale und Maßnahmen bewerten.",
         "text_en": "Evaluate sales potentials and measures.",
@@ -331,14 +323,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2784",
-        "text_de": "Die Beiträge von Redaktion, Grafik und externen Auftragnehmern koordinieren.",
-        "text_en": "Coordinate contributions from editorial, graphics, and external contractors.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0022",
         "text_de": "Kundenbeziehungen aufbauen und pflegen.",
         "text_en": "Build and maintain customer relationships.",
@@ -363,6 +347,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0029",
+        "text_de": "Die Kommunikation im Vertrieb koordinieren.",
+        "text_en": "Coordinate communication in sales.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0034",
         "text_de": "Messen und Events nutzen, um das Unternehmen zu präsentieren und neue Kunden zu gewinnen.",
         "text_en": "Use fairs and events to present the company and gain new customers.",
@@ -382,6 +374,14 @@
         "id": "BN_2779",
         "text_de": "Den Bedarf der Kunden ermitteln und deren Wünsche im Unternehmen kommunizieren.",
         "text_en": "Determine customer needs and communicate their wishes within the company.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2784",
+        "text_de": "Die Beiträge von Redaktion, Grafik und externen Auftragnehmern koordinieren.",
+        "text_en": "Coordinate contributions from editorial, graphics, and external contractors.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -416,8 +416,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 14,
-      "stays_with_you": 8
+      "ai_assisted": 12,
+      "stays_with_you": 10
     }
   },
   "Affiliate Manager": {
@@ -1885,14 +1885,6 @@
         "is_regulated": false
       },
       {
-        "id": "GEN_0230",
-        "text_de": "Überweisungen und interdisziplinäre Fallbesprechungen koordinieren.",
-        "text_en": "Coordinate referrals and interdisciplinary case meetings.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0169",
         "text_de": "In der Pharmaindustrie arbeiten.",
         "text_en": "Work in the pharmaceutical industry.",
@@ -1933,6 +1925,14 @@
         "is_regulated": false
       },
       {
+        "id": "GEN_0230",
+        "text_de": "Überweisungen und interdisziplinäre Fallbesprechungen koordinieren.",
+        "text_en": "Coordinate referrals and interdisciplinary case meetings.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "GEN_0232",
         "text_de": "Assistenzärzte während der Ausbildung betreuen.",
         "text_en": "Supervise resident physicians during training.",
@@ -1946,8 +1946,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 1,
-      "ai_assisted": 7,
-      "stays_with_you": 5
+      "ai_assisted": 6,
+      "stays_with_you": 6
     }
   },
   "Physician Assistant": {
@@ -3058,14 +3058,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0283",
-        "text_de": "Personalbedarf ermitteln und Personaleinsatz koordinieren.",
-        "text_en": "Determine personnel needs and coordinate staff deployment.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0275",
         "text_de": "Arbeitsabläufe steuern und überwachen.",
         "text_en": "manage and monitor workflows",
@@ -3106,6 +3098,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0283",
+        "text_de": "Personalbedarf ermitteln und Personaleinsatz koordinieren.",
+        "text_en": "Determine personnel needs and coordinate staff deployment.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0284",
         "text_de": "Mitarbeiter im Außendienst führen und schulen.",
         "text_en": "Lead and train field staff.",
@@ -3119,8 +3119,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 3
+      "ai_assisted": 6,
+      "stays_with_you": 4
     }
   },
   "Field Sales Representative": {
@@ -4571,14 +4571,6 @@
     "kldb2010": "B 81102",
     "tasks": [
       {
-        "id": "BN_0441",
-        "text_de": "Den organisatorischen Aufbau gestalten und Arbeitsabläufe planen und koordinieren.",
-        "text_en": "Design the organizational structure and plan and coordinate workflows.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0448",
         "text_de": "Den Mitarbeitereinsatz planen.",
         "text_en": "Plan the employee deployment.",
@@ -4619,19 +4611,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0444",
-        "text_de": "Projektleiter unterstützen und die Arbeit der Außendienstmitarbeiter koordinieren.",
-        "text_en": "Support project leaders and coordinate the work of field staff.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0446",
         "text_de": "Aufgaben im Qualitätsmanagement übernehmen.",
         "text_en": "Take on tasks in quality management.",
         "label": "ai_assisted",
         "score": 0,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0441",
+        "text_de": "Den organisatorischen Aufbau gestalten und Arbeitsabläufe planen und koordinieren.",
+        "text_en": "Design the organizational structure and plan and coordinate workflows.",
+        "label": "stays_with_you",
+        "score": 5,
         "is_regulated": false
       },
       {
@@ -4648,6 +4640,14 @@
         "text_en": "Inform management about decisions and actions.",
         "label": "stays_with_you",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0444",
+        "text_de": "Projektleiter unterstützen und die Arbeit der Außendienstmitarbeiter koordinieren.",
+        "text_en": "Support project leaders and coordinate the work of field staff.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -4672,8 +4672,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 4
+      "ai_assisted": 6,
+      "stays_with_you": 6
     }
   },
   "Career Advisor": {
@@ -5237,14 +5237,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0512",
-        "text_de": "Personaleinsatz planen und koordinieren.",
-        "text_en": "Plan and coordinate staff deployment.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0505",
         "text_de": "Qualitätsrichtlinien festlegen und umsetzen.",
         "text_en": "Set and implement quality guidelines.",
@@ -5293,6 +5285,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0512",
+        "text_de": "Personaleinsatz planen und koordinieren.",
+        "text_en": "Plan and coordinate staff deployment.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0515",
         "text_de": "Mitglieder im Freizeit- und Fitnessbereich werben und betreuen.",
         "text_en": "Recruit and support members in the leisure and fitness sector.",
@@ -5314,8 +5314,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 2
+      "ai_assisted": 10,
+      "stays_with_you": 3
     }
   },
   "Operations Manager - Commercial": {
@@ -5760,14 +5760,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0564",
-        "text_de": "Den Umsetzungsprozess unterstützen, Aufgaben koordinieren und Zwischenziele kontrollieren.",
-        "text_en": "Support the implementation process, coordinate tasks, and monitor interim goals.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0566",
         "text_de": "Führungsaufgaben übernehmen, zum Beispiel als Projektleiter oder in der Leitung einer Bankabteilung.",
         "text_en": "Take on leadership tasks, for example as a project manager or in the management of a bank department.",
@@ -5779,6 +5771,14 @@
         "id": "BN_0563",
         "text_de": "Die Konzepte besprechen und gegebenenfalls anpassen.",
         "text_en": "Discuss the concepts and adjust them if necessary.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0564",
+        "text_de": "Den Umsetzungsprozess unterstützen, Aufgaben koordinieren und Zwischenziele kontrollieren.",
+        "text_en": "Support the implementation process, coordinate tasks, and monitor interim goals.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -5797,8 +5797,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 2
+      "ai_assisted": 3,
+      "stays_with_you": 3
     }
   },
   "Business Economist in Service Management": {
@@ -5847,14 +5847,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0572",
-        "text_de": "Den Umsetzungsprozess unterstützen, Aufgaben koordinieren und Zwischenziele überwachen.",
-        "text_en": "Support the implementation process, coordinate tasks, and monitor interim goals.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0573",
         "text_de": "Das Dienstleistungsangebot überprüfen und anpassen.",
         "text_en": "Review and adjust the service offerings.",
@@ -5879,6 +5871,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0572",
+        "text_de": "Den Umsetzungsprozess unterstützen, Aufgaben koordinieren und Zwischenziele überwachen.",
+        "text_en": "Support the implementation process, coordinate tasks, and monitor interim goals.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0576",
         "text_de": "Die Leitung eines Dienstleistungsangebots übernehmen, zum Beispiel als Projektleiter oder Leiter eines Servicecenters.",
         "text_en": "Manage a service offering as project manager or service center lead.",
@@ -5892,8 +5892,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Business Economist in Trade": {
@@ -6029,14 +6029,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0589",
-        "text_de": "Die Umsetzung in den verschiedenen Bereichen begleiten und Teilaufgaben koordinieren.",
-        "text_en": "Support implementation in various areas and coordinate sub-tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0591",
         "text_de": "Die Geschäftsaktivitäten überprüfen und anpassen.",
         "text_en": "Review and adjust business activities.",
@@ -6048,6 +6040,14 @@
         "id": "BN_0588",
         "text_de": "Konzepte besprechen und gegebenenfalls anpassen.",
         "text_en": "Discuss concepts and adjust them if necessary.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0589",
+        "text_de": "Die Umsetzung in den verschiedenen Bereichen begleiten und Teilaufgaben koordinieren.",
+        "text_en": "Support implementation in various areas and coordinate sub-tasks.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -6066,8 +6066,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Business Economist in Hotel Management": {
@@ -6108,14 +6108,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0606",
-        "text_de": "Kaufmännische Aufgaben koordinieren und die Qualität in den Hotelbereichen überprüfen.",
-        "text_en": "Coordinate commercial tasks and check the quality in hotel areas.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0597",
         "text_de": "Neue und umsetzbare Hotelkonzepte durch Beobachtung der Konkurrenz finden.",
         "text_en": "Find new and actionable hotel concepts by observing the competition.",
@@ -6148,6 +6140,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0606",
+        "text_de": "Kaufmännische Aufgaben koordinieren und die Qualität in den Hotelbereichen überprüfen.",
+        "text_en": "Coordinate commercial tasks and check the quality in hotel areas.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0599",
         "text_de": "Konzepte besprechen und gegebenenfalls anpassen.",
         "text_en": "Discuss concepts and adjust them if necessary.",
@@ -6177,8 +6177,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 3
+      "ai_assisted": 7,
+      "stays_with_you": 4
     }
   },
   "Business Economist for Real Estate": {
@@ -6512,14 +6512,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0643",
-        "text_de": "Die Umsetzung in verschiedenen Bereichen unterstützen, Aufgaben koordinieren und Zwischenziele überwachen.",
-        "text_en": "Support implementation in various areas, coordinate tasks, and monitor interim goals.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0645",
         "text_de": "Marketing- und Vertriebsaktivitäten regelmäßig überprüfen und anpassen.",
         "text_en": "Regularly review and adjust marketing and sales activities.",
@@ -6539,6 +6531,14 @@
         "id": "BN_0642",
         "text_de": "Konzepte besprechen und gegebenenfalls anpassen.",
         "text_en": "Discuss concepts and adjust them if necessary.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0643",
+        "text_de": "Die Umsetzung in verschiedenen Bereichen unterstützen, Aufgaben koordinieren und Zwischenziele überwachen.",
+        "text_en": "Support implementation in various areas, coordinate tasks, and monitor interim goals.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -6573,8 +6573,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 4
+      "ai_assisted": 7,
+      "stays_with_you": 5
     }
   },
   "Business Economist - Accounting and Controlling": {
@@ -6686,14 +6686,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0662",
-        "text_de": "Begleite den Umsetzungsprozess in den Funktionsbereichen und koordiniere Teilaufgaben.",
-        "text_en": "Support the implementation process in the functional areas and coordinate sub-tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0660",
         "text_de": "Arbeite Änderungen von Sozialversicherungskonzepten in den Grundsatzreferaten aus.",
         "text_en": "Work out changes to social insurance concepts in the main reports.",
@@ -6705,6 +6697,14 @@
         "id": "BN_0661",
         "text_de": "Sprich Konzepte ab und passe sie gegebenenfalls an.",
         "text_en": "Discuss concepts and adjust them if necessary.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0662",
+        "text_de": "Begleite den Umsetzungsprozess in den Funktionsbereichen und koordiniere Teilaufgaben.",
+        "text_en": "Support the implementation process in the functional areas and coordinate sub-tasks.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -6723,8 +6723,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 3
+      "ai_assisted": 1,
+      "stays_with_you": 4
     }
   },
   "Business Economist - Taxes and Audit": {
@@ -6924,14 +6924,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0686",
-        "text_de": "Die Umsetzung begleiten, Aufgaben koordinieren und Zwischenziele überwachen.",
-        "text_en": "Support the implementation, coordinate tasks, and monitor interim goals.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0687",
         "text_de": "Touristikaktivitäten und Vermarktungskonzepte regelmäßig überprüfen und anpassen.",
         "text_en": "Regularly review and adjust tourism activities and marketing concepts.",
@@ -6946,6 +6938,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0686",
+        "text_de": "Die Umsetzung begleiten, Aufgaben koordinieren und Zwischenziele überwachen.",
+        "text_en": "Support the implementation, coordinate tasks, and monitor interim goals.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -6953,8 +6953,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 1
+      "ai_assisted": 7,
+      "stays_with_you": 2
     }
   },
   "Business Economist for Environmental Economics": {
@@ -7114,14 +7114,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0704",
-        "text_de": "Umsetzungsprozesse unterstützen und Teilaufgaben koordinieren.",
-        "text_en": "Support implementation processes and coordinate tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0707",
         "text_de": "Unternehmensaktivitäten regelmäßig überprüfen und anpassen.",
         "text_en": "Regularly review and adjust company activities.",
@@ -7136,6 +7128,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0704",
+        "text_de": "Umsetzungsprozesse unterstützen und Teilaufgaben koordinieren.",
+        "text_en": "Support implementation processes and coordinate tasks.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -7143,8 +7143,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 1
+      "ai_assisted": 9,
+      "stays_with_you": 2
     }
   },
   "Business Economist for Insurance": {
@@ -7185,17 +7185,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0713",
-        "text_de": "Den Umsetzungsprozess unterstützen und Teilaufgaben koordinieren.",
-        "text_en": "Support the implementation process and coordinate sub-tasks.",
-        "label": "ai_assisted",
+        "id": "BN_0712",
+        "text_de": "Konzepte besprechen und bei Bedarf anpassen.",
+        "text_en": "Discuss concepts and adjust if necessary.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_0712",
-        "text_de": "Konzepte besprechen und bei Bedarf anpassen.",
-        "text_en": "Discuss concepts and adjust if necessary.",
+        "id": "BN_0713",
+        "text_de": "Den Umsetzungsprozess unterstützen und Teilaufgaben koordinieren.",
+        "text_en": "Support the implementation process and coordinate sub-tasks.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -7214,8 +7214,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 2
+      "ai_assisted": 3,
+      "stays_with_you": 3
     }
   },
   "Business Economist for Advertising and Marketing Communication": {
@@ -7272,14 +7272,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0723",
-        "text_de": "Die Umsetzung begleiten, Teilaufgaben koordinieren und Zwischenziele überwachen.",
-        "text_en": "Support implementation, coordinate sub-tasks, and monitor interim goals.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0725",
         "text_de": "Marketing- und Werbeaktivitäten regelmäßig überprüfen und anpassen.",
         "text_en": "Regularly review and adjust marketing and advertising activities.",
@@ -7299,6 +7291,14 @@
         "id": "BN_0721",
         "text_de": "Konzepte besprechen und gegebenenfalls anpassen.",
         "text_en": "Discuss concepts and adjust them if necessary.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0723",
+        "text_de": "Die Umsetzung begleiten, Teilaufgaben koordinieren und Zwischenziele überwachen.",
+        "text_en": "Support implementation, coordinate sub-tasks, and monitor interim goals.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -7325,8 +7325,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 3
+      "ai_assisted": 8,
+      "stays_with_you": 4
     }
   },
   "District Manager": {
@@ -8025,14 +8025,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0806",
-        "text_de": "Bildungsangebote koordinieren, wie Sprachkurse für Geflüchtete.",
-        "text_en": "Coordinate educational offers, such as language courses for refugees.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0807",
         "text_de": "Bildungsakteure vernetzen und Initiativen einbeziehen.",
         "text_en": "connect educational actors and involve initiatives.",
@@ -8049,10 +8041,26 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0803",
+        "text_de": "Kunden bei Lernschwierigkeiten helfen.",
+        "text_en": "Help customers with learning difficulties.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0806",
+        "text_de": "Bildungsangebote koordinieren, wie Sprachkurse für Geflüchtete.",
+        "text_en": "Coordinate educational offers, such as language courses for refugees.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0799",
         "text_de": "Dozenten und Dozentinnen einsetzen und koordinieren.",
         "text_en": "Employ and coordinate instructors.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
       },
@@ -8060,16 +8068,8 @@
         "id": "BN_0805",
         "text_de": "Als Bildungskoordinator auf kommunaler Ebene arbeiten.",
         "text_en": "Work as an education coordinator at the local level.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0803",
-        "text_de": "Kunden bei Lernschwierigkeiten helfen.",
-        "text_en": "Help customers with learning difficulties.",
         "label": "stays_with_you",
-        "score": 3,
+        "score": 1,
         "is_regulated": false
       }
     ],
@@ -8078,8 +8078,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 16,
-      "stays_with_you": 1
+      "ai_assisted": 13,
+      "stays_with_you": 4
     }
   },
   "Biochemist": {
@@ -10256,7 +10256,7 @@
         "id": "BN_0998",
         "text_de": "Die Umsetzung digitaler Strategien in allen Abteilungen koordinieren.",
         "text_en": "Coordinate the implementation of digital strategies in all departments.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -10298,8 +10298,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 4
+      "ai_assisted": 7,
+      "stays_with_you": 5
     }
   },
   "Chief Product Officer": {
@@ -12484,14 +12484,6 @@
         "is_regulated": false
       },
       {
-        "id": "GEN_0042",
-        "text_de": "Content-Lokalisierung für internationale Zielmärkte koordinieren.",
-        "text_en": "Coordinate content localization for international target markets.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "GEN_0037",
         "text_de": "SEO-optimierte Content-Briefings für Texter und Designer erstellen.",
         "text_en": "Create SEO-optimized content briefs for writers and designers.",
@@ -12503,6 +12495,14 @@
         "id": "BN_1205",
         "text_de": "Mit Vertrieb, Produktentwicklung und PR für eine einheitliche Markenkommunikation zusammenarbeiten.",
         "text_en": "Collaborate with sales, product development, and PR for consistent brand communication.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "GEN_0042",
+        "text_de": "Content-Lokalisierung für internationale Zielmärkte koordinieren.",
+        "text_en": "Coordinate content localization for international target markets.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -12521,8 +12521,8 @@
       "automatable": 1,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Corporate Profiler": {
@@ -15202,14 +15202,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1460",
-        "text_de": "Forschungsprojekte planen, koordinieren und durchführen.",
-        "text_en": "plan, coordinate, and carry out research projects.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1461",
         "text_de": "Forschungsergebnisse veröffentlichen.",
         "text_en": "Publish research results.",
@@ -15266,6 +15258,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1460",
+        "text_de": "Forschungsprojekte planen, koordinieren und durchführen.",
+        "text_en": "plan, coordinate, and carry out research projects.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1453",
         "text_de": "Fachwissen und praktische Fähigkeiten vermitteln.",
         "text_en": "Teach expertise and practical skills.",
@@ -15295,8 +15295,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 3
+      "ai_assisted": 8,
+      "stays_with_you": 4
     }
   },
   "Instructor - Waldorf Teacher Seminar": {
@@ -16082,14 +16082,6 @@
     "kldb2010": "B 83123",
     "tasks": [
       {
-        "id": "BN_1540",
-        "text_de": "Einsätze planen, koordinieren und organisieren.",
-        "text_en": "Plan, coordinate, and organize operations.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1544",
         "text_de": "Veranstaltungen zur Bindung von Ehrenamtlichen organisieren und Schulungen planen.",
         "text_en": "Organize events to engage volunteers and plan training sessions.",
@@ -16154,6 +16146,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1540",
+        "text_de": "Einsätze planen, koordinieren und organisieren.",
+        "text_en": "Plan, coordinate, and organize operations.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1542",
         "text_de": "Ehrenamtliche bei ihren Aufgaben unterstützen und bei Konflikten helfen.",
         "text_en": "Support volunteers in their tasks and help with conflicts.",
@@ -16183,8 +16183,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 2
+      "ai_assisted": 8,
+      "stays_with_you": 3
     }
   },
   "Purchaser": {
@@ -16328,14 +16328,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1566",
-        "text_de": "Einsatzkräfte und Material koordinieren und Aufgaben verteilen.",
-        "text_en": "Coordinate personnel and materials and distribute tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1570",
         "text_de": "Betreuung von Verletzten bei Großveranstaltungen organisieren.",
         "text_en": "Organize care for the injured at large events.",
@@ -16363,6 +16355,14 @@
         "id": "BN_1564",
         "text_de": "Personal und Material je nach Notfall und Verletztenzahl bereitstellen oder anfordern.",
         "text_en": "Provide or request personnel and materials based on the emergency and number of injured.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1566",
+        "text_de": "Einsatzkräfte und Material koordinieren und Aufgaben verteilen.",
+        "text_en": "Coordinate personnel and materials and distribute tasks.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -16413,8 +16413,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 8
+      "ai_assisted": 1,
+      "stays_with_you": 9
     }
   },
   "Figure Skating Instructor": {
@@ -16685,14 +16685,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1596",
-        "text_de": "Gespräche mit anderen Hotelbereichen zur Abstimmung führen.",
-        "text_en": "Hold discussions with other hotel departments for coordination.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1592",
         "text_de": "Die Arbeitsprozesse bei Zimmerreservierungen, Post, E-Mails, Gästebetreuung und Rechnungen organisieren und überwachen.",
         "text_en": "Organize and supervise the work processes for room reservations, mail, emails, guest care, and invoices.",
@@ -16733,6 +16725,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1596",
+        "text_de": "Gespräche mit anderen Hotelbereichen zur Abstimmung führen.",
+        "text_en": "Hold discussions with other hotel departments for coordination.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1600",
         "text_de": "Monatsabschlüsse erstellen.",
         "text_en": "Create monthly reports.",
@@ -16746,8 +16746,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 5
+      "ai_assisted": 2,
+      "stays_with_you": 6
     }
   },
   "Employer Branding Manager": {
@@ -19087,14 +19087,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3652",
-        "text_de": "Vertriebsaktivitäten koordinieren und Marketingstrategien umsetzen.",
-        "text_en": "Coordinate sales activities and implement marketing strategies.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3654",
         "text_de": "Den Kundenstamm pflegen und neue Kundenpotenziale finden.",
         "text_en": "Maintain the customer base and find new customer potentials.",
@@ -19143,6 +19135,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3652",
+        "text_de": "Vertriebsaktivitäten koordinieren und Marketingstrategien umsetzen.",
+        "text_en": "Coordinate sales activities and implement marketing strategies.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1839",
         "text_de": "Das Verkaufspersonal anleiten und bei der Kundenberatung unterstützen.",
         "text_en": "Guide the sales staff and support customer consulting.",
@@ -19180,8 +19180,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 16,
-      "stays_with_you": 5
+      "ai_assisted": 15,
+      "stays_with_you": 6
     }
   },
   "Film Managing Director": {
@@ -19490,14 +19490,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1876",
-        "text_de": "Die Abläufe im Finanz- und Rechnungswesen planen und koordinieren.",
-        "text_en": "Plan and coordinate processes in finance and accounting.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1881",
         "text_de": "Den Personaleinsatz planen.",
         "text_en": "Plan staff deployment.",
@@ -19527,6 +19519,14 @@
         "text_en": "Take on leadership tasks in human resources.",
         "label": "ai_assisted",
         "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1876",
+        "text_de": "Die Abläufe im Finanz- und Rechnungswesen planen und koordinieren.",
+        "text_en": "Plan and coordinate processes in finance and accounting.",
+        "label": "stays_with_you",
+        "score": 5,
         "is_regulated": false
       },
       {
@@ -19567,8 +19567,8 @@
       "automatable": 0,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 4
+      "ai_assisted": 5,
+      "stays_with_you": 5
     }
   },
   "Fund Manager": {
@@ -20236,14 +20236,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1951",
-        "text_de": "Betreue externe Firmen fachlich und koordiniere Projektbeteiligte.",
-        "text_en": "Support external companies technically and coordinate project participants.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1954",
         "text_de": "Beurteile die erbrachten Dienstleistungen und nehme sie ab.",
         "text_en": "Evaluate the services provided and approve them.",
@@ -20308,6 +20300,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1951",
+        "text_de": "Betreue externe Firmen fachlich und koordiniere Projektbeteiligte.",
+        "text_en": "Support external companies technically and coordinate project participants.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1962",
         "text_de": "Motiviere Mitarbeiter und sensibilisiere sie für den Umgang mit Fremdfirmen.",
         "text_en": "Motivate employees and raise their awareness about working with external companies.",
@@ -20337,8 +20337,8 @@
       "automatable": 2,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 5
+      "ai_assisted": 10,
+      "stays_with_you": 6
     }
   },
   "Fundraiser": {
@@ -20744,19 +20744,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1991",
-        "text_de": "Die Arbeiten in den Bereichen Design, Grafik und Programmierung koordinieren.",
-        "text_en": "Coordinate work in design, graphics, and programming.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1990",
         "text_de": "Spielideen mit dem Art-Direktor, der Studioleitung und den Game-Designern besprechen.",
         "text_en": "Discuss game ideas with the art director, studio management, and game designers.",
         "label": "stays_with_you",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1991",
+        "text_de": "Die Arbeiten in den Bereichen Design, Grafik und Programmierung koordinieren.",
+        "text_en": "Coordinate work in design, graphics, and programming.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -20773,8 +20773,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 2
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Money Laundering Officer": {
@@ -21504,14 +21504,6 @@
     "kldb2010": "B 72194",
     "tasks": [
       {
-        "id": "BN_2060",
-        "text_de": "den Personalbedarf planen und den Einsatz koordinieren.",
-        "text_en": "plan personnel needs and coordinate deployment.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2059",
         "text_de": "die Personalplanung und Mitarbeiterführung gestalten.",
         "text_en": "designing personnel planning and employee management.",
@@ -21568,6 +21560,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2060",
+        "text_de": "den Personalbedarf planen und den Einsatz koordinieren.",
+        "text_en": "plan personnel needs and coordinate deployment.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2057",
         "text_de": "Geschäftsbeziehungen aufbauen und das Unternehmen nach außen vertreten.",
         "text_en": "build business relationships and represent the company externally.",
@@ -21605,8 +21605,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 4
+      "ai_assisted": 7,
+      "stays_with_you": 5
     }
   },
   "Branch Manager (Insurance)": {
@@ -23476,14 +23476,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2249",
-        "text_de": "Die Umsetzung begleiten und Teilaufgaben koordinieren.",
-        "text_en": "Support the implementation and coordinate sub-tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2254",
         "text_de": "Die Bedingungen festlegen, um ein kreatives Arbeitsumfeld zu schaffen.",
         "text_en": "Set conditions to create a creative work environment.",
@@ -23495,6 +23487,14 @@
         "id": "BN_2248",
         "text_de": "Konzepte mit den Fachabteilungen und Entscheidern besprechen und anpassen.",
         "text_en": "Discuss and adjust concepts with departments and decision-makers.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2249",
+        "text_de": "Die Umsetzung begleiten und Teilaufgaben koordinieren.",
+        "text_en": "Support the implementation and coordinate sub-tasks.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -23521,8 +23521,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 3
+      "ai_assisted": 7,
+      "stays_with_you": 4
     }
   },
   "Identity and Access Manager": {
@@ -25621,17 +25621,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2466",
-        "text_de": "die externe Kommunikation koordinieren und Strategien entwickeln, um das Bild des Unternehmens zu formen.",
-        "text_en": "coordinate external communication and develop strategies to shape the company's image.",
-        "label": "ai_assisted",
+        "id": "BN_2464",
+        "text_de": "Investoren überzeugen, in Aktien bestimmter Unternehmen zu investieren.",
+        "text_en": "convince investors to invest in the stocks of certain companies.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_2464",
-        "text_de": "Investoren überzeugen, in Aktien bestimmter Unternehmen zu investieren.",
-        "text_en": "convince investors to invest in the stocks of certain companies.",
+        "id": "BN_2466",
+        "text_de": "die externe Kommunikation koordinieren und Strategien entwickeln, um das Bild des Unternehmens zu formen.",
+        "text_en": "coordinate external communication and develop strategies to shape the company's image.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -25650,8 +25650,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "IoT Developer": {
@@ -28500,14 +28500,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2728",
-        "text_de": "Mit Fachärzten Kontakt aufnehmen, um die Behandlungsstrategie abzustimmen.",
-        "text_en": "Contact specialists to coordinate the treatment strategy.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2731",
         "text_de": "Hilfsangebote für die Zukunft bereitstellen, wie die Wiedereingliederung in den Alltag oder die Unterstützung bei der Schul- und Berufswahl für Jugendliche.",
         "text_en": "Develop support options for reintegration into daily life and career choices.",
@@ -28530,6 +28522,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_2728",
+        "text_de": "Mit Fachärzten Kontakt aufnehmen, um die Behandlungsstrategie abzustimmen.",
+        "text_en": "Contact specialists to coordinate the treatment strategy.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       },
       {
         "id": "BN_2729",
@@ -28585,8 +28585,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 8
+      "ai_assisted": 2,
+      "stays_with_you": 9
     }
   },
   "Comedian": {
@@ -31809,14 +31809,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3084",
-        "text_de": "Marketingmaßnahmen und Onlineauftritt planen und koordinieren.",
-        "text_en": "Plan and coordinate marketing measures and online presence.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3087",
         "text_de": "Die Aus- und Weiterbildung der Mitarbeiter organisieren.",
         "text_en": "Organize training and education for employees.",
@@ -31865,6 +31857,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3084",
+        "text_de": "Marketingmaßnahmen und Onlineauftritt planen und koordinieren.",
+        "text_en": "Plan and coordinate marketing measures and online presence.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3088",
         "text_de": "Gäste betreuen und beraten.",
         "text_en": "Support and advise guests.",
@@ -31902,8 +31902,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 4
+      "ai_assisted": 6,
+      "stays_with_you": 5
     }
   },
   "Head of Corporate Training and Education": {
@@ -32427,14 +32427,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3138",
-        "text_de": "Betriebsabläufe im Gastronomiebetrieb koordinieren und überwachen.",
-        "text_en": "Coordinate and monitor operations in the restaurant.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3140",
         "text_de": "Das Qualitätsmanagement aufbauen und kontrollieren.",
         "text_en": "Establish and control quality management.",
@@ -32467,6 +32459,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3138",
+        "text_de": "Betriebsabläufe im Gastronomiebetrieb koordinieren und überwachen.",
+        "text_en": "Coordinate and monitor operations in the restaurant.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3142",
         "text_de": "Personal auswählen, führen und motivieren.",
         "text_en": "Select, lead, and motivate staff.",
@@ -32488,8 +32488,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 1
+      "ai_assisted": 9,
+      "stays_with_you": 2
     }
   },
   "Head of Cost Accounting": {
@@ -32736,14 +32736,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3184",
-        "text_de": "Verschiedene Unternehmensbereiche koordinieren.",
-        "text_en": "Coordinate different company departments.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3180",
         "text_de": "Projekte für die Erstellung von Werbemitteln leiten.",
         "text_en": "Lead projects for creating advertising materials.",
@@ -32766,6 +32758,14 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
+      },
+      {
+        "id": "BN_3184",
+        "text_de": "Verschiedene Unternehmensbereiche koordinieren.",
+        "text_en": "Coordinate different company departments.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -32773,8 +32773,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 3
+      "ai_assisted": 7,
+      "stays_with_you": 4
     }
   },
   "Museum Director": {
@@ -33385,14 +33385,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3251",
-        "text_de": "Unterrichtseinheiten und Lehrproben koordinieren.",
-        "text_en": "Coordinate teaching units and teaching samples.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3254",
         "text_de": "Lehrproben abnehmen.",
         "text_en": "Conduct teaching assessments.",
@@ -33412,6 +33404,14 @@
         "id": "BN_3249",
         "text_de": "Studienseminare fachlich und organisatorisch leiten.",
         "text_en": "Lead study seminars in a professional and organizational way.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3251",
+        "text_de": "Unterrichtseinheiten und Lehrproben koordinieren.",
+        "text_en": "Coordinate teaching units and teaching samples.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -33446,8 +33446,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 4
+      "ai_assisted": 6,
+      "stays_with_you": 5
     }
   },
   "Head of Tourist Information": {
@@ -33475,14 +33475,6 @@
         "id": "BN_3265",
         "text_de": "Effiziente Abläufe im Betrieb organisieren und umsetzen.",
         "text_en": "Organize and implement efficient processes in the operation.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3266",
-        "text_de": "Einsatz von Mitarbeitern planen und koordinieren.",
-        "text_en": "Plan and coordinate staff deployment.",
         "label": "ai_assisted",
         "score": 5,
         "is_regulated": false
@@ -33544,6 +33536,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3266",
+        "text_de": "Einsatz von Mitarbeitern planen und koordinieren.",
+        "text_en": "Plan and coordinate staff deployment.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3261",
         "text_de": "Mit anderen Abteilungen, Hotels und Freizeiteinrichtungen verhandeln.",
         "text_en": "Negotiate with other departments, hotels, and leisure facilities.",
@@ -33565,8 +33565,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 4
+      "ai_assisted": 6,
+      "stays_with_you": 5
     }
   },
   "Head of Sales": {
@@ -35735,14 +35735,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3498",
-        "text_de": "Vorgaben für das Merchandising erstellen und Maßnahmen sowie Ziele abstimmen.",
-        "text_en": "Create guidelines for merchandising and coordinate actions and goals.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3495",
         "text_de": "Verkaufsinstrumente wie Displays entwickeln und die Regalplatzierungen sowie Kundenwege vor Ort verbessern.",
         "text_en": "Develop sales tools like displays and improve shelf placements and customer paths on site.",
@@ -35754,6 +35746,14 @@
         "id": "BN_3497",
         "text_de": "Mitarbeiter in den Verkaufsstellen anweisen, das Warenumfeld zu verbessern und Schulungen sowie Materialien bereitstellen.",
         "text_en": "Instruct employees in the sales locations to improve the product environment and provide training and materials.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3498",
+        "text_de": "Vorgaben für das Merchandising erstellen und Maßnahmen sowie Ziele abstimmen.",
+        "text_en": "Create guidelines for merchandising and coordinate actions and goals.",
         "label": "stays_with_you",
         "score": 4,
         "is_regulated": false
@@ -35772,8 +35772,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 3
+      "ai_assisted": 1,
+      "stays_with_you": 4
     }
   },
   "Mergers and Acquisitions Specialist": {
@@ -36076,14 +36076,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3531",
-        "text_de": "Fachlichen Austausch pflegen und Fördermaßnahmen abstimmen.",
-        "text_en": "Maintain professional exchange and coordinate support measures.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3532",
         "text_de": "Leitungsfunktionen übernehmen und Abteilungen der Therapie leiten.",
         "text_en": "Take on leadership functions and manage therapy departments.",
@@ -36140,6 +36132,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3531",
+        "text_de": "Fachlichen Austausch pflegen und Fördermaßnahmen abstimmen.",
+        "text_en": "Maintain professional exchange and coordinate support measures.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3534",
         "text_de": "Einrichtungen und Fachkräfte zu psychomotorischen Konzepten beraten.",
         "text_en": "Advise institutions and professionals on psychomotor concepts.",
@@ -36153,8 +36153,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 7
+      "ai_assisted": 6,
+      "stays_with_you": 8
     }
   },
   "Museum Educator": {
@@ -37940,14 +37940,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3729",
-        "text_de": "Aufgaben im Tagesgeschäft erledigen, wie OP-Pläne absprechen.",
-        "text_en": "Complete daily tasks, such as coordinating OP plans.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3713",
         "text_de": "Regeln für den OP aufstellen und festlegen.",
         "text_en": "Establish and set rules for the operating room.",
@@ -37996,6 +37988,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3729",
+        "text_de": "Aufgaben im Tagesgeschäft erledigen, wie OP-Pläne absprechen.",
+        "text_en": "Complete daily tasks, such as coordinating OP plans.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3702",
         "text_de": "Die Nutzung der OP-Säle prüfen und Betriebszeiten festlegen.",
         "text_en": "Check the use of operating rooms and set operating hours.",
@@ -38033,8 +38033,8 @@
       "automatable": 4,
       "high_ai_potential": 6,
       "sensitive": 1,
-      "ai_assisted": 13,
-      "stays_with_you": 6
+      "ai_assisted": 12,
+      "stays_with_you": 7
     }
   },
   "IT Operator": {
@@ -40867,14 +40867,6 @@
     "kldb2010": "B 94243",
     "tasks": [
       {
-        "id": "BN_4013",
-        "text_de": "Forschungsprojekte planen, koordinieren und durchführen.",
-        "text_en": "Plan, coordinate, and carry out research projects.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4016",
         "text_de": "Literatur und Patente recherchieren.",
         "text_en": "Research literature and patents.",
@@ -41003,6 +40995,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4013",
+        "text_de": "Forschungsprojekte planen, koordinieren und durchführen.",
+        "text_en": "Plan, coordinate, and carry out research projects.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4014",
         "text_de": "Forschungsprojekte festlegen und koordinieren, auch mit anderen Fachbereichen.",
         "text_en": "Define and coordinate research projects, also with other departments.",
@@ -41072,8 +41072,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 16,
-      "stays_with_you": 9
+      "ai_assisted": 15,
+      "stays_with_you": 10
     }
   },
   "Programmatic Advertising Manager": {
@@ -41289,14 +41289,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4053",
-        "text_de": "Die Teamarbeit koordinieren und Aufgaben verteilen.",
-        "text_en": "Coordinate teamwork and distribute tasks.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "GEN_0244",
         "text_de": "Ressourcenkonflikte lösen und Hindernisse eskalieren.",
         "text_en": "Resolve resource conflicts and escalate blockers.",
@@ -41308,6 +41300,14 @@
         "id": "BN_4051",
         "text_de": "Projektteams bilden oder leiten.",
         "text_en": "Form or lead project teams.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4053",
+        "text_de": "Die Teamarbeit koordinieren und Aufgaben verteilen.",
+        "text_en": "Coordinate teamwork and distribute tasks.",
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
@@ -41326,8 +41326,8 @@
       "automatable": 0,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 3
+      "ai_assisted": 7,
+      "stays_with_you": 4
     }
   },
   "Prorector / Vice President": {
@@ -44141,14 +44141,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4334",
-        "text_de": "Umsetzungsprozesse unterstützen und Teilaufgaben koordinieren.",
-        "text_en": "Support implementation processes and coordinate sub-tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4336",
         "text_de": "Aufgaben im Management und in der Unternehmensplanung übernehmen.",
         "text_en": "Take on tasks in management and corporate planning.",
@@ -44160,6 +44152,14 @@
         "id": "BN_4333",
         "text_de": "Konzepte mit Fachabteilungen und Entscheidern besprechen und anpassen.",
         "text_en": "Discuss and adjust concepts with specialist departments and decision-makers.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4334",
+        "text_de": "Umsetzungsprozesse unterstützen und Teilaufgaben koordinieren.",
+        "text_en": "Support implementation processes and coordinate sub-tasks.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -44186,8 +44186,8 @@
       "automatable": 1,
       "high_ai_potential": 6,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Rooms Division Manager": {
@@ -44244,14 +44244,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4337",
-        "text_de": "die Arbeitsabläufe im Hotel koordinieren.",
-        "text_en": "Coordinate the workflows in the hotel.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4339",
         "text_de": "die Arbeitsausführung kontrollieren.",
         "text_en": "Control the work execution.",
@@ -44282,6 +44274,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4337",
+        "text_de": "die Arbeitsabläufe im Hotel koordinieren.",
+        "text_en": "Coordinate the workflows in the hotel.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -44289,8 +44289,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Sales Manager": {
@@ -46455,14 +46455,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4572",
-        "text_de": "Die Umsetzung von Projekten unterstützen, Aufgaben koordinieren und Fortschritte überwachen.",
-        "text_en": "Support the implementation of projects, coordinate tasks, and monitor progress.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4573",
         "text_de": "Das Qualitätsmanagement einführen und die Büroorganisation sowie Abläufe verbessern.",
         "text_en": "Implement quality management and improve office organization and processes.",
@@ -46487,6 +46479,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4572",
+        "text_de": "Die Umsetzung von Projekten unterstützen, Aufgaben koordinieren und Fortschritte überwachen.",
+        "text_en": "Support the implementation of projects, coordinate tasks, and monitor progress.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4574",
         "text_de": "Planungs-, Rechts- und sozialpolitische Aufgaben klären.",
         "text_en": "Clarify planning, legal, and social policy tasks.",
@@ -46500,8 +46500,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Play Therapist": {
@@ -46668,14 +46668,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4593",
-        "text_de": "Die Umsetzung begleiten, Teilaufgaben koordinieren und Zwischenziele überwachen.",
-        "text_en": "Accompany the implementation, coordinate sub-tasks, and monitor interim goals.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4595",
         "text_de": "Die Ausrichtung und den Erfolg von Sportvereinen, wie Fußball-Bundesliga-Clubs, mitgestalten.",
         "text_en": "Help shape the direction and success of sports clubs, such as Bundesliga football clubs.",
@@ -46700,6 +46692,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4593",
+        "text_de": "Die Umsetzung begleiten, Teilaufgaben koordinieren und Zwischenziele überwachen.",
+        "text_en": "Accompany the implementation, coordinate sub-tasks, and monitor interim goals.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4594",
         "text_de": "Verhandlungen mit Sponsoren, Vermarktungsagenturen und Werbepartnern führen.",
         "text_en": "Conduct negotiations with sponsors, marketing agencies, and advertising partners.",
@@ -46713,8 +46713,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Sports Psychologist": {
@@ -47744,14 +47744,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4696",
-        "text_de": "Lehrveranstaltungen planen und koordinieren, um die Studierbarkeit zu gewährleisten.",
-        "text_en": "Plan and coordinate courses to ensure studyability.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4699",
         "text_de": "Qualitätsmanagementmaßnahmen planen und umsetzen.",
         "text_en": "Plan and implement quality management measures.",
@@ -47848,6 +47840,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4696",
+        "text_de": "Lehrveranstaltungen planen und koordinieren, um die Studierbarkeit zu gewährleisten.",
+        "text_en": "Plan and coordinate courses to ensure studyability.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4694",
         "text_de": "Studieninteressierte und Studierende beraten und informieren.",
         "text_en": "Advise and inform prospective students and students.",
@@ -47877,8 +47877,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 13,
-      "stays_with_you": 3
+      "ai_assisted": 12,
+      "stays_with_you": 4
     }
   },
   "Substitute in Goods Trade": {
@@ -49066,14 +49066,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4823",
-        "text_de": "Koordinieren der Abläufe in Praxen und Kliniken.",
-        "text_en": "Coordinate processes in practices and clinics.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4826",
         "text_de": "Sichern der Qualität in der Praxis.",
         "text_en": "Ensure quality in practice.",
@@ -49130,6 +49122,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4823",
+        "text_de": "Koordinieren der Abläufe in Praxen und Kliniken.",
+        "text_en": "Coordinate processes in practices and clinics.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "ONET_0043",
         "text_de": "",
         "text_en": "Examine animals to diagnose diseases and injuries.",
@@ -49167,8 +49167,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 8
+      "ai_assisted": 4,
+      "stays_with_you": 9
     }
   },
   "Animal Psychologist": {
@@ -53038,14 +53038,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5216",
-        "text_de": "Die einheitliche Durchführung von Verwaltungsaufgaben koordinieren.",
-        "text_en": "Coordinate the uniform execution of administrative tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5217",
         "text_de": "Fachkenntnisse in der jeweiligen Behörde anwenden.",
         "text_en": "Apply expertise in the respective authority.",
@@ -53086,6 +53078,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5216",
+        "text_de": "Die einheitliche Durchführung von Verwaltungsaufgaben koordinieren.",
+        "text_en": "Coordinate the uniform execution of administrative tasks.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5214",
         "text_de": "Führungsaufgaben und Aufsicht übernehmen.",
         "text_en": "Take on leadership and supervision tasks.",
@@ -53107,8 +53107,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Economist": {
@@ -53680,14 +53680,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5272",
-        "text_de": "Mit der Firmenleitung eine Marketingstrategie festlegen und die Maßnahmen koordinieren.",
-        "text_en": "Set a marketing strategy with the company management and coordinate the measures.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5274",
         "text_de": "Werbestrategien entwickeln, umsetzen und überwachen.",
         "text_en": "Develop, implement, and monitor advertising strategies.",
@@ -53744,6 +53736,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5272",
+        "text_de": "Mit der Firmenleitung eine Marketingstrategie festlegen und die Maßnahmen koordinieren.",
+        "text_en": "Set a marketing strategy with the company management and coordinate the measures.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5270",
         "text_de": "Unternehmen in Werbefragen beraten.",
         "text_en": "Advise companies on advertising issues.",
@@ -53773,8 +53773,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 3
+      "ai_assisted": 7,
+      "stays_with_you": 4
     }
   },
   "Copywriter": {
