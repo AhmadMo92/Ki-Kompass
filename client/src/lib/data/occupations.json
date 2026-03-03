@@ -2336,6 +2336,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0212",
+        "text_de": "Schulungen und Weiterbildungen anbieten.",
+        "text_en": "Offer training and further education.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "ONET_0008",
         "text_de": "",
         "text_en": "Relay blood analysis results to the physician.",
@@ -2400,14 +2408,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0212",
-        "text_de": "Schulungen und Weiterbildungen anbieten.",
-        "text_en": "Offer training and further education.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "ONET_0002",
         "text_de": "",
         "text_en": "Provide emergency respiratory care and resuscitation procedures.",
@@ -2445,8 +2445,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 11
+      "ai_assisted": 3,
+      "stays_with_you": 10
     }
   },
   "Audio Describer": {
@@ -2875,6 +2875,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0256",
+        "text_de": "Ausbildungsbetriebe und Bildungsträger informieren.",
+        "text_en": "Inform training companies and educational institutions.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0257",
         "text_de": "Unternehmen über Neuerungen in der Ausbildung informieren.",
         "text_en": "Inform companies about new developments in training.",
@@ -2902,6 +2910,14 @@
         "id": "BN_0264",
         "text_de": "Auf Rechte und Pflichten im Ausbildungsverhältnis hinweisen.",
         "text_en": "Point out rights and duties in the training relationship.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0265",
+        "text_de": "Informationen von Bildungsveranstaltungen weitergeben.",
+        "text_en": "Share information from educational events.",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
@@ -2939,14 +2955,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0256",
-        "text_de": "Ausbildungsbetriebe und Bildungsträger informieren.",
-        "text_en": "Inform training companies and educational institutions.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0259",
         "text_de": "Ausbilderarbeitskreise vorbereiten und leiten.",
         "text_en": "Prepare and lead trainer working groups.",
@@ -2958,14 +2966,6 @@
         "id": "BN_0263",
         "text_de": "Firmen zur Eignung der Ausbildungsstätte beraten.",
         "text_en": "Advise companies on the suitability of training facilities.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0265",
-        "text_de": "Informationen von Bildungsveranstaltungen weitergeben.",
-        "text_en": "Share information from educational events.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -3008,8 +3008,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 10
+      "ai_assisted": 14,
+      "stays_with_you": 8
     }
   },
   "Field Service Manager (Insurance)": {
@@ -3581,6 +3581,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0339",
+        "text_de": "Die Ausbildung und Weiterbildung der Mitarbeiter verantworten.",
+        "text_en": "Be responsible for the training and further education of employees.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0326",
         "text_de": "Die Bewirtung bei Festen und Veranstaltungen planen und durchführen.",
         "text_en": "Plan and carry out catering for parties and events.",
@@ -3605,14 +3613,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0339",
-        "text_de": "Die Ausbildung und Weiterbildung der Mitarbeiter verantworten.",
-        "text_en": "Be responsible for the training and further education of employees.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0334",
         "text_de": "Besprechungen mit den Servicekräften durchführen.",
         "text_en": "Hold meetings with the service staff.",
@@ -3626,8 +3626,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 5
+      "ai_assisted": 10,
+      "stays_with_you": 4
     }
   },
   "Bar Manager": {
@@ -5340,6 +5340,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0526",
+        "text_de": "die Aus- und Weiterbildung im Unternehmen organisieren.",
+        "text_en": "Organize training and education in the company.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0532",
         "text_de": "Werbeaktionen planen und durchführen.",
         "text_en": "Plan and carry out advertising campaigns.",
@@ -5412,14 +5420,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0526",
-        "text_de": "die Aus- und Weiterbildung im Unternehmen organisieren.",
-        "text_en": "Organize training and education in the company.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0522",
         "text_de": "mit Lieferanten und Dienstleistern verhandeln.",
         "text_en": "Negotiate with suppliers and service providers.",
@@ -5465,8 +5465,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 6
+      "ai_assisted": 9,
+      "stays_with_you": 5
     }
   },
   "Operations Planner": {
@@ -7636,11 +7636,27 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0766",
+        "text_de": "Bildungsveranstaltungen organisieren und auf Messen vertreten sein.",
+        "text_en": "Organize educational events and represent at fairs.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0770",
         "text_de": "Praktika und Bewerbungstrainings organisieren.",
         "text_en": "Organize internships and application training.",
         "label": "ai_assisted",
         "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0768",
+        "text_de": "Informationen von Betrieben und Bildungseinrichtungen einholen und Materialien erstellen.",
+        "text_en": "Gather information from companies and educational institutions and create materials.",
+        "label": "ai_assisted",
+        "score": 4,
         "is_regulated": false
       },
       {
@@ -7692,19 +7708,11 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0766",
-        "text_de": "Bildungsveranstaltungen organisieren und auf Messen vertreten sein.",
-        "text_en": "Organize educational events and represent at fairs.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0768",
-        "text_de": "Informationen von Betrieben und Bildungseinrichtungen einholen und Materialien erstellen.",
-        "text_en": "Gather information from companies and educational institutions and create materials.",
-        "label": "stays_with_you",
-        "score": 4,
+        "id": "BN_0771",
+        "text_de": "Kontakte zu Behörden und Bildungsträgern pflegen und in Gruppen mitarbeiten.",
+        "text_en": "Maintain contacts with authorities and educational providers and work in groups.",
+        "label": "ai_assisted",
+        "score": 0,
         "is_regulated": false
       },
       {
@@ -7730,14 +7738,6 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
-      },
-      {
-        "id": "BN_0771",
-        "text_de": "Kontakte zu Behörden und Bildungsträgern pflegen und in Gruppen mitarbeiten.",
-        "text_en": "Maintain contacts with authorities and educational providers and work in groups.",
-        "label": "stays_with_you",
-        "score": 0,
-        "is_regulated": false
       }
     ],
     "summary": {
@@ -7745,8 +7745,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 6
+      "ai_assisted": 11,
+      "stays_with_you": 3
     }
   },
   "Educational Researcher": {
@@ -7760,6 +7760,22 @@
         "text_en": "Write reports on research findings.",
         "label": "high_ai_potential",
         "score": 7,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0773",
+        "text_de": "das Bildungssystem untersuchen, wie Wissen vermittelt wird und wie die Herkunft der Schüler ihre Bildungschancen beeinflusst.",
+        "text_en": "to examine the education system, how knowledge is conveyed, and how students' backgrounds affect their educational opportunities.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0774",
+        "text_de": "Ideen entwickeln, um Bildungschancen zu verbessern oder neue zu schaffen.",
+        "text_en": "to develop ideas to improve or create new educational opportunities.",
+        "label": "ai_assisted",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -7779,22 +7795,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0773",
-        "text_de": "das Bildungssystem untersuchen, wie Wissen vermittelt wird und wie die Herkunft der Schüler ihre Bildungschancen beeinflusst.",
-        "text_en": "to examine the education system, how knowledge is conveyed, and how students' backgrounds affect their educational opportunities.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0774",
-        "text_de": "Ideen entwickeln, um Bildungschancen zu verbessern oder neue zu schaffen.",
-        "text_en": "to develop ideas to improve or create new educational opportunities.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0775",
         "text_de": "Politiker in Bildungsfragen beraten und bei der Planung helfen.",
         "text_en": "to advise politicians on education issues and assist in planning.",
@@ -7808,8 +7808,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 3
+      "ai_assisted": 4,
+      "stays_with_you": 1
     }
   },
   "Education Manager": {
@@ -7826,11 +7826,43 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0780",
+        "text_de": "Bildungsangebote wie Aus- und Weiterbildungen sowie Trainingsprogramme planen.",
+        "text_en": "Plan educational offers like training and further education as well as training programs.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0781",
+        "text_de": "Bildungsveranstaltungen für die Zielgruppe planen und organisieren.",
+        "text_en": "Plan and organize educational events for the target group.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0784",
         "text_de": "Den Einsatz von Personal planen.",
         "text_en": "Plan the use of staff.",
         "label": "ai_assisted",
         "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0790",
+        "text_de": "Wissensmanagement umsetzen, indem Bildungsmaßnahmen organisiert werden.",
+        "text_en": "Implement knowledge management by organizing educational measures.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0779",
+        "text_de": "Den Markt für Aus- und Weiterbildungen untersuchen.",
+        "text_en": "Examine the market for training and further education.",
+        "label": "ai_assisted",
+        "score": 4,
         "is_regulated": false
       },
       {
@@ -7855,38 +7887,6 @@
         "text_en": "Set knowledge goals and align them with the skills of the employees.",
         "label": "ai_assisted",
         "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0780",
-        "text_de": "Bildungsangebote wie Aus- und Weiterbildungen sowie Trainingsprogramme planen.",
-        "text_en": "Plan educational offers like training and further education as well as training programs.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0781",
-        "text_de": "Bildungsveranstaltungen für die Zielgruppe planen und organisieren.",
-        "text_en": "Plan and organize educational events for the target group.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0790",
-        "text_de": "Wissensmanagement umsetzen, indem Bildungsmaßnahmen organisiert werden.",
-        "text_en": "Implement knowledge management by organizing educational measures.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0779",
-        "text_de": "Den Markt für Aus- und Weiterbildungen untersuchen.",
-        "text_en": "Examine the market for training and further education.",
-        "label": "stays_with_you",
-        "score": 4,
         "is_regulated": false
       },
       {
@@ -7927,8 +7927,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 8
+      "ai_assisted": 8,
+      "stays_with_you": 4
     }
   },
   "Education Consultant": {
@@ -7936,6 +7936,22 @@
     "sector": "other",
     "kldb2010": "B 84404",
     "tasks": [
+      {
+        "id": "BN_0792",
+        "text_de": "Bildungsprogramme erstellen und organisieren.",
+        "text_en": "Create and organize educational programs.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0793",
+        "text_de": "Den Bildungsmarkt beobachten und Angebote festlegen.",
+        "text_en": "Monitor the education market and set offers.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
       {
         "id": "BN_0795",
         "text_de": "Seminare und Kurse vorbereiten.",
@@ -7969,9 +7985,49 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0801",
+        "text_de": "Kurse durchführen.",
+        "text_en": "Conduct courses for educators and trainers.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0802",
         "text_de": "Teilnehmer betreuen und Fragen beantworten.",
         "text_en": "Support participants and answer questions.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0804",
+        "text_de": "Kunden über Bildungsangebote informieren.",
+        "text_en": "Inform customers about educational offers.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0806",
+        "text_de": "Bildungsangebote koordinieren, wie Sprachkurse für Geflüchtete.",
+        "text_en": "Coordinate educational offers, such as language courses for refugees.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0807",
+        "text_de": "Bildungsakteure vernetzen und Initiativen einbeziehen.",
+        "text_en": "connect educational actors and involve initiatives.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0808",
+        "text_de": "Den Bedarf an Bildungsangeboten prüfen und neue Angebote starten.",
+        "text_en": "Check the need for educational offers and start new ones.",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
@@ -7985,19 +8041,11 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0792",
-        "text_de": "Bildungsprogramme erstellen und organisieren.",
-        "text_en": "Create and organize educational programs.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0793",
-        "text_de": "Den Bildungsmarkt beobachten und Angebote festlegen.",
-        "text_en": "Monitor the education market and set offers.",
-        "label": "stays_with_you",
-        "score": 5,
+        "id": "BN_0805",
+        "text_de": "Als Bildungskoordinator auf kommunaler Ebene arbeiten.",
+        "text_en": "Work as an education coordinator at the local level.",
+        "label": "ai_assisted",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -8017,59 +8065,11 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0801",
-        "text_de": "Kurse durchführen.",
-        "text_en": "Conduct courses for educators and trainers.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0803",
         "text_de": "Kunden bei Lernschwierigkeiten helfen.",
         "text_en": "Help customers with learning difficulties.",
         "label": "stays_with_you",
         "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0804",
-        "text_de": "Kunden über Bildungsangebote informieren.",
-        "text_en": "Inform customers about educational offers.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0806",
-        "text_de": "Bildungsangebote koordinieren, wie Sprachkurse für Geflüchtete.",
-        "text_en": "Coordinate educational offers, such as language courses for refugees.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0807",
-        "text_de": "Bildungsakteure vernetzen und Initiativen einbeziehen.",
-        "text_en": "connect educational actors and involve initiatives.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0808",
-        "text_de": "Den Bedarf an Bildungsangeboten prüfen und neue Angebote starten.",
-        "text_en": "Check the need for educational offers and start new ones.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0805",
-        "text_de": "Als Bildungskoordinator auf kommunaler Ebene arbeiten.",
-        "text_en": "Work as an education coordinator at the local level.",
-        "label": "stays_with_you",
-        "score": 1,
         "is_regulated": false
       }
     ],
@@ -8078,8 +8078,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 11
+      "ai_assisted": 14,
+      "stays_with_you": 3
     }
   },
   "Biochemist": {
@@ -8207,6 +8207,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0820",
+        "text_de": "Umweltpädagogische Konzepte erarbeiten und durchführen.",
+        "text_en": "Develop and implement environmental education concepts.",
+        "label": "ai_assisted",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0849",
         "text_de": "Methoden entwickeln, um Mikroorganismen zur Reinigung von Luft, Boden und Wasser einzusetzen",
         "text_en": "develop methods to use microorganisms for cleaning air, soil, and water",
@@ -8247,14 +8255,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0820",
-        "text_de": "Umweltpädagogische Konzepte erarbeiten und durchführen.",
-        "text_en": "Develop and implement environmental education concepts.",
-        "label": "stays_with_you",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0850",
         "text_de": "Umweltgutachten schreiben und Behörden sowie Bürger beraten",
         "text_en": "Write environmental reports and advise authorities and citizens.",
@@ -8276,8 +8276,8 @@
       "automatable": 0,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 5
+      "ai_assisted": 6,
+      "stays_with_you": 4
     }
   },
   "Biological Anthropologist": {
@@ -10388,6 +10388,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1020",
+        "text_de": "Sich über neue Technologien und Trends im Produktmanagement informieren und weiterbilden.",
+        "text_en": "Stay informed and continue education about new technologies and trends in product management.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1014",
         "text_de": "Die Fachteams bei ihren Arbeitsabläufen unterstützen.",
         "text_en": "Support the specialist teams in their workflows.",
@@ -10399,14 +10407,6 @@
         "id": "BN_1006",
         "text_de": "Die Strategie für die Produktentwicklung mit der Geschäftsleitung und den Abteilungen Marketing und Personal besprechen.",
         "text_en": "Discuss the product development strategy with management and the marketing and HR departments.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_1020",
-        "text_de": "Sich über neue Technologien und Trends im Produktmanagement informieren und weiterbilden.",
-        "text_en": "Stay informed and continue education about new technologies and trends in product management.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -10441,8 +10441,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 5
+      "ai_assisted": 11,
+      "stays_with_you": 4
     }
   },
   "Chief Steward/Stewardess": {
@@ -17961,6 +17961,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1732",
+        "text_de": "Aufgaben in der Sozialarbeit, Kinder- und Jugendarbeit sowie Erwachsenenbildung wahrnehmen.",
+        "text_en": "take on tasks in social work, children's and youth work, and adult education.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1722",
         "text_de": "das Personal anleiten und die ehrenamtliche Mitarbeit in der Gemeinde organisieren.",
         "text_en": "guide the staff and organize volunteer work in the community.",
@@ -18033,14 +18041,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1732",
-        "text_de": "Aufgaben in der Sozialarbeit, Kinder- und Jugendarbeit sowie Erwachsenenbildung wahrnehmen.",
-        "text_en": "take on tasks in social work, children's and youth work, and adult education.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1735",
         "text_de": "Familien, kranke Menschen und Menschen in Notlagen unterstützen.",
         "text_en": "support families, sick people, and those in need.",
@@ -18102,8 +18102,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 13
+      "ai_assisted": 5,
+      "stays_with_you": 12
     }
   },
   "Expansion Manager": {
@@ -18619,6 +18619,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1793",
+        "text_de": "Den Personaleinsatz planen und bei der Aus- und Weiterbildung helfen.",
+        "text_en": "Plan personnel deployment and assist with training and education.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1785",
         "text_de": "Die Kosten für den laufenden Betrieb im Blick behalten und Rücklagen bilden.",
         "text_en": "Keep an eye on operating costs and build reserves.",
@@ -18640,14 +18648,6 @@
         "text_en": "Provide suitable spaces and workplaces and ensure their design.",
         "label": "stays_with_you",
         "score": 6,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_1793",
-        "text_de": "Den Personaleinsatz planen und bei der Aus- und Weiterbildung helfen.",
-        "text_en": "Plan personnel deployment and assist with training and education.",
-        "label": "stays_with_you",
-        "score": 5,
         "is_regulated": false
       },
       {
@@ -18704,8 +18704,8 @@
       "automatable": 1,
       "high_ai_potential": 8,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 7
+      "ai_assisted": 4,
+      "stays_with_you": 6
     }
   },
   "Case Manager": {
@@ -19079,6 +19079,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1841",
+        "text_de": "Bei der Aus- und Weiterbildung der Mitarbeiter mithelfen.",
+        "text_en": "Help with the training and further education of employees.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3652",
         "text_de": "Vertriebsaktivitäten koordinieren und Marketingstrategien umsetzen.",
         "text_en": "Coordinate sales activities and implement marketing strategies.",
@@ -19116,14 +19124,6 @@
         "text_en": "Take on tasks in the HR area.",
         "label": "ai_assisted",
         "score": 0,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_1841",
-        "text_de": "Bei der Aus- und Weiterbildung der Mitarbeiter mithelfen.",
-        "text_en": "Help with the training and further education of employees.",
-        "label": "stays_with_you",
-        "score": 3,
         "is_regulated": false
       },
       {
@@ -19180,8 +19180,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 15,
-      "stays_with_you": 6
+      "ai_assisted": 16,
+      "stays_with_you": 5
     }
   },
   "Film Managing Director": {
@@ -23104,6 +23104,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2213",
+        "text_de": "Bei der Erstellung individueller Erziehungs- und Förderpläne mitarbeiten.",
+        "text_en": "Help create individual education and support plans.",
+        "label": "ai_assisted",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2215",
         "text_de": "Bei Bedarf bei den Hausaufgaben helfen.",
         "text_en": "Help with homework if needed.",
@@ -23112,11 +23120,11 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2213",
-        "text_de": "Bei der Erstellung individueller Erziehungs- und Förderpläne mitarbeiten.",
-        "text_en": "Help create individual education and support plans.",
-        "label": "stays_with_you",
-        "score": 4,
+        "id": "BN_2216",
+        "text_de": "Pädagogische Angebote an die jeweilige Zielgruppe anpassen, wie Vorschulkinder oder Kinder mit Migrationshintergrund.",
+        "text_en": "Adapt educational offers to the target group, such as preschool children or children with a migration background.",
+        "label": "ai_assisted",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -23144,14 +23152,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2216",
-        "text_de": "Pädagogische Angebote an die jeweilige Zielgruppe anpassen, wie Vorschulkinder oder Kinder mit Migrationshintergrund.",
-        "text_en": "Adapt educational offers to the target group, such as preschool children or children with a migration background.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2217",
         "text_de": "Mit Eltern, Lehrern und Ämtern, wie dem Jugendamt, zusammenarbeiten.",
         "text_en": "Collaborate with parents, teachers, and offices, such as the youth welfare office.",
@@ -23165,8 +23165,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 6
+      "ai_assisted": 4,
+      "stays_with_you": 4
     }
   },
   "Home Manager": {
@@ -25359,6 +25359,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2439",
+        "text_de": "Informationen über das deutsche Bildungssystem bereitstellen.",
+        "text_en": "Provide information about the German education system.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2440",
         "text_de": "Anlaufstellen für den Arbeitsmarkt und die Wohnungssuche zeigen.",
         "text_en": "Show points of contact for the job market and housing search.",
@@ -25410,14 +25418,6 @@
         "id": "BN_2435",
         "text_de": "Flüchtlinge und Migranten bei der Integration in Deutschland unterstützen.",
         "text_en": "Support refugees and migrants in integrating into Germany.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_2439",
-        "text_de": "Informationen über das deutsche Bildungssystem bereitstellen.",
-        "text_en": "Provide information about the German education system.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -25484,8 +25484,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 8
+      "ai_assisted": 11,
+      "stays_with_you": 7
     }
   },
   "Artistic Director": {
@@ -26818,6 +26818,14 @@
     "kldb2010": "B 83124",
     "tasks": [
       {
+        "id": "BN_2564",
+        "text_de": "Freizeitangebote, Bildungsprojekte und Aktionen planen und umsetzen.",
+        "text_en": "Plan and implement leisure activities, educational projects, and events.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2563",
         "text_de": "Die Jugendarbeit in einer Stadt unterstützen und verbessern.",
         "text_en": "Support and improve youth work in a city.",
@@ -26839,14 +26847,6 @@
         "text_en": "Manage youth centers and other facilities.",
         "label": "ai_assisted",
         "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_2564",
-        "text_de": "Freizeitangebote, Bildungsprojekte und Aktionen planen und umsetzen.",
-        "text_en": "Plan and implement leisure activities, educational projects, and events.",
-        "label": "stays_with_you",
-        "score": 5,
         "is_regulated": false
       },
       {
@@ -26887,8 +26887,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 5
+      "ai_assisted": 4,
+      "stays_with_you": 4
     }
   },
   "Lawyer": {
@@ -27865,6 +27865,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2673",
+        "text_de": "Aufgaben in der Sozialarbeit und der Erwachsenenbildung wahrnehmen.",
+        "text_en": "Take on tasks in social work and adult education.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2662",
         "text_de": "Das Personal anleiten und die ehrenamtliche Mitarbeit organisieren.",
         "text_en": "Guide the staff and organize volunteer work.",
@@ -27945,14 +27953,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2673",
-        "text_de": "Aufgaben in der Sozialarbeit und der Erwachsenenbildung wahrnehmen.",
-        "text_en": "Take on tasks in social work and adult education.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2676",
         "text_de": "Familien und Menschen in Notlagen unterstützen.",
         "text_en": "Support families and people in need.",
@@ -28014,8 +28014,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 15
+      "ai_assisted": 4,
+      "stays_with_you": 14
     }
   },
   "Orthodontic Assistant": {
@@ -28159,6 +28159,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2692",
+        "text_de": "Pädagogische Konzepte zur Förderung der Kinder entwickeln.",
+        "text_en": "Develop educational concepts to support children.",
+        "label": "ai_assisted",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2693",
+        "text_de": "Konzepte umsetzen und Erzieherinnen sowie Mitarbeiter anleiten.",
+        "text_en": "Implement concepts and guide educators and staff.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2694",
         "text_de": "Projekte wie Kindertanz oder Sprachförderung durchführen.",
         "text_en": "Carry out projects like children's dance or language promotion.",
@@ -28183,11 +28199,11 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2692",
-        "text_de": "Pädagogische Konzepte zur Förderung der Kinder entwickeln.",
-        "text_en": "Develop educational concepts to support children.",
-        "label": "stays_with_you",
-        "score": 4,
+        "id": "BN_2691",
+        "text_de": "Pädagogische Aufgaben übernehmen.",
+        "text_en": "Take on educational tasks.",
+        "label": "ai_assisted",
+        "score": 0,
         "is_regulated": false
       },
       {
@@ -28196,14 +28212,6 @@
         "text_en": "Conduct job interviews for new employees.",
         "label": "stays_with_you",
         "score": 4,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_2693",
-        "text_de": "Konzepte umsetzen und Erzieherinnen sowie Mitarbeiter anleiten.",
-        "text_en": "Implement concepts and guide educators and staff.",
-        "label": "stays_with_you",
-        "score": 3,
         "is_regulated": false
       },
       {
@@ -28223,14 +28231,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2691",
-        "text_de": "Pädagogische Aufgaben übernehmen.",
-        "text_en": "Take on educational tasks.",
-        "label": "stays_with_you",
-        "score": 0,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2696",
         "text_de": "Direkt in der Kinderbetreuung arbeiten.",
         "text_en": "Work directly in childcare.",
@@ -28244,8 +28244,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 7
+      "ai_assisted": 8,
+      "stays_with_you": 4
     }
   },
   "Childhood Educator": {
@@ -28265,6 +28265,22 @@
         "id": "BN_2703",
         "text_de": "Förderpläne für Kinder erstellen.",
         "text_en": "Create support plans for children.",
+        "label": "ai_assisted",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2710",
+        "text_de": "Pädagogische Konzepte planen und umsetzen.",
+        "text_en": "Plan and implement educational concepts.",
+        "label": "ai_assisted",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2714",
+        "text_de": "Grundlagen der Frühpädagogik entwickeln.",
+        "text_en": "Develop foundations of early education.",
         "label": "ai_assisted",
         "score": 4,
         "is_regulated": false
@@ -28326,22 +28342,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2710",
-        "text_de": "Pädagogische Konzepte planen und umsetzen.",
-        "text_en": "Plan and implement educational concepts.",
-        "label": "stays_with_you",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_2714",
-        "text_de": "Grundlagen der Frühpädagogik entwickeln.",
-        "text_en": "Develop foundations of early education.",
-        "label": "stays_with_you",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2706",
         "text_de": "Fördermaßnahmen mit Erziehern, Eltern und Fachleuten umsetzen.",
         "text_en": "Implement support measures with educators, parents, and professionals.",
@@ -28371,8 +28371,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 7
+      "ai_assisted": 8,
+      "stays_with_you": 5
     }
   },
   "Climate Protection Manager": {
@@ -31215,6 +31215,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3018",
+        "text_de": "Entwickle neue Lern- und Bildungskonzepte an Bildungseinrichtungen.",
+        "text_en": "Develop new learning and education concepts in educational institutions.",
+        "label": "ai_assisted",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3020",
         "text_de": "Verfasse Forschungsberichte.",
         "text_en": "Write research reports.",
@@ -31247,14 +31255,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3018",
-        "text_de": "Entwickle neue Lern- und Bildungskonzepte an Bildungseinrichtungen.",
-        "text_en": "Develop new learning and education concepts in educational institutions.",
-        "label": "stays_with_you",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3014",
         "text_de": "Vermittle die Sprache, Literatur und Kultur des deutschen Sprachraums.",
         "text_en": "Teach the language, literature, and culture of the German-speaking area.",
@@ -31268,8 +31268,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 5
+      "ai_assisted": 4,
+      "stays_with_you": 4
     }
   },
   "Teacher for Maritime Studies": {
@@ -31397,6 +31397,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3039",
+        "text_de": "Referendare in ihrer Ausbildung unterstützen.",
+        "text_en": "support trainees in their education.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3043",
         "text_de": "sich auf spezielle Förderbereiche wie Sprache und motorische Entwicklung konzentrieren.",
         "text_en": "focus on special support areas like language and motor development.",
@@ -31453,14 +31461,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3039",
-        "text_de": "Referendare in ihrer Ausbildung unterstützen.",
-        "text_en": "support trainees in their education.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3042",
         "text_de": "Fördermaßnahmen für Kleinkinder mit Behinderungen durchführen und Eltern beraten.",
         "text_en": "carry out support measures for young children with disabilities and advise parents.",
@@ -31482,8 +31482,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 8
+      "ai_assisted": 6,
+      "stays_with_you": 7
     }
   },
   "Teacher - School for Vocational Education": {
@@ -31603,6 +31603,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3061",
+        "text_de": "Den Bildungsbedarf ermitteln.",
+        "text_en": "Determine educational needs.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3057",
         "text_de": "Kurse und Veranstaltungen durchführen.",
         "text_en": "conduct courses and events.",
@@ -31659,14 +31667,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3061",
-        "text_de": "Den Bildungsbedarf ermitteln.",
-        "text_en": "Determine educational needs.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3063",
         "text_de": "Bei der Auswahl von Lehrpersonal mitwirken und es betreuen.",
         "text_en": "Assist in selecting teaching staff and support them.",
@@ -31680,8 +31680,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 7
+      "ai_assisted": 4,
+      "stays_with_you": 6
     }
   },
   "Manager of a Senior Care Facility": {
@@ -31817,6 +31817,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3087",
+        "text_de": "Die Aus- und Weiterbildung der Mitarbeiter organisieren.",
+        "text_en": "Organize training and education for employees.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3080",
         "text_de": "Betriebsstrategien mit dem Inhaber entwickeln und umsetzen.",
         "text_en": "Develop and implement business strategies with the owner.",
@@ -31857,14 +31865,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3087",
-        "text_de": "Die Aus- und Weiterbildung der Mitarbeiter organisieren.",
-        "text_en": "Organize training and education for employees.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3088",
         "text_de": "Gäste betreuen und beraten.",
         "text_en": "Support and advise guests.",
@@ -31902,8 +31902,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 5
+      "ai_assisted": 7,
+      "stays_with_you": 4
     }
   },
   "Head of Corporate Training and Education": {
@@ -31952,18 +31952,10 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3089",
-        "text_de": "den praktischen Teil der Ausbildung planen, organisieren und überwachen.",
-        "text_en": "plan, organize, and supervise the practical part of the training.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3096",
         "text_de": "die Aus- und Weiterbildungsmaßnahmen kontrollieren.",
         "text_en": "control the training and further education measures.",
-        "label": "stays_with_you",
+        "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
       },
@@ -31971,8 +31963,16 @@
         "id": "BN_3097",
         "text_de": "den Kontakt zu Bildungseinrichtungen und Arbeitsagenturen pflegen.",
         "text_en": "maintain contact with educational institutions and employment agencies.",
-        "label": "stays_with_you",
+        "label": "ai_assisted",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3089",
+        "text_de": "den praktischen Teil der Ausbildung planen, organisieren und überwachen.",
+        "text_en": "plan, organize, and supervise the practical part of the training.",
+        "label": "stays_with_you",
+        "score": 5,
         "is_regulated": false
       },
       {
@@ -31989,8 +31989,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 4
+      "ai_assisted": 7,
+      "stays_with_you": 2
     }
   },
   "Head of Controlling": {
@@ -32387,6 +32387,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3143",
+        "text_de": "Die Aus- und Weiterbildung der Mitarbeiter organisieren.",
+        "text_en": "Organize training and education for employees.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3145",
         "text_de": "Wareneinsatz, Einkauf und Lagerhaltung planen und organisieren.",
         "text_en": "Plan and organize inventory, purchasing, and storage.",
@@ -32459,14 +32467,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3143",
-        "text_de": "Die Aus- und Weiterbildung der Mitarbeiter organisieren.",
-        "text_en": "Organize training and education for employees.",
-        "label": "stays_with_you",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3142",
         "text_de": "Personal auswählen, führen und motivieren.",
         "text_en": "Select, lead, and motivate staff.",
@@ -32488,8 +32488,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 2
+      "ai_assisted": 10,
+      "stays_with_you": 1
     }
   },
   "Head of Cost Accounting": {
@@ -33773,6 +33773,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3294",
+        "text_de": "Bei pädagogischen Aktivitäten mitarbeiten.",
+        "text_en": "Participate in educational activities.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3290",
         "text_de": "Leitungsaufgaben organisieren und durchführen.",
         "text_en": "Organize and carry out management tasks.",
@@ -33792,14 +33800,6 @@
         "id": "BN_3293",
         "text_de": "Die Werkstätten nach außen vertreten und Kontakt zu Angehörigen pflegen.",
         "text_en": "Represent the workshops externally and maintain contact with relatives.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3294",
-        "text_de": "Bei pädagogischen Aktivitäten mitarbeiten.",
-        "text_en": "Participate in educational activities.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -33826,8 +33826,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 5
+      "ai_assisted": 3,
+      "stays_with_you": 4
     }
   },
   "Head of Artistic Operations Office": {
@@ -38392,6 +38392,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3765",
+        "text_de": "Pädagogische Konzepte für Bildung und Freizeit entwickeln.",
+        "text_en": "Develop educational concepts for education and leisure.",
+        "label": "ai_assisted",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3768",
         "text_de": "Forschungsberichte schreiben.",
         "text_en": "Write research reports.",
@@ -38405,14 +38413,6 @@
         "text_en": "Plan and lead courses and further training.",
         "label": "stays_with_you",
         "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3765",
-        "text_de": "Pädagogische Konzepte für Bildung und Freizeit entwickeln.",
-        "text_en": "Develop educational concepts for education and leisure.",
-        "label": "stays_with_you",
-        "score": 4,
         "is_regulated": false
       },
       {
@@ -38445,8 +38445,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 5
+      "ai_assisted": 4,
+      "stays_with_you": 4
     }
   },
   "Educational-Therapeutic Conductor": {
@@ -38882,6 +38882,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3822",
+        "text_de": "Religionsunterricht planen und durchführen.",
+        "text_en": "Plan and conduct religious education.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3826",
         "text_de": "Vorträge und Glaubensseminare planen und durchführen, wie Bibelkurse und religiöse Wochenenden.",
         "text_en": "Plan and conduct lectures and faith seminars, such as Bible courses and religious weekends.",
@@ -38903,14 +38911,6 @@
         "text_en": "Offer office hours in the parish office.",
         "label": "ai_assisted",
         "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3822",
-        "text_de": "Religionsunterricht planen und durchführen.",
-        "text_en": "Plan and conduct religious education.",
-        "label": "stays_with_you",
-        "score": 5,
         "is_regulated": false
       },
       {
@@ -39007,8 +39007,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 12
+      "ai_assisted": 5,
+      "stays_with_you": 11
     }
   },
   "Personnel Consultant": {
@@ -40931,6 +40931,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4028",
+        "text_de": "An hochschulpolitischen Entscheidungen mitwirken.",
+        "text_en": "Participate in higher education policy decisions.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4032",
         "text_de": "Berater- und Gutachtertätigkeiten durchführen.",
         "text_en": "Conduct consulting and expert activities.",
@@ -41011,14 +41019,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4028",
-        "text_de": "An hochschulpolitischen Entscheidungen mitwirken.",
-        "text_en": "Participate in higher education policy decisions.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4033",
         "text_de": "Im medizinischen Bereich klinische Aufgaben übernehmen.",
         "text_en": "Take on clinical tasks in the medical field.",
@@ -41072,8 +41072,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 13
+      "ai_assisted": 13,
+      "stays_with_you": 12
     }
   },
   "Programmatic Advertising Manager": {
@@ -41939,6 +41939,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4122",
+        "text_de": "Religions- und Sprachunterricht in Schulen und Gemeinden geben.",
+        "text_en": "Provide religious and language education in schools and communities.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4123",
         "text_de": "Die Ausbildung zukünftiger Rabbiner und Rabbinerinnen unterstützen.",
         "text_en": "Support the training of future rabbis.",
@@ -41987,14 +41995,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4122",
-        "text_de": "Religions- und Sprachunterricht in Schulen und Gemeinden geben.",
-        "text_en": "Provide religious and language education in schools and communities.",
-        "label": "stays_with_you",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4124",
         "text_de": "In jüdischen Studien forschen, lehren und veröffentlichen.",
         "text_en": "Research, teach, and publish in Jewish studies.",
@@ -42016,8 +42016,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 7
+      "ai_assisted": 4,
+      "stays_with_you": 6
     }
   },
   "Rating Analyst": {
@@ -42645,6 +42645,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4192",
+        "text_de": "Konzepte zur Verbesserung der Lebensbedingungen entwickeln, wie bessere Bildung oder kleine Betriebe.",
+        "text_en": "Develop concepts to improve living conditions, such as better education or small businesses.",
+        "label": "ai_assisted",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4190",
         "text_de": "Entwicklungen in Sprache, Gesellschaft und Politik in Afrika beobachten.",
         "text_en": "Observe developments in language, society, and politics in Africa.",
@@ -42669,14 +42677,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4192",
-        "text_de": "Konzepte zur Verbesserung der Lebensbedingungen entwickeln, wie bessere Bildung oder kleine Betriebe.",
-        "text_en": "Develop concepts to improve living conditions, such as better education or small businesses.",
-        "label": "stays_with_you",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4191",
         "text_de": "Interviews führen, Fotos machen oder Filme drehen und Soziogramme erstellen.",
         "text_en": "Conduct interviews, take photos or make films, and create sociograms.",
@@ -42698,8 +42698,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 4
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Regional Scientist - Asian Studies": {
@@ -44972,6 +44972,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4414",
+        "text_de": "Den Bildungsbedarf und aktuelle Bildungstrends herausfinden.",
+        "text_en": "Find out the educational needs and current education trends.",
+        "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4413",
+        "text_de": "Leitungsaufgaben in einer Erwachsenenbildungseinrichtung übernehmen.",
+        "text_en": "Take on management tasks in an adult education institution.",
+        "label": "ai_assisted",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4421",
         "text_de": "Die Pflege des Gebäudes und der Außenanlagen organisieren.",
         "text_en": "Organize the maintenance of the building and outdoor areas.",
@@ -44993,14 +45009,6 @@
         "text_en": "Plan material resources and teaching aids.",
         "label": "stays_with_you",
         "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_4414",
-        "text_de": "Den Bildungsbedarf und aktuelle Bildungstrends herausfinden.",
-        "text_en": "Find out the educational needs and current education trends.",
-        "label": "stays_with_you",
-        "score": 3,
         "is_regulated": false
       },
       {
@@ -45042,14 +45050,6 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
-      },
-      {
-        "id": "BN_4413",
-        "text_de": "Leitungsaufgaben in einer Erwachsenenbildungseinrichtung übernehmen.",
-        "text_en": "Take on management tasks in an adult education institution.",
-        "label": "stays_with_you",
-        "score": 1,
-        "is_regulated": false
       }
     ],
     "summary": {
@@ -45057,8 +45057,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 1,
-      "stays_with_you": 10
+      "ai_assisted": 3,
+      "stays_with_you": 8
     }
   },
   "School Principal - Music Schools": {
@@ -51088,6 +51088,14 @@
     "kldb2010": "B 83223",
     "tasks": [
       {
+        "id": "BN_5030",
+        "text_de": "Veranstaltungen zur Verbraucheraufklärung planen und durchführen.",
+        "text_en": "Plan and conduct events for consumer education.",
+        "label": "ai_assisted",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5026",
         "text_de": "Kunden über Produkte und Dienstleistungen informieren.",
         "text_en": "Inform customers about products and services.",
@@ -51109,14 +51117,6 @@
         "text_en": "Test and compare products and services.",
         "label": "ai_assisted",
         "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_5030",
-        "text_de": "Veranstaltungen zur Verbraucheraufklärung planen und durchführen.",
-        "text_en": "Plan and conduct events for consumer education.",
-        "label": "stays_with_you",
-        "score": 5,
         "is_regulated": false
       },
       {
@@ -51157,8 +51157,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 4
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Association and Federation Manager": {

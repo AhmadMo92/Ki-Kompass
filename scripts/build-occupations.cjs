@@ -81,7 +81,7 @@ for (let i = 1; i < lines.length; i++) {
     /\badvice\b/i,
     /\binstruct\b/i,
     /\bteach/i,
-    /\beducat/i,
+    /\beducat(?:e|ing)\b/i,
     /\bpresent\b.*\b(?:to|for|result|finding|client|customer|management|stakeholder)\b/i,
     /\bexplain\b.*\b(?:to|client|customer|patient)\b/i,
     /\binform\b.*\b(?:client|customer|patient|staff|employee|team|management|supervis|stakeholder|partner|member)\b/i,
