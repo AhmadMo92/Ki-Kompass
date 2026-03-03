@@ -70,6 +70,12 @@ for (let i = 1; i < lines.length; i++) {
     /\bmanage\b.*\b(?:team|staff|employee|personnel)\b/i,
     /\b(?:resolve|handle)\b.*\bconflict/i,
     /\bconduct\b.*\b(?:interview|meeting|workshop|seminar|training)\b/i,
+    /\bwork with\b/i,
+    /\bcollaborat/i,
+    /\bcooperat/i,
+    /\bcoordinat.*\bwith\b/i,
+    /\bconsult.*\bwith\b/i,
+    /\bliaise\b/i,
   ];
   const taskTextEn = paraphrase_en || cols[colIndex['task_text']] || '';
   const effectiveLabel = (label_5cat === 'ai_assisted' && INTERPERSONAL_PATTERNS.some(p => p.test(taskTextEn)))

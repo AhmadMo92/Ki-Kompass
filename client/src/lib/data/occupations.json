@@ -347,14 +347,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0030",
-        "text_de": "Mit der Geschäftsleitung und anderen Abteilungen zusammenarbeiten.",
-        "text_en": "work with management and other departments.",
-        "label": "ai_assisted",
-        "score": 0,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0022",
         "text_de": "Kundenbeziehungen aufbauen und pflegen.",
         "text_en": "Build and maintain customer relationships.",
@@ -403,6 +395,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0030",
+        "text_de": "Mit der Geschäftsleitung und anderen Abteilungen zusammenarbeiten.",
+        "text_en": "work with management and other departments.",
+        "label": "stays_with_you",
+        "score": 0,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2781",
         "text_de": "Die Kundendatenbanken aktualisieren.",
         "text_en": "update the customer databases.",
@@ -416,8 +416,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 16,
-      "stays_with_you": 6
+      "ai_assisted": 15,
+      "stays_with_you": 7
     }
   },
   "Affiliate Manager": {
@@ -1513,14 +1513,6 @@
         "is_regulated": true
       },
       {
-        "id": "BN_0135",
-        "text_de": "bei privaten Arbeitsvermittlern arbeiten",
-        "text_en": "Work with private employment agencies.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0136",
         "text_de": "die Einarbeitung von neuen Mitarbeitern begleiten",
         "text_en": "support the training of new employees",
@@ -1569,6 +1561,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0135",
+        "text_de": "bei privaten Arbeitsvermittlern arbeiten",
+        "text_en": "Work with private employment agencies.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0137",
         "text_de": "Gespräche mit Chefs führen",
         "text_en": "Have conversations with bosses.",
@@ -1582,8 +1582,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 5
+      "ai_assisted": 7,
+      "stays_with_you": 6
     }
   },
   "Work Scientist": {
@@ -3573,14 +3573,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0333",
-        "text_de": "Die Zusammenarbeit von Service und Küche sicherstellen.",
-        "text_en": "Ensure cooperation between service and kitchen.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0336",
         "text_de": "Verwaltende Aufgaben übernehmen.",
         "text_en": "Take on administrative tasks.",
@@ -3613,6 +3605,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0333",
+        "text_de": "Die Zusammenarbeit von Service und Küche sicherstellen.",
+        "text_en": "Ensure cooperation between service and kitchen.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0334",
         "text_de": "Besprechungen mit den Servicekräften durchführen.",
         "text_en": "Hold meetings with the service staff.",
@@ -3626,8 +3626,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 3
+      "ai_assisted": 10,
+      "stays_with_you": 4
     }
   },
   "Bar Manager": {
@@ -3905,14 +3905,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0364",
-        "text_de": "Mit Sozialversicherungsträgern und Organisationen zur Integration ins Berufsleben zusammenarbeiten.",
-        "text_en": "Work with social insurance providers and organizations for job integration.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0369",
         "text_de": "Betriebliche Ausbildungsstellen vermitteln.",
         "text_en": "Provide company training positions.",
@@ -3997,6 +3989,14 @@
         "text_de": "Möglichkeiten der Teilhabe am Arbeitsleben untersuchen.",
         "text_en": "Explore opportunities for participation in working life.",
         "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0364",
+        "text_de": "Mit Sozialversicherungsträgern und Organisationen zur Integration ins Berufsleben zusammenarbeiten.",
+        "text_en": "Work with social insurance providers and organizations for job integration.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -4094,8 +4094,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 17,
-      "stays_with_you": 11
+      "ai_assisted": 16,
+      "stays_with_you": 12
     }
   },
   "Consultant for Digital Accessibility": {
@@ -4817,14 +4817,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0469",
-        "text_de": "Die Zusammenarbeit mit Schulen und Betrieben organisieren.",
-        "text_en": "Organize collaboration with schools and businesses.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0467",
         "text_de": "Berufsorientierung und Bewerbungstrainings planen und durchführen.",
         "text_en": "Plan and conduct career orientation and application training.",
@@ -4847,6 +4839,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0469",
+        "text_de": "Die Zusammenarbeit mit Schulen und Betrieben organisieren.",
+        "text_en": "Organize collaboration with schools and businesses.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -4854,8 +4854,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 1,
-      "stays_with_you": 3
+      "ai_assisted": 0,
+      "stays_with_you": 4
     }
   },
   "Professional Athlete": {
@@ -5015,14 +5015,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0487",
-        "text_de": "Mit Experten für Fusionen und Übernahmen zusammenarbeiten",
-        "text_en": "Work with experts for mergers and acquisitions.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "ONET_0104",
         "text_de": "",
         "text_en": "Manage investment funds to maximize client returns.",
@@ -5043,6 +5035,14 @@
         "text_de": "",
         "text_en": "Develop and implement fund investment strategies.",
         "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0487",
+        "text_de": "Mit Experten für Fusionen und Übernahmen zusammenarbeiten",
+        "text_en": "Work with experts for mergers and acquisitions.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -5076,8 +5076,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 1,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Mentor Teacher - General Education Schools": {
@@ -6536,14 +6536,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0646",
-        "text_de": "Die Zusammenarbeit zwischen den Abteilungen organisieren.",
-        "text_en": "Organize collaboration between departments.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0647",
         "text_de": "Führungsaufgaben im Marketing oder Vertrieb übernehmen und beraten.",
         "text_en": "Take on leadership tasks in marketing or sales and provide advice.",
@@ -6566,6 +6558,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0646",
+        "text_de": "Die Zusammenarbeit zwischen den Abteilungen organisieren.",
+        "text_en": "Organize collaboration between departments.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -6573,8 +6573,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 1
+      "ai_assisted": 10,
+      "stays_with_you": 2
     }
   },
   "Business Economist - Accounting and Controlling": {
@@ -9119,14 +9119,6 @@
         "is_regulated": false
       },
       {
-        "id": "GEN_0191",
-        "text_de": "Pilotprojekte mit potenziellen Unternehmenskunden koordinieren.",
-        "text_en": "Coordinate pilot projects with prospective enterprise clients.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "GEN_0194",
         "text_de": "Produkt, Vertrieb und Marketing auf Prioritäten abstimmen.",
         "text_en": "Align product, sales, and marketing on priorities.",
@@ -9140,6 +9132,14 @@
         "text_en": "Negotiate partnership terms and draft agreements.",
         "label": "stays_with_you",
         "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "GEN_0191",
+        "text_de": "Pilotprojekte mit potenziellen Unternehmenskunden koordinieren.",
+        "text_en": "Coordinate pilot projects with prospective enterprise clients.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -9164,8 +9164,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 3
+      "ai_assisted": 9,
+      "stays_with_you": 4
     }
   },
   "Business Intelligence Consultant": {
@@ -10269,14 +10269,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0999",
-        "text_de": "Vernetztes Arbeiten im Unternehmen fördern und Abteilungen unterstützen.",
-        "text_en": "Promote collaborative work in the company and support departments.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1001",
         "text_de": "Mitarbeiter motivieren und sie auf digitale Arbeitsprozesse vorbereiten.",
         "text_en": "Motivate employees and prepare them for digital work processes.",
@@ -10291,6 +10283,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0999",
+        "text_de": "Vernetztes Arbeiten im Unternehmen fördern und Abteilungen unterstützen.",
+        "text_en": "Promote collaborative work in the company and support departments.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -10298,8 +10298,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 2
+      "ai_assisted": 9,
+      "stays_with_you": 3
     }
   },
   "Chief Product Officer": {
@@ -12031,14 +12031,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1175",
-        "text_de": "Arbeite an Forschungsprojekten mit und schreibe Berichte.",
-        "text_en": "Collaborate on research projects and write reports.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1165",
         "text_de": "Dokumentiere mathematische und logische Strukturen von Sprachaufgaben und sammle philosophische Aspekte.",
         "text_en": "Document mathematical and logical structures of language tasks and collect philosophical aspects.",
@@ -12079,6 +12071,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1175",
+        "text_de": "Arbeite an Forschungsprojekten mit und schreibe Berichte.",
+        "text_en": "Collaborate on research projects and write reports.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1166",
         "text_de": "Entwickle Modelle, um sprachliches Wissen darzustellen und die Interaktion mit Maschinen zu ermöglichen.",
         "text_en": "Develop models to represent linguistic knowledge and enable interaction with machines.",
@@ -12092,8 +12092,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 1
+      "ai_assisted": 8,
+      "stays_with_you": 2
     }
   },
   "Content Creator": {
@@ -12357,17 +12357,17 @@
         "is_regulated": false
       },
       {
-        "id": "GEN_0116",
-        "text_de": "Freigabeprozesse für Inhalte mit Rechts- und Markenteams koordinieren.",
-        "text_en": "Coordinate content approval workflows with legal and brand teams.",
-        "label": "ai_assisted",
+        "id": "GEN_0113",
+        "text_de": "Externe Autoren, Fotografen und Videografen über Anforderungen informieren.",
+        "text_en": "Brief external writers, photographers, and videographers on requirements.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "GEN_0113",
-        "text_de": "Externe Autoren, Fotografen und Videografen über Anforderungen informieren.",
-        "text_en": "Brief external writers, photographers, and videographers on requirements.",
+        "id": "GEN_0116",
+        "text_de": "Freigabeprozesse für Inhalte mit Rechts- und Markenteams koordinieren.",
+        "text_en": "Coordinate content approval workflows with legal and brand teams.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -12386,8 +12386,8 @@
       "automatable": 1,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 1
+      "ai_assisted": 7,
+      "stays_with_you": 2
     }
   },
   "Content Marketing Manager": {
@@ -13087,14 +13087,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1249",
-        "text_de": "Datenwahl und -bereitstellung mit Datenwissenschaftlern absprechen.",
-        "text_en": "Coordinate data selection and provision with data scientists.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1250",
         "text_de": "Sich über aktuelle Trends und Technologien in der Cloud- und Software-Entwicklung informieren.",
         "text_en": "Stay informed about current trends and technologies in cloud and software development.",
@@ -13117,6 +13109,14 @@
         "label": "stays_with_you",
         "score": 6,
         "is_regulated": false
+      },
+      {
+        "id": "BN_1249",
+        "text_de": "Datenwahl und -bereitstellung mit Datenwissenschaftlern absprechen.",
+        "text_en": "Coordinate data selection and provision with data scientists.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -13124,8 +13124,8 @@
       "automatable": 0,
       "high_ai_potential": 9,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Data Scientist": {
@@ -14085,14 +14085,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1341",
-        "text_de": "Im Designmanagement bei Vertriebs- und Kommunikationskonzepten mitarbeiten und Budgets erstellen.",
-        "text_en": "Collaborate in design management on sales and communication concepts and create budgets.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1337",
         "text_de": "Konzepte für Produkte, Medien und Ausstellungen erstellen.",
         "text_en": "Create concepts for products, media, and exhibitions.",
@@ -14109,6 +14101,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1341",
+        "text_de": "Im Designmanagement bei Vertriebs- und Kommunikationskonzepten mitarbeiten und Budgets erstellen.",
+        "text_en": "Collaborate in design management on sales and communication concepts and create budgets.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1339",
         "text_de": "Die Herstellung von Produkten betreuen.",
         "text_en": "Supervise the production of products.",
@@ -14122,8 +14122,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Diet Consultant": {
@@ -14529,14 +14529,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1388",
-        "text_de": "An der Entwicklung neuer digitaler Werbeformate mitarbeiten.",
-        "text_en": "Collaborate in the development of new digital advertising formats.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1390",
         "text_de": "Bestandskunden über Neuerungen und Rabatte informieren.",
         "text_en": "Inform existing customers about new developments and discounts.",
@@ -14550,6 +14542,14 @@
         "text_en": "Negotiate and finalize contracts with external customers.",
         "label": "stays_with_you",
         "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1388",
+        "text_de": "An der Entwicklung neuer digitaler Werbeformate mitarbeiten.",
+        "text_en": "Collaborate in the development of new digital advertising formats.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -14582,8 +14582,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 3
+      "ai_assisted": 9,
+      "stays_with_you": 4
     }
   },
   "Insurance Consultant for Large Clients": {
@@ -15004,19 +15004,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1440",
-        "text_de": "An Forschungsprojekten mitarbeiten und Berichte schreiben.",
-        "text_en": "Collaborate on research projects and write reports.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1439",
         "text_de": "Die kulturellen Hintergründe und Bedürfnisse der Zielgruppe beachten.",
         "text_en": "Consider the cultural backgrounds and needs of the target audience.",
         "label": "ai_assisted",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1440",
+        "text_de": "An Forschungsprojekten mitarbeiten und Berichte schreiben.",
+        "text_en": "Collaborate on research projects and write reports.",
+        "label": "stays_with_you",
+        "score": 4,
         "is_regulated": false
       },
       {
@@ -15041,8 +15041,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 2
+      "ai_assisted": 1,
+      "stays_with_you": 3
     }
   },
   "Animal Trainer": {
@@ -16138,14 +16138,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1543",
-        "text_de": "Die Zusammenarbeit zwischen Ehrenamtlichen und Hauptamtlichen koordinieren.",
-        "text_en": "Coordinate the collaboration between volunteers and paid staff.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1545",
         "text_de": "Öffentlichkeitsarbeit durchführen.",
         "text_en": "Conduct public relations work.",
@@ -16170,6 +16162,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1543",
+        "text_de": "Die Zusammenarbeit zwischen Ehrenamtlichen und Hauptamtlichen koordinieren.",
+        "text_en": "Coordinate the collaboration between volunteers and paid staff.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1548",
         "text_de": "Verwaltungsaufgaben erledigen, wie Stammdaten pflegen und Einsatzpläne erstellen.",
         "text_en": "Handle administrative tasks, such as maintaining master data and creating assignment plans.",
@@ -16183,8 +16183,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 1
+      "ai_assisted": 9,
+      "stays_with_you": 2
     }
   },
   "Purchaser": {
@@ -16978,14 +16978,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1632",
-        "text_de": "Programme und Termine mit Auftraggebern und Veranstaltern absprechen.",
-        "text_en": "Coordinate programs and dates with clients and organizers.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1630",
         "text_de": "Organisatorische Aufgaben erledigen.",
         "text_en": "Complete organizational tasks.",
@@ -17026,6 +17018,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1632",
+        "text_de": "Programme und Termine mit Auftraggebern und Veranstaltern absprechen.",
+        "text_en": "Coordinate programs and dates with clients and organizers.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1633",
         "text_de": "Gagen verhandeln.",
         "text_en": "Negotiate fees for event appearances.",
@@ -17055,8 +17055,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 7
+      "ai_assisted": 2,
+      "stays_with_you": 8
     }
   },
   "Developer for Data Visualization": {
@@ -17517,14 +17517,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1684",
-        "text_de": "In therapeutischen und medizinischen Bereichen mitarbeiten.",
-        "text_en": "collaborate in therapeutic and medical areas",
-        "label": "ai_assisted",
-        "score": 0,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1687",
         "text_de": "Bei Fallbesprechungen im Team von Fachkräften mitarbeiten.",
         "text_en": "Participate in case discussions with a team of professionals.",
@@ -17581,6 +17573,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1684",
+        "text_de": "In therapeutischen und medizinischen Bereichen mitarbeiten.",
+        "text_en": "collaborate in therapeutic and medical areas",
+        "label": "stays_with_you",
+        "score": 0,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1690",
         "text_de": "Mit anderen Beratungsstellen und Behörden zusammenarbeiten.",
         "text_en": "Collaborate with other counseling centers and authorities.",
@@ -17594,8 +17594,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 6
+      "ai_assisted": 5,
+      "stays_with_you": 7
     }
   },
   "ESG Manager": {
@@ -17961,14 +17961,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1726",
-        "text_de": "Gebete formulieren oder auswählen und Lieder mit Kirchenmusikern abstimmen.",
-        "text_en": "formulate or select prayers and coordinate songs with church musicians.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1727",
         "text_de": "Predigten verfassen oder auswählen und biblische Texte auslegen.",
         "text_en": "write or select sermons and interpret biblical texts.",
@@ -18022,6 +18014,14 @@
         "text_en": "plan and conduct services and church events.",
         "label": "stays_with_you",
         "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1726",
+        "text_de": "Gebete formulieren oder auswählen und Lieder mit Kirchenmusikern abstimmen.",
+        "text_en": "formulate or select prayers and coordinate songs with church musicians.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -18102,8 +18102,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 10
+      "ai_assisted": 6,
+      "stays_with_you": 11
     }
   },
   "Expansion Manager": {
@@ -21306,14 +21306,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2040",
-        "text_de": "Bei Entwicklungsprojekten, wie Siedlungen, mitarbeiten.",
-        "text_en": "Collaborate on development projects, such as settlements.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2041",
         "text_de": "In geografischen Fachverlagen redaktionelle Arbeiten durchführen.",
         "text_en": "Perform editorial work in geographic specialty publishers.",
@@ -21352,6 +21344,14 @@
         "label": "stays_with_you",
         "score": 6,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2040",
+        "text_de": "Bei Entwicklungsprojekten, wie Siedlungen, mitarbeiten.",
+        "text_en": "Collaborate on development projects, such as settlements.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -21359,8 +21359,8 @@
       "automatable": 0,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Managing Director": {
@@ -21560,14 +21560,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2055",
-        "text_de": "die Zusammenarbeit im eigenen Bereich und mit anderen Abteilungen koordinieren.",
-        "text_en": "coordinate collaboration in your own area and with other departments.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2054",
         "text_de": "wirtschaftliche Verantwortung für den Bereich tragen.",
         "text_en": "bear economic responsibility for the area.",
@@ -21592,6 +21584,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2055",
+        "text_de": "die Zusammenarbeit im eigenen Bereich und mit anderen Abteilungen koordinieren.",
+        "text_en": "coordinate collaboration in your own area and with other departments.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2061",
         "text_de": "Mitarbeiter führen, schulen und überwachen.",
         "text_en": "Lead, train, and supervise employees.",
@@ -21605,8 +21605,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 3
+      "ai_assisted": 8,
+      "stays_with_you": 4
     }
   },
   "Branch Manager (Insurance)": {
@@ -22502,14 +22502,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2154",
-        "text_de": "Kommunikationsstrategien verbessern, indem man mit Bloggern, Journalisten und Influencern zusammenarbeitet.",
-        "text_en": "Improve communication strategies by collaborating with bloggers, journalists, and influencers.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2156",
         "text_de": "Ideen für neue Produkte entwickeln.",
         "text_en": "Develop ideas for new products.",
@@ -22522,6 +22514,14 @@
         "text_de": "Partnerschaften zur Erschließung neuer Vertriebskanäle aufbauen.",
         "text_en": "Set up partnerships to reach new distribution channels.",
         "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2154",
+        "text_de": "Kommunikationsstrategien verbessern, indem man mit Bloggern, Journalisten und Influencern zusammenarbeitet.",
+        "text_en": "Improve communication strategies by collaborating with bloggers, journalists, and influencers.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -22539,8 +22539,8 @@
       "automatable": 0,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 1
+      "ai_assisted": 8,
+      "stays_with_you": 2
     }
   },
   "Startup Consultant": {
@@ -22732,14 +22732,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2172",
-        "text_de": "Die Teamaktivitäten mit anderen Bereichen abstimmen.",
-        "text_en": "Coordinate team activities with other areas.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2174",
         "text_de": "Aufgaben im Qualitätsmanagement übernehmen.",
         "text_en": "Take on tasks in quality management.",
@@ -22754,6 +22746,14 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2172",
+        "text_de": "Die Teamaktivitäten mit anderen Bereichen abstimmen.",
+        "text_en": "Coordinate team activities with other areas.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -22761,8 +22761,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 1,
-      "ai_assisted": 7,
-      "stays_with_you": 1
+      "ai_assisted": 6,
+      "stays_with_you": 2
     }
   },
   "Sales Representative": {
@@ -23215,14 +23215,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2223",
-        "text_de": "Mit Angehörigen und Behörden kommunizieren und die Zusammenarbeit organisieren.",
-        "text_en": "Communicate with relatives and authorities and organize cooperation.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2225",
         "text_de": "Die Einrichtung mit Partnern vernetzen und vertreten.",
         "text_en": "Network and represent the facility with partners.",
@@ -23236,6 +23228,14 @@
         "text_en": "Organize and carry out management tasks.",
         "label": "ai_assisted",
         "score": 0,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2223",
+        "text_de": "Mit Angehörigen und Behörden kommunizieren und die Zusammenarbeit organisieren.",
+        "text_en": "Communicate with relatives and authorities and organize cooperation.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -23260,8 +23260,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 2
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Radio and Television Speaker": {
@@ -24118,17 +24118,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2320",
-        "text_de": "Im Designmanagement bei Vertriebs- und Kommunikationskonzepten mitarbeiten.",
-        "text_en": "Collaborate in design management on sales and communication concepts.",
-        "label": "ai_assisted",
+        "id": "BN_2318",
+        "text_de": "Neue Kunden gewinnen.",
+        "text_en": "Acquire new customers.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_2318",
-        "text_de": "Neue Kunden gewinnen.",
-        "text_en": "Acquire new customers.",
+        "id": "BN_2320",
+        "text_de": "Im Designmanagement bei Vertriebs- und Kommunikationskonzepten mitarbeiten.",
+        "text_en": "Collaborate in design management on sales and communication concepts.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -24139,8 +24139,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Influencer Marketing Manager": {
@@ -25051,17 +25051,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2407",
-        "text_de": "bei der Erstellung von Schulbüchern und Lehrmaterialien mitarbeiten.",
-        "text_en": "collaborate on the creation of textbooks and teaching materials.",
-        "label": "ai_assisted",
+        "id": "BN_2406",
+        "text_de": "bei Aus- und Weiterbildungsmöglichkeiten beraten.",
+        "text_en": "advise on training and education opportunities.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_2406",
-        "text_de": "bei Aus- und Weiterbildungsmöglichkeiten beraten.",
-        "text_en": "advise on training and education opportunities.",
+        "id": "BN_2407",
+        "text_de": "bei der Erstellung von Schulbüchern und Lehrmaterialien mitarbeiten.",
+        "text_en": "collaborate on the creation of textbooks and teaching materials.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -25072,8 +25072,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Interior Architect": {
@@ -25145,14 +25145,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2417",
-        "text_de": "Zusammenarbeit mit anderen Abteilungen und dem Außendienst organisieren und Außendienstmitarbeiter unterstützen",
-        "text_en": "Organize collaboration with other departments and support field staff",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2418",
         "text_de": "Termine, Kosten und Qualitätsanforderungen einhalten",
         "text_en": "meet deadlines, costs, and quality requirements",
@@ -25185,6 +25177,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2417",
+        "text_de": "Zusammenarbeit mit anderen Abteilungen und dem Außendienst organisieren und Außendienstmitarbeiter unterstützen",
+        "text_en": "Organize collaboration with other departments and support field staff",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2421",
         "text_de": "Neue Geschäftsbeziehungen aufbauen und bestehende pflegen",
         "text_en": "Build new business relationships and maintain existing ones",
@@ -25214,8 +25214,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 4
+      "ai_assisted": 4,
+      "stays_with_you": 5
     }
   },
   "Stage Manager": {
@@ -26223,14 +26223,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3151",
-        "text_de": "IT-Systeme und Projekte planen und aufbauen sowie mit anderen Abteilungen und Dienstleistern zusammenarbeiten.",
-        "text_en": "Plan and set up IT systems and projects and work with other departments and service providers.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2511",
         "text_de": "IT-Konzepte erstellen und bei Entscheidungen zur Nutzung von Technologien helfen.",
         "text_en": "Create IT concepts and assist in technology usage decisions.",
@@ -26335,6 +26327,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3151",
+        "text_de": "IT-Systeme und Projekte planen und aufbauen sowie mit anderen Abteilungen und Dienstleistern zusammenarbeiten.",
+        "text_en": "Plan and set up IT systems and projects and work with other departments and service providers.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2518",
         "text_de": "Verhandlungen mit Kunden und Lieferanten führen.",
         "text_en": "Negotiate with customers and suppliers.",
@@ -26380,8 +26380,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 6
+      "ai_assisted": 11,
+      "stays_with_you": 7
     }
   },
   "IT Organizer": {
@@ -27421,14 +27421,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2615",
-        "text_de": "Die Kampfchoreografie mit der Regie abstimmen.",
-        "text_en": "Coordinate the fight choreography with the director.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2616",
         "text_de": "Das Konzept bei Film- und Fernsehdreharbeiten mit der Kameraleitung und Stuntkoordinatoren besprechen.",
         "text_en": "Discuss the concept during film and TV shoots with the camera crew and stunt coordinators.",
@@ -27509,6 +27501,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2615",
+        "text_de": "Die Kampfchoreografie mit der Regie abstimmen.",
+        "text_en": "Coordinate the fight choreography with the director.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2617",
         "text_de": "Die Kampfchoreografien mit den Darstellern einüben.",
         "text_en": "Practice the fight choreography with the actors.",
@@ -27554,8 +27554,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 13
+      "ai_assisted": 9,
+      "stays_with_you": 14
     }
   },
   "Karate Instructor": {
@@ -28603,14 +28603,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2742",
-        "text_de": "Programme und Termine mit Veranstaltern absprechen.",
-        "text_en": "Coordinate programs and dates with organizers.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2740",
         "text_de": "Organisatorische Aufgaben übernehmen.",
         "text_en": "Take on organizational tasks.",
@@ -28622,6 +28614,14 @@
         "id": "BN_2741",
         "text_de": "Mit Künstleragenturen verhandeln.",
         "text_en": "Negotiate with artist agencies.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2742",
+        "text_de": "Programme und Termine mit Veranstaltern absprechen.",
+        "text_en": "Coordinate programs and dates with organizers.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -28680,8 +28680,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 7
+      "ai_assisted": 2,
+      "stays_with_you": 8
     }
   },
   "Communication Psychologist": {
@@ -29276,14 +29276,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2823",
-        "text_de": "Die Kostümabnahme mit dem Regisseur und anderen koordinieren.",
-        "text_en": "Coordinate the costume approval with the director and others.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2827",
         "text_de": "Den Kostümfundus leiten und verwalten.",
         "text_en": "Manage and oversee the costume stock.",
@@ -29362,6 +29354,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2823",
+        "text_de": "Die Kostümabnahme mit dem Regisseur und anderen koordinieren.",
+        "text_en": "Coordinate the costume approval with the director and others.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -29369,8 +29369,8 @@
       "automatable": 0,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 5
+      "ai_assisted": 10,
+      "stays_with_you": 6
     }
   },
   "Hospital Manager": {
@@ -30947,14 +30947,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2988",
-        "text_de": "Die Umsetzung der Strategie steuern und überwachen, in enger Zusammenarbeit mit den Führungskräften.",
-        "text_en": "Manage and monitor the implementation of the strategy in close collaboration with leaders.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2990",
         "text_de": "Mitarbeiter anleiten, Teamarbeit fördern und zur Überprüfung der Arbeitsabläufe anregen.",
         "text_en": "Guide employees, promote teamwork, and encourage review of workflows.",
@@ -30969,6 +30961,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2988",
+        "text_de": "Die Umsetzung der Strategie steuern und überwachen, in enger Zusammenarbeit mit den Führungskräften.",
+        "text_en": "Manage and monitor the implementation of the strategy in close collaboration with leaders.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -30976,8 +30976,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 13,
-      "stays_with_you": 1
+      "ai_assisted": 12,
+      "stays_with_you": 2
     }
   },
   "Leasing Consultant": {
@@ -31754,14 +31754,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3072",
-        "text_de": "Den Kontakt zu Angehörigen, Ärzten und Behörden pflegen und koordinieren.",
-        "text_en": "Maintain and coordinate contact with relatives, doctors, and authorities.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3073",
         "text_de": "Die Einrichtung mit Partnern vernetzen und vertreten.",
         "text_en": "Network and represent the facility with partners.",
@@ -31776,6 +31768,14 @@
         "label": "stays_with_you",
         "score": 4,
         "is_regulated": false
+      },
+      {
+        "id": "BN_3072",
+        "text_de": "Den Kontakt zu Angehörigen, Ärzten und Behörden pflegen und koordinieren.",
+        "text_en": "Maintain and coordinate contact with relatives, doctors, and authorities.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -31783,8 +31783,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 1
+      "ai_assisted": 7,
+      "stays_with_you": 2
     }
   },
   "Manager - Hospitality Business": {
@@ -33860,14 +33860,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3300",
-        "text_de": "die technische Ausstattung und das Personal für Produktionen in Zusammenarbeit mit allen Abteilungen festlegen.",
-        "text_en": "determine the technical equipment and staff for productions in collaboration with all departments.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3302",
         "text_de": "administrative Aufgaben im Personalwesen übernehmen.",
         "text_en": "Take on administrative tasks in human resources.",
@@ -33892,6 +33884,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3300",
+        "text_de": "die technische Ausstattung und das Personal für Produktionen in Zusammenarbeit mit allen Abteilungen festlegen.",
+        "text_en": "determine the technical equipment and staff for productions in collaboration with all departments.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3298",
         "text_de": "den Spielbetrieb in einem Theater oder Opernhaus leiten.",
         "text_en": "lead the operations in a theater or opera house.",
@@ -33905,8 +33905,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Editor - Publishing": {
@@ -35150,14 +35150,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3433",
-        "text_de": "Entwürfe für Medienprodukte mit der Geschäftsleitung absprechen.",
-        "text_en": "Coordinate drafts for media products with management.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3436",
         "text_de": "Präsentationen für Kunden halten.",
         "text_en": "Give presentations for clients.",
@@ -35198,6 +35190,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3433",
+        "text_de": "Entwürfe für Medienprodukte mit der Geschäftsleitung absprechen.",
+        "text_en": "Coordinate drafts for media products with management.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3434",
         "text_de": "Die Geschäftsleitung bei Preisverhandlungen unterstützen.",
         "text_en": "Support management in price negotiations.",
@@ -35227,8 +35227,8 @@
       "automatable": 1,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 3
+      "ai_assisted": 11,
+      "stays_with_you": 4
     }
   },
   "Media Manager": {
@@ -35640,14 +35640,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3492",
-        "text_de": "Programme und Termine mit Auftraggebern absprechen.",
-        "text_en": "Coordinate programs and dates with clients.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3486",
         "text_de": "Unbekannte Texte oder Musikstücke schnell auswendig lernen und vortragen.",
         "text_en": "Quickly memorize and present unknown texts or music pieces.",
@@ -35675,6 +35667,14 @@
         "id": "BN_3491",
         "text_de": "Mit Künstleragenturen verhandeln und Gagen klären.",
         "text_en": "Negotiate with artist agencies and clarify fees.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3492",
+        "text_de": "Programme und Termine mit Auftraggebern absprechen.",
+        "text_en": "Coordinate programs and dates with clients.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -35709,8 +35709,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 4
+      "ai_assisted": 5,
+      "stays_with_you": 5
     }
   },
   "Merchandiser": {
@@ -36258,14 +36258,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3551",
-        "text_de": "Einzelauftritte oder Touren mit Agenten abstimmen.",
-        "text_en": "Coordinate solo performances or tours with agents.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3555",
         "text_de": "Aktuelle Trends im Musikmarkt beobachten.",
         "text_en": "Observe current trends in the music market.",
@@ -36330,6 +36322,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3551",
+        "text_de": "Einzelauftritte oder Touren mit Agenten abstimmen.",
+        "text_en": "Coordinate solo performances or tours with agents.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3552",
         "text_de": "Gagen und Auftrittskonditionen mit Veranstaltern aushandeln.",
         "text_en": "Negotiate fees and performance conditions with organizers.",
@@ -36351,8 +36351,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 8
+      "ai_assisted": 4,
+      "stays_with_you": 9
     }
   },
   "Musician - International Folklore": {
@@ -36388,14 +36388,6 @@
         "id": "BN_3564",
         "text_de": "organisatorische Aufgaben erledigen",
         "text_en": "Complete organizational tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3565",
-        "text_de": "Einzelauftritte oder Touren mit Agenten oder Veranstaltern absprechen",
-        "text_en": "Coordinate solo performances or tours with agents or organizers",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
@@ -36457,6 +36449,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3565",
+        "text_de": "Einzelauftritte oder Touren mit Agenten oder Veranstaltern absprechen",
+        "text_en": "Coordinate solo performances or tours with agents or organizers",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3566",
         "text_de": "Gagen und Auftrittskonditionen mit Veranstaltern oder Musikverlagen verhandeln",
         "text_en": "Negotiate fees and performance conditions with organizers or music publishers",
@@ -36478,8 +36478,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 8
+      "ai_assisted": 5,
+      "stays_with_you": 9
     }
   },
   "Musician - Pop/Rock/Jazz": {
@@ -36559,14 +36559,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3584",
-        "text_de": "Einzelauftritte oder Touren mit Agenten oder Veranstaltern absprechen.",
-        "text_en": "Coordinate solo performances or tours with agents or organizers.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3588",
         "text_de": "Aktuelle Trends im Musikmarkt beobachten.",
         "text_en": "Observe current trends in the music market.",
@@ -36639,6 +36631,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3584",
+        "text_de": "Einzelauftritte oder Touren mit Agenten oder Veranstaltern absprechen.",
+        "text_en": "Coordinate solo performances or tours with agents or organizers.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3585",
         "text_de": "Gagen und Auftrittskonditionen mit Veranstaltern oder Musikverlagen verhandeln.",
         "text_en": "Negotiate fees and performance conditions with organizers or music publishers.",
@@ -36660,8 +36660,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 10
+      "ai_assisted": 2,
+      "stays_with_you": 11
     }
   },
   "Musician - Folk Music": {
@@ -36681,14 +36681,6 @@
         "id": "BN_3595",
         "text_de": "Organisatorische Aufgaben erledigen.",
         "text_en": "Complete organizational tasks.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3596",
-        "text_de": "Einzelauftritte oder Touren mit Agenten oder Veranstaltern absprechen.",
-        "text_en": "Coordinate solo performances or tours with agents or organizers.",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
@@ -36750,6 +36742,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3596",
+        "text_de": "Einzelauftritte oder Touren mit Agenten oder Veranstaltern absprechen.",
+        "text_en": "Coordinate solo performances or tours with agents or organizers.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3597",
         "text_de": "Gagen und Auftrittsbedingungen mit Veranstaltern oder Verlagen verhandeln.",
         "text_en": "Negotiate fees and performance conditions with organizers or publishers.",
@@ -36771,8 +36771,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 8
+      "ai_assisted": 2,
+      "stays_with_you": 9
     }
   },
   "Musical Instrument Maker": {
@@ -37558,14 +37558,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3681",
-        "text_de": "Rezepturen für Produkte entwickeln und im Produktmanagement mitarbeiten.",
-        "text_en": "Develop recipes for products and collaborate in product management.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3669",
         "text_de": "Vorlesungen und Seminare vorbereiten und halten.",
         "text_en": "Prepare and hold lectures and seminars.",
@@ -37630,6 +37622,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3681",
+        "text_de": "Rezepturen für Produkte entwickeln und im Produktmanagement mitarbeiten.",
+        "text_en": "Develop recipes for products and collaborate in product management.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3680",
         "text_de": "Qualität von Rohstoffen überwachen und Studien leiten.",
         "text_en": "Monitor the quality of raw materials and lead studies.",
@@ -37651,8 +37651,8 @@
       "automatable": 1,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 4
+      "ai_assisted": 7,
+      "stays_with_you": 5
     }
   },
   "Online Marketing Manager": {
@@ -38408,14 +38408,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3764",
-        "text_de": "An der Verbesserung von Arbeitsstrukturen und Prozessen mitarbeiten.",
-        "text_en": "Collaborate on improving work structures and processes.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3766",
         "text_de": "Neue Lehrmaterialien und Methoden erstellen.",
         "text_en": "Create new teaching materials and methods.",
@@ -38438,6 +38430,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_3764",
+        "text_de": "An der Verbesserung von Arbeitsstrukturen und Prozessen mitarbeiten.",
+        "text_en": "Collaborate on improving work structures and processes.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -38445,8 +38445,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Educational-Therapeutic Conductor": {
@@ -38458,22 +38458,6 @@
         "id": "BN_3771",
         "text_de": "Patienten in Gruppen mit ähnlichem Alter und ähnlichen Behinderungen zusammenbringen.",
         "text_en": "Bring patients together in groups with similar ages and disabilities.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3772",
-        "text_de": "Pädagogische und therapeutische Konzepte miteinander abstimmen.",
-        "text_en": "Coordinate educational and therapeutic concepts with each other.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3773",
-        "text_de": "Bei der Weiterbildung von Lehrern, zum Beispiel an Förderschulen, mitarbeiten.",
-        "text_en": "Collaborate in the training of teachers, for example at special schools.",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
@@ -38493,6 +38477,22 @@
         "label": "stays_with_you",
         "score": 5,
         "is_regulated": false
+      },
+      {
+        "id": "BN_3772",
+        "text_de": "Pädagogische und therapeutische Konzepte miteinander abstimmen.",
+        "text_en": "Coordinate educational and therapeutic concepts with each other.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3773",
+        "text_de": "Bei der Weiterbildung von Lehrern, zum Beispiel an Förderschulen, mitarbeiten.",
+        "text_en": "Collaborate in the training of teachers, for example at special schools.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -38500,8 +38500,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 2
+      "ai_assisted": 1,
+      "stays_with_you": 4
     }
   },
   "Educational Psychologist": {
@@ -39359,14 +39359,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3859",
-        "text_de": "Regeln für Führung, Zusammenarbeit und Kommunikation festlegen.",
-        "text_en": "Set rules for leadership, collaboration, and communication.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3860",
         "text_de": "Bedarfsanalysen und Potenzialanalysen durchführen.",
         "text_en": "Conduct needs assessments and potential analyses.",
@@ -39407,6 +39399,14 @@
         "is_regulated": true
       },
       {
+        "id": "BN_3859",
+        "text_de": "Regeln für Führung, Zusammenarbeit und Kommunikation festlegen.",
+        "text_en": "Set rules for leadership, collaboration, and communication.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3865",
         "text_de": "In Gesprächen die Bedürfnisse von Fach- und Führungskräften ermitteln.",
         "text_en": "Identify the needs of specialists and managers in conversations.",
@@ -39436,8 +39436,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 3
+      "ai_assisted": 10,
+      "stays_with_you": 4
     }
   },
   "Recruiter": {
@@ -39693,22 +39693,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3887",
-        "text_de": "Die medizinischen Versorgungsstrukturen und die Zusammenarbeit mit anderen Fachbereichen überprüfen.",
-        "text_en": "Review medical care structures and collaboration with other specialties.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "GEN_0085",
-        "text_de": "Pflegepläne mit Ärzten und Teams abstimmen.",
-        "text_en": "Coordinate care plans with doctors and teams.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "GEN_0082",
         "text_de": "Vitalzeichen kontrollieren und Veränderungen dokumentieren.",
         "text_en": "Check vital signs and record changes.",
@@ -39773,6 +39757,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3887",
+        "text_de": "Die medizinischen Versorgungsstrukturen und die Zusammenarbeit mit anderen Fachbereichen überprüfen.",
+        "text_en": "Review medical care structures and collaboration with other specialties.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "GEN_0085",
+        "text_de": "Pflegepläne mit Ärzten und Teams abstimmen.",
+        "text_en": "Coordinate care plans with doctors and teams.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "GEN_0086",
         "text_de": "Patienten und Angehörigen die Nachsorge erklären.",
         "text_en": "Explain discharge care to patients and families.",
@@ -39802,8 +39802,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 10
+      "ai_assisted": 2,
+      "stays_with_you": 12
     }
   },
   "Nursing Educator": {
@@ -39847,7 +39847,7 @@
         "id": "BN_3889",
         "text_de": "Ich stimme die Unterrichtsinhalte ab und koordiniere den Ablauf mit der Praxisleitung.",
         "text_en": "Coordinate the teaching content and organize the process with the management.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -39865,8 +39865,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Nursing Scientist": {
@@ -40939,14 +40939,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4014",
-        "text_de": "Forschungsprojekte festlegen und koordinieren, auch mit anderen Fachbereichen.",
-        "text_en": "Define and coordinate research projects, also with other departments.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4015",
         "text_de": "Wissenschaftler und Studierende in die Forschung einbeziehen.",
         "text_en": "Involve scientists and students in research.",
@@ -41019,19 +41011,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4034",
-        "text_de": "Die Zusammenarbeit mit anderen Hochschulen fördern.",
-        "text_en": "promote collaboration with other universities",
-        "label": "ai_assisted",
-        "score": 0,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4023",
         "text_de": "Prüfungen vorbereiten und abnehmen.",
         "text_en": "Prepare and conduct exams.",
         "label": "stays_with_you",
         "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4014",
+        "text_de": "Forschungsprojekte festlegen und koordinieren, auch mit anderen Fachbereichen.",
+        "text_en": "Define and coordinate research projects, also with other departments.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -41059,6 +41051,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4034",
+        "text_de": "Die Zusammenarbeit mit anderen Hochschulen fördern.",
+        "text_en": "promote collaboration with other universities",
+        "label": "stays_with_you",
+        "score": 0,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4035",
         "text_de": "Mit anderen Hochschulen und Bildungseinrichtungen zusammenarbeiten.",
         "text_en": "Collaborate with other universities and educational institutions.",
@@ -41072,8 +41072,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 20,
-      "stays_with_you": 5
+      "ai_assisted": 18,
+      "stays_with_you": 7
     }
   },
   "Programmatic Advertising Manager": {
@@ -43863,14 +43863,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4312",
-        "text_de": "Mit verschiedenen Projektteams an der Entwicklung von Tools und Produkten arbeiten.",
-        "text_en": "Work with different project teams on the development of tools and products.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4313",
         "text_de": "Ergebnisse auswerten und die Bedürfnisse sowie Probleme der Nutzer analysieren.",
         "text_en": "Evaluate results and analyze the needs and problems of users.",
@@ -43890,6 +43882,14 @@
         "id": "BN_4306",
         "text_de": "Im Kundengespräch Informationen über das Produkt, die Zielgruppe und die Marketingziele sammeln.",
         "text_en": "Gather information about the product, target audience, and marketing goals in customer conversations.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4312",
+        "text_de": "Mit verschiedenen Projektteams an der Entwicklung von Tools und Produkten arbeiten.",
+        "text_en": "Work with different project teams on the development of tools and products.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -43916,8 +43916,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 3
+      "ai_assisted": 10,
+      "stays_with_you": 4
     }
   },
   "Auditor": {
@@ -44529,22 +44529,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4367",
-        "text_de": "Entwürfe mit der Fertigung und dem Marketing absprechen.",
-        "text_en": "Coordinate designs with production and marketing.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_4373",
-        "text_de": "Im Designmanagement bei Vertriebs- und Kommunikationskonzepten mitarbeiten.",
-        "text_en": "Collaborate in design management on sales and communication concepts.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4368",
         "text_de": "Schmuck und Edelmetallobjekte nach Kundenwunsch umarbeiten.",
         "text_en": "Modify jewelry and precious metal objects according to customer wishes.",
@@ -44561,6 +44545,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4367",
+        "text_de": "Entwürfe mit der Fertigung und dem Marketing absprechen.",
+        "text_en": "Coordinate designs with production and marketing.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4373",
+        "text_de": "Im Designmanagement bei Vertriebs- und Kommunikationskonzepten mitarbeiten.",
+        "text_en": "Collaborate in design management on sales and communication concepts.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4371",
         "text_de": "Neue Kunden gewinnen.",
         "text_en": "Acquire new customers.",
@@ -44574,8 +44574,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 3
+      "ai_assisted": 3,
+      "stays_with_you": 5
     }
   },
   "Quick Sketch Artist / Portrait Artist": {
@@ -44996,14 +44996,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4424",
-        "text_de": "Kooperationen mit anderen Bildungsträgern und Vertretern von Wirtschaft und Verwaltung aufbauen und pflegen.",
-        "text_en": "Build and maintain cooperation with other educational providers and representatives from business and administration.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4413",
         "text_de": "Leitungsaufgaben in einer Erwachsenenbildungseinrichtung übernehmen.",
         "text_en": "Take on management tasks in an adult education institution.",
@@ -45050,6 +45042,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4424",
+        "text_de": "Kooperationen mit anderen Bildungsträgern und Vertretern von Wirtschaft und Verwaltung aufbauen und pflegen.",
+        "text_en": "Build and maintain cooperation with other educational providers and representatives from business and administration.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -45057,8 +45057,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 5
+      "ai_assisted": 5,
+      "stays_with_you": 6
     }
   },
   "School Principal - Music Schools": {
@@ -47848,18 +47848,18 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4709",
-        "text_de": "An Forschungsprojekten mitarbeiten.",
-        "text_en": "Collaborate on research projects.",
+        "id": "BN_4710",
+        "text_de": "Vorlesungen und Seminare vorbereiten und durchführen.",
+        "text_en": "Prepare and conduct lectures and seminars.",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_4710",
-        "text_de": "Vorlesungen und Seminare vorbereiten und durchführen.",
-        "text_en": "Prepare and conduct lectures and seminars.",
-        "label": "ai_assisted",
+        "id": "BN_4709",
+        "text_de": "An Forschungsprojekten mitarbeiten.",
+        "text_en": "Collaborate on research projects.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -47877,8 +47877,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 15,
-      "stays_with_you": 1
+      "ai_assisted": 14,
+      "stays_with_you": 2
     }
   },
   "Substitute in Goods Trade": {
@@ -47903,14 +47903,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4712",
-        "text_de": "Das Warenangebot gestalten und mit anderen Führungskräften zusammenarbeiten.",
-        "text_en": "Design the product range and work with other managers.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4718",
         "text_de": "Die Waren präsentieren und verkaufsfördernde Maßnahmen planen.",
         "text_en": "Present the products and plan sales-promoting measures.",
@@ -47924,6 +47916,14 @@
         "text_en": "Initiate the restocking of the warehouse.",
         "label": "stays_with_you",
         "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4712",
+        "text_de": "Das Warenangebot gestalten und mit anderen Führungskräften zusammenarbeiten.",
+        "text_en": "Design the product range and work with other managers.",
+        "label": "stays_with_you",
+        "score": 4,
         "is_regulated": false
       },
       {
@@ -47956,8 +47956,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 4
+      "ai_assisted": 1,
+      "stays_with_you": 5
     }
   },
   "Addiction and Drug Counselor": {
@@ -48497,14 +48497,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4777",
-        "text_de": "Die Zusammenarbeit im eigenen Bereich abstimmen und mit anderen Abteilungen koordinieren.",
-        "text_en": "Coordinate collaboration within the department and with other departments.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4778",
         "text_de": "Die Einhaltung von Terminen und Vorschriften sicherstellen.",
         "text_en": "Ensure compliance with deadlines and regulations.",
@@ -48535,6 +48527,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4777",
+        "text_de": "Die Zusammenarbeit im eigenen Bereich abstimmen und mit anderen Abteilungen koordinieren.",
+        "text_en": "Coordinate collaboration within the department and with other departments.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -48542,8 +48542,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 2
+      "ai_assisted": 6,
+      "stays_with_you": 3
     }
   },
   "Technical Director - Stage/Film/Television": {
@@ -50414,14 +50414,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4971",
-        "text_de": "In der Umweltforschung an neuen umweltfreundlichen Produkten und Verfahren mitarbeiten.",
-        "text_en": "Collaborate in environmental research on new eco-friendly products and processes.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4962",
         "text_de": "Untersuchungen im Labor vorbereiten und Schadstoffe nachweisen.",
         "text_en": "Prepare laboratory tests and detect pollutants.",
@@ -50446,6 +50438,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4971",
+        "text_de": "In der Umweltforschung an neuen umweltfreundlichen Produkten und Verfahren mitarbeiten.",
+        "text_en": "Collaborate in environmental research on new eco-friendly products and processes.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4963",
         "text_de": "Mess- und Prüfergebnisse aufschreiben und auswerten.",
         "text_en": "Record and evaluate measurement and test results.",
@@ -50467,8 +50467,8 @@
       "automatable": 2,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 3
+      "ai_assisted": 4,
+      "stays_with_you": 4
     }
   },
   "Environmental Management Officer": {
@@ -50660,14 +50660,6 @@
         "is_regulated": false
       },
       {
-        "id": "GEN_0213",
-        "text_de": "Mit Aktuaren an Versicherungsschadenprognosen arbeiten.",
-        "text_en": "Work with actuaries on insurance loss projections.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4986",
         "text_de": "Versicherungsobjekte vor Ort prüfen oder bewerten lassen.",
         "text_en": "Check or evaluate insurance objects on-site.",
@@ -50687,6 +50679,14 @@
         "id": "GEN_0209",
         "text_de": "Rückversicherungsbedingungen mit externen Partnern verhandeln.",
         "text_en": "Negotiate reinsurance terms with external partners.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "GEN_0213",
+        "text_de": "Mit Aktuaren an Versicherungsschadenprognosen arbeiten.",
+        "text_en": "Work with actuaries on insurance loss projections.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -50721,8 +50721,8 @@
       "automatable": 3,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 3
+      "ai_assisted": 5,
+      "stays_with_you": 4
     }
   },
   "Management Consultant": {
@@ -51952,19 +51952,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5120",
-        "text_de": "Bei der Planung und Gestaltung von Verkehrseinrichtungen und Verkehrsleitsystemen mitarbeiten.",
-        "text_en": "Collaborate in the planning and design of traffic facilities and traffic control systems.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5113",
         "text_de": "Eine Diagnose stellen und den Krankheitsverlauf vorhersagen.",
         "text_en": "Make a diagnosis and predict the course of the illness.",
         "label": "ai_assisted",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_5120",
+        "text_de": "Bei der Planung und Gestaltung von Verkehrseinrichtungen und Verkehrsleitsystemen mitarbeiten.",
+        "text_en": "Collaborate in the planning and design of traffic facilities and traffic control systems.",
+        "label": "stays_with_you",
+        "score": 4,
         "is_regulated": false
       },
       {
@@ -52021,8 +52021,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 5
+      "ai_assisted": 1,
+      "stays_with_you": 6
     }
   },
   "Publisher (Media, Music)": {
@@ -53617,17 +53617,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5267",
-        "text_de": "Mit Designern an neuen Websites arbeiten.",
-        "text_en": "Work with designers on new websites.",
-        "label": "ai_assisted",
+        "id": "BN_5264",
+        "text_de": "Bedürfnisse der Kunden analysieren.",
+        "text_en": "Analyze customer needs.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_5264",
-        "text_de": "Bedürfnisse der Kunden analysieren.",
-        "text_en": "Analyze customer needs.",
+        "id": "BN_5267",
+        "text_de": "Mit Designern an neuen Websites arbeiten.",
+        "text_en": "Work with designers on new websites.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -53662,8 +53662,8 @@
       "automatable": 3,
       "high_ai_potential": 8,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 1
+      "ai_assisted": 1,
+      "stays_with_you": 2
     }
   },
   "Advertising Manager": {
@@ -54796,14 +54796,6 @@
     "kldb2010": "B 94323",
     "tasks": [
       {
-        "id": "BN_5393",
-        "text_de": "Mit Veranstaltern Termine und Programmpunkte absprechen.",
-        "text_en": "Coordinate dates and program items with organizers.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5391",
         "text_de": "Organisatorische Aufgaben übernehmen.",
         "text_en": "Take on organizational tasks.",
@@ -54860,6 +54852,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5393",
+        "text_de": "Mit Veranstaltern Termine und Programmpunkte absprechen.",
+        "text_en": "Coordinate dates and program items with organizers.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5386",
         "text_de": "Das Publikum einbeziehen, um Tricks lebendiger zu machen.",
         "text_en": "Involve the audience to make tricks more lively.",
@@ -54905,8 +54905,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 11
+      "ai_assisted": 1,
+      "stays_with_you": 12
     }
   }
 }

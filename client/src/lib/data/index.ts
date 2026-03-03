@@ -97,13 +97,13 @@ export const CATEGORY_ORDER: CategoryLabel[] = [
 ];
 
 export const SECTOR_AVERAGES: Record<string, Record<CategoryLabel, number>> = {
-  tech:       { automatable: 0.11, high_ai_potential: 0.29, sensitive: 0.00, ai_assisted: 0.45, stays_with_you: 0.15 },
-  health:     { automatable: 0.05, high_ai_potential: 0.13, sensitive: 0.01, ai_assisted: 0.35, stays_with_you: 0.45 },
-  finance:    { automatable: 0.13, high_ai_potential: 0.23, sensitive: 0.01, ai_assisted: 0.44, stays_with_you: 0.20 },
+  tech:       { automatable: 0.11, high_ai_potential: 0.29, sensitive: 0.00, ai_assisted: 0.44, stays_with_you: 0.16 },
+  health:     { automatable: 0.05, high_ai_potential: 0.13, sensitive: 0.01, ai_assisted: 0.34, stays_with_you: 0.46 },
+  finance:    { automatable: 0.13, high_ai_potential: 0.23, sensitive: 0.01, ai_assisted: 0.43, stays_with_you: 0.21 },
   law:        { automatable: 0.06, high_ai_potential: 0.22, sensitive: 0.00, ai_assisted: 0.40, stays_with_you: 0.31 },
-  marketing:  { automatable: 0.05, high_ai_potential: 0.23, sensitive: 0.01, ai_assisted: 0.57, stays_with_you: 0.14 },
-  management: { automatable: 0.03, high_ai_potential: 0.11, sensitive: 0.00, ai_assisted: 0.60, stays_with_you: 0.26 },
-  other:      { automatable: 0.04, high_ai_potential: 0.12, sensitive: 0.00, ai_assisted: 0.52, stays_with_you: 0.32 },
+  marketing:  { automatable: 0.05, high_ai_potential: 0.23, sensitive: 0.01, ai_assisted: 0.56, stays_with_you: 0.15 },
+  management: { automatable: 0.03, high_ai_potential: 0.11, sensitive: 0.00, ai_assisted: 0.59, stays_with_you: 0.27 },
+  other:      { automatable: 0.04, high_ai_potential: 0.12, sensitive: 0.00, ai_assisted: 0.51, stays_with_you: 0.33 },
 };
 
 export function getOccupationList(): { key: string; name_en: string; name_de: string; sector: string }[] {
