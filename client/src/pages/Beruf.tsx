@@ -13,7 +13,7 @@ import { ArrowLeft, Compass, Languages, Building2, Target, Info, ArrowRight, Sea
 
 export default function Beruf() {
   const params = useParams<{ slug: string }>();
-  const [language, setLanguage] = useState<"en" | "de">("de");
+  const [language, setLanguage] = useState<"en" | "de">("en");
   const [deselectedTasks, setDeselectedTasks] = useState<Set<string>>(new Set());
   const [showPersonalized, setShowPersonalized] = useState(false);
 

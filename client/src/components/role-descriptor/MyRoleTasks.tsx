@@ -20,7 +20,7 @@ import {
 export function MyRoleTasks() {
   const [step, setStep] = useState<1 | 2>(1);
   const [selectedKey, setSelectedKey] = useState("");
-  const [language, setLanguage] = useState<"en" | "de">("de");
+  const [language, setLanguage] = useState<"en" | "de">("en");
   const [deselectedTasks, setDeselectedTasks] = useState<Set<string>>(new Set());
   const [showPersonalized, setShowPersonalized] = useState(false);
   const [customTasks, setCustomTasks] = useState<TaskItem[]>([]);
