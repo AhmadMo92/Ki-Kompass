@@ -56,6 +56,26 @@ for (let i = 1; i < lines.length; i++) {
 
   if (!occupation || !label_5cat) continue;
 
+  const INTERPERSONAL_PATTERNS = [
+    /\blead\b(?!.*\b(?:to|into)\b)/i,
+    /\bleading\b/i,
+    /\btrain\b.*\b(?:employee|staff|team|personnel|colleague|worker)\b/i,
+    /\bmentor/i,
+    /\bcoach(?:ing)?\b/i,
+    /\bnegotiat/i,
+    /\bmediat/i,
+    /\bmotivat/i,
+    /\bsupervis/i,
+    /\bcounsel\b/i,
+    /\bmanage\b.*\b(?:team|staff|employee|personnel)\b/i,
+    /\b(?:resolve|handle)\b.*\bconflict/i,
+    /\bconduct\b.*\b(?:interview|meeting|workshop|seminar|training)\b/i,
+  ];
+  const taskTextEn = paraphrase_en || cols[colIndex['task_text']] || '';
+  const effectiveLabel = (label_5cat === 'ai_assisted' && INTERPERSONAL_PATTERNS.some(p => p.test(taskTextEn)))
+    ? 'stays_with_you'
+    : label_5cat;
+
   if (!occupations[occupation]) {
     occupations[occupation] = {
       occupation_de: occupation_de,
@@ -78,14 +98,14 @@ for (let i = 1; i < lines.length; i++) {
     id: task_id,
     text_de: paraphrase_de,
     text_en: paraphrase_en,
-    label: label_5cat,
+    label: effectiveLabel,
     score: score_sum,
     is_regulated: is_regulated
   });
 
   occ.summary.total++;
-  if (occ.summary[label_5cat] !== undefined) {
-    occ.summary[label_5cat]++;
+  if (occ.summary[effectiveLabel] !== undefined) {
+    occ.summary[effectiveLabel]++;
   }
 }
 

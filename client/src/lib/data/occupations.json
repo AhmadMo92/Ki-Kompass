@@ -347,14 +347,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2789",
-        "text_de": "Das Berichtswesen an die Vorgesetzten übernehmen.",
-        "text_en": "Take over reporting to supervisors.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0030",
         "text_de": "Mit der Geschäftsleitung und anderen Abteilungen zusammenarbeiten.",
         "text_en": "work with management and other departments.",
@@ -403,6 +395,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2789",
+        "text_de": "Das Berichtswesen an die Vorgesetzten übernehmen.",
+        "text_en": "Take over reporting to supervisors.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2781",
         "text_de": "Die Kundendatenbanken aktualisieren.",
         "text_en": "update the customer databases.",
@@ -416,8 +416,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 17,
-      "stays_with_you": 5
+      "ai_assisted": 16,
+      "stays_with_you": 6
     }
   },
   "Affiliate Manager": {
@@ -513,14 +513,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0045",
-        "text_de": "Schulungen zu agilen Methoden planen und leiten.",
-        "text_en": "Plan and lead training on agile methods.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0052",
         "text_de": "Ergebnisse des agilen Projektmanagements überprüfen und analysieren.",
         "text_en": "Review and analyze results of agile project management.",
@@ -569,11 +561,11 @@
         "is_regulated": false
       },
       {
-        "id": "GEN_0348",
-        "text_de": "Teamübergreifende Abhängigkeiten und Integrationsplanung steuern.",
-        "text_en": "Manage cross-team dependencies and integration planning.",
-        "label": "ai_assisted",
-        "score": 3,
+        "id": "BN_0045",
+        "text_de": "Schulungen zu agilen Methoden planen und leiten.",
+        "text_en": "Plan and lead training on agile methods.",
+        "label": "stays_with_you",
+        "score": 5,
         "is_regulated": false
       },
       {
@@ -609,6 +601,14 @@
         "is_regulated": false
       },
       {
+        "id": "GEN_0348",
+        "text_de": "Teamübergreifende Abhängigkeiten und Integrationsplanung steuern.",
+        "text_en": "Manage cross-team dependencies and integration planning.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "GEN_0350",
         "text_de": "Product Owner bei der Backlog-Priorisierung coachen.",
         "text_en": "Coach product owners on backlog prioritization.",
@@ -630,8 +630,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 6
+      "ai_assisted": 6,
+      "stays_with_you": 8
     }
   },
   "Acoustic Specialist": {
@@ -1188,14 +1188,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3900",
-        "text_de": "ein Labor für Forschung und Entwicklung leiten",
-        "text_en": "lead a laboratory for research and development",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0092",
         "text_de": "Arzneimittel und Medizinprodukte verkaufen.",
         "text_en": "Sell medicines and medical products.",
@@ -1268,6 +1260,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3900",
+        "text_de": "ein Labor für Forschung und Entwicklung leiten",
+        "text_en": "lead a laboratory for research and development",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0098",
         "text_de": "Qualitätsmängel und Nebenwirkungen dokumentieren.",
         "text_en": "Document quality issues and side effects.",
@@ -1281,8 +1281,8 @@
       "automatable": 1,
       "high_ai_potential": 9,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 9
+      "ai_assisted": 6,
+      "stays_with_you": 10
     }
   },
   "Application Engineer/Manager": {
@@ -1304,14 +1304,6 @@
         "text_en": "Improve or redesign technical processes in mechanical engineering, electronics, power supply, mechatronics, or computer science.",
         "label": "ai_assisted",
         "score": 4,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0114",
-        "text_de": "Mitarbeiter führen.",
-        "text_en": "Lead employees in the engineering team.",
-        "label": "ai_assisted",
-        "score": 1,
         "is_regulated": false
       },
       {
@@ -1347,6 +1339,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0114",
+        "text_de": "Mitarbeiter führen.",
+        "text_en": "Lead employees in the engineering team.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0108",
         "text_de": "Handbücher, Dokumentationen und Schulungsunterlagen erstellen sowie Wartungs- und Serviceprotokolle führen.",
         "text_en": "Create manuals, documentation, and training materials, and keep maintenance and service records.",
@@ -1368,8 +1368,8 @@
       "automatable": 2,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 4
+      "ai_assisted": 1,
+      "stays_with_you": 5
     }
   },
   "Labor Market Consultant": {
@@ -2701,14 +2701,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0242",
-        "text_de": "Das Personal der Kunden in die Nutzung von Produkten, wie Produktionsanlagen, einweisen.",
-        "text_en": "Train customer staff in the use of products, such as production systems.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0232",
         "text_de": "Die Wünsche und den Bedarf der Kunden herausfinden.",
         "text_en": "Find out the wishes and needs of customers.",
@@ -2723,6 +2715,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0242",
+        "text_de": "Das Personal der Kunden in die Nutzung von Produkten, wie Produktionsanlagen, einweisen.",
+        "text_en": "Train customer staff in the use of products, such as production systems.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -2730,8 +2730,8 @@
       "automatable": 0,
       "high_ai_potential": 6,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 2
+      "ai_assisted": 3,
+      "stays_with_you": 3
     }
   },
   "Trainer for Pharmaceutical Representatives": {
@@ -2827,14 +2827,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0260",
-        "text_de": "Veranstaltungen für Ausbildungspersonal organisieren und durchführen.",
-        "text_en": "Organize and conduct events for training staff.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0261",
         "text_de": "Aktionen planen und durchführen, um mehr Auszubildende zu gewinnen.",
         "text_en": "Plan and carry out actions to attract more trainees.",
@@ -2907,14 +2899,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0259",
-        "text_de": "Ausbilderarbeitskreise vorbereiten und leiten.",
-        "text_en": "Prepare and lead trainer working groups.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0262",
         "text_de": "Neue Ausbildungsfirmen beim Aufbau der Ausbildung unterstützen.",
         "text_en": "Support new training companies in setting up training.",
@@ -2963,6 +2947,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0260",
+        "text_de": "Veranstaltungen für Ausbildungspersonal organisieren und durchführen.",
+        "text_en": "Organize and conduct events for training staff.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0249",
         "text_de": "Auszubildende beraten.",
         "text_en": "Advise trainees on career development.",
@@ -2974,6 +2966,14 @@
         "id": "BN_0254",
         "text_de": "Bei Jugendlichen die Eltern in die Beratung einbeziehen.",
         "text_en": "Involve parents in counseling for teenagers.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0259",
+        "text_de": "Ausbilderarbeitskreise vorbereiten und leiten.",
+        "text_en": "Prepare and lead trainer working groups.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -3008,8 +3008,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 18,
-      "stays_with_you": 4
+      "ai_assisted": 16,
+      "stays_with_you": 6
     }
   },
   "Field Service Manager (Insurance)": {
@@ -3074,14 +3074,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0284",
-        "text_de": "Mitarbeiter im Außendienst führen und schulen.",
-        "text_en": "Lead and train field staff.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0276",
         "text_de": "Verantwortung für den Außendienst übernehmen und Unternehmensvorgaben umsetzen.",
         "text_en": "Take responsibility for the field service and implement company guidelines.",
@@ -3112,6 +3104,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0284",
+        "text_de": "Mitarbeiter im Außendienst führen und schulen.",
+        "text_en": "Lead and train field staff.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -3119,8 +3119,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Field Sales Representative": {
@@ -3256,14 +3256,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0303",
-        "text_de": "Die Umsetzung des Ausstattungskonzepts leiten und koordinieren.",
-        "text_en": "Lead and coordinate the implementation of the equipment concept.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0300",
         "text_de": "Recherchen machen, um den Stil von Kleidung oder Einrichtung genau darzustellen.",
         "text_en": "Research to accurately represent the style of clothing or decor.",
@@ -3320,6 +3312,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0303",
+        "text_de": "Die Umsetzung des Ausstattungskonzepts leiten und koordinieren.",
+        "text_en": "Lead and coordinate the implementation of the equipment concept.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0302",
         "text_de": "Die statischen und Sicherheitsanforderungen sowie die Gegebenheiten des Produktionsortes beachten.",
         "text_en": "Consider static and safety requirements as well as the conditions of the production site.",
@@ -3341,8 +3341,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 4
+      "ai_assisted": 7,
+      "stays_with_you": 5
     }
   },
   "Exhibition Designer": {
@@ -3375,17 +3375,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0314",
-        "text_de": "Lehrveranstaltungen leiten und Prüfungen abnehmen.",
-        "text_en": "Lead courses and conduct exams.",
-        "label": "ai_assisted",
+        "id": "BN_0313",
+        "text_de": "Medien und Lichteffekte auswählen und nutzen.",
+        "text_en": "Select and use media and light effects.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_0313",
-        "text_de": "Medien und Lichteffekte auswählen und nutzen.",
-        "text_en": "Select and use media and light effects.",
+        "id": "BN_0314",
+        "text_de": "Lehrveranstaltungen leiten und Prüfungen abnehmen.",
+        "text_en": "Lead courses and conduct exams.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -3396,8 +3396,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Ballet Master/Mistress": {
@@ -4421,19 +4421,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0426",
-        "text_de": "Vertriebsaktivitäten planen und leiten.",
-        "text_en": "Plan and lead sales activities.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0418",
         "text_de": "Kunden über Immobilienfinanzierungen beraten.",
         "text_en": "Advise clients on real estate financing.",
         "label": "stays_with_you",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0426",
+        "text_de": "Vertriebsaktivitäten planen und leiten.",
+        "text_en": "Plan and lead sales activities.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -4458,8 +4458,8 @@
       "automatable": 2,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 1
+      "ai_assisted": 6,
+      "stays_with_you": 2
     }
   },
   "Counseling Teacher": {
@@ -4587,14 +4587,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0442",
-        "text_de": "Planungskonzepte entwickeln, mit Vorgesetzten besprechen und umsetzen.",
-        "text_en": "Develop planning concepts, discuss with supervisors, and implement them.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0445",
         "text_de": "Die Geschäftsleitung über Entscheidungen und Maßnahmen informieren.",
         "text_en": "Inform management about decisions and actions.",
@@ -4643,19 +4635,27 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0447",
-        "text_de": "Mitarbeiter führen.",
-        "text_en": "Lead employees in the department.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0446",
         "text_de": "Aufgaben im Qualitätsmanagement übernehmen.",
         "text_en": "Take on tasks in quality management.",
         "label": "ai_assisted",
         "score": 0,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0442",
+        "text_de": "Planungskonzepte entwickeln, mit Vorgesetzten besprechen und umsetzen.",
+        "text_en": "Develop planning concepts, discuss with supervisors, and implement them.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0447",
+        "text_de": "Mitarbeiter führen.",
+        "text_en": "Lead employees in the department.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -4672,8 +4672,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 1
+      "ai_assisted": 9,
+      "stays_with_you": 3
     }
   },
   "Career Advisor": {
@@ -4817,19 +4817,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0467",
-        "text_de": "Berufsorientierung und Bewerbungstrainings planen und durchführen.",
-        "text_en": "Plan and conduct career orientation and application training.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0469",
         "text_de": "Die Zusammenarbeit mit Schulen und Betrieben organisieren.",
         "text_en": "Organize collaboration with schools and businesses.",
         "label": "ai_assisted",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0467",
+        "text_de": "Berufsorientierung und Bewerbungstrainings planen und durchführen.",
+        "text_en": "Plan and conduct career orientation and application training.",
+        "label": "stays_with_you",
+        "score": 5,
         "is_regulated": false
       },
       {
@@ -4854,8 +4854,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 2
+      "ai_assisted": 1,
+      "stays_with_you": 3
     }
   },
   "Professional Athlete": {
@@ -5150,20 +5150,20 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0497",
-        "text_de": "In der Aufsichtspflicht anleiten.",
-        "text_en": "Guide in supervisory duties.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0498",
         "text_de": "Unterrichtsversuche besuchen und die Leistungen der Referendare bewerten.",
         "text_en": "Visit teaching trials and evaluate the performance of trainees",
         "label": "stays_with_you",
         "score": 6,
         "is_regulated": true
+      },
+      {
+        "id": "BN_0497",
+        "text_de": "In der Aufsichtspflicht anleiten.",
+        "text_en": "Guide in supervisory duties.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -5171,8 +5171,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 1
+      "ai_assisted": 8,
+      "stays_with_you": 2
     }
   },
   "Operations Manager in Healthcare and Fitness": {
@@ -5285,14 +5285,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0510",
-        "text_de": "Personal führen.",
-        "text_en": "Lead personnel in healthcare and fitness facilities.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0504",
         "text_de": "Gute Kommunikation im Unternehmen sicherstellen.",
         "text_en": "Ensure good communication in the company.",
@@ -5307,6 +5299,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_0510",
+        "text_de": "Personal führen.",
+        "text_en": "Lead personnel in healthcare and fitness facilities.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -5314,8 +5314,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 1
+      "ai_assisted": 11,
+      "stays_with_you": 2
     }
   },
   "Operations Manager - Commercial": {
@@ -5412,22 +5412,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0516",
-        "text_de": "die wirtschaftlichen Aktivitäten eines Unternehmens leiten.",
-        "text_en": "Lead the economic activities of a company.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0520",
-        "text_de": "verschiedene Bereiche im Unternehmen leiten.",
-        "text_en": "Lead different areas in the company.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0524",
         "text_de": "für das Personal verantwortlich sein.",
         "text_en": "Be responsible for the staff.",
@@ -5452,6 +5436,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0516",
+        "text_de": "die wirtschaftlichen Aktivitäten eines Unternehmens leiten.",
+        "text_en": "Lead the economic activities of a company.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0520",
+        "text_de": "verschiedene Bereiche im Unternehmen leiten.",
+        "text_en": "Lead different areas in the company.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0529",
         "text_de": "Abschlüsse für Monate, Quartale und Jahre erstellen.",
         "text_en": "Create reports for months, quarters, and years.",
@@ -5465,8 +5465,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 2
+      "ai_assisted": 10,
+      "stays_with_you": 4
     }
   },
   "Operations Planner": {
@@ -6132,14 +6132,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0600",
-        "text_de": "Die Umsetzung begleiten, Aufgaben koordinieren und das Personal schulen.",
-        "text_en": "Support the implementation, coordinate tasks, and train the staff.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0601",
         "text_de": "Das Hotelangebot regelmäßig überprüfen und anpassen.",
         "text_en": "Regularly review and adjust the hotel offer.",
@@ -6164,6 +6156,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0600",
+        "text_de": "Die Umsetzung begleiten, Aufgaben koordinieren und das Personal schulen.",
+        "text_en": "Support the implementation, coordinate tasks, and train the staff.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0603",
         "text_de": "Reklamationen von Gästen bearbeiten und bewerten.",
         "text_en": "Handle and evaluate guest complaints.",
@@ -6177,8 +6177,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 1
+      "ai_assisted": 9,
+      "stays_with_you": 2
     }
   },
   "Business Economist for Real Estate": {
@@ -7898,14 +7898,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0791",
-        "text_de": "Lehrveranstaltungen leiten und Prüfungen abnehmen.",
-        "text_en": "Lead courses and conduct exams.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0782",
         "text_de": "Die passende Unterrichtsform auswählen, wie Gruppenunterricht oder Coaching.",
         "text_en": "Choose the right form of teaching, like group lessons or coaching.",
@@ -7920,6 +7912,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0791",
+        "text_de": "Lehrveranstaltungen leiten und Prüfungen abnehmen.",
+        "text_en": "Lead courses and conduct exams.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -7927,8 +7927,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 2
+      "ai_assisted": 9,
+      "stays_with_you": 3
     }
   },
   "Education Consultant": {
@@ -8247,14 +8247,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0845",
-        "text_de": "Lehrveranstaltungen leiten und Prüfungen abnehmen",
-        "text_en": "Lead courses and conduct exams",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0815",
         "text_de": "Biotechnologische Methoden anwenden und Pflanzen aus verändertem Saatgut ziehen.",
         "text_en": "Apply biotechnological methods and grow plants from modified seeds.",
@@ -8269,6 +8261,14 @@
         "label": "stays_with_you",
         "score": 6,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0845",
+        "text_de": "Lehrveranstaltungen leiten und Prüfungen abnehmen",
+        "text_en": "Lead courses and conduct exams",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -8276,8 +8276,8 @@
       "automatable": 0,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Biological Anthropologist": {
@@ -9476,19 +9476,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0924",
-        "text_de": "Ein Castingunternehmen oder eine Abteilung führen.",
-        "text_en": "Lead a casting company or a department.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0930",
         "text_de": "Eine Vorauswahl an Bewerbern vorschlagen und erklären.",
         "text_en": "Suggest and explain a pre-selection of applicants.",
         "label": "stays_with_you",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0924",
+        "text_de": "Ein Castingunternehmen oder eine Abteilung führen.",
+        "text_en": "Lead a casting company or a department.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -9505,8 +9505,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 1
+      "ai_assisted": 5,
+      "stays_with_you": 2
     }
   },
   "Category Manager": {
@@ -9904,14 +9904,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0968",
-        "text_de": "Oberärzte und Oberärztinnen leiten.",
-        "text_en": "Lead senior doctors.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0967",
         "text_de": "Die Notaufnahme und den Bereitschaftsdienst organisieren und überwachen.",
         "text_en": "Organize and supervise the emergency room and on-call service.",
@@ -9926,6 +9918,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_0968",
+        "text_de": "Oberärzte und Oberärztinnen leiten.",
+        "text_en": "Lead senior doctors.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -9933,8 +9933,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 2
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Editor-in-Chief": {
@@ -9956,14 +9956,6 @@
         "text_en": "Plan topics and organize the processes in the editorial office.",
         "label": "ai_assisted",
         "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_0979",
-        "text_de": "Beiträge wie Leitartikel schreiben.",
-        "text_en": "Write contributions like lead articles.",
-        "label": "ai_assisted",
-        "score": 4,
         "is_regulated": false
       },
       {
@@ -10039,6 +10031,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0979",
+        "text_de": "Beiträge wie Leitartikel schreiben.",
+        "text_en": "Write contributions like lead articles.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0978",
         "text_de": "Redaktionelle Aufgaben übernehmen.",
         "text_en": "Take on editorial tasks.",
@@ -10052,8 +10052,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 1
+      "ai_assisted": 10,
+      "stays_with_you": 2
     }
   },
   "Chemist": {
@@ -10404,10 +10404,18 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1014",
+        "text_de": "Die Fachteams bei ihren Arbeitsabläufen unterstützen.",
+        "text_en": "Support the specialist teams in their workflows.",
+        "label": "ai_assisted",
+        "score": 0,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1009",
         "text_de": "Das Produktmanagement im Unternehmen führen und koordinieren.",
         "text_en": "Lead and coordinate product management in the company.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
       },
@@ -10415,16 +10423,8 @@
         "id": "BN_1015",
         "text_de": "Die Mitarbeiter führen und weiterbilden.",
         "text_en": "Lead and train the employees.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_1014",
-        "text_de": "Die Fachteams bei ihren Arbeitsabläufen unterstützen.",
-        "text_en": "Support the specialist teams in their workflows.",
-        "label": "ai_assisted",
-        "score": 0,
         "is_regulated": false
       },
       {
@@ -10441,8 +10441,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 14,
-      "stays_with_you": 1
+      "ai_assisted": 12,
+      "stays_with_you": 3
     }
   },
   "Chief Steward/Stewardess": {
@@ -11301,19 +11301,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1108",
-        "text_de": "Managementaufgaben in IT-Teams übernehmen und Mitarbeiter führen.",
-        "text_en": "Take on management tasks in IT teams and lead employees.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1102",
         "text_de": "Cloud-Architekturen abstimmen und präsentieren sowie mit Management und Kunden zusammenarbeiten.",
         "text_en": "Coordinate and present cloud architectures and collaborate with management and customers.",
         "label": "stays_with_you",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1108",
+        "text_de": "Managementaufgaben in IT-Teams übernehmen und Mitarbeiter führen.",
+        "text_en": "Take on management tasks in IT teams and lead employees.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       }
     ],
@@ -11322,8 +11322,8 @@
       "automatable": 0,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 13,
-      "stays_with_you": 1
+      "ai_assisted": 12,
+      "stays_with_you": 2
     }
   },
   "Cloud Consultant": {
@@ -11761,14 +11761,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1144",
-        "text_de": "Diskussionsforen einrichten und leiten.",
-        "text_en": "Set up and lead discussion forums.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1147",
         "text_de": "Anreize schaffen, damit Nutzer die Communitys und Webseiten besuchen.",
         "text_en": "Create incentives for users to visit the communities and websites.",
@@ -11839,6 +11831,14 @@
         "label": "stays_with_you",
         "score": 5,
         "is_regulated": false
+      },
+      {
+        "id": "BN_1144",
+        "text_de": "Diskussionsforen einrichten und leiten.",
+        "text_en": "Set up and lead discussion forums.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -11846,8 +11846,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 2
+      "ai_assisted": 9,
+      "stays_with_you": 3
     }
   },
   "Compliance Manager": {
@@ -12825,14 +12825,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1229",
-        "text_de": "Konzepte für Workshops und Schulungen zu CRM-Systemen erstellen und durchführen.",
-        "text_en": "Create and conduct concepts for workshops and training on CRM systems.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "GEN_0165",
         "text_de": "Abwanderungsmuster analysieren und gezielte Bindungsmaßnahmen entwickeln.",
         "text_en": "Analyze churn patterns and develop targeted retention measures.",
@@ -12865,6 +12857,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1229",
+        "text_de": "Konzepte für Workshops und Schulungen zu CRM-Systemen erstellen und durchführen.",
+        "text_en": "Create and conduct concepts for workshops and training on CRM systems.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1224",
         "text_de": "Kundenbeziehungen planen, verwalten und verbessern.",
         "text_en": "plan, manage, and improve customer relationships",
@@ -12886,8 +12886,8 @@
       "automatable": 1,
       "high_ai_potential": 7,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 1
+      "ai_assisted": 5,
+      "stays_with_you": 2
     }
   },
   "Customer Experience Manager": {
@@ -13436,22 +13436,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1275",
-        "text_de": "Kundenprojekte im Bereich Daten leiten.",
-        "text_en": "Lead customer projects in the area of data.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_1276",
-        "text_de": "Mitarbeiter führen.",
-        "text_en": "Lead employees in the data team.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1277",
         "text_de": "Die Kontrolle von Projekten übernehmen.",
         "text_en": "Take control of projects.",
@@ -13484,6 +13468,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1275",
+        "text_de": "Kundenprojekte im Bereich Daten leiten.",
+        "text_en": "Lead customer projects in the area of data.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1276",
+        "text_de": "Mitarbeiter führen.",
+        "text_en": "Lead employees in the data team.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1268",
         "text_de": "Kundenwünsche aufnehmen.",
         "text_en": "Record customer requests.",
@@ -13497,8 +13497,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 3
+      "ai_assisted": 6,
+      "stays_with_you": 5
     }
   },
   "Data Warehouse Analyst": {
@@ -14156,14 +14156,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1348",
-        "text_de": "Präventionskurse zur gesunden Ernährung leiten.",
-        "text_en": "Lead prevention courses on healthy eating.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1344",
         "text_de": "Individuelle Ernährungspläne erstellen und Klienten zeigen, wie sie diese im Alltag umsetzen.",
         "text_en": "Create individual meal plans and show clients how to implement them in daily life.",
@@ -14178,6 +14170,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_1348",
+        "text_de": "Präventionskurse zur gesunden Ernährung leiten.",
+        "text_en": "Lead prevention courses on healthy eating.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -14185,8 +14185,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 2
+      "ai_assisted": 3,
+      "stays_with_you": 3
     }
   },
   "Digital Analyst": {
@@ -15567,14 +15567,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1488",
-        "text_de": "Workshops und Trainings leiten und individuelle Stärken erkennen.",
-        "text_en": "Lead workshops and training and recognize individual strengths.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1489",
         "text_de": "Feedback annehmen und Anwendungen anpassen.",
         "text_en": "accept feedback and adjust applications.",
@@ -15607,6 +15599,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1488",
+        "text_de": "Workshops und Trainings leiten und individuelle Stärken erkennen.",
+        "text_en": "Lead workshops and training and recognize individual strengths.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1485",
         "text_de": "Projektteams bilden und Mitarbeiter vor Ort anleiten.",
         "text_en": "Form project teams and guide employees on site.",
@@ -15636,8 +15636,8 @@
       "automatable": 2,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 2
+      "ai_assisted": 8,
+      "stays_with_you": 3
     }
   },
   "E-Learning Author": {
@@ -15980,14 +15980,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1520",
-        "text_de": "E-Sport-Teams leiten.",
-        "text_en": "Lead e-sport teams.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1521",
         "text_de": "Equipment kaufen und Trainingsräume verwalten.",
         "text_en": "Buy equipment and manage training rooms.",
@@ -16002,6 +15994,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_1520",
+        "text_de": "E-Sport-Teams leiten.",
+        "text_en": "Lead e-sport teams.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -16009,8 +16009,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 2
+      "ai_assisted": 9,
+      "stays_with_you": 3
     }
   },
   "Editions Scientist": {
@@ -16051,17 +16051,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1535",
-        "text_de": "Urheberrechtsfragen klären und die Produktion leiten.",
-        "text_en": "Clarify copyright issues and lead production.",
-        "label": "ai_assisted",
+        "id": "BN_1532",
+        "text_de": "Lehrveranstaltungen leiten und Prüfungen abnehmen.",
+        "text_en": "Lead courses and conduct exams.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_1532",
-        "text_de": "Lehrveranstaltungen leiten und Prüfungen abnehmen.",
-        "text_en": "Lead courses and conduct exams.",
+        "id": "BN_1535",
+        "text_de": "Urheberrechtsfragen klären und die Produktion leiten.",
+        "text_en": "Clarify copyright issues and lead production.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -16072,8 +16072,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 1
+      "ai_assisted": 2,
+      "stays_with_you": 2
     }
   },
   "Volunteer Coordinator": {
@@ -16685,14 +16685,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1591",
-        "text_de": "Am Hotelempfang die Abläufe planen und leiten.",
-        "text_en": "Plan and lead the processes at the hotel reception.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1596",
         "text_de": "Gespräche mit anderen Hotelbereichen zur Abstimmung führen.",
         "text_en": "Hold discussions with other hotel departments for coordination.",
@@ -16725,6 +16717,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1591",
+        "text_de": "Am Hotelempfang die Abläufe planen und leiten.",
+        "text_en": "Plan and lead the processes at the hotel reception.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1593",
         "text_de": "Das Empfangspersonal anleiten, schulen und motivieren.",
         "text_en": "Guide, train, and motivate the reception staff.",
@@ -16746,8 +16746,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 4
+      "ai_assisted": 3,
+      "stays_with_you": 5
     }
   },
   "Employer Branding Manager": {
@@ -16836,19 +16836,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1612",
-        "text_de": "Fach- und Führungskräfte zu Arbeitgebermarken und Personalmarketing schulen.",
-        "text_en": "Train specialists and managers on employer branding and personnel marketing.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1611",
         "text_de": "Messeauftritte und Firmenevents planen und durchführen.",
         "text_en": "Plan and execute trade show appearances and company events.",
         "label": "stays_with_you",
         "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1612",
+        "text_de": "Fach- und Führungskräfte zu Arbeitgebermarken und Personalmarketing schulen.",
+        "text_en": "Train specialists and managers on employer branding and personnel marketing.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       }
     ],
@@ -16857,8 +16857,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 1
+      "ai_assisted": 7,
+      "stays_with_you": 2
     }
   },
   "Energy Manager": {
@@ -16970,14 +16970,6 @@
     "kldb2010": "B 94303",
     "tasks": [
       {
-        "id": "BN_1624",
-        "text_de": "Shows für das Fernsehen planen und leiten.",
-        "text_en": "Plan and lead shows for television.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1629",
         "text_de": "Trends verfolgen und das Repertoire aktualisieren.",
         "text_en": "Follow trends and update the repertoire.",
@@ -16999,6 +16991,14 @@
         "text_en": "Complete organizational tasks.",
         "label": "ai_assisted",
         "score": 0,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1624",
+        "text_de": "Shows für das Fernsehen planen und leiten.",
+        "text_en": "Plan and lead shows for television.",
+        "label": "stays_with_you",
+        "score": 5,
         "is_regulated": false
       },
       {
@@ -17055,8 +17055,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 6
+      "ai_assisted": 3,
+      "stays_with_you": 7
     }
   },
   "Developer for Data Visualization": {
@@ -17430,14 +17430,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1679",
-        "text_de": "Online-Kurse für verschiedene Gruppen leiten.",
-        "text_en": "Lead online courses for different groups.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1669",
         "text_de": "Gesundheits- und Fitnesstests machen und auswerten.",
         "text_en": "Conduct and evaluate health and fitness tests.",
@@ -17476,6 +17468,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_1679",
+        "text_de": "Online-Kurse für verschiedene Gruppen leiten.",
+        "text_en": "Lead online courses for different groups.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -17483,8 +17483,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 5
+      "ai_assisted": 6,
+      "stays_with_you": 6
     }
   },
   "Educational Consultant": {
@@ -17985,25 +17985,9 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1720",
-        "text_de": "die Kirchengemeinde leiten und verwalten.",
-        "text_en": "lead and manage the church community.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1722",
         "text_de": "das Personal anleiten und die ehrenamtliche Mitarbeit in der Gemeinde organisieren.",
         "text_en": "guide the staff and organize volunteer work in the community.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_1733",
-        "text_de": "kirchliche Gruppen leiten.",
-        "text_en": "Lead church groups.",
         "label": "ai_assisted",
         "score": 1,
         "is_regulated": false
@@ -18081,6 +18065,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1720",
+        "text_de": "die Kirchengemeinde leiten und verwalten.",
+        "text_en": "lead and manage the church community.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1733",
+        "text_de": "kirchliche Gruppen leiten.",
+        "text_en": "Lead church groups.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1728",
         "text_de": "Gottesdienste, Abendmahlfeiern, Taufen, Konfirmationen, Trauungen und Trauerfeiern durchführen.",
         "text_en": "Conduct services, communion celebrations, baptisms, confirmations, weddings, and funerals.",
@@ -18102,8 +18102,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 8
+      "ai_assisted": 7,
+      "stays_with_you": 10
     }
   },
   "Expansion Manager": {
@@ -18476,14 +18476,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1775",
-        "text_de": "Fachkonferenzen und Besprechungen organisieren und leiten.",
-        "text_en": "Organize and lead conferences and meetings.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1776",
         "text_de": "Unterrichtsinhalte im Fachbereich koordinieren.",
         "text_en": "Coordinate teaching content in the subject area.",
@@ -18524,6 +18516,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1775",
+        "text_de": "Fachkonferenzen und Besprechungen organisieren und leiten.",
+        "text_en": "Organize and lead conferences and meetings.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1778",
         "text_de": "Als Ansprechpartner für Eltern im Fachbereich agieren.",
         "text_en": "Act as a contact person for parents in the subject area.",
@@ -18537,8 +18537,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 3
+      "ai_assisted": 5,
+      "stays_with_you": 4
     }
   },
   "Facility Manager": {
@@ -19111,14 +19111,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3648",
-        "text_de": "Die Niederlassung fachlich, organisatorisch und personell leiten.",
-        "text_en": "Lead the branch in a professional, organizational, and personnel way.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3649",
         "text_de": "Unternehmensrichtlinien und Entscheidungen umsetzen.",
         "text_en": "Implement company policies and decisions.",
@@ -19159,6 +19151,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3648",
+        "text_de": "Die Niederlassung fachlich, organisatorisch und personell leiten.",
+        "text_en": "Lead the branch in a professional, organizational, and personnel way.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3653",
         "text_de": "Mitarbeiter fachlich anleiten und neue Mitarbeiter einarbeiten.",
         "text_en": "Guide employees professionally and train new employees.",
@@ -19180,8 +19180,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 18,
-      "stays_with_you": 3
+      "ai_assisted": 17,
+      "stays_with_you": 4
     }
   },
   "Film Managing Director": {
@@ -19316,14 +19316,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1859",
-        "text_de": "Vertriebsaktivitäten planen und leiten sowie als Ansprechpartner für Kunden da sein.",
-        "text_en": "Plan and lead sales activities and be available as a contact person for customers.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1858",
         "text_de": "Verträge für Anlagen, Finanzierungen oder Versicherungen erstellen und im Auftrag der Kunden bei den entsprechenden Anbietern abschließen.",
         "text_en": "Create contracts for investments, financing, or insurance and conclude them with the relevant providers on behalf of customers.",
@@ -19354,6 +19346,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_1859",
+        "text_de": "Vertriebsaktivitäten planen und leiten sowie als Ansprechpartner für Kunden da sein.",
+        "text_en": "Plan and lead sales activities and be available as a contact person for customers.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -19361,8 +19361,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 2,
-      "stays_with_you": 4
+      "ai_assisted": 1,
+      "stays_with_you": 5
     }
   },
   "Financial Economist": {
@@ -19411,19 +19411,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1863",
-        "text_de": "Ein Fachgebiet leiten und die Arbeit der Mitarbeiter koordinieren.",
-        "text_en": "Lead a specialized area and coordinate the work of employees.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1865",
         "text_de": "Die ordnungsgemäße Beschäftigung von Arbeitnehmern vor Ort überprüfen.",
         "text_en": "Check the proper employment of workers on site.",
         "label": "stays_with_you",
         "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1863",
+        "text_de": "Ein Fachgebiet leiten und die Arbeit der Mitarbeiter koordinieren.",
+        "text_en": "Lead a specialized area and coordinate the work of employees.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       }
     ],
@@ -19432,8 +19432,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Airport Station Manager": {
@@ -19530,14 +19530,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1868",
-        "text_de": "Die Aktivitäten der Firmenniederlassungen am Flughafen planen und leiten.",
-        "text_en": "Plan and lead the activities of the company branches at the airport.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1879",
         "text_de": "Führungsaufgaben im Personalwesen übernehmen.",
         "text_en": "Take on leadership tasks in human resources.",
@@ -19560,6 +19552,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_1868",
+        "text_de": "Die Aktivitäten der Firmenniederlassungen am Flughafen planen und leiten.",
+        "text_en": "Plan and lead the activities of the company branches at the airport.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -19567,8 +19567,8 @@
       "automatable": 0,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Fund Manager": {
@@ -19895,14 +19895,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1915",
-        "text_de": "Entscheidungen für Politiker und Vorgesetzte vorbereiten.",
-        "text_en": "Prepare decisions for politicians and supervisors.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1918",
         "text_de": "Bewerber bei der Antragstellung helfen.",
         "text_en": "Help applicants with their applications.",
@@ -19927,10 +19919,18 @@
         "is_regulated": false
       },
       {
+        "id": "BN_1915",
+        "text_de": "Entscheidungen für Politiker und Vorgesetzte vorbereiten.",
+        "text_en": "Prepare decisions for politicians and supervisors.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1912",
         "text_de": "Forschungsprojekte an Instituten leiten.",
         "text_en": "Lead research projects at institutes.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
       },
@@ -19948,8 +19948,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 13,
-      "stays_with_you": 1
+      "ai_assisted": 11,
+      "stays_with_you": 3
     }
   },
   "Fraud Analyst": {
@@ -21052,22 +21052,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2022",
-        "text_de": "Die Vertretung einer Versicherungsgesellschaft aufbauen und leiten.",
-        "text_en": "Build and lead a representation of an insurance company.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_2024",
-        "text_de": "Mitarbeiterinnen und Mitarbeiter fachlich anleiten und führen.",
-        "text_en": "Guide and lead employees professionally.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2027",
         "text_de": "Im Verkauf von Versicherungsprodukten tätig sein.",
         "text_en": "Be active in the sale of insurance products.",
@@ -21116,6 +21100,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2022",
+        "text_de": "Die Vertretung einer Versicherungsgesellschaft aufbauen und leiten.",
+        "text_en": "Build and lead a representation of an insurance company.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2024",
+        "text_de": "Mitarbeiterinnen und Mitarbeiter fachlich anleiten und führen.",
+        "text_en": "Guide and lead employees professionally.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "ONET_0110",
         "text_de": "",
         "text_en": "Perform administrative tasks including record maintenance and policy renewals.",
@@ -21129,8 +21129,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 6
+      "ai_assisted": 3,
+      "stays_with_you": 8
     }
   },
   "Geneticist": {
@@ -21457,14 +21457,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2050",
-        "text_de": "Mitarbeiter einstellen, anleiten und führen.",
-        "text_en": "Hire, guide, and lead employees.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2044",
         "text_de": "Die Einhaltung der Gesetze sicherstellen.",
         "text_en": "Ensure compliance with laws.",
@@ -21487,6 +21479,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2050",
+        "text_de": "Mitarbeiter einstellen, anleiten und führen.",
+        "text_en": "Hire, guide, and lead employees.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -21494,8 +21494,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 1,
-      "ai_assisted": 13,
-      "stays_with_you": 1
+      "ai_assisted": 12,
+      "stays_with_you": 2
     }
   },
   "Branch Manager of a Bank": {
@@ -21544,14 +21544,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2051",
-        "text_de": "die Bankfiliale leiten und organisieren.",
-        "text_en": "lead and organize the bank branch.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2052",
         "text_de": "die Arbeitsabläufe steuern und kontrollieren.",
         "text_en": "manage and control the workflows.",
@@ -21592,6 +21584,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2051",
+        "text_de": "die Bankfiliale leiten und organisieren.",
+        "text_en": "lead and organize the bank branch.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2061",
         "text_de": "Mitarbeiter führen, schulen und überwachen.",
         "text_en": "Lead, train, and supervise employees.",
@@ -21605,8 +21605,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 2
+      "ai_assisted": 9,
+      "stays_with_you": 3
     }
   },
   "Branch Manager (Insurance)": {
@@ -21663,14 +21663,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2063",
-        "text_de": "die Versicherungsstelle leiten und organisieren.",
-        "text_en": "lead and organize the insurance office.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2065",
         "text_de": "Verantwortung für die Geschäftsstelle und Projekte übernehmen und Unternehmensvorgaben umsetzen.",
         "text_en": "take responsibility for the office and projects and implement company guidelines.",
@@ -21709,6 +21701,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2063",
+        "text_de": "die Versicherungsstelle leiten und organisieren.",
+        "text_en": "lead and organize the insurance office.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -21716,8 +21716,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 3
+      "ai_assisted": 8,
+      "stays_with_you": 4
     }
   },
   "Health and Rehabilitation Psychologist": {
@@ -21805,18 +21805,18 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2081",
-        "text_de": "Gesundheitskurse und Schulungen leiten.",
-        "text_en": "Lead health courses and training.",
+        "id": "BN_2083",
+        "text_de": "Bei Forschungsprojekten mitarbeiten.",
+        "text_en": "Participate in research projects.",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_2083",
-        "text_de": "Bei Forschungsprojekten mitarbeiten.",
-        "text_en": "Participate in research projects.",
-        "label": "ai_assisted",
+        "id": "BN_2081",
+        "text_de": "Gesundheitskurse und Schulungen leiten.",
+        "text_en": "Lead health courses and training.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -21834,8 +21834,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 1
+      "ai_assisted": 2,
+      "stays_with_you": 2
     }
   },
   "Health Manager": {
@@ -21884,19 +21884,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2086",
-        "text_de": "Bewegungsprogramme leiten.",
-        "text_en": "Lead movement programs.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2089",
         "text_de": "Mitarbeiter planen und weiterbilden.",
         "text_en": "Plan and train employees.",
         "label": "stays_with_you",
         "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2086",
+        "text_de": "Bewegungsprogramme leiten.",
+        "text_en": "Lead movement programs.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -21913,8 +21913,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Water Protection Officer": {
@@ -22066,14 +22066,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2112",
-        "text_de": "Vertriebsaktivitäten planen und leiten.",
-        "text_en": "Plan and lead sales activities.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2113",
         "text_de": "Digitale Beratungsangebote erweitern.",
         "text_en": "Expand digital consulting services.",
@@ -22104,6 +22096,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2112",
+        "text_de": "Vertriebsaktivitäten planen und leiten.",
+        "text_en": "Plan and lead sales activities.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -22111,8 +22111,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Equal Opportunities Officer": {
@@ -22153,14 +22153,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2118",
-        "text_de": "Informations- und Schulungsveranstaltungen zum Thema Chancengleichheit durchführen.",
-        "text_en": "Conduct information and training events on equal opportunities.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2119",
         "text_de": "Kontakte zu Behörden und Organisationen aufbauen.",
         "text_en": "Build contacts with authorities and organizations.",
@@ -22193,6 +22185,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2118",
+        "text_de": "Informations- und Schulungsveranstaltungen zum Thema Chancengleichheit durchführen.",
+        "text_en": "Conduct information and training events on equal opportunities.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2123",
         "text_de": "Mitarbeiterinnen und Mitarbeiter zum beruflichen Fortkommen beraten.",
         "text_en": "advise employees on career advancement",
@@ -22214,8 +22214,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 3
+      "ai_assisted": 6,
+      "stays_with_you": 4
     }
   },
   "Global Sourcing Manager": {
@@ -23294,14 +23294,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2231",
-        "text_de": "Diskussionen leiten.",
-        "text_en": "Lead discussions on broadcast programs.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2233",
         "text_de": "Unterhaltungs- und Informationssendungen moderieren.",
         "text_en": "Host entertainment and information shows.",
@@ -23322,6 +23314,14 @@
         "text_de": "Informationen suchen, Meldungen überprüfen und im Redaktionsteam mitarbeiten.",
         "text_en": "Search for information, check reports, and work in the editorial team.",
         "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2231",
+        "text_de": "Diskussionen leiten.",
+        "text_en": "Lead discussions on broadcast programs.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -23347,8 +23347,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 2
+      "ai_assisted": 6,
+      "stays_with_you": 3
     }
   },
   "Human Biologist": {
@@ -24529,14 +24529,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2351",
-        "text_de": "Anforderungen mit Kunden und Vorgesetzten klären.",
-        "text_en": "Clarify requirements with customers and supervisors.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2359",
         "text_de": "Support für die Software anbieten.",
         "text_en": "Provide support for the software.",
@@ -24577,6 +24569,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2351",
+        "text_de": "Anforderungen mit Kunden und Vorgesetzten klären.",
+        "text_en": "Clarify requirements with customers and supervisors.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2354",
         "text_de": "Den Code überprüfen.",
         "text_en": "Check the code.",
@@ -24606,8 +24606,8 @@
       "automatable": 3,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 2
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Engineer for Building Materials": {
@@ -25177,14 +25177,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2415",
-        "text_de": "Arbeitsabläufe leiten und kontrollieren",
-        "text_en": "Lead and control workflows.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2423",
         "text_de": "Einstellungs- und Personalgespräche führen",
         "text_en": "Conduct hiring and personnel interviews.",
@@ -25207,6 +25199,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2415",
+        "text_de": "Arbeitsabläufe leiten und kontrollieren",
+        "text_en": "Lead and control workflows.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -25214,8 +25214,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 3
+      "ai_assisted": 5,
+      "stays_with_you": 4
     }
   },
   "Stage Manager": {
@@ -25534,22 +25534,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2454",
-        "text_de": "den künstlerischen und technischen Betrieb von Theatern und Opernhäusern leiten.",
-        "text_en": "lead the artistic and technical operation of theaters and opera houses.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_2458",
-        "text_de": "den wirtschaftlichen Betrieb von Theatern und Opernhäusern leiten.",
-        "text_en": "lead the financial operation of theaters and opera houses.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2456",
         "text_de": "Künstler wie Regisseure und Schauspieler anwerben und verpflichten.",
         "text_en": "Recruit and hire artists like directors and actors.",
@@ -25564,6 +25548,22 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2454",
+        "text_de": "den künstlerischen und technischen Betrieb von Theatern und Opernhäusern leiten.",
+        "text_en": "lead the artistic and technical operation of theaters and opera houses.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2458",
+        "text_de": "den wirtschaftlichen Betrieb von Theatern und Opernhäusern leiten.",
+        "text_en": "lead the financial operation of theaters and opera houses.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -25571,8 +25571,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 4
     }
   },
   "Investor Relations Manager": {
@@ -26303,14 +26303,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2515",
-        "text_de": "Arbeitsabläufe planen und leiten.",
-        "text_en": "Plan and lead workflows.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3153",
         "text_de": "für die Einhaltung von Terminen und Budgets sorgen.",
         "text_en": "Ensure deadlines and budgets are met.",
@@ -26359,6 +26351,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2515",
+        "text_de": "Arbeitsabläufe planen und leiten.",
+        "text_en": "Plan and lead workflows.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2516",
         "text_de": "Mitarbeiter auswählen, führen und schulen.",
         "text_en": "Select, lead, and train employees.",
@@ -26380,8 +26380,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 13,
-      "stays_with_you": 5
+      "ai_assisted": 12,
+      "stays_with_you": 6
     }
   },
   "IT Organizer": {
@@ -27072,14 +27072,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2581",
-        "text_de": "Rechtsseminare für Mitarbeiter oder Verbandsmitglieder leiten.",
-        "text_en": "Lead legal seminars for employees or association members.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4164",
         "text_de": "Mandanten bei der Durchsetzung von Renten und Rentenanträgen unterstützen.",
         "text_en": "Support clients in enforcing pensions and pension applications.",
@@ -27120,6 +27112,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2581",
+        "text_de": "Rechtsseminare für Mitarbeiter oder Verbandsmitglieder leiten.",
+        "text_en": "Lead legal seminars for employees or association members.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2582",
         "text_de": "Schlichtungsstellen unterstützen.",
         "text_en": "Support mediation offices.",
@@ -27149,8 +27149,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 7
+      "ai_assisted": 5,
+      "stays_with_you": 8
     }
   },
   "Cabaret Artist": {
@@ -27889,25 +27889,9 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2660",
-        "text_de": "Die Kirchengemeinde leiten und verwalten.",
-        "text_en": "Lead and manage the church community.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2662",
         "text_de": "Das Personal anleiten und die ehrenamtliche Mitarbeit organisieren.",
         "text_en": "Guide the staff and organize volunteer work.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_2674",
-        "text_de": "Kirchliche Gruppen leiten.",
-        "text_en": "Lead church groups.",
         "label": "ai_assisted",
         "score": 1,
         "is_regulated": false
@@ -27993,6 +27977,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2660",
+        "text_de": "Die Kirchengemeinde leiten und verwalten.",
+        "text_en": "Lead and manage the church community.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2674",
+        "text_de": "Kirchliche Gruppen leiten.",
+        "text_en": "Lead church groups.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2665",
         "text_de": "Das Wort Gottes verkündigen.",
         "text_en": "Proclaim the word of God.",
@@ -28014,8 +28014,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 10
+      "ai_assisted": 6,
+      "stays_with_you": 12
     }
   },
   "Orthodontic Assistant": {
@@ -29871,14 +29871,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2880",
-        "text_de": "Maßnahmen leiten, überwachen und deren Erfolg überprüfen.",
-        "text_en": "Lead, monitor, and check the success of measures.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2882",
         "text_de": "Forschungsprojekte starten und durchführen sowie Gelder beantragen.",
         "text_en": "Start and conduct research projects and apply for funding.",
@@ -29911,6 +29903,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2880",
+        "text_de": "Maßnahmen leiten, überwachen und deren Erfolg überprüfen.",
+        "text_en": "Lead, monitor, and check the success of measures.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2881",
         "text_de": "Dokumente sortieren und klassifizieren.",
         "text_en": "Sort and classify documents.",
@@ -29924,8 +29924,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 3
+      "ai_assisted": 6,
+      "stays_with_you": 4
     }
   },
   "Artistic Operations Director": {
@@ -29933,14 +29933,6 @@
     "sector": "management",
     "kldb2010": "B 94494",
     "tasks": [
-      {
-        "id": "BN_2884",
-        "text_de": "den Spiel- und Probenbetrieb sowie die Veranstaltungsorganisation planen und leiten.",
-        "text_en": "plan and lead the play and rehearsal operations as well as event organization.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
       {
         "id": "BN_2885",
         "text_de": "die aktuelle Spielzeit planen und dabei Personal, Werkstätten, Räume und Abonnentenwünsche berücksichtigen.",
@@ -29966,6 +29958,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2884",
+        "text_de": "den Spiel- und Probenbetrieb sowie die Veranstaltungsorganisation planen und leiten.",
+        "text_en": "plan and lead the play and rehearsal operations as well as event organization.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2886",
         "text_de": "die technische Ausstattung und das Personal für Produktionen mit allen Abteilungen abstimmen.",
         "text_en": "coordinate the technical equipment and staff for productions with all departments.",
@@ -29987,8 +29987,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Artist Agent": {
@@ -30250,14 +30250,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2927",
-        "text_de": "Kundendienst- und Werkstattmitarbeiter schulen",
-        "text_en": "Train customer service and workshop staff.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2915",
         "text_de": "Kunden zu Produkten und Dienstleistungen beraten",
         "text_en": "advising customers on products and services",
@@ -30287,6 +30279,14 @@
         "text_en": "using diagnostic tools to identify faults and damages",
         "label": "stays_with_you",
         "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2927",
+        "text_de": "Kundendienst- und Werkstattmitarbeiter schulen",
+        "text_en": "Train customer service and workshop staff.",
+        "label": "stays_with_you",
+        "score": 5,
         "is_regulated": false
       },
       {
@@ -30351,8 +30351,8 @@
       "automatable": 4,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 4
+      "ai_assisted": 3,
+      "stays_with_you": 5
     }
   },
   "Art Historian": {
@@ -30535,19 +30535,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2947",
-        "text_de": "Forschungsprojekte initiieren, durchführen und ggf. leiten; Forschungsgelder beantragen",
-        "text_en": "Initiate, conduct, and possibly lead research projects; apply for research funding.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2946",
         "text_de": "Lehrveranstaltungen halten; schriftliche Arbeiten korrigieren; Prüfungen abnehmen",
         "text_en": "Hold classes; correct written work; conduct exams.",
         "label": "stays_with_you",
         "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2947",
+        "text_de": "Forschungsprojekte initiieren, durchführen und ggf. leiten; Forschungsgelder beantragen",
+        "text_en": "Initiate, conduct, and possibly lead research projects; apply for research funding.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       }
     ],
@@ -30556,8 +30556,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Curator": {
@@ -31865,10 +31865,18 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3079",
+        "text_de": "Kaufmännische und verwaltende Aufgaben übernehmen.",
+        "text_en": "Take on commercial and administrative tasks.",
+        "label": "ai_assisted",
+        "score": 0,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3076",
         "text_de": "Betriebsabläufe leiten und organisieren.",
         "text_en": "Lead and organize business operations.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
       },
@@ -31876,16 +31884,8 @@
         "id": "BN_3077",
         "text_de": "Prozesse in den Abteilungen leiten und überwachen.",
         "text_en": "Lead and monitor processes in the departments.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3079",
-        "text_de": "Kaufmännische und verwaltende Aufgaben übernehmen.",
-        "text_en": "Take on commercial and administrative tasks.",
-        "label": "ai_assisted",
-        "score": 0,
         "is_regulated": false
       },
       {
@@ -31902,8 +31902,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 1
+      "ai_assisted": 8,
+      "stays_with_you": 3
     }
   },
   "Head of Corporate Training and Education": {
@@ -31968,19 +31968,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3092",
-        "text_de": "Ausbilderteams leiten und anleiten.",
-        "text_en": "Lead and guide trainer teams.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3089",
         "text_de": "den praktischen Teil der Ausbildung planen, organisieren und überwachen.",
         "text_en": "plan, organize, and supervise the practical part of the training.",
         "label": "stays_with_you",
         "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3092",
+        "text_de": "Ausbilderteams leiten und anleiten.",
+        "text_en": "Lead and guide trainer teams.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       }
     ],
@@ -31989,8 +31989,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 1
+      "ai_assisted": 7,
+      "stays_with_you": 2
     }
   },
   "Head of Controlling": {
@@ -32050,7 +32050,7 @@
         "id": "BN_3099",
         "text_de": "Mitarbeiter anleiten und führen.",
         "text_en": "Guide and lead employees.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
       },
@@ -32076,8 +32076,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Head of Purchasing": {
@@ -32134,14 +32134,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3115",
-        "text_de": "Aufgaben in der Personalauswahl und -entwicklung übernehmen, wie Mitarbeiter führen und Schulungen geben.",
-        "text_en": "take on tasks in personnel selection and development, such as leading employees and providing training.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3114",
         "text_de": "Betriebsbesichtigungen machen, um die Leistung von Lieferanten zu prüfen.",
         "text_en": "conduct site visits to check supplier performance.",
@@ -32156,6 +32148,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_3115",
+        "text_de": "Aufgaben in der Personalauswahl und -entwicklung übernehmen, wie Mitarbeiter führen und Schulungen geben.",
+        "text_en": "take on tasks in personnel selection and development, such as leading employees and providing training.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -32163,8 +32163,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Head of Export": {
@@ -32324,14 +32324,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3137",
-        "text_de": "Das Finanzmanagement leiten.",
-        "text_en": "Lead financial management.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3135",
         "text_de": "Ansprechpartner für Prüfungen sein.",
         "text_en": "Be a contact person for audits.",
@@ -32345,6 +32337,14 @@
         "text_en": "Advise management on financial and tax matters.",
         "label": "stays_with_you",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3137",
+        "text_de": "Das Finanzmanagement leiten.",
+        "text_en": "Lead financial management.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -32369,8 +32369,8 @@
       "automatable": 2,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Manager - Gastronomy Business": {
@@ -32549,7 +32549,7 @@
         "id": "BN_3163",
         "text_de": "Mitarbeiterinnen und Mitarbeiter anleiten und führen.",
         "text_en": "Guide and lead employees.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
       },
@@ -32557,7 +32557,7 @@
         "id": "BN_3166",
         "text_de": "Die Organisation und Qualitätssicherung in der Kostenrechnung leiten.",
         "text_en": "Lead the organization and quality assurance in cost accounting.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
       },
@@ -32583,8 +32583,8 @@
       "automatable": 1,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 2,
+      "stays_with_you": 3
     }
   },
   "Head of Customer Service": {
@@ -32736,14 +32736,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3183",
-        "text_de": "Die interne Marketingorganisation aufbauen und leiten.",
-        "text_en": "Build and lead the internal marketing organization.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3184",
         "text_de": "Verschiedene Unternehmensbereiche koordinieren.",
         "text_en": "Coordinate different company departments.",
@@ -32766,6 +32758,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_3183",
+        "text_de": "Die interne Marketingorganisation aufbauen und leiten.",
+        "text_en": "Build and lead the internal marketing organization.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -32773,8 +32773,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 2
+      "ai_assisted": 8,
+      "stays_with_you": 3
     }
   },
   "Museum Director": {
@@ -33132,25 +33132,9 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3221",
-        "text_de": "alle rechtlichen Angelegenheiten im Unternehmen leiten.",
-        "text_en": "lead all legal matters in the company.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3224",
         "text_de": "die Bearbeitung von sozialem, Arbeits- und Vertragsrecht überwachen.",
         "text_en": "oversee the handling of social, labor, and contract law.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3230",
-        "text_de": "die Organisation von Rechtsseminaren für Mitarbeiter leiten.",
-        "text_en": "lead the organization of legal seminars for employees.",
         "label": "ai_assisted",
         "score": 1,
         "is_regulated": false
@@ -33172,6 +33156,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3221",
+        "text_de": "alle rechtlichen Angelegenheiten im Unternehmen leiten.",
+        "text_en": "lead all legal matters in the company.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3230",
+        "text_de": "die Organisation von Rechtsseminaren für Mitarbeiter leiten.",
+        "text_en": "lead the organization of legal seminars for employees.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3228",
         "text_de": "Gerichtstermine wahrnehmen.",
         "text_en": "Attend court dates.",
@@ -33185,8 +33185,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 3
+      "ai_assisted": 5,
+      "stays_with_you": 5
     }
   },
   "Head of Audit": {
@@ -33377,14 +33377,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3249",
-        "text_de": "Studienseminare fachlich und organisatorisch leiten.",
-        "text_en": "Lead study seminars in a professional and organizational way.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3250",
         "text_de": "Organisatorische und verwaltende Aufgaben erledigen.",
         "text_en": "Handle organizational and administrative tasks.",
@@ -33433,6 +33425,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3249",
+        "text_de": "Studienseminare fachlich und organisatorisch leiten.",
+        "text_en": "Lead study seminars in a professional and organizational way.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3252",
         "text_de": "Unterrichtsbesuche protokollieren und Berichte schreiben.",
         "text_en": "Document classroom visits and write reports.",
@@ -33446,8 +33446,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 1
+      "ai_assisted": 9,
+      "stays_with_you": 2
     }
   },
   "Head of Tourist Information": {
@@ -33647,14 +33647,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3282",
-        "text_de": "Mitarbeiter führen und Weiterbildungen organisieren.",
-        "text_en": "Lead employees and organize training.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3275",
         "text_de": "Kundenbeziehungen aufbauen und pflegen sowie Verhandlungen führen.",
         "text_en": "building and maintaining customer relationships and conducting negotiations.",
@@ -33669,6 +33661,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_3282",
+        "text_de": "Mitarbeiter führen und Weiterbildungen organisieren.",
+        "text_en": "Lead employees and organize training.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -33676,8 +33676,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 3
     }
   },
   "Director - Waldorf Teacher Seminar": {
@@ -33710,22 +33710,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3283",
-        "text_de": "Studienseminare leiten und organisieren.",
-        "text_en": "Lead and organize study seminars.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3284",
-        "text_de": "Die Ausbildung der zukünftigen Waldorflehrerinnen und Waldorflehrer leiten.",
-        "text_en": "Lead the training of future Waldorf teachers.",
-        "label": "ai_assisted",
-        "score": 0,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3288",
         "text_de": "Unterrichtsstunden der angehenden Waldorflehrerinnen und Waldorflehrer besuchen und besprechen.",
         "text_en": "Attend and discuss lessons of future Waldorf teachers.",
@@ -33740,6 +33724,22 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_3283",
+        "text_de": "Studienseminare leiten und organisieren.",
+        "text_en": "Lead and organize study seminars.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3284",
+        "text_de": "Die Ausbildung der zukünftigen Waldorflehrerinnen und Waldorflehrer leiten.",
+        "text_en": "Lead the training of future Waldorf teachers.",
+        "label": "stays_with_you",
+        "score": 0,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -33747,8 +33747,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Manager - Workshops for People with Disabilities": {
@@ -33884,19 +33884,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3298",
-        "text_de": "den Spielbetrieb in einem Theater oder Opernhaus leiten.",
-        "text_en": "lead the operations in a theater or opera house.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3303",
         "text_de": "Verträge mit Künstlern verhandeln und Honorarabrechnungen erstellen.",
         "text_en": "negotiate contracts with artists and create fee statements.",
         "label": "stays_with_you",
         "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3298",
+        "text_de": "den Spielbetrieb in einem Theater oder Opernhaus leiten.",
+        "text_en": "lead the operations in a theater or opera house.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       }
     ],
@@ -33905,8 +33905,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 1
+      "ai_assisted": 6,
+      "stays_with_you": 2
     }
   },
   "Editor - Publishing": {
@@ -34398,14 +34398,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3360",
-        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Forschungsgelder beantragen.",
-        "text_en": "Start, conduct, and lead research projects as well as apply for research funding.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3356",
         "text_de": "Die Vermittlung und den Empfang von Literatur analysieren und bewerten.",
         "text_en": "Analyze and evaluate the communication and reception of literature.",
@@ -34430,6 +34422,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3360",
+        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Forschungsgelder beantragen.",
+        "text_en": "Start, conduct, and lead research projects as well as apply for research funding.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3355",
         "text_de": "Literatur mit verschiedenen Methoden untersuchen und erklären.",
         "text_en": "Examine and explain literature with different methods.",
@@ -34443,8 +34443,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Location Coordinator": {
@@ -35023,17 +35023,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3421",
-        "text_de": "Außendienstmitarbeiter schulen und Informationsmaterial bereitstellen.",
-        "text_en": "Train field staff and provide information materials.",
-        "label": "ai_assisted",
+        "id": "BN_3418",
+        "text_de": "Unternehmen bei der Entwicklung und Vermarktung neuer Produkte beraten.",
+        "text_en": "Advise companies on the development and marketing of new products.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_3418",
-        "text_de": "Unternehmen bei der Entwicklung und Vermarktung neuer Produkte beraten.",
-        "text_en": "Advise companies on the development and marketing of new products.",
+        "id": "BN_3421",
+        "text_de": "Außendienstmitarbeiter schulen und Informationsmaterial bereitstellen.",
+        "text_en": "Train field staff and provide information materials.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -35044,8 +35044,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 1
+      "ai_assisted": 5,
+      "stays_with_you": 2
     }
   },
   "Medical Writer": {
@@ -35091,14 +35091,6 @@
         "text_en": "Make yearly updates and revise products.",
         "label": "high_ai_potential",
         "score": 6,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3435",
-        "text_de": "Die Redaktionsplanung für ein Jahr leiten.",
-        "text_en": "Lead editorial planning for a year.",
-        "label": "ai_assisted",
-        "score": 5,
         "is_regulated": false
       },
       {
@@ -35166,14 +35158,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3434",
-        "text_de": "Die Geschäftsleitung bei Preisverhandlungen unterstützen.",
-        "text_en": "Support management in price negotiations.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3436",
         "text_de": "Präsentationen für Kunden halten.",
         "text_en": "Give presentations for clients.",
@@ -35206,6 +35190,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3435",
+        "text_de": "Die Redaktionsplanung für ein Jahr leiten.",
+        "text_en": "Lead editorial planning for a year.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3434",
+        "text_de": "Die Geschäftsleitung bei Preisverhandlungen unterstützen.",
+        "text_en": "Support management in price negotiations.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3432",
         "text_de": "Fragen direkt mit Wissenschaftlern besprechen.",
         "text_en": "Discuss questions directly with scientists.",
@@ -35227,8 +35227,8 @@
       "automatable": 1,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 14,
-      "stays_with_you": 1
+      "ai_assisted": 12,
+      "stays_with_you": 3
     }
   },
   "Media Manager": {
@@ -36242,14 +36242,6 @@
     "kldb2010": "B 94114",
     "tasks": [
       {
-        "id": "BN_3549",
-        "text_de": "Online-Kurse für verschiedene Zielgruppen erstellen und leiten.",
-        "text_en": "Create and lead online courses for different target groups.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3554",
         "text_de": "Strategien für Selbstmarketing entwickeln und umsetzen.",
         "text_en": "Develop and implement self-marketing strategies.",
@@ -36314,6 +36306,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3549",
+        "text_de": "Online-Kurse für verschiedene Zielgruppen erstellen und leiten.",
+        "text_en": "Create and lead online courses for different target groups.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3545",
         "text_de": "Eigene und fremde Musikstücke einstudieren und proben.",
         "text_en": "Practice and rehearse own and others' music pieces.",
@@ -36351,8 +36351,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 7
+      "ai_assisted": 5,
+      "stays_with_you": 8
     }
   },
   "Musician - International Folklore": {
@@ -36360,14 +36360,6 @@
     "sector": "other",
     "kldb2010": "B 94114",
     "tasks": [
-      {
-        "id": "BN_3563",
-        "text_de": "Online-Kurse für bestimmte Zielgruppen erstellen und leiten",
-        "text_en": "Create and lead online courses for specific target groups",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
       {
         "id": "BN_3568",
         "text_de": "Strategien für Selbstmarketing entwickeln und umsetzen",
@@ -36433,6 +36425,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3563",
+        "text_de": "Online-Kurse für bestimmte Zielgruppen erstellen und leiten",
+        "text_en": "Create and lead online courses for specific target groups",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3556",
         "text_de": "Auftritte und Aufnahmen planen und durchführen",
         "text_en": "Plan and perform shows and recordings",
@@ -36478,8 +36478,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 7
+      "ai_assisted": 6,
+      "stays_with_you": 8
     }
   },
   "Musician - Pop/Rock/Jazz": {
@@ -36551,14 +36551,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3582",
-        "text_de": "Online-Kurse für bestimmte Gruppen erstellen und leiten.",
-        "text_en": "Create and lead online courses for specific groups.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3583",
         "text_de": "Organisatorische Aufgaben erledigen.",
         "text_en": "Complete organizational tasks.",
@@ -36615,6 +36607,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3582",
+        "text_de": "Online-Kurse für bestimmte Gruppen erstellen und leiten.",
+        "text_en": "Create and lead online courses for specific groups.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3576",
         "text_de": "Musikstücke lernen und alleine oder mit anderen proben.",
         "text_en": "Learn music pieces and rehearse alone or with others.",
@@ -36660,8 +36660,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 9
+      "ai_assisted": 3,
+      "stays_with_you": 10
     }
   },
   "Musician - Folk Music": {
@@ -36675,14 +36675,6 @@
         "text_en": "Complete accounting tasks.",
         "label": "high_ai_potential",
         "score": 6,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_3594",
-        "text_de": "Online-Kurse für bestimmte Gruppen erstellen und leiten.",
-        "text_en": "Create and lead online courses for specific groups.",
-        "label": "ai_assisted",
-        "score": 4,
         "is_regulated": false
       },
       {
@@ -36721,6 +36713,14 @@
         "id": "BN_3589",
         "text_de": "Auftritte und Aufnahmen planen und durchführen.",
         "text_en": "Plan and carry out performances and recordings.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3594",
+        "text_de": "Online-Kurse für bestimmte Gruppen erstellen und leiten.",
+        "text_en": "Create and lead online courses for specific groups.",
         "label": "stays_with_you",
         "score": 4,
         "is_regulated": false
@@ -36771,8 +36771,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 7
+      "ai_assisted": 3,
+      "stays_with_you": 8
     }
   },
   "Musical Instrument Maker": {
@@ -36860,14 +36860,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3608",
-        "text_de": "Musikveranstaltungen und Festivals planen und leiten.",
-        "text_en": "Plan and lead music events and festivals.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3610",
         "text_de": "Detaillierte Pläne und Kostenübersichten für Veranstaltungen erstellen.",
         "text_en": "Create detailed plans and cost estimates for events.",
@@ -36940,6 +36932,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3608",
+        "text_de": "Musikveranstaltungen und Festivals planen und leiten.",
+        "text_en": "Plan and lead music events and festivals.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3609",
         "text_de": "Veranstaltungskonzepte erstellen und mit Partnern absprechen.",
         "text_en": "Create event concepts and coordinate with partners.",
@@ -36977,8 +36977,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 6
+      "ai_assisted": 7,
+      "stays_with_you": 7
     }
   },
   "Music Editor": {
@@ -37590,14 +37590,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3680",
-        "text_de": "Qualität von Rohstoffen überwachen und Studien leiten.",
-        "text_en": "Monitor the quality of raw materials and lead studies.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3684",
         "text_de": "Ärzte und Heilpraktiker über Dienstleistungen beraten.",
         "text_en": "Advise doctors and alternative practitioners about services.",
@@ -37638,6 +37630,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3680",
+        "text_de": "Qualität von Rohstoffen überwachen und Studien leiten.",
+        "text_en": "Monitor the quality of raw materials and lead studies.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3683",
         "text_de": "Studienergebnisse dokumentieren und aufbereiten.",
         "text_en": "Document and prepare study results.",
@@ -37651,8 +37651,8 @@
       "automatable": 1,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 3
+      "ai_assisted": 8,
+      "stays_with_you": 4
     }
   },
   "Online Marketing Manager": {
@@ -38376,14 +38376,6 @@
     "kldb2010": "B 91334",
     "tasks": [
       {
-        "id": "BN_3762",
-        "text_de": "Kurse und Weiterbildungen planen und leiten.",
-        "text_en": "Plan and lead courses and further training.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3767",
         "text_de": "Vorlesungen und Seminare planen und durchführen.",
         "text_en": "Plan and conduct lectures and seminars.",
@@ -38432,6 +38424,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3762",
+        "text_de": "Kurse und Weiterbildungen planen und leiten.",
+        "text_en": "Plan and lead courses and further training.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3761",
         "text_de": "Bildungsberatung anbieten und über Studien- und Berufsmöglichkeiten informieren.",
         "text_en": "Offer educational counseling and inform about study and career options.",
@@ -38445,8 +38445,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 1
+      "ai_assisted": 6,
+      "stays_with_you": 2
     }
   },
   "Educational-Therapeutic Conductor": {
@@ -40018,14 +40018,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3918",
-        "text_de": "Die Produktion der Podcasts leiten und durchführen.",
-        "text_en": "Lead and carry out the production of the podcasts.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3923",
         "text_de": "Redaktionelle Arbeiten durchführen oder beauftragen.",
         "text_en": "Carry out or commission editorial work.",
@@ -40054,6 +40046,14 @@
         "text_de": "Öffentlichkeitsarbeit durchführen.",
         "text_en": "Carry out public relations work.",
         "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3918",
+        "text_de": "Die Produktion der Podcasts leiten und durchführen.",
+        "text_en": "Lead and carry out the production of the podcasts.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -40119,8 +40119,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 13,
-      "stays_with_you": 6
+      "ai_assisted": 12,
+      "stays_with_you": 7
     }
   },
   "Political Advisor": {
@@ -40558,14 +40558,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3977",
-        "text_de": "Die Presse- und Öffentlichkeitsarbeit für ein Unternehmen oder eine Organisation leiten.",
-        "text_en": "Lead the press and public relations for a company or organization.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3981",
         "text_de": "Anfragen von Journalisten und Kunden beantworten und Interviews vermitteln.",
         "text_en": "Answer inquiries from journalists and customers and arrange interviews.",
@@ -40590,6 +40582,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3977",
+        "text_de": "Die Presse- und Öffentlichkeitsarbeit für ein Unternehmen oder eine Organisation leiten.",
+        "text_en": "Lead the press and public relations for a company or organization.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3978",
         "text_de": "Die Kontakte zu den Medien pflegen und die Kontaktdaten verwalten.",
         "text_en": "Maintain contacts with the media and manage contact information.",
@@ -40603,8 +40603,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 3
+      "ai_assisted": 4,
+      "stays_with_you": 4
     }
   },
   "Product Owner": {
@@ -40828,14 +40828,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4009",
-        "text_de": "Abläufe im Produktmanagement leiten.",
-        "text_en": "Lead processes in product management.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4001",
         "text_de": "Entwürfe mit der Fertigung in Prototypen umsetzen.",
         "text_en": "Implement designs with manufacturing in prototypes.",
@@ -40850,6 +40842,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4009",
+        "text_de": "Abläufe im Produktmanagement leiten.",
+        "text_en": "Lead processes in product management.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -40857,8 +40857,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 2
+      "ai_assisted": 10,
+      "stays_with_you": 3
     }
   },
   "Professor at Universities": {
@@ -41003,14 +41003,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4029",
-        "text_de": "Eine Forschungsgruppe oder einen Fachbereich leiten.",
-        "text_en": "Lead a research group or a department.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4017",
         "text_de": "Forschungsprojekte mit Kollegen besprechen und diskutieren.",
         "text_en": "Discuss and talk about research projects with colleagues.",
@@ -41059,6 +41051,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4029",
+        "text_de": "Eine Forschungsgruppe oder einen Fachbereich leiten.",
+        "text_en": "Lead a research group or a department.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4035",
         "text_de": "Mit anderen Hochschulen und Bildungseinrichtungen zusammenarbeiten.",
         "text_en": "Collaborate with other universities and educational institutions.",
@@ -41072,8 +41072,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 21,
-      "stays_with_you": 4
+      "ai_assisted": 20,
+      "stays_with_you": 5
     }
   },
   "Programmatic Advertising Manager": {
@@ -41289,19 +41289,19 @@
         "is_regulated": false
       },
       {
-        "id": "GEN_0244",
-        "text_de": "Ressourcenkonflikte lösen und Hindernisse eskalieren.",
-        "text_en": "Resolve resource conflicts and escalate blockers.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4053",
         "text_de": "Die Teamarbeit koordinieren und Aufgaben verteilen.",
         "text_en": "Coordinate teamwork and distribute tasks.",
         "label": "ai_assisted",
         "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "GEN_0244",
+        "text_de": "Ressourcenkonflikte lösen und Hindernisse eskalieren.",
+        "text_en": "Resolve resource conflicts and escalate blockers.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -41326,8 +41326,8 @@
       "automatable": 0,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 2
+      "ai_assisted": 8,
+      "stays_with_you": 3
     }
   },
   "Prorector / Vice President": {
@@ -41349,14 +41349,6 @@
         "text_en": "Hold lectures in academic specialization.",
         "label": "ai_assisted",
         "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_4059",
-        "text_de": "Kommissionen für verschiedene Themen einberufen und leiten.",
-        "text_en": "Call and lead commissions for various topics.",
-        "label": "ai_assisted",
-        "score": 1,
         "is_regulated": false
       },
       {
@@ -41382,6 +41374,14 @@
         "label": "stays_with_you",
         "score": 6,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4059",
+        "text_de": "Kommissionen für verschiedene Themen einberufen und leiten.",
+        "text_en": "Call and lead commissions for various topics.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -41389,8 +41389,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Principal Investigator": {
@@ -41471,14 +41471,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4076",
-        "text_de": "Das Team leiten und koordinieren.",
-        "text_en": "Lead and coordinate the team.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4067",
         "text_de": "Teilnehmer über Vor- und Nachteile der Studie informieren.",
         "text_en": "Inform participants about the pros and cons of the study.",
@@ -41503,6 +41495,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4076",
+        "text_de": "Das Team leiten und koordinieren.",
+        "text_en": "Lead and coordinate the team.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4074",
         "text_de": "Ergebnisse der Studie festhalten.",
         "text_en": "Document the results of the study.",
@@ -41516,8 +41516,8 @@
       "automatable": 1,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 3
+      "ai_assisted": 8,
+      "stays_with_you": 4
     }
   },
   "Psychologist": {
@@ -41685,14 +41685,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4097",
-        "text_de": "Forschungsprojekte starten und leiten.",
-        "text_en": "start and lead research projects.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4086",
         "text_de": "psychische Belastungen wie Ängste und Depressionen erkennen.",
         "text_en": "Recognize mental stress like anxiety and depression.",
@@ -41771,6 +41763,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4097",
+        "text_de": "Forschungsprojekte starten und leiten.",
+        "text_en": "start and lead research projects.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -41778,8 +41778,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 10
+      "ai_assisted": 3,
+      "stays_with_you": 11
     }
   },
   "Public Affairs Manager": {
@@ -41971,14 +41971,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4116",
-        "text_de": "Das religiöse Leben in der jüdischen Gemeinde leiten.",
-        "text_en": "Lead the religious life in the Jewish community.",
-        "label": "ai_assisted",
-        "score": 0,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4118",
         "text_de": "Kranke, trauernde und ältere Menschen besuchen und unterstützen.",
         "text_en": "Visit and support sick, grieving, and elderly people.",
@@ -42009,6 +42001,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4116",
+        "text_de": "Das religiöse Leben in der jüdischen Gemeinde leiten.",
+        "text_en": "Lead the religious life in the Jewish community.",
+        "label": "stays_with_you",
+        "score": 0,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -42016,8 +42016,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 4
+      "ai_assisted": 5,
+      "stays_with_you": 5
     }
   },
   "Rating Analyst": {
@@ -42669,14 +42669,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4196",
-        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Forschungsgelder beantragen.",
-        "text_en": "Start, carry out, and lead research projects and apply for research funding.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4193",
         "text_de": "Exkursionen organisieren und durchführen.",
         "text_en": "Organize and carry out excursions.",
@@ -42691,6 +42683,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4196",
+        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Forschungsgelder beantragen.",
+        "text_en": "Start, carry out, and lead research projects and apply for research funding.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -42698,8 +42698,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 2
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Regional Scientist - Asian Studies": {
@@ -42779,14 +42779,6 @@
     "kldb2010": "B 91254",
     "tasks": [
       {
-        "id": "BN_4208",
-        "text_de": "Lehrveranstaltungen planen und leiten.",
-        "text_en": "Plan and lead courses.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4204",
         "text_de": "Entwicklungen und Umweltfaktoren in den europäischen Ländern untersuchen.",
         "text_en": "investigating developments and environmental factors in European countries.",
@@ -42825,6 +42817,14 @@
         "label": "stays_with_you",
         "score": 5,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4208",
+        "text_de": "Lehrveranstaltungen planen und leiten.",
+        "text_en": "Plan and lead courses.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -42832,8 +42832,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Regional Scientist - Islamic Studies": {
@@ -42866,17 +42866,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4214",
-        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Fördergelder beantragen.",
-        "text_en": "Start, conduct, and lead research projects and apply for funding.",
-        "label": "ai_assisted",
+        "id": "BN_4211",
+        "text_de": "Exkursionen planen und durchführen.",
+        "text_en": "Plan and conduct excursions.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_4211",
-        "text_de": "Exkursionen planen und durchführen.",
-        "text_en": "Plan and conduct excursions.",
+        "id": "BN_4214",
+        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Fördergelder beantragen.",
+        "text_en": "Start, conduct, and lead research projects and apply for funding.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -42887,8 +42887,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Regional Scientist - Latin American Studies": {
@@ -42929,14 +42929,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4221",
-        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Gelder beantragen.",
-        "text_en": "Start, conduct, and lead research projects and apply for funding.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4216",
         "text_de": "Interviews führen, Fotos machen oder Filme drehen und Soziogramme erstellen.",
         "text_en": "Conduct interviews, take photos or make films and create sociograms.",
@@ -42951,6 +42943,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4221",
+        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Gelder beantragen.",
+        "text_en": "Start, conduct, and lead research projects and apply for funding.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -42958,8 +42958,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 2
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Regional Scientist for North America": {
@@ -42973,14 +42973,6 @@
         "text_en": "Plan and hold courses.",
         "label": "ai_assisted",
         "score": 5,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_4226",
-        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Forschungsgelder beantragen.",
-        "text_en": "Start, conduct, and lead research projects as well as apply for research funding.",
-        "label": "ai_assisted",
-        "score": 4,
         "is_regulated": false
       },
       {
@@ -43006,6 +42998,14 @@
         "label": "stays_with_you",
         "score": 5,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4226",
+        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Forschungsgelder beantragen.",
+        "text_en": "Start, conduct, and lead research projects as well as apply for research funding.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -43013,8 +43013,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Regulatory Affairs Manager": {
@@ -43443,14 +43443,6 @@
     "kldb2010": "B 84424",
     "tasks": [
       {
-        "id": "BN_4274",
-        "text_de": "Veranstaltungen oder Fortbildungen planen und durchführen.",
-        "text_en": "Plan and conduct events or training sessions.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4273",
         "text_de": "Wissen über islamische Bräuche und religiöse Fragen an Jugendliche und Erwachsene weitergeben.",
         "text_en": "Share knowledge about Islamic customs and religious questions with youth and adults.",
@@ -43464,6 +43456,14 @@
         "text_en": "Complete administrative tasks.",
         "label": "ai_assisted",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4274",
+        "text_de": "Veranstaltungen oder Fortbildungen planen und durchführen.",
+        "text_en": "Plan and conduct events or training sessions.",
+        "label": "stays_with_you",
+        "score": 5,
         "is_regulated": false
       },
       {
@@ -43488,8 +43488,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 2
+      "ai_assisted": 2,
+      "stays_with_you": 3
     }
   },
   "Religious Educator - Jewish Communities": {
@@ -44371,22 +44371,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4348",
-        "text_de": "Verkaufsaktivitäten in einem bestimmten Gebiet leiten.",
-        "text_en": "Lead sales activities in a specific area.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_4356",
-        "text_de": "Mitarbeiter führen.",
-        "text_en": "Lead employees in the sales team.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4353",
         "text_de": "Das Unternehmen auf Messen und Events vertreten.",
         "text_en": "Represent the company at trade shows and events.",
@@ -44417,6 +44401,22 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4348",
+        "text_de": "Verkaufsaktivitäten in einem bestimmten Gebiet leiten.",
+        "text_en": "Lead sales activities in a specific area.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4356",
+        "text_de": "Mitarbeiter führen.",
+        "text_en": "Lead employees in the sales team.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -44424,8 +44424,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 4
+      "ai_assisted": 6,
+      "stays_with_you": 6
     }
   },
   "Actor/Actress": {
@@ -44853,14 +44853,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4403",
-        "text_de": "den Unterricht planen und koordinieren, Klassen und Kurse einteilen und Aufsichtspläne erstellen",
-        "text_en": "plan and coordinate lessons, assign classes and courses, and create supervision plans",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4405",
         "text_de": "Fortbildungen für Lehrkräfte finden und organisieren",
         "text_en": "find and organize training for teachers",
@@ -44909,14 +44901,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4401",
-        "text_de": "berufliche Schulen führen",
-        "text_en": "Lead vocational schools.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4407",
         "text_de": "die Pflege des Schulgebäudes und der Außenanlagen organisieren",
         "text_en": "organize the maintenance of the school building and outdoor areas",
@@ -44925,11 +44909,27 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4403",
+        "text_de": "den Unterricht planen und koordinieren, Klassen und Kurse einteilen und Aufsichtspläne erstellen",
+        "text_en": "plan and coordinate lessons, assign classes and courses, and create supervision plans",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4406",
         "text_de": "die Sicherheit auf dem Schulgelände gewährleisten",
         "text_en": "ensure safety on the school grounds",
         "label": "stays_with_you",
         "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4401",
+        "text_de": "berufliche Schulen führen",
+        "text_en": "Lead vocational schools.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -44946,8 +44946,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 3
+      "ai_assisted": 6,
+      "stays_with_you": 5
     }
   },
   "School Director - Adult Education": {
@@ -44996,14 +44996,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4417",
-        "text_de": "Lehrpersonal gewinnen, anleiten und betreuen sowie Weiterbildungsmaßnahmen planen und durchführen.",
-        "text_en": "Recruit, guide, and support teaching staff and plan and conduct further training measures.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": true
-      },
-      {
         "id": "BN_4424",
         "text_de": "Kooperationen mit anderen Bildungsträgern und Vertretern von Wirtschaft und Verwaltung aufbauen und pflegen.",
         "text_en": "Build and maintain cooperation with other educational providers and representatives from business and administration.",
@@ -45026,6 +45018,14 @@
         "label": "stays_with_you",
         "score": 6,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4417",
+        "text_de": "Lehrpersonal gewinnen, anleiten und betreuen sowie Weiterbildungsmaßnahmen planen und durchführen.",
+        "text_en": "Recruit, guide, and support teaching staff and plan and conduct further training measures.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": true
       },
       {
         "id": "BN_4418",
@@ -45057,8 +45057,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 4
+      "ai_assisted": 6,
+      "stays_with_you": 5
     }
   },
   "School Principal - Music Schools": {
@@ -45242,14 +45242,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4441",
-        "text_de": "Dienstbesprechungen und Lehrerkonferenzen leiten.",
-        "text_en": "Lead staff meetings and teacher conferences.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4445",
         "text_de": "Die Pflege des Schulgebäudes und der Außenanlagen organisieren.",
         "text_en": "Organize the maintenance of the school building and outdoor areas.",
@@ -45264,6 +45256,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4441",
+        "text_de": "Dienstbesprechungen und Lehrerkonferenzen leiten.",
+        "text_en": "Lead staff meetings and teacher conferences.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -45271,8 +45271,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Pregnancy Conflict Advisor": {
@@ -45594,7 +45594,7 @@
         "id": "BN_4483",
         "text_de": "Schulungen und Workshops leiten.",
         "text_en": "Lead training and workshops.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -45612,8 +45612,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 1,
-      "ai_assisted": 12,
-      "stays_with_you": 1
+      "ai_assisted": 11,
+      "stays_with_you": 2
     }
   },
   "Glider Flight Instructor": {
@@ -46075,14 +46075,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4533",
-        "text_de": "Fragen beantworten, Diskussionen führen und Inhalte überwachen.",
-        "text_en": "answer questions, lead discussions, and monitor content",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4534",
         "text_de": "Kundenfeedback entgegennehmen und an andere Abteilungen weitergeben.",
         "text_en": "Receive customer feedback and pass it to other departments.",
@@ -46107,19 +46099,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4538",
-        "text_de": "Mitarbeiter anleiten und führen.",
-        "text_en": "Guide and lead employees.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "GEN_0344",
         "text_de": "Krisenkommunikationspläne für Social Media entwickeln.",
         "text_en": "Develop crisis communication plans for social media.",
         "label": "stays_with_you",
         "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4533",
+        "text_de": "Fragen beantworten, Diskussionen führen und Inhalte überwachen.",
+        "text_en": "answer questions, lead discussions, and monitor content",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -46129,6 +46121,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4538",
+        "text_de": "Mitarbeiter anleiten und führen.",
+        "text_en": "Guide and lead employees.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -46136,8 +46136,8 @@
       "automatable": 0,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 2
+      "ai_assisted": 7,
+      "stays_with_you": 4
     }
   },
   "Software Architect": {
@@ -46234,14 +46234,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4553",
-        "text_de": "Managementaufgaben in IT-Teams übernehmen und Mitarbeiter führen.",
-        "text_en": "Take on management tasks in IT teams and lead employees.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4539",
         "text_de": "Kundenanforderungen an Software analysieren und mit anderen besprechen.",
         "text_en": "Analyze customer requirements for software and discuss them with others.",
@@ -46258,6 +46250,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4553",
+        "text_de": "Managementaufgaben in IT-Teams übernehmen und Mitarbeiter führen.",
+        "text_en": "Take on management tasks in IT teams and lead employees.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4552",
         "text_de": "Bei der Qualitätssicherung der Software helfen und die Einhaltung von Vorgaben überprüfen.",
         "text_en": "Assist in software quality assurance and check compliance with specifications.",
@@ -46271,8 +46271,8 @@
       "automatable": 1,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 2
+      "ai_assisted": 11,
+      "stays_with_you": 3
     }
   },
   "Solo Singer": {
@@ -46384,14 +46384,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4568",
-        "text_de": "Einrichtungen leiten.",
-        "text_en": "Lead institutions in social services.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4562",
         "text_de": "Kinder und Jugendliche mit Verhaltensproblemen betreuen und bei Entwicklungsproblemen helfen.",
         "text_en": "Care for children and teenagers with behavioral problems and help with development issues.",
@@ -46430,6 +46422,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4568",
+        "text_de": "Einrichtungen leiten.",
+        "text_en": "Lead institutions in social services.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -46437,8 +46437,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 3,
-      "stays_with_you": 5
+      "ai_assisted": 2,
+      "stays_with_you": 6
     }
   },
   "Social Economist / Social Manager": {
@@ -46937,14 +46937,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4622",
-        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Forschungsgelder beantragen.",
-        "text_en": "Start, conduct, and lead research projects, as well as apply for research funding.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4623",
         "text_de": "Fachvorträge halten und Artikel sowie Bücher veröffentlichen.",
         "text_en": "Give expert talks and publish articles and books.",
@@ -46959,6 +46951,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_4622",
+        "text_de": "Forschungsprojekte starten, durchführen und leiten sowie Forschungsgelder beantragen.",
+        "text_en": "Start, conduct, and lead research projects, as well as apply for research funding.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -46966,8 +46966,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "PLC Engineer": {
@@ -47332,14 +47332,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4657",
-        "text_de": "Technische und organisatorische Maßnahmen zum Strahlenschutz leiten.",
-        "text_en": "Lead technical and organizational measures for radiation protection.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4662",
         "text_de": "Unternehmensleitungen über die Ergebnisse informieren und beraten.",
         "text_en": "Inform and advise company management about the results.",
@@ -47364,6 +47356,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4657",
+        "text_de": "Technische und organisatorische Maßnahmen zum Strahlenschutz leiten.",
+        "text_en": "Lead technical and organizational measures for radiation protection.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4665",
         "text_de": "Personen in Strahlenschutzbereichen einweisen und unterweisen.",
         "text_en": "Instruct and guide people in radiation protection areas.",
@@ -47385,8 +47385,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 3
+      "ai_assisted": 3,
+      "stays_with_you": 4
     }
   },
   "Radiation Protection Engineer": {
@@ -48987,14 +48987,6 @@
     "kldb2010": "B 83314",
     "tasks": [
       {
-        "id": "BN_4820",
-        "text_de": "Theologische Kurse planen und leiten sowie Prüfungen abnehmen.",
-        "text_en": "Plan and lead theological courses and conduct exams.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4817",
         "text_de": "Theologische Texte aus der Geschichte und der Gegenwart suchen, untersuchen, vergleichen und erklären.",
         "text_en": "Search, examine, compare, and explain theological texts from history and the present.",
@@ -49019,6 +49011,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4820",
+        "text_de": "Theologische Kurse planen und leiten sowie Prüfungen abnehmen.",
+        "text_en": "Plan and lead theological courses and conduct exams.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4821",
         "text_de": "Bei Konflikten in der Gemeinde helfen.",
         "text_en": "Help with conflicts in the community.",
@@ -49032,8 +49032,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 1
+      "ai_assisted": 3,
+      "stays_with_you": 2
     }
   },
   "Veterinarian": {
@@ -49543,14 +49543,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4862",
-        "text_de": "Die Verkaufsabteilung führen.",
-        "text_en": "Lead the sales department.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4855",
         "text_de": "Aufgaben in Kur- und Tourismusbehörden erledigen.",
         "text_en": "complete tasks in spa and tourism authorities.",
@@ -49575,6 +49567,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4862",
+        "text_de": "Die Verkaufsabteilung führen.",
+        "text_en": "Lead the sales department.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4863",
         "text_de": "Mitarbeiter in der Verkaufsabteilung einteilen und deren Arbeit überwachen.",
         "text_en": "Assign employees in the sales department and supervise their work.",
@@ -49596,8 +49596,8 @@
       "automatable": 0,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 20,
-      "stays_with_you": 4
+      "ai_assisted": 19,
+      "stays_with_you": 5
     }
   },
   "Toxicologist": {
@@ -50962,14 +50962,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5017",
-        "text_de": "Projektteams leiten und anleiten.",
-        "text_en": "Lead and guide project teams.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5003",
         "text_de": "Kunden beraten, welche Forschungsmethode am besten geeignet ist.",
         "text_en": "Advise clients on which research method is best suited.",
@@ -50992,6 +50984,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_5017",
+        "text_de": "Projektteams leiten und anleiten.",
+        "text_en": "Lead and guide project teams.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -50999,8 +50999,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 3
+      "ai_assisted": 10,
+      "stays_with_you": 4
     }
   },
   "Venture Capitalist": {
@@ -51263,22 +51263,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5046",
-        "text_de": "Die fachliche Arbeit des Vereins oder Verbands leiten.",
-        "text_en": "Lead the professional work of the association or organization.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_5049",
-        "text_de": "Die Marketing- und Öffentlichkeitsarbeit leiten.",
-        "text_en": "Lead marketing and public relations.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5048",
         "text_de": "Verträge vorbereiten, verhandeln und gegebenenfalls unterzeichnen.",
         "text_en": "Prepare, negotiate, and possibly sign contracts.",
@@ -51311,6 +51295,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5046",
+        "text_de": "Die fachliche Arbeit des Vereins oder Verbands leiten.",
+        "text_en": "Lead the professional work of the association or organization.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_5049",
+        "text_de": "Die Marketing- und Öffentlichkeitsarbeit leiten.",
+        "text_en": "Lead marketing and public relations.",
+        "label": "stays_with_you",
+        "score": 1,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5042",
         "text_de": "Die Mitgliederverwaltung betreuen.",
         "text_en": "Manage member administration.",
@@ -51324,8 +51324,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 4
+      "ai_assisted": 10,
+      "stays_with_you": 6
     }
   },
   "Procurement Manager": {
@@ -52705,14 +52705,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5186",
-        "text_de": "Schulungen für Mitarbeiter leiten",
-        "text_en": "Lead training for employees.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5187",
         "text_de": "technische Beschwerden annehmen",
         "text_en": "Receive technical complaints.",
@@ -52769,6 +52761,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5186",
+        "text_de": "Schulungen für Mitarbeiter leiten",
+        "text_en": "Lead training for employees.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "ONET_0021",
         "text_de": "",
         "text_en": "Collaborate with sales teams to understand customer requirements.",
@@ -52790,8 +52790,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 6
+      "ai_assisted": 5,
+      "stays_with_you": 7
     }
   },
   "Sales Technician": {
@@ -53078,19 +53078,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5214",
-        "text_de": "Führungsaufgaben und Aufsicht übernehmen.",
-        "text_en": "Take on leadership and supervision tasks.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5218",
         "text_de": "Wichtige Entscheidungen treffen.",
         "text_en": "Make important decisions.",
         "label": "ai_assisted",
         "score": 0,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_5214",
+        "text_de": "Führungsaufgaben und Aufsicht übernehmen.",
+        "text_en": "Take on leadership and supervision tasks.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       },
       {
@@ -53107,8 +53107,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 1
+      "ai_assisted": 8,
+      "stays_with_you": 2
     }
   },
   "Economist": {
@@ -53752,19 +53752,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5280",
-        "text_de": "Mitarbeiter im Bereich Werbung leiten.",
-        "text_en": "Lead employees in the advertising department.",
-        "label": "ai_assisted",
-        "score": 1,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5270",
         "text_de": "Unternehmen in Werbefragen beraten.",
         "text_en": "Advise companies on advertising issues.",
         "label": "stays_with_you",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_5280",
+        "text_de": "Mitarbeiter im Bereich Werbung leiten.",
+        "text_en": "Lead employees in the advertising department.",
+        "label": "stays_with_you",
+        "score": 1,
         "is_regulated": false
       }
     ],
@@ -53773,8 +53773,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 1
+      "ai_assisted": 9,
+      "stays_with_you": 2
     }
   },
   "Copywriter": {
@@ -53926,17 +53926,17 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5298",
-        "text_de": "Kontakt zu Führungskräften und Aufsichtsräten von börsennotierten Unternehmen halten.",
-        "text_en": "Maintain contact with executives and supervisory boards of publicly traded companies.",
-        "label": "ai_assisted",
+        "id": "BN_5295",
+        "text_de": "Recherchen zu Branchen und Unternehmen durchführen.",
+        "text_en": "Conduct research on industries and companies.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
       {
-        "id": "BN_5295",
-        "text_de": "Recherchen zu Branchen und Unternehmen durchführen.",
-        "text_en": "Conduct research on industries and companies.",
+        "id": "BN_5298",
+        "text_de": "Kontakt zu Führungskräften und Aufsichtsräten von börsennotierten Unternehmen halten.",
+        "text_en": "Maintain contact with executives and supervisory boards of publicly traded companies.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -53947,8 +53947,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 1
+      "ai_assisted": 4,
+      "stays_with_you": 2
     }
   },
   "Securities Clerk": {
@@ -54139,14 +54139,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5319",
-        "text_de": "Vermittle ethische Werte und Verhaltenskodizes in Trainingsprogrammen.",
-        "text_en": "Teach ethical values and codes of conduct in training programs.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5322",
         "text_de": "Halte Fachvorträge und veröffentliche Artikel und Bücher.",
         "text_en": "Give expert talks and publish articles and books.",
@@ -54187,6 +54179,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5319",
+        "text_de": "Vermittle ethische Werte und Verhaltenskodizes in Trainingsprogrammen.",
+        "text_en": "Teach ethical values and codes of conduct in training programs.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5320",
         "text_de": "Fördere den Austausch von Erfahrungen durch Workshops.",
         "text_en": "Encourage the exchange of experiences through workshops.",
@@ -54200,8 +54200,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 11,
-      "stays_with_you": 2
+      "ai_assisted": 10,
+      "stays_with_you": 3
     }
   },
   "Economic Developer": {
@@ -54693,14 +54693,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5379",
-        "text_de": "Die Aus- und Weiterbildung von medizinischem Nachwuchs organisieren und durchführen.",
-        "text_en": "Organize and conduct the training and education of medical trainees.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "GEN_0310",
         "text_de": "Kieferorthopädische Behandlungen planen oder an Spezialisten überweisen.",
         "text_en": "Plan orthodontic treatments or refer to specialists.",
@@ -54757,6 +54749,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5379",
+        "text_de": "Die Aus- und Weiterbildung von medizinischem Nachwuchs organisieren und durchführen.",
+        "text_en": "Organize and conduct the training and education of medical trainees.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5375",
         "text_de": "Patienten über Vorsorgemaßnahmen beraten, wie die richtige Zahnputztechnik.",
         "text_en": "Advise patients on preventive measures, like the correct tooth brushing technique.",
@@ -54786,8 +54786,8 @@
       "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 4,
-      "stays_with_you": 7
+      "ai_assisted": 3,
+      "stays_with_you": 8
     }
   },
   "Magician": {
