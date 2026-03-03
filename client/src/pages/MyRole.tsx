@@ -1,6 +1,6 @@
 import { MyRoleTasks } from "@/components/role-descriptor/MyRoleTasks";
 import { Link } from "wouter";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function MyRole() {
@@ -14,15 +14,13 @@ export default function MyRole() {
                 <ArrowLeft className="w-4 h-4" />
               </Button>
             </Link>
-            <h1 className="text-lg font-serif font-medium text-primary">
-              My Role & Tasks
-            </h1>
+            <div className="flex items-center gap-2">
+              <Compass className="w-5 h-5 text-primary" />
+              <h1 className="text-lg font-serif font-medium text-primary">
+                KI Kompass
+              </h1>
+            </div>
           </div>
-          <Link href="/dashboard">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
-              Skip to Dashboard
-            </Button>
-          </Link>
         </div>
       </header>
 

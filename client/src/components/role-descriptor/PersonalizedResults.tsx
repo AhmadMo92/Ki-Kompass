@@ -1,17 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, Bot, Cog, TrendingUp, TrendingDown, Minus, Sparkles, RotateCcw } from "lucide-react";
-
-interface ExposureData {
-  human: number;
-  ai_assisted: number;
-  automation: number;
-}
+import { CATEGORIES, CATEGORY_ORDER, CategoryLabel } from "@/lib/data";
+import { Sparkles, RotateCcw, TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { DonutChart } from "./DonutChart";
 
 interface PersonalizedResultsProps {
-  personal: ExposureData;
-  typical: ExposureData;
+  personal: Record<CategoryLabel, number>;
+  typical: Record<CategoryLabel, number>;
   taskCount: { selected: number; total: number };
   language: "en" | "de";
   onReset: () => void;
@@ -22,55 +17,12 @@ function DiffIndicator({ diff, language }: { diff: number; language: "en" | "de"
     return <span className="text-gray-500 text-xs flex items-center gap-1"><Minus className="w-3 h-3" /> {language === "en" ? "Same" : "Gleich"}</span>;
   }
   if (diff > 0) {
-    return <span className="text-green-600 text-xs flex items-center gap-1"><TrendingUp className="w-3 h-3" /> +{diff.toFixed(1)}%</span>;
+    return <span className="text-emerald-600 text-xs flex items-center gap-1"><TrendingUp className="w-3 h-3" /> +{diff.toFixed(1)}%</span>;
   }
   return <span className="text-red-500 text-xs flex items-center gap-1"><TrendingDown className="w-3 h-3" /> {diff.toFixed(1)}%</span>;
 }
 
-function getInsights(personal: ExposureData, typical: ExposureData, language: "en" | "de"): string[] {
-  const insights: string[] = [];
-  const humanDiff = personal.human - typical.human;
-  const autoDiff = personal.automation - typical.automation;
-  const aiDiff = personal.ai_assisted - typical.ai_assisted;
-
-  if (humanDiff > 10) {
-    insights.push(language === "en" 
-      ? `Your role is more human-centric than typical (+${humanDiff.toFixed(0)}%)`
-      : `Ihre Rolle ist menschenzentrierter als typisch (+${humanDiff.toFixed(0)}%)`);
-  }
-  if (humanDiff < -10) {
-    insights.push(language === "en"
-      ? `Your role has less human interaction than typical (${humanDiff.toFixed(0)}%)`
-      : `Ihre Rolle hat weniger menschliche Interaktion als typisch (${humanDiff.toFixed(0)}%)`);
-  }
-  if (autoDiff < -5 && typical.automation > 5) {
-    insights.push(language === "en"
-      ? "You've avoided most automation-prone tasks"
-      : "Sie haben die meisten automatisierungsanfälligen Aufgaben vermieden");
-  }
-  if (autoDiff > 10) {
-    insights.push(language === "en"
-      ? `Your role has higher automation exposure (+${autoDiff.toFixed(0)}%)`
-      : `Ihre Rolle hat höhere Automatisierungsexposition (+${autoDiff.toFixed(0)}%)`);
-  }
-  if (aiDiff > 15) {
-    insights.push(language === "en"
-      ? "You work heavily with AI-assisted tasks"
-      : "Sie arbeiten intensiv mit KI-unterstützten Aufgaben");
-  }
-
-  if (insights.length === 0) {
-    insights.push(language === "en"
-      ? "Your task profile is similar to the typical role"
-      : "Ihr Aufgabenprofil entspricht der typischen Rolle");
-  }
-
-  return insights;
-}
-
 export function PersonalizedResults({ personal, typical, taskCount, language, onReset }: PersonalizedResultsProps) {
-  const insights = getInsights(personal, typical, language);
-
   return (
     <Card className="border-2 border-primary/20 shadow-lg bg-gradient-to-br from-white to-primary/5" data-testid="personalized-results">
       <CardHeader className="pb-3">
@@ -78,87 +30,49 @@ export function PersonalizedResults({ personal, typical, taskCount, language, on
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-primary" />
             <CardTitle className="font-serif text-lg">
-              {language === "en" ? "Your Personalized Analysis" : "Ihre personalisierte Analyse"}
+              {language === "de" ? "Dein Profil" : "Your Profile"}
             </CardTitle>
           </div>
           <Button variant="ghost" size="sm" onClick={onReset} className="gap-1">
             <RotateCcw className="w-3 h-3" />
-            {language === "en" ? "Edit Tasks" : "Aufgaben bearbeiten"}
+            {language === "de" ? "Aufgaben bearbeiten" : "Edit Tasks"}
           </Button>
         </div>
         <CardDescription>
-          {language === "en" 
-            ? `Based on ${taskCount.selected} of ${taskCount.total} tasks you selected`
-            : `Basierend auf ${taskCount.selected} von ${taskCount.total} ausgewählten Aufgaben`}
+          {language === "de"
+            ? `Basierend auf ${taskCount.selected} von ${taskCount.total} ausgewählten Aufgaben`
+            : `Based on ${taskCount.selected} of ${taskCount.total} tasks you selected`}
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-3">
-            <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-              {language === "en" ? "Your Profile" : "Ihr Profil"}
+      <CardContent>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 className="text-sm font-medium text-slate-500 uppercase tracking-wide mb-3">
+              {language === "de" ? "Dein Profil" : "Your Profile"}
             </h4>
-            
+            <DonutChart percentages={personal} size={200} language={language} />
+          </div>
+          <div>
+            <h4 className="text-sm font-medium text-slate-500 uppercase tracking-wide mb-3">
+              {language === "de" ? "Typisches Profil vs. Deins" : "Typical vs. Yours"}
+            </h4>
             <div className="space-y-2">
-              <div className="flex items-center justify-between p-2 rounded bg-green-50 border border-green-200">
-                <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-green-600" />
-                  <span className="text-sm text-green-700">{language === "en" ? "Human" : "Mensch"}</span>
-                </div>
-                <span className="font-bold text-green-700">{personal.human.toFixed(1)}%</span>
-              </div>
-              
-              <div className="flex items-center justify-between p-2 rounded bg-blue-50 border border-blue-200">
-                <div className="flex items-center gap-2">
-                  <Bot className="w-4 h-4 text-blue-600" />
-                  <span className="text-sm text-blue-700">{language === "en" ? "AI-Assisted" : "KI-Assistiert"}</span>
-                </div>
-                <span className="font-bold text-blue-700">{personal.ai_assisted.toFixed(1)}%</span>
-              </div>
-              
-              <div className="flex items-center justify-between p-2 rounded bg-amber-50 border border-amber-200">
-                <div className="flex items-center gap-2">
-                  <Cog className="w-4 h-4 text-amber-600" />
-                  <span className="text-sm text-amber-700">{language === "en" ? "Automation" : "Automation"}</span>
-                </div>
-                <span className="font-bold text-amber-700">{personal.automation.toFixed(1)}%</span>
-              </div>
+              {CATEGORY_ORDER.map(cat => {
+                const diff = personal[cat] - typical[cat];
+                return (
+                  <div key={cat} className="flex items-center gap-2 p-2 rounded-lg" style={{ backgroundColor: CATEGORIES[cat].bg }}>
+                    <div className="w-3 h-3 rounded-sm shrink-0" style={{ backgroundColor: CATEGORIES[cat].color }} />
+                    <span className="text-sm flex-1" style={{ color: CATEGORIES[cat].color }}>
+                      {language === "de" ? CATEGORIES[cat].label_de : CATEGORIES[cat].label_en}
+                    </span>
+                    <span className="text-sm font-semibold text-slate-700">{personal[cat].toFixed(0)}%</span>
+                    <span className="text-xs text-slate-400 w-12 text-right">({typical[cat].toFixed(0)}%)</span>
+                    <DiffIndicator diff={diff} language={language} />
+                  </div>
+                );
+              })}
             </div>
           </div>
-
-          <div className="space-y-3">
-            <h4 className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-              {language === "en" ? "Typical Role" : "Typische Rolle"}
-            </h4>
-            
-            <div className="space-y-2">
-              <div className="flex items-center justify-between p-2 rounded bg-secondary/30">
-                <span className="text-sm text-muted-foreground">{typical.human.toFixed(1)}%</span>
-                <DiffIndicator diff={personal.human - typical.human} language={language} />
-              </div>
-              
-              <div className="flex items-center justify-between p-2 rounded bg-secondary/30">
-                <span className="text-sm text-muted-foreground">{typical.ai_assisted.toFixed(1)}%</span>
-                <DiffIndicator diff={personal.ai_assisted - typical.ai_assisted} language={language} />
-              </div>
-              
-              <div className="flex items-center justify-between p-2 rounded bg-secondary/30">
-                <span className="text-sm text-muted-foreground">{typical.automation.toFixed(1)}%</span>
-                <DiffIndicator diff={personal.automation - typical.automation} language={language} />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="pt-3 border-t space-y-2">
-          <h4 className="text-sm font-medium">
-            {language === "en" ? "Key Insights" : "Wichtige Erkenntnisse"}
-          </h4>
-          {insights.map((insight, i) => (
-            <Badge key={i} variant="secondary" className="mr-2 mb-1 text-xs font-normal">
-              {insight}
-            </Badge>
-          ))}
         </div>
       </CardContent>
     </Card>
