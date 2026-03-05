@@ -176,7 +176,6 @@ We learned through iteration that some patterns must be restricted to **verb for
 | law | 42.0% → 36.0% | 29.0% → 35.0% |
 
 ---
-
 ## Recommended Rubric Changes for V2
 
 ### Fix 1: Rewrite the SIR Scoring Prompt
