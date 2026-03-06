@@ -16,7 +16,7 @@
         "id": "BN_0003",
         "text_de": "Überwachen, ob Betriebe die Umweltvorschriften einhalten.",
         "text_en": "Monitor whether companies comply with environmental regulations.",
-        "label": "high_ai_potential",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -88,8 +88,8 @@
     "summary": {
       "total": 10,
       "automatable": 2,
-      "high_ai_potential": 2,
-      "sensitive": 0,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 4,
       "stays_with_you": 2
     }
@@ -203,18 +203,10 @@
     "kldb2010": "B 92133",
     "tasks": [
       {
-        "id": "BN_2781",
-        "text_de": "Die Kundendatenbanken aktualisieren.",
-        "text_en": "update the customer databases.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_2785",
         "text_de": "Aufgaben wie Text- und Bildbearbeitung sowie Schlusskorrektur erledigen.",
         "text_en": "Complete tasks like text and image editing as well as final proofreading.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -222,7 +214,7 @@
         "id": "BN_2786",
         "text_de": "Fristen und Kosten überwachen und das Controlling nach Projektabschluss übernehmen.",
         "text_en": "Monitor deadlines and costs and take over controlling after project completion.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -230,7 +222,7 @@
         "id": "BN_2788",
         "text_de": "Interne Prozesse und Lieferantenkontakte überwachen.",
         "text_en": "Monitor internal processes and supplier contacts.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -409,13 +401,21 @@
         "label": "stays_with_you",
         "score": 0,
         "is_regulated": true
+      },
+      {
+        "id": "BN_2781",
+        "text_de": "Die Kundendatenbanken aktualisieren.",
+        "text_en": "update the customer databases.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 26,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 4,
+      "automatable": 1,
+      "high_ai_potential": 3,
+      "sensitive": 0,
       "ai_assisted": 11,
       "stays_with_you": 11
     }
@@ -1068,6 +1068,14 @@
     "kldb2010": "B 81804",
     "tasks": [
       {
+        "id": "BN_3911",
+        "text_de": "Berichte über Forschung schreiben",
+        "text_en": "Write reports on research.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "BN_0098",
         "text_de": "Qualitätsmängel und Nebenwirkungen dokumentieren.",
         "text_en": "Document quality issues and side effects.",
@@ -1127,14 +1135,6 @@
         "id": "BN_3907",
         "text_de": "Genehmigungen für Medikamente beantragen und verwalten",
         "text_en": "apply for and manage approvals for medications",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3911",
-        "text_de": "Berichte über Forschung schreiben",
-        "text_en": "Write reports on research.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -1279,8 +1279,8 @@
     "summary": {
       "total": 26,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 9,
+      "high_ai_potential": 1,
+      "sensitive": 8,
       "ai_assisted": 3,
       "stays_with_you": 14
     }
@@ -1821,18 +1821,10 @@
     "kldb2010": "B 81404",
     "tasks": [
       {
-        "id": "GEN_0231",
-        "text_de": "Patientenakten in elektronischen Systemen pflegen.",
-        "text_en": "Maintain patient records in electronic systems.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_0164",
         "text_de": "Aufnahmen, Verlegungen und Entlassungen im Krankenhaus organisieren.",
         "text_en": "Organize admissions, transfers, and discharges in the hospital.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -1939,13 +1931,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "GEN_0231",
+        "text_de": "Patientenakten in elektronischen Systemen pflegen.",
+        "text_en": "Maintain patient records in electronic systems.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 3,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 5,
       "stays_with_you": 7
     }
@@ -1955,14 +1955,6 @@
     "sector": "health",
     "kldb2010": "B 81333",
     "tasks": [
-      {
-        "id": "ONET_0012",
-        "text_de": "Patientenmedizinische Daten und Gesundheitsgeschichte erheben und dokumentieren.",
-        "text_en": "Obtain and record patient medical data and health history.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
       {
         "id": "ONET_0010",
         "text_de": "Diagnostische Testergebnisse auf Abweichungen interpretieren.",
@@ -2074,13 +2066,21 @@
         "label": "stays_with_you",
         "score": 0,
         "is_regulated": true
+      },
+      {
+        "id": "ONET_0012",
+        "text_de": "Patientenmedizinische Daten und Gesundheitsgeschichte erheben und dokumentieren.",
+        "text_en": "Obtain and record patient medical data and health history.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
+      "automatable": 1,
       "high_ai_potential": 0,
-      "sensitive": 3,
+      "sensitive": 2,
       "ai_assisted": 4,
       "stays_with_you": 8
     }
@@ -2154,14 +2154,6 @@
     "kldb2010": "B 72243",
     "tasks": [
       {
-        "id": "BN_0188",
-        "text_de": "bei betriebswirtschaftlichen Prüfungen in Unternehmen helfen, wie Jahresabschlüsse und Sonderprüfungen.",
-        "text_en": "Assist with business examinations in companies, such as annual financial statements and special audits.",
-        "label": "high_ai_potential",
-        "score": 6,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0189",
         "text_de": "Wirtschaftsprüfer bei der Unternehmensbewertung unterstützen, indem man Vorjahresprüfungen vergleicht und Dokumente kontrolliert.",
         "text_en": "Support auditors in company valuation by comparing previous audits and checking documents.",
@@ -2174,6 +2166,22 @@
         "text_de": "Wirtschaftsprüfern bei Gutachten und Sachverständigenarbeiten helfen, wie Sanierungsgutachten erstellen.",
         "text_en": "Help auditors with reports and expert work, like creating renovation reports.",
         "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0192",
+        "text_de": "Bilanzen und Steuererklärungen anfertigen.",
+        "text_en": "Prepare balance sheets and tax returns.",
+        "label": "sensitive",
+        "score": 9,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0188",
+        "text_de": "bei betriebswirtschaftlichen Prüfungen in Unternehmen helfen, wie Jahresabschlüsse und Sonderprüfungen.",
+        "text_en": "Assist with business examinations in companies, such as annual financial statements and special audits.",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -2208,21 +2216,13 @@
         "label": "automatable",
         "score": 9,
         "is_regulated": false
-      },
-      {
-        "id": "BN_0192",
-        "text_de": "Bilanzen und Steuererklärungen anfertigen.",
-        "text_en": "Prepare balance sheets and tax returns.",
-        "label": "automatable",
-        "score": 9,
-        "is_regulated": false
       }
     ],
     "summary": {
       "total": 8,
-      "automatable": 3,
-      "high_ai_potential": 3,
-      "sensitive": 0,
+      "automatable": 2,
+      "high_ai_potential": 2,
+      "sensitive": 2,
       "ai_assisted": 1,
       "stays_with_you": 1
     }
@@ -3021,7 +3021,7 @@
         "id": "BN_0278",
         "text_de": "Aufträge und Verkaufszahlen kontrollieren.",
         "text_en": "Control orders and sales figures.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -3029,7 +3029,7 @@
         "id": "BN_0285",
         "text_de": "Administrative Vorgänge im Unternehmen steuern und überwachen.",
         "text_en": "Manage and monitor administrative processes in the company.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -3117,8 +3117,8 @@
     "summary": {
       "total": 12,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "high_ai_potential": 2,
+      "sensitive": 0,
       "ai_assisted": 6,
       "stays_with_you": 4
     }
@@ -5184,15 +5184,7 @@
         "id": "BN_0507",
         "text_de": "Betriebsbuchhaltung organisieren.",
         "text_en": "Organize business accounting.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_0508",
-        "text_de": "Wirtschaftspläne und Jahresabschlüsse erstellen.",
-        "text_en": "Create business plans and annual financial statements.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -5200,6 +5192,14 @@
         "id": "BN_0509",
         "text_de": "Projekte kaufmännisch steuern.",
         "text_en": "Manage projects financially.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_0508",
+        "text_de": "Wirtschaftspläne und Jahresabschlüsse erstellen.",
+        "text_en": "Create business plans and annual financial statements.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -5312,8 +5312,8 @@
     "summary": {
       "total": 16,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 3,
+      "high_ai_potential": 2,
+      "sensitive": 1,
       "ai_assisted": 8,
       "stays_with_you": 5
     }
@@ -5739,7 +5739,7 @@
         "id": "BN_0561",
         "text_de": "Die Zufriedenheit der Kunden überprüfen, zum Beispiel durch Umfragen und Reklamationen.",
         "text_en": "Check customer satisfaction, for example through surveys and complaints.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -5795,8 +5795,8 @@
     "summary": {
       "total": 7,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 2,
       "stays_with_you": 4
     }
@@ -6586,7 +6586,7 @@
         "id": "BN_0654",
         "text_de": "Kennzahlen zur Bewertung von Unternehmensdaten erstellen.",
         "text_en": "Create key figures to evaluate business data.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -6666,8 +6666,8 @@
     "summary": {
       "total": 10,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 9,
       "stays_with_you": 0
     }
@@ -7156,7 +7156,7 @@
         "id": "BN_0711",
         "text_de": "Berechnungen zur Wirtschaftlichkeit anfertigen.",
         "text_en": "Make calculations for cost-effectiveness.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -7212,8 +7212,8 @@
     "summary": {
       "total": 7,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 2,
       "stays_with_you": 4
     }
@@ -8159,14 +8159,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0819",
-        "text_de": "Bei der Zulassung und Registrierung von Arzneimitteln mitwirken.",
-        "text_en": "Assist in the approval and registration of medicines.",
-        "label": "high_ai_potential",
-        "score": 6,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0846",
         "text_de": "die Qualität und Umweltverträglichkeit in der Herstellung überwachen",
         "text_en": "monitor the quality and environmental compatibility in production",
@@ -8183,10 +8175,18 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0819",
+        "text_de": "Bei der Zulassung und Registrierung von Arzneimitteln mitwirken.",
+        "text_en": "Assist in the approval and registration of medicines.",
+        "label": "sensitive",
+        "score": 6,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0848",
         "text_de": "bei der Zulassung und Registrierung von Arzneimitteln helfen",
         "text_en": "assist in the approval and registration of medicines",
-        "label": "high_ai_potential",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -8274,8 +8274,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 5,
-      "sensitive": 0,
+      "high_ai_potential": 3,
+      "sensitive": 2,
       "ai_assisted": 5,
       "stays_with_you": 5
     }
@@ -8627,18 +8627,18 @@
     "kldb2010": "B 72123",
     "tasks": [
       {
-        "id": "BN_0859",
-        "text_de": "Risiken und Erträge von Wertpapieren berechnen.",
-        "text_en": "Calculate risks and returns of securities.",
+        "id": "BN_0862",
+        "text_de": "Wertpapiermärkte und Kursentwicklungen täglich beobachten.",
+        "text_en": "Monitor stock markets and price developments daily.",
         "label": "high_ai_potential",
         "score": 6,
         "is_regulated": false
       },
       {
-        "id": "BN_0862",
-        "text_de": "Wertpapiermärkte und Kursentwicklungen täglich beobachten.",
-        "text_en": "Monitor stock markets and price developments daily.",
-        "label": "high_ai_potential",
+        "id": "BN_0859",
+        "text_de": "Risiken und Erträge von Wertpapieren berechnen.",
+        "text_en": "Calculate risks and returns of securities.",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -8710,8 +8710,8 @@
     "summary": {
       "total": 10,
       "automatable": 0,
-      "high_ai_potential": 2,
-      "sensitive": 0,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 5,
       "stays_with_you": 3
     }
@@ -10454,7 +10454,7 @@
         "id": "BN_1024",
         "text_de": "Hygienevorschriften überwachen",
         "text_en": "Monitor hygiene regulations.",
-        "label": "high_ai_potential",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -10526,8 +10526,8 @@
     "summary": {
       "total": 9,
       "automatable": 1,
-      "high_ai_potential": 1,
-      "sensitive": 0,
+      "high_ai_potential": 0,
+      "sensitive": 1,
       "ai_assisted": 5,
       "stays_with_you": 2
     }
@@ -10538,34 +10538,10 @@
     "kldb2010": "B 81713",
     "tasks": [
       {
-        "id": "BN_1038",
-        "text_de": "Termine vergeben.",
-        "text_en": "Schedule appointments for patient visits.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_1039",
-        "text_de": "Befunde dokumentieren.",
-        "text_en": "Document findings from patient examinations.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_1041",
-        "text_de": "Rechnungen erstellen.",
-        "text_en": "Create invoices for patient treatments.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_1040",
         "text_de": "Die Buchhaltung durchführen.",
         "text_en": "Carry out the accounting.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -10656,13 +10632,37 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_1038",
+        "text_de": "Termine vergeben.",
+        "text_en": "Schedule appointments for patient visits.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_1039",
+        "text_de": "Befunde dokumentieren.",
+        "text_en": "Document findings from patient examinations.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_1041",
+        "text_de": "Rechnungen erstellen.",
+        "text_en": "Create invoices for patient treatments.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 5,
+      "automatable": 3,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 2,
       "stays_with_you": 8
     }
@@ -11006,14 +11006,6 @@
     "kldb2010": "B 71384",
     "tasks": [
       {
-        "id": "BN_1090",
-        "text_de": "Prüfberichte erstellen und Wirtschaftlichkeitsberechnungen durchführen.",
-        "text_en": "Create audit reports and conduct cost-effectiveness calculations.",
-        "label": "high_ai_potential",
-        "score": 7,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1077",
         "text_de": "Die Auftragsabwicklung begleiten und Termine sowie Meilensteine überwachen.",
         "text_en": "Support order processing and monitor deadlines and milestones.",
@@ -11027,6 +11019,14 @@
         "text_en": "Report the status of claims to project management.",
         "label": "high_ai_potential",
         "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1090",
+        "text_de": "Prüfberichte erstellen und Wirtschaftlichkeitsberechnungen durchführen.",
+        "text_en": "Create audit reports and conduct cost-effectiveness calculations.",
+        "label": "sensitive",
+        "score": 7,
         "is_regulated": false
       },
       {
@@ -11161,8 +11161,8 @@
     "summary": {
       "total": 19,
       "automatable": 2,
-      "high_ai_potential": 3,
-      "sensitive": 0,
+      "high_ai_potential": 2,
+      "sensitive": 1,
       "ai_assisted": 10,
       "stays_with_you": 4
     }
@@ -11856,6 +11856,22 @@
     "kldb2010": "B 71384",
     "tasks": [
       {
+        "id": "GEN_0108",
+        "text_de": "Hinweisgebersysteme einrichten.",
+        "text_en": "Set up whistleblower reporting channels.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0110",
+        "text_de": "Lieferantenverträge auf regulatorische Anforderungen prüfen.",
+        "text_en": "Check vendor contracts for regulatory requirements.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "GEN_0106",
         "text_de": "Das Compliance-Risikoregister pflegen.",
         "text_en": "Maintain the compliance risk register.",
@@ -11880,25 +11896,9 @@
         "is_regulated": true
       },
       {
-        "id": "GEN_0108",
-        "text_de": "Hinweisgebersysteme einrichten.",
-        "text_en": "Set up whistleblower reporting channels.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
         "id": "GEN_0109",
         "text_de": "Compliance-Status an den Vorstand berichten.",
         "text_en": "Report compliance status to the board.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0110",
-        "text_de": "Lieferantenverträge auf regulatorische Anforderungen prüfen.",
-        "text_en": "Check vendor contracts for regulatory requirements.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -11979,8 +11979,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 6,
+      "high_ai_potential": 2,
+      "sensitive": 4,
       "ai_assisted": 6,
       "stays_with_you": 3
     }
@@ -14317,7 +14317,7 @@
         "id": "BN_1365",
         "text_de": "Technische Anforderungen prüfen und auf Datenschutz achten.",
         "text_en": "Check technical requirements and pay attention to data protection.",
-        "label": "high_ai_potential",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -14437,8 +14437,8 @@
     "summary": {
       "total": 16,
       "automatable": 1,
-      "high_ai_potential": 2,
-      "sensitive": 0,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 11,
       "stays_with_you": 2
     }
@@ -14595,7 +14595,7 @@
         "id": "BN_1400",
         "text_de": "Wertschätzungen von Immobilien und Anlagen durchführen und Versicherungssummen festlegen.",
         "text_en": "Conduct property and asset valuations and determine insurance amounts.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -14667,8 +14667,8 @@
     "summary": {
       "total": 9,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 6,
       "stays_with_you": 2
     }
@@ -14901,58 +14901,10 @@
     "kldb2010": "B 72113",
     "tasks": [
       {
-        "id": "BN_1426",
-        "text_de": "Akten und Unterlagen verwalten.",
-        "text_en": "Manage files and documents.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_1427",
-        "text_de": "Eingegangene Unterlagen prüfen und elektronisch erfassen.",
-        "text_en": "Check incoming documents and record them electronically.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_1428",
-        "text_de": "Bankaufträge auf Vollständigkeit prüfen und fehlende Unterlagen anfordern.",
-        "text_en": "Check bank orders for completeness and request missing documents.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_1429",
-        "text_de": "Kundenstammdaten abgleichen und aktualisieren.",
-        "text_en": "Match and update customer data.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_1434",
-        "text_de": "Ablaufschritte dokumentieren und Vorgänge abschließen.",
-        "text_en": "Document steps and complete processes.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_1433",
-        "text_de": "Abrechnung und Auszahlung von Krediten durchführen und Rückzahlungen überwachen.",
-        "text_en": "Carry out billing and payment of loans and monitor repayments.",
-        "label": "sensitive",
-        "score": 8,
-        "is_regulated": true
-      },
-      {
         "id": "BN_1430",
         "text_de": "Kundenkorrespondenz überwachen.",
         "text_en": "Monitor customer correspondence.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -14960,7 +14912,7 @@
         "id": "BN_1431",
         "text_de": "Geschäftsvorgänge nach Vorgaben abwickeln.",
         "text_en": "Process business transactions according to guidelines.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -14971,13 +14923,61 @@
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
+      },
+      {
+        "id": "BN_1426",
+        "text_de": "Akten und Unterlagen verwalten.",
+        "text_en": "Manage files and documents.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_1427",
+        "text_de": "Eingegangene Unterlagen prüfen und elektronisch erfassen.",
+        "text_en": "Check incoming documents and record them electronically.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_1428",
+        "text_de": "Bankaufträge auf Vollständigkeit prüfen und fehlende Unterlagen anfordern.",
+        "text_en": "Check bank orders for completeness and request missing documents.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_1429",
+        "text_de": "Kundenstammdaten abgleichen und aktualisieren.",
+        "text_en": "Match and update customer data.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_1434",
+        "text_de": "Ablaufschritte dokumentieren und Vorgänge abschließen.",
+        "text_en": "Document steps and complete processes.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_1433",
+        "text_de": "Abrechnung und Auszahlung von Krediten durchführen und Rückzahlungen überwachen.",
+        "text_en": "Carry out billing and payment of loans and monitor repayments.",
+        "label": "automatable",
+        "score": 8,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 9,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 9,
+      "automatable": 6,
+      "high_ai_potential": 2,
+      "sensitive": 1,
       "ai_assisted": 0,
       "stays_with_you": 0
     }
@@ -15741,14 +15741,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1511",
-        "text_de": "Überprüfen, ob Datenschutzvorgaben eingehalten werden.",
-        "text_en": "Check if data protection regulations are followed.",
-        "label": "high_ai_potential",
-        "score": 6,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1512",
         "text_de": "Den Erfolg der E-Mail-Marketing-Maßnahmen überprüfen.",
         "text_en": "Evaluate the success of email marketing measures.",
@@ -15769,6 +15761,14 @@
         "text_de": "Maßnahmen der Kampagnen überprüfen und anpassen.",
         "text_en": "Review and adjust campaign measures",
         "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1511",
+        "text_de": "Überprüfen, ob Datenschutzvorgaben eingehalten werden.",
+        "text_en": "Check if data protection regulations are followed.",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -15888,8 +15888,8 @@
     "summary": {
       "total": 21,
       "automatable": 4,
-      "high_ai_potential": 7,
-      "sensitive": 0,
+      "high_ai_potential": 6,
+      "sensitive": 1,
       "ai_assisted": 10,
       "stays_with_you": 0
     }
@@ -18785,14 +18785,6 @@
         "is_regulated": true
       },
       {
-        "id": "BN_1812",
-        "text_de": "Verwaltungsaufgaben erledigen, wie die Abrechnung mit Kostenträgern.",
-        "text_en": "Complete administrative tasks, such as billing with payers.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_1807",
         "text_de": "Betroffene über Therapieoptionen und Preise informieren.",
         "text_en": "Inform affected individuals about therapy options and prices.",
@@ -18831,13 +18823,21 @@
         "label": "stays_with_you",
         "score": 4,
         "is_regulated": true
+      },
+      {
+        "id": "BN_1812",
+        "text_de": "Verwaltungsaufgaben erledigen, wie die Abrechnung mit Kostenträgern.",
+        "text_en": "Complete administrative tasks, such as billing with payers.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 7,
-      "automatable": 0,
+      "automatable": 1,
       "high_ai_potential": 0,
-      "sensitive": 2,
+      "sensitive": 1,
       "ai_assisted": 3,
       "stays_with_you": 2
     }
@@ -19712,6 +19712,14 @@
     "kldb2010": "B 63394",
     "tasks": [
       {
+        "id": "BN_1902",
+        "text_de": "Die Gewinn- und Verlustrechnung anfertigen.",
+        "text_en": "Prepare the profit and loss statement.",
+        "label": "sensitive",
+        "score": 9,
+        "is_regulated": false
+      },
+      {
         "id": "BN_1898",
         "text_de": "Die Einhaltung von Hygienevorschriften und Unternehmensstandards überwachen.",
         "text_en": "Monitor compliance with hygiene regulations and company standards.",
@@ -19806,21 +19814,13 @@
         "label": "automatable",
         "score": 9,
         "is_regulated": false
-      },
-      {
-        "id": "BN_1902",
-        "text_de": "Die Gewinn- und Verlustrechnung anfertigen.",
-        "text_en": "Prepare the profit and loss statement.",
-        "label": "automatable",
-        "score": 9,
-        "is_regulated": false
       }
     ],
     "summary": {
       "total": 13,
-      "automatable": 2,
+      "automatable": 1,
       "high_ai_potential": 0,
-      "sensitive": 1,
+      "sensitive": 2,
       "ai_assisted": 4,
       "stays_with_you": 6
     }
@@ -20164,18 +20164,18 @@
     "kldb2010": "B 71383",
     "tasks": [
       {
-        "id": "BN_1947",
-        "text_de": "Führe Gefährdungsbeurteilungen mit Verantwortlichen durch und halte Schutzmaßnahmen schriftlich fest.",
-        "text_en": "Conduct risk assessments with responsible parties and document safety measures.",
+        "id": "BN_1960",
+        "text_de": "Arbeite Werk- und Wartungsverträge aus und verwalte Aufträge.",
+        "text_en": "Draft work and maintenance contracts and manage orders.",
         "label": "high_ai_potential",
         "score": 6,
         "is_regulated": false
       },
       {
-        "id": "BN_1960",
-        "text_de": "Arbeite Werk- und Wartungsverträge aus und verwalte Aufträge.",
-        "text_en": "Draft work and maintenance contracts and manage orders.",
-        "label": "high_ai_potential",
+        "id": "BN_1947",
+        "text_de": "Führe Gefährdungsbeurteilungen mit Verantwortlichen durch und halte Schutzmaßnahmen schriftlich fest.",
+        "text_en": "Conduct risk assessments with responsible parties and document safety measures.",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -20335,8 +20335,8 @@
     "summary": {
       "total": 21,
       "automatable": 2,
-      "high_ai_potential": 2,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 2,
       "ai_assisted": 10,
       "stays_with_you": 6
     }
@@ -20707,7 +20707,7 @@
         "id": "BN_1994",
         "text_de": "Die Einhaltung von Budgets und Projektzielen kontrollieren.",
         "text_en": "Monitor compliance with budgets and project goals.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -20771,8 +20771,8 @@
     "summary": {
       "total": 8,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 3,
       "stays_with_you": 4
     }
@@ -20783,25 +20783,9 @@
     "kldb2010": "B 73183",
     "tasks": [
       {
-        "id": "BN_2005",
-        "text_de": "Berichte über die Gefährdung des Unternehmens und die Maßnahmen gegen Geldwäsche schreiben.",
-        "text_en": "Write reports on the company's risk and the measures against money laundering.",
-        "label": "high_ai_potential",
-        "score": 7,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1999",
         "text_de": "Risikoanalysen erstellen und regelmäßig aktualisieren.",
         "text_en": "Create and regularly update risk analyses.",
-        "label": "high_ai_potential",
-        "score": 6,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_2001",
-        "text_de": "Überprüfen, ob die Vorschriften gegen Geldwäsche in Unternehmen eingehalten werden, zum Beispiel durch Überwachung von Transaktionen.",
-        "text_en": "Check if the regulations against money laundering are followed in companies, for example by monitoring transactions.",
         "label": "high_ai_potential",
         "score": 6,
         "is_regulated": false
@@ -20811,6 +20795,22 @@
         "text_de": "Verdachtsfälle analysieren, dokumentieren und Meldungen an die Behörden machen.",
         "text_en": "Analyze, document, and report suspicious cases to the authorities.",
         "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2005",
+        "text_de": "Berichte über die Gefährdung des Unternehmens und die Maßnahmen gegen Geldwäsche schreiben.",
+        "text_en": "Write reports on the company's risk and the measures against money laundering.",
+        "label": "sensitive",
+        "score": 7,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_2001",
+        "text_de": "Überprüfen, ob die Vorschriften gegen Geldwäsche in Unternehmen eingehalten werden, zum Beispiel durch Überwachung von Transaktionen.",
+        "text_en": "Check if the regulations against money laundering are followed in companies, for example by monitoring transactions.",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -20882,8 +20882,8 @@
     "summary": {
       "total": 12,
       "automatable": 0,
-      "high_ai_potential": 4,
-      "sensitive": 0,
+      "high_ai_potential": 2,
+      "sensitive": 2,
       "ai_assisted": 4,
       "stays_with_you": 4
     }
@@ -21020,18 +21020,10 @@
     "kldb2010": "B 72133",
     "tasks": [
       {
-        "id": "ONET_0110",
-        "text_de": "Verwaltungstätigkeiten durchführen, einschließlich Aktenpflege und Policenerneuerungen.",
-        "text_en": "Perform administrative tasks including record maintenance and policy renewals.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_2029",
         "text_de": "Den Vertragsabschluss vorbereiten und Verträge abschließen.",
         "text_en": "Prepare the contract conclusion and finalize contracts.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -21122,13 +21114,21 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": true
+      },
+      {
+        "id": "ONET_0110",
+        "text_de": "Verwaltungstätigkeiten durchführen, einschließlich Aktenpflege und Policenerneuerungen.",
+        "text_en": "Perform administrative tasks including record maintenance and policy renewals.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 13,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 2,
       "stays_with_you": 9
     }
@@ -21729,7 +21729,7 @@
         "id": "BN_2078",
         "text_de": "Berichte und Gutachten erstellen sowie Ergebnisse dokumentieren.",
         "text_en": "Create reports and expert opinions and document results.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -21769,8 +21769,8 @@
     "summary": {
       "total": 5,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 2,
       "stays_with_you": 2
     }
@@ -21784,7 +21784,7 @@
         "id": "BN_2085",
         "text_de": "Forschungsberichte schreiben.",
         "text_en": "Write research reports.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -21792,7 +21792,7 @@
         "id": "BN_2080",
         "text_de": "Die Qualität von Gesundheitsprogrammen und Schulungen prüfen.",
         "text_en": "Check the quality of health programs and training.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -21832,8 +21832,8 @@
     "summary": {
       "total": 6,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "high_ai_potential": 2,
+      "sensitive": 0,
       "ai_assisted": 1,
       "stays_with_you": 3
     }
@@ -21844,18 +21844,10 @@
     "kldb2010": "B 82214",
     "tasks": [
       {
-        "id": "BN_2088",
-        "text_de": "Kosten für Kurse und Veranstaltungen berechnen und abrechnen.",
-        "text_en": "Calculate and bill costs for courses and events.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_2093",
         "text_de": "Forschungsberichte schreiben.",
         "text_en": "Write research reports.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -21906,13 +21898,21 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": true
+      },
+      {
+        "id": "BN_2088",
+        "text_de": "Kosten für Kurse und Veranstaltungen berechnen und abrechnen.",
+        "text_en": "Calculate and bill costs for courses and events.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 8,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 3,
       "stays_with_you": 3
     }
@@ -24287,7 +24287,7 @@
         "id": "BN_2331",
         "text_de": "Informationen sammeln und in Berichten zusammenfassen.",
         "text_en": "Collect information and summarize it in reports.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -24295,7 +24295,7 @@
         "id": "BN_2332",
         "text_de": "Daten für Kunden aufbereiten, zum Beispiel als Berichte.",
         "text_en": "Prepare data for clients, for example as reports.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -24303,7 +24303,7 @@
         "id": "BN_2334",
         "text_de": "Informationen in eine andere Sprache übersetzen.",
         "text_en": "Translate information into another language.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -24311,7 +24311,7 @@
         "id": "BN_2335",
         "text_de": "Informationssysteme einrichten oder betreuen.",
         "text_en": "Set up or manage information systems.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -24359,8 +24359,8 @@
     "summary": {
       "total": 9,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 4,
+      "high_ai_potential": 4,
+      "sensitive": 0,
       "ai_assisted": 5,
       "stays_with_you": 0
     }
@@ -25795,11 +25795,27 @@
     "kldb2010": "B 43384",
     "tasks": [
       {
-        "id": "GEN_0182",
-        "text_de": "Zugriffskontrollen und Benutzerberechtigungen prüfen.",
-        "text_en": "Review access controls and user permissions.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "GEN_0183",
+        "text_de": "Nachweispakete für behördliche Prüfungen vorbereiten.",
+        "text_en": "Prepare evidence packages for regulatory audits.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0184",
+        "text_de": "Datenaufbewahrungspraktiken auf rechtliche Vorgaben prüfen.",
+        "text_en": "Check data retention practices against legal rules.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0185",
+        "text_de": "Regulatorische Änderungen im Cybersicherheitsrecht verfolgen.",
+        "text_en": "Track regulatory changes in cybersecurity law.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
@@ -25814,30 +25830,6 @@
         "id": "BN_2481",
         "text_de": "Kontrollen für die IT-Compliance in Unternehmensprozesse einfügen und überwachen.",
         "text_en": "Add and monitor controls for IT compliance in company processes.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0183",
-        "text_de": "Nachweispakete für behördliche Prüfungen vorbereiten.",
-        "text_en": "Prepare evidence packages for regulatory audits.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0184",
-        "text_de": "Datenaufbewahrungspraktiken auf rechtliche Vorgaben prüfen.",
-        "text_en": "Check data retention practices against legal rules.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0185",
-        "text_de": "Regulatorische Änderungen im Cybersicherheitsrecht verfolgen.",
-        "text_en": "Track regulatory changes in cybersecurity law.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -25913,13 +25905,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "GEN_0182",
+        "text_de": "Zugriffskontrollen und Benutzerberechtigungen prüfen.",
+        "text_en": "Review access controls and user permissions.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 6,
+      "automatable": 1,
+      "high_ai_potential": 3,
+      "sensitive": 2,
       "ai_assisted": 6,
       "stays_with_you": 3
     }
@@ -25993,26 +25993,10 @@
     "kldb2010": "B 43384",
     "tasks": [
       {
-        "id": "BN_2498",
-        "text_de": "Digitale Spuren rechtssicher festhalten und dokumentieren.",
-        "text_en": "Legally document and record digital traces.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0339",
-        "text_de": "Beweismittelkette für digitale Beweise prüfen.",
-        "text_en": "Check chain-of-custody for digital evidence.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "GEN_0340",
         "text_de": "Skripte zur automatisierten Artefaktextraktion schreiben.",
         "text_en": "Write scripts for automated artifact extraction.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -26020,7 +26004,7 @@
         "id": "BN_2492",
         "text_de": "Nutzungsdaten von Internetbrowsern, Clouddiensten und Kommunikationsplattformen sichern.",
         "text_en": "Secure usage data from internet browsers, cloud services, and communication platforms.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -26028,7 +26012,7 @@
         "id": "BN_2493",
         "text_de": "Bewegungsprofile anfertigen.",
         "text_en": "Create movement profiles.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -26036,7 +26020,7 @@
         "id": "BN_2494",
         "text_de": "Gelöschte Daten auf PCs und mobilen Geräten wiederherstellen.",
         "text_en": "Recover deleted data on PCs and mobile devices.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -26044,7 +26028,7 @@
         "id": "BN_2495",
         "text_de": "Mit spezieller Software mögliche Straftaten in Datennetzen erkennen.",
         "text_en": "Use special software to detect possible crimes in data networks.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -26052,7 +26036,7 @@
         "id": "BN_2496",
         "text_de": "Video- und Bildmaterial bearbeiten und ansehen.",
         "text_en": "Edit and view video and image material.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -26060,7 +26044,7 @@
         "id": "BN_2497",
         "text_de": "Unerlaubte Zugriffe und Cyber-Attacken aufdecken und dokumentieren.",
         "text_en": "Detect and document unauthorized access and cyber attacks.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -26111,13 +26095,29 @@
         "label": "stays_with_you",
         "score": 0,
         "is_regulated": true
+      },
+      {
+        "id": "BN_2498",
+        "text_de": "Digitale Spuren rechtssicher festhalten und dokumentieren.",
+        "text_en": "Legally document and record digital traces.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0339",
+        "text_de": "Beweismittelkette für digitale Beweise prüfen.",
+        "text_en": "Check chain-of-custody for digital evidence.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 9,
+      "automatable": 2,
+      "high_ai_potential": 7,
+      "sensitive": 0,
       "ai_assisted": 0,
       "stays_with_you": 6
     }
@@ -26623,7 +26623,7 @@
         "id": "BN_2544",
         "text_de": "Bewerberprofile erstellen und Bewerbungsunterlagen überprüfen.",
         "text_en": "Create applicant profiles and review application documents.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -26743,8 +26743,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 5,
       "stays_with_you": 9
     }
@@ -26900,7 +26900,7 @@
         "id": "ONET_0087",
         "text_de": "Rechtliche Dokumente, einschließlich Verträge und Mietverträge, erstellen und prüfen.",
         "text_en": "Prepare and review legal documents including contracts and leases.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -27020,8 +27020,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 8,
       "stays_with_you": 6
     }
@@ -27035,7 +27035,7 @@
         "id": "BN_2577",
         "text_de": "Den rechtlichen Ablauf in Unternehmen oder Behörden überwachen.",
         "text_en": "Monitor the legal processes in companies or authorities.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -27147,8 +27147,8 @@
     "summary": {
       "total": 14,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 4,
       "stays_with_you": 9
     }
@@ -28024,6 +28024,14 @@
     "kldb2010": "B 81113",
     "tasks": [
       {
+        "id": "BN_2688",
+        "text_de": "Behandlungspläne und Kostenpläne nach Vorgaben ausfüllen.",
+        "text_en": "Fill out treatment plans and cost plans as required.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "BN_2689",
         "text_de": "Zahlungen und Schriftverkehr erledigen.",
         "text_en": "Complete payments and correspondence.",
@@ -28037,14 +28045,6 @@
         "text_en": "Order or buy office supplies, instruments, and medications.",
         "label": "sensitive",
         "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_2688",
-        "text_de": "Behandlungspläne und Kostenpläne nach Vorgaben ausfüllen.",
-        "text_en": "Fill out treatment plans and cost plans as required.",
-        "label": "sensitive",
-        "score": 6,
         "is_regulated": true
       },
       {
@@ -28131,8 +28131,8 @@
     "summary": {
       "total": 13,
       "automatable": 2,
-      "high_ai_potential": 1,
-      "sensitive": 2,
+      "high_ai_potential": 2,
+      "sensitive": 1,
       "ai_assisted": 1,
       "stays_with_you": 7
     }
@@ -28476,18 +28476,10 @@
     "kldb2010": "B 81624",
     "tasks": [
       {
-        "id": "BN_2732",
-        "text_de": "Berichte und Gutachten schreiben und Befunde dokumentieren.",
-        "text_en": "Write reports and assessments and document findings.",
-        "label": "sensitive",
-        "score": 8,
-        "is_regulated": true
-      },
-      {
         "id": "ONET_0099",
         "text_de": "Detaillierte klinisch-neuropsychologische Berichte anhand von Testdaten erstellen.",
         "text_en": "Prepare detailed clinical neuropsychological reports using test data.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -28578,13 +28570,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_2732",
+        "text_de": "Berichte und Gutachten schreiben und Befunde dokumentieren.",
+        "text_en": "Write reports and assessments and document findings.",
+        "label": "automatable",
+        "score": 8,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 13,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 2,
       "stays_with_you": 9
     }
@@ -28693,7 +28693,7 @@
         "id": "BN_2748",
         "text_de": "Forschungsberichte schreiben",
         "text_en": "Write research reports",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -28733,8 +28733,8 @@
     "summary": {
       "total": 5,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 4,
       "stays_with_you": 0
     }
@@ -29014,41 +29014,17 @@
     "kldb2010": "B 31173",
     "tasks": [
       {
-        "id": "BN_2790",
-        "text_de": "Die Konten des Unternehmens in der Kreditoren-, Debitoren- und Bilanzbuchhaltung pflegen und überwachen.",
-        "text_en": "Maintain and monitor the company's accounts in accounts payable, accounts receivable, and balance sheet accounting.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_2791",
-        "text_de": "Kontenabrechnungen überprüfen.",
-        "text_en": "Check account statements.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_2793",
-        "text_de": "Rechnungen erstellen und den Zahlungseingang überwachen.",
-        "text_en": "Create invoices and monitor incoming payments.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "BN_2796",
+        "text_de": "Aufgaben im Forderungsmanagement erledigen.",
+        "text_en": "Complete tasks in receivables management.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
         "id": "BN_2794",
         "text_de": "Bei der Erstellung von Quartals- oder Jahresabschlüssen und Geschäftsberichten helfen.",
         "text_en": "Assist in preparing quarterly or annual financial statements and business reports.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_2796",
-        "text_de": "Aufgaben im Forderungsmanagement erledigen.",
-        "text_en": "Complete tasks in receivables management.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -29076,13 +29052,37 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_2790",
+        "text_de": "Die Konten des Unternehmens in der Kreditoren-, Debitoren- und Bilanzbuchhaltung pflegen und überwachen.",
+        "text_en": "Maintain and monitor the company's accounts in accounts payable, accounts receivable, and balance sheet accounting.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_2791",
+        "text_de": "Kontenabrechnungen überprüfen.",
+        "text_en": "Check account statements.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_2793",
+        "text_de": "Rechnungen erstellen und den Zahlungseingang überwachen.",
+        "text_en": "Create invoices and monitor incoming payments.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 8,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 5,
+      "automatable": 3,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 2,
       "stays_with_you": 1
     }
@@ -29093,26 +29093,10 @@
     "kldb2010": "B 72223",
     "tasks": [
       {
-        "id": "BN_2799",
-        "text_de": "Monatliche Produktionsergebnisse ausrechnen.",
-        "text_en": "Calculate monthly production results.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_2804",
-        "text_de": "Löhne und Gehälter berechnen.",
-        "text_en": "Calculate wages and salaries.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_2798",
         "text_de": "Kosten und Preise im Betrieb berechnen.",
         "text_en": "Calculate costs and prices in the business.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29120,7 +29104,7 @@
         "id": "BN_2802",
         "text_de": "Leistungen im Betrieb abrechnen und kontrollieren.",
         "text_en": "Bill and control services in the business.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29128,7 +29112,7 @@
         "id": "BN_2803",
         "text_de": "Kapitalbedarf berechnen und Finanzpläne aufstellen.",
         "text_en": "Calculate capital needs and create financial plans.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29136,7 +29120,7 @@
         "id": "BN_2805",
         "text_de": "Deckungsbeiträge und Plankosten berechnen.",
         "text_en": "Calculate contribution margins and planned costs.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29144,7 +29128,7 @@
         "id": "BN_2806",
         "text_de": "Kostenkontrollen durchführen und vergleichen.",
         "text_en": "Conduct and compare cost controls.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29152,7 +29136,7 @@
         "id": "BN_2808",
         "text_de": "Wirtschaftlichkeit berechnen.",
         "text_en": "Calculate profitability for product lines.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29187,13 +29171,29 @@
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_2799",
+        "text_de": "Monatliche Produktionsergebnisse ausrechnen.",
+        "text_en": "Calculate monthly production results.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_2804",
+        "text_de": "Löhne und Gehälter berechnen.",
+        "text_en": "Calculate wages and salaries.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 12,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 9,
+      "automatable": 2,
+      "high_ai_potential": 6,
+      "sensitive": 1,
       "ai_assisted": 3,
       "stays_with_you": 0
     }
@@ -29572,7 +29572,7 @@
         "id": "BN_2853",
         "text_de": "Zahlungen und Kredite überwachen und die Bedingungen prüfen.",
         "text_en": "Monitor payments and loans and check the conditions.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -29580,7 +29580,7 @@
         "id": "BN_2855",
         "text_de": "Kreditverträge und Überwachungsdokumente erstellen.",
         "text_en": "Create loan agreements and monitoring documents.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -29588,7 +29588,7 @@
         "id": "BN_2858",
         "text_de": "Den Finanzmarkt auf gute Angebote und Zahlungsarten prüfen.",
         "text_en": "Check the financial market for good offers and payment methods.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29596,7 +29596,7 @@
         "id": "BN_2861",
         "text_de": "Die Bonität von Kunden prüfen, Kreditlimits festlegen und Rückzahlungen überwachen.",
         "text_en": "Check customer creditworthiness, set credit limits, and monitor repayments.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29668,8 +29668,8 @@
     "summary": {
       "total": 12,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 4,
+      "high_ai_potential": 4,
+      "sensitive": 0,
       "ai_assisted": 7,
       "stays_with_you": 1
     }
@@ -29680,26 +29680,10 @@
     "kldb2010": "B 92302",
     "tasks": [
       {
-        "id": "BN_2863",
-        "text_de": "Kreditanträge und Unterlagen prüfen.",
-        "text_en": "Check loan applications and documents.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0202",
-        "text_de": "Sicherheitenwerte und Pfanddokumente überprüfen.",
-        "text_en": "Verify collateral values and lien documents.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_2865",
         "text_de": "Nach Genehmigung Kredite auszahlen.",
         "text_en": "Disburse loans after approval.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -29707,7 +29691,7 @@
         "id": "BN_2866",
         "text_de": "Laufende Kredite betreuen und überwachen.",
         "text_en": "Manage and monitor ongoing loans.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -29715,7 +29699,7 @@
         "id": "GEN_0204",
         "text_de": "Watch-List-Konten auf Frühwarnsignale überwachen.",
         "text_en": "Monitor watch-list accounts for early warnings.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -29723,7 +29707,7 @@
         "id": "BN_2862",
         "text_de": "Kredite bearbeiten.",
         "text_en": "Process loans and credit applications.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29731,7 +29715,7 @@
         "id": "BN_2864",
         "text_de": "Kreditangebote mit Risikoabschätzung erstellen.",
         "text_en": "Create loan offers with risk assessment.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29739,7 +29723,7 @@
         "id": "BN_2867",
         "text_de": "Vertragsänderungen und Rücktritte bearbeiten.",
         "text_en": "Process contract changes and withdrawals.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29747,7 +29731,7 @@
         "id": "GEN_0206",
         "text_de": "Regulatorische Eigenkapitalanforderungen für Kreditportfolios prüfen.",
         "text_en": "Check regulatory capital requirements for loan portfolios.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -29755,8 +29739,16 @@
         "id": "GEN_0207",
         "text_de": "Kreditrichtlinien aktualisieren.",
         "text_en": "Update credit policy guidelines.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_2863",
+        "text_de": "Kreditanträge und Unterlagen prüfen.",
+        "text_en": "Check loan applications and documents.",
+        "label": "sensitive",
+        "score": 9,
         "is_regulated": true
       },
       {
@@ -29798,13 +29790,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "GEN_0202",
+        "text_de": "Sicherheitenwerte und Pfanddokumente überprüfen.",
+        "text_en": "Verify collateral values and lien documents.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 10,
+      "automatable": 1,
+      "high_ai_potential": 8,
+      "sensitive": 1,
       "ai_assisted": 3,
       "stays_with_you": 2
     }
@@ -31796,7 +31796,7 @@
         "id": "BN_3078",
         "text_de": "Das Qualitätsmanagement einrichten und prüfen.",
         "text_en": "Set up and check quality management.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -31804,7 +31804,7 @@
         "id": "BN_3081",
         "text_de": "Umsatz und Kosten berechnen.",
         "text_en": "Calculate revenue and costs.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -31900,8 +31900,8 @@
     "summary": {
       "total": 13,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "high_ai_potential": 2,
+      "sensitive": 0,
       "ai_assisted": 5,
       "stays_with_you": 6
     }
@@ -32015,6 +32015,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3104",
+        "text_de": "Monats-, Quartals- und Jahresabschlüsse erstellen.",
+        "text_en": "Prepare monthly, quarterly, and annual financial statements.",
+        "label": "sensitive",
+        "score": 9,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3098",
         "text_de": "Die Anzahl und Qualifikation der Mitarbeiter planen.",
         "text_en": "Plan the number and qualifications of employees.",
@@ -32061,21 +32069,13 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
-      },
-      {
-        "id": "BN_3104",
-        "text_de": "Monats-, Quartals- und Jahresabschlüsse erstellen.",
-        "text_en": "Prepare monthly, quarterly, and annual financial statements.",
-        "label": "automatable",
-        "score": 9,
-        "is_regulated": false
       }
     ],
     "summary": {
       "total": 9,
-      "automatable": 1,
+      "automatable": 0,
       "high_ai_potential": 2,
-      "sensitive": 0,
+      "sensitive": 1,
       "ai_assisted": 5,
       "stays_with_you": 1
     }
@@ -32292,27 +32292,19 @@
     "kldb2010": "B 72294",
     "tasks": [
       {
+        "id": "BN_3131",
+        "text_de": "Daten verwalten.",
+        "text_en": "Manage data in financial systems.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "BN_3129",
         "text_de": "Zahlungen kontrollieren.",
         "text_en": "Check payments for accuracy and compliance.",
         "label": "sensitive",
         "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3130",
-        "text_de": "Monats-, Quartals- und Jahresberichte erstellen.",
-        "text_en": "Create monthly, quarterly, and annual reports.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3131",
-        "text_de": "Daten verwalten.",
-        "text_en": "Manage data in financial systems.",
-        "label": "sensitive",
-        "score": 6,
         "is_regulated": true
       },
       {
@@ -32362,13 +32354,21 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": true
+      },
+      {
+        "id": "BN_3130",
+        "text_de": "Monats-, Quartals- und Jahresberichte erstellen.",
+        "text_en": "Create monthly, quarterly, and annual reports.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 9,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 3,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 3,
       "stays_with_you": 3
     }
@@ -32498,18 +32498,10 @@
     "kldb2010": "B 72294",
     "tasks": [
       {
-        "id": "BN_3157",
-        "text_de": "Monats-, Quartals- und Jahresabschlüsse erstellen.",
-        "text_en": "Create monthly, quarterly, and annual financial statements.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_3158",
         "text_de": "Die Kostenentwicklung überwachen.",
         "text_en": "monitor cost development.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -32517,7 +32509,7 @@
         "id": "BN_3159",
         "text_de": "Statistiken auswerten und für Präsentationen vorbereiten.",
         "text_en": "Analyze statistics and prepare them for presentations.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -32525,7 +32517,7 @@
         "id": "BN_3160",
         "text_de": "Kostenstellen- und Kostenträgerrechnungen sowie Stundenberechnungen durchführen.",
         "text_en": "Conduct cost center and cost unit accounting as well as hour calculations.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -32533,8 +32525,16 @@
         "id": "BN_3161",
         "text_de": "Die Vor- und Nachkalkulation von Produkten und Projekten durchführen.",
         "text_en": "Perform pre- and post-calculations of products and projects.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3157",
+        "text_de": "Monats-, Quartals- und Jahresabschlüsse erstellen.",
+        "text_en": "Create monthly, quarterly, and annual financial statements.",
+        "label": "sensitive",
+        "score": 9,
         "is_regulated": true
       },
       {
@@ -32581,8 +32581,8 @@
     "summary": {
       "total": 10,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 5,
+      "high_ai_potential": 4,
+      "sensitive": 1,
       "ai_assisted": 3,
       "stays_with_you": 2
     }
@@ -33214,7 +33214,7 @@
         "id": "BN_3236",
         "text_de": "Revisionsrichtlinien und das Handbuch aktualisieren.",
         "text_en": "Update audit guidelines and the manual.",
-        "label": "high_ai_potential",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -33254,8 +33254,8 @@
     "summary": {
       "total": 7,
       "automatable": 0,
-      "high_ai_potential": 3,
-      "sensitive": 0,
+      "high_ai_potential": 2,
+      "sensitive": 1,
       "ai_assisted": 2,
       "stays_with_you": 2
     }
@@ -34045,7 +34045,7 @@
         "id": "BN_3327",
         "text_de": "Protokollieren, beobachten und werten Sie den Verlauf der Behandlung aus.",
         "text_en": "Document, observe, and evaluate the progress of the treatment.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -34117,8 +34117,8 @@
     "summary": {
       "total": 9,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 4,
       "stays_with_you": 4
     }
@@ -34524,51 +34524,19 @@
     "kldb2010": "B 72213",
     "tasks": [
       {
-        "id": "BN_3369",
-        "text_de": "Die Löhne und Gehälter berechnen und Daten an externe Dienstleister senden.",
-        "text_en": "Calculate wages and salaries and send data to external service providers.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "BN_3374",
+        "text_de": "Die Daten für die Finanzbuchhaltung aufbereiten.",
+        "text_en": "Prepare data for financial accounting.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
-        "id": "BN_3370",
-        "text_de": "Die internen Lohnkonten verwalten.",
-        "text_en": "Manage the internal payroll accounts.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3371",
-        "text_de": "Die Anwesenheitszeiten prüfen und Überstunden sowie Zulagen berechnen.",
-        "text_en": "Check attendance times and calculate overtime and allowances.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3372",
-        "text_de": "Die Reisekostenabrechnungen prüfen und erstellen.",
-        "text_en": "Check and create travel expense reports.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3375",
-        "text_de": "Die Stammdaten der Mitarbeiter erstellen und pflegen sowie Bescheinigungen ausstellen.",
-        "text_en": "Create and maintain employee master data and issue certificates.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3376",
-        "text_de": "Die monatlichen und jährlichen Meldungen durchführen.",
-        "text_en": "Carry out monthly and annual reports.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "BN_3381",
+        "text_de": "Bei der Erstellung von Geschäftsberichten helfen.",
+        "text_en": "Assist in the creation of business reports.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
@@ -34577,30 +34545,6 @@
         "text_en": "Make reports to health insurance companies.",
         "label": "sensitive",
         "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3378",
-        "text_de": "Die Lohnsteuerdaten an das Finanzamt senden.",
-        "text_en": "Send payroll tax data to the tax office.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3374",
-        "text_de": "Die Daten für die Finanzbuchhaltung aufbereiten.",
-        "text_en": "Prepare data for financial accounting.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3381",
-        "text_de": "Bei der Erstellung von Geschäftsberichten helfen.",
-        "text_en": "Assist in the creation of business reports.",
-        "label": "sensitive",
-        "score": 6,
         "is_regulated": true
       },
       {
@@ -34626,13 +34570,69 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_3369",
+        "text_de": "Die Löhne und Gehälter berechnen und Daten an externe Dienstleister senden.",
+        "text_en": "Calculate wages and salaries and send data to external service providers.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3370",
+        "text_de": "Die internen Lohnkonten verwalten.",
+        "text_en": "Manage the internal payroll accounts.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3371",
+        "text_de": "Die Anwesenheitszeiten prüfen und Überstunden sowie Zulagen berechnen.",
+        "text_en": "Check attendance times and calculate overtime and allowances.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3372",
+        "text_de": "Die Reisekostenabrechnungen prüfen und erstellen.",
+        "text_en": "Check and create travel expense reports.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3375",
+        "text_de": "Die Stammdaten der Mitarbeiter erstellen und pflegen sowie Bescheinigungen ausstellen.",
+        "text_en": "Create and maintain employee master data and issue certificates.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3376",
+        "text_de": "Die monatlichen und jährlichen Meldungen durchführen.",
+        "text_en": "Carry out monthly and annual reports.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3378",
+        "text_de": "Die Lohnsteuerdaten an das Finanzamt senden.",
+        "text_en": "Send payroll tax data to the tax office.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 13,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 10,
+      "automatable": 7,
+      "high_ai_potential": 2,
+      "sensitive": 1,
       "ai_assisted": 1,
       "stays_with_you": 2
     }
@@ -34646,7 +34646,7 @@
         "id": "BN_3387",
         "text_de": "Verträge erstellen.",
         "text_en": "Create contracts for purchase agreements.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -34702,8 +34702,8 @@
     "summary": {
       "total": 7,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 1,
       "stays_with_you": 5
     }
@@ -34978,7 +34978,7 @@
         "id": "BN_3419",
         "text_de": "Die Vermarktung medizinischer Produkte planen und überwachen.",
         "text_en": "Plan and monitor the marketing of medical products.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -35042,8 +35042,8 @@
     "summary": {
       "total": 8,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 5,
       "stays_with_you": 2
     }
@@ -35785,7 +35785,7 @@
         "id": "BN_3507",
         "text_de": "Bilanzen, Jahresabschlüsse oder Finanzmodelle erstellen.",
         "text_en": "Create balance sheets, annual financial statements, or financial models.",
-        "label": "high_ai_potential",
+        "label": "sensitive",
         "score": 7,
         "is_regulated": false
       },
@@ -35881,8 +35881,8 @@
     "summary": {
       "total": 12,
       "automatable": 0,
-      "high_ai_potential": 1,
-      "sensitive": 0,
+      "high_ai_potential": 0,
+      "sensitive": 1,
       "ai_assisted": 10,
       "stays_with_you": 1
     }
@@ -35909,18 +35909,18 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3516",
-        "text_de": "Mitwirken bei der Zulassung und Registrierung von Arzneimitteln.",
-        "text_en": "Assisting in the approval and registration of medicines.",
+        "id": "BN_3519",
+        "text_de": "Analysieren des Vorkommens von Mikroorganismen in der Umwelt und Erstellen von Gutachten.",
+        "text_en": "Analyzing the occurrence of microorganisms in the environment and creating reports.",
         "label": "high_ai_potential",
         "score": 6,
         "is_regulated": false
       },
       {
-        "id": "BN_3519",
-        "text_de": "Analysieren des Vorkommens von Mikroorganismen in der Umwelt und Erstellen von Gutachten.",
-        "text_en": "Analyzing the occurrence of microorganisms in the environment and creating reports.",
-        "label": "high_ai_potential",
+        "id": "BN_3516",
+        "text_de": "Mitwirken bei der Zulassung und Registrierung von Arzneimitteln.",
+        "text_en": "Assisting in the approval and registration of medicines.",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -36016,8 +36016,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 4,
-      "sensitive": 0,
+      "high_ai_potential": 3,
+      "sensitive": 1,
       "ai_assisted": 4,
       "stays_with_you": 7
     }
@@ -37502,26 +37502,10 @@
     "kldb2010": "B 82284",
     "tasks": [
       {
-        "id": "BN_3683",
-        "text_de": "Studienergebnisse dokumentieren und aufbereiten.",
-        "text_en": "Document and prepare study results.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_3672",
         "text_de": "Märkte beobachten und neue Produkte einführen.",
         "text_en": "Monitor markets and introduce new products.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3673",
-        "text_de": "Gesetzliche Vorschriften zur Lebensmittelsicherheit kontrollieren.",
-        "text_en": "Check legal regulations for food safety.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -37529,7 +37513,7 @@
         "id": "BN_3674",
         "text_de": "Vorschriften des Lieferkettengesetzes prüfen und Audits durchführen.",
         "text_en": "Check the rules of the supply chain law and conduct audits.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -37537,7 +37521,7 @@
         "id": "BN_3677",
         "text_de": "Qualität der Verpflegung sicherstellen und Nährwerte berechnen.",
         "text_en": "Ensure food quality and calculate nutritional values.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -37545,6 +37529,14 @@
         "id": "BN_3685",
         "text_de": "Informationsbroschüren erstellen und Informationen online veröffentlichen.",
         "text_en": "Create informational brochures and publish information online.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3673",
+        "text_de": "Gesetzliche Vorschriften zur Lebensmittelsicherheit kontrollieren.",
+        "text_en": "Check legal regulations for food safety.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -37644,13 +37636,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_3683",
+        "text_de": "Studienergebnisse dokumentieren und aufbereiten.",
+        "text_en": "Document and prepare study results.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 18,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 6,
+      "automatable": 1,
+      "high_ai_potential": 4,
+      "sensitive": 1,
       "ai_assisted": 5,
       "stays_with_you": 7
     }
@@ -37812,6 +37812,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3716",
+        "text_de": "Einheitliche Abläufe für die Patientenaufnahme und -vorbereitung einführen.",
+        "text_en": "Introduce uniform processes for patient admission and preparation.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "BN_3718",
         "text_de": "Die Behandlungsfälle codieren.",
         "text_en": "Code the treatment cases.",
@@ -37836,19 +37844,19 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3719",
+        "text_de": "Die Abrechnungen mit den Krankenkassen kontrollieren.",
+        "text_en": "Check billing with health insurance companies.",
+        "label": "sensitive",
+        "score": 9,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3728",
         "text_de": "Berichte für die operativen Bereiche erstellen.",
         "text_en": "Create reports for the surgical areas.",
         "label": "sensitive",
         "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3716",
-        "text_de": "Einheitliche Abläufe für die Patientenaufnahme und -vorbereitung einführen.",
-        "text_en": "Introduce uniform processes for patient admission and preparation.",
-        "label": "sensitive",
-        "score": 6,
         "is_regulated": true
       },
       {
@@ -38018,20 +38026,12 @@
         "label": "automatable",
         "score": 9,
         "is_regulated": false
-      },
-      {
-        "id": "BN_3719",
-        "text_de": "Die Abrechnungen mit den Krankenkassen kontrollieren.",
-        "text_en": "Check billing with health insurance companies.",
-        "label": "automatable",
-        "score": 9,
-        "is_regulated": false
       }
     ],
     "summary": {
       "total": 30,
-      "automatable": 3,
-      "high_ai_potential": 6,
+      "automatable": 2,
+      "high_ai_potential": 7,
       "sensitive": 2,
       "ai_assisted": 10,
       "stays_with_you": 9
@@ -38276,25 +38276,9 @@
         "id": "BN_3760",
         "text_de": "Mit Krankenkassen abrechnen, wenn nötig.",
         "text_en": "Bill health insurance companies if necessary.",
-        "label": "high_ai_potential",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
-      },
-      {
-        "id": "BN_3756",
-        "text_de": "Termine für Patienten vergeben.",
-        "text_en": "schedule appointments for patients",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3757",
-        "text_de": "Befunde der Patienten dokumentieren.",
-        "text_en": "Document patient findings.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
       },
       {
         "id": "BN_3752",
@@ -38353,6 +38337,22 @@
         "is_regulated": true
       },
       {
+        "id": "BN_3756",
+        "text_de": "Termine für Patienten vergeben.",
+        "text_en": "schedule appointments for patients",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_3757",
+        "text_de": "Befunde der Patienten dokumentieren.",
+        "text_en": "Document patient findings.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
         "id": "BN_3759",
         "text_de": "Rechnungen für die Behandlungen stellen.",
         "text_en": "Issue invoices for the treatments.",
@@ -38363,9 +38363,9 @@
     ],
     "summary": {
       "total": 12,
-      "automatable": 1,
-      "high_ai_potential": 2,
-      "sensitive": 2,
+      "automatable": 3,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 2,
       "stays_with_you": 5
     }
@@ -38513,7 +38513,7 @@
         "id": "BN_3777",
         "text_de": "Berichte und Gutachten erstellen und Ergebnisse festhalten.",
         "text_en": "Create reports and assessments and document results.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -38553,8 +38553,8 @@
     "summary": {
       "total": 5,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 3,
       "stays_with_you": 1
     }
@@ -39028,7 +39028,7 @@
         "id": "BN_3833",
         "text_de": "Bewerbungen prüfen und mit passenden Bewerbern Kontakt aufnehmen.",
         "text_en": "Review applications and contact suitable candidates.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -39140,8 +39140,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 1,
-      "sensitive": 1,
+      "high_ai_potential": 2,
+      "sensitive": 0,
       "ai_assisted": 6,
       "stays_with_you": 7
     }
@@ -39166,14 +39166,6 @@
         "label": "high_ai_potential",
         "score": 6,
         "is_regulated": false
-      },
-      {
-        "id": "BN_3844",
-        "text_de": "Bewerberdatenbanken erstellen und aktualisieren.",
-        "text_en": "Create and update applicant databases.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
       },
       {
         "id": "BN_3856",
@@ -39288,6 +39280,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3844",
+        "text_de": "Bewerberdatenbanken erstellen und aktualisieren.",
+        "text_en": "Create and update applicant databases.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
         "id": "BN_3852",
         "text_de": "Die Kundendatenbank aktualisieren.",
         "text_en": "Update the customer database.",
@@ -39306,9 +39306,9 @@
     ],
     "summary": {
       "total": 19,
-      "automatable": 2,
+      "automatable": 3,
       "high_ai_potential": 2,
-      "sensitive": 1,
+      "sensitive": 0,
       "ai_assisted": 7,
       "stays_with_you": 7
     }
@@ -39454,6 +39454,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3873",
+        "text_de": "In Datenbanken und sozialen Netzwerken nach geeigneten Bewerbern suchen.",
+        "text_en": "Search databases and social networks for suitable candidates.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "BN_3879",
         "text_de": "Qualifikationsprofile mit Stellenangeboten vergleichen.",
         "text_en": "Compare qualification profiles with job offers.",
@@ -39478,6 +39486,22 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4182",
+        "text_de": "Talentpools aufbauen, um später geeignete Kandidaten zu finden.",
+        "text_en": "Build talent pools to find suitable candidates later.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0248",
+        "text_de": "Recruiting-Funnel-Kennzahlen und Conversion analysieren.",
+        "text_en": "Analyze recruiting funnel metrics and conversion.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "GEN_0249",
         "text_de": "Arbeitgebermarke auf Karriereseiten pflegen.",
         "text_en": "Manage employer branding on career pages.",
@@ -39486,34 +39510,10 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3873",
-        "text_de": "In Datenbanken und sozialen Netzwerken nach geeigneten Bewerbern suchen.",
-        "text_en": "Search databases and social networks for suitable candidates.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4182",
-        "text_de": "Talentpools aufbauen, um später geeignete Kandidaten zu finden.",
-        "text_en": "Build talent pools to find suitable candidates later.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0248",
-        "text_de": "Recruiting-Funnel-Kennzahlen und Conversion analysieren.",
-        "text_en": "Analyze recruiting funnel metrics and conversion.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
         "id": "GEN_0250",
         "text_de": "Referenzprüfungen bei Kandidaten durchführen.",
         "text_en": "Conduct reference checks on candidates.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -39665,8 +39665,8 @@
     "summary": {
       "total": 27,
       "automatable": 2,
-      "high_ai_potential": 5,
-      "sensitive": 4,
+      "high_ai_potential": 9,
+      "sensitive": 0,
       "ai_assisted": 8,
       "stays_with_you": 8
     }
@@ -39676,14 +39676,6 @@
     "sector": "health",
     "kldb2010": "B 73342",
     "tasks": [
-      {
-        "id": "GEN_0089",
-        "text_de": "Befunde und Behandlungen in Patientenakten dokumentieren.",
-        "text_en": "Document assessments and treatments in patient files.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
       {
         "id": "BN_3888",
         "text_de": "Handlungsempfehlungen und Leitfäden erstellen und die Pflegequalität steigern.",
@@ -39795,13 +39787,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "GEN_0089",
+        "text_de": "Befunde und Behandlungen in Patientenakten dokumentieren.",
+        "text_en": "Document assessments and treatments in patient files.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
+      "automatable": 1,
       "high_ai_potential": 0,
-      "sensitive": 1,
+      "sensitive": 0,
       "ai_assisted": 2,
       "stays_with_you": 12
     }
@@ -39891,6 +39891,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3898",
+        "text_de": "Gutachten für Krankenversicherungen und Pflegeeinrichtungen erstellen.",
+        "text_en": "Prepare reports for health insurance and care facilities.",
+        "label": "sensitive",
+        "score": 9,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3896",
         "text_de": "Richtlinien zur Pflegequalität erstellen und deren Einhaltung überprüfen.",
         "text_en": "Create guidelines for care quality and check their compliance.",
@@ -39905,21 +39913,13 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": false
-      },
-      {
-        "id": "BN_3898",
-        "text_de": "Gutachten für Krankenversicherungen und Pflegeeinrichtungen erstellen.",
-        "text_en": "Prepare reports for health insurance and care facilities.",
-        "label": "automatable",
-        "score": 9,
-        "is_regulated": false
       }
     ],
     "summary": {
       "total": 5,
-      "automatable": 1,
+      "automatable": 0,
       "high_ai_potential": 2,
-      "sensitive": 1,
+      "sensitive": 2,
       "ai_assisted": 0,
       "stays_with_you": 1
     }
@@ -40351,6 +40351,14 @@
     "kldb2010": "B 73223",
     "tasks": [
       {
+        "id": "BN_3967",
+        "text_de": "Bewerbungen vorab sichten.",
+        "text_en": "Pre-screen applications for open positions.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "BN_3970",
         "text_de": "Informationsmaterialien wie Broschüren oder Webseiten erstellen und pflegen.",
         "text_en": "Create and maintain informational materials like brochures or websites.",
@@ -40367,20 +40375,12 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3974",
-        "text_de": "Patientendokumentationen verwalten.",
-        "text_en": "Manage patient documentation.",
+        "id": "BN_3973",
+        "text_de": "Abrechnungen mit Krankenkassen durchführen.",
+        "text_en": "Process billing with health insurance companies.",
         "label": "sensitive",
         "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_3967",
-        "text_de": "Bewerbungen vorab sichten.",
-        "text_en": "Pre-screen applications for open positions.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
+        "is_regulated": false
       },
       {
         "id": "BN_3961",
@@ -40487,19 +40487,19 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3973",
-        "text_de": "Abrechnungen mit Krankenkassen durchführen.",
-        "text_en": "Process billing with health insurance companies.",
+        "id": "BN_3974",
+        "text_de": "Patientendokumentationen verwalten.",
+        "text_en": "Manage patient documentation.",
         "label": "automatable",
         "score": 9,
-        "is_regulated": false
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 18,
       "automatable": 3,
-      "high_ai_potential": 2,
-      "sensitive": 2,
+      "high_ai_potential": 3,
+      "sensitive": 1,
       "ai_assisted": 9,
       "stays_with_you": 2
     }
@@ -41526,25 +41526,17 @@
     "kldb2010": "B 81624",
     "tasks": [
       {
-        "id": "BN_4084",
-        "text_de": "Berichte und Gutachten schreiben und Befunde dokumentieren.",
-        "text_en": "Write reports and assessments and document findings.",
-        "label": "sensitive",
-        "score": 8,
+        "id": "GEN_0077",
+        "text_de": "Interventionsergebnisse mit Messinstrumenten auswerten.",
+        "text_en": "Evaluate intervention results with measurement tools.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
         "id": "GEN_0074",
         "text_de": "Standardisierte Testverfahren und diagnostische Tests durchführen.",
         "text_en": "Conduct standardized assessments and diagnostic tests.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0077",
-        "text_de": "Interventionsergebnisse mit Messinstrumenten auswerten.",
-        "text_en": "Evaluate intervention results with measurement tools.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -41644,13 +41636,21 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4084",
+        "text_de": "Berichte und Gutachten schreiben und Befunde dokumentieren.",
+        "text_en": "Write reports and assessments and document findings.",
+        "label": "automatable",
+        "score": 8,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 3,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 4,
       "stays_with_you": 8
     }
@@ -42026,27 +42026,43 @@
     "kldb2010": "B 72144",
     "tasks": [
       {
-        "id": "BN_4127",
-        "text_de": "Jahres- und Haushaltsabschlüsse kontrollieren.",
-        "text_en": "Check annual and budget reports.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0034",
-        "text_de": "Überwachungsberichte zu Kreditveränderungen erstellen.",
-        "text_en": "Write surveillance reports on credit changes.",
-        "label": "sensitive",
-        "score": 8,
-        "is_regulated": true
-      },
-      {
         "id": "GEN_0030",
         "text_de": "Wirtschaftsindikatoren mit Einfluss auf die Kreditqualität beobachten.",
         "text_en": "Monitor economic indicators affecting credit quality.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4126",
+        "text_de": "Die Zahlungsfähigkeit und Kreditwürdigkeit von Unternehmen prüfen.",
+        "text_en": "Check the payment ability and creditworthiness of companies.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0028",
+        "text_de": "Ausfallwahrscheinlichkeiten mit quantitativen Modellen berechnen.",
+        "text_en": "Model default probabilities with quantitative tools.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0032",
+        "text_de": "Ratingmodelle mit neuen Daten aktualisieren.",
+        "text_en": "Update rating models with new data.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0035",
+        "text_de": "Unternehmensleistung mit Vergleichsgruppen abgleichen.",
+        "text_en": "Compare company performance with peer groups.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
@@ -42058,41 +42074,9 @@
         "is_regulated": true
       },
       {
-        "id": "BN_4126",
-        "text_de": "Die Zahlungsfähigkeit und Kreditwürdigkeit von Unternehmen prüfen.",
-        "text_en": "Check the payment ability and creditworthiness of companies.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
         "id": "GEN_0027",
         "text_de": "Jahresabschlüsse bewerteter Unternehmen analysieren.",
         "text_en": "Analyze financial statements of rated companies.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0028",
-        "text_de": "Ausfallwahrscheinlichkeiten mit quantitativen Modellen berechnen.",
-        "text_en": "Model default probabilities with quantitative tools.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0032",
-        "text_de": "Ratingmodelle mit neuen Daten aktualisieren.",
-        "text_en": "Update rating models with new data.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0035",
-        "text_de": "Unternehmensleistung mit Vergleichsgruppen abgleichen.",
-        "text_en": "Compare company performance with peer groups.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -42144,13 +42128,29 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4127",
+        "text_de": "Jahres- und Haushaltsabschlüsse kontrollieren.",
+        "text_en": "Check annual and budget reports.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0034",
+        "text_de": "Überwachungsberichte zu Kreditveränderungen erstellen.",
+        "text_en": "Write surveillance reports on credit changes.",
+        "label": "automatable",
+        "score": 8,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 9,
+      "automatable": 2,
+      "high_ai_potential": 5,
+      "sensitive": 2,
       "ai_assisted": 4,
       "stays_with_you": 2
     }
@@ -42161,58 +42161,10 @@
     "kldb2010": "B 72214",
     "tasks": [
       {
-        "id": "BN_4132",
-        "text_de": "Rechnungen prüfen.",
-        "text_en": "Check invoices for completeness.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4133",
-        "text_de": "Zahlungen kontrollieren.",
-        "text_en": "Check payments for correctness.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4134",
-        "text_de": "Kassen und Bücher prüfen.",
-        "text_en": "Check cash and books.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4135",
-        "text_de": "Jahresabschlüsse und Vermögenswerte prüfen.",
-        "text_en": "Check annual accounts and assets.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4136",
-        "text_de": "Prüfungsberichte schreiben und veröffentlichen.",
-        "text_en": "Write and publish exam reports.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0001",
-        "text_de": "Lagerbestände mit Bestandsaufzeichnungen abgleichen.",
-        "text_en": "Verify inventory against stock records.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "GEN_0005",
         "text_de": "Budgets mit tatsächlichen Ausgaben vergleichen.",
         "text_en": "Compare budgets against actual spending.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -42220,7 +42172,7 @@
         "id": "BN_4137",
         "text_de": "Sichere Verwendung von Geld und Materialien prüfen.",
         "text_en": "Check safe use of money and materials.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -42228,7 +42180,7 @@
         "id": "GEN_0002",
         "text_de": "Transaktionen in Buchführungssystemen nachverfolgen.",
         "text_en": "Trace transactions through accounting systems.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -42236,15 +42188,7 @@
         "id": "GEN_0003",
         "text_de": "Wirksamkeit interner Kontrollen für die Finanzberichterstattung bewerten.",
         "text_en": "Assess internal control effectiveness for financial reporting.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0004",
-        "text_de": "Steuerliche Einhaltung und Meldungen prüfen.",
-        "text_en": "Review tax compliance and filings.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -42252,6 +42196,14 @@
         "id": "GEN_0006",
         "text_de": "Abschreibungspläne und Bewertungen überprüfen.",
         "text_en": "Evaluate depreciation schedules and valuations.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0004",
+        "text_de": "Steuerliche Einhaltung und Meldungen prüfen.",
+        "text_en": "Review tax compliance and filings.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -42279,13 +42231,61 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4132",
+        "text_de": "Rechnungen prüfen.",
+        "text_en": "Check invoices for completeness.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4133",
+        "text_de": "Zahlungen kontrollieren.",
+        "text_en": "Check payments for correctness.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4134",
+        "text_de": "Kassen und Bücher prüfen.",
+        "text_en": "Check cash and books.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4135",
+        "text_de": "Jahresabschlüsse und Vermögenswerte prüfen.",
+        "text_en": "Check annual accounts and assets.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4136",
+        "text_de": "Prüfungsberichte schreiben und veröffentlichen.",
+        "text_en": "Write and publish exam reports.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0001",
+        "text_de": "Lagerbestände mit Bestandsaufzeichnungen abgleichen.",
+        "text_en": "Verify inventory against stock records.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 12,
+      "automatable": 6,
+      "high_ai_potential": 5,
+      "sensitive": 1,
       "ai_assisted": 2,
       "stays_with_you": 1
     }
@@ -42296,18 +42296,10 @@
     "kldb2010": "B 73183",
     "tasks": [
       {
-        "id": "BN_4158",
-        "text_de": "Die Betreuungsarbeit organisieren und dokumentieren.",
-        "text_en": "Organize and document care work.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_4144",
         "text_de": "Mietverträge prüfen und abschließen.",
         "text_en": "Check and finalize rental contracts.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -42315,7 +42307,7 @@
         "id": "BN_4148",
         "text_de": "Einkünfte und Sozialleistungen beantragen.",
         "text_en": "Apply for income and social benefits.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -42323,7 +42315,7 @@
         "id": "BN_4149",
         "text_de": "Die Finanzen verwalten und Zahlungen überwachen.",
         "text_en": "Manage finances and monitor payments.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -42331,15 +42323,7 @@
         "id": "BN_4150",
         "text_de": "Unterhaltspflichten prüfen und Schulden regeln.",
         "text_en": "Check maintenance obligations and settle debts.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4153",
-        "text_de": "Pflegedienste organisieren und Krankenversicherung sicherstellen.",
-        "text_en": "Organize care services and ensure health insurance.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -42347,6 +42331,14 @@
         "id": "BN_4160",
         "text_de": "Korrespondenz führen und Anträge stellen.",
         "text_en": "Conduct correspondence and submit applications.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4153",
+        "text_de": "Pflegedienste organisieren und Krankenversicherung sicherstellen.",
+        "text_en": "Organize care services and ensure health insurance.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -42486,13 +42478,21 @@
         "label": "stays_with_you",
         "score": 0,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4158",
+        "text_de": "Die Betreuungsarbeit organisieren und dokumentieren.",
+        "text_en": "Organize and document care work.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 24,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 8,
+      "automatable": 1,
+      "high_ai_potential": 5,
+      "sensitive": 2,
       "ai_assisted": 8,
       "stays_with_you": 8
     }
@@ -42502,14 +42502,6 @@
     "sector": "law",
     "kldb2010": "B 73183",
     "tasks": [
-      {
-        "id": "BN_4173",
-        "text_de": "Rechtsschutzanträge nach Prüfung an die zuständigen Stellen weiterleiten.",
-        "text_en": "Forward legal protection applications to the appropriate authorities after review.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
       {
         "id": "BN_4174",
         "text_de": "Rechtsfälle aufzeichnen und verwalten.",
@@ -42549,13 +42541,21 @@
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4173",
+        "text_de": "Rechtsschutzanträge nach Prüfung an die zuständigen Stellen weiterleiten.",
+        "text_en": "Forward legal protection applications to the appropriate authorities after review.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 6,
-      "automatable": 0,
+      "automatable": 1,
       "high_ai_potential": 0,
-      "sensitive": 3,
+      "sensitive": 2,
       "ai_assisted": 3,
       "stays_with_you": 0
     }
@@ -42566,11 +42566,19 @@
     "kldb2010": "B 43223",
     "tasks": [
       {
-        "id": "BN_4186",
-        "text_de": "Dokumentationen und Gutachten zu klinischen Studien erstellen.",
-        "text_en": "Create documentation and reports for clinical studies.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "BN_4184",
+        "text_de": "Prüfzentren und Prüfärzte auswählen und beauftragen.",
+        "text_en": "Select and commission testing centers and exam doctors.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4185",
+        "text_de": "Studienergebnisse sammeln und ihre Gültigkeit prüfen.",
+        "text_en": "Collect study results and check their validity.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
@@ -42579,22 +42587,6 @@
         "text_en": "Prepare documents for drug approval.",
         "label": "sensitive",
         "score": 7,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4184",
-        "text_de": "Prüfzentren und Prüfärzte auswählen und beauftragen.",
-        "text_en": "Select and commission testing centers and exam doctors.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4185",
-        "text_de": "Studienergebnisse sammeln und ihre Gültigkeit prüfen.",
-        "text_en": "Collect study results and check their validity.",
-        "label": "sensitive",
-        "score": 6,
         "is_regulated": true
       },
       {
@@ -42620,13 +42612,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4186",
+        "text_de": "Dokumentationen und Gutachten zu klinischen Studien erstellen.",
+        "text_en": "Create documentation and reports for clinical studies.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 7,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 4,
+      "automatable": 1,
+      "high_ai_potential": 2,
+      "sensitive": 1,
       "ai_assisted": 2,
       "stays_with_you": 1
     }
@@ -43023,25 +43023,17 @@
     "kldb2010": "B 81884",
     "tasks": [
       {
-        "id": "BN_4240",
-        "text_de": "Berichte über vermutete Nebenwirkungen bewerten und weiterleiten.",
-        "text_en": "Evaluate and forward reports of suspected side effects.",
+        "id": "BN_4229",
+        "text_de": "Genehmigungen für klinische Forschungsprojekte beantragen und Lizenzen für medizinische Tests erhalten.",
+        "text_en": "Apply for approvals for clinical research projects and obtain licenses for medical tests.",
         "label": "high_ai_potential",
         "score": 6,
-        "is_regulated": false
+        "is_regulated": true
       },
       {
         "id": "BN_4228",
         "text_de": "Neue Medikamente und diagnostische Produkte nach gesetzlichen Vorgaben registrieren.",
         "text_en": "Register new drugs and diagnostic products according to legal requirements.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4229",
-        "text_de": "Genehmigungen für klinische Forschungsprojekte beantragen und Lizenzen für medizinische Tests erhalten.",
-        "text_en": "Apply for approvals for clinical research projects and obtain licenses for medical tests.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -43061,6 +43053,14 @@
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4240",
+        "text_de": "Berichte über vermutete Nebenwirkungen bewerten und weiterleiten.",
+        "text_en": "Evaluate and forward reports of suspected side effects.",
+        "label": "sensitive",
+        "score": 6,
+        "is_regulated": false
       },
       {
         "id": "BN_4233",
@@ -43926,6 +43926,46 @@
     "kldb2010": "B 72244",
     "tasks": [
       {
+        "id": "BN_4322",
+        "text_de": "die Ordnung und Sicherheit der Finanzen in einem Unternehmen überprüfen.",
+        "text_en": "check the order and security of finances in a company.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4324",
+        "text_de": "die Wirtschaftlichkeit von Arbeitsabläufen und IT-Prozessen überprüfen.",
+        "text_en": "check the efficiency of workflows and IT processes.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0148",
+        "text_de": "Finanztransaktionen stichprobenartig prüfen.",
+        "text_en": "Test financial transactions on a sample basis.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0150",
+        "text_de": "IT-Kontrollen für Finanzsysteme bewerten.",
+        "text_en": "Evaluate IT controls for financial systems.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0153",
+        "text_de": "Fortschritte bei empfohlenen Verbesserungen überwachen.",
+        "text_en": "Monitor progress on recommended improvements.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "GEN_0147",
         "text_de": "Prüfungsunterlagen mit Dokumentation der Kontrolltests erstellen.",
         "text_en": "Prepare audit work papers documenting control tests.",
@@ -43934,49 +43974,9 @@
         "is_regulated": true
       },
       {
-        "id": "BN_4322",
-        "text_de": "die Ordnung und Sicherheit der Finanzen in einem Unternehmen überprüfen.",
-        "text_en": "check the order and security of finances in a company.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4324",
-        "text_de": "die Wirtschaftlichkeit von Arbeitsabläufen und IT-Prozessen überprüfen.",
-        "text_en": "check the efficiency of workflows and IT processes.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0148",
-        "text_de": "Finanztransaktionen stichprobenartig prüfen.",
-        "text_en": "Test financial transactions on a sample basis.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0150",
-        "text_de": "IT-Kontrollen für Finanzsysteme bewerten.",
-        "text_en": "Evaluate IT controls for financial systems.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
         "id": "GEN_0151",
         "text_de": "Zwischenergebnisse an Prüfungsausschüsse berichten.",
         "text_en": "Report interim findings to audit committees.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0153",
-        "text_de": "Fortschritte bei empfohlenen Verbesserungen überwachen.",
-        "text_en": "Monitor progress on recommended improvements.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -44049,8 +44049,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 7,
+      "high_ai_potential": 5,
+      "sensitive": 2,
       "ai_assisted": 6,
       "stays_with_you": 2
     }
@@ -46723,18 +46723,10 @@
     "kldb2010": "B 81614",
     "tasks": [
       {
-        "id": "BN_4607",
-        "text_de": "Berichte und Gutachten erstellen und dokumentieren.",
-        "text_en": "Create and document reports and assessments.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_4608",
         "text_de": "Forschungsberichte schreiben.",
         "text_en": "Write research reports.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -46809,13 +46801,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4607",
+        "text_de": "Berichte und Gutachten erstellen und dokumentieren.",
+        "text_en": "Create and document reports and assessments.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 11,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 0,
       "stays_with_you": 9
     }
@@ -46829,7 +46829,7 @@
         "id": "BN_4615",
         "text_de": "Den Verlauf der Behandlung dokumentieren und auswerten.",
         "text_en": "Document and evaluate the course of treatment.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -46893,8 +46893,8 @@
     "summary": {
       "total": 8,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 4,
       "stays_with_you": 3
     }
@@ -47055,22 +47055,6 @@
     "kldb2010": "B 73144",
     "tasks": [
       {
-        "id": "BN_4634",
-        "text_de": "Den Einzug von verhängten Geldstrafen anordnen.",
-        "text_en": "Order the collection of imposed fines.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4636",
-        "text_de": "Verurteilungen an die entsprechenden Register melden.",
-        "text_en": "Report convictions to the appropriate registers.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_4632",
         "text_de": "In einfachen Fällen einen Antrag auf Strafbefehl bei Gericht stellen.",
         "text_en": "In simple cases, submit an application for a penalty order to the court.",
@@ -47093,13 +47077,29 @@
         "label": "stays_with_you",
         "score": 4,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4634",
+        "text_de": "Den Einzug von verhängten Geldstrafen anordnen.",
+        "text_en": "Order the collection of imposed fines.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4636",
+        "text_de": "Verurteilungen an die entsprechenden Register melden.",
+        "text_en": "Report convictions to the appropriate registers.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 5,
-      "automatable": 0,
+      "automatable": 2,
       "high_ai_potential": 0,
-      "sensitive": 3,
+      "sensitive": 1,
       "ai_assisted": 1,
       "stays_with_you": 1
     }
@@ -47113,7 +47113,7 @@
         "id": "BN_4644",
         "text_de": "Bei der Entlassung Arztbriefe für den weiterbehandelnden Arzt verfassen.",
         "text_en": "Write discharge letters for the continuing physician upon discharge.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -47121,7 +47121,7 @@
         "id": "BN_4643",
         "text_de": "Behandlungsabläufe dokumentieren und bewerten.",
         "text_en": "Document and evaluate treatment processes.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -47129,7 +47129,7 @@
         "id": "BN_4645",
         "text_de": "Ärztliche Leistungen abrechnen und Anträge sowie Gutachten erstellen.",
         "text_en": "Bill for medical services and create applications and reports.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -47185,8 +47185,8 @@
     "summary": {
       "total": 9,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 3,
+      "high_ai_potential": 3,
+      "sensitive": 0,
       "ai_assisted": 2,
       "stays_with_you": 4
     }
@@ -47625,14 +47625,6 @@
     "kldb2010": "B 81313",
     "tasks": [
       {
-        "id": "BN_4692",
-        "text_de": "Pflegemaßnahmen und Beobachtungen dokumentieren.",
-        "text_en": "Document care measures and observations.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_4691",
         "text_de": "Fachärzte und Therapeuten kontaktieren.",
         "text_en": "Contact specialists and therapists.",
@@ -47711,13 +47703,21 @@
         "label": "stays_with_you",
         "score": 0,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4692",
+        "text_de": "Pflegemaßnahmen und Beobachtungen dokumentieren.",
+        "text_en": "Document care measures and observations.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 11,
-      "automatable": 0,
+      "automatable": 1,
       "high_ai_potential": 0,
-      "sensitive": 1,
+      "sensitive": 0,
       "ai_assisted": 2,
       "stays_with_you": 8
     }
@@ -48306,20 +48306,20 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4759",
+        "text_de": "Bewerberprofile im Talent Pool durchsehen.",
+        "text_en": "Review applicant profiles in the talent pool.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
         "id": "BN_4765",
         "text_de": "Arbeitsverträge erstellen und abschließen.",
         "text_en": "Create and finalize employment contracts.",
         "label": "high_ai_potential",
         "score": 6,
         "is_regulated": false
-      },
-      {
-        "id": "BN_4759",
-        "text_de": "Bewerberprofile im Talent Pool durchsehen.",
-        "text_en": "Review applicant profiles in the talent pool.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
       },
       {
         "id": "BN_4766",
@@ -48453,8 +48453,8 @@
     "summary": {
       "total": 19,
       "automatable": 1,
-      "high_ai_potential": 2,
-      "sensitive": 1,
+      "high_ai_potential": 3,
+      "sensitive": 0,
       "ai_assisted": 10,
       "stays_with_you": 5
     }
@@ -49042,18 +49042,10 @@
     "kldb2010": "B 81504",
     "tasks": [
       {
-        "id": "BN_4824",
-        "text_de": "Vorbereiten von Daten für die Abrechnung.",
-        "text_en": "Prepare data for billing.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_4827",
         "text_de": "Erstellen von Arztberichten und Gutachten.",
         "text_en": "Create medical reports and assessments.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -49160,13 +49152,21 @@
         "label": "stays_with_you",
         "score": 1,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4824",
+        "text_de": "Vorbereiten von Daten für die Abrechnung.",
+        "text_en": "Prepare data for billing.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 3,
       "stays_with_you": 10
     }
@@ -49176,14 +49176,6 @@
     "sector": "health",
     "kldb2010": "B 81584",
     "tasks": [
-      {
-        "id": "BN_4838",
-        "text_de": "Ich rechne meine Leistungen ab und erstelle Rechnungen.",
-        "text_en": "Bill for services and create invoices.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
       {
         "id": "BN_4839",
         "text_de": "Ich erstelle Gutachten über das Aggressionspotenzial oder die Gefährlichkeit von auffälligen Tieren.",
@@ -49255,13 +49247,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4838",
+        "text_de": "Ich rechne meine Leistungen ab und erstelle Rechnungen.",
+        "text_en": "Bill for services and create invoices.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 0,
+      "automatable": 1,
       "high_ai_potential": 0,
-      "sensitive": 1,
+      "sensitive": 0,
       "ai_assisted": 3,
       "stays_with_you": 6
     }
@@ -50037,7 +50037,7 @@
         "id": "GEN_0266",
         "text_de": "Tägliche Liquiditätspositionen über alle Konten überwachen.",
         "text_en": "Monitor daily cash positions across all accounts.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -50045,7 +50045,7 @@
         "id": "BN_4929",
         "text_de": "Zahlungen innerhalb und außerhalb des Unternehmens vorbereiten und durchführen.",
         "text_en": "Prepare and carry out payments inside and outside the company.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -50053,7 +50053,7 @@
         "id": "GEN_0267",
         "text_de": "Devisensicherungsgeschäfte für das Unternehmensrisiko durchführen.",
         "text_en": "Execute currency hedging transactions for company exposure.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -50061,7 +50061,7 @@
         "id": "GEN_0268",
         "text_de": "Cashflow-Prognosen und Stresstests erstellen.",
         "text_en": "Create cash flow forecasts and stress tests.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -50069,7 +50069,7 @@
         "id": "GEN_0269",
         "text_de": "Konzerninterne Darlehensverträge verwalten.",
         "text_en": "Manage intercompany loan agreements.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -50077,7 +50077,7 @@
         "id": "GEN_0271",
         "text_de": "Kontrahenten-Risiken und Konzentrationsgrenzen prüfen.",
         "text_en": "Review counterparty exposures and concentration limits.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -50157,8 +50157,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 6,
+      "high_ai_potential": 6,
+      "sensitive": 0,
       "ai_assisted": 8,
       "stays_with_you": 1
     }
@@ -50169,17 +50169,17 @@
     "kldb2010": "B 72244",
     "tasks": [
       {
-        "id": "BN_4934",
-        "text_de": "Jahresabschlüsse erstellen.",
-        "text_en": "Create annual financial statements.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "BN_4933",
+        "text_de": "Buchhaltungs-, Steuer- und Beratungsaufgaben für Kunden erledigen.",
+        "text_en": "Complete accounting, tax, and consulting tasks for clients.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
-        "id": "BN_4935",
-        "text_de": "Löhne berechnen.",
-        "text_en": "Calculate wages and salary deductions.",
+        "id": "BN_4934",
+        "text_de": "Jahresabschlüsse erstellen.",
+        "text_en": "Create annual financial statements.",
         "label": "sensitive",
         "score": 9,
         "is_regulated": true
@@ -50193,35 +50193,35 @@
         "is_regulated": true
       },
       {
-        "id": "BN_4937",
-        "text_de": "Sozialversicherungsbeiträge berechnen.",
-        "text_en": "Calculate social security contributions.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4933",
-        "text_de": "Buchhaltungs-, Steuer- und Beratungsaufgaben für Kunden erledigen.",
-        "text_en": "Complete accounting, tax, and consulting tasks for clients.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
         "id": "BN_4938",
         "text_de": "Bei Insolvenzen das Vermögen des Schuldners verwalten.",
         "text_en": "Manage the debtor's assets in case of insolvency.",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4935",
+        "text_de": "Löhne berechnen.",
+        "text_en": "Calculate wages and salary deductions.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4937",
+        "text_de": "Sozialversicherungsbeiträge berechnen.",
+        "text_en": "Calculate social security contributions.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 6,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 5,
+      "automatable": 2,
+      "high_ai_potential": 1,
+      "sensitive": 2,
       "ai_assisted": 1,
       "stays_with_you": 0
     }
@@ -50477,14 +50477,6 @@
     "kldb2010": "B 42314",
     "tasks": [
       {
-        "id": "BN_4973",
-        "text_de": "Überwachen, dass die umweltrechtlichen Vorschriften beachtet werden.",
-        "text_en": "Monitor that the environmental regulations are observed.",
-        "label": "high_ai_potential",
-        "score": 6,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4974",
         "text_de": "Kontrollieren, ob Umweltschutzmaßnahmen und Prozesse nachhaltig und funktionsfähig sind.",
         "text_en": "Check if environmental protection measures and processes are sustainable and functional.",
@@ -50521,6 +50513,14 @@
         "text_de": "Erstellen von Anträgen für Genehmigungen von baulichen Veränderungen.",
         "text_en": "Prepare applications for permits for structural changes.",
         "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4973",
+        "text_de": "Überwachen, dass die umweltrechtlichen Vorschriften beachtet werden.",
+        "text_en": "Monitor that the environmental regulations are observed.",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -50584,8 +50584,8 @@
     "summary": {
       "total": 13,
       "automatable": 1,
-      "high_ai_potential": 6,
-      "sensitive": 0,
+      "high_ai_potential": 5,
+      "sensitive": 1,
       "ai_assisted": 2,
       "stays_with_you": 4
     }
@@ -50596,11 +50596,27 @@
     "kldb2010": "B 72133",
     "tasks": [
       {
-        "id": "BN_4989",
-        "text_de": "Versicherungspolicen und Verträge prüfen, erstellen und abschließen.",
-        "text_en": "Check, create, and finalize insurance policies and contracts.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "BN_4985",
+        "text_de": "Versicherungsrisiken bewerten und Preise festlegen.",
+        "text_en": "Assess insurance risks and set prices.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0210",
+        "text_de": "Schadentrends beobachten und Risikobereitschaft anpassen.",
+        "text_en": "Monitor claims trends and adjust risk appetite.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "GEN_0211",
+        "text_de": "Katastrophenexposition und Kumulierungsgrenzen prüfen.",
+        "text_en": "Review catastrophe exposure and accumulation limits.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
@@ -50609,38 +50625,6 @@
         "text_en": "Document underwriting decisions for audit compliance.",
         "label": "sensitive",
         "score": 9,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4988",
-        "text_de": "Vorhandene Verträge auf Änderungen überprüfen.",
-        "text_en": "Check existing contracts for changes.",
-        "label": "sensitive",
-        "score": 8,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_4985",
-        "text_de": "Versicherungsrisiken bewerten und Preise festlegen.",
-        "text_en": "Assess insurance risks and set prices.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0210",
-        "text_de": "Schadentrends beobachten und Risikobereitschaft anpassen.",
-        "text_en": "Monitor claims trends and adjust risk appetite.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "GEN_0211",
-        "text_de": "Katastrophenexposition und Kumulierungsgrenzen prüfen.",
-        "text_en": "Review catastrophe exposure and accumulation limits.",
-        "label": "sensitive",
-        "score": 6,
         "is_regulated": true
       },
       {
@@ -50714,13 +50698,29 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_4989",
+        "text_de": "Versicherungspolicen und Verträge prüfen, erstellen und abschließen.",
+        "text_en": "Check, create, and finalize insurance policies and contracts.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_4988",
+        "text_de": "Vorhandene Verträge auf Änderungen überprüfen.",
+        "text_en": "Check existing contracts for changes.",
+        "label": "automatable",
+        "score": 8,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 6,
+      "automatable": 2,
+      "high_ai_potential": 3,
+      "sensitive": 1,
       "ai_assisted": 4,
       "stays_with_you": 5
     }
@@ -51572,11 +51572,11 @@
     "kldb2010": "B 81634",
     "tasks": [
       {
-        "id": "BN_5086",
-        "text_de": "Verwaltungsaufgaben erledigen, wie Abrechnungen erstellen.",
-        "text_en": "Complete administrative tasks, like creating invoices.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "ONET_0115",
+        "text_de": "Patientenfortschritte während der Therapiesitzungen beobachten und dokumentieren.",
+        "text_en": "Observe and record patient progress during treatment sessions.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
@@ -51585,14 +51585,6 @@
         "text_en": "Document the diagnosis and treatment course.",
         "label": "sensitive",
         "score": 8,
-        "is_regulated": true
-      },
-      {
-        "id": "ONET_0115",
-        "text_de": "Patientenfortschritte während der Therapiesitzungen beobachten und dokumentieren.",
-        "text_en": "Observe and record patient progress during treatment sessions.",
-        "label": "sensitive",
-        "score": 6,
         "is_regulated": true
       },
       {
@@ -51666,13 +51658,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_5086",
+        "text_de": "Verwaltungsaufgaben erledigen, wie Abrechnungen erstellen.",
+        "text_en": "Complete administrative tasks, like creating invoices.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 12,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 3,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 1,
       "ai_assisted": 4,
       "stays_with_you": 5
     }
@@ -51928,11 +51928,19 @@
     "kldb2010": "B 81614",
     "tasks": [
       {
-        "id": "BN_5122",
-        "text_de": "Berichte und Gutachten schreiben und Befunde festhalten.",
-        "text_en": "Write reports and assessments and record findings.",
-        "label": "sensitive",
-        "score": 9,
+        "id": "BN_5123",
+        "text_de": "Forschungsberichte schreiben.",
+        "text_en": "Write research reports.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_5116",
+        "text_de": "Überprüfen, ob Personen mit gesundheitlichen Problemen oder häufigen Verkehrsverstößen am Straßenverkehr teilnehmen können.",
+        "text_en": "Check if people with health problems or frequent traffic violations can participate in road traffic.",
+        "label": "high_ai_potential",
+        "score": 6,
         "is_regulated": true
       },
       {
@@ -51941,22 +51949,6 @@
         "text_en": "Create reports with diagnosis and prognosis based on traffic rules.",
         "label": "sensitive",
         "score": 7,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_5123",
-        "text_de": "Forschungsberichte schreiben.",
-        "text_en": "Write research reports.",
-        "label": "sensitive",
-        "score": 7,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_5116",
-        "text_de": "Überprüfen, ob Personen mit gesundheitlichen Problemen oder häufigen Verkehrsverstößen am Straßenverkehr teilnehmen können.",
-        "text_en": "Check if people with health problems or frequent traffic violations can participate in road traffic.",
-        "label": "sensitive",
-        "score": 6,
         "is_regulated": true
       },
       {
@@ -52014,13 +52006,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_5122",
+        "text_de": "Berichte und Gutachten schreiben und Befunde festhalten.",
+        "text_en": "Write reports and assessments and record findings.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 11,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 4,
+      "automatable": 1,
+      "high_ai_potential": 2,
+      "sensitive": 1,
       "ai_assisted": 1,
       "stays_with_you": 6
     }
@@ -52193,7 +52193,7 @@
         "id": "BN_5144",
         "text_de": "Bestehende Versicherungen überprüfen und Anpassungen oder Lücken feststellen.",
         "text_en": "Check existing insurances and identify adjustments or gaps.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -52201,7 +52201,7 @@
         "id": "GEN_0326",
         "text_de": "Vertragsbedingungen verschiedener Versicherer vergleichen.",
         "text_en": "Compare policy terms across multiple insurers.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -52209,7 +52209,7 @@
         "id": "GEN_0328",
         "text_de": "Verlängerungstermine überwachen und frühzeitig Nachverhandlungen starten.",
         "text_en": "Monitor renewal dates and start renegotiations early.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -52313,8 +52313,8 @@
     "summary": {
       "total": 15,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 3,
+      "high_ai_potential": 3,
+      "sensitive": 0,
       "ai_assisted": 5,
       "stays_with_you": 7
     }
@@ -52325,18 +52325,10 @@
     "kldb2010": "B 72224",
     "tasks": [
       {
-        "id": "BN_5157",
-        "text_de": "Versicherungsbeiträge und Rabatte berechnen.",
-        "text_en": "Calculate insurance contributions and discounts.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_5152",
         "text_de": "Versicherungstarife überwachen und berechnen.",
         "text_en": "Monitor and calculate insurance rates.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 7,
         "is_regulated": true
       },
@@ -52344,7 +52336,7 @@
         "id": "BN_5153",
         "text_de": "Versicherungsrisiken bewerten und Tarife festlegen.",
         "text_en": "Assess insurance risks and set rates.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -52352,15 +52344,7 @@
         "id": "BN_5154",
         "text_de": "Kosten und Gewinne berechnen.",
         "text_en": "Calculate costs and profits.",
-        "label": "sensitive",
-        "score": 6,
-        "is_regulated": true
-      },
-      {
-        "id": "BN_5158",
-        "text_de": "Haftung und Versicherungsschutz überprüfen.",
-        "text_en": "Check liability and insurance coverage.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -52368,6 +52352,14 @@
         "id": "BN_5161",
         "text_de": "Statistiken zu Risiken und Bevölkerungsdaten erstellen.",
         "text_en": "Create statistics on risks and population data.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": true
+      },
+      {
+        "id": "BN_5158",
+        "text_de": "Haftung und Versicherungsschutz überprüfen.",
+        "text_en": "Check liability and insurance coverage.",
         "label": "sensitive",
         "score": 6,
         "is_regulated": true
@@ -52403,13 +52395,21 @@
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_5157",
+        "text_de": "Versicherungsbeiträge und Rabatte berechnen.",
+        "text_en": "Calculate insurance contributions and discounts.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 6,
+      "automatable": 1,
+      "high_ai_potential": 4,
+      "sensitive": 1,
       "ai_assisted": 4,
       "stays_with_you": 0
     }
@@ -52420,18 +52420,10 @@
     "kldb2010": "B 72133",
     "tasks": [
       {
-        "id": "BN_5163",
-        "text_de": "Angebote von verschiedenen Versicherungsunternehmen vergleichen.",
-        "text_en": "Compare offers from different insurance companies.",
-        "label": "sensitive",
-        "score": 8,
-        "is_regulated": true
-      },
-      {
         "id": "BN_5165",
         "text_de": "Individuelle Versicherungsvorschläge erstellen.",
         "text_en": "Create individual insurance proposals.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -52458,13 +52450,21 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_5163",
+        "text_de": "Angebote von verschiedenen Versicherungsunternehmen vergleichen.",
+        "text_en": "Compare offers from different insurance companies.",
+        "label": "automatable",
+        "score": 8,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 5,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 2,
+      "automatable": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 1,
       "stays_with_you": 2
     }
@@ -52478,7 +52478,7 @@
         "id": "BN_5170",
         "text_de": "Ansprüche und Haftung prüfen",
         "text_en": "check claims and liability",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -52526,8 +52526,8 @@
     "summary": {
       "total": 6,
       "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 1,
+      "high_ai_potential": 1,
+      "sensitive": 0,
       "ai_assisted": 3,
       "stays_with_you": 2
     }
@@ -53957,10 +53957,18 @@
     "kldb2010": "B 72123",
     "tasks": [
       {
+        "id": "BN_5300",
+        "text_de": "Wertpapieraufträge bearbeiten und eintragen.",
+        "text_en": "Process and record securities orders.",
+        "label": "sensitive",
+        "score": 9,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5302",
         "text_de": "Schriftverkehr zu Wertpapieren und Depots bearbeiten.",
         "text_en": "Handle correspondence regarding securities and accounts.",
-        "label": "high_ai_potential",
+        "label": "sensitive",
         "score": 6,
         "is_regulated": false
       },
@@ -53970,14 +53978,6 @@
         "text_en": "Answer inquiries from customers and brokers.",
         "label": "ai_assisted",
         "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_5300",
-        "text_de": "Wertpapieraufträge bearbeiten und eintragen.",
-        "text_en": "Process and record securities orders.",
-        "label": "automatable",
-        "score": 9,
         "is_regulated": false
       },
       {
@@ -54023,9 +54023,9 @@
     ],
     "summary": {
       "total": 8,
-      "automatable": 6,
-      "high_ai_potential": 1,
-      "sensitive": 0,
+      "automatable": 5,
+      "high_ai_potential": 0,
+      "sensitive": 2,
       "ai_assisted": 1,
       "stays_with_you": 0
     }
@@ -54661,18 +54661,10 @@
     "kldb2010": "B 81474",
     "tasks": [
       {
-        "id": "BN_5381",
-        "text_de": "Befunde und Behandlungen dokumentieren.",
-        "text_en": "Document findings and treatments.",
-        "label": "sensitive",
-        "score": 9,
-        "is_regulated": true
-      },
-      {
         "id": "BN_5380",
         "text_de": "Die Qualitätssicherung und das Qualitätsmanagement durchführen.",
         "text_en": "Carry out quality assurance and quality management.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -54680,7 +54672,7 @@
         "id": "GEN_0311",
         "text_de": "Patiententermine und Notfalltermine verwalten.",
         "text_en": "Manage patient scheduling and emergency appointments.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -54688,7 +54680,7 @@
         "id": "GEN_0313",
         "text_de": "Zahntechnische Arbeiten auf Passform und Ästhetik prüfen.",
         "text_en": "Check dental laboratory work for fit and aesthetics.",
-        "label": "sensitive",
+        "label": "high_ai_potential",
         "score": 6,
         "is_regulated": true
       },
@@ -54779,13 +54771,21 @@
         "label": "stays_with_you",
         "score": 2,
         "is_regulated": true
+      },
+      {
+        "id": "BN_5381",
+        "text_de": "Befunde und Behandlungen dokumentieren.",
+        "text_en": "Document findings and treatments.",
+        "label": "automatable",
+        "score": 9,
+        "is_regulated": true
       }
     ],
     "summary": {
       "total": 15,
-      "automatable": 0,
-      "high_ai_potential": 0,
-      "sensitive": 4,
+      "automatable": 1,
+      "high_ai_potential": 3,
+      "sensitive": 0,
       "ai_assisted": 3,
       "stays_with_you": 8
     }

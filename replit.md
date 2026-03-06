@@ -8,26 +8,26 @@ KI Kompass analyzes AI exposure for 522 German occupations (5,885 tasks) using a
 - **Backend**: Express server (minimal — most data is client-side JSON)
 - **Data**: `occupations.json` generated from `scored_tasks_v1_4_FINAL.csv` via `scripts/build-occupations.cjs`
 
-## Data Version: v1.4 FINAL (rev 1)
-Source CSV: `attached_assets/scored_tasks_v1_4_FINAL_(1)_1772803705221.csv`
+## Data Version: v1.4 FINAL (rev 3)
+Source CSV: `attached_assets/scored_tasks_v1_4_FINAL_(3)_1772803864419.csv`
 - SIR (Social Interaction Required) dimension re-scored with regex-based text-evidence filter
-- Regulation/sensitive category expanded via EU AI Act Annex III keyword matching
+- Task-level regulation (`is_task_regulated`) replaces occupation-level regulation
 - Gold-validated against 300 expert-labeled tasks (precision 88.3%)
-- Rev 1: upstream SIR_regex expanded with work-with, customer-needs, sell/offer patterns (+39 catches)
+- Upstream SIR_regex expanded with work-with, customer-needs, sell/offer patterns
 - Downstream regex in build-occupations.cjs adds further interpersonal patterns beyond upstream
 
-### Distribution (v1.4 rev 1 + downstream regex)
+### Distribution (v1.4 rev 3 + downstream regex)
 | Category | Tasks | % |
 |---|---|---|
 | ai_assisted | 2,503 | 42.5% |
 | stays_with_you | 2,248 | 38.2% |
-| high_ai_potential | 616 | 10.5% |
-| sensitive | 298 | 5.1% |
-| automatable | 220 | 3.7% |
+| high_ai_potential | 740 | 12.6% |
+| automatable | 279 | 4.7% |
+| sensitive | 115 | 2.0% |
 
 ### Classification Logic
-1. Regulation check → `sensitive` (is_regulated + score_sum ≥ 6)
-2. Gate rules: PHYS=1 (711), TPS=1 (622), SIR=1 (737) → `stays_with_you`
+1. Task-level regulation check → `sensitive` (is_task_regulated + score_sum ≥ 6)
+2. Gate rules: PHYS=1, TPS=1, SIR=1 → `stays_with_you`
 3. Downstream SIR regex: additional interpersonal patterns flip ai_assisted → stays_with_you
 4. score_sum ≥ 8 → `automatable`, score_sum 6-7 → `high_ai_potential`, < 6 → `ai_assisted`
 
