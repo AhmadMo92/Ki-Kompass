@@ -870,14 +870,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4945",
-        "text_de": "Kundenwünsche beachten.",
-        "text_en": "Consider customer wishes.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0077",
         "text_de": "Organisatorische Aufgaben erledigen.",
         "text_en": "Complete organizational tasks.",
@@ -905,6 +897,14 @@
         "id": "BN_0078",
         "text_de": "Programme und Termine mit Auftraggebern absprechen.",
         "text_en": "Discuss programs and dates with clients.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4945",
+        "text_de": "Kundenwünsche beachten.",
+        "text_en": "Consider customer wishes.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -947,8 +947,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 7
+      "ai_assisted": 7,
+      "stays_with_you": 8
     }
   },
   "Investment Advisor": {
@@ -1695,14 +1695,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0147",
-        "text_de": "Musik nach eigenen Ideen oder Wünschen von Kunden erstellen, auch mit Computer.",
-        "text_en": "Create music based on personal ideas or customer requests, also using a computer.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0150",
         "text_de": "Teile von Songs ändern, ohne den Charakter des Stücks zu verlieren.",
         "text_en": "Change parts of songs without losing the character of the piece.",
@@ -1715,6 +1707,14 @@
         "text_de": "Musik für Konzerte mit verschiedenen Musikstilen anpassen.",
         "text_en": "Adapt music for concerts with different music styles.",
         "label": "ai_assisted",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_0147",
+        "text_de": "Musik nach eigenen Ideen oder Wünschen von Kunden erstellen, auch mit Computer.",
+        "text_en": "Create music based on personal ideas or customer requests, also using a computer.",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
       },
@@ -1740,8 +1740,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 2
+      "ai_assisted": 6,
+      "stays_with_you": 3
     }
   },
   "Art Buyer in Advertising": {
@@ -7180,7 +7180,7 @@
         "id": "BN_0709",
         "text_de": "Den Versicherungsmarkt untersuchen und die Bedürfnisse der Kunden herausfinden.",
         "text_en": "Investigate the insurance market and find out customer needs.",
-        "label": "ai_assisted",
+        "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
       },
@@ -7214,8 +7214,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 1,
-      "ai_assisted": 3,
-      "stays_with_you": 3
+      "ai_assisted": 2,
+      "stays_with_you": 4
     }
   },
   "Business Economist for Advertising and Marketing Communication": {
@@ -9095,14 +9095,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0896",
-        "text_de": "Marktentwicklungen und Kundenbedürfnisse beobachten und Vertriebsstrategien prüfen.",
-        "text_en": "Observe market developments and customer needs and review sales strategies.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0900",
         "text_de": "Neue Kontakte zu Partnern aufbauen und bestehende Beziehungen pflegen.",
         "text_en": "Build new contacts with partners and maintain existing relationships.",
@@ -9135,6 +9127,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0896",
+        "text_de": "Marktentwicklungen und Kundenbedürfnisse beobachten und Vertriebsstrategien prüfen.",
+        "text_en": "Observe market developments and customer needs and review sales strategies.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "GEN_0191",
         "text_de": "Pilotprojekte mit potenziellen Unternehmenskunden koordinieren.",
         "text_en": "Coordinate pilot projects with prospective enterprise clients.",
@@ -9164,8 +9164,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 4
+      "ai_assisted": 8,
+      "stays_with_you": 5
     }
   },
   "Business Intelligence Consultant": {
@@ -9246,14 +9246,6 @@
         "is_regulated": false
       },
       {
-        "id": "GEN_0324",
-        "text_de": "Neue BI-Plattformen für Kundenbedürfnisse bewerten.",
-        "text_en": "Evaluate new BI platforms for client needs.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0908",
         "text_de": "Den Support für bestehende Business-Intelligence-Produkte übernehmen und bei deren Weiterentwicklung beraten.",
         "text_en": "Take over support for existing business intelligence products and advise on their further development.",
@@ -9265,6 +9257,14 @@
         "id": "BN_0909",
         "text_de": "Anwenderinnen und Anwender im Umgang mit Business-Intelligence-Tools schulen.",
         "text_en": "Train users in using business intelligence tools.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "GEN_0324",
+        "text_de": "Neue BI-Plattformen für Kundenbedürfnisse bewerten.",
+        "text_en": "Evaluate new BI platforms for client needs.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -9299,8 +9299,8 @@
       "automatable": 3,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 5,
-      "stays_with_you": 2
+      "ai_assisted": 4,
+      "stays_with_you": 3
     }
   },
   "Campaign Manager": {
@@ -14513,14 +14513,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1384",
-        "text_de": "Kundenfeedback sammeln und an das Produktteam weitergeben.",
-        "text_en": "Collect customer feedback and pass it on to the product team.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1390",
         "text_de": "Bestandskunden über Neuerungen und Rabatte informieren.",
         "text_en": "Inform existing customers about new developments and discounts.",
@@ -14542,6 +14534,14 @@
         "text_en": "Negotiate and finalize contracts with external customers.",
         "label": "stays_with_you",
         "score": 4,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1384",
+        "text_de": "Kundenfeedback sammeln und an das Produktteam weitergeben.",
+        "text_en": "Collect customer feedback and pass it on to the product team.",
+        "label": "stays_with_you",
+        "score": 3,
         "is_regulated": false
       },
       {
@@ -14582,8 +14582,8 @@
       "automatable": 1,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 5
+      "ai_assisted": 7,
+      "stays_with_you": 6
     }
   },
   "Insurance Consultant for Large Clients": {
@@ -22502,14 +22502,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_2155",
-        "text_de": "Das Angebot des Unternehmens an die Bedürfnisse der Kunden anpassen.",
-        "text_en": "Adapt the company's offerings to customer needs.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2156",
         "text_de": "Ideen für neue Produkte entwickeln.",
         "text_en": "Develop ideas for new products.",
@@ -22532,6 +22524,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
+      },
+      {
+        "id": "BN_2155",
+        "text_de": "Das Angebot des Unternehmens an die Bedürfnisse der Kunden anpassen.",
+        "text_en": "Adapt the company's offerings to customer needs.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       }
     ],
     "summary": {
@@ -22539,8 +22539,8 @@
       "automatable": 0,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 1
+      "ai_assisted": 8,
+      "stays_with_you": 2
     }
   },
   "Startup Consultant": {
@@ -35158,14 +35158,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3444",
-        "text_de": "Kundenfeedback entgegennehmen und beantworten.",
-        "text_en": "Receive and respond to customer feedback.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3428",
         "text_de": "Fachkongresse besuchen und Kontakte knüpfen.",
         "text_en": "Attend professional conferences and network.",
@@ -35206,6 +35198,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_3444",
+        "text_de": "Kundenfeedback entgegennehmen und beantworten.",
+        "text_en": "Receive and respond to customer feedback.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_3432",
         "text_de": "Fragen direkt mit Wissenschaftlern besprechen.",
         "text_en": "Discuss questions directly with scientists.",
@@ -35227,8 +35227,8 @@
       "automatable": 1,
       "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 5
+      "ai_assisted": 9,
+      "stays_with_you": 6
     }
   },
   "Media Manager": {
@@ -40677,14 +40677,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_3998",
-        "text_de": "Den Markt beobachten, um eine klare Vision für das Endprodukt zu entwickeln.",
-        "text_en": "Observe the market to develop a clear vision for the final product.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_3990",
         "text_de": "Bei der Zusammenstellung der Teams helfen.",
         "text_en": "Help with assembling the teams.",
@@ -40704,6 +40696,14 @@
         "id": "BN_3996",
         "text_de": "Kurze Besprechungen organisieren und nach Arbeitszyklen Meetings zur Reflexion abhalten.",
         "text_en": "Organize short meetings and hold reflection meetings after work cycles.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_3998",
+        "text_de": "Den Markt beobachten, um eine klare Vision für das Endprodukt zu entwickeln.",
+        "text_en": "Observe the market to develop a clear vision for the final product.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -40738,8 +40738,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 5
+      "ai_assisted": 8,
+      "stays_with_you": 6
     }
   },
   "Product Manager": {
@@ -46075,14 +46075,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4534",
-        "text_de": "Kundenfeedback entgegennehmen und an andere Abteilungen weitergeben.",
-        "text_en": "Receive customer feedback and pass it to other departments.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4535",
         "text_de": "Märkte und Wettbewerber beobachten.",
         "text_en": "Observe markets and competitors.",
@@ -46115,6 +46107,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4534",
+        "text_de": "Kundenfeedback entgegennehmen und an andere Abteilungen weitergeben.",
+        "text_en": "Receive customer feedback and pass it to other departments.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4537",
         "text_de": "Auf Kritik reagieren und den Webauftritt anpassen.",
         "text_en": "Respond to criticism and adjust the online presence.",
@@ -46136,8 +46136,8 @@
       "automatable": 0,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 4
+      "ai_assisted": 6,
+      "stays_with_you": 5
     }
   },
   "Software Architect": {
@@ -50652,14 +50652,6 @@
         "is_regulated": true
       },
       {
-        "id": "BN_4990",
-        "text_de": "Marktforschung betreiben und neue Versicherungsprodukte sowie Verkaufsideen entwickeln.",
-        "text_en": "Conduct market research and develop new insurance products and sales ideas.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": true
-      },
-      {
         "id": "GEN_0208",
         "text_de": "Preismodelle für neue Produktlinien entwickeln.",
         "text_en": "Develop pricing models for new product lines.",
@@ -50692,6 +50684,14 @@
         "is_regulated": true
       },
       {
+        "id": "BN_4990",
+        "text_de": "Marktforschung betreiben und neue Versicherungsprodukte sowie Verkaufsideen entwickeln.",
+        "text_en": "Conduct market research and develop new insurance products and sales ideas.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": true
+      },
+      {
         "id": "BN_4991",
         "text_de": "Mitarbeiter im Innen- und Außendienst schulen und unterstützen.",
         "text_en": "Train and support employees in the office and field.",
@@ -50721,8 +50721,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 6,
-      "ai_assisted": 5,
-      "stays_with_you": 4
+      "ai_assisted": 4,
+      "stays_with_you": 5
     }
   },
   "Management Consultant": {

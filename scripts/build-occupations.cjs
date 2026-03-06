@@ -102,6 +102,8 @@ for (let i = 1; i < lines.length; i++) {
     /\b(?:talk|call)\b.*\b(?:client|customer|company|employer|people|patient)\b/i,
     /\bmanage\b.*\b(?:escalation|incident|resolution)\b.*\b(?:team|group)\b/i,
     /\b(?:analyze|determine|assess|identify)\b.*\b(?:customer|client)\s+(?:need|requirement|demand|wish)/i,
+    /\b(?:customer|client)\s+(?:need|wish|complaint|request|concern|feedback)/i,
+    /\b(?:sell|offer|market)\b.*\b(?:product|service|solution|insurance|contract|policy|membership)\b/i,
   ];
   const taskTextEn = paraphrase_en || cols[colIndex['task_text']] || '';
   const effectiveLabel = (label_5cat === 'ai_assisted' && INTERPERSONAL_PATTERNS.some(p => p.test(taskTextEn)))
