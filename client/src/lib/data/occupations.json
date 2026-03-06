@@ -8659,14 +8659,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0857",
-        "text_de": "Wertpapiere und Finanzprodukte kaufen und verkaufen.",
-        "text_en": "buy and sell securities and financial products.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0860",
         "text_de": "Entscheidungen treffen, wann man kauft und verkauft.",
         "text_en": "Make decisions on when to buy and sell.",
@@ -8699,6 +8691,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0857",
+        "text_de": "Wertpapiere und Finanzprodukte kaufen und verkaufen.",
+        "text_en": "buy and sell securities and financial products.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0866",
         "text_de": "Mit der Finanzaufsicht kommunizieren.",
         "text_en": "Communicate with the financial authority.",
@@ -8712,8 +8712,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 6,
-      "stays_with_you": 2
+      "ai_assisted": 5,
+      "stays_with_you": 3
     }
   },
   "Boxing Instructor": {
@@ -9063,14 +9063,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0898",
-        "text_de": "Strategien entwickeln, um Produkte in neuen Märkten anzubieten.",
-        "text_en": "Develop strategies to offer products in new markets.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0899",
         "text_de": "Geschäfts- und Finanzpläne erstellen und Geschäftsprozesse verbessern.",
         "text_en": "Create business and financial plans and improve business processes.",
@@ -9119,6 +9111,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0898",
+        "text_de": "Strategien entwickeln, um Produkte in neuen Märkten anzubieten.",
+        "text_en": "Develop strategies to offer products in new markets.",
+        "label": "stays_with_you",
+        "score": 4,
+        "is_regulated": false
+      },
+      {
         "id": "GEN_0189",
         "text_de": "Partnerschaftsbedingungen verhandeln und Vereinbarungen entwerfen.",
         "text_en": "Negotiate partnership terms and draft agreements.",
@@ -9164,8 +9164,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 8,
-      "stays_with_you": 5
+      "ai_assisted": 7,
+      "stays_with_you": 6
     }
   },
   "Business Intelligence Consultant": {
@@ -9531,14 +9531,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_0935",
-        "text_de": "Umsätze, Gewinne und Kundenerwartungen sammeln und analysieren.",
-        "text_en": "Collect and analyze sales, profits, and customer expectations.",
-        "label": "ai_assisted",
-        "score": 5,
-        "is_regulated": false
-      },
-      {
         "id": "BN_0941",
         "text_de": "Maßnahmen für verschiedene Warengruppen planen.",
         "text_en": "Plan measures for different product groups.",
@@ -9603,6 +9595,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_0935",
+        "text_de": "Umsätze, Gewinne und Kundenerwartungen sammeln und analysieren.",
+        "text_en": "Collect and analyze sales, profits, and customer expectations.",
+        "label": "stays_with_you",
+        "score": 5,
+        "is_regulated": false
+      },
+      {
         "id": "BN_0933",
         "text_de": "Die Zusammenarbeit zwischen Produktmanagement und Marketing koordinieren.",
         "text_en": "Coordinate the collaboration between product management and marketing.",
@@ -9616,8 +9616,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 1
+      "ai_assisted": 8,
+      "stays_with_you": 2
     }
   },
   "Catering Manager": {
@@ -13142,6 +13142,14 @@
         "is_regulated": false
       },
       {
+        "id": "MAN_0004",
+        "text_de": "Statistische/ML-Modelle erstellen, trainieren und optimieren.",
+        "text_en": "Build, train, and iterate on statistical/ML models (feature engineering, model selection).",
+        "label": "high_ai_potential",
+        "score": 6,
+        "is_regulated": false
+      },
+      {
         "id": "MAN_0005",
         "text_de": "Modelle validieren und Stresstests durchführen.",
         "text_en": "Validate and stress-test models (error analysis, robustness checks, bias/fairness checks).",
@@ -13206,14 +13214,6 @@
         "is_regulated": false
       },
       {
-        "id": "MAN_0004",
-        "text_de": "Statistische/ML-Modelle erstellen, trainieren und optimieren.",
-        "text_en": "Build, train, and iterate on statistical/ML models (feature engineering, model selection).",
-        "label": "stays_with_you",
-        "score": 6,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1256",
         "text_de": "Angebote und Präsentationen erstellen.",
         "text_en": "Create stakeholder proposals and presentations to communicate findings, recommendations, and business value.",
@@ -13249,10 +13249,10 @@
     "summary": {
       "total": 14,
       "automatable": 2,
-      "high_ai_potential": 3,
+      "high_ai_potential": 4,
       "sensitive": 0,
       "ai_assisted": 6,
-      "stays_with_you": 3
+      "stays_with_you": 2
     }
   },
   "Data Analyst": {
@@ -14988,14 +14988,6 @@
     "kldb2010": "B 71424",
     "tasks": [
       {
-        "id": "BN_1437",
-        "text_de": "Kundenanfragen bearbeiten, Termine planen und Dolmetscheraufträge organisieren.",
-        "text_en": "Handle customer inquiries, schedule appointments, and organize interpreter assignments.",
-        "label": "high_ai_potential",
-        "score": 6,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1438",
         "text_de": "Themen und Fachbegriffe recherchieren und Dolmetschereinsätze vorbereiten und nachbereiten.",
         "text_en": "Research topics and technical terms and prepare and follow up on interpreting assignments.",
@@ -15009,6 +15001,14 @@
         "text_en": "Consider the cultural backgrounds and needs of the target audience.",
         "label": "ai_assisted",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1437",
+        "text_de": "Kundenanfragen bearbeiten, Termine planen und Dolmetscheraufträge organisieren.",
+        "text_en": "Handle customer inquiries, schedule appointments, and organize interpreter assignments.",
+        "label": "stays_with_you",
+        "score": 6,
         "is_regulated": false
       },
       {
@@ -15039,10 +15039,10 @@
     "summary": {
       "total": 6,
       "automatable": 0,
-      "high_ai_potential": 2,
+      "high_ai_potential": 1,
       "sensitive": 0,
       "ai_assisted": 1,
-      "stays_with_you": 3
+      "stays_with_you": 4
     }
   },
   "Animal Trainer": {
@@ -15456,14 +15456,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_1482",
-        "text_de": "Neue Dienstleistungen anbieten.",
-        "text_en": "Offer new services.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1483",
         "text_de": "Den Markt und die Konkurrenz beobachten, um neue Geschäftsmöglichkeiten zu finden.",
         "text_en": "Observe the market and competition to find new business opportunities.",
@@ -15478,6 +15470,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "BN_1482",
+        "text_de": "Neue Dienstleistungen anbieten.",
+        "text_en": "Offer new services.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
       },
       {
         "id": "BN_1484",
@@ -15501,8 +15501,8 @@
       "automatable": 1,
       "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 10,
-      "stays_with_you": 2
+      "ai_assisted": 9,
+      "stays_with_you": 3
     }
   },
   "E-Government Consultant": {
@@ -20712,14 +20712,6 @@
         "is_regulated": true
       },
       {
-        "id": "BN_1995",
-        "text_de": "Ursachen für Budget- oder Zeitüberschreitungen finden und Lösungen anbieten, wie zusätzliches Personal oder schnellere Tools.",
-        "text_en": "Identify causes of budget or time overruns and offer solutions like additional staff or faster tools.",
-        "label": "ai_assisted",
-        "score": 4,
-        "is_regulated": false
-      },
-      {
         "id": "BN_1992",
         "text_de": "Die Kommunikation zwischen Abteilungen und Fachkräften sicherstellen, damit die Spielelemente gut zusammenpassen.",
         "text_en": "Ensure communication between departments and specialists so that game elements fit well together.",
@@ -20741,6 +20733,14 @@
         "text_en": "Oversee the quality of the project.",
         "label": "ai_assisted",
         "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_1995",
+        "text_de": "Ursachen für Budget- oder Zeitüberschreitungen finden und Lösungen anbieten, wie zusätzliches Personal oder schnellere Tools.",
+        "text_en": "Identify causes of budget or time overruns and offer solutions like additional staff or faster tools.",
+        "label": "stays_with_you",
+        "score": 4,
         "is_regulated": false
       },
       {
@@ -20773,8 +20773,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 1,
-      "ai_assisted": 4,
-      "stays_with_you": 3
+      "ai_assisted": 3,
+      "stays_with_you": 4
     }
   },
   "Money Laundering Officer": {
@@ -25930,14 +25930,6 @@
     "kldb2010": "B 43323",
     "tasks": [
       {
-        "id": "BN_2484",
-        "text_de": "Kundenanfragen annehmen und anpassen.",
-        "text_en": "Accept and adjust customer inquiries.",
-        "label": "high_ai_potential",
-        "score": 6,
-        "is_regulated": false
-      },
-      {
         "id": "BN_2488",
         "text_de": "Die Lastverteilung organisieren, um die Auftragsbearbeitung zu verbessern.",
         "text_en": "organize load distribution to improve order processing",
@@ -25962,6 +25954,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_2484",
+        "text_de": "Kundenanfragen annehmen und anpassen.",
+        "text_en": "Accept and adjust customer inquiries.",
+        "label": "stays_with_you",
+        "score": 6,
+        "is_regulated": false
+      },
+      {
         "id": "BN_2485",
         "text_de": "Anfragen mit einem IT-Ticket-System an IT-Servicetechniker verteilen.",
         "text_en": "Distribute inquiries to IT service technicians using an IT ticket system.",
@@ -25981,10 +25981,10 @@
     "summary": {
       "total": 6,
       "automatable": 2,
-      "high_ai_potential": 2,
+      "high_ai_potential": 1,
       "sensitive": 0,
       "ai_assisted": 2,
-      "stays_with_you": 0
+      "stays_with_you": 1
     }
   },
   "IT Forensic Specialist": {
@@ -45940,25 +45940,9 @@
         "is_regulated": false
       },
       {
-        "id": "BN_4515",
-        "text_de": "Nutzerbedürfnisse und Anforderungen sammeln.",
-        "text_en": "Gather user needs and requirements.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_4517",
         "text_de": "Nutzungskontexte untersuchen.",
         "text_en": "Examine usage contexts.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_4522",
-        "text_de": "Komponenten eines Service-Angebots nach Nutzerbedürfnissen gestalten und kombinieren.",
-        "text_en": "Design and combine components of a service offering based on user needs.",
         "label": "ai_assisted",
         "score": 3,
         "is_regulated": false
@@ -45972,9 +45956,25 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4515",
+        "text_de": "Nutzerbedürfnisse und Anforderungen sammeln.",
+        "text_en": "Gather user needs and requirements.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4516",
         "text_de": "Erwartungen und Bedürfnisse von Nutzern durch Interviews, Beobachtungen oder Auswertungen ermitteln.",
         "text_en": "Determine user expectations and needs through interviews, observations, or evaluations.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
+        "id": "BN_4522",
+        "text_de": "Komponenten eines Service-Angebots nach Nutzerbedürfnissen gestalten und kombinieren.",
+        "text_en": "Design and combine components of a service offering based on user needs.",
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": false
@@ -46001,8 +46001,8 @@
       "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 7,
-      "stays_with_you": 3
+      "ai_assisted": 5,
+      "stays_with_you": 5
     }
   },
   "Social Media Manager": {
@@ -50280,19 +50280,19 @@
         "is_regulated": false
       },
       {
+        "id": "BN_4952",
+        "text_de": "Kundenanfragen zu Preisen und Terminen prüfen und Übersetzungsaufträge bearbeiten.",
+        "text_en": "Check customer inquiries about prices and deadlines and process translation orders.",
+        "label": "stays_with_you",
+        "score": 9,
+        "is_regulated": false
+      },
+      {
         "id": "BN_4948",
         "text_de": "Vor Ort bei Konferenzen Reden und Dokumente schnell übersetzen.",
         "text_en": "Quickly translate speeches and documents on-site at conferences.",
         "label": "stays_with_you",
         "score": 6,
-        "is_regulated": false
-      },
-      {
-        "id": "BN_4952",
-        "text_de": "Kundenanfragen zu Preisen und Terminen prüfen und Übersetzungsaufträge bearbeiten.",
-        "text_en": "Check customer inquiries about prices and deadlines and process translation orders.",
-        "label": "automatable",
-        "score": 9,
         "is_regulated": false
       },
       {
@@ -50306,11 +50306,11 @@
     ],
     "summary": {
       "total": 9,
-      "automatable": 2,
+      "automatable": 1,
       "high_ai_potential": 3,
       "sensitive": 0,
       "ai_assisted": 3,
-      "stays_with_you": 1
+      "stays_with_you": 2
     }
   },
   "Environmental Auditor": {
@@ -50930,14 +50930,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5013",
-        "text_de": "Schwachstellen und Verbesserungspotenziale anhand des Nutzer-Feedbacks aufzeigen.",
-        "text_en": "Identify weaknesses and improvement potentials based on user feedback.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5014",
         "text_de": "Empfehlungen zur Verbesserung und Weiterentwicklung von Produkten geben.",
         "text_en": "Provide recommendations for improving and developing products.",
@@ -50986,6 +50978,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5013",
+        "text_de": "Schwachstellen und Verbesserungspotenziale anhand des Nutzer-Feedbacks aufzeigen.",
+        "text_en": "Identify weaknesses and improvement potentials based on user feedback.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5017",
         "text_de": "Projektteams leiten und anleiten.",
         "text_en": "Lead and guide project teams.",
@@ -50999,8 +50999,8 @@
       "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 9,
-      "stays_with_you": 5
+      "ai_assisted": 8,
+      "stays_with_you": 6
     }
   },
   "Venture Capitalist": {
@@ -51628,14 +51628,6 @@
         "is_regulated": true
       },
       {
-        "id": "ONET_0116",
-        "text_de": "Informationen aus Akten und von Mitarbeitern einholen, um Patientenbedürfnisse zu beurteilen.",
-        "text_en": "Obtain information from records and staff to assess patient needs.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": true
-      },
-      {
         "id": "BN_5079",
         "text_de": "Betroffene und ihre Angehörigen über die Diagnose und Therapie informieren.",
         "text_en": "Inform affected individuals and their relatives about the diagnosis and therapy.",
@@ -51666,6 +51658,14 @@
         "label": "stays_with_you",
         "score": 3,
         "is_regulated": true
+      },
+      {
+        "id": "ONET_0116",
+        "text_de": "Informationen aus Akten und von Mitarbeitern einholen, um Patientenbedürfnisse zu beurteilen.",
+        "text_en": "Obtain information from records and staff to assess patient needs.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": true
       }
     ],
     "summary": {
@@ -51673,8 +51673,8 @@
       "automatable": 0,
       "high_ai_potential": 0,
       "sensitive": 3,
-      "ai_assisted": 5,
-      "stays_with_you": 4
+      "ai_assisted": 4,
+      "stays_with_you": 5
     }
   },
   "Behavior Trainer, Communication Trainer": {
@@ -52602,14 +52602,6 @@
         "is_regulated": false
       },
       {
-        "id": "BN_5173",
-        "text_de": "Unternehmen beim Verkauf von Produkten und Dienstleistungen helfen.",
-        "text_en": "Help companies sell products and services.",
-        "label": "ai_assisted",
-        "score": 3,
-        "is_regulated": false
-      },
-      {
         "id": "BN_5176",
         "text_de": "Bei der Auswahl und Preisgestaltung von Produkten mitarbeiten.",
         "text_en": "Assist in the selection and pricing of products.",
@@ -52650,6 +52642,14 @@
         "is_regulated": false
       },
       {
+        "id": "BN_5173",
+        "text_de": "Unternehmen beim Verkauf von Produkten und Dienstleistungen helfen.",
+        "text_en": "Help companies sell products and services.",
+        "label": "stays_with_you",
+        "score": 3,
+        "is_regulated": false
+      },
+      {
         "id": "BN_5179",
         "text_de": "Einzelhändler und Unternehmen beim Start in die Selbstständigkeit beraten.",
         "text_en": "Advise retailers and companies on starting their own business.",
@@ -52663,8 +52663,8 @@
       "automatable": 0,
       "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 12,
-      "stays_with_you": 2
+      "ai_assisted": 11,
+      "stays_with_you": 3
     }
   },
   "Sales Engineer": {
