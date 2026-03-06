@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const csvPath = path.join(__dirname, '..', 'attached_assets', 'scored_tasks_v1_3_(1)_1772561866844.csv');
+const csvPath = path.join(__dirname, '..', 'attached_assets', 'scored_tasks_v1_4_FINAL_1772777536096.csv');
 const outputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'occupations.json');
 
 const raw = fs.readFileSync(csvPath, 'utf-8');
@@ -56,53 +56,7 @@ for (let i = 1; i < lines.length; i++) {
 
   if (!occupation || !label_5cat) continue;
 
-  const INTERPERSONAL_PATTERNS = [
-    /\blead\b(?!.*\b(?:to|into)\b)/i,
-    /\bleading\b/i,
-    /\btrain\b.*\b(?:employee|staff|team|personnel|colleague|worker)\b/i,
-    /\bmentor/i,
-    /\bcoach(?:ing)?\b/i,
-    /\bnegotiat/i,
-    /\bmediat/i,
-    /\bmotivat/i,
-    /\bsupervis/i,
-    /\bcounsel\b/i,
-    /\bmanage\b.*\b(?:team|staff|employee|personnel)\b/i,
-    /\b(?:resolve|handle)\b.*\bconflict/i,
-    /\bconduct\b.*\b(?:interview|meeting|workshop|seminar|training)\b/i,
-    /\bwork with\b/i,
-    /\bcollaborat/i,
-    /\bcooperat/i,
-    /\bcoordinat/i,
-    /\bconsult.*\bwith\b/i,
-    /\bliaise\b/i,
-    /\badvise\b/i,
-    /\badvis(?:ing|ory)\b/i,
-    /\badvice\b/i,
-    /\binstruct\b/i,
-    /\bteach(?:ing)?\s+(?:student|pupil|employee|staff|manager|professional|trainee|member|child|people|lesson|school|class|course|practical|religious|expertise|content|specific|subject|art|overarching|community)\b/i,
-    /\bteach\b(?!.*\b(?:material|concept|method|book|aid|staff|er\b))/i,
-    /\beducat(?:e|ing)\b/i,
-    /\bpresent\b.*\b(?:to|for|result|finding|client|customer|management|stakeholder)\b/i,
-    /\bexplain\b.*\b(?:to|client|customer|patient)\b/i,
-    /\binform\b.*\b(?:client|customer|patient|staff|employee|team|management|supervis|stakeholder|partner|member)\b/i,
-    /\bdiscuss\b/i,
-    /\bcommunicat(?:e|ing)\b/i,
-    /\bguide\b.*\b(?:client|customer|patient|student|visitor|group|participant|team)\b/i,
-    /\bassist\b.*\b(?:client|customer|patient|student|child|resident)\b/i,
-    /\brecruit\b.*\b(?:volunteer|participant|staff|employee|member|candidate|people)\b/i,
-    /\bhir(?:e|ing)\b/i,
-    /\binterview\b.*\b(?:candidate|applicant|participant|client|witness)\b/i,
-    /\bdelegate\b/i,
-    /\bassign\b.*\b(?:task|work|dut)/i,
-    /\brepresent\b.*\b(?:company|firm|organization|institution|facility|community|department|kindergarten)\b/i,
-    /\bacquir.*\bcustomer/i,
-    /\bconvince\b/i,
-  ];
-  const taskTextEn = paraphrase_en || cols[colIndex['task_text']] || '';
-  const effectiveLabel = (label_5cat === 'ai_assisted' && INTERPERSONAL_PATTERNS.some(p => p.test(taskTextEn)))
-    ? 'stays_with_you'
-    : label_5cat;
+  const effectiveLabel = label_5cat;
 
   if (!occupations[occupation]) {
     occupations[occupation] = {
