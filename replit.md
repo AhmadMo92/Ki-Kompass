@@ -9,7 +9,7 @@ KI Kompass analyzes AI exposure for 522 German occupations (5,885 tasks) using a
 - **Data**: `occupations.json` generated from `scored_tasks_v1_4_FINAL.csv` via `scripts/build-occupations.cjs`
 
 ## Data Version: v1.4 FINAL (rev 1)
-Source CSV: `attached_assets/scored_tasks_v1_4_FINAL_(1)_1772778630396.csv`
+Source CSV: `attached_assets/scored_tasks_v1_4_FINAL_(1)_1772803705221.csv`
 - SIR (Social Interaction Required) dimension re-scored with regex-based text-evidence filter
 - Regulation/sensitive category expanded via EU AI Act Annex III keyword matching
 - Gold-validated against 300 expert-labeled tasks (precision 88.3%)

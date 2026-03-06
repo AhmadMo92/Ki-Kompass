@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const csvPath = path.join(__dirname, '..', 'attached_assets', 'scored_tasks_v1_4_FINAL_(1)_1772778630396.csv');
+const csvPath = path.join(__dirname, '..', 'attached_assets', 'scored_tasks_v1_4_FINAL_(1)_1772803705221.csv');
 const outputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'occupations.json');
 
 const raw = fs.readFileSync(csvPath, 'utf-8');
