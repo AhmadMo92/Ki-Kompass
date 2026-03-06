@@ -41,7 +41,7 @@ function HeroOccupationCard({ occupationKey }: { occupationKey: string }) {
   const occ = getOccupation(occupationKey);
   if (!occ) return null;
   const pcts = calculatePercentages(occ.summary);
-  const transformPct = Math.round((pcts.automatable || 0) + (pcts.high_ai_potential || 0));
+  const humanLedPct = Math.round((pcts.stays_with_you || 0) + (pcts.ai_assisted || 0));
 
   return (
     <Link href={`/beruf/${slugify(occupationKey)}`}>
@@ -54,8 +54,8 @@ function HeroOccupationCard({ occupationKey }: { occupationKey: string }) {
           </div>
         </div>
         <div className="flex items-baseline gap-1 mt-1">
-          <span className="text-xl font-bold text-slate-900">{transformPct}%</span>
-          <span className="text-[10px] text-slate-500">AI Transformation</span>
+          <span className="text-xl font-bold text-slate-900">{humanLedPct}%</span>
+          <span className="text-[10px] text-slate-500">Human Led</span>
         </div>
       </div>
     </Link>
@@ -207,7 +207,7 @@ export default function Landing() {
                 </div>
                 <CardTitle className="font-serif text-2xl text-slate-800">The Big Picture</CardTitle>
                 <CardDescription className="text-base mt-3 leading-relaxed text-slate-600">
-                  Zoom out to see how entire industries are shifting. Sector averages, regulation hotspots, and transformation trends.
+                  Zoom out to see how entire industries are shifting. Sector averages, regulation hotspots, and AI exposure trends.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex-1">

@@ -81,8 +81,8 @@ export const CATEGORIES: Record<CategoryLabel, {
     order: 4
   },
   stays_with_you: {
-    label_de: "Bleibt bei dir",
-    label_en: "Stays With You",
+    label_de: "Menschlich geführt",
+    label_en: "Human Led",
     color: "#43A047",
     bg: "#E8F5E9",
     emoji: "🟢",

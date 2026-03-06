@@ -32,7 +32,7 @@ export function DonutChart({ percentages, centerLabel, centerValue, size = 280, 
     }).filter(Boolean);
   }, [percentages]);
 
-  const transformPct = (percentages.automatable || 0) + (percentages.high_ai_potential || 0);
+  const humanLedPct = (percentages.stays_with_you || 0) + (percentages.ai_assisted || 0);
 
   return (
     <div className="flex flex-col items-center gap-4" data-testid="donut-chart">
@@ -57,10 +57,10 @@ export function DonutChart({ percentages, centerLabel, centerValue, size = 280, 
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
           <div className="text-4xl font-bold text-slate-900" data-testid="donut-center-value">
-            {centerValue || `${Math.round(transformPct)}%`}
+            {centerValue || `${Math.round(humanLedPct)}%`}
           </div>
           <div className="text-xs text-slate-500 max-w-[120px] leading-tight mt-1">
-            {centerLabel || (language === "de" ? "KI-Transformation" : "AI Transformation")}
+            {centerLabel || (language === "de" ? "Menschlich geführt" : "Human Led")}
           </div>
         </div>
       </div>

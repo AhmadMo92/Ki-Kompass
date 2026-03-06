@@ -37,8 +37,6 @@ export default function Beruf() {
   const activeTasks = occupation.tasks.filter(t => !deselectedTasks.has(t.id));
   const personalPercentages = calculateFromTasks(activeTasks);
   const displayPercentages = showPersonalized ? personalPercentages : typicalPercentages;
-  const transformPct = Math.round((typicalPercentages.automatable || 0) + (typicalPercentages.high_ai_potential || 0));
-
   const handleToggleTask = (taskId: string) => {
     setDeselectedTasks(prev => {
       const next = new Set(prev);

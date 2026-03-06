@@ -38,7 +38,7 @@ Source CSV: `attached_assets/scored_tasks_v1_4_FINAL_(1)_1772778630396.csv`
 | `high_ai_potential` | #F57C00 (orange) | AI does most, you steer |
 | `sensitive` | #8E24AA (purple) | AI could, but regulation says no |
 | `ai_assisted` | #F9A825 (yellow) | AI helps, you lead |
-| `stays_with_you` | #43A047 (green) | Stays human work |
+| `stays_with_you` | #43A047 (green) | Human Led |
 
 ## Key Data Files
 - `client/src/lib/data/occupations.json` — 522 occupations, 5,885 tasks (generated from CSV)
@@ -50,7 +50,8 @@ Source CSV: `attached_assets/scored_tasks_v1_4_FINAL_(1)_1772778630396.csv`
 - **5 categories only** — old 3-category system is deprecated
 - **English first** — UI defaults to English, user can toggle to German
 - **Bilingual**: All tasks have `text_de` and `text_en`
-- **v1.4 CSV is the source of truth** — build script reads labels directly, no downstream regex overrides
+- **v1.4 CSV is the source of truth** — build script reads labels directly, downstream SIR regex adds interpersonal catches
+- **Display label**: `stays_with_you` → "Human Led" / "Menschlich geführt" in UI
 
 ## Routes
 - `/` — Landing page with hero occupations

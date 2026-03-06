@@ -215,7 +215,7 @@ export default function ExploreRoles() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
             {lang === "en" 
-              ? "This view shows how roles and skill profiles are shifting based on task transformation, skill demand, and labor-market signals."
+              ? "This view shows how roles and skill profiles are shifting based on AI exposure, skill demand, and labor-market signals."
               : "Diese Ansicht zeigt, wie sich Berufsbilder und Anforderungsprofile durch KI verändern."
             }
           </p>
@@ -366,7 +366,7 @@ export default function ExploreRoles() {
                 </SheetTitle>
                 <SheetDescription className="text-base text-slate-600">
                   {selectedRole.original.nameDe !== selectedRole.role && <span className="block italic mb-1">{selectedRole.original.nameDe}</span>}
-                  Structural context and transformation signals
+                  Structural context and AI exposure signals
                 </SheetDescription>
               </SheetHeader>
 

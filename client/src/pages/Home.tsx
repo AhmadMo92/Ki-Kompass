@@ -99,7 +99,7 @@ export default function Home() {
             </p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-border/40 shadow-sm">
-             <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 text-center">Typical Task Transformation</h4>
+             <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 text-center">AI Exposure by Task</h4>
              <TaskTransformationChart />
           </div>
         </section>

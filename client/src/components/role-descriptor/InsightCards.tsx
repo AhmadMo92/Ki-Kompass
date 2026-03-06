@@ -20,16 +20,16 @@ interface InsightCard {
 
 export function InsightCards({ percentages, sensitiveCount, language }: InsightCardsProps) {
   const cards: InsightCard[] = [];
-  const transformPct = (percentages.automatable || 0) + (percentages.high_ai_potential || 0);
+  const highExposurePct = (percentages.automatable || 0) + (percentages.high_ai_potential || 0);
 
-  if (transformPct > 40) {
+  if (highExposurePct > 40) {
     cards.push({
       icon: <AlertTriangle className="w-5 h-5" />,
       emoji: "⚠️",
-      title_de: "Hohe KI-Transformation",
-      title_en: "High AI Transformation",
-      message_de: `${Math.round(transformPct)}% deiner Tätigkeiten werden stark von KI verändert. Fokussiere dich auf die grünen Aufgaben — die bleiben bei dir.`,
-      message_en: `${Math.round(transformPct)}% of your tasks will be significantly changed by AI. Focus on the green tasks — they stay with you.`,
+      title_de: "Hohe KI-Exposition",
+      title_en: "High AI Exposure",
+      message_de: `${Math.round(highExposurePct)}% deiner Tätigkeiten sind stark KI-exponiert. Fokussiere dich auf die grünen Aufgaben — die bleiben menschlich geführt.`,
+      message_en: `${Math.round(highExposurePct)}% of your tasks are highly AI-exposed. Focus on the green tasks — they remain human led.`,
       color: "#E53935",
       bg: "#FFEBEE",
     });
@@ -54,8 +54,8 @@ export function InsightCards({ percentages, sensitiveCount, language }: InsightC
       emoji: "🟢",
       title_de: "Starke menschliche Basis",
       title_en: "Strong Human Foundation",
-      message_de: "Mehr als die Hälfte deiner Arbeit bleibt menschlich. Das ist dein Wettbewerbsvorteil.",
-      message_en: "More than half of your work stays human. That's your competitive advantage.",
+      message_de: "Mehr als die Hälfte deiner Arbeit ist menschlich geführt. Das ist dein Wettbewerbsvorteil.",
+      message_en: "More than half of your work is human led. That's your competitive advantage.",
       color: "#43A047",
       bg: "#E8F5E9",
     });
