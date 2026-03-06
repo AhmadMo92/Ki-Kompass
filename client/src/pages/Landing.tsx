@@ -3,64 +3,6 @@ import { ArrowRight, Brain, Layout, ListChecks } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { CATEGORIES, CATEGORY_ORDER, HERO_OCCUPATIONS, getOccupation, calculatePercentages, slugify } from "@/lib/data";
-
-function MiniDonut({ percentages, size = 56 }: { percentages: Record<string, number>; size?: number }) {
-  const radius = 22;
-  const strokeWidth = 7;
-  const circumference = 2 * Math.PI * radius;
-  let offset = -circumference / 4;
-
-  return (
-    <svg viewBox="0 0 56 56" width={size} height={size} className="-rotate-90">
-      <circle cx="28" cy="28" r={radius} fill="none" stroke="#f1f5f9" strokeWidth={strokeWidth} />
-      {CATEGORY_ORDER.map(cat => {
-        const pct = percentages[cat] || 0;
-        if (pct <= 0) return null;
-        const dashLength = (pct / 100) * circumference;
-        const seg = (
-          <circle
-            key={cat}
-            cx="28" cy="28" r={radius}
-            fill="none"
-            stroke={CATEGORIES[cat].color}
-            strokeWidth={strokeWidth}
-            strokeDasharray={`${dashLength} ${circumference - dashLength}`}
-            strokeDashoffset={-offset}
-            strokeLinecap="butt"
-          />
-        );
-        offset += dashLength;
-        return seg;
-      })}
-    </svg>
-  );
-}
-
-function HeroOccupationCard({ occupationKey }: { occupationKey: string }) {
-  const occ = getOccupation(occupationKey);
-  if (!occ) return null;
-  const pcts = calculatePercentages(occ.summary);
-  const humanLedPct = Math.round((pcts.stays_with_you || 0) + (pcts.ai_assisted || 0));
-
-  return (
-    <Link href={`/beruf/${slugify(occupationKey)}`}>
-      <div className="group p-4 rounded-2xl border border-slate-200 hover:border-indigo-200 hover:shadow-lg transition-all cursor-pointer bg-white/60 backdrop-blur-sm" data-testid={`hero-card-${occupationKey}`}>
-        <div className="flex items-center gap-3 mb-2">
-          <MiniDonut percentages={pcts} />
-          <div className="flex-1 min-w-0">
-            <div className="font-medium text-sm text-slate-800 truncate">{occupationKey}</div>
-            <div className="text-xs text-slate-400 truncate">{occ.occupation_de}</div>
-          </div>
-        </div>
-        <div className="flex items-baseline gap-1 mt-1">
-          <span className="text-xl font-bold text-slate-900">{humanLedPct}%</span>
-          <span className="text-[10px] text-slate-500">Human Led</span>
-        </div>
-      </div>
-    </Link>
-  );
-}
 
 export default function Landing() {
   return (
@@ -99,28 +41,6 @@ export default function Landing() {
                Explore Occupations
              </Button>
            </Link>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 relative z-10 bg-white/30">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-8">
-            <h3 className="text-lg font-serif font-medium text-slate-700 mb-2">Featured Occupations</h3>
-            <p className="text-sm text-slate-500">See how the 5-category AI exposure spectrum looks across different roles</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {HERO_OCCUPATIONS.map(key => (
-              <HeroOccupationCard key={key} occupationKey={key} />
-            ))}
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
-            {CATEGORY_ORDER.map(cat => (
-              <div key={cat} className="flex items-center gap-1.5 text-xs text-slate-500">
-                <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: CATEGORIES[cat].color }} />
-                {CATEGORIES[cat].label_en}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -244,7 +164,7 @@ export default function Landing() {
           <div className="flex justify-center gap-6 text-xs text-muted-foreground">
             <span>BERUFENET Data | German Federal Employment Agency</span>
             <span>|</span>
-            <span>v1.3 Dataset | 5-Category Scoring</span>
+            <span>v1.4 Dataset | 5-Category Scoring</span>
           </div>
         </div>
       </footer>
