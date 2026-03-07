@@ -1,46 +1,216 @@
 import { Link } from "wouter";
-import { ArrowRight, Compass, BarChart3, Bot, Sparkles, ChevronRight, Map, Layers, Zap, Shield, Users, BookOpen } from "lucide-react";
+import {
+  ArrowRight, Compass, BarChart3, Bot, Sparkles,
+  Map, Layers, Zap, Shield, Users, BookOpen,
+  SlidersHorizontal, GitCompareArrows, Network
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { CATEGORIES, CATEGORY_ORDER } from "@/lib/data";
 
 const JOURNEY_STEPS = [
   {
     num: "01",
     title: "Discover",
-    title_sub: "Understand your AI exposure",
-    description: "Select your occupation from 522 German roles. See exactly how AI touches each of your tasks across a 5-category spectrum — from fully automatable to human-led.",
+    subtitle: "Understand your AI exposure",
+    description: "Select your occupation from 522 German roles. See how AI touches each task across a 5-category spectrum.",
     color: "#6366F1",
     bg: "#EEF2FF",
     icon: Compass,
+    keywords: ["522 roles", "5 categories", "Task-level"],
   },
   {
     num: "02",
     title: "Analyze",
-    title_sub: "Map your skills & tools",
-    description: "Dive into your 118-competency skill profile. See which skills connect to AI tools, where augmentation helps, and where human judgment stays essential.",
+    subtitle: "Map your skills & tools",
+    description: "Dive into your 118-competency skill profile. See which skills connect to AI tools and where human judgment stays essential.",
     color: "#0891B2",
     bg: "#ECFEFF",
     icon: Layers,
+    keywords: ["118 skills", "6 domains", "Radar chart"],
   },
   {
     num: "03",
+    title: "Customize",
+    subtitle: "Make it yours",
+    description: "Borrow tasks from other roles, toggle what applies to you, compare across occupations, and build your personal AI profile.",
+    color: "#D946EF",
+    bg: "#FDF4FF",
+    icon: SlidersHorizontal,
+    keywords: ["Borrow tasks", "Compare roles", "Personal profile"],
+  },
+  {
+    num: "04",
     title: "Navigate",
-    title_sub: "Plan your path forward",
-    description: "Compare against sector averages, identify skill gaps, and discover which AI tools can amplify your strengths. Your personal AI readiness companion.",
+    subtitle: "Plan your path forward",
+    description: "Match AI tools to your work, identify growth areas, and build your readiness roadmap with your AI companion.",
     color: "#7C3AED",
     bg: "#F5F3FF",
     icon: Map,
+    keywords: ["AI tools map", "Skill gaps", "Roadmap"],
   },
 ];
 
 const FEATURES = [
-  { icon: BarChart3, label: "5,885 Tasks Analyzed", color: "#6366F1" },
+  { icon: BarChart3, label: "5,885 Tasks", color: "#6366F1" },
   { icon: Zap, label: "5-Category Spectrum", color: "#F59E0B" },
   { icon: Shield, label: "Regulation Built In", color: "#10B981" },
   { icon: Users, label: "522 Occupations", color: "#0891B2" },
   { icon: Bot, label: "AI Tools Layer", color: "#7C3AED" },
   { icon: BookOpen, label: "118 Competencies", color: "#EC4899" },
 ];
+
+function DashboardSnapshot() {
+  const dummyDist = [
+    { cat: "automatable", pct: 8 },
+    { cat: "high_ai_potential", pct: 18 },
+    { cat: "sensitive", pct: 4 },
+    { cat: "ai_assisted", pct: 42 },
+    { cat: "human_led", pct: 28 },
+  ];
+
+  const radarPoints = [
+    { label: "Cognitive", pct: 0.6 },
+    { label: "Social", pct: 0.35 },
+    { label: "Digital", pct: 0.85 },
+    { label: "Operational", pct: 0.25 },
+    { label: "Domain", pct: 0.45 },
+    { label: "Technical", pct: 0.55 },
+  ];
+
+  const radarSize = 120;
+  const radarCx = radarSize / 2;
+  const radarCy = radarSize / 2;
+  const radarR = radarSize * 0.36;
+
+  const radarPath = radarPoints.map((p, i) => {
+    const angle = (i / radarPoints.length) * Math.PI * 2 - Math.PI / 2;
+    const x = radarCx + radarR * p.pct * Math.cos(angle);
+    const y = radarCy + radarR * p.pct * Math.sin(angle);
+    return `${i === 0 ? "M" : "L"}${x},${y}`;
+  }).join(" ") + " Z";
+
+  const toolNodes = [
+    { x: 30, y: 25, r: 10, color: "#7C3AED", icon: "✍️" },
+    { x: 80, y: 18, r: 8, color: "#0891B2", icon: "📈" },
+    { x: 55, y: 55, r: 12, color: "#EA580C", icon: "⚙️" },
+    { x: 20, y: 65, r: 7, color: "#2563EB", icon: "🔬" },
+    { x: 90, y: 50, r: 9, color: "#DB2777", icon: "🎨" },
+    { x: 65, y: 80, r: 8, color: "#854D0E", icon: "🏥" },
+    { x: 40, y: 85, r: 7, color: "#374151", icon: "💻" },
+  ];
+  const toolLinks = [
+    [0, 2], [1, 2], [0, 3], [2, 4], [2, 5], [4, 6], [3, 6], [1, 4], [5, 6],
+  ];
+
+  return (
+    <div className="relative">
+      <div className="bg-white/95 backdrop-blur-xl border border-slate-100 rounded-3xl shadow-2xl shadow-violet-100/40 overflow-hidden">
+        <div className="grid grid-cols-3 gap-0">
+          <div className="p-4 border-r border-slate-100/80">
+            <div className="text-[9px] uppercase tracking-wider text-slate-400 font-semibold mb-2">Task Breakdown</div>
+            <div className="flex items-center justify-center mb-2">
+              <svg viewBox="0 0 80 80" className="w-16 h-16">
+                {(() => {
+                  let cum = 0;
+                  return dummyDist.map((d, i) => {
+                    const start = cum;
+                    cum += d.pct;
+                    const startAngle = (start / 100) * Math.PI * 2 - Math.PI / 2;
+                    const endAngle = (cum / 100) * Math.PI * 2 - Math.PI / 2;
+                    const large = d.pct > 50 ? 1 : 0;
+                    const r = 32;
+                    const cx = 40, cy = 40;
+                    const x1 = cx + r * Math.cos(startAngle);
+                    const y1 = cy + r * Math.sin(startAngle);
+                    const x2 = cx + r * Math.cos(endAngle);
+                    const y2 = cy + r * Math.sin(endAngle);
+                    return (
+                      <path key={i} d={`M${cx},${cy} L${x1},${y1} A${r},${r} 0 ${large} 1 ${x2},${y2} Z`}
+                        fill={CATEGORIES[d.cat as keyof typeof CATEGORIES].color} opacity={0.85} />
+                    );
+                  });
+                })()}
+                <circle cx="40" cy="40" r="14" fill="white" />
+              </svg>
+            </div>
+            <div className="space-y-0.5">
+              {dummyDist.map(d => (
+                <div key={d.cat} className="flex items-center justify-between">
+                  <div className="flex items-center gap-1">
+                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: CATEGORIES[d.cat as keyof typeof CATEGORIES].color }} />
+                    <span className="text-[7px] text-slate-500 truncate max-w-[50px]">
+                      {CATEGORIES[d.cat as keyof typeof CATEGORIES].label_en}
+                    </span>
+                  </div>
+                  <span className="text-[7px] font-bold tabular-nums" style={{ color: CATEGORIES[d.cat as keyof typeof CATEGORIES].color }}>
+                    {d.pct}%
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="p-4 border-r border-slate-100/80">
+            <div className="text-[9px] uppercase tracking-wider text-slate-400 font-semibold mb-2">Skill Radar</div>
+            <svg viewBox={`0 0 ${radarSize} ${radarSize}`} className="w-full max-w-[120px] mx-auto">
+              {[0.33, 0.66, 1].map(s => (
+                <polygon key={s} fill="none" stroke="#e2e8f0" strokeWidth={0.5}
+                  points={radarPoints.map((_, i) => {
+                    const a = (i / radarPoints.length) * Math.PI * 2 - Math.PI / 2;
+                    return `${radarCx + radarR * s * Math.cos(a)},${radarCy + radarR * s * Math.sin(a)}`;
+                  }).join(" ")} />
+              ))}
+              <path d={radarPath} fill="rgba(99,102,241,0.15)" stroke="#6366F1" strokeWidth={1.5} />
+              {radarPoints.map((p, i) => {
+                const a = (i / radarPoints.length) * Math.PI * 2 - Math.PI / 2;
+                const lx = radarCx + (radarR + 12) * Math.cos(a);
+                const ly = radarCy + (radarR + 12) * Math.sin(a);
+                return (
+                  <text key={i} x={lx} y={ly} textAnchor="middle" dominantBaseline="middle"
+                    fontSize={5.5} fill="#94a3b8" fontWeight={500}>
+                    {p.label}
+                  </text>
+                );
+              })}
+            </svg>
+          </div>
+
+          <div className="p-4">
+            <div className="text-[9px] uppercase tracking-wider text-slate-400 font-semibold mb-2">AI Tools Map</div>
+            <svg viewBox="0 0 110 100" className="w-full">
+              {toolLinks.map(([a, b], i) => (
+                <line key={i}
+                  x1={toolNodes[a].x} y1={toolNodes[a].y}
+                  x2={toolNodes[b].x} y2={toolNodes[b].y}
+                  stroke="#e2e8f0" strokeWidth={0.8} opacity={0.5} />
+              ))}
+              {toolNodes.map((n, i) => (
+                <g key={i}>
+                  <circle cx={n.x} cy={n.y} r={n.r} fill={n.color} opacity={0.85} />
+                  <text x={n.x} y={n.y + 0.5} textAnchor="middle" dominantBaseline="middle" fontSize={n.r * 0.8}>
+                    {n.icon}
+                  </text>
+                </g>
+              ))}
+            </svg>
+          </div>
+        </div>
+
+        <div className="px-4 py-2 bg-slate-50/60 border-t border-slate-100/60">
+          <div className="flex h-3 rounded-full overflow-hidden">
+            {dummyDist.map(d => (
+              <div key={d.cat} className="h-full"
+                style={{ width: `${d.pct}%`, backgroundColor: CATEGORIES[d.cat as keyof typeof CATEGORIES].color }} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="absolute -bottom-3 -right-3 w-20 h-20 bg-violet-100 rounded-full blur-2xl opacity-50" />
+      <div className="absolute -top-3 -left-3 w-16 h-16 bg-indigo-100 rounded-full blur-2xl opacity-50" />
+    </div>
+  );
+}
 
 export default function Landing() {
   return (
@@ -114,53 +284,65 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="py-24 px-6 relative z-10">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-24 px-6 relative z-10" data-testid="journey-section">
+        <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-3">Your journey in three steps</h2>
+            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-3">Your journey, step by step</h2>
             <p className="text-lg text-slate-400 max-w-xl mx-auto">From awareness to action — a guided path through the AI transformation of your work.</p>
           </div>
 
           <div className="relative">
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-200 to-transparent -translate-y-1/2" />
+            <div className="hidden md:block absolute left-8 top-0 bottom-0 w-px" style={{
+              background: `linear-gradient(to bottom, ${JOURNEY_STEPS[0].color}, ${JOURNEY_STEPS[1].color}, ${JOURNEY_STEPS[2].color}, ${JOURNEY_STEPS[3].color})`
+            }} />
 
-            <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+            <div className="space-y-0">
               {JOURNEY_STEPS.map((step, i) => (
                 <div key={i} className="relative group" data-testid={`journey-step-${i}`}>
-                  <div className="bg-white/80 backdrop-blur-md border border-slate-100 rounded-3xl p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 h-full flex flex-col relative overflow-hidden">
-                    <div className="absolute top-0 inset-x-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                      style={{ background: `linear-gradient(to right, ${step.color}40, ${step.color})` }} />
+                  <div className="hidden md:block absolute left-8 top-8 w-8 h-px" style={{ backgroundColor: step.color + '40' }} />
+                  <div className="hidden md:flex absolute left-[18px] top-[18px] w-[22px] h-[22px] rounded-full border-[3px] items-center justify-center z-10 bg-white transition-all duration-300 group-hover:scale-125"
+                    style={{ borderColor: step.color }}>
+                    <div className="w-2 h-2 rounded-full transition-all" style={{ backgroundColor: step.color }} />
+                  </div>
 
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm border"
-                        style={{ backgroundColor: step.bg, borderColor: step.color + '20' }}>
-                        <step.icon className="w-6 h-6" style={{ color: step.color }} />
-                      </div>
-                      <div>
-                        <div className="text-[10px] font-bold uppercase tracking-widest" style={{ color: step.color }}>
-                          Step {step.num}
+                  <div className="md:ml-20 mb-4">
+                    <div className="bg-white/80 backdrop-blur-md border border-slate-100 rounded-2xl p-6 hover:shadow-xl hover:border-slate-200 transition-all duration-400 group-hover:-translate-x-0.5 relative overflow-hidden">
+                      <div className="absolute top-0 left-0 w-1 h-full rounded-r opacity-60 group-hover:opacity-100 transition-opacity"
+                        style={{ backgroundColor: step.color }} />
+
+                      <div className="flex items-start gap-5 pl-3">
+                        <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm border transition-transform duration-300 group-hover:scale-110"
+                          style={{ backgroundColor: step.bg, borderColor: step.color + '20' }}>
+                          <step.icon className="w-5 h-5" style={{ color: step.color }} />
                         </div>
-                        <div className="text-xl font-bold text-slate-800">{step.title}</div>
+
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2.5 mb-1">
+                            <span className="text-[10px] font-bold uppercase tracking-widest tabular-nums" style={{ color: step.color }}>
+                              {step.num}
+                            </span>
+                            <span className="text-lg font-bold text-slate-800">{step.title}</span>
+                            <span className="text-xs text-slate-400 font-medium hidden sm:inline">— {step.subtitle}</span>
+                          </div>
+                          <p className="text-sm text-slate-500 leading-relaxed mb-3">{step.description}</p>
+                          <div className="flex flex-wrap gap-1.5">
+                            {step.keywords.map(k => (
+                              <span key={k} className="text-[10px] font-semibold px-2 py-0.5 rounded-full border"
+                                style={{ color: step.color, backgroundColor: step.bg, borderColor: step.color + '25' }}>
+                                {k}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
-
-                    <div className="text-sm font-semibold text-slate-700 mb-2">{step.title_sub}</div>
-                    <p className="text-sm text-slate-500 leading-relaxed flex-1">{step.description}</p>
-
-                    {i < 2 && (
-                      <div className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-20">
-                        <div className="w-10 h-10 rounded-full bg-white border border-slate-100 shadow-md flex items-center justify-center">
-                          <ChevronRight className="w-4 h-4 text-slate-400" />
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <Link href="/my-role">
               <Button size="lg" className="h-12 px-8 text-base rounded-full bg-slate-900 hover:bg-slate-800 text-white shadow-lg transition-all" data-testid="cta-start-journey">
                 Start with Step 01 <ArrowRight className="w-4 h-4 ml-2" />
@@ -170,7 +352,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="py-24 px-6 relative z-10">
+      <section className="py-24 px-6 relative z-10" data-testid="dashboard-section">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -186,16 +368,16 @@ export default function Landing() {
               </p>
               <div className="space-y-3">
                 {[
-                  "Donut chart with 5-category task breakdown",
-                  "Skill radar across 6 competency domains",
-                  "Sector comparison with stacked bars",
-                  "Interactive AI Tools Map connecting skills to tools",
+                  { text: "Donut chart with 5-category task breakdown", icon: BarChart3, color: "#6366F1" },
+                  { text: "Skill radar across 6 competency domains", icon: Network, color: "#0891B2" },
+                  { text: "Sector comparison with stacked bars", icon: GitCompareArrows, color: "#10B981" },
+                  { text: "Interactive AI Tools Map", icon: Bot, color: "#7C3AED" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2.5">
-                    <div className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center shrink-0 mt-0.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
+                    <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 mt-0.5" style={{ backgroundColor: item.color + '12' }}>
+                      <item.icon className="w-3.5 h-3.5" style={{ color: item.color }} />
                     </div>
-                    <span className="text-sm text-slate-600">{item}</span>
+                    <span className="text-sm text-slate-600">{item.text}</span>
                   </div>
                 ))}
               </div>
@@ -233,36 +415,11 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="py-24 px-6 relative z-10">
+      <section className="py-24 px-6 relative z-10" data-testid="companion-section">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 relative">
-              <div className="bg-white/90 backdrop-blur-md border border-slate-100 rounded-3xl p-6 shadow-2xl shadow-violet-100/50">
-                <div className="space-y-3">
-                  {[
-                    { icon: "🔍", title: "Task Awareness", desc: "Which of my tasks can AI assist with?", progress: 100 },
-                    { icon: "🧠", title: "Skill Mapping", desc: "How do my competencies connect to AI tools?", progress: 75 },
-                    { icon: "🛠️", title: "Tool Discovery", desc: "Which AI tools match my work profile?", progress: 40 },
-                    { icon: "🎯", title: "Action Plan", desc: "What should I learn or adopt next?", progress: 10 },
-                  ].map((phase, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 rounded-2xl bg-slate-50/80 border border-slate-100/60">
-                      <span className="text-xl">{phase.icon}</span>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-semibold text-slate-700">{phase.title}</span>
-                          <span className="text-[10px] text-slate-400 font-medium">{phase.progress}%</span>
-                        </div>
-                        <div className="text-[11px] text-slate-400 mt-0.5">{phase.desc}</div>
-                        <div className="h-1 rounded-full bg-slate-200 mt-1.5 overflow-hidden">
-                          <div className="h-full rounded-full bg-gradient-to-r from-violet-400 to-fuchsia-400 transition-all duration-1000"
-                            style={{ width: `${phase.progress}%` }} />
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-fuchsia-100 rounded-full blur-2xl opacity-60" />
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="order-2 md:order-1">
+              <DashboardSnapshot />
             </div>
 
             <div className="order-1 md:order-2 space-y-6">
