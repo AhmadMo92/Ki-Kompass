@@ -63,8 +63,8 @@ export function MyRoleTasks() {
           </h2>
           <p className="text-lg text-muted-foreground font-light mb-4">
             {language === "de"
-              ? `${occCount} deutsche Berufe, 5.885 Aufgaben — auf Aufgabenebene analysiert.`
-              : `${occCount} German occupations, 5,885 tasks — analyzed at task level.`}
+              ? `${occCount} deutsche Berufe, 6.079 Aufgaben — auf Aufgabenebene analysiert.`
+              : `${occCount} German occupations, 6,079 tasks — analyzed at task level.`}
           </p>
 
           {step === 1 && (

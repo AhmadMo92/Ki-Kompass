@@ -1,0 +1,541 @@
+occupation,occupation_de,berufenet_id,sector,n_tasks,human_led,ai_assisted,high_ai_potential,sensitive,automatable
+AI/ML Researcher,KI/ML-Forscher/in,MOD_AI_ML_Researcher,tech,10,5,0,3,0,2
+Accident Prevention Officer,Störfallbeauftragte/r,8198.0,other,10,3,4,0,1,2
+Account Auditor,Rechnungsprüfer/in,7683.0,finance,15,1,2,5,1,6
+Account Manager,Account-Manager/in,14475.0,finance,26,11,11,3,0,1
+Acoustic Specialist,Bioniker/in,90110.0,other,11,3,7,1,0,0
+Actor/Actress,Schauspieler/in,8411.0,other,6,5,1,0,0,0
+Addiction and Drug Counselor,"Sucht-, Drogenberater/in",9038.0,other,13,11,2,0,0,0
+Administrative Employee - Higher Service,Verwaltungsangestellte/r - höherer Dienst,7603.0,other,13,2,7,2,0,2
+Administrative Employee - Senior Service,Verwaltungsangestellte/r - gehobener Dienst,33220.0,other,10,2,8,0,0,0
+Advertising Manager,Bereichsleiter/in,27386.0,marketing,12,5,6,1,0,0
+"Advisor for Education, Career and Employment","Berater/in - Bildung, Beruf und Beschäftigung",129450.0,other,28,16,12,0,0,0
+Affiliate Manager,Affiliate-Manager/in,132516.0,other,8,2,4,1,0,1
+Agile Coach / Scrum Master,Agiler Coach / Scrum Master,133352.0,management,15,8,6,1,0,0
+Agricultural Teacher,Landwirtschaftslehrer/in,9360.0,other,7,4,3,0,0,0
+Airport Station Manager,Flughafenstationsleiter/in,7358.0,other,15,6,4,5,0,0
+Animal Psychologist,Tierpsychologe/-psychologin,9851.0,health,10,6,3,0,0,1
+Animal Trainer,Tierlehrer/in,550.0,other,15,13,2,0,0,0
+Animal Welfare Officer,Tierschutzbeauftragte/r,112023.0,other,10,5,3,2,0,0
+Animation Artist,Animationskünstler/in,27308.0,other,17,8,7,2,0,0
+Application Engineer/Manager,Application-Engineer/-Manager/in,14991.0,other,9,6,1,1,0,1
+Approval Planner,Genehmigungsplaner/in,135544.0,other,7,3,1,1,0,2
+Arranger,Arrangeur/in,28504.0,other,10,2,7,1,0,0
+Art Buyer in Advertising,Art-Buyer (Werbung),7024.0,marketing,7,2,4,0,0,1
+Art Expert,Kunstsachverständige/r,14851.0,other,10,3,7,0,0,0
+Art Historian,Kunsthistoriker/in,58751.0,other,5,1,4,0,0,0
+Art Scientist,Kunstwissenschaftler/in,100521.0,other,5,2,3,0,0,0
+Artist Agent,Künstlervermittler/in (nicht bei der Agentur für Arbeit),7074.0,other,11,2,7,2,0,0
+Artistic Director,Intendant/in,8384.0,management,9,3,6,0,0,0
+Artistic Operations Director,Künstlerische/r Betriebsdirektor/in,77942.0,management,6,2,3,0,0,1
+Assistant - Auditing,Assistent/in - Wirtschaftsprüfung,111614.0,other,8,1,1,2,2,2
+Association and Federation Manager,Wagenmeister/in (Schienenverkehr),29045.0,other,19,5,11,1,1,1
+Astrologer,Astrologe/Astrologin,8634.0,other,9,6,3,0,0,0
+Audio Describer,Audiodeskriptor/in,136638.0,other,9,3,5,1,0,0
+Auditor,Revisor/in,27384.0,finance,15,2,6,5,2,0
+Backend Developer,Backend-Entwickler/in,MOD_Backend_Developer,tech,11,3,8,0,0,0
+Ballet Master/Mistress,Ballettmeister/in,8393.0,other,11,10,0,1,0,0
+Banquet Manager,Bankettleiter/in,10022.0,other,14,3,11,0,0,0
+Bar Manager,Bar-Chef/in,10077.0,other,6,3,2,1,0,0
+"Behavior Trainer, Communication Trainer","Verhaltenstrainer/in, Kommunikationstrainer/in",27495.0,marketing,10,5,3,2,0,0
+Behavioral Researcher,Verhaltensforscher/in,14075.0,other,6,2,4,0,0,0
+Behavioral Therapist,Verhaltenstherapeut/in,27310.0,health,12,5,4,1,1,1
+Biochemist,Biochemiker/in,58688.0,other,6,2,0,3,1,0
+Biological Anthropologist,Biologische/r Anthropologe/Anthropologin,59169.0,other,8,2,5,1,0,0
+Biologist,Biologe/Biologin,59235.0,other,15,4,6,3,2,0
+Biomathematician,Biomathematiker/in,67148.0,other,14,0,11,1,2,0
+Blockchain Developer,Blockchain-Entwickler/in,132513.0,tech,15,1,2,11,0,1
+Boxing Instructor,Boxlehrer/in,9548.0,other,12,8,4,0,0,0
+Branch Manager,Niederlassungsleiter/in,27540.0,management,25,7,14,3,0,1
+Branch Manager (Insurance),Geschäftsstellenleiter/in (Versicherung),6868.0,finance,12,4,8,0,0,0
+Branch Manager of a Bank,Geschäftsstellenleiter/in (Bank),6749.0,finance,12,6,6,0,0,0
+Brand Manager,Brand-Manager/in,115578.0,marketing,15,0,10,4,0,1
+Broker in Trade,Makler/in (Handel),7034.0,finance,7,5,1,1,0,0
+Business Customer Advisor,Anlageberater/in,6773.0,other,10,4,6,0,0,0
+Business Development Manager,Business-Development-Manager/in,15007.0,other,15,7,6,2,0,0
+Business Economist (University),Betriebswirt/in (Hochschule) - Handel,59195.0,other,8,1,7,0,0,0
+Business Economist (University) - Craft Management,Betriebswirt/in (Hochschule) - Handwerksmanagement,100730.0,other,11,3,5,3,0,0
+Business Economist - Accounting and Controlling,Betriebswirt/in (Hochschule) - Rechnungswesen und Controlling,59215.0,finance,10,0,9,1,0,0
+Business Economist - Business Management,Betriebswirt/in (Hochschule) - Handwerksmanagement,100730.0,other,13,2,9,2,0,0
+Business Economist - Taxes and Audit,Betriebswirt/in (Hochschule) - Handwerksmanagement,100730.0,finance,16,3,7,0,6,0
+Business Economist for Advertising and Marketing Communication,"Betriebswirt/in (Hochschule) - Werbung, Marketingkommunikation",100734.0,marketing,12,5,7,0,0,0
+Business Economist for Automotive Industry,Betriebswirt/in (Hochschule) - Automobilwirtschaft,59185.0,other,7,1,2,3,0,1
+Business Economist for Banking and Financial Services,Betriebswirt/in (Hochschule) - Bank und Finanzdienstleistungen,59187.0,finance,7,4,2,1,0,0
+Business Economist for Environmental Economics,Betriebswirt/in (Hochschule) - Umweltökonomie,59226.0,other,7,2,3,1,0,1
+Business Economist for Industry,Betriebswirt/in (Hochschule),59183.0,other,8,1,5,2,0,0
+Business Economist for Insurance,Betriebswirt/in (Hochschule),59183.0,finance,7,4,2,1,0,0
+Business Economist for International Economics,Betriebswirt/in (Hochschule) - Internationale Wirtschaft,59203.0,other,9,3,5,1,0,0
+Business Economist for Marketing,Betriebswirt/in (Hochschule) - Marketing,59209.0,marketing,13,4,8,1,0,0
+Business Economist for Real Estate,Betriebswirt/in (Hochschule),59183.0,other,12,3,7,2,0,0
+Business Economist for Social Insurance,Betriebswirt/in (Hochschule) - Sozialversicherung,59217.0,finance,5,3,2,0,0,0
+Business Economist for Tourism,Betriebswirt/in (Hochschule) - Touristik,59223.0,other,9,2,7,0,0,0
+Business Economist in Hotel Management,Betriebswirt/in (Hochschule) - Handwerksmanagement,100730.0,other,12,4,7,1,0,0
+Business Economist in Service Management,Betriebswirt/in (Hochschule) - Handwerksmanagement,100730.0,other,10,2,6,2,0,0
+Business Economist in Trade,Betriebswirt/in (Hochschule),59183.0,other,7,1,3,3,0,0
+Business Intelligence Consultant,Business-Intelligence-Consultant,135656.0,tech,15,3,4,5,0,3
+CRM Consultant,CRM-Consultant,135375.0,other,15,6,6,2,0,1
+CRM Manager,CRM-Manager/in,137278.0,marketing,15,3,6,5,0,1
+Cabaret Artist,Kabarettist/in,8420.0,other,10,6,4,0,0,0
+Campaign Manager,Patientenmanager/in,135003.0,marketing,13,7,3,2,0,1
+Career Advisor,Berufsberater/in,67309.0,other,13,8,5,0,0,0
+Career Entry Coach,Berufseinsteiger/in-Coach,,other,6,4,0,2,0,0
+Cartoonist,Karikaturist/in,8643.0,other,9,4,4,1,0,0
+Case Manager,Fallmanager/in,59177.0,other,6,4,2,0,0,0
+Cashier Supervisor in Retail,Kassenaufsicht (Handel),7716.0,other,9,7,0,1,0,1
+Casting Director,Casting-Direktor/in,27267.0,management,9,3,4,1,0,1
+Category Manager,Warengruppenleiter/in,104708.0,other,12,2,8,2,0,0
+Catering Manager,Catering-Manager/in,7467.0,other,12,5,4,3,0,0
+Catholic Priest,Katholischer Pfarrer,14078.0,other,19,13,5,0,0,1
+Change Manager,Change-Manager/in,135541.0,management,15,4,8,2,0,1
+Chemist,Chemiker/in,58694.0,other,15,8,4,2,0,1
+Chief Digital Officer,Chief-Digital-Officer,130952.0,other,12,4,8,0,0,0
+Chief Executive Officer (CEO),Geschäftsführer/in (CEO),MOD_Chief_Executive_Officer_(CEO),management,12,12,0,0,0,0
+Chief Financial Officer (CFO),Finanzvorstand (CFO),MOD_Chief_Financial_Officer_(CFO),finance,12,12,0,0,0,0
+Chief Marketing Officer (CMO),Marketingleiter/in (CMO),MOD_Chief_Marketing_Officer_(CMO),marketing,12,12,0,0,0,0
+Chief Physician,Chefarzt/-ärztin,28019.0,health,7,5,2,0,0,0
+Chief Product Officer,Chief-Product-Officer,135812.0,other,16,6,9,1,0,0
+Chief Steward/Stewardess,Chiefsteward/-stewardess,10042.0,other,9,3,4,0,1,1
+Chief Technology Officer (CTO),Technologieleiter/in (CTO),MOD_Chief_Technology_Officer_(CTO),tech,12,12,0,0,0,0
+Childhood Educator,Kindheitspädagoge/-pädagogin,78588.0,other,14,6,7,1,0,0
+Chiropractor,Chiropraktiker/in,117083.0,health,15,8,2,1,1,3
+Choir Singer,Chorsänger/in,8398.0,other,13,11,2,0,0,0
+Choreographer,Choreograf/in,59252.0,other,13,8,5,0,0,0
+City and Area Manager,City-/Flächen-Manager/in,14962.0,other,10,2,8,0,0,0
+Claim Manager,Claim-Manager/in,135661.0,other,19,5,9,2,1,2
+Classical Studies Scholar,Altertumswissenschaftler/in,100535.0,other,6,1,4,1,0,0
+Climate Protection Manager,Klimaschutzmanager/in,93268.0,other,10,1,8,0,0,1
+Clinical Psychologist,Klinische/r Psychologe/Psychologin,9768.0,health,13,9,2,1,0,1
+Clinical Study Consultant,Cloud-Consultant,135537.0,health,7,1,2,2,1,1
+Cloud Architect,Cloud-Architect,133473.0,tech,18,4,10,4,0,0
+Cloud Consultant,Cloud-Consultant,135537.0,tech,15,2,9,3,0,1
+Coach / Supervisor,Coach / Supervisor/in,135382.0,other,19,4,13,0,0,2
+Comedian,Komiker/in,8419.0,other,10,8,2,0,0,0
+Comic Artist,Comic-Zeichner/in,15127.0,other,9,5,4,0,0,0
+Communication Psychologist,Kommunikationspsychologe/-psychologin,59549.0,health,5,0,4,1,0,0
+Community Manager,Community-Manager/in,14586.0,other,25,11,11,3,0,0
+Compliance Manager,Compliance-Manager/in,89949.0,law,15,3,6,2,4,0
+Computational Linguist,Computerlinguist/in,58695.0,other,12,2,8,2,0,0
+Consortium Advisor,Konsortialreferent/in,6767.0,other,8,2,4,1,0,1
+Consultant for Digital Accessibility,Berater/in - digitale Barrierefreiheit,135543.0,other,7,3,2,1,1,0
+Consultant for Digital Transformation,Berater/in - digitale Transformation,134898.0,other,11,2,8,1,0,0
+Consultant for Renewable Energies,Berater/in - Erneuerbare Energien,135542.0,other,9,2,7,0,0,0
+Consumer Advisor,Verbraucherberater/in,10147.0,other,8,5,2,0,0,1
+Content Creator,Content Creator,142139.0,other,18,3,14,1,0,0
+Content Manager,Content-Manager/in,14398.0,marketing,15,1,8,5,0,1
+Content Marketing Manager,Content-Marketing-Manager/in,142138.0,marketing,15,4,5,5,0,1
+Copywriter,Werbetexter/in,7026.0,other,12,3,9,0,0,0
+Corporate Profiler,Corporate Profiler/in,15461.0,other,10,2,5,3,0,0
+Cost Calculator,Kostenrechner/in,7676.0,finance,12,0,3,6,1,2
+Costume Designer,Kostümbildner/in,8550.0,other,20,9,7,4,0,0
+Costume Manager,Fundusverwalter/in,7411.0,other,11,5,1,2,0,3
+Counseling Teacher,Fremdsprachenlehrer/in,59285.0,other,11,6,3,0,0,2
+Creativity Educator,Kreativitätspädagoge/-pädagogin,27704.0,other,7,6,1,0,0,0
+Credit Manager,Kreditmanager/in,6768.0,finance,12,1,7,4,0,0
+Credit Specialist,Media-Fachkraft,7010.0,finance,15,2,3,8,1,1
+Criminologist,Kriminologe/Kriminologin,9794.0,other,13,5,5,2,0,1
+Cultural Manager,Kulturmanager/in,9832.0,other,7,1,5,1,0,0
+Cultural Scientist,Kulturwissenschaftler/in,59462.0,other,5,1,4,0,0,0
+Curator,Kurator/in,35328.0,other,14,6,6,1,0,1
+Current Account Accountant,Bauabrechner/in,7675.0,finance,8,1,2,1,1,3
+Customer Experience Manager,Customer-Experience-Manager/in,132575.0,other,11,2,5,4,0,0
+Customer Service Advisor,Kundendienstberater/in,27818.0,other,15,6,2,3,0,4
+Customer Success Manager,Customer-Success-Manager/in,MOD_Customer_Success_Manager,management,10,10,0,0,0,0
+Cybersecurity Analyst,Cybersicherheitsanalyst/in,MOD_Cybersecurity_Analyst,tech,10,8,2,0,0,0
+Dancer - Show,Tänzer/in - Show,8406.0,other,5,4,1,0,0,0
+Data Analyst,Data-Analyst/in,138079.0,tech,15,2,7,3,0,3
+Data Consultant,Data-Consultant,137138.0,other,12,6,5,0,0,1
+Data Engineer,Data Engineer,135872.0,tech,15,2,4,9,0,0
+Data Protection Officer,Datenschutzbeauftragte/r,8261.0,law,15,3,9,0,3,0
+Data Scientist,Data Scientist,129987.0,tech,14,0,8,4,0,2
+Data Warehouse Analyst,Data-Warehouse-Analyst/in,14993.0,other,11,1,4,6,0,0
+Debt Counselor,Peer-Berater/in,136500.0,other,11,6,3,0,0,2
+Decontaminator,Dekontreiniger/in,5848.0,other,15,14,0,0,0,1
+Demand Planner,Demand Planner,142098.0,other,6,1,3,2,0,0
+Demographer,Demograf/in,9761.0,other,5,0,5,0,0,0
+Dentist,Zahnarzt/-ärztin,58788.0,health,15,8,3,3,0,1
+Department Manager,Patientenmanager/in,135003.0,management,12,7,5,0,0,0
+Deployment and Release Manager,Deployment-/Release-Manager/in,134998.0,other,7,0,5,2,0,0
+Designer (University),Pferdewirtschafter/in (Hochschule),76728.0,other,6,3,3,0,0,0
+DevOps Engineer,DevOps-Ingenieur/in,MOD_DevOps_Engineer,tech,11,6,5,0,0,0
+Developer for Data Visualization,Entwickler/in - Datenvisualisierung,135535.0,tech,10,2,7,1,0,0
+Diet Consultant,Diätberater/in,8902.0,other,6,3,3,0,0,0
+Digital Analyst,Digital-Analyst/in,135655.0,other,12,3,7,1,0,1
+Digital Event Manager,Digital-Event-Manager/in,134897.0,other,16,1,12,1,1,1
+Digital Sales Manager,Digital-Sales-Manager/in,135540.0,management,16,8,7,1,0,0
+Director - School Camp,Leiter/in - Schullandheim,8121.0,management,8,3,5,0,0,0
+Director - Teacher Training Seminar,Lehrbeauftragte/r - Studienseminar,9348.0,management,12,5,6,0,0,1
+Director - Waldorf Teacher Seminar,Dozent/in - Waldorflehrerseminar,9284.0,management,7,6,1,0,0,0
+Disc Jockey,Disc Jockey (DJ),,other,11,9,2,0,0,0
+District Manager,Bezirksleiter/in,27457.0,other,13,4,7,2,0,0
+Diversity Manager,Diversity-Manager/in,133420.0,other,13,5,5,3,0,0
+Doctor,Arzt/Ärztin,58709.0,health,15,8,5,1,1,0
+Document Clerk (Bank),Dokumentensachbearbeiter/in (Bank),6794.0,finance,9,0,0,2,1,6
+Drag Artist,3-D-Artist,27272.0,other,10,9,1,0,0,0
+E-Commerce Manager,E-Commerce-Manager/in,135381.0,other,17,3,9,4,0,1
+E-Government Consultant,E-Government-Consultant,135536.0,other,15,4,7,2,0,2
+E-Learning Author,E-Learning-Autor/in,8279.0,other,7,2,4,1,0,0
+E-Sports Manager,E-Sports-Manager/in,133292.0,other,13,4,8,1,0,0
+ESG Manager,ESG-Manager/in,139042.0,other,15,4,5,4,1,1
+Economic Chemist,Wirtschaftschemiker/in,59249.0,other,5,2,2,1,0,0
+Economic Developer,Wirtschaftsförderer/-förderin,34965.0,tech,8,1,7,0,0,0
+Economic Ethicist,Wirtschaftsphysiker/in,59543.0,other,13,4,9,0,0,0
+Economic Physicist,Wirtschaftsphysiker/in,59543.0,other,9,2,6,1,0,0
+Economic Researcher,Konjunkturforscher/in,9760.0,other,14,3,8,2,0,1
+Economist,Volkswirt/in,58783.0,other,12,4,8,0,0,0
+Editions Scientist,Editionswissenschaftler/in,100519.0,other,6,0,4,2,0,0
+Editor - Publishing,Lektor/in - Verlage,8284.0,other,14,5,9,0,0,0
+Editor-in-Chief,Chefredakteur/in,90188.0,other,13,1,11,1,0,0
+Education Consultant,Bildungsreferent/in,9678.0,other,17,6,11,0,0,0
+Education Manager,Bildungsmanager/in,100537.0,other,13,2,10,1,0,0
+Educational Consultant,Erziehungsberater/in,9045.0,other,12,7,5,0,0,0
+Educational Psychologist,Pädagogische/r Psychologe/Psychologin,100546.0,health,5,1,3,1,0,0
+Educational Researcher,Bildungsforscher/in,9787.0,other,6,2,3,1,0,0
+Educational and Study Advisor,"Bildungs-, Studienberater/in",9153.0,other,14,3,11,0,0,0
+Educational-Therapeutic Conductor,Pädagogisch-therapeutische/r Konduktor/in,15517.0,other,5,4,1,0,0,0
+Educator,Pädagoge/Pädagogin,58763.0,other,8,4,4,0,0,0
+Email Marketing Manager,E-Mail-Marketing-Manager/in,134756.0,marketing,21,1,10,6,1,3
+Embedded Systems Developer,Embedded-Systems-Entwickler/in,135373.0,tech,15,2,3,9,0,1
+Emergency Service Coordinator,Gästebetreuer/in,10090.0,other,11,9,1,0,0,1
+Emissions Protection Officer,Strahlenschutzbeauftragte/r,8197.0,other,9,3,3,1,0,2
+Employer Branding Manager,Employer-Branding-Manager/in,133332.0,other,12,3,7,2,0,0
+Employment Agent,Arbeitsvermittler/in,67308.0,other,14,7,6,1,0,0
+Energy Manager,Energiemanager/in,93410.0,other,11,3,7,1,0,0
+Engineer - Biomechanics,Ingenieur/in - Biomechanik,132072.0,other,9,3,4,1,0,1
+Engineer - Biotechnology,Ingenieur/in - Biotechnologie,58691.0,tech,5,2,3,0,0,0
+Engineer for Building Materials,Ingenieur/in - Baustoffe,100530.0,other,14,5,7,2,0,0
+"Engineer for Glass, Ceramics, and Binders","Ingenieur/in - Glas, Keramik, Bindemittel",59371.0,other,7,2,3,2,0,0
+Engineering Educator,Ingenieurpädagoge/-pädagogin,126577.0,other,5,3,2,0,0,0
+Entertainer,Entertainer/in,15927.0,other,10,8,2,0,0,0
+Environmental Analyst,Umweltanalytiker/in,5295.0,other,10,4,4,0,0,2
+Environmental Auditor,Umwelt-Auditor/in,8203.0,finance,6,1,3,0,2,0
+Environmental Management Officer,Umweltmanagementbeauftragte/r,27622.0,other,13,4,2,5,1,1
+Environmental Protection and Environmental Engineering Engineer,Immissionsschutzbeauftragte/r,8199.0,other,7,2,3,1,0,1
+Epidemiologist,Epidemiologe/Epidemiologin,100541.0,other,15,5,9,1,0,0
+Equal Opportunities Officer,Gleichstellungsbeauftragte/r,29517.0,other,11,6,4,0,1,0
+Estimator,Kalkulator/in,7672.0,other,12,1,4,6,0,1
+Ethical Hacker,Ethical Hacker,133432.0,tech,15,5,4,4,0,2
+Eurythmist,Eurythmist/in,100511.0,other,8,4,3,0,0,1
+Excavation Manager,Bildungsmanager/in,100537.0,other,12,2,7,3,0,0
+Exhibition Designer,Ausstellungsdesigner/in,59039.0,other,5,1,4,0,0,0
+Expansion Manager,Expansionsmanager/in,135383.0,other,7,4,3,0,0,0
+External Company Coordinator,Fremdfirmenkoordinator/in,135660.0,other,21,6,10,1,2,2
+Extra,Komparse/Komparsin,,other,6,3,2,1,0,0
+Facility Manager,Facility-Manager/in,15628.0,other,19,5,5,7,1,1
+Family and Couples Therapist,Familien-/Paartherapeut/in,14880.0,health,7,2,3,0,1,1
+Feelgood Manager,Feelgood-Manager/in,133561.0,other,14,3,10,1,0,0
+Field Sales Representative,Handelsvertreter/in,6725.0,other,12,6,5,0,0,1
+Field Service Manager (Insurance),Außendienstleiter/in (Versicherung),6876.0,finance,12,4,6,2,0,0
+Fight Choreographer,Kampfchoreograf/in,136578.0,other,23,16,7,0,0,0
+Figure Skating Instructor,Eislauflehrer/in,9549.0,other,11,8,3,0,0,0
+Film Managing Director,Geschäftsführer/in,7469.0,management,6,0,4,2,0,0
+Film Studies Expert,Filmwissenschaftler/in,59279.0,other,5,0,4,1,0,0
+Financial Broker,Finanzmakler/in,7036.0,finance,6,5,1,0,0,0
+Financial Economist,Sozialökonom/in / Sozialwirt/in,59618.0,finance,7,3,2,0,2,0
+Food and Beverage Manager,Food-and-Beverage-Manager/in,9962.0,other,13,6,4,0,2,1
+Fraud Analyst,Fraud-Analyst/in,15000.0,other,11,2,6,1,0,2
+Frontend Developer,Frontend-Entwickler/in,MOD_Frontend_Developer,tech,11,3,8,0,0,0
+Full Stack Developer,Full-Stack-Entwickler/in,MOD_Full_Stack_Developer,tech,10,3,7,0,0,0
+Fund Manager,Fondsmanager/in,6771.0,finance,15,0,14,0,1,0
+Fundraiser,Fundraiser/in,14549.0,other,13,6,3,2,0,2
+Funeral Speaker,Trauerredner/in,35004.0,other,12,9,3,0,0,0
+Game Producer,Game-Producer/in,130067.0,other,8,4,3,1,0,0
+Game Programmer,Game Programmer,130066.0,tech,15,0,5,8,0,2
+Gender Studies Researcher,Genderwissenschaftler/in,29397.0,other,5,2,3,0,0,0
+Geneticist,Genetiker/in,9842.0,other,13,4,5,3,0,1
+Geographer,Geograf/in,58701.0,other,12,4,4,4,0,0
+Glider Flight Instructor,Segelfluglehrer/in,9554.0,other,11,8,3,0,0,0
+Global Sourcing Manager,Global-Sourcing-Manager/in,114450.0,other,8,2,3,2,0,1
+Group and Team Leader,"Gruppen-, Teamleiter/in",29355.0,other,9,3,5,1,0,0
+Growth Manager,Growth-Manager/in,133598.0,marketing,25,8,12,5,0,0
+Head of Artistic Operations Office,Leiter/in des Künstlerischen Betriebsbüros,78305.0,management,8,1,7,0,0,0
+Head of Audit,Leiter/in - Revision,6894.0,management,7,2,2,2,1,0
+Head of Controlling,Leiter/in - Controlling,29194.0,management,9,2,4,2,1,0
+Head of Corporate Training and Education,Leiter/in - betriebliche Aus- und Weiterbildung,9669.0,management,9,3,6,0,0,0
+Head of Cost Accounting,Leiter/in - Kostenrechnung,7677.0,finance,10,1,4,4,1,0
+Head of Customer Service,Leiter/in - Kundendienst (kaufmännisch),27617.0,management,9,4,4,1,0,0
+Head of Export,Leiter/in - Export,27387.0,management,13,4,8,1,0,0
+Head of Finance and Accounting,Leiter/in - Finanz- und Rechnungswesen,7481.0,finance,9,2,4,1,1,1
+Head of Human Resources,Leiter/in - Personal,7484.0,management,12,3,8,1,0,0
+Head of Legal Department,Leiter/in - Rechtsabteilung,29312.0,law,10,5,5,0,0,0
+Head of Marketing,Leiter/in - Marketing,90189.0,management,11,3,8,0,0,0
+Head of Nursing School,Leiter/in - Pflegeschule,9058.0,management,9,4,4,1,0,0
+Head of Purchasing,Leiter/in - Einkauf,29360.0,management,9,3,5,1,0,0
+Head of Sales,Leiter/in - Vertrieb,7478.0,management,12,3,7,2,0,0
+Head of Tourist Information,Leiter/in - Touristinformation,6952.0,management,13,5,6,1,1,0
+Health Manager,Gesundheitsmanager/in,59293.0,health,8,2,4,1,0,1
+Health Promoter/Educator,"Gesundheitsförderer/-förderin, -pädagoge/-pädagogin",100540.0,health,6,1,3,2,0,0
+Health and Rehabilitation Psychologist,Gesundheits- und Rehabilitationspsychologe/-psychologin,59551.0,health,5,2,2,1,0,0
+Home Manager,Fundusverwalter/in,7411.0,other,10,2,5,3,0,0
+Hospital Manager,Krankenhausmanager/in,100538.0,health,13,3,10,0,0,0
+Housekeeper,Hausdame/Housekeeper,10139.0,other,11,7,1,1,0,2
+Human Biologist,Humanbiologe/-biologin,58690.0,other,6,3,3,0,0,0
+IT Compliance Consultant,IT-Compliance-Consultant,135377.0,law,15,4,5,3,2,1
+IT Dispatcher,IT-Dispatcher/in,137399.0,tech,6,1,2,1,0,2
+IT Forensic Specialist,IT-Forensiker/in,135378.0,law,15,6,0,7,0,2
+IT License Manager,IT-Lizenzmanager/in,135372.0,tech,8,3,2,1,0,2
+IT Manager,Leiter/in - IT,15487.0,tech,21,8,10,2,0,1
+IT Operator,Funker/in,7379.0,tech,15,5,2,4,0,4
+IT Organizer,IT-Organisator/in,7729.0,tech,10,1,8,1,0,0
+IT Service Delivery Manager,IT-Service-Delivery-Manager/in,135718.0,tech,15,3,8,2,0,2
+Idea and Innovation Manager,Idea- und Innovations-Manager/in,14996.0,other,12,3,8,1,0,0
+Identity and Access Manager,Identity-/Access-Manager/in,135376.0,other,9,1,3,5,0,0
+Illustrator,Illustrator/in,116178.0,other,14,4,9,1,0,0
+Image Editor,Bildredakteur/in,27786.0,other,12,3,3,4,0,2
+Imam,Imam,15460.0,other,11,9,2,0,0,0
+In-house Lawyer,Wirtschaftsjurist/in,58786.0,law,9,6,3,0,0,0
+Industrial and Product Designer,"Industrie-, Produktdesigner/in",59261.0,other,7,1,5,1,0,0
+Influencer Marketing Manager,Influencer-Marketing-Manager/in,134904.0,marketing,25,13,7,5,0,0
+Information Broker,Informations-Broker/in,7087.0,finance,9,0,5,4,0,0
+Information Scientist,Informationswissenschaftler/in,58713.0,other,6,0,3,3,0,0
+Information Security Officer,Informationssicherheitsbeauftragte/r,135719.0,other,6,0,5,1,0,0
+Infotainment Developer,Infotainment-Entwickler/in,135374.0,tech,13,2,5,3,0,3
+Instructor - Waldorf Teacher Seminar,Dozent/in - Waldorflehrerseminar,9284.0,other,5,1,3,1,0,0
+Insurance Adjuster,Versicherungsberater/in,6880.0,finance,6,2,3,1,0,0
+Insurance Agent,Versicherungsprüfer/in,6895.0,finance,13,7,4,1,0,1
+Insurance Broker,Versicherungsmakler/in,7058.0,finance,5,3,0,1,0,1
+Insurance Calculator,Versicherungskalkulator/in,6889.0,finance,10,0,4,4,1,1
+Insurance Consultant,Weinbauberater/in,452.0,finance,15,9,3,3,0,0
+Insurance Consultant for Large Clients,Berater/in - Smart City,137219.0,finance,9,2,6,1,0,0
+Integration Manager,Integrationsmanager/in,138558.0,other,19,6,12,0,0,1
+Interior Architect,Innenarchitekt/in,100517.0,other,5,1,2,2,0,0
+Internal Service Manager,Innendienstleiter/in,6866.0,other,9,4,5,0,0,0
+Interpreter,Dolmetscher/in,8302.0,other,6,4,1,1,0,0
+Investment Advisor,Anlageberater/in,6773.0,other,12,2,7,2,0,1
+Investment Manager,Beteiligungsmanager/in,106789.0,other,15,3,7,4,0,1
+Investor Relations Manager,Investor-Relations-Manager/in,6783.0,other,8,3,2,2,0,1
+IoT Developer,IoT-Entwickler/in,135657.0,tech,15,2,4,9,0,0
+Islamic Religious Educator,Religionspädagoge/-pädagogin - islamisch,138322.0,other,5,3,2,0,0,0
+Islamic Theologian,Theologe/Theologin - islamisch,90388.0,other,5,2,3,0,0,0
+Jewelry Designer,Schmuckdesigner/in,59255.0,other,9,5,3,1,0,0
+Job Coach,Jobcoach,135001.0,other,15,9,5,1,0,0
+Karate Instructor,Karatelehrer/in,9553.0,other,13,11,1,1,0,0
+Kindergarten Director,Kindergartenleiter/in,9166.0,management,12,5,7,0,0,0
+Knowledge Manager,Wissensmanager/in,137122.0,other,8,3,4,1,0,0
+Labor Manager,Laborleiter/in,6313.0,other,10,5,3,2,0,0
+Labor Market Consultant,Arbeitsmarktorientierte/r Berater/in,130772.0,other,9,4,5,0,0,0
+Language Support Specialist,Fachkraft - Sprachförderung,137618.0,other,13,10,3,0,0,0
+Lawyer,Rechtsanwalt/Rechtsanwältin,8241.0,law,15,6,8,1,0,0
+Lean Manager,Lean-Manager/in,137220.0,other,14,2,12,0,0,0
+Learning Therapist,Lerntherapeut/in,27885.0,health,9,4,4,1,0,0
+Leasing Consultant,Leasing-Berater/in,7066.0,other,7,1,3,2,0,1
+Lecturer - Teacher Training Seminar,Lehrbeauftragte/r - Studienseminar,9348.0,other,7,6,1,0,0,0
+Lecturer - Universities and Academies,Dozent/in - Hochschulen und Akademien,9178.0,other,13,7,5,1,0,0
+Legal Advisor,Medical Advisor,14989.0,law,14,8,5,1,0,0
+Legal Guardian,Rechtsbeistand,8259.0,law,24,8,8,5,2,1
+Legal Protection Officer,Rechtsschutzbeauftragte/r,6885.0,law,6,1,2,0,2,1
+Lighting Planner,Lichtplaner/in,90068.0,other,9,4,5,0,0,0
+Lighting Technician,Beleuchter/in,27273.0,other,8,5,2,0,0,1
+Linguist,Sprachwissenschaftler/in,59622.0,other,7,1,5,1,0,0
+Literary Agent,Literaturagent/in,7075.0,other,9,5,3,0,1,0
+Literary Scholar,Altertumswissenschaftler/in,100535.0,other,7,1,5,1,0,0
+Location Coordinator,Location-Coordinator,14992.0,other,7,2,1,2,0,2
+Machine Learning Engineer,Machine-Learning-Ingenieur/in,MOD_Machine_Learning_Engineer,tech,12,1,9,1,0,1
+Magician,Zauberer/Zauberin,8605.0,other,13,12,1,0,0,0
+Make-up Artist,Visagist/in,9926.0,other,7,4,2,1,0,0
+Management Consultant,Unternehmensberater/in,7505.0,other,15,4,11,0,0,0
+Manager - Gastronomy Business,Betriebsleiter/in - Gastronomie,,other,13,2,9,1,0,1
+Manager - Hospitality Business,Helfer/in - Gastgewerbe,10086.0,health,13,5,6,2,0,0
+Manager - Workshops for People with Disabilities,Leiter/in - Werkstätten für Menschen mit Behinderungen,6074.0,other,8,3,4,1,0,0
+Manager of a Senior Care Facility,Leiter/in - Altenpflegeeinrichtung,9096.0,other,11,3,6,2,0,0
+Managing Director,Geschäftsführer/in,7469.0,management,15,3,11,1,0,0
+Marine Biologist,Meeresbiologe/-biologin,100543.0,other,10,2,6,2,0,0
+Market Researcher,Meinungsforscher/in,9755.0,other,9,4,3,1,0,1
+Media Educator,Medienpädagoge/-pädagogin,59502.0,other,5,1,4,0,0,0
+Media Manager,Medienmanager/in,14238.0,other,5,0,4,1,0,0
+Media Planner,Mediaplaner/in,7012.0,other,11,3,7,1,0,0
+Medical Advisor,Medical Advisor,14989.0,other,8,2,5,1,0,0
+Medical Device Consultant,Medizinprodukteberater/in,110387.0,other,7,4,1,0,1,1
+Medical Writer,Medical Writer,113685.0,other,21,5,10,5,0,1
+Mentalist,Zahnarzt/-ärztin,58788.0,other,10,7,3,0,0,0
+Mentor Teacher - General Education Schools,Betreuungslehrer/in - allgemeinbildende Schulen,59013.0,other,10,6,4,0,0,0
+Merchandiser,Merchandiser/in,14999.0,other,6,4,1,1,0,0
+Mergers and Acquisitions Specialist,Mergers-and-Acquisitions-Specialist,14474.0,other,12,2,9,0,1,0
+Microbiologist,Mikrobiologe/-biologin,100536.0,other,15,7,4,3,1,0
+Midwife,Hebamme,8838.0,health,19,16,3,0,0,0
+Mime Artist,Game Artist,130065.0,other,8,7,1,0,0,0
+Mobile Developer,Mobile-Entwickler/in,MOD_Mobile_Developer,tech,10,1,9,0,0,0
+Money Laundering Officer,Geldwäschebeauftragte/r,135002.0,other,12,3,5,2,2,0
+Motologist,Motologe/Motologin,100526.0,other,15,8,6,1,0,0
+Museum Director,Leiter/in - Museum,27400.0,management,13,6,6,0,0,1
+Museum Educator,Museumspädagoge/-pädagogin,13674.0,other,8,3,3,2,0,0
+Music Editor,Musikredakteur/in,8599.0,other,9,4,5,0,0,0
+Music Manager,Musikmanager/in,7077.0,other,15,7,7,1,0,0
+Musical Instrument Maker,Musikinstrumentenbauer/in (Hochschule),59515.0,other,7,7,0,0,0,0
+Musician - Country/Western,Musiker/in - Country/Western,15923.0,other,13,8,5,0,0,0
+Musician - Dance/Entertainment Music,Musiker/in - Tanz-/Unterhaltungsmusik,15925.0,other,14,10,3,1,0,0
+Musician - Folk Music,Musiker/in - Volkstümliche Musik,15924.0,other,12,8,3,1,0,0
+Musician - International Folklore,Musiker/in - Internationale Folklore,15926.0,other,14,8,6,0,0,0
+Musician - Pop/Rock/Jazz,Musiker/in - Pop/Rock/Jazz,15922.0,other,5,4,1,0,0,0
+Musicologist,Musikwissenschaftler/in,59518.0,other,5,0,4,1,0,0
+Nurse,Study-Nurse,34931.0,health,15,11,3,0,0,1
+Nursing Educator,Pflegepädagoge/-pädagogin,58765.0,other,6,2,3,0,1,0
+Nursing Scientist,Pflegewissenschaftler/in,58766.0,other,5,1,0,2,2,0
+Nutrition and Fitness Consultant,Ernährungs- und Fitnessberater/in (Gesundheit/Sport),15669.0,health,12,6,6,0,0,0
+Nutritional Scientist,Ökotrophologe/Ökotrophologin,58761.0,health,18,6,6,4,1,1
+Online Marketing Manager,Onlinemarketing-Manager/in,15010.0,marketing,14,2,10,1,0,1
+Operations Manager - Commercial,Betriebsleiter/in - kaufmännisch,7466.0,management,17,3,11,2,0,1
+Operations Manager in Healthcare and Fitness,Betriebsleiter/in - Gesundheitswesen/Freizeit/Fitness,14513.0,health,16,5,8,2,1,0
+Operations Planner,Betriebsplaner/in,14848.0,management,12,4,6,2,0,0
+Opinion Researcher,UX-Researcher/in,136260.0,other,12,2,9,1,0,0
+Orchestra Inspector,Kartenkontrolleur/in,7099.0,other,9,1,5,1,0,2
+Order Manager,Auftragsleiter/in,27385.0,other,12,3,3,6,0,0
+Orthodontic Assistant,Kieferorthopädische/r Fachhelfer/in,8926.0,other,13,7,1,2,1,2
+Osteopath,Osteopath/in,108809.0,other,12,5,2,1,1,3
+PLC Engineer,SPS-Ingenieur/in,135658.0,other,8,2,4,1,0,1
+POS Manager,POS-Manager/in,15004.0,other,9,3,6,0,0,0
+Parliament Stenographer,Parlamentsstenograf/in,13994.0,other,13,4,3,2,0,4
+Parodist,Parodist/in,8417.0,other,12,5,7,0,0,0
+Pastoral Assistant,Redaktionsassistent/in,14715.0,other,16,11,5,0,0,0
+Payroll Accountant,Lohn- und Gehaltsbuchhalter/in,7700.0,finance,13,2,2,2,1,6
+Pension Advisor,Pastoralreferent/in,9882.0,other,10,2,3,2,0,3
+People Operations Manager,People-Operations-Manager/in,MOD_People_Operations_Manager,management,10,9,1,0,0,0
+Performance Artist,Vortragskünstler/in,78510.0,other,13,12,1,0,0,0
+Personnel Consultant,Personalberater/in,7555.0,other,15,8,5,2,0,0
+Personnel Developer,Personalentwickler/in,14995.0,tech,14,3,11,0,0,0
+Personnel Dispatcher,Personaldisponent/in,27537.0,other,19,7,7,2,0,3
+Pharmacist,Pharmazeut/in,13971.0,health,26,13,4,1,8,0
+Physician Assistant,Arztassistent/in / Physician Assistant,90902.0,health,15,8,4,0,2,1
+Play Therapist,Spieltherapeut/in,8778.0,health,5,4,1,0,0,0
+Podcast Producer,Podcast-Produzent/in,134693.0,other,23,6,13,3,0,1
+Political Advisor,Politische/r Berater/in,14963.0,other,15,7,6,2,0,0
+Practice Manager,Praxismanager/in,34944.0,other,18,2,9,3,1,3
+Pregnancy Conflict Advisor,Schwangerschaftskonfliktberater/in,9036.0,other,10,6,3,0,0,1
+Press Officer,Kreditsachbearbeiter/in,6769.0,marketing,11,4,4,2,0,1
+Principal - Waldorf School,Schulleiter/in - Waldorfschule,9303.0,other,9,6,2,1,0,0
+Principal Investigator,Studienleiter/in,,other,14,4,8,1,0,1
+Procurement Manager,Vergabemanager/in,135385.0,other,20,2,11,6,0,1
+Product Manager,Produktmanager/in,7513.0,other,25,15,10,0,0,0
+Product Owner,Product Owner,133712.0,management,25,16,8,1,0,0
+Production Designer - Stage/Film/Television,Ausstattungsleiter/in - Bühne/Film/Fernsehen,77951.0,other,12,5,7,0,0,0
+Production Manager - Film and Television,Aufnahmeleiter/in - Film und Fernsehen,8507.0,other,9,7,1,1,0,0
+Professional Athlete,Berufssportler/in,8628.0,other,9,7,2,0,0,0
+Professor at Universities,Berufssportler/in,8628.0,other,25,12,13,0,0,0
+Program Coordinator,Studiengangkoordinator/in,135663.0,other,18,7,9,2,0,0
+Programmatic Advertising Manager,Programmatic-Advertising-Manager/in,134903.0,marketing,13,2,7,3,0,1
+Project Manager,Projektleiter/in,27393.0,management,15,5,7,3,0,0
+Prompt Engineer,Prompt-Ingenieur/in,MOD_Prompt_Engineer,tech,10,2,8,0,0,0
+Property Manager (Real Estate),Objektverwalter/in (Immobilien),7048.0,other,12,8,2,1,0,1
+Prorector / Vice President,Prorektor/in / Vizepräsident/in,9182.0,other,6,2,4,0,0,0
+Prosthetist,Epithetiker/in,15255.0,other,9,7,2,0,0,0
+Protestant Pastor,Evangelische/r Pfarrer/in,14079.0,other,18,12,5,0,0,1
+Psycho-oncologist,Psychoonkologe/-onkologin,142938.0,other,14,12,2,0,0,0
+Psychologist,Psychologe/Psychologin,58770.0,health,15,8,4,1,1,1
+Public Affairs Manager,Public-Affairs-Manager/in,136261.0,other,16,6,10,0,0,0
+Public Prosecutor,Staatsanwalt/-anwältin,14071.0,law,5,1,1,0,1,2
+"Publisher (Media, Music)","Verleger/in (Medien, Musik)",6686.0,other,18,6,8,3,0,1
+Purchaser,Einkäufer/in,6600.0,other,14,3,5,5,0,1
+Quick Sketch Artist / Portrait Artist,Schnellzeichner/in / Porträtzeichner/in,15931.0,tech,7,5,2,0,0,0
+Rabbi,Rabbiner/in,74188.0,other,10,6,4,0,0,0
+Radiation Protection Engineer,Strahlenschutzingenieur/in,108543.0,other,10,3,3,2,1,1
+Radiation Protection Officer,Strahlenschutzbeauftragte/r,8197.0,other,11,4,3,2,1,1
+Radio and Television Speaker,Hörfunk- und Fernsehsprecher/in,8297.0,other,9,3,6,0,0,0
+Rating Analyst,Rating-Analyst/in,27779.0,finance,15,2,4,5,2,2
+Real Estate Agent,Immobilienmakler/in,7049.0,other,16,6,5,5,0,0
+Real Estate Financing Consultant,Ausbildungsberater/in,9152.0,other,11,3,5,1,0,2
+Reception Manager in Hotel,Empfangschef/in (Hotel),10019.0,other,10,5,3,1,0,1
+Recruiter,Recruiter/in,15005.0,other,27,8,8,9,0,2
+Rector / President,Rektor/in / Präsident/in,9183.0,other,13,2,10,0,0,1
+Regional Scientist - African Studies,Regionalwissenschaftler/in - Afrika-Studien,59561.0,other,7,3,4,0,0,0
+Regional Scientist - Asian Studies,Regionalwissenschaftler/in - Asien-Studien,59563.0,other,7,4,3,0,0,0
+Regional Scientist - European Studies,Regionalwissenschaftler/in - Europa-Studien,59565.0,other,6,2,4,0,0,0
+Regional Scientist - Islamic Studies,Regionalwissenschaftler/in - Islam-Studien,59567.0,other,5,2,3,0,0,0
+Regional Scientist - Latin American Studies,Regionalwissenschaftler/in - Lateinamerika-Studien,59569.0,other,7,3,4,0,0,0
+Regional Scientist for North America,Regionalwissenschaftler/in - Nordamerika-Studien,59573.0,other,5,2,3,0,0,0
+Regulatory Affairs Manager,Regulatory-Affairs-Manager/in,15006.0,other,15,4,4,1,4,2
+Regulatory Manager,Regulierungsmanager/in,143060.0,other,9,2,3,4,0,0
+Religious Educator - Jewish Communities,Religionspädagoge/-pädagogin - jüdische Gemeinden,100527.0,other,6,4,2,0,0,0
+Relocation Specialist/Manager,Relocation-Specialist/-Manager/in,15001.0,other,13,2,8,1,0,2
+Research Associate,Wissenschaftliche/r Mitarbeiter/in,9272.0,other,13,4,7,1,0,1
+Research Consultant,Forstwirtschaftssachverständige/r,134992.0,other,14,3,11,0,0,0
+Research Manager,Research-Manager/in,136619.0,other,17,5,10,2,0,0
+Residential Educator,Heimerzieher/in,9105.0,other,8,4,4,0,0,0
+Respiratory Therapist,Eutonietherapeut/in,8783.0,health,15,11,3,0,1,0
+Riding and Driving Instructor (Equestrian Sports),Reit- und Fahrlehrer/in (Pferdesport),9535.0,other,8,8,0,0,0,0
+Risk Manager,Risk-Manager/in,15003.0,other,15,3,5,6,0,1
+Rooms Division Manager,Rooms-Division-Manager/in,10027.0,other,11,4,6,1,0,0
+SEO Manager,SEO-Manager/in,126685.0,marketing,19,2,12,4,0,1
+Sales Consultant,Vertriebsberater/in,7509.0,other,15,3,11,1,0,0
+Sales Engineer,Vertriebstechniker/in,5545.0,other,14,8,4,2,0,0
+Sales Manager,Sales-Manager/in,28331.0,management,15,5,7,3,0,0
+Sales Representative,Handelsvertreter/in,6725.0,other,5,3,0,2,0,0
+Sales Supervision,Verkaufsaufsicht,14354.0,other,8,4,1,1,0,2
+Sales Technician,Löter/in,2088.0,other,11,7,1,0,0,3
+Sales Trainer,Verkaufstrainer/in,6614.0,other,7,3,3,0,0,1
+School Director - Adult Education,Schulleiter/in - Erwachsenenbildung,109427.0,management,12,4,7,1,0,0
+School Principal - General Education Schools,Schulleiter/in - allgemeinbildende Schulen,9309.0,other,9,5,4,0,0,0
+School Principal - Music Schools,Schulleiter/in - berufliche Schulen,9345.0,other,14,8,6,0,0,0
+School Principal - Vocational Schools,Schulleiter/in - berufliche Schulen,9345.0,other,12,7,5,0,0,0
+Search Engine Advertising Manager,Programmatic-Advertising-Manager/in,134903.0,marketing,17,2,11,4,0,0
+Securities Analyst,Wertpapieranalyst/in,6779.0,other,6,0,6,0,0,0
+Securities Clerk,Wertpapiersachbearbeiter/in,6793.0,other,8,0,1,0,2,5
+Service Designer,Service-Designer/in,135813.0,other,13,5,5,3,0,0
+Shift Leader - Emergency Services,Leiter/in - Rettungsdienst,8172.0,other,8,5,2,0,0,1
+Site Reliability Engineer,Site-Reliability-Ingenieur/in,MOD_Site_Reliability_Engineer,tech,10,8,1,0,0,1
+Social Economist / Social Manager,Betriebswirt/in (Hochschule) - Handwerksmanagement,100730.0,other,6,2,4,0,0,0
+Social Media Manager,Social-Media-Manager/in,126684.0,marketing,15,4,7,4,0,0
+Social Worker / Social Educator,Sozialarbeiter/in / Sozialpädagoge/-pädagogin,58775.0,other,9,6,2,1,0,0
+Software Architect,Software-Architect,130165.0,tech,15,4,10,0,1,0
+Solo Singer,Solosänger/in,8400.0,other,8,8,0,0,0,0
+Solutions Architect,Lösungsarchitekt/in,MOD_Solutions_Architect,tech,10,10,0,0,0,0
+Songwriter,Liedermacher/in,27279.0,other,8,7,1,0,0,0
+Specialist Consultant for Elderly Care,Fachberater/in - Altenhilfe,9059.0,other,8,4,4,0,0,0
+Specialist Teacher for Forestry,Fachlehrer/in - Forstwirtschaft,,other,7,4,3,0,0,0
+Speech Therapist,Sprachtherapeut/in,8763.0,health,8,3,4,1,0,0
+Sports Manager,E-Sports-Manager/in,133292.0,other,10,4,6,0,0,0
+Sports Psychologist,Sportpsychologe/-psychologin,100518.0,health,11,8,1,1,0,1
+Sports Teacher for Rehabilitation and Disability Sports,Sportlehrer/in - Rehabilitation/Behindertensport,9591.0,other,6,5,1,0,0,0
+Staff Physician,Stationsarzt/-ärztin,28020.0,health,9,4,2,3,0,0
+Stage Designer,Bühnenbildner/in,58692.0,other,7,4,3,0,0,0
+Stage Manager,Inspizient/in,8414.0,other,11,9,1,1,0,0
+Startup Consultant,Gründungsberater/in,135384.0,other,15,4,10,1,0,0
+Stock Trader,Börsenhändler/in,6785.0,other,10,2,6,1,1,0
+Streaming Engineer,Streaming Engineer,137358.0,other,15,2,7,5,0,1
+Stroke Nurse,Stroke-Nurse,139178.0,health,11,8,2,0,0,1
+Subject Leader - General Education Schools,Fachleiter/in - allgemeinbildende Schulen,9312.0,other,10,4,5,1,0,0
+Substitute in Goods Trade,Substitut/in (Warenhandel),6607.0,other,8,6,1,1,0,0
+Surgical Operations Manager,Werkschutzleiter/in,8072.0,management,30,8,12,6,2,2
+Sustainability Manager,Nachhaltigkeitsmanager/in,134373.0,other,25,13,8,3,1,0
+Swimming Instructor,Schwimmlehrer/in,119249.0,other,10,9,1,0,0,0
+Talent Acquisition Manager,Talent-Acquisition-Manager/in,134899.0,other,19,5,10,3,0,1
+Tax Consulting Assistant,Schwestern-/Pflegediensthelfer/in,8866.0,finance,6,2,4,0,0,0
+Teacher - School for Vocational Education,Lehrer/in - Schule für Arbeitserziehung,9428.0,other,10,4,5,1,0,0
+Teacher - Special Education Schools,Lehrer/in - Förderschulen,58774.0,other,16,4,9,2,0,1
+Teacher for German as a Foreign Language,Lehrer/in - Deutsch als Fremdsprache,59474.0,other,9,3,5,1,0,0
+Teacher for Gifted Education,Lehrer/in - Förderschulen,58774.0,other,6,3,2,1,0,0
+Teacher for Maritime Studies,Lehrer/in - berufliche Schulen,59472.0,other,7,4,3,0,0,0
+Teacher in Adult Education,Lehrer/in/Dozent/in - Erwachsenenbildung,9677.0,other,11,2,8,1,0,0
+Team Leader in Call Center,Teamleiter/in - Callcenter,14065.0,other,9,3,6,0,0,0
+Technical Director - Stage/Film/Television,Technische/r Leiter/in - Bühne/Film/Fernsehen,8512.0,management,8,6,2,0,0,0
+Technical Writer,Technische/r Redakteur/in,58779.0,tech,15,1,6,3,0,5
+Tender Manager,Tender-Manager/in,135722.0,other,10,2,6,2,0,0
+Theater Educator,Theaterpädagoge/-pädagogin,13672.0,other,7,5,2,0,0,0
+Theater Scientist,Theaterwissenschaftler/in,58780.0,other,5,0,4,1,0,0
+Tour Guide,Fremdenführer/in,6964.0,other,11,6,2,1,0,2
+Tourism Manager,Touristikmanager/in,14043.0,other,28,6,18,4,0,0
+Toxicologist,Toxikologe/Toxikologin,5275.0,other,9,2,4,2,1,0
+Traffic Psychologist,Verkehrspsychologe/-psychologin,9771.0,health,11,5,2,2,1,1
+Trainer for Pharmaceutical Representatives,Ausbilder/in - Pharmareferenten/-innen,9634.0,other,6,3,3,0,0,0
+"Trainer, Supervisor - Call Center","Trainer/in, Supervisor/in - Callcenter",14067.0,other,15,5,8,2,0,0
+Training Consultant,Ausbildungsberater/in,9152.0,other,25,9,14,2,0,0
+Translator,Übersetzer/in,8315.0,other,9,2,3,3,0,1
+Treasury Manager,Treasury-Manager/in,143061.0,finance,15,1,8,6,0,0
+Trustee,Treuhänder/in,7558.0,finance,6,0,1,1,2,2
+Tutor,Nachhilfelehrer/in,106708.0,other,14,10,4,0,0,0
+UI/UX Designer,UI/UX-Designer/in,MOD_UI_UX_Designer,tech,11,10,0,1,0,0
+UX Researcher,UX-Researcher/in,136260.0,other,16,6,8,2,0,0
+Underwriter,Underwriter (Versicherung),6898.0,finance,15,4,5,3,1,2
+Ventriloquist,Bauchredner/in,8602.0,other,9,6,3,0,0,0
+Venture Capitalist,Venture-Capitalist,14990.0,other,8,1,7,0,0,0
+Veterinarian,Tierarzt/Tierärztin,58781.0,health,15,10,3,1,0,1
+Visual Artist,Bildende/r Künstler/in,59229.0,other,6,4,2,0,0,0
+Voice Actor,Synchronsprecher/in,15543.0,other,7,5,2,0,0,0
+Volunteer Coordinator,Ehrenamtskoordinator/in,135545.0,other,12,4,7,0,0,1
+Waste Consultant,Data-Consultant,137138.0,other,11,5,4,1,0,1
+Waste Officer,Duty-Officer,15355.0,other,10,2,4,1,1,2
+Water Protection Officer,Gewässerschutzbeauftragte/r,8200.0,other,11,3,5,0,1,2
+Water Sports Instructor,Wassersportlehrer/in,9484.0,other,13,8,5,0,0,0
+Web Developer,Web Developer,134997.0,tech,14,2,1,8,0,3
+Work Scientist,Buchwissenschaftler/in,59241.0,other,6,1,4,1,0,0
+Wound Manager,Wundmanager/in,130953.0,other,9,6,1,0,0,2
+Youth Counselor,Peer-Berater/in,136500.0,other,6,6,0,0,0,0
+Youth Worker,Jugendpfleger/in,9050.0,other,8,5,3,0,0,0

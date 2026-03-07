@@ -13,11 +13,11 @@ const JOURNEY_STEPS = [
     num: "01",
     title: "Discover",
     subtitle: "Understand your AI exposure",
-    description: "Select your occupation from 522 German roles. See how AI touches each task across a 5-category spectrum.",
+    description: "Select your occupation from 540 German roles. See how AI touches each task across a 5-category spectrum.",
     color: "#6366F1",
     bg: "#EEF2FF",
     icon: Compass,
-    keywords: ["522 roles", "5 categories", "Task-level"],
+    keywords: ["540 roles", "5 categories", "Task-level"],
   },
   {
     num: "02",
@@ -52,10 +52,10 @@ const JOURNEY_STEPS = [
 ];
 
 const FEATURES = [
-  { icon: BarChart3, label: "5,885 Tasks", color: "#6366F1" },
+  { icon: BarChart3, label: "6,079 Tasks", color: "#6366F1" },
   { icon: Zap, label: "5-Category Spectrum", color: "#F59E0B" },
   { icon: Shield, label: "Regulation Built In", color: "#10B981" },
-  { icon: Users, label: "522 Occupations", color: "#0891B2" },
+  { icon: Users, label: "540 Occupations", color: "#0891B2" },
   { icon: Bot, label: "AI Tools Layer", color: "#7C3AED" },
   { icon: BookOpen, label: "400+ Competencies", color: "#EC4899" },
 ];
@@ -108,7 +108,7 @@ function DashboardSnapshot() {
       <div className="bg-white/95 backdrop-blur-xl border border-slate-100 rounded-3xl shadow-2xl shadow-violet-100/40 overflow-hidden">
         <div className="grid grid-cols-4 gap-3 p-5 pb-3">
           {[
-            { label: "Tasks", value: "5,885", color: "#6366F1" },
+            { label: "Tasks", value: "6,079", color: "#6366F1" },
             { label: "Skills", value: "400+", color: "#0891B2" },
             { label: "AI Tools", value: "25", color: "#7C3AED" },
             { label: "Sectors", value: "7", color: "#10B981" },
@@ -292,7 +292,7 @@ export default function Landing() {
             </Link>
             <Link href="/my-role">
               <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-slate-200 hover:bg-white hover:border-indigo-200 shadow-sm transition-all" data-testid="cta-explore">
-                Explore 522 Roles
+                Explore 540 Roles
               </Button>
             </Link>
           </div>
@@ -415,7 +415,7 @@ export default function Landing() {
               <div className="bg-white/90 backdrop-blur-md border border-slate-100 rounded-3xl p-6 shadow-2xl shadow-indigo-100/50">
                 <div className="grid grid-cols-2 gap-3 mb-3">
                   {[
-                    { label: "Tasks", value: "5,885", color: "#6366F1" },
+                    { label: "Tasks", value: "6,079", color: "#6366F1" },
                     { label: "Skills", value: "400+", color: "#0891B2" },
                     { label: "AI Tools", value: "25", color: "#7C3AED" },
                     { label: "Sectors", value: "7", color: "#10B981" },

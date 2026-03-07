@@ -1,11 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_replit.csv');
-const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary.csv');
+const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_replit_v2_1772885105773.csv');
+const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary_v2_1772885088584.csv');
 const skillsVocabPath = path.join(__dirname, '..', 'attached_assets', 'skills_vocabulary_v0_(2)_1772872655371.csv');
-const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_production_(1)_1772872650835.csv');
-const modernTasksPath = path.join(__dirname, '..', 'attached_assets', 'modern_occupations_tasks_1772880114731.csv');
+const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_v2_final_1772885084875.csv');
 
 const occupationsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'occupations.json');
 const skillsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'skills.json');
@@ -87,12 +86,21 @@ for (const row of summaryRows) {
   };
 }
 
+const occupationsWithOriginalTasks = new Set();
+for (const task of tasks) {
+  if (task.occupation && task.task_id && !task.task_id.startsWith('MOD_')) {
+    occupationsWithOriginalTasks.add(task.occupation);
+  }
+}
+
 const occupations = {};
 
 for (const task of tasks) {
   const occupation = task.occupation;
   const label = task.label_5cat;
   if (!occupation || !label) continue;
+
+  if (task.task_id.startsWith('MOD_') && occupationsWithOriginalTasks.has(occupation)) continue;
 
   const score_sum = (parseInt(task.SPEC)||0) + (parseInt(task.VERIF)||0) + (parseInt(task.STD)||0);
 
@@ -152,6 +160,26 @@ for (const skill of skillsVocab) {
     definition_de: skill.definition_de,
     category: skill.skill_category,
   };
+}
+for (const link of taskSkillLinks) {
+  if (!skillsData[link.skill_id] && link.skill_name_en) {
+    skillsData[link.skill_id] = {
+      name_en: link.skill_name_en,
+      name_de: link.skill_name_de || link.skill_name_en,
+      definition_en: '',
+      definition_de: '',
+      category: link.skill_category || 'other',
+    };
+  }
+}
+const manualSkills = {
+  'SK-SOC-023': { name_en: 'Pricing & Cost Estimation', name_de: 'Preisgestaltung und Kostenschätzung', category: 'social' },
+  'SK-COG-023': { name_en: 'Pricing & Cost Estimation', name_de: 'Preisgestaltung und Kostenschätzung', category: 'cognitive' },
+};
+for (const [id, info] of Object.entries(manualSkills)) {
+  if (!skillsData[id]) {
+    skillsData[id] = { name_en: info.name_en, name_de: info.name_de, definition_en: '', definition_de: '', category: info.category };
+  }
 }
 
 fs.writeFileSync(skillsOutputPath, JSON.stringify(skillsData, null, 2), 'utf-8');
