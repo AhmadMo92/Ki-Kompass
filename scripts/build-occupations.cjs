@@ -5,6 +5,7 @@ const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_repli
 const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary.csv');
 const skillsVocabPath = path.join(__dirname, '..', 'attached_assets', 'skills_vocabulary_v0_(2)_1772872655371.csv');
 const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_production_(1)_1772872650835.csv');
+const modernTasksPath = path.join(__dirname, '..', 'attached_assets', 'modern_occupations_tasks_1772880114731.csv');
 
 const occupationsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'occupations.json');
 const skillsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'skills.json');
