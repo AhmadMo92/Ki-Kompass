@@ -66,17 +66,17 @@ Each task links to 2-3 skills with relevance scores. Skills profile shows which 
 - **Scoring dimensions**: PHYS, TPS, SIR, SPEC, VERIF, STD available in source CSVs
 
 ## Routes
-- `/` — Landing page with hero occupations
-- `/my-role` — Main analysis page (search, donut chart, task list, personalization)
+- `/` — Landing page: journey (3-step path), dashboard preview, companion concept
+- `/my-role` — Main analysis page (search → OccupationDashboard with AI Tools Map)
 - `/beruf/:slug` — Shareable occupation profile page
 
 ## Key Components
-- `OccupationDashboard` — **Main holistic view**: 3-panel cockpit layout (donut+categories | tasks | skills). Integrates donut chart, category filtering, sector comparison, task toggles, skill bars, and personalization into a single interactive dashboard. Used by both `/my-role` (step 2) and `/beruf/:slug`.
+- `Landing` — Journey-oriented landing page with three pillars: Discover→Analyze→Navigate journey steps, Dashboard preview section, Companion/roadmap section
+- `OccupationDashboard` — **Main holistic view**: 4-panel top row (donut+legend, category bars, sector comparison, skill radar) + task/skill panels + AI Tools Map. Used by both `/my-role` and `/beruf/:slug`.
+- `AIToolsMap` — Force-directed SVG graph connecting 25 virtual AI tools to skills for AI-exposed tasks. Click nodes for detail panel. Tool sizes scale by task coverage.
+- `ai-tools.ts` — Virtual AI tools layer: 25 tools across 8 categories (generation, analysis, automation, research, communication, design, domain_specific, coding). Maps tool→skill relationships for occupation-specific tool matching.
 - `DonutChart` — SVG donut with 5 category segments (standalone, also inlined in OccupationDashboard)
 - `SkillTaskExplorer` — Unified skill-task linking (superseded by OccupationDashboard but kept)
-- `SectorComparison` — Stacked bar comparing occupation vs sector average (standalone, also inlined in OccupationDashboard)
-- `InsightCards` — Dynamic recommendation cards based on profile (no longer used in dashboard view)
-- `PersonalizedResults` — Side-by-side typical vs personal profile (no longer used in dashboard view)
 - `OccupationSearch` — Type-ahead search across 522 occupations
 
 ## Sector Averages (pre-computed from occupations_summary)
