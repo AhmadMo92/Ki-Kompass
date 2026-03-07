@@ -78,10 +78,10 @@ function DashboardSnapshot() {
     { label: "Technical", pct: 0.55 },
   ];
 
-  const radarSize = 120;
+  const radarSize = 160;
   const radarCx = radarSize / 2;
   const radarCy = radarSize / 2;
-  const radarR = radarSize * 0.36;
+  const radarR = radarSize * 0.34;
 
   const radarPath = radarPoints.map((p, i) => {
     const angle = (i / radarPoints.length) * Math.PI * 2 - Math.PI / 2;
@@ -106,11 +106,25 @@ function DashboardSnapshot() {
   return (
     <div className="relative">
       <div className="bg-white/95 backdrop-blur-xl border border-slate-100 rounded-3xl shadow-2xl shadow-violet-100/40 overflow-hidden">
-        <div className="grid grid-cols-3 gap-0">
-          <div className="p-4 border-r border-slate-100/80">
-            <div className="text-[9px] uppercase tracking-wider text-slate-400 font-semibold mb-2">Task Breakdown</div>
-            <div className="flex items-center justify-center mb-2">
-              <svg viewBox="0 0 80 80" className="w-16 h-16">
+        <div className="grid grid-cols-4 gap-3 p-5 pb-3">
+          {[
+            { label: "Tasks", value: "5,885", color: "#6366F1" },
+            { label: "Skills", value: "118", color: "#0891B2" },
+            { label: "AI Tools", value: "25", color: "#7C3AED" },
+            { label: "Sectors", value: "7", color: "#10B981" },
+          ].map((stat, i) => (
+            <div key={i} className="bg-slate-50 rounded-2xl p-3 text-center">
+              <div className="text-xl font-bold" style={{ color: stat.color }}>{stat.value}</div>
+              <div className="text-[10px] text-slate-400 font-medium mt-0.5">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-3 gap-0 border-t border-slate-100/60">
+          <div className="p-5 border-r border-slate-100/80">
+            <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-3">Task Breakdown</div>
+            <div className="flex items-center justify-center mb-3">
+              <svg viewBox="0 0 100 100" className="w-24 h-24">
                 {(() => {
                   let cum = 0;
                   return dummyDist.map((d, i) => {
@@ -119,8 +133,8 @@ function DashboardSnapshot() {
                     const startAngle = (start / 100) * Math.PI * 2 - Math.PI / 2;
                     const endAngle = (cum / 100) * Math.PI * 2 - Math.PI / 2;
                     const large = d.pct > 50 ? 1 : 0;
-                    const r = 32;
-                    const cx = 40, cy = 40;
+                    const r = 40;
+                    const cx = 50, cy = 50;
                     const x1 = cx + r * Math.cos(startAngle);
                     const y1 = cy + r * Math.sin(startAngle);
                     const x2 = cx + r * Math.cos(endAngle);
@@ -131,19 +145,19 @@ function DashboardSnapshot() {
                     );
                   });
                 })()}
-                <circle cx="40" cy="40" r="14" fill="white" />
+                <circle cx="50" cy="50" r="18" fill="white" />
               </svg>
             </div>
-            <div className="space-y-0.5">
+            <div className="space-y-1">
               {dummyDist.map(d => (
                 <div key={d.cat} className="flex items-center justify-between">
-                  <div className="flex items-center gap-1">
-                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: CATEGORIES[d.cat as keyof typeof CATEGORIES].color }} />
-                    <span className="text-[7px] text-slate-500 truncate max-w-[50px]">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 rounded-full" style={{ backgroundColor: CATEGORIES[d.cat as keyof typeof CATEGORIES].color }} />
+                    <span className="text-[9px] text-slate-500">
                       {CATEGORIES[d.cat as keyof typeof CATEGORIES].label_en}
                     </span>
                   </div>
-                  <span className="text-[7px] font-bold tabular-nums" style={{ color: CATEGORIES[d.cat as keyof typeof CATEGORIES].color }}>
+                  <span className="text-[9px] font-bold tabular-nums" style={{ color: CATEGORIES[d.cat as keyof typeof CATEGORIES].color }}>
                     {d.pct}%
                   </span>
                 </div>
@@ -151,9 +165,9 @@ function DashboardSnapshot() {
             </div>
           </div>
 
-          <div className="p-4 border-r border-slate-100/80">
-            <div className="text-[9px] uppercase tracking-wider text-slate-400 font-semibold mb-2">Skill Radar</div>
-            <svg viewBox={`0 0 ${radarSize} ${radarSize}`} className="w-full max-w-[120px] mx-auto">
+          <div className="p-5 border-r border-slate-100/80 flex flex-col items-center">
+            <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-3 self-start">Skill Radar</div>
+            <svg viewBox={`0 0 ${radarSize} ${radarSize}`} className="w-full max-w-[160px]">
               {[0.33, 0.66, 1].map(s => (
                 <polygon key={s} fill="none" stroke="#e2e8f0" strokeWidth={0.5}
                   points={radarPoints.map((_, i) => {
@@ -164,41 +178,55 @@ function DashboardSnapshot() {
               <path d={radarPath} fill="rgba(99,102,241,0.15)" stroke="#6366F1" strokeWidth={1.5} />
               {radarPoints.map((p, i) => {
                 const a = (i / radarPoints.length) * Math.PI * 2 - Math.PI / 2;
-                const lx = radarCx + (radarR + 12) * Math.cos(a);
-                const ly = radarCy + (radarR + 12) * Math.sin(a);
+                const px = radarCx + radarR * p.pct * Math.cos(a);
+                const py = radarCy + radarR * p.pct * Math.sin(a);
+                const lx = radarCx + (radarR + 16) * Math.cos(a);
+                const ly = radarCy + (radarR + 16) * Math.sin(a);
                 return (
-                  <text key={i} x={lx} y={ly} textAnchor="middle" dominantBaseline="middle"
-                    fontSize={5.5} fill="#94a3b8" fontWeight={500}>
-                    {p.label}
-                  </text>
+                  <g key={i}>
+                    <circle cx={px} cy={py} r={2.5} fill="#6366F1" />
+                    <text x={lx} y={ly} textAnchor="middle" dominantBaseline="middle"
+                      fontSize={7} fill="#64748b" fontWeight={500}>
+                      {p.label}
+                    </text>
+                  </g>
                 );
               })}
             </svg>
           </div>
 
-          <div className="p-4">
-            <div className="text-[9px] uppercase tracking-wider text-slate-400 font-semibold mb-2">AI Tools Map</div>
-            <svg viewBox="0 0 110 100" className="w-full">
+          <div className="p-5 flex flex-col">
+            <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-3">AI Tools Map</div>
+            <svg viewBox="0 0 120 110" className="w-full flex-1">
               {toolLinks.map(([a, b], i) => (
                 <line key={i}
                   x1={toolNodes[a].x} y1={toolNodes[a].y}
                   x2={toolNodes[b].x} y2={toolNodes[b].y}
-                  stroke="#e2e8f0" strokeWidth={0.8} opacity={0.5} />
+                  stroke="#cbd5e1" strokeWidth={1} opacity={0.4} />
               ))}
               {toolNodes.map((n, i) => (
                 <g key={i}>
-                  <circle cx={n.x} cy={n.y} r={n.r} fill={n.color} opacity={0.85} />
-                  <text x={n.x} y={n.y + 0.5} textAnchor="middle" dominantBaseline="middle" fontSize={n.r * 0.8}>
+                  <circle cx={n.x} cy={n.y} r={n.r + 1} fill={n.color} opacity={0.85} />
+                  <text x={n.x} y={n.y + 0.5} textAnchor="middle" dominantBaseline="middle" fontSize={n.r * 0.85}>
                     {n.icon}
                   </text>
                 </g>
+              ))}
+              {[
+                { x: 45, y: 38, r: 3, color: "#94a3b8" },
+                { x: 70, y: 42, r: 3, color: "#94a3b8" },
+                { x: 35, y: 55, r: 2.5, color: "#94a3b8" },
+                { x: 75, y: 65, r: 2.5, color: "#94a3b8" },
+                { x: 50, y: 70, r: 3, color: "#94a3b8" },
+              ].map((sk, i) => (
+                <circle key={`sk-${i}`} cx={sk.x} cy={sk.y} r={sk.r} fill={sk.color} opacity={0.4} />
               ))}
             </svg>
           </div>
         </div>
 
-        <div className="px-4 py-2 bg-slate-50/60 border-t border-slate-100/60">
-          <div className="flex h-3 rounded-full overflow-hidden">
+        <div className="px-5 py-2.5 bg-slate-50/60 border-t border-slate-100/60">
+          <div className="flex h-3.5 rounded-full overflow-hidden">
             {dummyDist.map(d => (
               <div key={d.cat} className="h-full"
                 style={{ width: `${d.pct}%`, backgroundColor: CATEGORIES[d.cat as keyof typeof CATEGORIES].color }} />
@@ -206,8 +234,8 @@ function DashboardSnapshot() {
           </div>
         </div>
       </div>
-      <div className="absolute -bottom-3 -right-3 w-20 h-20 bg-violet-100 rounded-full blur-2xl opacity-50" />
-      <div className="absolute -top-3 -left-3 w-16 h-16 bg-indigo-100 rounded-full blur-2xl opacity-50" />
+      <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-violet-100 rounded-full blur-2xl opacity-50" />
+      <div className="absolute -top-4 -left-4 w-20 h-20 bg-indigo-100 rounded-full blur-2xl opacity-50" />
     </div>
   );
 }
