@@ -11,6 +11,7 @@ import {
   Brain, X, Zap, Building2, RotateCcw,
   Sparkles, ChevronDown, ChevronUp
 } from "lucide-react";
+import { AIToolsMap } from "./AIToolsMap";
 
 interface OccupationDashboardProps {
   occupationKey: string;
@@ -645,6 +646,8 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
           </div>
         </div>
       </div>
+
+      <AIToolsMap tasks={occupation.tasks} language={language} />
     </div>
   );
 }
