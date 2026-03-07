@@ -6,6 +6,7 @@ import { TaskList } from "@/components/role-descriptor/TaskList";
 import { SectorComparison } from "@/components/role-descriptor/SectorComparison";
 import { InsightCards } from "@/components/role-descriptor/InsightCards";
 import { PersonalizedResults } from "@/components/role-descriptor/PersonalizedResults";
+import { SkillProfile } from "@/components/role-descriptor/SkillProfile";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
@@ -77,7 +78,7 @@ export default function Beruf() {
           <p className="text-muted-foreground flex items-center gap-2 mt-1">
             <Building2 className="w-4 h-4" />
             {occupation.sector}
-            {occupation.kldb2010 && <span className="text-xs">• KldB {occupation.kldb2010}</span>}
+            
             <span className="text-xs">• {occupation.summary.total} {language === "de" ? "Aufgaben" : "tasks"}</span>
           </p>
         </div>
@@ -158,6 +159,8 @@ export default function Beruf() {
             onReset={() => setShowPersonalized(false)}
           />
         )}
+
+        <SkillProfile occupationKey={key} language={language} />
 
         <SectorComparison
           occupationPercentages={displayPercentages}

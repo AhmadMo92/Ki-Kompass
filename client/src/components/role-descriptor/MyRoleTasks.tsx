@@ -13,6 +13,7 @@ import {
   occupations, getOccupation, calculatePercentages, calculateFromTasks,
   CATEGORIES, CATEGORY_ORDER, CategoryLabel, searchTasks, TaskItem
 } from "@/lib/data";
+import { SkillProfile } from "./SkillProfile";
 import {
   Sparkles, ArrowRight, RotateCcw, Languages, Building2, Target, Info, Search
 } from "lucide-react";
@@ -83,7 +84,7 @@ export function MyRoleTasks() {
 
   const handleAddCustomTask = (task: TaskItem & { occupationKey: string; occupationDe: string }) => {
     if (customTasks.length >= 12) return;
-    setCustomTasks(prev => [...prev, { id: task.id, text_de: task.text_de, text_en: task.text_en, label: task.label, score: task.score, is_regulated: task.is_regulated }]);
+    setCustomTasks(prev => [...prev, { id: task.id, text_de: task.text_de, text_en: task.text_en, label: task.label, score: task.score, skills: task.skills }]);
     setCustomSearchQuery("");
     setShowCustomDropdown(false);
   };
@@ -167,7 +168,7 @@ export function MyRoleTasks() {
                         </h4>
                         <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
                           <Building2 className="w-3 h-3" /> {occupation.sector}
-                          {occupation.kldb2010 && <span className="text-xs ml-2">KldB: {occupation.kldb2010}</span>}
+                          
                         </p>
                       </div>
                       <Badge className="text-xs bg-slate-100 text-slate-600">
@@ -226,7 +227,7 @@ export function MyRoleTasks() {
                   <p className="text-muted-foreground flex items-center gap-2 mt-1">
                     <Building2 className="w-4 h-4" />
                     {occupation.sector}
-                    {occupation.kldb2010 && <span className="text-xs">• KldB {occupation.kldb2010}</span>}
+                    
                     <span className="text-xs">• {occupation.summary.total} {language === "de" ? "Aufgaben" : "tasks"}</span>
                   </p>
                 </div>
@@ -386,6 +387,8 @@ export function MyRoleTasks() {
                   onReset={() => setShowPersonalized(false)}
                 />
               )}
+
+              <SkillProfile occupationKey={selectedKey} language={language} />
 
               <SectorComparison
                 occupationPercentages={showPersonalized ? personalPercentages : typicalPercentages}

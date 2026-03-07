@@ -1,6 +1,9 @@
 import occupationsData from "./occupations.json";
+import skillsData from "./skills.json";
 
 export type CategoryLabel = "automatable" | "high_ai_potential" | "sensitive" | "ai_assisted" | "stays_with_you";
+
+export type SkillCategory = "cognitive" | "social" | "digital" | "operational" | "domain" | "technical";
 
 export interface TaskItem {
   id: string;
@@ -8,7 +11,15 @@ export interface TaskItem {
   text_en: string;
   label: CategoryLabel;
   score: number;
-  is_regulated: boolean;
+  skills: string[];
+}
+
+export interface SkillInfo {
+  name_en: string;
+  name_de: string;
+  definition_en: string;
+  definition_de: string;
+  category: SkillCategory;
 }
 
 export interface OccupationSummary {
@@ -23,12 +34,12 @@ export interface OccupationSummary {
 export interface Occupation {
   occupation_de: string;
   sector: string;
-  kldb2010: string;
   tasks: TaskItem[];
   summary: OccupationSummary;
 }
 
 export const occupations: Record<string, Occupation> = occupationsData as Record<string, Occupation>;
+export const skills: Record<string, SkillInfo> = skillsData as Record<string, SkillInfo>;
 
 export const CATEGORIES: Record<CategoryLabel, {
   label_de: string;
@@ -92,18 +103,27 @@ export const CATEGORIES: Record<CategoryLabel, {
   }
 };
 
+export const SKILL_CATEGORY_META: Record<SkillCategory, { label_en: string; label_de: string; color: string }> = {
+  cognitive: { label_en: "Cognitive", label_de: "Kognitiv", color: "#1E88E5" },
+  social: { label_en: "Social", label_de: "Sozial", color: "#43A047" },
+  digital: { label_en: "Digital", label_de: "Digital", color: "#7B1FA2" },
+  operational: { label_en: "Operational", label_de: "Operativ", color: "#F57C00" },
+  domain: { label_en: "Domain", label_de: "Fachlich", color: "#00897B" },
+  technical: { label_en: "Technical", label_de: "Technisch", color: "#546E7A" },
+};
+
 export const CATEGORY_ORDER: CategoryLabel[] = [
   "automatable", "high_ai_potential", "sensitive", "ai_assisted", "stays_with_you"
 ];
 
 export const SECTOR_AVERAGES: Record<string, Record<CategoryLabel, number>> = {
-  tech:       { automatable: 0.11, high_ai_potential: 0.28, sensitive: 0.00, ai_assisted: 0.41, stays_with_you: 0.20 },
-  health:     { automatable: 0.05, high_ai_potential: 0.09, sensitive: 0.05, ai_assisted: 0.28, stays_with_you: 0.53 },
-  finance:    { automatable: 0.09, high_ai_potential: 0.20, sensitive: 0.07, ai_assisted: 0.39, stays_with_you: 0.25 },
-  law:        { automatable: 0.05, high_ai_potential: 0.13, sensitive: 0.10, ai_assisted: 0.37, stays_with_you: 0.35 },
-  marketing:  { automatable: 0.05, high_ai_potential: 0.22, sensitive: 0.00, ai_assisted: 0.50, stays_with_you: 0.22 },
-  management: { automatable: 0.02, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.50, stays_with_you: 0.36 },
-  other:      { automatable: 0.04, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.43, stays_with_you: 0.41 },
+  tech:       { automatable: 0.11, high_ai_potential: 0.28, sensitive: 0.00, ai_assisted: 0.43, stays_with_you: 0.18 },
+  health:     { automatable: 0.05, high_ai_potential: 0.09, sensitive: 0.05, ai_assisted: 0.31, stays_with_you: 0.50 },
+  finance:    { automatable: 0.09, high_ai_potential: 0.20, sensitive: 0.07, ai_assisted: 0.41, stays_with_you: 0.23 },
+  law:        { automatable: 0.05, high_ai_potential: 0.13, sensitive: 0.10, ai_assisted: 0.39, stays_with_you: 0.33 },
+  marketing:  { automatable: 0.05, high_ai_potential: 0.22, sensitive: 0.00, ai_assisted: 0.53, stays_with_you: 0.19 },
+  management: { automatable: 0.02, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.57, stays_with_you: 0.29 },
+  other:      { automatable: 0.04, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.46, stays_with_you: 0.38 },
 };
 
 export function getOccupationList(): { key: string; name_en: string; name_de: string; sector: string }[] {
@@ -117,6 +137,36 @@ export function getOccupationList(): { key: string; name_en: string; name_de: st
 
 export function getOccupation(key: string): Occupation | undefined {
   return occupations[key];
+}
+
+export function getSkill(skillId: string): SkillInfo | undefined {
+  return skills[skillId];
+}
+
+export function getOccupationSkillProfile(occupationKey: string): { skill: SkillInfo; skillId: string; count: number; byLabel: Record<CategoryLabel, number> }[] {
+  const occ = occupations[occupationKey];
+  if (!occ) return [];
+
+  const skillCounts: Record<string, { count: number; byLabel: Record<CategoryLabel, number> }> = {};
+  for (const task of occ.tasks) {
+    for (const sid of task.skills) {
+      if (!skillCounts[sid]) {
+        skillCounts[sid] = { count: 0, byLabel: { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, stays_with_you: 0 } };
+      }
+      skillCounts[sid].count++;
+      skillCounts[sid].byLabel[task.label]++;
+    }
+  }
+
+  return Object.entries(skillCounts)
+    .map(([sid, data]) => ({
+      skillId: sid,
+      skill: skills[sid],
+      count: data.count,
+      byLabel: data.byLabel,
+    }))
+    .filter(s => s.skill)
+    .sort((a, b) => b.count - a.count);
 }
 
 export function searchOccupations(query: string, language: "en" | "de" = "de", limit = 30): { key: string; name_en: string; name_de: string; sector: string }[] {
@@ -217,4 +267,4 @@ export const HERO_OCCUPATIONS = [
   "Data Scientist",
 ];
 
-console.log(`[KI Kompass] Loaded ${Object.keys(occupations).length} occupations with 5-category AI exposure scores`);
+console.log(`[KI Kompass] Loaded ${Object.keys(occupations).length} occupations, ${Object.keys(skills).length} skills`);

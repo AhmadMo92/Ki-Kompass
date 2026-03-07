@@ -1,12 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const csvPath = path.join(__dirname, '..', 'attached_assets', 'scored_tasks_v1_4_FINAL_(3)_1772803864419.csv');
-const outputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'occupations.json');
+const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_replit_1772870922238.csv');
+const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary_1772870916961.csv');
+const skillsVocabPath = path.join(__dirname, '..', 'attached_assets', 'skills_vocabulary_v0_(1)_1772870913053.csv');
+const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_production_1772870970135.csv');
 
-const raw = fs.readFileSync(csvPath, 'utf-8');
-const lines = raw.split('\n').filter(l => l.trim());
-const headerLine = lines[0];
+const occupationsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'occupations.json');
+const skillsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'skills.json');
 
 function parseCSVLine(line) {
   const result = [];
@@ -32,115 +33,102 @@ function parseCSVLine(line) {
   return result;
 }
 
-const headers = parseCSVLine(headerLine);
-const colIndex = {};
-headers.forEach((h, i) => colIndex[h.trim()] = i);
+function readCSV(filepath) {
+  const raw = fs.readFileSync(filepath, 'utf-8');
+  const lines = raw.split('\n').filter(l => l.trim());
+  const headers = parseCSVLine(lines[0]);
+  const ci = {};
+  headers.forEach((h, i) => ci[h.trim()] = i);
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const cols = parseCSVLine(lines[i]);
+    if (cols.length < 3) continue;
+    const row = {};
+    for (const [name, idx] of Object.entries(ci)) {
+      row[name] = cols[idx] || '';
+    }
+    rows.push(row);
+  }
+  return rows;
+}
+
+const tasks = readCSV(tasksPath);
+const summaryRows = readCSV(summaryPath);
+const skillsVocab = readCSV(skillsVocabPath);
+const taskSkillLinks = readCSV(taskSkillLinksPath);
+
+const taskSkillMap = {};
+for (const link of taskSkillLinks) {
+  const tid = link.task_id;
+  if (!taskSkillMap[tid]) taskSkillMap[tid] = [];
+  taskSkillMap[tid].push({
+    skill_id: link.skill_id,
+    relevance: parseFloat(link.relevance) || 0,
+    rank: parseInt(link.rank) || 0,
+  });
+}
+for (const tid of Object.keys(taskSkillMap)) {
+  taskSkillMap[tid].sort((a, b) => a.rank - b.rank);
+}
+
+const summaryMap = {};
+for (const row of summaryRows) {
+  summaryMap[row.occupation] = {
+    occupation_de: row.occupation_de,
+    sector: row.sector,
+    berufenet_id: row.berufenet_id,
+    n_tasks: parseInt(row.n_tasks) || 0,
+    stays_with_you: parseInt(row.stays_with_you) || 0,
+    ai_assisted: parseInt(row.ai_assisted) || 0,
+    high_ai_potential: parseInt(row.high_ai_potential) || 0,
+    sensitive: parseInt(row.sensitive) || 0,
+    automatable: parseInt(row.automatable) || 0,
+  };
+}
 
 const occupations = {};
 
-for (let i = 1; i < lines.length; i++) {
-  const cols = parseCSVLine(lines[i]);
-  if (cols.length < 10) continue;
+for (const task of tasks) {
+  const occupation = task.occupation;
+  const label = task.label_5cat;
+  if (!occupation || !label) continue;
 
-  const occupation = cols[colIndex['occupation']];
-  const occupation_de = cols[colIndex['occupation_de']];
-  const sector = cols[colIndex['sector']];
-  const kldb2010 = cols[colIndex['kldb2010']];
-  const task_id = cols[colIndex['task_id']];
-  const paraphrase_de = cols[colIndex['paraphrase_de']];
-  const paraphrase_en = cols[colIndex['paraphrase_en']];
-  const label_5cat = cols[colIndex['label_5cat']];
-  const score_sum = parseInt(cols[colIndex['score_sum']] || '0', 10);
-  const is_regulated = cols[colIndex['is_regulated']] === 'True';
-  const confidence = parseFloat(cols[colIndex['confidence']] || '0');
-
-  if (!occupation || !label_5cat) continue;
-
-  const INTERPERSONAL_PATTERNS = [
-    /\blead\b(?!.*\b(?:to|into)\b)/i,
-    /\bleading\b/i,
-    /\btrain\b.*\b(?:employee|staff|team|personnel|colleague|worker)\b/i,
-    /\bmentor/i,
-    /\bcoach(?:ing)?\b/i,
-    /\bnegotiat/i,
-    /\bmediat/i,
-    /\bmotivat/i,
-    /\bsupervis/i,
-    /\bcounsel\b/i,
-    /\bmanage\b.*\b(?:team|staff|employee|personnel)\b/i,
-    /\b(?:resolve|handle)\b.*\bconflict/i,
-    /\bconduct\b.*\b(?:interview|meeting|workshop|seminar|training)\b/i,
-    /\bwork with\b/i,
-    /\bcollaborat/i,
-    /\bcooperat/i,
-    /\bcoordinat/i,
-    /\bconsult.*\bwith\b/i,
-    /\bliaise\b/i,
-    /\badvise\b/i,
-    /\badvis(?:ing|ory)\b/i,
-    /\badvice\b/i,
-    /\binstruct\b/i,
-    /\bteach(?:ing)?\s+(?:student|pupil|employee|staff|manager|professional|trainee|member|child|people|lesson|school|class|course|practical|religious|expertise|content|specific|subject|art|overarching|community)\b/i,
-    /\bteach\b(?!.*\b(?:material|concept|method|book|aid|staff|er\b))/i,
-    /\beducat(?:e|ing)\b/i,
-    /\bpresent\b.*\b(?:to|for|result|finding|client|customer|management|stakeholder)\b/i,
-    /\bexplain\b.*\b(?:to|client|customer|patient)\b/i,
-    /\binform\b.*\b(?:client|customer|patient|staff|employee|team|management|supervis|stakeholder|partner|member|donor|leader|area management)\b/i,
-    /\bdiscuss\b/i,
-    /\bcommunicat(?:e|ing)\b/i,
-    /\bguide\b.*\b(?:client|customer|patient|student|visitor|group|participant|team)\b/i,
-    /\bassist\b.*\b(?:client|customer|patient|student|child|resident)\b/i,
-    /\brecruit\b.*\b(?:volunteer|participant|staff|employee|member|candidate|people)\b/i,
-    /\bhir(?:e|ing)\b/i,
-    /\binterview\b.*\b(?:candidate|applicant|participant|client|witness)\b/i,
-    /\bdelegate\b/i,
-    /\bassign\b.*\b(?:task|work|dut)/i,
-    /\brepresent\b.*\b(?:company|firm|organization|institution|facility|community|department|kindergarten)\b/i,
-    /\bacquir.*\bcustomer/i,
-    /\bconvince\b/i,
-    /\b(?:conduct|organize|carry out|prepare and (?:conduct|give))\b.*\b(?:event|exam|lecture|seminar|session|workshop|training|course|class|lesson|performance|show)\b/i,
-    /\b(?:talk|call)\b.*\b(?:client|customer|company|employer|people|patient)\b/i,
-    /\bmanage\b.*\b(?:escalation|incident|resolution)\b.*\b(?:team|group)\b/i,
-    /\b(?:analyze|determine|assess|identify)\b.*\b(?:customer|client)\s+(?:need|requirement|demand|wish)/i,
-    /\b(?:customer|client)\s+(?:need|wish|complaint|request|concern|feedback)/i,
-    /\b(?:sell|offer|market)\b.*\b(?:product|service|solution|insurance|contract|policy|membership)\b/i,
-  ];
-  const taskTextEn = paraphrase_en || cols[colIndex['task_text']] || '';
-  const effectiveLabel = (label_5cat === 'ai_assisted' && INTERPERSONAL_PATTERNS.some(p => p.test(taskTextEn)))
-    ? 'stays_with_you'
-    : label_5cat;
+  const score_sum = (parseInt(task.SPEC)||0) + (parseInt(task.VERIF)||0) + (parseInt(task.STD)||0);
 
   if (!occupations[occupation]) {
+    const sum = summaryMap[occupation];
     occupations[occupation] = {
-      occupation_de: occupation_de,
-      sector: sector,
-      kldb2010: kldb2010,
+      occupation_de: task.occupation_de,
+      sector: task.sector,
       tasks: [],
-      summary: {
+      summary: sum ? {
+        total: sum.n_tasks,
+        automatable: sum.automatable,
+        high_ai_potential: sum.high_ai_potential,
+        sensitive: sum.sensitive,
+        ai_assisted: sum.ai_assisted,
+        stays_with_you: sum.stays_with_you,
+      } : {
         total: 0,
         automatable: 0,
         high_ai_potential: 0,
         sensitive: 0,
         ai_assisted: 0,
-        stays_with_you: 0
+        stays_with_you: 0,
       }
     };
   }
 
-  const occ = occupations[occupation];
-  occ.tasks.push({
-    id: task_id,
-    text_de: paraphrase_de,
-    text_en: paraphrase_en,
-    label: effectiveLabel,
-    score: score_sum,
-    is_regulated: is_regulated
-  });
+  const skills = (taskSkillMap[task.task_id] || []).map(s => s.skill_id);
 
-  occ.summary.total++;
-  if (occ.summary[effectiveLabel] !== undefined) {
-    occ.summary[effectiveLabel]++;
-  }
+  occupations[occupation].tasks.push({
+    id: task.task_id,
+    text_de: task.paraphrase_de,
+    text_en: task.task_text,
+    label: label,
+    score: score_sum,
+    skills: skills,
+  });
 }
 
 for (const key of Object.keys(occupations)) {
@@ -152,7 +140,20 @@ for (const key of Object.keys(occupations)) {
   });
 }
 
-fs.writeFileSync(outputPath, JSON.stringify(occupations, null, 2), 'utf-8');
+fs.writeFileSync(occupationsOutputPath, JSON.stringify(occupations, null, 2), 'utf-8');
+
+const skillsData = {};
+for (const skill of skillsVocab) {
+  skillsData[skill.skill_id] = {
+    name_en: skill.skill_name_en,
+    name_de: skill.skill_name_de,
+    definition_en: skill.definition_en,
+    definition_de: skill.definition_de,
+    category: skill.skill_category,
+  };
+}
+
+fs.writeFileSync(skillsOutputPath, JSON.stringify(skillsData, null, 2), 'utf-8');
 
 const occCount = Object.keys(occupations).length;
 let taskCount = 0;
@@ -161,6 +162,7 @@ for (const occ of Object.values(occupations)) {
 }
 
 console.log(`Generated occupations.json: ${occCount} occupations, ${taskCount} tasks`);
+console.log(`Generated skills.json: ${Object.keys(skillsData).length} skills`);
 
 const dist = { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, stays_with_you: 0 };
 for (const occ of Object.values(occupations)) {
@@ -173,3 +175,13 @@ const total = Object.values(dist).reduce((a, b) => a + b, 0);
 for (const cat of Object.keys(dist)) {
   console.log(`  ${cat}: ${((dist[cat] / total) * 100).toFixed(1)}%`);
 }
+
+let linkedTasks = 0;
+let totalSkillLinks = 0;
+for (const occ of Object.values(occupations)) {
+  for (const t of occ.tasks) {
+    if (t.skills.length > 0) linkedTasks++;
+    totalSkillLinks += t.skills.length;
+  }
+}
+console.log(`Skills: ${linkedTasks}/${taskCount} tasks linked, ${totalSkillLinks} total links`);

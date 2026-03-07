@@ -1,0 +1,828 @@
+{
+  "SK-COG-001": {
+    "name_en": "Critical Thinking",
+    "name_de": "Kritisches Denken",
+    "definition_en": "The ability to analyze information, evaluate evidence, and make reasoned judgments.",
+    "definition_de": "Die Fähigkeit, Informationen zu analysieren, Belege zu bewerten und begründete Urteile zu fällen.",
+    "category": "cognitive"
+  },
+  "SK-COG-002": {
+    "name_en": "Problem Solving",
+    "name_de": "Problemlösung",
+    "definition_en": "The ability to identify problems, evaluate options, and implement effective solutions.",
+    "definition_de": "Die Fähigkeit, Probleme zu erkennen, Optionen zu bewerten und wirksame Lösungen umzusetzen.",
+    "category": "cognitive"
+  },
+  "SK-COG-003": {
+    "name_en": "Planning & Organizing",
+    "name_de": "Planen und Organisieren",
+    "definition_en": "The ability to set priorities, structure tasks, and coordinate activities to meet objectives.",
+    "definition_de": "Die Fähigkeit, Prioritäten zu setzen, Aufgaben zu strukturieren und Aktivitäten zu koordinieren.",
+    "category": "cognitive"
+  },
+  "SK-COG-004": {
+    "name_en": "Decision Making",
+    "name_de": "Entscheidungsfindung",
+    "definition_en": "The ability to assess situations, weigh alternatives, and commit to a course of action.",
+    "definition_de": "Die Fähigkeit, Situationen einzuschätzen, Alternativen abzuwägen und sich für ein Vorgehen zu entscheiden.",
+    "category": "cognitive"
+  },
+  "SK-COG-005": {
+    "name_en": "Creative Thinking",
+    "name_de": "Kreatives Denken",
+    "definition_en": "The ability to generate novel ideas, approaches, or solutions beyond conventional patterns.",
+    "definition_de": "Die Fähigkeit, neuartige Ideen, Ansätze oder Lösungen jenseits konventioneller Muster zu entwickeln.",
+    "category": "cognitive"
+  },
+  "SK-COG-006": {
+    "name_en": "Data Analysis & Interpretation",
+    "name_de": "Datenanalyse und -auswertung",
+    "definition_en": "The ability to collect, examine, and interpret quantitative or qualitative data to draw conclusions.",
+    "definition_de": "Die Fähigkeit, quantitative oder qualitative Daten zu erheben, zu untersuchen und zu interpretieren.",
+    "category": "cognitive"
+  },
+  "SK-COG-007": {
+    "name_en": "Financial Analysis",
+    "name_de": "Finanzanalyse",
+    "definition_en": "The ability to analyze financial statements, economic data, and business metrics.",
+    "definition_de": "Die Fähigkeit, Finanzberichte, Wirtschaftsdaten und Geschäftskennzahlen zu analysieren.",
+    "category": "cognitive"
+  },
+  "SK-COG-008": {
+    "name_en": "Research & Investigation",
+    "name_de": "Recherche und Untersuchung",
+    "definition_en": "The ability to systematically gather, evaluate, and synthesize information from multiple sources.",
+    "definition_de": "Die Fähigkeit, systematisch Informationen aus verschiedenen Quellen zu sammeln, zu bewerten und zusammenzuführen.",
+    "category": "cognitive"
+  },
+  "SK-COG-009": {
+    "name_en": "Strategic Thinking",
+    "name_de": "Strategisches Denken",
+    "definition_en": "The ability to develop long-term plans, anticipate trends, and align actions with overarching goals.",
+    "definition_de": "Die Fähigkeit, langfristige Pläne zu entwickeln, Trends vorauszusehen und Handlungen an übergeordneten Zielen auszurichten.",
+    "category": "cognitive"
+  },
+  "SK-COG-010": {
+    "name_en": "Risk Assessment",
+    "name_de": "Risikobewertung",
+    "definition_en": "The ability to identify, evaluate, and prioritize risks and develop mitigation strategies.",
+    "definition_de": "Die Fähigkeit, Risiken zu erkennen, zu bewerten, zu priorisieren und Gegenmaßnahmen zu entwickeln.",
+    "category": "cognitive"
+  },
+  "SK-COG-011": {
+    "name_en": "Business Analysis",
+    "name_de": "Geschäftsanalyse",
+    "definition_en": "The ability to examine business processes, identify improvement opportunities, and recommend changes.",
+    "definition_de": "Die Fähigkeit, Geschäftsprozesse zu untersuchen, Verbesserungspotenziale zu identifizieren und Änderungen vorzuschlagen.",
+    "category": "cognitive"
+  },
+  "SK-COG-012": {
+    "name_en": "Resource Management",
+    "name_de": "Ressourcenmanagement",
+    "definition_en": "The ability to allocate and control financial, material, and human resources effectively.",
+    "definition_de": "Die Fähigkeit, finanzielle, materielle und personelle Ressourcen effektiv zuzuweisen und zu steuern.",
+    "category": "cognitive"
+  },
+  "SK-COG-013": {
+    "name_en": "Evaluating Processes & Systems",
+    "name_de": "Prozesse und Systeme bewerten",
+    "definition_en": "The ability to assess the performance, efficiency, and effectiveness of systems, programs, or processes.",
+    "definition_de": "Die Fähigkeit, die Leistung, Effizienz und Wirksamkeit von Systemen, Programmen oder Prozessen zu beurteilen.",
+    "category": "cognitive"
+  },
+  "SK-COG-014": {
+    "name_en": "Information Management",
+    "name_de": "Informationsmanagement",
+    "definition_en": "The ability to organize, store, retrieve, and maintain information for operational and strategic use.",
+    "definition_de": "Die Fähigkeit, Informationen für operative und strategische Zwecke zu organisieren, zu speichern, abzurufen und zu pflegen.",
+    "category": "cognitive"
+  },
+  "SK-COG-015": {
+    "name_en": "Continuous Learning",
+    "name_de": "Kontinuierliches Lernen",
+    "definition_en": "The ability and willingness to acquire new knowledge and skills throughout ones career.",
+    "definition_de": "Die Fähigkeit und Bereitschaft, sich während der gesamten beruflichen Laufbahn neues Wissen und neue Fähigkeiten anzueignen.",
+    "category": "cognitive"
+  },
+  "SK-COG-016": {
+    "name_en": "Working with Numbers",
+    "name_de": "Arbeiten mit Zahlen",
+    "definition_en": "The ability to work with numbers, perform calculations, and interpret quantitative information.",
+    "definition_de": "Die Fähigkeit, mit Zahlen zu arbeiten, Berechnungen durchzuführen und quantitative Informationen zu interpretieren.",
+    "category": "cognitive"
+  },
+  "SK-COG-017": {
+    "name_en": "Budget & Financial Management",
+    "name_de": "Budget- und Finanzmanagement",
+    "definition_en": "The ability to plan, monitor, and control financial budgets and expenditures.",
+    "definition_de": "Die Fähigkeit, Finanzhaushalte und Ausgaben zu planen, zu überwachen und zu kontrollieren.",
+    "category": "cognitive"
+  },
+  "SK-COG-018": {
+    "name_en": "Change Management",
+    "name_de": "Veränderungsmanagement",
+    "definition_en": "The ability to plan, implement, and guide organizational change processes effectively.",
+    "definition_de": "Die Fähigkeit, organisatorische Veränderungsprozesse effektiv zu planen, umzusetzen und zu begleiten.",
+    "category": "cognitive"
+  },
+  "SK-COG-019": {
+    "name_en": "Taking Initiative",
+    "name_de": "Eigeninitiative zeigen",
+    "definition_en": "The ability to anticipate needs, identify opportunities, and take action without being prompted.",
+    "definition_de": "Die Fähigkeit, Bedürfnisse vorauszusehen, Chancen zu erkennen und eigenständig zu handeln.",
+    "category": "cognitive"
+  },
+  "SK-COG-020": {
+    "name_en": "Flexibility & Resilience",
+    "name_de": "Flexibilität und Belastbarkeit",
+    "definition_en": "The ability to cope with setbacks, adapt to changing circumstances, and maintain effectiveness under pressure.",
+    "definition_de": "Die Fähigkeit, mit Rückschlägen umzugehen, sich an veränderte Umstände anzupassen und unter Druck leistungsfähig zu bleiben.",
+    "category": "cognitive"
+  },
+  "SK-COG-021": {
+    "name_en": "Accuracy & Thoroughness",
+    "name_de": "Sorgfalt und Genauigkeit",
+    "definition_en": "The ability to perform tasks thoroughly, accurately, and with careful attention to quality.",
+    "definition_de": "Die Fähigkeit, Aufgaben gründlich, korrekt und mit besonderer Aufmerksamkeit für Qualität auszuführen.",
+    "category": "cognitive"
+  },
+  "SK-COG-022": {
+    "name_en": "Time Management",
+    "name_de": "Zeitmanagement",
+    "definition_en": "The ability to allocate time effectively, meet deadlines, and manage competing priorities.",
+    "definition_de": "Die Fähigkeit, Zeit effektiv einzuteilen, Fristen einzuhalten und konkurrierende Prioritäten zu bewältigen.",
+    "category": "cognitive"
+  },
+  "SK-DIG-001": {
+    "name_en": "Software Development",
+    "name_de": "Softwareentwicklung",
+    "definition_en": "The ability to design, write, test, and maintain software applications using programming languages.",
+    "definition_de": "Die Fähigkeit, Softwareanwendungen mithilfe von Programmiersprachen zu entwerfen, zu schreiben, zu testen und zu pflegen.",
+    "category": "digital"
+  },
+  "SK-DIG-002": {
+    "name_en": "Data Management & Databases",
+    "name_de": "Datenmanagement und Datenbanken",
+    "definition_en": "The ability to organize, store, query, and maintain structured data in database systems.",
+    "definition_de": "Die Fähigkeit, strukturierte Daten in Datenbanksystemen zu organisieren, zu speichern, abzufragen und zu pflegen.",
+    "category": "digital"
+  },
+  "SK-DIG-003": {
+    "name_en": "Data Visualization",
+    "name_de": "Datenvisualisierung",
+    "definition_en": "The ability to represent quantitative information in charts, graphs, and dashboards.",
+    "definition_de": "Die Fähigkeit, quantitative Informationen in Diagrammen, Grafiken und Dashboards darzustellen.",
+    "category": "digital"
+  },
+  "SK-DIG-004": {
+    "name_en": "IT Systems & Infrastructure",
+    "name_de": "IT-Systeme und Infrastruktur",
+    "definition_en": "The ability to set up, configure, and maintain computer systems, networks, and digital infrastructure.",
+    "definition_de": "Die Fähigkeit, Computersysteme, Netzwerke und digitale Infrastruktur einzurichten, zu konfigurieren und zu warten.",
+    "category": "digital"
+  },
+  "SK-DIG-005": {
+    "name_en": "Cybersecurity",
+    "name_de": "Cybersicherheit",
+    "definition_en": "The ability to protect digital systems, networks, and data from unauthorized access and threats.",
+    "definition_de": "Die Fähigkeit, digitale Systeme, Netzwerke und Daten vor unbefugtem Zugriff und Bedrohungen zu schützen.",
+    "category": "digital"
+  },
+  "SK-DIG-006": {
+    "name_en": "Digital Collaboration Tools",
+    "name_de": "Digitale Zusammenarbeit",
+    "definition_en": "The ability to use digital platforms and tools for communication, file sharing, and teamwork.",
+    "definition_de": "Die Fähigkeit, digitale Plattformen und Tools für Kommunikation, Datenaustausch und Teamarbeit zu nutzen.",
+    "category": "digital"
+  },
+  "SK-DIG-007": {
+    "name_en": "CAD & Technical Design",
+    "name_de": "CAD und technische Konstruktion",
+    "definition_en": "The ability to create technical drawings, models, and designs using computer-aided design software.",
+    "definition_de": "Die Fähigkeit, technische Zeichnungen, Modelle und Entwürfe mithilfe von CAD-Software zu erstellen.",
+    "category": "digital"
+  },
+  "SK-DIG-008": {
+    "name_en": "Digital Content Creation",
+    "name_de": "Digitale Inhaltserstellung",
+    "definition_en": "The ability to create and edit digital media including text, images, audio, and video.",
+    "definition_de": "Die Fähigkeit, digitale Medien wie Texte, Bilder, Audio und Video zu erstellen und zu bearbeiten.",
+    "category": "digital"
+  },
+  "SK-DIG-009": {
+    "name_en": "Office & Productivity Software",
+    "name_de": "Büro- und Produktivitätssoftware",
+    "definition_en": "The ability to use standard office applications for documents, spreadsheets, presentations, and email.",
+    "definition_de": "Die Fähigkeit, Standard-Büroanwendungen für Dokumente, Tabellen, Präsentationen und E-Mail zu nutzen.",
+    "category": "digital"
+  },
+  "SK-DIG-010": {
+    "name_en": "Digital Machine Control",
+    "name_de": "Digitale Maschinensteuerung",
+    "definition_en": "The ability to operate and program computer-controlled machinery and automation systems.",
+    "definition_de": "Die Fähigkeit, computergesteuerte Maschinen und Automatisierungssysteme zu bedienen und zu programmieren.",
+    "category": "digital"
+  },
+  "SK-DIG-011": {
+    "name_en": "IT Architecture & Design",
+    "name_de": "IT-Architektur und -Design",
+    "definition_en": "The ability to design, architect, and plan information and communication technology systems.",
+    "definition_de": "Die Fähigkeit, Informations- und Kommunikationssysteme zu konzipieren, zu entwerfen und zu planen.",
+    "category": "digital"
+  },
+  "SK-DIG-012": {
+    "name_en": "Prompt Engineering",
+    "name_de": "Prompt-Design",
+    "definition_en": "The ability to formulate effective instructions for AI language models to produce useful outputs.",
+    "definition_de": "Die Fähigkeit, effektive Anweisungen für KI-Sprachmodelle zu formulieren, um nützliche Ergebnisse zu erzielen.",
+    "category": "digital"
+  },
+  "SK-DIG-013": {
+    "name_en": "AI-Assisted Decision Making",
+    "name_de": "KI-gestützte Entscheidungsfindung",
+    "definition_en": "The ability to use AI tools and outputs to support and improve human decision-making processes.",
+    "definition_de": "Die Fähigkeit, KI-Tools und deren Ergebnisse zur Unterstützung und Verbesserung menschlicher Entscheidungsprozesse zu nutzen.",
+    "category": "digital"
+  },
+  "SK-DIG-014": {
+    "name_en": "Data Privacy & Digital Ethics",
+    "name_de": "Datenschutz und digitale Ethik",
+    "definition_en": "The ability to handle personal data responsibly and apply ethical principles to digital processes.",
+    "definition_de": "Die Fähigkeit, verantwortungsvoll mit personenbezogenen Daten umzugehen und ethische Grundsätze auf digitale Prozesse anzuwenden.",
+    "category": "digital"
+  },
+  "SK-DIG-015": {
+    "name_en": "Automation & Digital Workflows",
+    "name_de": "Automatisierung und digitale Abläufe",
+    "definition_en": "The ability to design, implement, and manage automated workflows using digital tools and platforms.",
+    "definition_de": "Die Fähigkeit, automatisierte Arbeitsabläufe mithilfe digitaler Tools und Plattformen zu konzipieren, umzusetzen und zu verwalten.",
+    "category": "digital"
+  },
+  "SK-DIG-016": {
+    "name_en": "AV & Media Technology",
+    "name_de": "AV- und Medientechnik",
+    "definition_en": "The ability to operate and manage audio-visual, broadcasting, and communication equipment.",
+    "definition_de": "Die Fähigkeit, audiovisuelle Geräte, Übertragungstechnik und Kommunikationsausrüstungen zu bedienen und zu verwalten.",
+    "category": "digital"
+  },
+  "SK-DIG-017": {
+    "name_en": "Data Entry & Digital Processing",
+    "name_de": "Dateneingabe und digitale Verarbeitung",
+    "definition_en": "The ability to enter, transform, and process information accurately in digital systems.",
+    "definition_de": "Die Fähigkeit, Informationen präzise in digitale Systeme einzugeben, umzuwandeln und zu verarbeiten.",
+    "category": "digital"
+  },
+  "SK-DIG-018": {
+    "name_en": "E-Commerce & Digital Marketing",
+    "name_de": "E-Commerce und digitales Marketing",
+    "definition_en": "The ability to use digital platforms for online sales, marketing campaigns, and customer engagement.",
+    "definition_de": "Die Fähigkeit, digitale Plattformen für Online-Verkauf, Marketingkampagnen und Kundenbindung zu nutzen.",
+    "category": "digital"
+  },
+  "SK-DOM-001": {
+    "name_en": "Legal Knowledge & Application",
+    "name_de": "Rechtskenntnisse und -anwendung",
+    "definition_en": "The ability to understand and apply legal frameworks, regulations, and contractual principles.",
+    "definition_de": "Die Fähigkeit, Rechtsrahmen, Vorschriften und vertragliche Grundsätze zu verstehen und anzuwenden.",
+    "category": "domain"
+  },
+  "SK-DOM-002": {
+    "name_en": "Regulatory Compliance",
+    "name_de": "Regulatorische Compliance",
+    "definition_en": "The ability to interpret, implement, and monitor compliance with industry and government regulations.",
+    "definition_de": "Die Fähigkeit, die Einhaltung branchenspezifischer und behördlicher Vorschriften zu interpretieren, umzusetzen und zu überwachen.",
+    "category": "domain"
+  },
+  "SK-DOM-003": {
+    "name_en": "Medical Diagnosis & Assessment",
+    "name_de": "Medizinische Diagnostik und Befundung",
+    "definition_en": "The ability to examine patients, interpret symptoms, and determine medical conditions.",
+    "definition_de": "Die Fähigkeit, Patienten zu untersuchen, Symptome zu interpretieren und medizinische Befunde zu erheben.",
+    "category": "domain"
+  },
+  "SK-DOM-004": {
+    "name_en": "Clinical Care & Treatment",
+    "name_de": "Klinische Versorgung und Behandlung",
+    "definition_en": "The ability to provide medical, nursing, or therapeutic treatment to patients.",
+    "definition_de": "Die Fähigkeit, medizinische, pflegerische oder therapeutische Behandlungen für Patienten durchzuführen.",
+    "category": "domain"
+  },
+  "SK-DOM-005": {
+    "name_en": "Financial Advisory",
+    "name_de": "Finanzberatung",
+    "definition_en": "The ability to provide expert guidance on investment, insurance, tax, and personal finance matters.",
+    "definition_de": "Die Fähigkeit, fachkundige Beratung zu Investitionen, Versicherungen, Steuern und persönlichen Finanzangelegenheiten zu bieten.",
+    "category": "domain"
+  },
+  "SK-DOM-006": {
+    "name_en": "Policy & Regulation Development",
+    "name_de": "Richtlinien- und Regelungsentwicklung",
+    "definition_en": "The ability to draft, evaluate, and implement organizational or government policies and procedures.",
+    "definition_de": "Die Fähigkeit, organisatorische oder staatliche Richtlinien und Verfahren zu entwerfen, zu bewerten und umzusetzen.",
+    "category": "domain"
+  },
+  "SK-DOM-007": {
+    "name_en": "Emergency & Crisis Management",
+    "name_de": "Notfall- und Krisenmanagement",
+    "definition_en": "The ability to plan for, respond to, and manage emergency situations and crisis events.",
+    "definition_de": "Die Fähigkeit, Notfallsituationen und Krisenereignisse zu planen, darauf zu reagieren und sie zu bewältigen.",
+    "category": "domain"
+  },
+  "SK-DOM-008": {
+    "name_en": "Education Program Design",
+    "name_de": "Bildungsprogramm-Gestaltung",
+    "definition_en": "The ability to develop curricula, training programs, and educational materials.",
+    "definition_de": "Die Fähigkeit, Lehrpläne, Schulungsprogramme und Bildungsmaterialien zu entwickeln.",
+    "category": "domain"
+  },
+  "SK-DOM-009": {
+    "name_en": "Security & Enforcement",
+    "name_de": "Sicherheit und Durchsetzung",
+    "definition_en": "The ability to maintain physical security, enforce rules, and protect people, property, or information.",
+    "definition_de": "Die Fähigkeit, die physische Sicherheit aufrechtzuerhalten, Regeln durchzusetzen und Menschen, Eigentum oder Informationen zu schützen.",
+    "category": "domain"
+  },
+  "SK-DOM-010": {
+    "name_en": "Public Administration",
+    "name_de": "Öffentliche Verwaltung",
+    "definition_en": "The ability to apply knowledge of public administration procedures, civic rights, and government processes.",
+    "definition_de": "Die Fähigkeit, Kenntnisse öffentlicher Verwaltungsverfahren, Bürgerrechte und staatlicher Prozesse anzuwenden.",
+    "category": "domain"
+  },
+  "SK-DOM-011": {
+    "name_en": "Health Promotion & Prevention",
+    "name_de": "Gesundheitsförderung und Prävention",
+    "definition_en": "The ability to develop and implement health education, prevention, and wellness programs.",
+    "definition_de": "Die Fähigkeit, Gesundheitsaufklärung, Prävention und Wohlergehensprogramme zu entwickeln und umzusetzen.",
+    "category": "domain"
+  },
+  "SK-DOM-012": {
+    "name_en": "Real Estate & Property Valuation",
+    "name_de": "Immobilien- und Grundstücksbewertung",
+    "definition_en": "The ability to assess the value of real estate, land, and property for commercial or legal purposes.",
+    "definition_de": "Die Fähigkeit, den Wert von Immobilien, Grundstücken und Liegenschaften für kommerzielle oder rechtliche Zwecke zu ermitteln.",
+    "category": "domain"
+  },
+  "SK-DOM-013": {
+    "name_en": "Therapeutic Interventions",
+    "name_de": "Therapeutische Interventionen",
+    "definition_en": "The ability to plan and deliver psychological, occupational, or physical therapy treatments.",
+    "definition_de": "Die Fähigkeit, psychologische, ergotherapeutische oder physiotherapeutische Behandlungen zu planen und durchzuführen.",
+    "category": "domain"
+  },
+  "SK-DOM-014": {
+    "name_en": "Forensic & Criminal Investigation",
+    "name_de": "Forensik und Kriminalermittlung",
+    "definition_en": "The ability to collect evidence, conduct investigations, and apply forensic methods.",
+    "definition_de": "Die Fähigkeit, Beweise zu sichern, Ermittlungen durchzuführen und forensische Methoden anzuwenden.",
+    "category": "domain"
+  },
+  "SK-DOM-015": {
+    "name_en": "Agricultural & Environmental Sciences",
+    "name_de": "Agrar- und Umweltwissenschaften",
+    "definition_en": "The ability to apply knowledge of agriculture, horticulture, forestry, or environmental science.",
+    "definition_de": "Die Fähigkeit, Kenntnisse in Landwirtschaft, Gartenbau, Forstwirtschaft oder Umweltwissenschaften anzuwenden.",
+    "category": "domain"
+  },
+  "SK-DOM-016": {
+    "name_en": "Personal Care & Wellness",
+    "name_de": "Körperpflege und Wohlbefinden",
+    "definition_en": "The ability to provide personal grooming, beauty treatments, and wellness services.",
+    "definition_de": "Die Fähigkeit, Körperpflege, Schönheitsbehandlungen und Wellnessdienstleistungen zu erbringen.",
+    "category": "domain"
+  },
+  "SK-DOM-017": {
+    "name_en": "Veterinary Care",
+    "name_de": "Veterinärmedizinische Versorgung",
+    "definition_en": "The ability to examine, diagnose, and treat animals for health conditions and injuries.",
+    "definition_de": "Die Fähigkeit, Tiere auf Gesundheitszustände und Verletzungen zu untersuchen, zu diagnostizieren und zu behandeln.",
+    "category": "domain"
+  },
+  "SK-OPS-001": {
+    "name_en": "Quality Control & Inspection",
+    "name_de": "Qualitätskontrolle und Inspektion",
+    "definition_en": "The ability to inspect products, processes, or services against defined standards and identify defects.",
+    "definition_de": "Die Fähigkeit, Produkte, Prozesse oder Dienstleistungen anhand definierter Standards zu prüfen und Mängel zu erkennen.",
+    "category": "operational"
+  },
+  "SK-OPS-002": {
+    "name_en": "Operations Management",
+    "name_de": "Betriebsmanagement",
+    "definition_en": "The ability to plan, direct, and optimize day-to-day operational activities and workflows.",
+    "definition_de": "Die Fähigkeit, tägliche betriebliche Aktivitäten und Arbeitsabläufe zu planen, zu leiten und zu optimieren.",
+    "category": "operational"
+  },
+  "SK-OPS-003": {
+    "name_en": "Supply Chain & Logistics",
+    "name_de": "Lieferkette und Logistik",
+    "definition_en": "The ability to manage the flow of goods, materials, and information from supplier to customer.",
+    "definition_de": "Die Fähigkeit, den Fluss von Waren, Materialien und Informationen vom Lieferanten zum Kunden zu steuern.",
+    "category": "operational"
+  },
+  "SK-OPS-004": {
+    "name_en": "Procurement & Purchasing",
+    "name_de": "Beschaffung und Einkauf",
+    "definition_en": "The ability to source, evaluate, and acquire goods and services at optimal conditions.",
+    "definition_de": "Die Fähigkeit, Waren und Dienstleistungen zu optimalen Konditionen zu beschaffen, zu bewerten und einzukaufen.",
+    "category": "operational"
+  },
+  "SK-OPS-005": {
+    "name_en": "Sales & Business Development",
+    "name_de": "Vertrieb und Geschäftsentwicklung",
+    "definition_en": "The ability to identify opportunities, build client relationships, and close sales.",
+    "definition_de": "Die Fähigkeit, Geschäftsmöglichkeiten zu identifizieren, Kundenbeziehungen aufzubauen und Verkaufsabschlüsse zu erzielen.",
+    "category": "operational"
+  },
+  "SK-OPS-006": {
+    "name_en": "Marketing & Promotion",
+    "name_de": "Marketing und Werbung",
+    "definition_en": "The ability to develop and execute strategies to promote products, services, or brands.",
+    "definition_de": "Die Fähigkeit, Strategien zur Förderung von Produkten, Dienstleistungen oder Marken zu entwickeln und umzusetzen.",
+    "category": "operational"
+  },
+  "SK-OPS-007": {
+    "name_en": "Project Management",
+    "name_de": "Projektmanagement",
+    "definition_en": "The ability to plan, execute, monitor, and close projects within scope, time, and budget constraints.",
+    "definition_de": "Die Fähigkeit, Projekte innerhalb von Umfang, Zeit und Budget zu planen, durchzuführen, zu überwachen und abzuschließen.",
+    "category": "operational"
+  },
+  "SK-OPS-008": {
+    "name_en": "Administrative Support",
+    "name_de": "Verwaltung und Büroorganisation",
+    "definition_en": "The ability to perform general clerical, secretarial, and organizational tasks in an office environment.",
+    "definition_de": "Die Fähigkeit, allgemeine Büro-, Sekretariats- und Organisationsaufgaben in einer Büroumgebung auszuführen.",
+    "category": "operational"
+  },
+  "SK-OPS-009": {
+    "name_en": "Financial Transactions & Accounting",
+    "name_de": "Finanzgeschäfte und Buchhaltung",
+    "definition_en": "The ability to process financial transactions, maintain accounting records, and prepare financial documents.",
+    "definition_de": "Die Fähigkeit, Finanzgeschäfte abzuwickeln, Buchführungsunterlagen zu pflegen und Finanzdokumente zu erstellen.",
+    "category": "operational"
+  },
+  "SK-OPS-010": {
+    "name_en": "Record Keeping & Documentation",
+    "name_de": "Aktenführung und Dokumentation",
+    "definition_en": "The ability to create, organize, and maintain accurate operational records and documentation.",
+    "definition_de": "Die Fähigkeit, betriebliche Aufzeichnungen und Dokumentationen korrekt zu erstellen, zu ordnen und zu pflegen.",
+    "category": "operational"
+  },
+  "SK-OPS-011": {
+    "name_en": "Environmental Management",
+    "name_de": "Umweltmanagement",
+    "definition_en": "The ability to apply environmental protection standards, manage waste, and minimize ecological impact.",
+    "definition_de": "Die Fähigkeit, Umweltschutzstandards anzuwenden, Abfälle zu bewirtschaften und ökologische Auswirkungen zu minimieren.",
+    "category": "operational"
+  },
+  "SK-OPS-012": {
+    "name_en": "Event & Program Management",
+    "name_de": "Veranstaltungs- und Programmmanagement",
+    "definition_en": "The ability to plan, organize, and execute events, programs, and public activities.",
+    "definition_de": "Die Fähigkeit, Veranstaltungen, Programme und öffentliche Aktivitäten zu planen, zu organisieren und durchzuführen.",
+    "category": "operational"
+  },
+  "SK-OPS-013": {
+    "name_en": "Facility & Equipment Management",
+    "name_de": "Gebäude- und Anlagenmanagement",
+    "definition_en": "The ability to manage physical facilities, equipment, and infrastructure to ensure operational readiness.",
+    "definition_de": "Die Fähigkeit, Gebäude, Geräte und Infrastruktur zu verwalten, um die Betriebsbereitschaft sicherzustellen.",
+    "category": "operational"
+  },
+  "SK-OPS-014": {
+    "name_en": "Machine Operation",
+    "name_de": "Maschinenbedienung",
+    "definition_en": "The ability to set up, operate, and monitor industrial machinery and production equipment.",
+    "definition_de": "Die Fähigkeit, Industriemaschinen und Produktionsanlagen einzurichten, zu bedienen und zu überwachen.",
+    "category": "operational"
+  },
+  "SK-OPS-015": {
+    "name_en": "Physical Handling & Logistics Operations",
+    "name_de": "Materialtransport und Lagerlogistik",
+    "definition_en": "The ability to load, move, store, and manage physical materials and goods safely.",
+    "definition_de": "Die Fähigkeit, physische Materialien und Waren sicher zu verladen, zu transportieren, zu lagern und zu verwalten.",
+    "category": "operational"
+  },
+  "SK-OPS-016": {
+    "name_en": "Production Planning",
+    "name_de": "Produktionsplanung",
+    "definition_en": "The ability to plan and schedule manufacturing processes, production runs, and resource allocation.",
+    "definition_de": "Die Fähigkeit, Fertigungsprozesse, Produktionsläufe und die Ressourcenzuteilung zu planen und zu terminieren.",
+    "category": "operational"
+  },
+  "SK-OPS-017": {
+    "name_en": "Cleaning & Maintenance",
+    "name_de": "Reinigung und Instandhaltung",
+    "definition_en": "The ability to clean, maintain, and preserve workspaces, equipment, and facilities.",
+    "definition_de": "Die Fähigkeit, Arbeitsräume, Geräte und Einrichtungen zu reinigen, zu warten und zu erhalten.",
+    "category": "operational"
+  },
+  "SK-OPS-018": {
+    "name_en": "Sorting & Packaging",
+    "name_de": "Sortieren und Verpacken",
+    "definition_en": "The ability to sort, classify, label, and package materials, products, or goods for storage or shipment.",
+    "definition_de": "Die Fähigkeit, Materialien, Produkte oder Waren für die Lagerung oder den Versand zu sortieren, zu klassifizieren, zu kennzeichnen und zu verpacken.",
+    "category": "operational"
+  },
+  "SK-OPS-019": {
+    "name_en": "Waste & Hazardous Materials",
+    "name_de": "Abfall- und Gefahrstoffmanagement",
+    "definition_en": "The ability to handle, store, and dispose of waste and hazardous materials according to regulations.",
+    "definition_de": "Die Fähigkeit, Abfälle und Gefahrstoffe vorschriftsgemäß zu handhaben, zu lagern und zu entsorgen.",
+    "category": "operational"
+  },
+  "SK-OPS-020": {
+    "name_en": "Monitoring & Surveillance",
+    "name_de": "Überwachung und Kontrolle",
+    "definition_en": "The ability to observe, monitor, and report on safety, security, or environmental conditions.",
+    "definition_de": "Die Fähigkeit, Sicherheits-, Schutz- oder Umweltbedingungen zu beobachten, zu überwachen und darüber zu berichten.",
+    "category": "operational"
+  },
+  "SK-OPS-021": {
+    "name_en": "Inventory & Stock Management",
+    "name_de": "Bestands- und Lagerverwaltung",
+    "definition_en": "The ability to track, manage, and optimize inventory levels and stock movements.",
+    "definition_de": "Die Fähigkeit, Bestände und Lagerbewegungen zu verfolgen, zu verwalten und zu optimieren.",
+    "category": "operational"
+  },
+  "SK-OPS-022": {
+    "name_en": "Customer Complaint Handling",
+    "name_de": "Beschwerdemanagement",
+    "definition_en": "The ability to receive, investigate, and resolve customer complaints professionally.",
+    "definition_de": "Die Fähigkeit, Kundenbeschwerden professionell entgegenzunehmen, zu untersuchen und zu lösen.",
+    "category": "operational"
+  },
+  "SK-OPS-023": {
+    "name_en": "Pricing & Cost Estimation",
+    "name_de": "Preiskalkulation und Kostenschätzung",
+    "definition_en": "The ability to determine the value or price of goods, services, or assets using appropriate methods.",
+    "definition_de": "Die Fähigkeit, den Wert oder Preis von Waren, Dienstleistungen oder Vermögenswerten mit geeigneten Methoden zu bestimmen.",
+    "category": "operational"
+  },
+  "SK-SOC-001": {
+    "name_en": "Speaking & Presenting",
+    "name_de": "Sprechen und Präsentieren",
+    "definition_en": "The ability to convey information clearly and effectively through spoken language.",
+    "definition_de": "Die Fähigkeit, Informationen klar und effektiv durch gesprochene Sprache zu vermitteln.",
+    "category": "social"
+  },
+  "SK-SOC-002": {
+    "name_en": "Writing & Reporting",
+    "name_de": "Schreiben und Berichten",
+    "definition_en": "The ability to express ideas clearly and accurately in written form for various audiences.",
+    "definition_de": "Die Fähigkeit, Ideen klar und präzise in schriftlicher Form für verschiedene Zielgruppen auszudrücken.",
+    "category": "social"
+  },
+  "SK-SOC-003": {
+    "name_en": "Negotiation",
+    "name_de": "Verhandlungsführung",
+    "definition_en": "The ability to discuss terms with counterparties and reach mutually acceptable agreements.",
+    "definition_de": "Die Fähigkeit, Bedingungen mit Verhandlungspartnern zu erörtern und beiderseitig akzeptable Vereinbarungen zu erzielen.",
+    "category": "social"
+  },
+  "SK-SOC-004": {
+    "name_en": "Conflict Resolution",
+    "name_de": "Konfliktlösung",
+    "definition_en": "The ability to mediate disagreements and find constructive solutions to interpersonal or organizational disputes.",
+    "definition_de": "Die Fähigkeit, Meinungsverschiedenheiten zu vermitteln und konstruktive Lösungen für zwischenmenschliche oder organisatorische Konflikte zu finden.",
+    "category": "social"
+  },
+  "SK-SOC-005": {
+    "name_en": "Team Leadership",
+    "name_de": "Teamführung",
+    "definition_en": "The ability to guide, motivate, and manage a team toward achieving shared objectives.",
+    "definition_de": "Die Fähigkeit, ein Team bei der Erreichung gemeinsamer Ziele zu leiten, zu motivieren und zu steuern.",
+    "category": "social"
+  },
+  "SK-SOC-006": {
+    "name_en": "Teamwork & Collaboration",
+    "name_de": "Teamarbeit und Zusammenarbeit",
+    "definition_en": "The ability to work effectively with others, contribute to group goals, and support colleagues.",
+    "definition_de": "Die Fähigkeit, effektiv mit anderen zusammenzuarbeiten, zu Gruppenzielen beizutragen und Kolleg*innen zu unterstützen.",
+    "category": "social"
+  },
+  "SK-SOC-007": {
+    "name_en": "Coaching & Mentoring",
+    "name_de": "Coaching und Mentoring",
+    "definition_en": "The ability to guide individuals in developing their skills, knowledge, and career potential.",
+    "definition_de": "Die Fähigkeit, Einzelpersonen bei der Entwicklung ihrer Fähigkeiten, ihres Wissens und ihres Karrierepotenzials zu begleiten.",
+    "category": "social"
+  },
+  "SK-SOC-008": {
+    "name_en": "Teaching & Training",
+    "name_de": "Lehren und Ausbilden",
+    "definition_en": "The ability to convey knowledge and skills to others through structured instruction and demonstration.",
+    "definition_de": "Die Fähigkeit, Wissen und Fähigkeiten durch strukturierte Unterweisung und Vorführung an andere zu vermitteln.",
+    "category": "social"
+  },
+  "SK-SOC-009": {
+    "name_en": "Customer Service",
+    "name_de": "Kundenbetreuung",
+    "definition_en": "The ability to understand and fulfill customer needs, handle inquiries, and ensure satisfaction.",
+    "definition_de": "Die Fähigkeit, Kundenbedürfnisse zu verstehen und zu erfüllen, Anfragen zu bearbeiten und Zufriedenheit sicherzustellen.",
+    "category": "social"
+  },
+  "SK-SOC-010": {
+    "name_en": "Counseling & Guidance",
+    "name_de": "Beratung und Begleitung",
+    "definition_en": "The ability to provide empathic support and professional guidance on personal, social, or career matters.",
+    "definition_de": "Die Fähigkeit, einfühlsame Unterstützung und professionelle Orientierung in persönlichen, sozialen oder beruflichen Belangen zu bieten.",
+    "category": "social"
+  },
+  "SK-SOC-011": {
+    "name_en": "Stakeholder Management",
+    "name_de": "Stakeholder-Management",
+    "definition_en": "The ability to identify, engage, and manage relationships with internal and external stakeholders.",
+    "definition_de": "Die Fähigkeit, Beziehungen zu internen und externen Stakeholdern aufzubauen, zu pflegen und zu steuern.",
+    "category": "social"
+  },
+  "SK-SOC-012": {
+    "name_en": "Presentation Skills",
+    "name_de": "Präsentationsfähigkeit",
+    "definition_en": "The ability to present information, ideas, or proposals clearly and persuasively to an audience.",
+    "definition_de": "Die Fähigkeit, Informationen, Ideen oder Vorschläge klar und überzeugend vor einem Publikum zu präsentieren.",
+    "category": "social"
+  },
+  "SK-SOC-013": {
+    "name_en": "Supervision & Performance Management",
+    "name_de": "Aufsicht und Leistungsmanagement",
+    "definition_en": "The ability to oversee work, evaluate performance, and provide constructive feedback to staff.",
+    "definition_de": "Die Fähigkeit, Arbeit zu beaufsichtigen, Leistung zu bewerten und Mitarbeitenden konstruktives Feedback zu geben.",
+    "category": "social"
+  },
+  "SK-SOC-014": {
+    "name_en": "Active Listening",
+    "name_de": "Aktives Zuhören",
+    "definition_en": "The ability to fully concentrate on what is being said, understand the message, and respond thoughtfully.",
+    "definition_de": "Die Fähigkeit, sich voll auf das Gesagte zu konzentrieren, die Botschaft zu verstehen und durchdacht zu antworten.",
+    "category": "social"
+  },
+  "SK-SOC-015": {
+    "name_en": "Intercultural Competence",
+    "name_de": "Interkulturelle Kompetenz",
+    "definition_en": "The ability to interact effectively with people from diverse cultural backgrounds.",
+    "definition_de": "Die Fähigkeit, effektiv mit Menschen unterschiedlicher kultureller Herkunft zu interagieren.",
+    "category": "social"
+  },
+  "SK-SOC-016": {
+    "name_en": "Persuasion & Influence",
+    "name_de": "Überzeugen und Einfluss nehmen",
+    "definition_en": "The ability to argue for a position, influence decisions, and represent interests effectively.",
+    "definition_de": "Die Fähigkeit, für eine Position zu argumentieren, Entscheidungen zu beeinflussen und Interessen wirksam zu vertreten.",
+    "category": "social"
+  },
+  "SK-SOC-017": {
+    "name_en": "Recruitment & Talent Management",
+    "name_de": "Personalgewinnung und Talentmanagement",
+    "definition_en": "The ability to attract, select, and develop qualified personnel for organizational needs.",
+    "definition_de": "Die Fähigkeit, qualifiziertes Personal für organisatorische Bedürfnisse zu gewinnen, auszuwählen und zu entwickeln.",
+    "category": "social"
+  },
+  "SK-SOC-018": {
+    "name_en": "Ethics & Professional Conduct",
+    "name_de": "Ethik und professionelles Verhalten",
+    "definition_en": "The ability to act with integrity, follow ethical codes, and maintain professional standards.",
+    "definition_de": "Die Fähigkeit, integer zu handeln, ethische Kodizes zu befolgen und professionelle Standards einzuhalten.",
+    "category": "social"
+  },
+  "SK-SOC-019": {
+    "name_en": "Training Material Development",
+    "name_de": "Schulungsmaterial entwickeln",
+    "definition_en": "The ability to develop training materials, instructional content, and promotional resources.",
+    "definition_de": "Die Fähigkeit, Schulungsmaterialien, Lehrinhalte und Informationsressourcen zu entwickeln.",
+    "category": "social"
+  },
+  "SK-SOC-020": {
+    "name_en": "Contract Management",
+    "name_de": "Vertragsmanagement",
+    "definition_en": "The ability to draft, review, and manage contracts, agreements, and formal documentation.",
+    "definition_de": "Die Fähigkeit, Verträge, Vereinbarungen und formale Dokumente zu entwerfen, zu prüfen und zu verwalten.",
+    "category": "social"
+  },
+  "SK-SOC-021": {
+    "name_en": "Coordinating Across Teams",
+    "name_de": "Teamübergreifend koordinieren",
+    "definition_en": "The ability to coordinate work across departments, functions, or organizational units.",
+    "definition_de": "Die Fähigkeit, Arbeit über Abteilungen, Funktionen oder Organisationseinheiten hinweg zu koordinieren.",
+    "category": "social"
+  },
+  "SK-SOC-022": {
+    "name_en": "Empathy & Care",
+    "name_de": "Einfühlungsvermögen und Fürsorge",
+    "definition_en": "The ability to recognize and respond to the emotional needs of others with sensitivity and care.",
+    "definition_de": "Die Fähigkeit, die emotionalen Bedürfnisse anderer zu erkennen und mit Einfühlungsvermögen und Fürsorge darauf einzugehen.",
+    "category": "social"
+  },
+  "SK-TEC-001": {
+    "name_en": "Engineering Design",
+    "name_de": "Ingenieurmäßige Konstruktion",
+    "definition_en": "The ability to design structures, systems, or products using engineering principles and specifications.",
+    "definition_de": "Die Fähigkeit, Bauwerke, Systeme oder Produkte nach ingenieurwissenschaftlichen Prinzipien und Spezifikationen zu konstruieren.",
+    "category": "technical"
+  },
+  "SK-TEC-002": {
+    "name_en": "Electrical & Electronic Systems",
+    "name_de": "Elektrische und elektronische Systeme",
+    "definition_en": "The ability to install, maintain, and repair electrical and electronic systems and equipment.",
+    "definition_de": "Die Fähigkeit, elektrische und elektronische Systeme und Geräte zu installieren, zu warten und zu reparieren.",
+    "category": "technical"
+  },
+  "SK-TEC-003": {
+    "name_en": "Mechanical Systems",
+    "name_de": "Mechanische Systeme",
+    "definition_en": "The ability to install, maintain, and repair mechanical machinery, equipment, and components.",
+    "definition_de": "Die Fähigkeit, mechanische Maschinen, Geräte und Komponenten zu installieren, zu warten und zu reparieren.",
+    "category": "technical"
+  },
+  "SK-TEC-004": {
+    "name_en": "Lab & Research Methods",
+    "name_de": "Labor- und Forschungsmethoden",
+    "definition_en": "The ability to conduct experiments, analyze specimens, and apply scientific methods in laboratory settings.",
+    "definition_de": "Die Fähigkeit, Experimente durchzuführen, Proben zu analysieren und wissenschaftliche Methoden im Laborumfeld anzuwenden.",
+    "category": "technical"
+  },
+  "SK-TEC-005": {
+    "name_en": "Technical Documentation",
+    "name_de": "Technische Dokumentation",
+    "definition_en": "The ability to create, read, and interpret technical specifications, manuals, and diagrams.",
+    "definition_de": "Die Fähigkeit, technische Spezifikationen, Handbücher und Diagramme zu erstellen, zu lesen und zu interpretieren.",
+    "category": "technical"
+  },
+  "SK-TEC-006": {
+    "name_en": "Materials & Manufacturing Processes",
+    "name_de": "Werkstoffe und Fertigungsverfahren",
+    "definition_en": "The ability to select materials and apply manufacturing techniques to produce components and products.",
+    "definition_de": "Die Fähigkeit, Werkstoffe auszuwählen und Fertigungstechniken anzuwenden, um Bauteile und Produkte herzustellen.",
+    "category": "technical"
+  },
+  "SK-TEC-007": {
+    "name_en": "Measurement & Testing",
+    "name_de": "Messen und Prüfen",
+    "definition_en": "The ability to use measuring instruments and testing procedures to verify dimensions, properties, and quality.",
+    "definition_de": "Die Fähigkeit, Messinstrumente und Prüfverfahren einzusetzen, um Maße, Eigenschaften und Qualität zu überprüfen.",
+    "category": "technical"
+  },
+  "SK-TEC-008": {
+    "name_en": "Occupational Safety & Health",
+    "name_de": "Arbeitsschutz und Gesundheit",
+    "definition_en": "The ability to identify hazards, apply safety procedures, and maintain a safe working environment.",
+    "definition_de": "Die Fähigkeit, Gefährdungen zu erkennen, Sicherheitsverfahren anzuwenden und ein sicheres Arbeitsumfeld zu gewährleisten.",
+    "category": "technical"
+  },
+  "SK-TEC-009": {
+    "name_en": "Translation & Interpreting",
+    "name_de": "Übersetzen und Dolmetschen",
+    "definition_en": "The ability to convert written or spoken content accurately between languages.",
+    "definition_de": "Die Fähigkeit, schriftliche oder gesprochene Inhalte korrekt zwischen Sprachen zu übertragen.",
+    "category": "technical"
+  },
+  "SK-TEC-010": {
+    "name_en": "Construction & Building",
+    "name_de": "Bau und Gebäudetechnik",
+    "definition_en": "The ability to perform construction tasks including structural assembly, installation, and building repair.",
+    "definition_de": "Die Fähigkeit, Bauaufgaben einschließlich Montage, Installation und Gebäudereparatur durchzuführen.",
+    "category": "technical"
+  },
+  "SK-TEC-011": {
+    "name_en": "Plumbing & HVAC Systems",
+    "name_de": "Sanitär- und Klimatechnik",
+    "definition_en": "The ability to install, maintain, and repair plumbing, heating, ventilation, and air conditioning systems.",
+    "definition_de": "Die Fähigkeit, Sanitär-, Heizungs-, Lüftungs- und Klimaanlagen zu installieren, zu warten und zu reparieren.",
+    "category": "technical"
+  },
+  "SK-TEC-012": {
+    "name_en": "Welding & Joining",
+    "name_de": "Schweißen und Fügen",
+    "definition_en": "The ability to join materials using welding, soldering, brazing, or other bonding techniques.",
+    "definition_de": "Die Fähigkeit, Materialien durch Schweißen, Löten, Hartlöten oder andere Verbindungstechniken zu fügen.",
+    "category": "technical"
+  },
+  "SK-TEC-013": {
+    "name_en": "Food Preparation",
+    "name_de": "Lebensmittelzubereitung",
+    "definition_en": "The ability to prepare, cook, and present food and beverages according to standards and recipes.",
+    "definition_de": "Die Fähigkeit, Speisen und Getränke nach Standards und Rezepten zuzubereiten, zu kochen und zu präsentieren.",
+    "category": "technical"
+  },
+  "SK-TEC-014": {
+    "name_en": "Vehicle Operation",
+    "name_de": "Fahrzeugführung",
+    "definition_en": "The ability to operate motor vehicles, heavy equipment, or specialized transport safely.",
+    "definition_de": "Die Fähigkeit, Kraftfahrzeuge, Schwerlastgeräte oder Spezialtransportmittel sicher zu führen.",
+    "category": "technical"
+  },
+  "SK-TEC-015": {
+    "name_en": "Artistic & Creative Production",
+    "name_de": "Künstlerische und kreative Produktion",
+    "definition_en": "The ability to create artistic works, visual designs, performances, or cultural content.",
+    "definition_de": "Die Fähigkeit, künstlerische Werke, visuelle Gestaltungen, Darbietungen oder kulturelle Inhalte zu schaffen.",
+    "category": "technical"
+  },
+  "SK-TEC-016": {
+    "name_en": "Medical Equipment Operation",
+    "name_de": "Bedienung medizinischer Geräte",
+    "definition_en": "The ability to operate specialized medical, dental, and therapeutic equipment safely and effectively.",
+    "definition_de": "Die Fähigkeit, spezialisierte medizinische, zahnmedizinische und therapeutische Geräte sicher und effektiv zu bedienen.",
+    "category": "technical"
+  }
+}
