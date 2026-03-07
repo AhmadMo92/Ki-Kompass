@@ -2,11 +2,10 @@ import { useMemo, useState } from "react";
 import { useParams, Link } from "wouter";
 import { findOccupationBySlug, calculatePercentages, calculateFromTasks, CATEGORIES, CATEGORY_ORDER, CategoryLabel, SECTOR_AVERAGES, searchTasks, TaskItem } from "@/lib/data";
 import { DonutChart } from "@/components/role-descriptor/DonutChart";
-import { TaskList } from "@/components/role-descriptor/TaskList";
+import { SkillTaskExplorer } from "@/components/role-descriptor/SkillTaskExplorer";
 import { SectorComparison } from "@/components/role-descriptor/SectorComparison";
 import { InsightCards } from "@/components/role-descriptor/InsightCards";
 import { PersonalizedResults } from "@/components/role-descriptor/PersonalizedResults";
-import { SkillProfile } from "@/components/role-descriptor/SkillProfile";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
@@ -126,29 +125,21 @@ export default function Beruf() {
 
         <InsightCards percentages={typicalPercentages} sensitiveCount={occupation.summary.sensitive} language={language} />
 
-        <Card className="border-none shadow-sm bg-white/60">
-          <CardHeader className="pb-2">
-            <div className="flex items-center justify-between">
-              <CardTitle className="text-lg font-serif text-primary flex items-center gap-2">
-                <Target className="w-5 h-5" />
-                {language === "de" ? "Aufgaben im Detail" : "Tasks in Detail"}
-              </CardTitle>
-              {deselectedTasks.size > 0 && !showPersonalized && (
-                <Button size="sm" onClick={() => setShowPersonalized(true)}>
-                  {language === "de" ? "Mein Profil berechnen" : "Calculate My Profile"} <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
-              )}
-            </div>
-            <CardDescription>
-              {language === "de"
-                ? "Schalte Aufgaben aus, die du nicht machst."
-                : "Toggle off tasks you don't do."}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <TaskList tasks={occupation.tasks} deselectedTasks={deselectedTasks} onToggleTask={handleToggleTask} language={language} />
-          </CardContent>
-        </Card>
+        {deselectedTasks.size > 0 && !showPersonalized && (
+          <div className="flex justify-end">
+            <Button size="sm" onClick={() => setShowPersonalized(true)}>
+              {language === "de" ? "Mein Profil berechnen" : "Calculate My Profile"} <ArrowRight className="w-4 h-4 ml-1" />
+            </Button>
+          </div>
+        )}
+
+        <SkillTaskExplorer
+          tasks={occupation.tasks}
+          occupationKey={key}
+          deselectedTasks={deselectedTasks}
+          onToggleTask={handleToggleTask}
+          language={language}
+        />
 
         {showPersonalized && (
           <PersonalizedResults
@@ -159,8 +150,6 @@ export default function Beruf() {
             onReset={() => setShowPersonalized(false)}
           />
         )}
-
-        <SkillProfile occupationKey={key} language={language} />
 
         <SectorComparison
           occupationPercentages={displayPercentages}

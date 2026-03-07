@@ -4,18 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
 import { DonutChart } from "./DonutChart";
-import { TaskList } from "./TaskList";
 import { SectorComparison } from "./SectorComparison";
 import { InsightCards } from "./InsightCards";
 import { PersonalizedResults } from "./PersonalizedResults";
 import { OccupationSearch } from "./OccupationSearch";
+import { SkillTaskExplorer } from "./SkillTaskExplorer";
 import {
   occupations, getOccupation, calculatePercentages, calculateFromTasks,
   CATEGORIES, CATEGORY_ORDER, CategoryLabel, searchTasks, TaskItem
 } from "@/lib/data";
-import { SkillProfile } from "./SkillProfile";
 import {
-  Sparkles, ArrowRight, RotateCcw, Languages, Building2, Target, Info, Search
+  Sparkles, ArrowRight, RotateCcw, Languages, Building2, Info, Search
 } from "lucide-react";
 
 export function MyRoleTasks() {
@@ -295,88 +294,73 @@ export function MyRoleTasks() {
                 language={language}
               />
 
-              <Card className="border-none shadow-sm bg-white/60" data-testid="task-section">
-                <CardHeader className="pb-2">
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-lg font-serif text-primary flex items-center gap-2">
-                      <Target className="w-5 h-5" />
-                      {language === "de" ? "Aufgaben im Detail" : "Tasks in Detail"}
-                    </CardTitle>
-                    <div className="flex items-center gap-2">
-                      {deselectedTasks.size > 0 && !showPersonalized && (
-                        <Button size="sm" onClick={handleCalculatePersonal} data-testid="calculate-personal-btn">
-                          {language === "de" ? "Mein Profil berechnen" : "Calculate My Profile"}
-                          <ArrowRight className="w-4 h-4 ml-1" />
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                  <CardDescription>
-                    {language === "de"
-                      ? "Schalte Aufgaben aus, die du nicht machst, um dein persönliches Profil zu berechnen."
-                      : "Toggle off tasks you don't do to calculate your personal profile."}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="mb-4 relative">
-                    <div className="relative">
-                      <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                      <input
-                        type="text"
-                        placeholder={language === "de" ? "Aufgaben aus anderen Berufen hinzufügen..." : "Add tasks from other occupations..."}
-                        value={customSearchQuery}
-                        onChange={e => { setCustomSearchQuery(e.target.value); setShowCustomDropdown(true); }}
-                        onFocus={() => setShowCustomDropdown(true)}
-                        className="w-full pl-10 pr-4 h-10 text-sm rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-primary/20"
-                        data-testid="custom-task-search"
-                      />
-                    </div>
-                    {showCustomDropdown && customSearchResults.length > 0 && (
-                      <div className="absolute z-50 w-full mt-1 bg-white border rounded-lg shadow-xl max-h-48 overflow-y-auto">
-                        {customSearchResults.map(task => (
-                          <div
-                            key={task.id}
-                            className="flex items-center gap-2 p-2.5 hover:bg-slate-50 cursor-pointer border-b last:border-b-0 text-sm"
-                            onClick={() => handleAddCustomTask(task)}
-                          >
-                            <span className="text-primary font-bold">+</span>
-                            <span className="flex-1 truncate">{language === "de" ? task.text_de : task.text_en}</span>
-                            <span className="text-xs text-slate-400 truncate max-w-24">{task.occupationDe}</span>
-                            <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: CATEGORIES[task.label].color }} />
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {customTasks.length > 0 && (
-                    <div className="mb-4 flex flex-wrap gap-2">
-                      {customTasks.map(task => (
-                        <span
-                          key={task.id}
-                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium"
-                          style={{ backgroundColor: CATEGORIES[task.label].bg, color: CATEGORIES[task.label].color }}
-                        >
-                          {language === "de" ? task.text_de : task.text_en}
-                          <button
-                            onClick={() => setCustomTasks(prev => prev.filter(t => t.id !== task.id))}
-                            className="hover:bg-black/10 rounded-full p-0.5 ml-1"
-                          >
-                            ✕
-                          </button>
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  <TaskList
-                    tasks={allTasks}
-                    deselectedTasks={deselectedTasks}
-                    onToggleTask={handleToggleTask}
-                    language={language}
+              <div className="mb-4 relative">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <input
+                    type="text"
+                    placeholder={language === "de" ? "Aufgaben aus anderen Berufen hinzufügen..." : "Add tasks from other occupations..."}
+                    value={customSearchQuery}
+                    onChange={e => { setCustomSearchQuery(e.target.value); setShowCustomDropdown(true); }}
+                    onFocus={() => setShowCustomDropdown(true)}
+                    className="w-full pl-10 pr-4 h-10 text-sm rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-primary/20"
+                    data-testid="custom-task-search"
                   />
-                </CardContent>
-              </Card>
+                </div>
+                {showCustomDropdown && customSearchResults.length > 0 && (
+                  <div className="absolute z-50 w-full mt-1 bg-white border rounded-lg shadow-xl max-h-48 overflow-y-auto">
+                    {customSearchResults.map(task => (
+                      <div
+                        key={task.id}
+                        className="flex items-center gap-2 p-2.5 hover:bg-slate-50 cursor-pointer border-b last:border-b-0 text-sm"
+                        onClick={() => handleAddCustomTask(task)}
+                      >
+                        <span className="text-primary font-bold">+</span>
+                        <span className="flex-1 truncate">{language === "de" ? task.text_de : task.text_en}</span>
+                        <span className="text-xs text-slate-400 truncate max-w-24">{task.occupationDe}</span>
+                        <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: CATEGORIES[task.label].color }} />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {customTasks.length > 0 && (
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {customTasks.map(task => (
+                    <span
+                      key={task.id}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium"
+                      style={{ backgroundColor: CATEGORIES[task.label].bg, color: CATEGORIES[task.label].color }}
+                    >
+                      {language === "de" ? task.text_de : task.text_en}
+                      <button
+                        onClick={() => setCustomTasks(prev => prev.filter(t => t.id !== task.id))}
+                        className="hover:bg-black/10 rounded-full p-0.5 ml-1"
+                      >
+                        ✕
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {deselectedTasks.size > 0 && !showPersonalized && (
+                <div className="flex justify-end mb-2">
+                  <Button size="sm" onClick={handleCalculatePersonal} data-testid="calculate-personal-btn">
+                    {language === "de" ? "Mein Profil berechnen" : "Calculate My Profile"}
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </div>
+              )}
+
+              <SkillTaskExplorer
+                tasks={allTasks}
+                occupationKey={selectedKey}
+                deselectedTasks={deselectedTasks}
+                onToggleTask={handleToggleTask}
+                language={language}
+              />
 
               {showPersonalized && typicalPercentages && (
                 <PersonalizedResults
@@ -387,8 +371,6 @@ export function MyRoleTasks() {
                   onReset={() => setShowPersonalized(false)}
                 />
               )}
-
-              <SkillProfile occupationKey={selectedKey} language={language} />
 
               <SectorComparison
                 occupationPercentages={showPersonalized ? personalPercentages : typicalPercentages}
