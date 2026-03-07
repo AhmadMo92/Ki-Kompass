@@ -70,12 +70,12 @@ Each task links to 2-3 skills with relevance scores. Skills profile shows which 
 - `/beruf/:slug` — Shareable occupation profile page
 
 ## Key Components
-- `DonutChart` — SVG donut with 5 category segments
-- `TaskList` — Grouped tasks with toggle switches for personalization
-- `SkillProfile` — Skill bars with AI-exposure breakdown per skill
-- `SectorComparison` — Stacked bar comparing occupation vs sector average
-- `InsightCards` — Dynamic recommendation cards based on profile
-- `PersonalizedResults` — Side-by-side typical vs personal profile
+- `OccupationDashboard` — **Main holistic view**: 3-panel cockpit layout (donut+categories | tasks | skills). Integrates donut chart, category filtering, sector comparison, task toggles, skill bars, and personalization into a single interactive dashboard. Used by both `/my-role` (step 2) and `/beruf/:slug`.
+- `DonutChart` — SVG donut with 5 category segments (standalone, also inlined in OccupationDashboard)
+- `SkillTaskExplorer` — Unified skill-task linking (superseded by OccupationDashboard but kept)
+- `SectorComparison` — Stacked bar comparing occupation vs sector average (standalone, also inlined in OccupationDashboard)
+- `InsightCards` — Dynamic recommendation cards based on profile (no longer used in dashboard view)
+- `PersonalizedResults` — Side-by-side typical vs personal profile (no longer used in dashboard view)
 - `OccupationSearch` — Type-ahead search across 522 occupations
 
 ## Sector Averages (pre-computed from occupations_summary)
