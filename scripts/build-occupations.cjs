@@ -3,8 +3,8 @@ const path = require('path');
 
 const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_replit_1772870922238.csv');
 const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary_1772870916961.csv');
-const skillsVocabPath = path.join(__dirname, '..', 'attached_assets', 'skills_vocabulary_v0_(1)_1772870913053.csv');
-const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_production_1772870970135.csv');
+const skillsVocabPath = path.join(__dirname, '..', 'attached_assets', 'skills_vocabulary_v0_(2)_1772872655371.csv');
+const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_production_(1)_1772872650835.csv');
 
 const occupationsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'occupations.json');
 const skillsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'skills.json');

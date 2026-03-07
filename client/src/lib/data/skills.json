@@ -49,8 +49,8 @@
     "category": "cognitive"
   },
   "SK-COG-008": {
-    "name_en": "Research & Investigation",
-    "name_de": "Recherche und Untersuchung",
+    "name_en": "Research & Analysis",
+    "name_de": "Recherche und Analyse",
     "definition_en": "The ability to systematically gather, evaluate, and synthesize information from multiple sources.",
     "definition_de": "Die Fähigkeit, systematisch Informationen aus verschiedenen Quellen zu sammeln, zu bewerten und zusammenzuführen.",
     "category": "cognitive"
@@ -560,8 +560,8 @@
     "category": "operational"
   },
   "SK-SOC-001": {
-    "name_en": "Speaking & Presenting",
-    "name_de": "Sprechen und Präsentieren",
+    "name_en": "Verbal Communication",
+    "name_de": "Mündliche Kommunikation",
     "definition_en": "The ability to convey information clearly and effectively through spoken language.",
     "definition_de": "Die Fähigkeit, Informationen klar und effektiv durch gesprochene Sprache zu vermitteln.",
     "category": "social"
@@ -637,8 +637,8 @@
     "category": "social"
   },
   "SK-SOC-012": {
-    "name_en": "Presentation Skills",
-    "name_de": "Präsentationsfähigkeit",
+    "name_en": "Public Speaking & Presenting",
+    "name_de": "Vorträge und Präsentationen",
     "definition_en": "The ability to present information, ideas, or proposals clearly and persuasively to an audience.",
     "definition_de": "Die Fähigkeit, Informationen, Ideen oder Vorschläge klar und überzeugend vor einem Publikum zu präsentieren.",
     "category": "social"
