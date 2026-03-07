@@ -10,10 +10,10 @@ KI Kompass analyzes AI exposure for 522 German occupations (5,885 tasks) using a
 
 ## Data Pipeline
 Source CSVs (in `attached_assets/`):
-1. `tasks_for_replit_1772870922238.csv` — 5,885 tasks with labels (14 clean columns)
-2. `occupations_summary_1772870916961.csv` — pre-computed occupation-level counts (522 rows)
-3. `skills_vocabulary_v0_(1)_1772870913053.csv` — 118 skills across 6 categories
-4. `task_skill_links_production_1772870970135.csv` — 16,082 task→skill links (avg 2.7 per task)
+1. `tasks_for_replit.csv` — 5,885 tasks with labels + scoring dimensions (PHYS,TPS,SIR,SPEC,VERIF,STD)
+2. `occupations_summary.csv` — pre-computed occupation-level counts (522 rows)
+3. `skills_vocabulary_v0_(2)_1772872655371.csv` — 118 skills across 6 categories
+4. `task_skill_links_production_(1)_1772872650835.csv` — 16,082 task→skill links (avg 2.7 per task)
 
 Build: `node scripts/build-occupations.cjs` → generates `occupations.json` + `skills.json`
 
@@ -22,11 +22,11 @@ Labels in CSVs are final — NO downstream regex applied. The build script reads
 ### Distribution
 | Category | Tasks | % |
 |---|---|---|
-| ai_assisted | 2,682 | 45.6% |
-| stays_with_you | 2,069 | 35.2% |
-| high_ai_potential | 740 | 12.6% |
-| automatable | 279 | 4.7% |
-| sensitive | 115 | 2.0% |
+| ai_assisted | 2,574 | 43.7% |
+| human_led | 2,196 | 37.3% |
+| high_ai_potential | 729 | 12.4% |
+| automatable | 272 | 4.6% |
+| sensitive | 114 | 1.9% |
 
 ## 5-Category System
 | Category | Color | Description |
@@ -35,7 +35,7 @@ Labels in CSVs are final — NO downstream regex applied. The build script reads
 | `high_ai_potential` | #F57C00 (orange) | AI does most, you steer |
 | `sensitive` | #8E24AA (purple) | AI could, but regulation says no |
 | `ai_assisted` | #F9A825 (yellow) | AI helps, you lead |
-| `stays_with_you` | #43A047 (green) | Human Led |
+| `human_led` | #43A047 (green) | Human Led |
 
 ## Skills Layer (6 Categories)
 | Category | Count | Color |
@@ -61,8 +61,9 @@ Each task links to 2-3 skills with relevance scores. Skills profile shows which 
 - **5 categories only** — old 3-category system is deprecated
 - **English first** — UI defaults to English, user can toggle to German
 - **Bilingual**: All tasks have `text_de` and `text_en`, skills have `name_de`/`name_en`
-- **Display label**: `stays_with_you` → "Human Led" / "Menschlich geführt" in UI
+- **Label key**: `human_led` (was `stays_with_you`) → "Human Led" / "Menschlich geführt" in UI
 - **Task schema**: id, text_de, text_en, label, score, skills[] (array of skill_id strings)
+- **Scoring dimensions**: PHYS, TPS, SIR, SPEC, VERIF, STD available in source CSVs
 
 ## Routes
 - `/` — Landing page with hero occupations

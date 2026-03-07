@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_replit_1772870922238.csv');
-const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary_1772870916961.csv');
+const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_replit.csv');
+const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary.csv');
 const skillsVocabPath = path.join(__dirname, '..', 'attached_assets', 'skills_vocabulary_v0_(2)_1772872655371.csv');
 const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_production_(1)_1772872650835.csv');
 
@@ -78,7 +78,7 @@ for (const row of summaryRows) {
     sector: row.sector,
     berufenet_id: row.berufenet_id,
     n_tasks: parseInt(row.n_tasks) || 0,
-    stays_with_you: parseInt(row.stays_with_you) || 0,
+    human_led: parseInt(row.human_led) || 0,
     ai_assisted: parseInt(row.ai_assisted) || 0,
     high_ai_potential: parseInt(row.high_ai_potential) || 0,
     sensitive: parseInt(row.sensitive) || 0,
@@ -107,14 +107,14 @@ for (const task of tasks) {
         high_ai_potential: sum.high_ai_potential,
         sensitive: sum.sensitive,
         ai_assisted: sum.ai_assisted,
-        stays_with_you: sum.stays_with_you,
+        human_led: sum.human_led,
       } : {
         total: 0,
         automatable: 0,
         high_ai_potential: 0,
         sensitive: 0,
         ai_assisted: 0,
-        stays_with_you: 0,
+        human_led: 0,
       }
     };
   }
@@ -133,7 +133,7 @@ for (const task of tasks) {
 
 for (const key of Object.keys(occupations)) {
   occupations[key].tasks.sort((a, b) => {
-    const order = { automatable: 0, high_ai_potential: 1, sensitive: 2, ai_assisted: 3, stays_with_you: 4 };
+    const order = { automatable: 0, high_ai_potential: 1, sensitive: 2, ai_assisted: 3, human_led: 4 };
     const orderDiff = (order[a.label] || 5) - (order[b.label] || 5);
     if (orderDiff !== 0) return orderDiff;
     return b.score - a.score;
@@ -164,7 +164,7 @@ for (const occ of Object.values(occupations)) {
 console.log(`Generated occupations.json: ${occCount} occupations, ${taskCount} tasks`);
 console.log(`Generated skills.json: ${Object.keys(skillsData).length} skills`);
 
-const dist = { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, stays_with_you: 0 };
+const dist = { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, human_led: 0 };
 for (const occ of Object.values(occupations)) {
   for (const cat of Object.keys(dist)) {
     dist[cat] += occ.summary[cat];

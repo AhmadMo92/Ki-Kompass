@@ -32,7 +32,7 @@ export function DonutChart({ percentages, centerLabel, centerValue, size = 280, 
     }).filter(Boolean);
   }, [percentages]);
 
-  const humanLedPct = (percentages.stays_with_you || 0) + (percentages.ai_assisted || 0);
+  const humanLedPct = (percentages.human_led || 0) + (percentages.ai_assisted || 0);
 
   return (
     <div className="flex flex-col items-center gap-4" data-testid="donut-chart">

@@ -48,7 +48,7 @@ export function InsightCards({ percentages, sensitiveCount, language }: InsightC
     });
   }
 
-  if ((percentages.stays_with_you || 0) > 50) {
+  if ((percentages.human_led || 0) > 50) {
     cards.push({
       icon: <Heart className="w-5 h-5" />,
       emoji: "🟢",

@@ -52,7 +52,7 @@ export function SectorComparison({ occupationPercentages, sector, occupationName
     high_ai_potential: sectorAvg.high_ai_potential * 100,
     sensitive: sectorAvg.sensitive * 100,
     ai_assisted: sectorAvg.ai_assisted * 100,
-    stays_with_you: sectorAvg.stays_with_you * 100,
+    human_led: sectorAvg.human_led * 100,
   };
 
   const sectorLabel = SECTOR_LABELS[sector] || { de: sector, en: sector };

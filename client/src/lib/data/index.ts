@@ -1,7 +1,7 @@
 import occupationsData from "./occupations.json";
 import skillsData from "./skills.json";
 
-export type CategoryLabel = "automatable" | "high_ai_potential" | "sensitive" | "ai_assisted" | "stays_with_you";
+export type CategoryLabel = "automatable" | "high_ai_potential" | "sensitive" | "ai_assisted" | "human_led";
 
 export type SkillCategory = "cognitive" | "social" | "digital" | "operational" | "domain" | "technical";
 
@@ -28,7 +28,7 @@ export interface OccupationSummary {
   high_ai_potential: number;
   sensitive: number;
   ai_assisted: number;
-  stays_with_you: number;
+  human_led: number;
 }
 
 export interface Occupation {
@@ -91,7 +91,7 @@ export const CATEGORIES: Record<CategoryLabel, {
     message_en: "AI helps you, you lead",
     order: 4
   },
-  stays_with_you: {
+  human_led: {
     label_de: "Menschlich geführt",
     label_en: "Human Led",
     color: "#43A047",
@@ -113,17 +113,17 @@ export const SKILL_CATEGORY_META: Record<SkillCategory, { label_en: string; labe
 };
 
 export const CATEGORY_ORDER: CategoryLabel[] = [
-  "automatable", "high_ai_potential", "sensitive", "ai_assisted", "stays_with_you"
+  "automatable", "high_ai_potential", "sensitive", "ai_assisted", "human_led"
 ];
 
 export const SECTOR_AVERAGES: Record<string, Record<CategoryLabel, number>> = {
-  tech:       { automatable: 0.11, high_ai_potential: 0.28, sensitive: 0.00, ai_assisted: 0.43, stays_with_you: 0.18 },
-  health:     { automatable: 0.05, high_ai_potential: 0.09, sensitive: 0.05, ai_assisted: 0.31, stays_with_you: 0.50 },
-  finance:    { automatable: 0.09, high_ai_potential: 0.20, sensitive: 0.07, ai_assisted: 0.41, stays_with_you: 0.23 },
-  law:        { automatable: 0.05, high_ai_potential: 0.13, sensitive: 0.10, ai_assisted: 0.39, stays_with_you: 0.33 },
-  marketing:  { automatable: 0.05, high_ai_potential: 0.22, sensitive: 0.00, ai_assisted: 0.53, stays_with_you: 0.19 },
-  management: { automatable: 0.02, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.57, stays_with_you: 0.29 },
-  other:      { automatable: 0.04, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.46, stays_with_you: 0.38 },
+  tech:       { automatable: 0.11, high_ai_potential: 0.28, sensitive: 0.00, ai_assisted: 0.42, human_led: 0.19 },
+  health:     { automatable: 0.05, high_ai_potential: 0.09, sensitive: 0.05, ai_assisted: 0.31, human_led: 0.51 },
+  finance:    { automatable: 0.09, high_ai_potential: 0.20, sensitive: 0.07, ai_assisted: 0.39, human_led: 0.25 },
+  law:        { automatable: 0.05, high_ai_potential: 0.13, sensitive: 0.10, ai_assisted: 0.36, human_led: 0.36 },
+  marketing:  { automatable: 0.05, high_ai_potential: 0.22, sensitive: 0.00, ai_assisted: 0.51, human_led: 0.22 },
+  management: { automatable: 0.02, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.52, human_led: 0.35 },
+  other:      { automatable: 0.04, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.44, human_led: 0.40 },
 };
 
 export function getOccupationList(): { key: string; name_en: string; name_de: string; sector: string }[] {
@@ -151,7 +151,7 @@ export function getOccupationSkillProfile(occupationKey: string): { skill: Skill
   for (const task of occ.tasks) {
     for (const sid of task.skills) {
       if (!skillCounts[sid]) {
-        skillCounts[sid] = { count: 0, byLabel: { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, stays_with_you: 0 } };
+        skillCounts[sid] = { count: 0, byLabel: { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, human_led: 0 } };
       }
       skillCounts[sid].count++;
       skillCounts[sid].byLabel[task.label]++;
@@ -189,21 +189,21 @@ export function searchOccupations(query: string, language: "en" | "de" = "de", l
 
 export function calculatePercentages(summary: OccupationSummary): Record<CategoryLabel, number> {
   const total = summary.total;
-  if (total === 0) return { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, stays_with_you: 0 };
+  if (total === 0) return { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, human_led: 0 };
   return {
     automatable: (summary.automatable / total) * 100,
     high_ai_potential: (summary.high_ai_potential / total) * 100,
     sensitive: (summary.sensitive / total) * 100,
     ai_assisted: (summary.ai_assisted / total) * 100,
-    stays_with_you: (summary.stays_with_you / total) * 100,
+    human_led: (summary.human_led / total) * 100,
   };
 }
 
 export function calculateFromTasks(tasks: TaskItem[]): Record<CategoryLabel, number> {
   const total = tasks.length;
-  if (total === 0) return { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, stays_with_you: 0 };
+  if (total === 0) return { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, human_led: 0 };
 
-  const counts: Record<CategoryLabel, number> = { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, stays_with_you: 0 };
+  const counts: Record<CategoryLabel, number> = { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, human_led: 0 };
   for (const t of tasks) {
     if (counts[t.label] !== undefined) counts[t.label]++;
   }
@@ -213,7 +213,7 @@ export function calculateFromTasks(tasks: TaskItem[]): Record<CategoryLabel, num
     high_ai_potential: (counts.high_ai_potential / total) * 100,
     sensitive: (counts.sensitive / total) * 100,
     ai_assisted: (counts.ai_assisted / total) * 100,
-    stays_with_you: (counts.stays_with_you / total) * 100,
+    human_led: (counts.human_led / total) * 100,
   };
 }
 

@@ -93,10 +93,10 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
     high_ai_potential: sectorAvg.high_ai_potential * 100,
     sensitive: sectorAvg.sensitive * 100,
     ai_assisted: sectorAvg.ai_assisted * 100,
-    stays_with_you: sectorAvg.stays_with_you * 100,
+    human_led: sectorAvg.human_led * 100,
   } : null;
 
-  const humanLedPct = (displayPercentages.stays_with_you || 0) + (displayPercentages.ai_assisted || 0);
+  const humanLedPct = (displayPercentages.human_led || 0) + (displayPercentages.ai_assisted || 0);
 
   return (
     <div className="space-y-4" data-testid="occupation-dashboard">

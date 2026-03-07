@@ -89,7 +89,7 @@ export function SkillTaskExplorer({
   };
 
   const grouped: Record<CategoryLabel, TaskItem[]> = {
-    automatable: [], high_ai_potential: [], sensitive: [], ai_assisted: [], stays_with_you: []
+    automatable: [], high_ai_potential: [], sensitive: [], ai_assisted: [], human_led: []
   };
   for (const task of tasks) {
     if (grouped[task.label]) grouped[task.label].push(task);
