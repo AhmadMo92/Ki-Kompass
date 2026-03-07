@@ -20,11 +20,11 @@ interface OccupationDashboardProps {
 }
 
 function RadarChart({ profile, language, size = 200 }: {
-  profile: { category: SkillCategory; count: number; pct: number }[];
+  profile: { category: SkillCategory; count: number; pct: number; rawPct: number }[];
   language: "en" | "de";
   size?: number;
 }) {
-  const cx = size / 2, cy = size / 2, r = size * 0.38;
+  const cx = size / 2, cy = size / 2, r = size * 0.34;
   const n = profile.length;
   const angleStep = (2 * Math.PI) / n;
 
@@ -35,12 +35,11 @@ function RadarChart({ profile, language, size = 200 }: {
 
   const rings = [0.25, 0.5, 0.75, 1.0];
   const dataPoints = profile.map((p, i) => getPoint(i, p.pct));
-  const dataPath = dataPoints.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x},${p.y}`).join(' ') + 'Z';
 
   return (
     <svg viewBox={`0 0 ${size} ${size}`} className="w-full h-full" data-testid="radar-chart">
       {rings.map(s => (
-        <polygon key={s} fill="none" stroke="#e2e8f0" strokeWidth={s === 1 ? 1 : 0.5}
+        <polygon key={s} fill={s === 0.25 ? "#f8fafc" : "none"} stroke="#e2e8f0" strokeWidth={s === 1 ? 1 : 0.5}
           points={Array.from({ length: n }, (_, i) => {
             const p = getPoint(i, s);
             return `${p.x},${p.y}`;
@@ -50,23 +49,35 @@ function RadarChart({ profile, language, size = 200 }: {
         const end = getPoint(i, 1);
         return <line key={i} x1={cx} y1={cy} x2={end.x} y2={end.y} stroke="#e2e8f0" strokeWidth={0.5} />;
       })}
-      <polygon fill="hsl(210, 70%, 50%)" fillOpacity={0.15} stroke="hsl(210, 70%, 50%)" strokeWidth={1.5}
+      <defs>
+        <linearGradient id="radarFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="hsl(210, 70%, 50%)" stopOpacity={0.25} />
+          <stop offset="100%" stopColor="hsl(210, 70%, 50%)" stopOpacity={0.05} />
+        </linearGradient>
+      </defs>
+      <polygon fill="url(#radarFill)" stroke="hsl(210, 70%, 50%)" strokeWidth={1.5}
         points={dataPoints.map(p => `${p.x},${p.y}`).join(' ')} />
       {profile.map((p, i) => {
         const pt = getPoint(i, p.pct);
         const meta = SKILL_CATEGORY_META[p.category];
-        return <circle key={i} cx={pt.x} cy={pt.y} r={3.5} fill={meta.color} stroke="white" strokeWidth={1.5} />;
+        return <circle key={i} cx={pt.x} cy={pt.y} r={4} fill={meta.color} stroke="white" strokeWidth={2} />;
       })}
       {profile.map((p, i) => {
-        const labelR = r * 1.18;
+        const labelR = r * 1.25;
         const lx = cx + labelR * Math.sin(i * angleStep);
         const ly = cy - labelR * Math.cos(i * angleStep);
         const meta = SKILL_CATEGORY_META[p.category];
         return (
-          <text key={`label-${i}`} x={lx} y={ly} textAnchor="middle" dominantBaseline="middle"
-            fill={meta.color} fontSize={8} fontWeight={600}>
-            {language === "de" ? meta.label_de : meta.label_en}
-          </text>
+          <g key={`label-${i}`}>
+            <text x={lx} y={ly - 4} textAnchor="middle" dominantBaseline="middle"
+              fill={meta.color} fontSize={7.5} fontWeight={600}>
+              {language === "de" ? meta.label_de : meta.label_en}
+            </text>
+            <text x={lx} y={ly + 5} textAnchor="middle" dominantBaseline="middle"
+              fill={meta.color} fontSize={7} fontWeight={400} opacity={0.7}>
+              {p.rawPct}%
+            </text>
+          </g>
         );
       })}
     </svg>
@@ -98,12 +109,18 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
     for (const s of profile) {
       cats[s.skill.category] += s.count;
     }
-    const max = Math.max(...Object.values(cats), 1);
-    return (Object.entries(cats) as [SkillCategory, number][]).map(([category, count]) => ({
-      category,
-      count,
-      pct: count / max,
-    }));
+    const total = Math.max(Object.values(cats).reduce((a, b) => a + b, 0), 1);
+    const evenShare = 100 / 6;
+    return (Object.entries(cats) as [SkillCategory, number][]).map(([category, count]) => {
+      const pctOfTotal = (count / total) * 100;
+      const ratio = pctOfTotal / evenShare;
+      return {
+        category,
+        count,
+        pct: Math.min(ratio / 3, 1),
+        rawPct: Math.round(pctOfTotal),
+      };
+    });
   }, [profile]);
 
   const skillTaskMap = useMemo(() => {
