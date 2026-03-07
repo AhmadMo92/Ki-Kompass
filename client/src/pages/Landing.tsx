@@ -23,11 +23,11 @@ const JOURNEY_STEPS = [
     num: "02",
     title: "Analyze",
     subtitle: "Map your skills & tools",
-    description: "Dive into your 118-competency skill profile. See which skills connect to AI tools and where human judgment stays essential.",
+    description: "Dive into your 400+ competency skill profile. See which skills connect to AI tools and where human judgment stays essential.",
     color: "#0891B2",
     bg: "#ECFEFF",
     icon: Layers,
-    keywords: ["118 skills", "6 domains", "Radar chart"],
+    keywords: ["400+ skills", "6 domains", "Radar chart"],
   },
   {
     num: "03",
@@ -57,7 +57,7 @@ const FEATURES = [
   { icon: Shield, label: "Regulation Built In", color: "#10B981" },
   { icon: Users, label: "522 Occupations", color: "#0891B2" },
   { icon: Bot, label: "AI Tools Layer", color: "#7C3AED" },
-  { icon: BookOpen, label: "118 Competencies", color: "#EC4899" },
+  { icon: BookOpen, label: "400+ Competencies", color: "#EC4899" },
 ];
 
 function DashboardSnapshot() {
@@ -109,7 +109,7 @@ function DashboardSnapshot() {
         <div className="grid grid-cols-4 gap-3 p-5 pb-3">
           {[
             { label: "Tasks", value: "5,885", color: "#6366F1" },
-            { label: "Skills", value: "118", color: "#0891B2" },
+            { label: "Skills", value: "400+", color: "#0891B2" },
             { label: "AI Tools", value: "25", color: "#7C3AED" },
             { label: "Sectors", value: "7", color: "#10B981" },
           ].map((stat, i) => (
@@ -416,7 +416,7 @@ export default function Landing() {
                 <div className="grid grid-cols-2 gap-3 mb-3">
                   {[
                     { label: "Tasks", value: "5,885", color: "#6366F1" },
-                    { label: "Skills", value: "118", color: "#0891B2" },
+                    { label: "Skills", value: "400+", color: "#0891B2" },
                     { label: "AI Tools", value: "25", color: "#7C3AED" },
                     { label: "Sectors", value: "7", color: "#10B981" },
                   ].map((stat, i) => (

@@ -5,11 +5,11 @@ import {
   CATEGORIES, CATEGORY_ORDER, SKILL_CATEGORY_META,
   CategoryLabel, skills, getOccupationSkillProfile,
   calculatePercentages, calculateFromTasks, Occupation,
-  SECTOR_AVERAGES, SkillCategory
+  SECTOR_AVERAGES, SkillCategory, TaskItem
 } from "@/lib/data";
 import {
   Brain, X, Zap, Building2, RotateCcw,
-  Sparkles, ChevronDown, ChevronUp
+  Sparkles, ChevronDown, ChevronUp, Plus
 } from "lucide-react";
 import { AIToolsMap } from "./AIToolsMap";
 
@@ -93,14 +93,20 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
   const [showAllSkills, setShowAllSkills] = useState(false);
   const [activeCategory, setActiveCategory] = useState<CategoryLabel | null>(null);
   const [expandedCats, setExpandedCats] = useState<Set<CategoryLabel>>(new Set(CATEGORY_ORDER));
+  const [customTasks, setCustomTasks] = useState<TaskItem[]>([]);
+  const [showAddTask, setShowAddTask] = useState(false);
+  const [newTaskText, setNewTaskText] = useState("");
+  const [newTaskLabel, setNewTaskLabel] = useState<CategoryLabel>("ai_assisted");
   const skillBarRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  const allTasks = useMemo(() => [...occupation.tasks, ...customTasks], [occupation.tasks, customTasks]);
 
   const profile = useMemo(() => getOccupationSkillProfile(occupationKey), [occupationKey]);
   const typicalPercentages = useMemo(() => calculatePercentages(occupation.summary), [occupation.summary]);
 
   const activeTasks = useMemo(() =>
-    occupation.tasks.filter(t => !deselectedTasks.has(t.id)),
-    [occupation.tasks, deselectedTasks]
+    allTasks.filter(t => !deselectedTasks.has(t.id)),
+    [allTasks, deselectedTasks]
   );
   const personalPercentages = useMemo(() => calculateFromTasks(activeTasks), [activeTasks]);
   const displayPercentages = showPersonalized ? personalPercentages : typicalPercentages;
@@ -126,14 +132,14 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
 
   const skillTaskMap = useMemo(() => {
     const map: Record<string, Set<string>> = {};
-    for (const t of occupation.tasks) {
+    for (const t of allTasks) {
       for (const sid of (t.skills || [])) {
         if (!map[sid]) map[sid] = new Set();
         map[sid].add(t.id);
       }
     }
     return map;
-  }, [occupation.tasks]);
+  }, [allTasks]);
 
   const highlightSkill = activeSkill || hoveredSkill;
   const matchedTaskIds = useMemo(() => {
@@ -166,6 +172,27 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 50);
   }, [handleSkillClick]);
+
+  const addCustomTask = useCallback(() => {
+    const text = newTaskText.trim();
+    if (!text) return;
+    const task: TaskItem = {
+      id: `custom-${Date.now()}`,
+      text_en: text,
+      text_de: text,
+      label: newTaskLabel,
+      score: 0.5,
+      skills: [],
+    };
+    setCustomTasks(prev => [...prev, task]);
+    setNewTaskText("");
+    setShowAddTask(false);
+    if (!showPersonalized) setShowPersonalized(true);
+  }, [newTaskText, newTaskLabel, showPersonalized]);
+
+  const removeCustomTask = useCallback((taskId: string) => {
+    setCustomTasks(prev => prev.filter(t => t.id !== taskId));
+  }, []);
 
   const toggleCatExpand = useCallback((cat: CategoryLabel) => {
     setExpandedCats(prev => {
@@ -202,7 +229,7 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
           <p className="text-muted-foreground flex items-center gap-2 mt-0.5 text-sm">
             <Building2 className="w-3.5 h-3.5" />
             {occupation.sector}
-            <span className="text-xs">• {occupation.summary.total} {language === "de" ? "Aufgaben" : "tasks"}</span>
+            <span className="text-xs">• {occupation.summary.total + customTasks.length} {language === "de" ? "Aufgaben" : "tasks"}{customTasks.length > 0 ? ` (+${customTasks.length})` : ''}</span>
             <span className="text-xs">• {profile.length} {language === "de" ? "Kompetenzen" : "skills"}</span>
           </p>
         </div>
@@ -216,7 +243,7 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
           )}
           {showPersonalized && (
             <Button size="sm" variant="outline" className="gap-1 text-xs"
-              onClick={() => { setShowPersonalized(false); setDeselectedTasks(new Set()); }}>
+              onClick={() => { setShowPersonalized(false); setDeselectedTasks(new Set()); setCustomTasks([]); }}>
               <RotateCcw className="w-3 h-3" />
               {language === "de" ? "Zurücksetzen" : "Reset"}
             </Button>
@@ -433,10 +460,68 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
                 {language === "de" ? "Filter löschen" : "Clear filter"}
               </button>
             )}
+            <button
+              onClick={() => setShowAddTask(!showAddTask)}
+              className="flex items-center gap-1 text-[10px] font-medium text-indigo-600 hover:text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1 rounded-full transition-colors"
+              data-testid="add-task-btn"
+            >
+              <Plus className="w-3 h-3" />
+              {language === "de" ? "Aufgabe" : "Task"}
+            </button>
           </div>
+
+          {showAddTask && (
+            <div className="px-4 py-3 border-b border-border/30 bg-indigo-50/30 animate-in fade-in slide-in-from-top-2 duration-200" data-testid="add-task-form">
+              <div className="flex gap-2 mb-2">
+                <input
+                  type="text"
+                  value={newTaskText}
+                  onChange={(e) => setNewTaskText(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && addCustomTask()}
+                  placeholder={language === "de" ? "Neue Aufgabe beschreiben..." : "Describe a new task..."}
+                  className="flex-1 text-xs bg-white border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300 placeholder:text-slate-300"
+                  data-testid="add-task-input"
+                  autoFocus
+                />
+                <button
+                  onClick={addCustomTask}
+                  disabled={!newTaskText.trim()}
+                  className="px-3 py-2 text-xs font-medium bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  data-testid="add-task-submit"
+                >
+                  {language === "de" ? "Hinzufügen" : "Add"}
+                </button>
+                <button onClick={() => setShowAddTask(false)}
+                  className="p-2 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-white/60">
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              </div>
+              <div className="flex gap-1 flex-wrap">
+                {CATEGORY_ORDER.map(cat => (
+                  <button
+                    key={cat}
+                    onClick={() => setNewTaskLabel(cat)}
+                    className={`text-[9px] font-medium px-2 py-0.5 rounded-full border transition-all ${
+                      newTaskLabel === cat ? 'ring-1 shadow-sm' : 'opacity-50 hover:opacity-80'
+                    }`}
+                    style={{
+                      backgroundColor: CATEGORIES[cat].bg,
+                      color: CATEGORIES[cat].color,
+                      borderColor: newTaskLabel === cat ? CATEGORIES[cat].color : CATEGORIES[cat].color + '30',
+                      ringColor: CATEGORIES[cat].color,
+                    }}
+                    data-testid={`add-task-label-${cat}`}
+                  >
+                    {CATEGORIES[cat].emoji} {language === "de" ? CATEGORIES[cat].label_de : CATEGORIES[cat].label_en}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 380px)', minHeight: 350 }}>
             {CATEGORY_ORDER.map(cat => {
-              const catTasks = occupation.tasks.filter(t => t.label === cat);
+              const catTasks = allTasks.filter(t => t.label === cat);
               if (catTasks.length === 0) return null;
               const catConfig = CATEGORIES[cat];
               const isCatDimmed = activeCategory && activeCategory !== cat;
@@ -481,6 +566,18 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
                             } ${isMatched ? 'font-medium text-slate-900' : ''}`}>
                               {language === "de" ? task.text_de : task.text_en}
                             </span>
+                            {task.id.startsWith('custom-') && (
+                              <span className="inline-flex items-center gap-1 ml-1.5 align-middle">
+                                <span className="text-[8px] font-semibold text-indigo-500 bg-indigo-50 px-1.5 py-0.5 rounded-full border border-indigo-100">
+                                  {language === "de" ? "Eigene" : "Custom"}
+                                </span>
+                                <button onClick={(e) => { e.stopPropagation(); removeCustomTask(task.id); }}
+                                  className="w-4 h-4 rounded-full bg-red-50 hover:bg-red-100 flex items-center justify-center transition-colors"
+                                  data-testid={`remove-custom-task-${task.id}`}>
+                                  <X className="w-2.5 h-2.5 text-red-400" />
+                                </button>
+                              </span>
+                            )}
                             {taskSkills.length > 0 && (
                               <div className="flex flex-wrap gap-0.5 mt-1">
                                 {taskSkills.map(sid => {
@@ -647,7 +744,7 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
         </div>
       </div>
 
-      <AIToolsMap tasks={occupation.tasks} language={language} />
+      <AIToolsMap tasks={allTasks} language={language} />
     </div>
   );
 }
