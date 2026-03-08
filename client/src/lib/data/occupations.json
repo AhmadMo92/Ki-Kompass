@@ -76354,7 +76354,7 @@
         "id": "MOD_0005",
         "text_de": "Finanzberichte prüfen und die Unternehmensleistung überwachen.",
         "text_en": "Review financial reports and oversee company performance.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -76366,7 +76366,7 @@
         "id": "MOD_0006",
         "text_de": "Die Einhaltung gesetzlicher und regulatorischer Vorgaben sicherstellen.",
         "text_en": "Ensure compliance with legal and regulatory requirements.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DOM-002",
@@ -76497,9 +76497,9 @@
     "summary": {
       "total": 12,
       "automatable": 0,
-      "high_ai_potential": 2,
+      "high_ai_potential": 0,
       "sensitive": 0,
-      "ai_assisted": 4,
+      "ai_assisted": 6,
       "human_led": 6
     }
   },
@@ -76507,6 +76507,42 @@
     "occupation_de": "Marketingleiter/in (CMO)",
     "sector": "marketing",
     "tasks": [
+      {
+        "id": "MOD_0013",
+        "text_de": "Das Marketingbudget verwalten und Ressourcen auf Kanäle verteilen.",
+        "text_en": "Manage the marketing budget and allocate resources across channels.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-004",
+          "SK-COG-012",
+          "SK-COG-017"
+        ]
+      },
+      {
+        "id": "MOD_0015",
+        "text_de": "Markttrends, Kundenerkenntnisse und Wettbewerbslandschaft analysieren.",
+        "text_en": "Analyze market trends, customer insights, and competitive landscape.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-001",
+          "SK-COG-006",
+          "SK-COG-008"
+        ]
+      },
+      {
+        "id": "MOD_0022",
+        "text_de": "KPIs definieren und die Wirksamkeit des Marketings messen.",
+        "text_en": "Define key performance indicators and track marketing effectiveness.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-006",
+          "SK-COG-001",
+          "SK-COG-013"
+        ]
+      },
       {
         "id": "MOD_0023",
         "text_de": "Markenkonsistenz über alle Berührungspunkte sicherstellen.",
@@ -76614,48 +76650,12 @@
           "SK-SOC-021",
           "SK-OPS-006"
         ]
-      },
-      {
-        "id": "MOD_0013",
-        "text_de": "Das Marketingbudget verwalten und Ressourcen auf Kanäle verteilen.",
-        "text_en": "Manage the marketing budget and allocate resources across channels.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-004",
-          "SK-COG-012",
-          "SK-COG-017"
-        ]
-      },
-      {
-        "id": "MOD_0015",
-        "text_de": "Markttrends, Kundenerkenntnisse und Wettbewerbslandschaft analysieren.",
-        "text_en": "Analyze market trends, customer insights, and competitive landscape.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-001",
-          "SK-COG-006",
-          "SK-COG-008"
-        ]
-      },
-      {
-        "id": "MOD_0022",
-        "text_de": "KPIs definieren und die Wirksamkeit des Marketings messen.",
-        "text_en": "Define key performance indicators and track marketing effectiveness.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-006",
-          "SK-COG-001",
-          "SK-COG-013"
-        ]
       }
     ],
     "summary": {
       "total": 12,
-      "automatable": 3,
-      "high_ai_potential": 0,
+      "automatable": 0,
+      "high_ai_potential": 3,
       "sensitive": 0,
       "ai_assisted": 5,
       "human_led": 4
@@ -76666,10 +76666,34 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0035",
+        "text_de": "Technische Schulden und Systemmodernisierung steuern.",
+        "text_en": "Manage technical debt and system modernization.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-004",
+          "SK-COG-013",
+          "SK-COG-002"
+        ]
+      },
+      {
+        "id": "MOD_0025",
+        "text_de": "Technologien, Plattformen und Architekturen bewerten und auswählen.",
+        "text_en": "Evaluate and select technologies, platforms, and architectures.",
+        "label": "ai_assisted",
+        "score": 5,
+        "skills": [
+          "SK-COG-001",
+          "SK-COG-004",
+          "SK-COG-013"
+        ]
+      },
+      {
         "id": "MOD_0027",
         "text_de": "Softwareentwicklungsprozesse und Qualitätsstandards verantworten.",
         "text_en": "Oversee software development processes and quality standards.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-OPS-001",
@@ -76681,7 +76705,7 @@
         "id": "MOD_0028",
         "text_de": "Systemsicherheit, Skalierbarkeit und Zuverlässigkeit gewährleisten.",
         "text_en": "Ensure system security, scalability, and reliability.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-010",
@@ -76693,7 +76717,7 @@
         "id": "MOD_0034",
         "text_de": "Dateninfrastruktur und Cloud-Architektur verantworten.",
         "text_en": "Oversee data infrastructure and cloud architecture.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DIG-011",
@@ -76784,38 +76808,14 @@
           "SK-COG-004",
           "SK-COG-003"
         ]
-      },
-      {
-        "id": "MOD_0025",
-        "text_de": "Technologien, Plattformen und Architekturen bewerten und auswählen.",
-        "text_en": "Evaluate and select technologies, platforms, and architectures.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-001",
-          "SK-COG-004",
-          "SK-COG-013"
-        ]
-      },
-      {
-        "id": "MOD_0035",
-        "text_de": "Technische Schulden und Systemmodernisierung steuern.",
-        "text_en": "Manage technical debt and system modernization.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-004",
-          "SK-COG-013",
-          "SK-COG-002"
-        ]
       }
     ],
     "summary": {
       "total": 12,
-      "automatable": 2,
-      "high_ai_potential": 3,
+      "automatable": 0,
+      "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 2,
+      "ai_assisted": 6,
       "human_led": 5
     }
   },
@@ -76824,10 +76824,46 @@
     "sector": "finance",
     "tasks": [
       {
+        "id": "MOD_0042",
+        "text_de": "Debitoren, Kreditoren und Lohnbuchhaltung überwachen.",
+        "text_en": "Oversee accounts payable, receivable, and payroll operations.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-COG-007",
+          "SK-OPS-009",
+          "SK-COG-004"
+        ]
+      },
+      {
+        "id": "MOD_0045",
+        "text_de": "Due Diligence und Transaktionsstrukturierung bei M&A unterstützen.",
+        "text_en": "Support M&A due diligence and deal structuring.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-001",
+          "SK-COG-007",
+          "SK-COG-010"
+        ]
+      },
+      {
+        "id": "MOD_0046",
+        "text_de": "Finanzsysteme und Reporting-Tools einführen.",
+        "text_en": "Implement financial systems and reporting tools.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-013",
+          "SK-DIG-015",
+          "SK-DIG-009"
+        ]
+      },
+      {
         "id": "MOD_0036",
         "text_de": "Finanzplanung, Budgetierung und Prognosen verantworten.",
         "text_en": "Oversee financial planning, budgeting, and forecasting.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-017",
@@ -76839,7 +76875,7 @@
         "id": "MOD_0038",
         "text_de": "Cashflow, Kapitalstruktur und Finanzierungsstrategien steuern.",
         "text_en": "Manage cash flow, capital structure, and funding strategies.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-004",
@@ -76851,7 +76887,7 @@
         "id": "MOD_0039",
         "text_de": "Die Einhaltung steuerlicher Vorschriften und Bilanzstandards sicherstellen.",
         "text_en": "Ensure compliance with tax regulations and accounting standards.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DOM-002",
@@ -76930,50 +76966,14 @@
           "SK-COG-012",
           "SK-COG-004"
         ]
-      },
-      {
-        "id": "MOD_0042",
-        "text_de": "Debitoren, Kreditoren und Lohnbuchhaltung überwachen.",
-        "text_en": "Oversee accounts payable, receivable, and payroll operations.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-COG-007",
-          "SK-OPS-009",
-          "SK-COG-004"
-        ]
-      },
-      {
-        "id": "MOD_0045",
-        "text_de": "Due Diligence und Transaktionsstrukturierung bei M&A unterstützen.",
-        "text_en": "Support M&A due diligence and deal structuring.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-001",
-          "SK-COG-007",
-          "SK-COG-010"
-        ]
-      },
-      {
-        "id": "MOD_0046",
-        "text_de": "Finanzsysteme und Reporting-Tools einführen.",
-        "text_en": "Implement financial systems and reporting tools.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-013",
-          "SK-DIG-015",
-          "SK-DIG-009"
-        ]
       }
     ],
     "summary": {
       "total": 12,
-      "automatable": 3,
+      "automatable": 0,
       "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 2,
+      "ai_assisted": 5,
       "human_led": 4
     }
   },
@@ -76982,10 +76982,34 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0071",
+        "text_de": "Wireframes, Prototypen und hochwertige Mockups erstellen.",
+        "text_en": "Create wireframes, prototypes, and high-fidelity mockups.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-COG-005",
+          "SK-DIG-008",
+          "SK-COG-021"
+        ]
+      },
+      {
+        "id": "MOD_0076",
+        "text_de": "Informationsarchitektur und Navigationsstrukturen erstellen.",
+        "text_en": "Create information architecture and navigation structures.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-COG-005",
+          "SK-COG-003",
+          "SK-COG-001"
+        ]
+      },
+      {
         "id": "MOD_0073",
         "text_de": "Design-Systeme und Komponentenbibliotheken aufbauen und pflegen.",
         "text_en": "Build and maintain design systems and component libraries.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-005",
@@ -76997,7 +77021,7 @@
         "id": "MOD_0075",
         "text_de": "Nutzerflüsse analysieren und Usability-Probleme identifizieren.",
         "text_en": "Analyze user flows and identify usability issues.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -77009,7 +77033,7 @@
         "id": "MOD_0080",
         "text_de": "Interaktive Prototypen zur Nutzervalidierung erstellen.",
         "text_en": "Create interactive prototypes for user validation.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-005",
@@ -77087,38 +77111,14 @@
           "SK-COG-001",
           "SK-COG-005"
         ]
-      },
-      {
-        "id": "MOD_0071",
-        "text_de": "Wireframes, Prototypen und hochwertige Mockups erstellen.",
-        "text_en": "Create wireframes, prototypes, and high-fidelity mockups.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-COG-005",
-          "SK-DIG-008",
-          "SK-COG-021"
-        ]
-      },
-      {
-        "id": "MOD_0076",
-        "text_de": "Informationsarchitektur und Navigationsstrukturen erstellen.",
-        "text_en": "Create information architecture and navigation structures.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-COG-005",
-          "SK-COG-003",
-          "SK-COG-001"
-        ]
       }
     ],
     "summary": {
       "total": 11,
-      "automatable": 3,
-      "high_ai_potential": 3,
+      "automatable": 1,
+      "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 2,
+      "ai_assisted": 5,
       "human_led": 3
     }
   },
@@ -77127,10 +77127,46 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0081",
+        "text_de": "Machine-Learning-Modelle entwerfen, trainieren und optimieren.",
+        "text_en": "Design, train, and optimize machine learning models.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-COG-006",
+          "SK-DIG-001"
+        ]
+      },
+      {
+        "id": "MOD_0083",
+        "text_de": "ML-Modelle in Produktionsumgebungen bereitstellen.",
+        "text_en": "Deploy ML models to production environments.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-DIG-001",
+          "SK-DIG-004"
+        ]
+      },
+      {
+        "id": "MOD_0089",
+        "text_de": "Modell-Inferenzgeschwindigkeit und Ressourcenverbrauch optimieren.",
+        "text_en": "Optimize model inference speed and resource usage.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-COG-006",
+          "SK-DIG-015"
+        ]
+      },
+      {
         "id": "MOD_0084",
         "text_de": "Modellleistung überwachen und bei Bedarf nachtrainieren.",
         "text_en": "Monitor model performance and retrain when needed.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-006",
@@ -77231,50 +77267,14 @@
           "SK-COG-014",
           "SK-SOC-002"
         ]
-      },
-      {
-        "id": "MOD_0081",
-        "text_de": "Machine-Learning-Modelle entwerfen, trainieren und optimieren.",
-        "text_en": "Design, train, and optimize machine learning models.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-COG-006",
-          "SK-DIG-001"
-        ]
-      },
-      {
-        "id": "MOD_0083",
-        "text_de": "ML-Modelle in Produktionsumgebungen bereitstellen.",
-        "text_en": "Deploy ML models to production environments.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-DIG-001",
-          "SK-DIG-004"
-        ]
-      },
-      {
-        "id": "MOD_0089",
-        "text_de": "Modell-Inferenzgeschwindigkeit und Ressourcenverbrauch optimieren.",
-        "text_en": "Optimize model inference speed and resource usage.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-COG-006",
-          "SK-DIG-015"
-        ]
       }
     ],
     "summary": {
       "total": 12,
-      "automatable": 8,
-      "high_ai_potential": 1,
+      "automatable": 5,
+      "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 2,
+      "ai_assisted": 3,
       "human_led": 1
     }
   },
@@ -77283,10 +77283,57 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0093",
+        "text_de": "Responsive Benutzeroberflächen mit HTML, CSS und JavaScript entwickeln.",
+        "text_en": "Build responsive user interfaces using HTML, CSS, and JavaScript.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-DIG-001",
+          "SK-COG-005",
+          "SK-COG-002"
+        ]
+      },
+      {
+        "id": "MOD_0095",
+        "text_de": "Webanwendungen für Leistung und Ladegeschwindigkeit optimieren.",
+        "text_en": "Optimize web applications for performance and loading speed.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-DIG-001",
+          "SK-COG-013"
+        ]
+      },
+      {
+        "id": "MOD_0099",
+        "text_de": "Frontend-Anwendungen mit Backend-APIs integrieren.",
+        "text_en": "Integrate frontend applications with backend APIs.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-DIG-001",
+          "SK-COG-002"
+        ]
+      },
+      {
+        "id": "MOD_0102",
+        "text_de": "Von Nutzern gemeldete Frontend-Probleme debuggen und beheben.",
+        "text_en": "Debug and fix frontend issues reported by users.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-DIG-001",
+          "SK-COG-001"
+        ]
+      },
+      {
         "id": "MOD_0094",
         "text_de": "UI-Komponenten auf Basis von Designvorgaben umsetzen.",
         "text_en": "Implement UI components based on design specifications.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DIG-001",
@@ -77297,7 +77344,7 @@
         "id": "MOD_0100",
         "text_de": "State und Datenfluss in komplexen Webanwendungen verwalten.",
         "text_en": "Manage state and data flow in complex web applications.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DIG-001",
@@ -77364,61 +77411,14 @@
           "SK-COG-002",
           "SK-COG-001"
         ]
-      },
-      {
-        "id": "MOD_0093",
-        "text_de": "Responsive Benutzeroberflächen mit HTML, CSS und JavaScript entwickeln.",
-        "text_en": "Build responsive user interfaces using HTML, CSS, and JavaScript.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-DIG-001",
-          "SK-COG-005",
-          "SK-COG-002"
-        ]
-      },
-      {
-        "id": "MOD_0095",
-        "text_de": "Webanwendungen für Leistung und Ladegeschwindigkeit optimieren.",
-        "text_en": "Optimize web applications for performance and loading speed.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-DIG-001",
-          "SK-COG-013"
-        ]
-      },
-      {
-        "id": "MOD_0099",
-        "text_de": "Frontend-Anwendungen mit Backend-APIs integrieren.",
-        "text_en": "Integrate frontend applications with backend APIs.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-DIG-001",
-          "SK-COG-002"
-        ]
-      },
-      {
-        "id": "MOD_0102",
-        "text_de": "Von Nutzern gemeldete Frontend-Probleme debuggen und beheben.",
-        "text_en": "Debug and fix frontend issues reported by users.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-DIG-001",
-          "SK-COG-001"
-        ]
       }
     ],
     "summary": {
       "total": 11,
-      "automatable": 7,
-      "high_ai_potential": 2,
+      "automatable": 3,
+      "high_ai_potential": 4,
       "sensitive": 0,
-      "ai_assisted": 0,
+      "ai_assisted": 2,
       "human_led": 2
     }
   },
@@ -77427,10 +77427,46 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0104",
+        "text_de": "Serverseitige Anwendungslogik entwerfen und implementieren.",
+        "text_en": "Design and implement server-side application logic.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-DIG-001",
+          "SK-COG-002",
+          "SK-COG-001"
+        ]
+      },
+      {
+        "id": "MOD_0109",
+        "text_de": "Anwendungen bereitstellen und Serverinfrastruktur verwalten.",
+        "text_en": "Deploy applications and manage server infrastructure.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-DIG-004",
+          "SK-COG-002",
+          "SK-DIG-015"
+        ]
+      },
+      {
+        "id": "MOD_0110",
+        "text_de": "Anwendungsleistung überwachen und Engpässe beheben.",
+        "text_en": "Monitor application performance and resolve bottlenecks.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-COG-013",
+          "SK-DIG-001"
+        ]
+      },
+      {
         "id": "MOD_0113",
         "text_de": "Datenmigration und Systemintegrationsaufgaben durchführen.",
         "text_en": "Handle data migration and system integration tasks.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-002",
@@ -77520,50 +77556,14 @@
           "SK-TEC-005",
           "SK-SOC-002"
         ]
-      },
-      {
-        "id": "MOD_0104",
-        "text_de": "Serverseitige Anwendungslogik entwerfen und implementieren.",
-        "text_en": "Design and implement server-side application logic.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-DIG-001",
-          "SK-COG-002",
-          "SK-COG-001"
-        ]
-      },
-      {
-        "id": "MOD_0109",
-        "text_de": "Anwendungen bereitstellen und Serverinfrastruktur verwalten.",
-        "text_en": "Deploy applications and manage server infrastructure.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-DIG-004",
-          "SK-COG-002",
-          "SK-DIG-015"
-        ]
-      },
-      {
-        "id": "MOD_0110",
-        "text_de": "Anwendungsleistung überwachen und Engpässe beheben.",
-        "text_en": "Monitor application performance and resolve bottlenecks.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-COG-013",
-          "SK-DIG-001"
-        ]
       }
     ],
     "summary": {
       "total": 11,
-      "automatable": 8,
-      "high_ai_potential": 1,
+      "automatable": 5,
+      "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 0,
+      "ai_assisted": 1,
       "human_led": 2
     }
   },
@@ -77572,10 +77572,34 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0117",
+        "text_de": "Systemgesundheit, Verfügbarkeit und Leistungskennzahlen überwachen.",
+        "text_en": "Monitor system health, uptime, and performance metrics.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-COG-006",
+          "SK-DIG-004",
+          "SK-OPS-020"
+        ]
+      },
+      {
+        "id": "MOD_0118",
+        "text_de": "Container- und Orchestrierungslösungen implementieren.",
+        "text_en": "Implement containerization and orchestration solutions.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-DIG-004",
+          "SK-DIG-015",
+          "SK-COG-002"
+        ]
+      },
+      {
         "id": "MOD_0121",
         "text_de": "Auf Systemvorfälle reagieren und Ursachenanalysen durchführen.",
         "text_en": "Respond to system incidents and perform root cause analysis.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -77587,7 +77611,7 @@
         "id": "MOD_0122",
         "text_de": "Infrastrukturkosten und Ressourcenzuweisung optimieren.",
         "text_en": "Optimize infrastructure costs and resource allocation.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-002",
@@ -77599,7 +77623,7 @@
         "id": "MOD_0125",
         "text_de": "Disaster-Recovery-Verfahren planen und durchführen.",
         "text_en": "Plan and execute disaster recovery procedures.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-003",
@@ -77678,38 +77702,14 @@
           "SK-DIG-004",
           "SK-DOM-009"
         ]
-      },
-      {
-        "id": "MOD_0117",
-        "text_de": "Systemgesundheit, Verfügbarkeit und Leistungskennzahlen überwachen.",
-        "text_en": "Monitor system health, uptime, and performance metrics.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-COG-006",
-          "SK-DIG-004",
-          "SK-OPS-020"
-        ]
-      },
-      {
-        "id": "MOD_0118",
-        "text_de": "Container- und Orchestrierungslösungen implementieren.",
-        "text_en": "Implement containerization and orchestration solutions.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-DIG-004",
-          "SK-DIG-015",
-          "SK-COG-002"
-        ]
       }
     ],
     "summary": {
       "total": 11,
-      "automatable": 7,
-      "high_ai_potential": 3,
+      "automatable": 5,
+      "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 0,
+      "ai_assisted": 3,
       "human_led": 1
     }
   },
@@ -77718,10 +77718,69 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0132",
+        "text_de": "Push-Benachrichtigungen und Offline-Funktionalität umsetzen.",
+        "text_en": "Implement push notifications and offline functionality.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-DIG-001",
+          "SK-COG-002",
+          "SK-DIG-015"
+        ]
+      },
+      {
+        "id": "MOD_0126",
+        "text_de": "Native oder plattformübergreifende mobile Anwendungen entwickeln.",
+        "text_en": "Develop native or cross-platform mobile applications.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-DIG-001",
+          "SK-COG-002",
+          "SK-COG-005"
+        ]
+      },
+      {
+        "id": "MOD_0128",
+        "text_de": "Mobile Apps mit Backend-Diensten und APIs integrieren.",
+        "text_en": "Integrate mobile apps with backend services and APIs.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-DIG-001",
+          "SK-DIG-015"
+        ]
+      },
+      {
+        "id": "MOD_0129",
+        "text_de": "App-Leistung, Akkuverbrauch und Speichernutzung optimieren.",
+        "text_en": "Optimize app performance, battery usage, and memory.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-DIG-001",
+          "SK-COG-013"
+        ]
+      },
+      {
+        "id": "MOD_0133",
+        "text_de": "Gerätespezifische Probleme und Abstürze debuggen.",
+        "text_en": "Debug device-specific issues and crashes.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-DIG-001",
+          "SK-COG-001"
+        ]
+      },
+      {
         "id": "MOD_0130",
         "text_de": "Apps in App Stores veröffentlichen und verwalten.",
         "text_en": "Publish and manage apps in app stores.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DIG-001",
@@ -77733,7 +77792,7 @@
         "id": "MOD_0134",
         "text_de": "Die Einhaltung der Plattformrichtlinien sicherstellen.",
         "text_en": "Ensure compliance with platform guidelines.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DOM-002",
@@ -77776,73 +77835,14 @@
           "SK-COG-002",
           "SK-COG-021"
         ]
-      },
-      {
-        "id": "MOD_0132",
-        "text_de": "Push-Benachrichtigungen und Offline-Funktionalität umsetzen.",
-        "text_en": "Implement push notifications and offline functionality.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-DIG-001",
-          "SK-COG-002",
-          "SK-DIG-015"
-        ]
-      },
-      {
-        "id": "MOD_0126",
-        "text_de": "Native oder plattformübergreifende mobile Anwendungen entwickeln.",
-        "text_en": "Develop native or cross-platform mobile applications.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-DIG-001",
-          "SK-COG-002",
-          "SK-COG-005"
-        ]
-      },
-      {
-        "id": "MOD_0128",
-        "text_de": "Mobile Apps mit Backend-Diensten und APIs integrieren.",
-        "text_en": "Integrate mobile apps with backend services and APIs.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-DIG-001",
-          "SK-DIG-015"
-        ]
-      },
-      {
-        "id": "MOD_0129",
-        "text_de": "App-Leistung, Akkuverbrauch und Speichernutzung optimieren.",
-        "text_en": "Optimize app performance, battery usage, and memory.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-DIG-001",
-          "SK-COG-013"
-        ]
-      },
-      {
-        "id": "MOD_0133",
-        "text_de": "Gerätespezifische Probleme und Abstürze debuggen.",
-        "text_en": "Debug device-specific issues and crashes.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-DIG-001",
-          "SK-COG-001"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 7,
-      "high_ai_potential": 2,
+      "automatable": 2,
+      "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 0,
+      "ai_assisted": 2,
       "human_led": 1
     }
   },
@@ -77851,10 +77851,46 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0140",
+        "text_de": "Bereitschaftsdienste und Eskalationsverfahren verwalten.",
+        "text_en": "Manage on-call rotations and escalation procedures.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-COG-003",
+          "SK-COG-004",
+          "SK-COG-020"
+        ]
+      },
+      {
+        "id": "MOD_0139",
+        "text_de": "Systeme für Hochverfügbarkeit und Fehlertoleranz entwerfen.",
+        "text_en": "Design systems for high availability and fault tolerance.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-COG-013",
+          "SK-TEC-011"
+        ]
+      },
+      {
+        "id": "MOD_0143",
+        "text_de": "Systemarchitektur für Skalierbarkeit optimieren.",
+        "text_en": "Optimize system architecture for scalability.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-DIG-011",
+          "SK-COG-001",
+          "SK-COG-002"
+        ]
+      },
+      {
         "id": "MOD_0145",
         "text_de": "Neue Tools für Observability bewerten und einführen.",
         "text_en": "Evaluate and adopt new tools for observability.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -77933,50 +77969,14 @@
           "SK-COG-014",
           "SK-SOC-002"
         ]
-      },
-      {
-        "id": "MOD_0140",
-        "text_de": "Bereitschaftsdienste und Eskalationsverfahren verwalten.",
-        "text_en": "Manage on-call rotations and escalation procedures.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-COG-003",
-          "SK-COG-004",
-          "SK-COG-020"
-        ]
-      },
-      {
-        "id": "MOD_0139",
-        "text_de": "Systeme für Hochverfügbarkeit und Fehlertoleranz entwerfen.",
-        "text_en": "Design systems for high availability and fault tolerance.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-COG-013",
-          "SK-TEC-011"
-        ]
-      },
-      {
-        "id": "MOD_0143",
-        "text_de": "Systemarchitektur für Skalierbarkeit optimieren.",
-        "text_en": "Optimize system architecture for scalability.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-DIG-011",
-          "SK-COG-001",
-          "SK-COG-002"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 7,
-      "high_ai_potential": 1,
+      "automatable": 4,
+      "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 0,
+      "ai_assisted": 1,
       "human_led": 2
     }
   },
@@ -77985,10 +77985,46 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0152",
+        "text_de": "Probleme über Frontend, Backend und Infrastruktur hinweg beheben.",
+        "text_en": "Troubleshoot issues across frontend, backend, and infrastructure.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-DIG-001",
+          "SK-DIG-004"
+        ]
+      },
+      {
+        "id": "MOD_0154",
+        "text_de": "Drittanbieter-Dienste und APIs integrieren.",
+        "text_en": "Integrate third-party services and APIs.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-DIG-001",
+          "SK-COG-002",
+          "SK-DIG-015"
+        ]
+      },
+      {
+        "id": "MOD_0155",
+        "text_de": "Anwendungsleistung end-to-end optimieren.",
+        "text_en": "Optimize application performance end-to-end.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-DIG-001",
+          "SK-COG-013"
+        ]
+      },
+      {
         "id": "MOD_0146",
         "text_de": "Frontend- und Backend-Komponenten von Webanwendungen entwickeln.",
         "text_en": "Develop both frontend and backend components of web applications.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DIG-001",
@@ -78000,7 +78036,7 @@
         "id": "MOD_0151",
         "text_de": "Anwendungen in Cloud-Umgebungen bereitstellen und pflegen.",
         "text_en": "Deploy and maintain applications in cloud environments.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DIG-001",
@@ -78066,50 +78102,14 @@
           "SK-DIG-001",
           "SK-COG-001"
         ]
-      },
-      {
-        "id": "MOD_0152",
-        "text_de": "Probleme über Frontend, Backend und Infrastruktur hinweg beheben.",
-        "text_en": "Troubleshoot issues across frontend, backend, and infrastructure.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-DIG-001",
-          "SK-DIG-004"
-        ]
-      },
-      {
-        "id": "MOD_0154",
-        "text_de": "Drittanbieter-Dienste und APIs integrieren.",
-        "text_en": "Integrate third-party services and APIs.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-DIG-001",
-          "SK-COG-002",
-          "SK-DIG-015"
-        ]
-      },
-      {
-        "id": "MOD_0155",
-        "text_de": "Anwendungsleistung end-to-end optimieren.",
-        "text_en": "Optimize application performance end-to-end.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-DIG-001",
-          "SK-COG-013"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 7,
-      "high_ai_potential": 2,
+      "automatable": 4,
+      "high_ai_potential": 3,
       "sensitive": 0,
-      "ai_assisted": 0,
+      "ai_assisted": 2,
       "human_led": 1
     }
   },
@@ -78118,10 +78118,34 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0157",
+        "text_de": "Experimente zur Erprobung neuer Algorithmen entwerfen und durchführen.",
+        "text_en": "Design and run experiments to test new algorithms.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-001",
+          "SK-COG-002",
+          "SK-COG-006"
+        ]
+      },
+      {
+        "id": "MOD_0162",
+        "text_de": "Aktuelle Fachliteratur sichten und zusammenfassen.",
+        "text_en": "Review and synthesize current literature in the field.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-001",
+          "SK-COG-008",
+          "SK-SOC-002"
+        ]
+      },
+      {
         "id": "MOD_0158",
         "text_de": "Forschungsarbeiten in begutachteten Fachzeitschriften veröffentlichen.",
         "text_en": "Publish research papers in peer-reviewed journals.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -78133,7 +78157,7 @@
         "id": "MOD_0160",
         "text_de": "Experimentelle Ergebnisse analysieren und wissenschaftliche Schlüsse ziehen.",
         "text_en": "Analyze experimental results and draw scientific conclusions.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -78212,38 +78236,14 @@
           "SK-SOC-008",
           "SK-COG-001"
         ]
-      },
-      {
-        "id": "MOD_0157",
-        "text_de": "Experimente zur Erprobung neuer Algorithmen entwerfen und durchführen.",
-        "text_en": "Design and run experiments to test new algorithms.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-001",
-          "SK-COG-002",
-          "SK-COG-006"
-        ]
-      },
-      {
-        "id": "MOD_0162",
-        "text_de": "Aktuelle Fachliteratur sichten und zusammenfassen.",
-        "text_en": "Review and synthesize current literature in the field.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-001",
-          "SK-COG-008",
-          "SK-SOC-002"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 2,
+      "automatable": 0,
       "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 3,
+      "ai_assisted": 5,
       "human_led": 3
     }
   },
@@ -78252,10 +78252,34 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0166",
+        "text_de": "Prompts für große Sprachmodelle entwerfen und optimieren.",
+        "text_en": "Design and optimize prompts for large language models.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-DIG-012",
+          "SK-COG-005",
+          "SK-COG-001"
+        ]
+      },
+      {
+        "id": "MOD_0167",
+        "text_de": "Modellausgaben auf Qualität, Genauigkeit und Sicherheit prüfen.",
+        "text_en": "Evaluate model outputs for quality, accuracy, and safety.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-001",
+          "SK-OPS-001",
+          "SK-COG-021"
+        ]
+      },
+      {
         "id": "MOD_0173",
         "text_de": "Fehlermuster und Grenzfälle in Modellantworten analysieren.",
         "text_en": "Analyze failure modes and edge cases in model responses.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -78346,38 +78370,14 @@
           "SK-SOC-002",
           "SK-COG-001"
         ]
-      },
-      {
-        "id": "MOD_0166",
-        "text_de": "Prompts für große Sprachmodelle entwerfen und optimieren.",
-        "text_en": "Design and optimize prompts for large language models.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-DIG-012",
-          "SK-COG-005",
-          "SK-COG-001"
-        ]
-      },
-      {
-        "id": "MOD_0167",
-        "text_de": "Modellausgaben auf Qualität, Genauigkeit und Sicherheit prüfen.",
-        "text_en": "Evaluate model outputs for quality, accuracy, and safety.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-001",
-          "SK-OPS-001",
-          "SK-COG-021"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 6,
-      "high_ai_potential": 1,
+      "automatable": 4,
+      "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 1,
+      "ai_assisted": 2,
       "human_led": 2
     }
   },
@@ -78386,10 +78386,34 @@
     "sector": "management",
     "tasks": [
       {
+        "id": "MOD_0178",
+        "text_de": "Kundenzufriedenheitswerte und Nutzungsmetriken überwachen.",
+        "text_en": "Monitor customer health scores and usage metrics.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-COG-006",
+          "SK-OPS-020",
+          "SK-SOC-009"
+        ]
+      },
+      {
+        "id": "MOD_0184",
+        "text_de": "Kundenabwanderung verfolgen und reduzieren.",
+        "text_en": "Track and reduce customer churn.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-002",
+          "SK-COG-006",
+          "SK-SOC-009"
+        ]
+      },
+      {
         "id": "MOD_0183",
         "text_de": "Kundenschulungsmaterialien und Dokumentation erstellen.",
         "text_en": "Develop customer training materials and documentation.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-SOC-019",
@@ -78480,38 +78504,14 @@
           "SK-COG-009",
           "SK-SOC-003"
         ]
-      },
-      {
-        "id": "MOD_0178",
-        "text_de": "Kundenzufriedenheitswerte und Nutzungsmetriken überwachen.",
-        "text_en": "Monitor customer health scores and usage metrics.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-COG-006",
-          "SK-OPS-020",
-          "SK-SOC-009"
-        ]
-      },
-      {
-        "id": "MOD_0184",
-        "text_de": "Kundenabwanderung verfolgen und reduzieren.",
-        "text_en": "Track and reduce customer churn.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-002",
-          "SK-COG-006",
-          "SK-SOC-009"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 2,
-      "high_ai_potential": 1,
+      "automatable": 0,
+      "high_ai_potential": 2,
       "sensitive": 0,
-      "ai_assisted": 0,
+      "ai_assisted": 1,
       "human_led": 7
     }
   },
@@ -78519,6 +78519,42 @@
     "occupation_de": "People-Operations-Manager/in",
     "sector": "management",
     "tasks": [
+      {
+        "id": "MOD_0196",
+        "text_de": "Onboarding-Prozesse für Mitarbeiter gestalten und verbessern.",
+        "text_en": "Design and improve employee onboarding processes.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-005",
+          "SK-COG-011",
+          "SK-COG-013"
+        ]
+      },
+      {
+        "id": "MOD_0197",
+        "text_de": "Performance-Review-Zyklen und Feedbacksysteme verwalten.",
+        "text_en": "Manage performance review cycles and feedback systems.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-003",
+          "SK-SOC-013",
+          "SK-COG-001"
+        ]
+      },
+      {
+        "id": "MOD_0201",
+        "text_de": "HR-Daten und Personalkennzahlen analysieren.",
+        "text_en": "Analyze HR data and workforce metrics.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-006",
+          "SK-COG-001",
+          "SK-DIG-009"
+        ]
+      },
       {
         "id": "MOD_0198",
         "text_de": "Vergütungs- und Benefits-Programme entwickeln.",
@@ -78602,48 +78638,12 @@
           "SK-COG-014",
           "SK-DIG-017"
         ]
-      },
-      {
-        "id": "MOD_0196",
-        "text_de": "Onboarding-Prozesse für Mitarbeiter gestalten und verbessern.",
-        "text_en": "Design and improve employee onboarding processes.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-005",
-          "SK-COG-011",
-          "SK-COG-013"
-        ]
-      },
-      {
-        "id": "MOD_0197",
-        "text_de": "Performance-Review-Zyklen und Feedbacksysteme verwalten.",
-        "text_en": "Manage performance review cycles and feedback systems.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-003",
-          "SK-SOC-013",
-          "SK-COG-001"
-        ]
-      },
-      {
-        "id": "MOD_0201",
-        "text_de": "HR-Daten und Personalkennzahlen analysieren.",
-        "text_en": "Analyze HR data and workforce metrics.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-006",
-          "SK-COG-001",
-          "SK-DIG-009"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 5,
-      "high_ai_potential": 0,
+      "automatable": 2,
+      "high_ai_potential": 3,
       "sensitive": 0,
       "ai_assisted": 2,
       "human_led": 3
@@ -78654,10 +78654,22 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0225",
+        "text_de": "Sicherstellen, dass Lösungen Sicherheits-, Skalierbarkeits- und Leistungsanforderungen erfüllen.",
+        "text_en": "Ensure solutions meet security, scalability, and performance needs.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-001",
+          "SK-DIG-005",
+          "SK-COG-002"
+        ]
+      },
+      {
         "id": "MOD_0217",
         "text_de": "Technologieplattformen und Architekturen bewerten und empfehlen.",
         "text_en": "Evaluate and recommend technology platforms and architectures.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -78669,7 +78681,7 @@
         "id": "MOD_0221",
         "text_de": "Technische Risiken bewerten und Gegenmaßnahmen entwickeln.",
         "text_en": "Assess technical risks and develop mitigation strategies.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-010",
@@ -78681,7 +78693,7 @@
         "id": "MOD_0223",
         "text_de": "Proof-of-Concept-Prototypen für neue Technologien erstellen.",
         "text_en": "Conduct proof-of-concept builds for new technologies.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-002",
@@ -78760,26 +78772,14 @@
           "SK-TEC-005",
           "SK-DIG-011"
         ]
-      },
-      {
-        "id": "MOD_0225",
-        "text_de": "Sicherstellen, dass Lösungen Sicherheits-, Skalierbarkeits- und Leistungsanforderungen erfüllen.",
-        "text_en": "Ensure solutions meet security, scalability, and performance needs.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-001",
-          "SK-DIG-005",
-          "SK-COG-002"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 3,
-      "high_ai_potential": 3,
+      "automatable": 2,
+      "high_ai_potential": 1,
       "sensitive": 0,
-      "ai_assisted": 1,
+      "ai_assisted": 4,
       "human_led": 3
     }
   },
@@ -78788,10 +78788,70 @@
     "sector": "tech",
     "tasks": [
       {
+        "id": "MOD_0236",
+        "text_de": "Sicherheitssysteme und Warnmeldungen auf potenzielle Bedrohungen überwachen.",
+        "text_en": "Monitor security systems and alerts for potential threats.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-DIG-005",
+          "SK-COG-001",
+          "SK-COG-010"
+        ]
+      },
+      {
+        "id": "MOD_0238",
+        "text_de": "Schwachstellenanalysen und Penetrationstests durchführen.",
+        "text_en": "Conduct vulnerability assessments and penetration testing.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-DIG-005",
+          "SK-COG-001",
+          "SK-COG-002"
+        ]
+      },
+      {
+        "id": "MOD_0240",
+        "text_de": "Sicherheitsprotokolle und Netzwerkverkehr auf Anomalien analysieren.",
+        "text_en": "Analyze security logs and network traffic for anomalies.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-COG-001",
+          "SK-COG-006",
+          "SK-DIG-005"
+        ]
+      },
+      {
+        "id": "MOD_0241",
+        "text_de": "Incident-Response-Verfahren entwickeln und aktualisieren.",
+        "text_en": "Develop and update incident response procedures.",
+        "label": "high_ai_potential",
+        "score": 7,
+        "skills": [
+          "SK-COG-001",
+          "SK-COG-004",
+          "SK-COG-010"
+        ]
+      },
+      {
+        "id": "MOD_0237",
+        "text_de": "Sicherheitsvorfälle und Datenverletzungen untersuchen und darauf reagieren.",
+        "text_en": "Investigate and respond to security incidents and breaches.",
+        "label": "high_ai_potential",
+        "score": 6,
+        "skills": [
+          "SK-COG-001",
+          "SK-DIG-005",
+          "SK-COG-002"
+        ]
+      },
+      {
         "id": "MOD_0242",
         "text_de": "Die Einhaltung von Sicherheitsframeworks und Vorschriften sicherstellen.",
         "text_en": "Ensure compliance with security frameworks and regulations.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-DIG-005",
@@ -78803,7 +78863,7 @@
         "id": "MOD_0244",
         "text_de": "Sicherheitsrisiken bewerten und Empfehlungen dokumentieren.",
         "text_en": "Assess and document security risks and recommendations.",
-        "label": "high_ai_potential",
+        "label": "ai_assisted",
         "score": 5,
         "skills": [
           "SK-COG-001",
@@ -78846,74 +78906,14 @@
           "SK-DIG-004",
           "SK-COG-002"
         ]
-      },
-      {
-        "id": "MOD_0236",
-        "text_de": "Sicherheitssysteme und Warnmeldungen auf potenzielle Bedrohungen überwachen.",
-        "text_en": "Monitor security systems and alerts for potential threats.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-DIG-005",
-          "SK-COG-001",
-          "SK-COG-010"
-        ]
-      },
-      {
-        "id": "MOD_0238",
-        "text_de": "Schwachstellenanalysen und Penetrationstests durchführen.",
-        "text_en": "Conduct vulnerability assessments and penetration testing.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-DIG-005",
-          "SK-COG-001",
-          "SK-COG-002"
-        ]
-      },
-      {
-        "id": "MOD_0240",
-        "text_de": "Sicherheitsprotokolle und Netzwerkverkehr auf Anomalien analysieren.",
-        "text_en": "Analyze security logs and network traffic for anomalies.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-COG-001",
-          "SK-COG-006",
-          "SK-DIG-005"
-        ]
-      },
-      {
-        "id": "MOD_0241",
-        "text_de": "Incident-Response-Verfahren entwickeln und aktualisieren.",
-        "text_en": "Develop and update incident response procedures.",
-        "label": "automatable",
-        "score": 7,
-        "skills": [
-          "SK-COG-001",
-          "SK-COG-004",
-          "SK-COG-010"
-        ]
-      },
-      {
-        "id": "MOD_0237",
-        "text_de": "Sicherheitsvorfälle und Datenverletzungen untersuchen und darauf reagieren.",
-        "text_en": "Investigate and respond to security incidents and breaches.",
-        "label": "automatable",
-        "score": 6,
-        "skills": [
-          "SK-COG-001",
-          "SK-DIG-005",
-          "SK-COG-002"
-        ]
       }
     ],
     "summary": {
       "total": 10,
-      "automatable": 6,
-      "high_ai_potential": 2,
+      "automatable": 1,
+      "high_ai_potential": 5,
       "sensitive": 0,
-      "ai_assisted": 0,
+      "ai_assisted": 2,
       "human_led": 2
     }
   }

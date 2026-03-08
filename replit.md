@@ -27,10 +27,10 @@ Build script skips MOD_ tasks for occupations that already have BN_ tasks.
 ### Distribution
 | Category | Tasks | % |
 |---|---|---|
-| ai_assisted | 2,598 | 42.7% |
+| ai_assisted | 2,631 | 43.3% |
 | human_led | 2,248 | 37.0% |
-| high_ai_potential | 761 | 12.5% |
-| automatable | 358 | 5.9% |
+| high_ai_potential | 776 | 12.8% |
+| automatable | 310 | 5.1% |
 | sensitive | 114 | 1.9% |
 
 ## 5-Category System
