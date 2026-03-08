@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_replit_v2_1772885105773.csv');
-const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary_v2_1772885088584.csv');
+const tasksPath = path.join(__dirname, '..', 'attached_assets', 'tasks_for_replit_v3.csv');
+const summaryPath = path.join(__dirname, '..', 'attached_assets', 'occupations_summary_v3.csv');
 const skillsVocabPath = path.join(__dirname, '..', 'attached_assets', 'skills_vocabulary_v0_(2)_1772872655371.csv');
-const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_v2_final_1772885084875.csv');
+const taskSkillLinksPath = path.join(__dirname, '..', 'attached_assets', 'task_skill_links_v3_(1)_1772969326595.csv');
 
 const occupationsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'occupations.json');
 const skillsOutputPath = path.join(__dirname, '..', 'client', 'src', 'lib', 'data', 'skills.json');
@@ -174,7 +174,6 @@ for (const link of taskSkillLinks) {
 }
 const manualSkills = {
   'SK-SOC-023': { name_en: 'Pricing & Cost Estimation', name_de: 'Preisgestaltung und Kostenschätzung', category: 'social' },
-  'SK-COG-023': { name_en: 'Pricing & Cost Estimation', name_de: 'Preisgestaltung und Kostenschätzung', category: 'cognitive' },
 };
 for (const [id, info] of Object.entries(manualSkills)) {
   if (!skillsData[id]) {

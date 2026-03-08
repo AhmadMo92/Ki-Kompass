@@ -1,7 +1,7 @@
 # KI Kompass — AI Workforce Intelligence Dashboard
 
 ## Overview
-KI Kompass analyzes AI exposure for 540 German occupations (6,079 tasks) using a 5-category spectrum. Built with React + Express + PostgreSQL. Includes a skills layer mapping 120 competencies across 6 categories. Features 18 modern occupations (CEO, CTO, CFO, CMO, DevOps Engineer, Prompt Engineer, etc.).
+KI Kompass analyzes AI exposure for 540 German occupations (6,079 tasks) using a 5-category spectrum. Built with React + Express + PostgreSQL. Includes a skills layer mapping 119 competencies across 6 categories. Features 18 modern occupations (CEO, CTO, CFO, CMO, DevOps Engineer, Prompt Engineer, etc.).
 
 ## Architecture
 - **Frontend**: React + Vite + Tailwind + shadcn/ui + wouter routing
@@ -10,10 +10,10 @@ KI Kompass analyzes AI exposure for 540 German occupations (6,079 tasks) using a
 
 ## Data Pipeline
 Source CSVs (in `attached_assets/`):
-1. `tasks_for_replit_v2_1772885105773.csv` — 6,141 tasks with labels + scoring dimensions (PHYS,TPS,SIR,SPEC,VERIF,STD). Includes 256 modern occupation tasks (MOD_ prefix).
-2. `occupations_summary_v2_1772885088584.csv` — pre-computed occupation-level counts (540 rows)
+1. `tasks_for_replit_v3.csv` — 6,079 tasks with labels + scoring dimensions (PHYS,TPS,SIR,SPEC,VERIF,STD). Includes modern occupation tasks (MOD_ prefix, overlaps pre-filtered).
+2. `occupations_summary_v3.csv` — pre-computed occupation-level counts (540 rows)
 3. `skills_vocabulary_v0_(2)_1772872655371.csv` — 118 base skills across 6 categories
-4. `task_skill_links_v2_final_1772885084875.csv` — 16,849 task→skill links (avg ~2.7 per task)
+4. `task_skill_links_v3_(1)_1772969326595.csv` — 16,655 task→skill links (avg ~2.7 per task)
 
 Build: `node scripts/build-occupations.cjs` → generates `occupations.json` + `skills.json`
 
@@ -27,10 +27,10 @@ Build script skips MOD_ tasks for occupations that already have BN_ tasks.
 ### Distribution
 | Category | Tasks | % |
 |---|---|---|
-| ai_assisted | 2,638 | 43.0% |
-| human_led | 2,379 | 38.7% |
-| high_ai_potential | 734 | 12.0% |
-| automatable | 276 | 4.5% |
+| ai_assisted | 2,598 | 42.7% |
+| human_led | 2,248 | 37.0% |
+| high_ai_potential | 761 | 12.5% |
+| automatable | 358 | 5.9% |
 | sensitive | 114 | 1.9% |
 
 ## 5-Category System
@@ -42,7 +42,7 @@ Build script skips MOD_ tasks for occupations that already have BN_ tasks.
 | `ai_assisted` | #F9A825 (yellow) | AI helps, you lead |
 | `human_led` | #43A047 (green) | Human Led |
 
-## Skills Layer (6 Categories, 120 total)
+## Skills Layer (6 Categories, 119 total)
 | Category | Count | Color |
 |---|---|---|
 | cognitive | 23 | #1E88E5 |
@@ -56,7 +56,7 @@ Each task links to 2-3 skills with relevance scores. Skills profile shows which 
 
 ## Key Data Files
 - `client/src/lib/data/occupations.json` — 540 occupations, 6,079 tasks with skill IDs
-- `client/src/lib/data/skills.json` — 120 skills with bilingual names/definitions
+- `client/src/lib/data/skills.json` — 119 skills with bilingual names/definitions
 - `client/src/lib/data/index.ts` — Data layer, types, search, categories, sector averages, skill helpers
 - `scripts/build-occupations.cjs` — Build script: CSVs → occupations.json + skills.json (handles overlap filtering)
 
