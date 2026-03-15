@@ -216,42 +216,18 @@ export function MyRoleTasks() {
                 />
 
                 {occupation && (
-                  <div className="p-5 rounded-xl bg-secondary/30 border border-border/40 animate-in fade-in duration-300" data-testid="selected-job-preview">
-                    <div className="flex items-start justify-between mb-4">
+                  <div className="p-4 rounded-xl bg-secondary/30 border border-border/40 animate-in fade-in duration-300" data-testid="selected-job-preview">
+                    <div className="flex items-center justify-between">
                       <div>
                         <h4 className="font-semibold text-lg text-primary">
                           {language === "de" ? occupation.occupation_de : selectedKey}
                         </h4>
                         <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
                           <Building2 className="w-3 h-3" /> {occupation.sector}
+                          <span className="ml-2">{occupation.summary.total} {language === "de" ? "Aufgaben" : "tasks"}</span>
                         </p>
                       </div>
-                      <Badge className="text-xs bg-slate-100 text-slate-600">
-                        {occupation.summary.total} {language === "de" ? "Aufgaben" : "tasks"}
-                      </Badge>
-                    </div>
-
-                    <div className="grid grid-cols-5 gap-2 text-center">
-                      {CATEGORY_ORDER.map(cat => {
-                        const count = occupation.summary[cat];
-                        const pct = occupation.summary.total > 0 ? Math.round((count / occupation.summary.total) * 100) : 0;
-                        if (pct === 0) return (
-                          <div key={cat} className="p-2 rounded-lg" style={{ backgroundColor: CATEGORIES[cat].bg + '80' }}>
-                            <div className="text-lg font-bold" style={{ color: CATEGORIES[cat].color }}>—</div>
-                            <div className="text-[10px]" style={{ color: CATEGORIES[cat].color }}>
-                              {language === "de" ? CATEGORIES[cat].label_de : CATEGORIES[cat].label_en}
-                            </div>
-                          </div>
-                        );
-                        return (
-                          <div key={cat} className="p-2 rounded-lg" style={{ backgroundColor: CATEGORIES[cat].bg }}>
-                            <div className="text-lg font-bold" style={{ color: CATEGORIES[cat].color }}>{pct}%</div>
-                            <div className="text-[10px]" style={{ color: CATEGORIES[cat].color }}>
-                              {language === "de" ? CATEGORIES[cat].label_de : CATEGORIES[cat].label_en}
-                            </div>
-                          </div>
-                        );
-                      })}
+                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                     </div>
                   </div>
                 )}
