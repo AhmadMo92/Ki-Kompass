@@ -1,5 +1,8 @@
 import occupationsData from "./occupations.json";
 import skillsData from "./skills.json";
+import toolTypesData from "./tool-types.json";
+import skillToolsData from "./skill-tools.json";
+import sectorToolsData from "./sector-tools.json";
 
 export type CategoryLabel = "automatable" | "high_ai_potential" | "sensitive" | "ai_assisted" | "human_led";
 
@@ -45,8 +48,33 @@ export interface Occupation {
   summary: OccupationSummary;
 }
 
+export interface ToolType {
+  de: string;
+  en: string;
+  icon: string;
+  desc: string;
+  ex: string[];
+}
+
+export interface SectorToolEntry {
+  examples: string[];
+  use_de: string;
+}
+
+export interface SectorToolData {
+  label_de: string;
+  label_en: string;
+  kldb_groups: string[];
+  n_occupations: number;
+  tier1: Record<string, SectorToolEntry>;
+  tier2?: Record<string, SectorToolEntry>;
+}
+
 export const occupations: Record<string, Occupation> = occupationsData as Record<string, Occupation>;
 export const skills: Record<string, SkillInfo> = skillsData as Record<string, SkillInfo>;
+export const toolTypes: Record<string, ToolType> = toolTypesData as Record<string, ToolType>;
+export const skillTools: Record<string, [string, number][]> = skillToolsData as Record<string, [string, number][]>;
+export const sectorTools: Record<string, SectorToolData> = sectorToolsData as Record<string, SectorToolData>;
 
 export const CATEGORIES: Record<CategoryLabel, {
   label_de: string;
@@ -123,15 +151,33 @@ export const CATEGORY_ORDER: CategoryLabel[] = [
   "automatable", "high_ai_potential", "sensitive", "ai_assisted", "human_led"
 ];
 
-export const SECTOR_AVERAGES: Record<string, Record<CategoryLabel, number>> = {
-  tech:       { automatable: 0.11, high_ai_potential: 0.28, sensitive: 0.00, ai_assisted: 0.42, human_led: 0.19 },
-  health:     { automatable: 0.05, high_ai_potential: 0.09, sensitive: 0.05, ai_assisted: 0.31, human_led: 0.51 },
-  finance:    { automatable: 0.09, high_ai_potential: 0.20, sensitive: 0.07, ai_assisted: 0.39, human_led: 0.25 },
-  law:        { automatable: 0.05, high_ai_potential: 0.13, sensitive: 0.10, ai_assisted: 0.36, human_led: 0.36 },
-  marketing:  { automatable: 0.05, high_ai_potential: 0.22, sensitive: 0.00, ai_assisted: 0.51, human_led: 0.22 },
-  management: { automatable: 0.02, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.52, human_led: 0.35 },
-  other:      { automatable: 0.04, high_ai_potential: 0.10, sensitive: 0.01, ai_assisted: 0.44, human_led: 0.40 },
-};
+function computeSectorAverages(): Record<string, Record<CategoryLabel, number>> {
+  const sectorCounts: Record<string, { total: number; cats: Record<CategoryLabel, number> }> = {};
+  for (const occ of Object.values(occupations)) {
+    const s = occ.sector || "other";
+    if (!sectorCounts[s]) sectorCounts[s] = { total: 0, cats: { automatable: 0, high_ai_potential: 0, sensitive: 0, ai_assisted: 0, human_led: 0 } };
+    sectorCounts[s].total += occ.summary.total;
+    sectorCounts[s].cats.automatable += occ.summary.automatable;
+    sectorCounts[s].cats.high_ai_potential += occ.summary.high_ai_potential;
+    sectorCounts[s].cats.sensitive += occ.summary.sensitive;
+    sectorCounts[s].cats.ai_assisted += occ.summary.ai_assisted;
+    sectorCounts[s].cats.human_led += occ.summary.human_led;
+  }
+  const result: Record<string, Record<CategoryLabel, number>> = {};
+  for (const [sec, data] of Object.entries(sectorCounts)) {
+    const t = data.total || 1;
+    result[sec] = {
+      automatable: data.cats.automatable / t,
+      high_ai_potential: data.cats.high_ai_potential / t,
+      sensitive: data.cats.sensitive / t,
+      ai_assisted: data.cats.ai_assisted / t,
+      human_led: data.cats.human_led / t,
+    };
+  }
+  return result;
+}
+
+export const SECTOR_AVERAGES: Record<string, Record<CategoryLabel, number>> = computeSectorAverages();
 
 export function getOccupationList(): { key: string; name_en: string; name_de: string; sector: string }[] {
   return Object.entries(occupations).map(([key, occ]) => ({
@@ -263,6 +309,52 @@ export function searchTasks(query: string, limit = 20): (TaskItem & { occupation
     }
   }
   return results;
+}
+
+export function getOccupationToolRecommendations(occupationKey: string): {
+  toolTypeId: string;
+  toolType: ToolType;
+  relevance: number;
+  sectorExamples?: string[];
+  sectorUse?: string;
+}[] {
+  const occ = occupations[occupationKey];
+  if (!occ) return [];
+
+  const scores: Record<string, number> = {};
+
+  for (const task of occ.tasks) {
+    if (task.label === "human_led" || task.label === "sensitive") continue;
+    for (const sid of task.skills) {
+      const links = skillTools[sid];
+      if (!links) continue;
+      for (const [ttId, weight] of links) {
+        scores[ttId] = (scores[ttId] || 0) + weight;
+      }
+    }
+  }
+
+  const sectorData = sectorTools[occ.sector];
+
+  return Object.entries(scores)
+    .filter(([ttId]) => toolTypes[ttId])
+    .map(([ttId, score]) => {
+      const sectorEntry = sectorData?.tier1?.[ttId] || sectorData?.tier2?.[ttId];
+      return {
+        toolTypeId: ttId,
+        toolType: toolTypes[ttId],
+        relevance: score,
+        sectorExamples: sectorEntry?.examples,
+        sectorUse: sectorEntry?.use_de,
+      };
+    })
+    .sort((a, b) => b.relevance - a.relevance);
+}
+
+export function getSectorForOccupation(occupationKey: string): SectorToolData | undefined {
+  const occ = occupations[occupationKey];
+  if (!occ) return undefined;
+  return sectorTools[occ.sector];
 }
 
 export const HERO_OCCUPATIONS = [

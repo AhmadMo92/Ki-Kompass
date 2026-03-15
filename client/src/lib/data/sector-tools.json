@@ -1,0 +1,715 @@
+{
+  "it_informatik": {
+    "label_de": "IT & Informatik",
+    "label_en": "IT & Computer Science",
+    "kldb_groups": [
+      "43"
+    ],
+    "n_occupations": 46,
+    "tier1": {
+      "TT-03": {
+        "examples": [
+          "GitHub Copilot",
+          "Cursor",
+          "Claude Code"
+        ],
+        "use_de": "Code-Generierung, Debugging, Code-Reviews"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Gemini"
+        ],
+        "use_de": "Technische Dokumentation, API-Docs, READMEs"
+      },
+      "TT-04": {
+        "examples": [
+          "Perplexity",
+          "Stack Overflow AI",
+          "Phind"
+        ],
+        "use_de": "Technische Recherche, Framework-Vergleiche"
+      },
+      "TT-15": {
+        "examples": [
+          "CrowdStrike Charlotte",
+          "Darktrace",
+          "Snyk AI"
+        ],
+        "use_de": "Schwachstellenanalyse, Bedrohungserkennung"
+      },
+      "TT-06": {
+        "examples": [
+          "Linear",
+          "Jira AI",
+          "Notion AI"
+        ],
+        "use_de": "Sprint-Planung, Backlog-Management"
+      }
+    },
+    "tier2": {
+      "TT-02": {
+        "examples": [
+          "Jupyter AI",
+          "Databricks AI",
+          "Grafana AI"
+        ],
+        "use_de": "Log-Analyse, Performance-Monitoring"
+      },
+      "TT-13": {
+        "examples": [
+          "Zapier AI",
+          "n8n AI",
+          "GitHub Actions"
+        ],
+        "use_de": "CI/CD, Workflow-Automatisierung"
+      },
+      "TT-07": {
+        "examples": [
+          "Otter.ai",
+          "Loom AI",
+          "Microsoft Copilot"
+        ],
+        "use_de": "Stand-ups, Sprint Reviews, Async-Updates"
+      }
+    }
+  },
+  "finanzen_recht": {
+    "label_de": "Finanzen, Recht & Verwaltung",
+    "label_en": "Finance, Law & Administration",
+    "kldb_groups": [
+      "72",
+      "73"
+    ],
+    "n_occupations": 56,
+    "tier1": {
+      "TT-08": {
+        "examples": [
+          "Excel Copilot",
+          "Rows AI",
+          "Causal"
+        ],
+        "use_de": "Finanzmodelle, Forecasting, Budgetanalysen"
+      },
+      "TT-10": {
+        "examples": [
+          "Harvey AI",
+          "Luminance",
+          "Kira Systems"
+        ],
+        "use_de": "Vertragsanalyse, Regulatorik, Due Diligence"
+      },
+      "TT-02": {
+        "examples": [
+          "Power BI Copilot",
+          "Tableau AI",
+          "ThoughtSpot"
+        ],
+        "use_de": "Portfolio-Analyse, Risiko-Dashboards, Compliance-Monitoring"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Lexis+ AI"
+        ],
+        "use_de": "Berichte, Gutachten, Stellungnahmen"
+      }
+    },
+    "tier2": {
+      "TT-04": {
+        "examples": [
+          "Perplexity",
+          "AlphaSense",
+          "Westlaw Edge AI"
+        ],
+        "use_de": "Marktrecherche, Rechtsprechungsrecherche"
+      },
+      "TT-13": {
+        "examples": [
+          "UiPath",
+          "Ironclad",
+          "DocuSign IAM"
+        ],
+        "use_de": "Vertragsworkflows, Belegverarbeitung"
+      },
+      "TT-07": {
+        "examples": [
+          "Otter.ai",
+          "Fireflies",
+          "Microsoft Copilot"
+        ],
+        "use_de": "Mandantengespraeche, Verhandlungsprotokolle"
+      }
+    }
+  },
+  "gesundheit": {
+    "label_de": "Gesundheit & Medizin",
+    "label_en": "Health & Medicine",
+    "kldb_groups": [
+      "81",
+      "82"
+    ],
+    "n_occupations": 45,
+    "tier1": {
+      "TT-17": {
+        "examples": [
+          "Nuance DAX",
+          "Ada Health",
+          "PathAI"
+        ],
+        "use_de": "Klinische Dokumentation, Diagnoseunterstuetzung"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Elicit"
+        ],
+        "use_de": "Patientenberichte, Fachliteratur-Zusammenfassungen"
+      },
+      "TT-04": {
+        "examples": [
+          "PubMed AI",
+          "Consensus",
+          "Elicit"
+        ],
+        "use_de": "Medizinische Recherche, Studienauswertung"
+      }
+    },
+    "tier2": {
+      "TT-06": {
+        "examples": [
+          "Notion AI",
+          "Asana",
+          "Meisterplan"
+        ],
+        "use_de": "Dienstplanung, Behandlungskoordination"
+      },
+      "TT-13": {
+        "examples": [
+          "UiPath",
+          "Automation Anywhere",
+          "DocuSign"
+        ],
+        "use_de": "Patientenakten, Abrechnungsworkflows"
+      },
+      "TT-07": {
+        "examples": [
+          "Microsoft Teams Copilot",
+          "Zoom AI",
+          "Otter.ai"
+        ],
+        "use_de": "Fallbesprechungen, Teambesprechungen"
+      }
+    }
+  },
+  "unternehmensfuehrung": {
+    "label_de": "Unternehmensfuehrung & Organisation",
+    "label_en": "Business Management & Organization",
+    "kldb_groups": [
+      "71"
+    ],
+    "n_occupations": 80,
+    "tier1": {
+      "TT-06": {
+        "examples": [
+          "Notion AI",
+          "Asana Intelligence",
+          "Monday AI"
+        ],
+        "use_de": "Projektsteuerung, Ressourcenplanung, OKR-Tracking"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Microsoft Copilot"
+        ],
+        "use_de": "Strategiepapiere, Berichte, Entscheidungsvorlagen"
+      },
+      "TT-02": {
+        "examples": [
+          "Power BI Copilot",
+          "Tableau AI",
+          "ThoughtSpot"
+        ],
+        "use_de": "KPI-Dashboards, Marktanalysen, Benchmarking"
+      },
+      "TT-07": {
+        "examples": [
+          "Otter.ai",
+          "Fireflies",
+          "Microsoft Copilot"
+        ],
+        "use_de": "Meetings, Stakeholder-Protokolle"
+      }
+    },
+    "tier2": {
+      "TT-05": {
+        "examples": [
+          "Gamma",
+          "Beautiful.ai",
+          "Canva AI"
+        ],
+        "use_de": "Praesentationen, Strategiedecks"
+      },
+      "TT-12": {
+        "examples": [
+          "HireVue",
+          "Eightfold AI",
+          "Textio"
+        ],
+        "use_de": "Talent-Management, Nachfolgeplanung"
+      },
+      "TT-08": {
+        "examples": [
+          "Excel Copilot",
+          "Rows AI",
+          "Causal"
+        ],
+        "use_de": "Budgetplanung, Business Cases"
+      }
+    }
+  },
+  "soziales_erziehung": {
+    "label_de": "Soziales, Erziehung & Lehre",
+    "label_en": "Social Work, Education & Teaching",
+    "kldb_groups": [
+      "83",
+      "84"
+    ],
+    "n_occupations": 70,
+    "tier1": {
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "NotebookLM"
+        ],
+        "use_de": "Unterrichtsmaterial, Lehrplaene, Fallberichte"
+      },
+      "TT-05": {
+        "examples": [
+          "Canva AI",
+          "Gamma",
+          "Genially"
+        ],
+        "use_de": "Lernmaterialien, Praesentationen, interaktive Inhalte"
+      },
+      "TT-04": {
+        "examples": [
+          "Perplexity",
+          "Elicit",
+          "Consensus"
+        ],
+        "use_de": "Fachrecherche, didaktische Konzepte, Foerdermittel"
+      }
+    },
+    "tier2": {
+      "TT-06": {
+        "examples": [
+          "Notion AI",
+          "Trello AI",
+          "Google Classroom"
+        ],
+        "use_de": "Kursplanung, Fallmanagement, Aufgabenverwaltung"
+      },
+      "TT-07": {
+        "examples": [
+          "Zoom AI",
+          "Microsoft Teams Copilot",
+          "Otter.ai"
+        ],
+        "use_de": "Online-Unterricht, Elterngespraeche, Fallkonferenzen"
+      },
+      "TT-16": {
+        "examples": [
+          "DeepL",
+          "Google Translate",
+          "Grammarly"
+        ],
+        "use_de": "Fremdsprachenunterricht, mehrsprachige Materialien"
+      }
+    }
+  },
+  "vertrieb_handel": {
+    "label_de": "Vertrieb, Handel & Tourismus",
+    "label_en": "Sales, Commerce & Tourism",
+    "kldb_groups": [
+      "61",
+      "62",
+      "63"
+    ],
+    "n_occupations": 53,
+    "tier1": {
+      "TT-09": {
+        "examples": [
+          "Salesforce Einstein",
+          "HubSpot AI",
+          "Pipedrive AI"
+        ],
+        "use_de": "Lead-Scoring, Pipeline-Management, Kundenanalyse"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "DeepL Write"
+        ],
+        "use_de": "Angebote, Kundenkommunikation, Produktbeschreibungen"
+      },
+      "TT-08": {
+        "examples": [
+          "Excel Copilot",
+          "Rows AI",
+          "Causal"
+        ],
+        "use_de": "Umsatzplanung, Kalkulation, Bestandsmanagement"
+      }
+    },
+    "tier2": {
+      "TT-07": {
+        "examples": [
+          "Gong AI",
+          "Otter.ai",
+          "Microsoft Copilot"
+        ],
+        "use_de": "Verkaufsgespraeche, Verhandlungen"
+      },
+      "TT-16": {
+        "examples": [
+          "DeepL",
+          "Phrase AI",
+          "Lokalise"
+        ],
+        "use_de": "Mehrsprachige Kundenbetreuung, Lokalisierung"
+      },
+      "TT-06": {
+        "examples": [
+          "Notion AI",
+          "Planday AI",
+          "Monday AI"
+        ],
+        "use_de": "Dienstplanung, Eventkoordination, Bestellmanagement"
+      }
+    }
+  },
+  "medien_marketing": {
+    "label_de": "Medien, Marketing & Kommunikation",
+    "label_en": "Media, Marketing & Communication",
+    "kldb_groups": [
+      "92"
+    ],
+    "n_occupations": 50,
+    "tier1": {
+      "TT-11": {
+        "examples": [
+          "HubSpot Content AI",
+          "Surfer SEO",
+          "Synthesia"
+        ],
+        "use_de": "Kampagnen-Content, SEO, Video-Marketing"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Jasper AI"
+        ],
+        "use_de": "Texte, Konzepte, Redaktionsplanung"
+      },
+      "TT-05": {
+        "examples": [
+          "Canva AI",
+          "Gamma",
+          "Midjourney"
+        ],
+        "use_de": "Social Media Grafiken, Pitch Decks, Visualisierungen"
+      },
+      "TT-09": {
+        "examples": [
+          "Salesforce Einstein",
+          "HubSpot AI",
+          "Intercom Fin"
+        ],
+        "use_de": "Kampagnenanalyse, Lead-Nurturing"
+      }
+    },
+    "tier2": {
+      "TT-02": {
+        "examples": [
+          "Google Analytics AI",
+          "Mixpanel",
+          "Amplitude"
+        ],
+        "use_de": "Kampagnenanalyse, Conversion-Tracking"
+      },
+      "TT-07": {
+        "examples": [
+          "Descript",
+          "Otter.ai",
+          "Riverside AI"
+        ],
+        "use_de": "Podcast-Produktion, Interview-Transkription"
+      },
+      "TT-16": {
+        "examples": [
+          "DeepL",
+          "Phrase AI",
+          "Lokalise"
+        ],
+        "use_de": "Mehrsprachige Kampagnen, Lokalisierung"
+      }
+    }
+  },
+  "kreativ_gestaltung": {
+    "label_de": "Kreativ, Kunst & Gestaltung",
+    "label_en": "Creative, Art & Design",
+    "kldb_groups": [
+      "93",
+      "94"
+    ],
+    "n_occupations": 61,
+    "tier1": {
+      "TT-05": {
+        "examples": [
+          "Midjourney",
+          "Adobe Firefly",
+          "Canva AI"
+        ],
+        "use_de": "Visuelle Konzepte, Storyboards, Grafiken"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Sudowrite"
+        ],
+        "use_de": "Drehbuecher, Texte, Konzeptentwicklung"
+      },
+      "TT-11": {
+        "examples": [
+          "Synthesia",
+          "Descript",
+          "Runway ML"
+        ],
+        "use_de": "Video-Produktion, Audio-Editing, Content-Erstellung"
+      }
+    },
+    "tier2": {
+      "TT-04": {
+        "examples": [
+          "Perplexity",
+          "NotebookLM",
+          "Feedly AI"
+        ],
+        "use_de": "Trend-Recherche, Inspirationsquellen"
+      },
+      "TT-06": {
+        "examples": [
+          "Notion AI",
+          "Frame.io",
+          "Monday AI"
+        ],
+        "use_de": "Produktionsplanung, Review-Workflows"
+      },
+      "TT-07": {
+        "examples": [
+          "Descript",
+          "Otter.ai",
+          "Riverside AI"
+        ],
+        "use_de": "Podcast-Produktion, Interview-Transkription"
+      }
+    }
+  },
+  "naturwissenschaft": {
+    "label_de": "Naturwissenschaft & Umwelt",
+    "label_en": "Natural Sciences & Environment",
+    "kldb_groups": [
+      "41",
+      "42"
+    ],
+    "n_occupations": 33,
+    "tier1": {
+      "TT-04": {
+        "examples": [
+          "Elicit",
+          "Consensus",
+          "Semantic Scholar"
+        ],
+        "use_de": "Literaturrecherche, Studienauswertung, Metaanalysen"
+      },
+      "TT-02": {
+        "examples": [
+          "Jupyter AI",
+          "Julius AI",
+          "SPSS AI"
+        ],
+        "use_de": "Datenanalyse, Statistik, Laborauswertung"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Writefull"
+        ],
+        "use_de": "Paper-Entwuerfe, Abstracts, Forschungsantraege"
+      }
+    },
+    "tier2": {
+      "TT-05": {
+        "examples": [
+          "Gamma",
+          "Beautiful.ai",
+          "Canva AI"
+        ],
+        "use_de": "Konferenzposter, Vortragsfolien"
+      },
+      "TT-16": {
+        "examples": [
+          "DeepL",
+          "Grammarly",
+          "Writefull"
+        ],
+        "use_de": "Uebersetzung, akademisches Schreiben"
+      },
+      "TT-06": {
+        "examples": [
+          "Notion AI",
+          "Asana",
+          "Zotero AI"
+        ],
+        "use_de": "Projektmanagement, Literaturverwaltung"
+      }
+    }
+  },
+  "wissenschaft_forschung": {
+    "label_de": "Geistes- & Sozialwissenschaft",
+    "label_en": "Humanities & Social Sciences",
+    "kldb_groups": [
+      "91"
+    ],
+    "n_occupations": 31,
+    "tier1": {
+      "TT-04": {
+        "examples": [
+          "Elicit",
+          "Consensus",
+          "JSTOR AI"
+        ],
+        "use_de": "Literaturrecherche, Quellenanalyse, Archivsuche"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Writefull"
+        ],
+        "use_de": "Wissenschaftliches Schreiben, Abstracts, Antraege"
+      },
+      "TT-02": {
+        "examples": [
+          "Julius AI",
+          "SPSS AI",
+          "NVivo AI"
+        ],
+        "use_de": "Qualitative und quantitative Datenanalyse"
+      }
+    },
+    "tier2": {
+      "TT-05": {
+        "examples": [
+          "Gamma",
+          "Beautiful.ai",
+          "Canva AI"
+        ],
+        "use_de": "Konferenzposter, Vortragsfolien"
+      },
+      "TT-16": {
+        "examples": [
+          "DeepL",
+          "Grammarly",
+          "Writefull"
+        ],
+        "use_de": "Uebersetzung, mehrsprachige Forschung"
+      },
+      "TT-06": {
+        "examples": [
+          "Notion AI",
+          "Zotero AI",
+          "Citavi AI"
+        ],
+        "use_de": "Literaturverwaltung, Projektplanung"
+      }
+    }
+  },
+  "produktion_handwerk": {
+    "label_de": "Produktion, Handwerk & Technik",
+    "label_en": "Production, Trades & Technical",
+    "kldb_groups": [
+      "11",
+      "23",
+      "24",
+      "27",
+      "31",
+      "51",
+      "53"
+    ],
+    "n_occupations": 15,
+    "tier1": {
+      "TT-14": {
+        "examples": [
+          "Autodesk AI",
+          "Siemens NX AI",
+          "Ansys AI"
+        ],
+        "use_de": "CAD, Simulation, Konstruktionsoptimierung"
+      },
+      "TT-18": {
+        "examples": [
+          "Blue Yonder",
+          "SAP AI",
+          "Siemens Opcenter"
+        ],
+        "use_de": "Produktionsplanung, Logistik, Lieferketten"
+      },
+      "TT-01": {
+        "examples": [
+          "ChatGPT",
+          "Claude",
+          "Microsoft Copilot"
+        ],
+        "use_de": "Technische Berichte, Protokolle, Anweisungen"
+      }
+    },
+    "tier2": {
+      "TT-06": {
+        "examples": [
+          "MS Project Copilot",
+          "Asana",
+          "Monday AI"
+        ],
+        "use_de": "Projektsteuerung, Einsatzplanung"
+      },
+      "TT-13": {
+        "examples": [
+          "UiPath",
+          "Automation Anywhere",
+          "Zapier AI"
+        ],
+        "use_de": "Pruefprotokolle, Genehmigungsworkflows"
+      },
+      "TT-02": {
+        "examples": [
+          "Power BI Copilot",
+          "Minitab",
+          "MATLAB AI"
+        ],
+        "use_de": "Qualitaetskontrolle, Messdatenanalyse"
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "TT-01": {
+    "de": "KI-Schreibassistenten",
+    "en": "AI Writing & Text Generation",
+    "icon": "✍️",
+    "desc": "KI-Tools zum Erstellen, Überarbeiten und Verbessern von Texten — von E-Mails bis Berichte.",
+    "ex": [
+      "ChatGPT",
+      "Claude",
+      "DeepL Write"
+    ]
+  },
+  "TT-02": {
+    "de": "KI-Datenanalyse & Business Intelligence",
+    "en": "AI Data Analysis & BI",
+    "icon": "📊",
+    "desc": "Tools zur automatisierten Auswertung, Visualisierung und Interpretation von Daten.",
+    "ex": [
+      "Power BI Copilot",
+      "Tableau AI",
+      "Julius AI"
+    ]
+  },
+  "TT-03": {
+    "de": "KI-Entwicklungstools",
+    "en": "AI Code & Software Development",
+    "icon": "💻",
+    "desc": "KI-gestützte Programmierung, Code-Review und Softwareentwicklung.",
+    "ex": [
+      "GitHub Copilot",
+      "Claude Code",
+      "Cursor"
+    ]
+  },
+  "TT-04": {
+    "de": "KI-Recherche & Wissenstools",
+    "en": "AI Research & Knowledge",
+    "icon": "🔍",
+    "desc": "Tools für Recherche, Zusammenfassung und Wissensmanagement mit KI-Unterstützung.",
+    "ex": [
+      "Perplexity",
+      "Elicit",
+      "Consensus"
+    ]
+  },
+  "TT-05": {
+    "de": "KI-Präsentations- & Designtools",
+    "en": "AI Presentation & Visual Design",
+    "icon": "🎨",
+    "desc": "KI-Tools zum Erstellen von Präsentationen, Grafiken und visuellem Content.",
+    "ex": [
+      "Gamma",
+      "Beautiful.ai",
+      "Canva AI"
+    ]
+  },
+  "TT-06": {
+    "de": "KI-Projekt- & Aufgabenmanagement",
+    "en": "AI Project & Task Management",
+    "icon": "📋",
+    "desc": "Projektmanagement-Tools mit KI-Funktionen für Planung, Tracking und Automatisierung.",
+    "ex": [
+      "Notion AI",
+      "Asana Intelligence",
+      "Monday AI"
+    ]
+  },
+  "TT-07": {
+    "de": "KI-Kommunikations- & Meetingtools",
+    "en": "AI Communication & Meeting Tools",
+    "icon": "🎙️",
+    "desc": "KI-Tools für Meetings, Transkription, Zusammenfassungen und Kommunikation.",
+    "ex": [
+      "Otter.ai",
+      "Fireflies",
+      "Microsoft Copilot (Teams)"
+    ]
+  },
+  "TT-08": {
+    "de": "KI-Tabellenkalkulation & Finanztools",
+    "en": "AI Spreadsheet & Financial Tools",
+    "icon": "📈",
+    "desc": "KI-gestützte Tabellenkalkulation, Finanzmodellierung und Buchhaltung.",
+    "ex": [
+      "Excel Copilot",
+      "Google Sheets AI",
+      "Rows AI"
+    ]
+  },
+  "TT-09": {
+    "de": "KI-Vertriebs- & Kundentools",
+    "en": "AI Customer & Sales Tools",
+    "icon": "🤝",
+    "desc": "CRM, Vertriebsautomatisierung und Kundenservice mit KI-Unterstützung.",
+    "ex": [
+      "Salesforce Einstein",
+      "HubSpot AI",
+      "Intercom Fin"
+    ]
+  },
+  "TT-10": {
+    "de": "KI-Rechts- & Compliance-Tools",
+    "en": "AI Legal & Compliance Tools",
+    "icon": "⚖️",
+    "desc": "KI-Tools für Vertragsanalyse, Rechtsrecherche und Compliance-Prüfung.",
+    "ex": [
+      "Harvey AI",
+      "Luminance",
+      "Kira Systems"
+    ]
+  },
+  "TT-11": {
+    "de": "KI-Marketing & Content-Erstellung",
+    "en": "AI Marketing & Content",
+    "icon": "📣",
+    "desc": "Tools für Marketingkampagnen, Social Media, SEO und Content-Produktion.",
+    "ex": [
+      "HubSpot Content AI",
+      "Surfer SEO",
+      "Copy.ai"
+    ]
+  },
+  "TT-12": {
+    "de": "KI-Personal- & Talenttools",
+    "en": "AI HR & Talent Tools",
+    "icon": "👥",
+    "desc": "KI-gestützte Personalsuche, Bewerbermanagement und Mitarbeiterentwicklung.",
+    "ex": [
+      "HireVue",
+      "Eightfold AI",
+      "Textio"
+    ]
+  },
+  "TT-13": {
+    "de": "KI-Dokumenten- & Workflow-Automatisierung",
+    "en": "AI Document & Workflow Automation",
+    "icon": "⚙️",
+    "desc": "Automatisierung von Dokumentenverarbeitung, Formularen und Geschäftsprozessen.",
+    "ex": [
+      "Zapier AI",
+      "Make (Integromat)",
+      "DocuSign IAM"
+    ]
+  },
+  "TT-14": {
+    "de": "KI-CAD & Ingenieurstools",
+    "en": "AI CAD & Engineering",
+    "icon": "🔧",
+    "desc": "KI-gestützte Konstruktion, Simulation und technisches Design.",
+    "ex": [
+      "Autodesk AI",
+      "Siemens NX AI",
+      "Ansys AI"
+    ]
+  },
+  "TT-15": {
+    "de": "KI-Cybersicherheitstools",
+    "en": "AI Cybersecurity Tools",
+    "icon": "🛡️",
+    "desc": "KI-basierte Bedrohungserkennung, Sicherheitsanalyse und Incident Response.",
+    "ex": [
+      "CrowdStrike Charlotte",
+      "Darktrace",
+      "SentinelOne Purple AI"
+    ]
+  },
+  "TT-16": {
+    "de": "KI-Übersetzung & Lokalisierung",
+    "en": "AI Translation & Localization",
+    "icon": "🌐",
+    "desc": "Maschinelle Übersetzung, Dolmetsch-Unterstützung und Lokalisierungstools.",
+    "ex": [
+      "DeepL",
+      "Google Translate",
+      "Phrase AI"
+    ]
+  },
+  "TT-17": {
+    "de": "KI-Medizin- & Gesundheitstools",
+    "en": "AI Medical & Health Tools",
+    "icon": "🏥",
+    "desc": "KI-gestützte Diagnostik, Dokumentation und klinische Entscheidungsunterstützung.",
+    "ex": [
+      "Nuance DAX",
+      "Ada Health",
+      "PathAI"
+    ]
+  },
+  "TT-18": {
+    "de": "KI-Lieferketten- & Betriebstools",
+    "en": "AI Supply Chain & Operations",
+    "icon": "🏭",
+    "desc": "KI für Bestandsmanagement, Logistikoptimierung und Betriebsplanung.",
+    "ex": [
+      "Blue Yonder",
+      "Coupa AI",
+      "FourKites"
+    ]
+  }
+}

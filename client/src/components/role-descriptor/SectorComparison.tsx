@@ -1,4 +1,4 @@
-import { CATEGORIES, CATEGORY_ORDER, CategoryLabel, SECTOR_AVERAGES } from "@/lib/data";
+import { CATEGORIES, CATEGORY_ORDER, CategoryLabel, SECTOR_AVERAGES, sectorTools } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Building2 } from "lucide-react";
 
@@ -9,15 +9,11 @@ interface SectorComparisonProps {
   language: "en" | "de";
 }
 
-const SECTOR_LABELS: Record<string, { de: string; en: string }> = {
-  tech: { de: "Technologie", en: "Technology" },
-  health: { de: "Gesundheit", en: "Health" },
-  finance: { de: "Finanzen", en: "Finance" },
-  law: { de: "Recht", en: "Law" },
-  marketing: { de: "Marketing", en: "Marketing" },
-  management: { de: "Management", en: "Management" },
-  other: { de: "Andere", en: "Other" },
-};
+function getSectorLabel(sector: string): { de: string; en: string } {
+  const data = sectorTools[sector];
+  if (data) return { de: data.label_de, en: data.label_en };
+  return { de: sector, en: sector };
+}
 
 function StackedBar({ values, label }: { values: Record<CategoryLabel, number>; label: string }) {
   return (
@@ -55,7 +51,7 @@ export function SectorComparison({ occupationPercentages, sector, occupationName
     human_led: sectorAvg.human_led * 100,
   };
 
-  const sectorLabel = SECTOR_LABELS[sector] || { de: sector, en: sector };
+  const sectorLabel = getSectorLabel(sector);
 
   return (
     <Card className="border-none shadow-sm bg-white/60" data-testid="sector-comparison">
