@@ -355,21 +355,10 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
       {activeTab === "tasks" && (
         <div className="animate-in fade-in duration-200" data-testid="tab-tasks-content">
           <div className="rounded-2xl bg-white/80 border border-border/40 overflow-hidden">
-            <div className="px-4 py-2.5 border-b border-border/30 bg-slate-50/50 flex items-center gap-2">
-              <h3 className="text-sm font-semibold text-slate-700 flex-1">
+            <div className="px-4 py-3 border-b border-border/30 bg-slate-50/50 flex items-center gap-2 flex-wrap">
+              <h3 className="text-sm font-semibold text-slate-700 mr-auto">
                 {language === "de" ? "Aufgaben" : "Tasks"}
-                {activeCategory && (
-                  <span className="font-normal ml-1.5 text-xs" style={{ color: CATEGORIES[activeCategory].color }}>
-                    → {language === "de" ? CATEGORIES[activeCategory].label_de : CATEGORIES[activeCategory].label_en}
-                  </span>
-                )}
               </h3>
-              {activeCategory && (
-                <button onClick={() => setActiveCategory(null)}
-                  className="text-[10px] text-slate-400 hover:text-slate-600 px-2 py-0.5 rounded-full bg-slate-100">
-                  {language === "de" ? "Filter löschen" : "Clear filter"}
-                </button>
-              )}
               <button
                 onClick={() => setShowAddTask(!showAddTask)}
                 className="flex items-center gap-1 text-[10px] font-medium text-indigo-600 hover:text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1 rounded-full transition-colors"
@@ -429,144 +418,208 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
               </div>
             )}
 
-            <div className="px-4 py-1.5 text-[10px] text-slate-400 bg-slate-50/60 border-b border-slate-100 leading-relaxed italic">
-              {language === "de"
-                ? "Diese Labels sind Richtwerte, nicht absolut. Das Verhältnis zwischen Mensch und KI kann je nach Kontext, Tools und Verantwortung variieren."
-                : "These labels are directional, not absolute. The balance between human and AI work can vary by context, tools, and level of responsibility."}
-            </div>
-
-            <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 340px)', minHeight: 300 }}>
+            <div className="flex gap-2 px-4 py-3 flex-wrap" data-testid="task-category-filters">
               {CATEGORY_ORDER.map(cat => {
                 const catTasks = allTasks.filter(t => t.label === cat);
                 if (catTasks.length === 0) return null;
                 const catConfig = CATEGORIES[cat];
-                const isCatDimmed = activeCategory && activeCategory !== cat;
-                const isExpanded = expandedCats.has(cat);
-
+                const isActive = activeCategory === cat;
+                const activeCount = catTasks.filter(t => !deselectedTasks.has(t.id)).length;
                 return (
-                  <div key={cat} className={`transition-opacity duration-200 ${isCatDimmed ? 'opacity-20' : ''}`}>
-                    <button
-                      onClick={() => toggleCatExpand(cat)}
-                      className="sticky top-0 z-10 w-full flex items-center gap-2 px-4 py-2.5 text-xs font-semibold border-b border-slate-100 text-left"
-                      style={{ backgroundColor: catConfig.bg, color: catConfig.color }}
-                      data-testid={`task-category-header-${cat}`}
-                    >
-                      <span>{catConfig.emoji}</span>
-                      <span className="flex-1">
-                        {language === "de" ? catConfig.label_de : catConfig.label_en}
-                      </span>
-                      <span className="opacity-60 font-normal tabular-nums text-[11px]">
-                        {catTasks.filter(t => !deselectedTasks.has(t.id)).length}/{catTasks.length}
-                      </span>
-                      <ChevronDown className={`w-3.5 h-3.5 opacity-40 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
-                    </button>
-                    {isExpanded && catTasks.map(task => {
-                      const active = !deselectedTasks.has(task.id);
-                      const isMatched = matchedTaskIds ? matchedTaskIds.has(task.id) : false;
-                      const isDimmedBySkill = matchedTaskIds && !isMatched;
-                      const taskSkills = task.skills || [];
-                      const hasExp = !!(task.explanation?.what_it_means);
-                      const isTaskExpanded = expandedTaskId === task.id;
+                  <button
+                    key={cat}
+                    onClick={() => {
+                      setActiveCategory(isActive ? null : cat);
+                      setExpandedTaskId(null);
+                    }}
+                    className={`flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 text-xs font-medium transition-all duration-200 ${
+                      isActive ? 'shadow-md scale-[1.02]' : 'hover:shadow-sm hover:scale-[1.01] opacity-70 hover:opacity-100'
+                    }`}
+                    style={{
+                      backgroundColor: isActive ? catConfig.bg : 'white',
+                      borderColor: isActive ? catConfig.color : catConfig.color + '25',
+                      color: catConfig.color,
+                    }}
+                    data-testid={`task-category-filter-${cat}`}
+                  >
+                    <span className="text-sm">{catConfig.emoji}</span>
+                    <span className="hidden sm:inline">{language === "de" ? catConfig.label_de : catConfig.label_en}</span>
+                    <span className="tabular-nums font-bold text-[11px] px-1.5 py-0.5 rounded-full" style={{ backgroundColor: catConfig.color + '15' }}>
+                      {activeCount}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
 
-                      return (
-                        <div
-                          key={task.id}
-                          className={`border-b border-slate-50 transition-all duration-200 ${
-                            !active ? 'opacity-20' :
-                            isMatched ? 'bg-primary/[0.04]' :
-                            isDimmedBySkill ? 'opacity-20' :
-                            task.confirmed && !task.id.startsWith('custom-') ? 'opacity-40' : ''
-                          } ${isTaskExpanded ? 'bg-slate-50/50' : ''}`}
-                          data-testid={`task-item-${task.id}`}
-                        >
-                          <div
-                            className={`px-4 py-2 flex items-start gap-2 ${hasExp ? 'cursor-pointer hover:bg-slate-50/60' : ''}`}
-                            onClick={() => hasExp && setExpandedTaskId(isTaskExpanded ? null : task.id)}
-                          >
-                            <div className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5" style={{ backgroundColor: catConfig.color }} />
-                            <div className="flex-1 min-w-0">
-                              <span className={`text-xs leading-relaxed ${
-                                active ? 'text-slate-700' : 'text-slate-400 line-through'
-                              } ${isMatched ? 'font-medium text-slate-900' : ''}`}>
-                                {language === "de" ? task.text_de : task.text_en}
-                              </span>
-                              {task.id.startsWith('custom-') && (
-                                <span className="inline-flex items-center gap-1 ml-1.5 align-middle">
-                                  <span className="text-[8px] font-semibold text-indigo-500 bg-indigo-50 px-1.5 py-0.5 rounded-full border border-indigo-100">
-                                    {language === "de" ? "Eigene" : "Custom"}
+            <div className="px-4 pb-2">
+              <p className="text-[10px] text-slate-400 italic leading-relaxed">
+                {language === "de"
+                  ? "Klicke auf eine Aufgabe für Details. Labels sind Richtwerte — das Verhältnis kann je nach Kontext variieren."
+                  : "Click a task for details. Labels are directional — the balance can vary by context."}
+              </p>
+            </div>
+
+            <div className="px-4 pb-4 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 400px)', minHeight: 200 }}>
+              {(() => {
+                const visibleCats = activeCategory ? [activeCategory] : CATEGORY_ORDER;
+                return visibleCats.map(cat => {
+                  const catTasks = allTasks.filter(t => t.label === cat);
+                  if (catTasks.length === 0) return null;
+                  const catConfig = CATEGORIES[cat];
+
+                  return (
+                    <div key={cat} className="mb-4 last:mb-0">
+                      {!activeCategory && (
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: catConfig.color }} />
+                          <span className="text-[11px] font-semibold" style={{ color: catConfig.color }}>
+                            {language === "de" ? catConfig.label_de : catConfig.label_en}
+                          </span>
+                          <div className="flex-1 h-px bg-slate-100" />
+                        </div>
+                      )}
+                      {activeCategory && (
+                        <div className="mb-3 p-3 rounded-xl" style={{ backgroundColor: catConfig.bg }}>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-lg">{catConfig.emoji}</span>
+                            <span className="text-sm font-semibold" style={{ color: catConfig.color }}>
+                              {language === "de" ? catConfig.label_de : catConfig.label_en}
+                            </span>
+                          </div>
+                          <p className="text-[11px] leading-relaxed" style={{ color: catConfig.color, opacity: 0.7 }}>
+                            {language === "de" ? catConfig.message_de : catConfig.message_en}
+                          </p>
+                        </div>
+                      )}
+                      <div className="space-y-1.5">
+                        {catTasks.map(task => {
+                          const active = !deselectedTasks.has(task.id);
+                          const isMatched = matchedTaskIds ? matchedTaskIds.has(task.id) : false;
+                          const isDimmedBySkill = matchedTaskIds && !isMatched;
+                          const hasExp = !!(task.explanation?.what_it_means);
+                          const isTaskExpanded = expandedTaskId === task.id;
+                          const isGreyed = task.confirmed && !task.id.startsWith('custom-');
+
+                          return (
+                            <div
+                              key={task.id}
+                              className={`rounded-xl border transition-all duration-200 ${
+                                !active ? 'opacity-20 border-slate-100' :
+                                isDimmedBySkill ? 'opacity-20 border-slate-100' :
+                                isTaskExpanded ? 'border-slate-200 shadow-sm bg-white' :
+                                isMatched ? 'border-primary/30 bg-primary/[0.03] shadow-sm' :
+                                isGreyed ? 'opacity-40 border-slate-100 bg-slate-50/50' :
+                                'border-slate-100 bg-white/60 hover:border-slate-200 hover:shadow-sm'
+                              }`}
+                              data-testid={`task-item-${task.id}`}
+                            >
+                              <div
+                                className={`px-3 py-2.5 flex items-start gap-2.5 ${hasExp || true ? 'cursor-pointer' : ''}`}
+                                onClick={() => setExpandedTaskId(isTaskExpanded ? null : task.id)}
+                              >
+                                <div className="w-2 h-2 rounded-full shrink-0 mt-1" style={{ backgroundColor: catConfig.color }} />
+                                <div className="flex-1 min-w-0">
+                                  <span className={`text-xs leading-relaxed ${
+                                    active ? 'text-slate-700' : 'text-slate-400 line-through'
+                                  } ${isMatched ? 'font-medium text-slate-900' : ''}`}>
+                                    {language === "de" ? task.text_de : task.text_en}
                                   </span>
-                                  <button onClick={(e) => { e.stopPropagation(); removeCustomTask(task.id); }}
-                                    className="w-4 h-4 rounded-full bg-red-50 hover:bg-red-100 flex items-center justify-center transition-colors"
-                                    data-testid={`remove-custom-task-${task.id}`}>
-                                    <X className="w-2.5 h-2.5 text-red-400" />
-                                  </button>
-                                </span>
-                              )}
-                              {taskSkills.length > 0 && (
-                                <div className="flex flex-wrap gap-0.5 mt-1">
-                                  {taskSkills.map(sid => {
-                                    const sk = skills[sid];
-                                    if (!sk) return null;
-                                    const meta = SKILL_CATEGORY_META[sk.category];
-                                    return (
-                                      <button
-                                        key={sid}
-                                        onClick={(e) => { e.stopPropagation(); handleTaskSkillClick(sid); }}
-                                        onMouseEnter={() => setHoveredSkill(sid)}
-                                        onMouseLeave={() => setHoveredSkill(null)}
-                                        className="inline-flex items-center gap-0.5 text-[8px] leading-tight px-1 py-0.5 rounded border transition-all duration-150 hover:scale-105"
-                                        style={{
-                                          borderColor: meta.color + '20',
-                                          backgroundColor: 'transparent',
-                                          color: meta.color,
-                                        }}
-                                        data-testid={`task-skill-tag-${task.id}-${sid}`}
-                                      >
-                                        <div className="w-1 h-1 rounded-full" style={{ backgroundColor: meta.color }} />
-                                        {language === "de" ? sk.name_de : sk.name_en}
+                                  {task.id.startsWith('custom-') && (
+                                    <span className="inline-flex items-center gap-1 ml-1.5 align-middle">
+                                      <span className="text-[8px] font-semibold text-indigo-500 bg-indigo-50 px-1.5 py-0.5 rounded-full border border-indigo-100">
+                                        {language === "de" ? "Eigene" : "Custom"}
+                                      </span>
+                                      <button onClick={(e) => { e.stopPropagation(); removeCustomTask(task.id); }}
+                                        className="w-4 h-4 rounded-full bg-red-50 hover:bg-red-100 flex items-center justify-center transition-colors"
+                                        data-testid={`remove-custom-task-${task.id}`}>
+                                        <X className="w-2.5 h-2.5 text-red-400" />
                                       </button>
-                                    );
-                                  })}
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="flex items-center gap-1.5 shrink-0">
+                                  {hasExp && (
+                                    <span className="w-4 h-4 rounded-full bg-amber-50 flex items-center justify-center" title={language === "de" ? "Details verfügbar" : "Details available"}>
+                                      <Sparkles className="w-2.5 h-2.5 text-amber-400" />
+                                    </span>
+                                  )}
+                                  <ChevronDown className={`w-3.5 h-3.5 text-slate-300 transition-transform duration-200 ${isTaskExpanded ? 'rotate-180' : ''}`} />
+                                </div>
+                              </div>
+
+                              {isTaskExpanded && (
+                                <div className="px-3 pb-3 border-t border-slate-100/60 animate-in fade-in slide-in-from-top-1 duration-200">
+                                  {task.explanation && (
+                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2.5">
+                                      {[
+                                        { key: 'what_it_means', title: language === 'de' ? 'Was das bedeutet' : 'What this means', icon: '💡' },
+                                        { key: 'why_it_fits', title: language === 'de' ? 'Warum diese Kategorie' : 'Why it fits here', icon: '🎯' },
+                                        { key: 'what_stays_human', title: language === 'de' ? 'Was menschlich bleibt' : 'What stays human', icon: '🧑' },
+                                      ].map(col => (
+                                        <div key={col.key} className="bg-slate-50/80 rounded-lg p-2.5">
+                                          <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400 mb-1 flex items-center gap-1">
+                                            <span>{col.icon}</span> {col.title}
+                                          </div>
+                                          <div className="text-[11px] text-slate-600 leading-relaxed">
+                                            {(task.explanation as Record<string, string>)[col.key]}
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
+
+                                  {(task.skills || []).length > 0 && (
+                                    <div className="flex flex-wrap gap-1 mt-2.5 pt-2.5 border-t border-slate-100/60">
+                                      <span className="text-[9px] text-slate-400 font-medium mr-1 self-center">
+                                        {language === "de" ? "Kompetenzen:" : "Skills:"}
+                                      </span>
+                                      {(task.skills || []).map(sid => {
+                                        const sk = skills[sid];
+                                        if (!sk) return null;
+                                        const meta = SKILL_CATEGORY_META[sk.category];
+                                        return (
+                                          <button
+                                            key={sid}
+                                            onClick={(e) => { e.stopPropagation(); handleTaskSkillClick(sid); }}
+                                            className="inline-flex items-center gap-0.5 text-[9px] leading-tight px-1.5 py-0.5 rounded-full border transition-all duration-150 hover:scale-105"
+                                            style={{
+                                              borderColor: meta.color + '30',
+                                              backgroundColor: meta.color + '08',
+                                              color: meta.color,
+                                            }}
+                                            data-testid={`task-skill-tag-${task.id}-${sid}`}
+                                          >
+                                            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: meta.color }} />
+                                            {language === "de" ? sk.name_de : sk.name_en}
+                                          </button>
+                                        );
+                                      })}
+                                    </div>
+                                  )}
+
+                                  <div className="flex items-center justify-between mt-2.5 pt-2 border-t border-slate-100/60">
+                                    <span className="text-[10px] text-slate-400">
+                                      {language === "de" ? "In deinem Profil:" : "In your profile:"}
+                                    </span>
+                                    <Switch
+                                      checked={active}
+                                      onCheckedChange={() => handleToggleTask(task.id)}
+                                      onClick={(e) => e.stopPropagation()}
+                                      className="shrink-0 scale-75"
+                                      data-testid={`task-toggle-${task.id}`}
+                                    />
+                                  </div>
                                 </div>
                               )}
                             </div>
-                            <div className="flex items-center gap-1 shrink-0">
-                              {hasExp && (
-                                <ChevronDown className={`w-3 h-3 text-slate-300 transition-transform duration-200 ${isTaskExpanded ? 'rotate-180' : ''}`} />
-                              )}
-                              <Switch
-                                checked={active}
-                                onCheckedChange={() => handleToggleTask(task.id)}
-                                onClick={(e) => e.stopPropagation()}
-                                className="shrink-0 scale-[0.65]"
-                                data-testid={`task-toggle-${task.id}`}
-                              />
-                            </div>
-                          </div>
-                          {isTaskExpanded && task.explanation && (
-                            <div className="px-4 pb-3 pt-1 border-t border-slate-100/60 bg-slate-50/40 animate-in fade-in slide-in-from-top-1 duration-200">
-                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                {[
-                                  { key: 'what_it_means', title: language === 'de' ? 'Was das bedeutet' : 'What this means' },
-                                  { key: 'why_it_fits', title: language === 'de' ? 'Warum diese Kategorie' : 'Why it fits here' },
-                                  { key: 'what_stays_human', title: language === 'de' ? 'Was menschlich bleibt' : 'What stays human' },
-                                ].map(col => (
-                                  <div key={col.key}>
-                                    <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400 mb-1">{col.title}</div>
-                                    <div className="text-[11px] text-slate-600 leading-relaxed">
-                                      {(task.explanation as Record<string, string>)[col.key]}
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                });
+              })()}
             </div>
 
             {deselectedTasks.size > 0 && !showPersonalized && (
