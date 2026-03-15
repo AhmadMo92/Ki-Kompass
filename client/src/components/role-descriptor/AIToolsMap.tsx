@@ -1,10 +1,7 @@
 import { useState, useMemo } from "react";
-import {
-  AI_TOOL_CATEGORIES, AIToolCategory,
-  getToolsForOccupation
-} from "@/lib/data/ai-tools";
-import { skills, SKILL_CATEGORY_META, TaskItem } from "@/lib/data";
-import { Bot, ChevronDown, ChevronUp } from "lucide-react";
+import { getRelevantNodes } from "@/lib/data/ai-tools";
+import { TaskItem } from "@/lib/data";
+import { Bot, ExternalLink } from "lucide-react";
 
 interface AIToolsMapProps {
   tasks: TaskItem[];
@@ -12,106 +9,119 @@ interface AIToolsMapProps {
 }
 
 export function AIToolsMap({ tasks, language }: AIToolsMapProps) {
-  const [expandedTool, setExpandedTool] = useState<string | null>(null);
+  const [activeNodeId, setActiveNodeId] = useState<string | null>(null);
 
-  const toolMatches = useMemo(() => getToolsForOccupation(tasks), [tasks]);
+  const relevantNodes = useMemo(() => getRelevantNodes(tasks), [tasks]);
 
-  const grouped = useMemo(() => {
-    const map: Record<string, typeof toolMatches> = {};
-    for (const m of toolMatches) {
-      if (!map[m.tool.category]) map[m.tool.category] = [];
-      map[m.tool.category].push(m);
-    }
-    return map;
-  }, [toolMatches]);
+  if (relevantNodes.length === 0) return null;
 
-  const aiExposedCount = tasks.filter(t => t.label !== "human_led" && t.label !== "sensitive").length;
-
-  if (toolMatches.length === 0) return null;
+  const activeNode = activeNodeId ? relevantNodes.find(r => r.node.id === activeNodeId)?.node : null;
 
   return (
-    <div className="rounded-2xl bg-white/80 border border-border/40 overflow-hidden" data-testid="ai-tools-map">
-      <div className="px-4 py-3 border-b border-border/30 bg-gradient-to-r from-violet-50 to-cyan-50 flex items-center gap-3">
+    <div className="space-y-4" data-testid="ai-tools-map">
+      <div className="flex items-center gap-2 mb-1">
         <Bot className="w-5 h-5 text-violet-600" />
-        <div className="flex-1">
+        <div>
           <h3 className="text-sm font-semibold text-slate-700">
-            {language === "de" ? "KI-Werkzeuge" : "AI Tools"}
+            {language === "de" ? "Dein KI-Werkzeugkasten" : "Your AI Toolkit"}
           </h3>
           <p className="text-[10px] text-slate-400">
             {language === "de"
-              ? `${toolMatches.length} Tools für ${aiExposedCount} KI-exponierte Aufgaben`
-              : `${toolMatches.length} tools for ${aiExposedCount} AI-exposed tasks`}
+              ? "Vertrauenswürdige Tools, kuratiert für dein Profil"
+              : "Trusted tools, curated for your profile"}
           </p>
         </div>
       </div>
 
-      <div className="p-3 space-y-3 max-h-[420px] overflow-y-auto">
-        {(Object.entries(grouped) as [string, typeof toolMatches][]).map(([cat, matches]) => {
-          const meta = AI_TOOL_CATEGORIES[cat as AIToolCategory];
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        {relevantNodes.map(({ node, relevance }) => {
+          const isActive = activeNodeId === node.id;
           return (
-            <div key={cat}>
-              <div className="flex items-center gap-1.5 mb-2">
-                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: meta.color }} />
-                <span className="text-[10px] font-semibold" style={{ color: meta.color }}>
-                  {language === "de" ? meta.label_de : meta.label_en}
-                </span>
-                <span className="text-[9px] text-slate-400">({matches.length})</span>
+            <button
+              key={node.id}
+              onClick={() => setActiveNodeId(isActive ? null : node.id)}
+              className={`relative rounded-2xl border-2 p-4 text-left transition-all duration-200 hover:shadow-md group ${
+                isActive ? 'shadow-lg scale-[1.02]' : 'hover:scale-[1.01]'
+              }`}
+              style={{
+                borderColor: isActive ? node.color : node.color + '30',
+                backgroundColor: isActive ? node.bg : 'white',
+              }}
+              data-testid={`tool-node-${node.category}`}
+            >
+              <div className="text-2xl mb-2">{node.icon}</div>
+              <div className="text-xs font-semibold mb-1" style={{ color: node.color }}>
+                {language === "de" ? node.label_de : node.label_en}
               </div>
-              <div className="grid grid-cols-2 gap-1.5">
-                {matches.map(m => {
-                  const isExpanded = expandedTool === m.tool.id;
-                  return (
-                    <div key={m.tool.id}
-                      className={`rounded-lg border transition-all duration-150 ${isExpanded ? 'col-span-2' : ''}`}
-                      style={{ borderColor: meta.color + '25', backgroundColor: meta.bg + '60' }}
-                    >
-                      <button
-                        onClick={() => setExpandedTool(isExpanded ? null : m.tool.id)}
-                        className="w-full flex items-center gap-2 px-2.5 py-1.5 text-left"
-                        data-testid={`tool-card-${m.tool.id}`}
-                      >
-                        <span className="text-sm">{m.tool.icon}</span>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-[11px] font-medium text-slate-700 truncate">
-                            {language === "de" ? (m.tool.name_de || m.tool.name) : m.tool.name}
-                          </div>
-                        </div>
-                        <span className="text-[9px] text-slate-400 tabular-nums shrink-0">
-                          {m.taskCount} {language === "de" ? "Aufg." : "tasks"}
-                        </span>
-                        <ChevronDown className={`w-3 h-3 text-slate-300 shrink-0 transition-transform duration-150 ${isExpanded ? 'rotate-180' : ''}`} />
-                      </button>
-                      {isExpanded && (
-                        <div className="px-2.5 pb-2 border-t border-slate-100/60 pt-1.5 animate-in fade-in duration-150">
-                          <p className="text-[10px] text-slate-500 leading-relaxed mb-1.5">
-                            {language === "de" ? m.tool.description_de : m.tool.description_en}
-                          </p>
-                          {m.matchedSkills.length > 0 && (
-                            <div className="flex flex-wrap gap-1">
-                              {m.matchedSkills.map(sid => {
-                                const sk = skills[sid];
-                                if (!sk) return null;
-                                const skMeta = SKILL_CATEGORY_META[sk.category];
-                                return (
-                                  <span key={sid} className="text-[8px] px-1.5 py-0.5 rounded border inline-flex items-center gap-0.5"
-                                    style={{ borderColor: skMeta.color + '30', color: skMeta.color }}>
-                                    <span className="w-1 h-1 rounded-full" style={{ backgroundColor: skMeta.color }} />
-                                    {language === "de" ? sk.name_de : sk.name_en}
-                                  </span>
-                                );
-                              })}
-                            </div>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+              <div className="text-[10px] text-slate-400 leading-relaxed">
+                {language === "de" ? node.description_de : node.description_en}
               </div>
-            </div>
+              <div className="flex -space-x-2 mt-3">
+                {node.topTools.map((tool, i) => (
+                  <div key={i}
+                    className="w-7 h-7 rounded-full border-2 border-white bg-white shadow-sm overflow-hidden"
+                    title={tool.name}>
+                    <img src={tool.logo} alt={tool.name} className="w-full h-full object-contain" />
+                  </div>
+                ))}
+              </div>
+              {relevance >= 6 && (
+                <div className="absolute top-2 right-2 text-[8px] font-bold px-1.5 py-0.5 rounded-full"
+                  style={{ backgroundColor: node.color + '15', color: node.color }}>
+                  {language === "de" ? "Hohe Relevanz" : "High relevance"}
+                </div>
+              )}
+            </button>
           );
         })}
       </div>
+
+      {activeNode && (
+        <div className="rounded-2xl border bg-white overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200"
+          style={{ borderColor: activeNode.color + '40' }}
+          data-testid="tool-detail-panel">
+          <div className="px-4 py-3 flex items-center gap-2" style={{ backgroundColor: activeNode.bg }}>
+            <span className="text-lg">{activeNode.icon}</span>
+            <div className="flex-1">
+              <div className="text-sm font-semibold" style={{ color: activeNode.color }}>
+                {language === "de" ? activeNode.label_de : activeNode.label_en}
+              </div>
+              <div className="text-[10px] text-slate-500">
+                {language === "de" ? "Top 3 empfohlene Tools" : "Top 3 recommended tools"}
+              </div>
+            </div>
+          </div>
+          <div className="divide-y divide-slate-100">
+            {activeNode.topTools.map((tool, i) => (
+              <div key={i} className="px-4 py-3 flex items-center gap-3 hover:bg-slate-50/50 transition-colors"
+                data-testid={`tool-detail-${i}`}>
+                <div className="w-10 h-10 rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden shrink-0 p-1">
+                  <img src={tool.logo} alt={tool.name} className="w-full h-full object-contain" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-semibold text-slate-800">{tool.name}</div>
+                  <div className="text-[11px] text-slate-500 leading-relaxed">
+                    {language === "de" ? tool.description_de : tool.description_en}
+                  </div>
+                </div>
+                <a href={tool.url} target="_blank" rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="shrink-0 w-8 h-8 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:border-slate-400 transition-colors"
+                  data-testid={`tool-link-${tool.name.toLowerCase().replace(/[^a-z]/g, '')}`}>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            ))}
+          </div>
+          <div className="px-4 py-2 bg-slate-50/60 border-t border-slate-100">
+            <div className="text-[9px] text-slate-400 italic">
+              {language === "de"
+                ? "Benchmarks und Vergleiche werden bald hinzugefügt"
+                : "Benchmarks and comparisons coming soon"}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -82,9 +82,9 @@ Each task links to 2-3 skills with relevance scores. Skills profile shows which 
 
 ## Key Components
 - `Landing` — Journey-oriented landing page with four pillars: Discover→Analyze→Customize→Navigate journey steps, Dashboard preview section, Companion/roadmap section
-- `OccupationDashboard` — **Main holistic view**: 4-panel top row (donut+legend, category bars, sector comparison, skill radar) + task/skill panels + AI Tools Map. Supports custom tasks (+ Task button). Used by both `/my-role` and `/beruf/:slug`.
-- `AIToolsMap` — Force-directed SVG graph connecting 25 virtual AI tools to skills for AI-exposed tasks. Click nodes for detail panel. Tool sizes scale by task coverage.
-- `ai-tools.ts` — Virtual AI tools layer: 25 tools across 8 categories (generation, analysis, automation, research, communication, design, domain_specific, coding). Maps tool→skill relationships for occupation-specific tool matching.
+- `OccupationDashboard` — **Tabbed layout** (Overview, Tasks, Skills, Tools). Overview shows donut + distribution bars + sector comparison. Tasks shows collapsible category groups with toggles and expandable 3-column explanations. Skills shows competency bars. Tools shows curated AI toolkit. Supports custom tasks. Used by both `/my-role` and `/beruf/:slug`.
+- `AIToolsMap` — Curated AI toolkit: 8 category nodes (writing, analysis, productivity, design, coding, communication, marketing, HR), each with top 3 real-world tools with logos. Click node to expand tool details with descriptions and external links. Relevance-ranked per occupation.
+- `ai-tools.ts` — Curated tools layer: 8 nodes with top 3 real tools each (ChatGPT, Claude, Gemini, Canva, Midjourney, Cursor, GitHub Copilot, Notion, Asana, Otter.ai, Grammarly, HubSpot, Jasper, Personio). Tool logos in `client/public/tool-logos/`. Benchmarks placeholder for future.
 - `DonutChart` — SVG donut with 5 category segments (standalone, also inlined in OccupationDashboard)
 - `OccupationSearch` — Type-ahead search across 540 occupations
 
