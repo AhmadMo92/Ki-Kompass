@@ -18,20 +18,23 @@ interface OccupationDashboardProps {
   occupation: Occupation;
   language: "en" | "de";
   onReset?: () => void;
+  initialDeselected?: Set<string>;
+  initialCustomTasks?: TaskItem[];
+  onBackToTasks?: () => void;
 }
 
 type TabId = "overview" | "tasks" | "skills" | "tools";
 
-export function OccupationDashboard({ occupationKey, occupation, language, onReset }: OccupationDashboardProps) {
+export function OccupationDashboard({ occupationKey, occupation, language, onReset, initialDeselected, initialCustomTasks, onBackToTasks }: OccupationDashboardProps) {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
-  const [deselectedTasks, setDeselectedTasks] = useState<Set<string>>(new Set());
+  const [deselectedTasks, setDeselectedTasks] = useState<Set<string>>(initialDeselected || new Set());
   const [activeSkill, setActiveSkill] = useState<string | null>(null);
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
-  const [showPersonalized, setShowPersonalized] = useState(false);
+  const [showPersonalized, setShowPersonalized] = useState(!!initialDeselected?.size);
   const [showAllSkills, setShowAllSkills] = useState(false);
   const [activeCategory, setActiveCategory] = useState<CategoryLabel | null>(null);
   const [expandedCats, setExpandedCats] = useState<Set<CategoryLabel>>(new Set());
-  const [customTasks, setCustomTasks] = useState<TaskItem[]>([]);
+  const [customTasks, setCustomTasks] = useState<TaskItem[]>(initialCustomTasks || []);
   const [showAddTask, setShowAddTask] = useState(false);
   const [newTaskText, setNewTaskText] = useState("");
   const [newTaskLabel, setNewTaskLabel] = useState<CategoryLabel>("ai_assisted");
@@ -170,6 +173,12 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
               onClick={() => { setShowPersonalized(false); setDeselectedTasks(new Set()); setCustomTasks([]); }}>
               <RotateCcw className="w-3 h-3" />
               {language === "de" ? "Zurücksetzen" : "Reset"}
+            </Button>
+          )}
+          {onBackToTasks && (
+            <Button variant="outline" size="sm" onClick={onBackToTasks} className="gap-1.5" data-testid="edit-tasks-button">
+              <ListChecks className="w-3.5 h-3.5" />
+              {language === "de" ? "Aufgaben bearbeiten" : "Edit Tasks"}
             </Button>
           )}
           {onReset && (
