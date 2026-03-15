@@ -21,6 +21,7 @@ export interface TaskItem {
   label: CategoryLabel;
   score: number;
   skills: string[];
+  confirmed?: boolean;
   explanation?: TaskExplanation;
 }
 

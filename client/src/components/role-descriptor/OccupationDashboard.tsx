@@ -474,7 +474,8 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
                           className={`border-b border-slate-50 transition-all duration-200 ${
                             !active ? 'opacity-20' :
                             isMatched ? 'bg-primary/[0.04]' :
-                            isDimmedBySkill ? 'opacity-20' : ''
+                            isDimmedBySkill ? 'opacity-20' :
+                            !task.confirmed ? 'opacity-40' : ''
                           } ${isTaskExpanded ? 'bg-slate-50/50' : ''}`}
                           data-testid={`task-item-${task.id}`}
                         >
