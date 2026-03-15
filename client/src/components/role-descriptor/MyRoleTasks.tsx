@@ -419,7 +419,7 @@ export function MyRoleTasks() {
                             <label
                               key={task.id}
                               className={`flex items-start gap-3 px-4 py-2 border-b border-slate-50 cursor-pointer hover:bg-slate-50/50 transition-colors ${
-                                !checked ? 'opacity-20' : !task.confirmed ? 'opacity-40' : ''
+                                !checked ? 'opacity-20' : !task.confirmed && !task.id.startsWith('custom-') ? 'opacity-40' : ''
                               }`}
                               data-testid={`task-check-${task.id}`}
                             >

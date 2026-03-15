@@ -475,7 +475,7 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
                             !active ? 'opacity-20' :
                             isMatched ? 'bg-primary/[0.04]' :
                             isDimmedBySkill ? 'opacity-20' :
-                            !task.confirmed ? 'opacity-40' : ''
+                            !task.confirmed && !task.id.startsWith('custom-') ? 'opacity-40' : ''
                           } ${isTaskExpanded ? 'bg-slate-50/50' : ''}`}
                           data-testid={`task-item-${task.id}`}
                         >
