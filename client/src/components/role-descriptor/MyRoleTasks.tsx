@@ -23,6 +23,7 @@ export function MyRoleTasks() {
   const [customTasks, setCustomTasks] = useState<TaskItem[]>([]);
   const [addQuery, setAddQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
   const addInputRef = useRef<HTMLInputElement>(null);
 
   const occupation = useMemo(() => selectedKey ? getOccupation(selectedKey) : undefined, [selectedKey]);
@@ -40,7 +41,13 @@ export function MyRoleTasks() {
     if (occupation) setStep(2);
   };
 
-  const handleContinue = () => setStep(3);
+  const handleContinue = () => {
+    setIsAnalyzing(true);
+    setTimeout(() => {
+      setIsAnalyzing(false);
+      setStep(3);
+    }, 1800);
+  };
 
   const handleReset = () => {
     setStep(1);
@@ -445,15 +452,45 @@ export function MyRoleTasks() {
                     <ArrowLeft className="w-4 h-4" />
                     {language === "de" ? "Zurück" : "Back"}
                   </Button>
-                  <Button size="lg" onClick={handleContinue} className="px-8 gap-2" data-testid="continue-to-analysis">
-                    {language === "de"
-                      ? `Mit ${selectedCount} Aufgaben analysieren`
-                      : `Analyze ${selectedCount} tasks`}
-                    <ArrowRight className="w-4 h-4" />
+                  <Button size="lg" onClick={handleContinue} disabled={isAnalyzing} className="px-8 gap-2" data-testid="continue-to-analysis">
+                    {isAnalyzing ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        {language === "de" ? "Analysiere..." : "Analyzing..."}
+                      </>
+                    ) : (
+                      <>
+                        {language === "de"
+                          ? `Mit ${selectedCount} Aufgaben analysieren`
+                          : `Analyze ${selectedCount} tasks`}
+                        <ArrowRight className="w-4 h-4" />
+                      </>
+                    )}
                   </Button>
                 </div>
               </CardContent>
             </Card>
+
+            {isAnalyzing && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm animate-in fade-in duration-300" data-testid="analyzing-overlay">
+                <div className="flex flex-col items-center gap-4 animate-in zoom-in-95 duration-300">
+                  <div className="relative">
+                    <div className="w-16 h-16 rounded-full border-4 border-primary/20 border-t-primary animate-spin" />
+                    <Sparkles className="w-6 h-6 text-primary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                  <div className="text-center">
+                    <p className="text-sm font-semibold text-slate-700">
+                      {language === "de" ? "Analyse läuft..." : "Analyzing your role..."}
+                    </p>
+                    <p className="text-xs text-slate-400 mt-1">
+                      {language === "de"
+                        ? `${selectedCount} Aufgaben werden ausgewertet`
+                        : `Processing ${selectedCount} tasks`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
