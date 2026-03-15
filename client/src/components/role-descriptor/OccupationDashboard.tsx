@@ -9,10 +9,11 @@ import {
 } from "@/lib/data";
 import {
   Brain, X, Zap, Building2, RotateCcw,
-  Sparkles, ChevronDown, Plus, Wrench, LayoutGrid, ListChecks
+  Sparkles, ChevronDown, Plus, Wrench, LayoutGrid, ListChecks, Download
 } from "lucide-react";
 import { AIToolsMap } from "./AIToolsMap";
 import { PeerUsage } from "./PeerUsage";
+import { generateReport } from "@/lib/report-generator";
 
 interface OccupationDashboardProps {
   occupationKey: string;
@@ -188,6 +189,15 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
               {language === "de" ? "Neue Suche" : "New Search"}
             </Button>
           )}
+          <Button
+            size="sm"
+            onClick={() => generateReport({ occupationKey, occupation, activeTasks, allTasks, language })}
+            className="gap-1.5 bg-primary hover:bg-primary/90"
+            data-testid="download-report-button"
+          >
+            <Download className="w-3.5 h-3.5" />
+            {language === "de" ? "PDF Report" : "PDF Report"}
+          </Button>
         </div>
       </div>
 
