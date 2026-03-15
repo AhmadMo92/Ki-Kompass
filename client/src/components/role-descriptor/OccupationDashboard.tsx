@@ -755,7 +755,7 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
 
       {activeTab === "tools" && (
         <div className="animate-in fade-in duration-200" data-testid="tab-tools-content">
-          <AIToolsMap tasks={allTasks} language={language} />
+          <AIToolsMap tasks={allTasks} language={language} occupationKey={occupationKey} />
         </div>
       )}
     </div>
