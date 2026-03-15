@@ -12,6 +12,7 @@ import {
   Sparkles, ChevronDown, Plus, Wrench, LayoutGrid, ListChecks
 } from "lucide-react";
 import { AIToolsMap } from "./AIToolsMap";
+import { PeerUsage } from "./PeerUsage";
 
 interface OccupationDashboardProps {
   occupationKey: string;
@@ -754,7 +755,8 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
       )}
 
       {activeTab === "tools" && (
-        <div className="animate-in fade-in duration-200" data-testid="tab-tools-content">
+        <div className="animate-in fade-in duration-200 space-y-4" data-testid="tab-tools-content">
+          <PeerUsage sector={occupation.sector} language={language} />
           <AIToolsMap tasks={allTasks} language={language} occupationKey={occupationKey} />
         </div>
       )}
