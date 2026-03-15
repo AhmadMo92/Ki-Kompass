@@ -92,7 +92,7 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
   const [showPersonalized, setShowPersonalized] = useState(false);
   const [showAllSkills, setShowAllSkills] = useState(false);
   const [activeCategory, setActiveCategory] = useState<CategoryLabel | null>(null);
-  const [expandedCats, setExpandedCats] = useState<Set<CategoryLabel>>(new Set(CATEGORY_ORDER));
+  const [expandedCats, setExpandedCats] = useState<Set<CategoryLabel>>(new Set());
   const [customTasks, setCustomTasks] = useState<TaskItem[]>([]);
   const [showAddTask, setShowAddTask] = useState(false);
   const [newTaskText, setNewTaskText] = useState("");
