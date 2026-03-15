@@ -5,6 +5,12 @@ export type CategoryLabel = "automatable" | "high_ai_potential" | "sensitive" | 
 
 export type SkillCategory = "cognitive" | "social" | "digital" | "operational" | "domain" | "technical";
 
+export interface TaskExplanation {
+  what_it_means: string;
+  why_it_fits: string;
+  what_stays_human: string;
+}
+
 export interface TaskItem {
   id: string;
   text_de: string;
@@ -12,6 +18,7 @@ export interface TaskItem {
   label: CategoryLabel;
   score: number;
   skills: string[];
+  explanation?: TaskExplanation;
 }
 
 export interface SkillInfo {
@@ -57,48 +64,48 @@ export const CATEGORIES: Record<CategoryLabel, {
     color: "#E53935",
     bg: "#FFEBEE",
     emoji: "🔴",
-    message_de: "KI erledigt das heute schon",
-    message_en: "AI can already do this today",
+    message_de: "KI oder Software kann einen Großteil dieses Workflows übernehmen",
+    message_en: "AI or software can handle much of this workflow",
     order: 1
   },
   high_ai_potential: {
-    label_de: "Hohes KI-Potenzial",
-    label_en: "High AI Potential",
+    label_de: "KI und etwas von dir",
+    label_en: "AI and a bit of you",
     color: "#F57C00",
     bg: "#FFF3E0",
     emoji: "🟠",
-    message_de: "KI macht das meiste, du steuerst",
-    message_en: "AI does most of it, you steer",
+    message_de: "KI macht den ersten Entwurf — du prüfst und verfeinerst",
+    message_en: "AI does the first pass — you review and refine",
     order: 2
   },
   sensitive: {
-    label_de: "Reguliert / Sensibel",
-    label_en: "Regulated / Sensitive",
+    label_de: "Kontextabhängig",
+    label_en: "Context-dependent",
     color: "#8E24AA",
     bg: "#F3E5F5",
     emoji: "🟣",
-    message_de: "KI könnte, aber Regulierung sagt Nein",
-    message_en: "AI could, but regulation says no",
+    message_de: "KI-Einsatz hängt vom regulatorischen Kontext ab",
+    message_en: "AI exposure depends on regulatory context",
     order: 3
   },
   ai_assisted: {
-    label_de: "KI-unterstützt",
-    label_en: "AI-Assisted",
+    label_de: "Du und etwas KI",
+    label_en: "You and a bit of AI",
     color: "#F9A825",
     bg: "#FFFDE7",
     emoji: "🟡",
-    message_de: "KI hilft dir, du führst",
-    message_en: "AI helps you, you lead",
+    message_de: "Du entscheidest — KI hilft dir schneller zu werden",
+    message_en: "You decide — AI helps speed things up",
     order: 4
   },
   human_led: {
     label_de: "Menschlich geführt",
-    label_en: "Human Led",
+    label_en: "Human-driven",
     color: "#43A047",
     bg: "#E8F5E9",
     emoji: "🟢",
-    message_de: "Das bleibt Menschenarbeit",
-    message_en: "This stays human work",
+    message_de: "Du führst — KI unterstützt im Hintergrund",
+    message_en: "You lead — AI supports in the background",
     order: 5
   }
 };

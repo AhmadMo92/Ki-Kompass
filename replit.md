@@ -34,13 +34,17 @@ Build script skips MOD_ tasks for occupations that already have BN_ tasks.
 | sensitive | 114 | 1.9% |
 
 ## 5-Category System
-| Category | Color | Description |
-|---|---|---|
-| `automatable` | #E53935 (red) | AI can already do this |
-| `high_ai_potential` | #F57C00 (orange) | AI does most, you steer |
-| `sensitive` | #8E24AA (purple) | AI could, but regulation says no |
-| `ai_assisted` | #F9A825 (yellow) | AI helps, you lead |
-| `human_led` | #43A047 (green) | Human Led |
+| Category | Label EN | Label DE | Color | Micro-label |
+|---|---|---|---|---|
+| `automatable` | Automatable | Automatisierbar | #E53935 (red) | AI or software can handle much of this workflow |
+| `high_ai_potential` | AI and a bit of you | KI und etwas von dir | #F57C00 (orange) | AI does the first pass — you review and refine |
+| `sensitive` | Context-dependent | Kontextabhängig | #8E24AA (purple) | AI exposure depends on regulatory context |
+| `ai_assisted` | You and a bit of AI | Du und etwas KI | #F9A825 (yellow) | You decide — AI helps speed things up |
+| `human_led` | Human-driven | Menschlich geführt | #43A047 (green) | You lead — AI supports in the background |
+
+Task explanations (154 tasks across 10 test occupations) have 3-part structure: `what_it_means`, `why_it_fits`, `what_stays_human`. These render as expandable 3-column cards in the task list.
+
+Global directional note appears above task list: "These labels are directional, not absolute..."
 
 ## Skills Layer (6 Categories, 119 total)
 | Category | Count | Color |

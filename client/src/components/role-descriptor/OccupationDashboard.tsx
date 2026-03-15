@@ -97,6 +97,7 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
   const [showAddTask, setShowAddTask] = useState(false);
   const [newTaskText, setNewTaskText] = useState("");
   const [newTaskLabel, setNewTaskLabel] = useState<CategoryLabel>("ai_assisted");
+  const [expandedTaskId, setExpandedTaskId] = useState<string | null>(null);
   const skillBarRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const allTasks = useMemo(() => [...occupation.tasks, ...customTasks], [occupation.tasks, customTasks]);
@@ -519,6 +520,11 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
             </div>
           )}
 
+          <div className="px-4 py-2 text-[11px] text-slate-400 bg-slate-50/80 border-b border-slate-100 leading-relaxed italic">
+            {language === "de"
+              ? "Diese Labels sind Richtwerte, nicht absolut. Das Verhältnis zwischen Mensch und KI kann je nach Kontext, Tools und Verantwortung variieren."
+              : "These labels are directional, not absolute. The balance between human and AI work can vary by context, tools, and level of responsibility."}
+          </div>
           <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 380px)', minHeight: 350 }}>
             {CATEGORY_ORDER.map(cat => {
               const catTasks = allTasks.filter(t => t.label === cat);
@@ -547,18 +553,23 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
                     const isMatched = matchedTaskIds ? matchedTaskIds.has(task.id) : false;
                     const isDimmedBySkill = matchedTaskIds && !isMatched;
                     const taskSkills = task.skills || [];
+                    const hasExp = !!(task.explanation?.what_it_means);
+                    const isTaskExpanded = expandedTaskId === task.id;
 
                     return (
                       <div
                         key={task.id}
-                        className={`px-4 py-2 border-b border-slate-50 transition-all duration-200 ${
+                        className={`border-b border-slate-50 transition-all duration-200 ${
                           !active ? 'opacity-20' :
                           isMatched ? 'bg-primary/[0.04]' :
                           isDimmedBySkill ? 'opacity-20' : ''
-                        }`}
+                        } ${isTaskExpanded ? 'bg-slate-50/50' : ''}`}
                         data-testid={`task-item-${task.id}`}
                       >
-                        <div className="flex items-start gap-2">
+                        <div
+                          className={`px-4 py-2 flex items-start gap-2 ${hasExp ? 'cursor-pointer hover:bg-slate-50/60' : ''}`}
+                          onClick={() => hasExp && setExpandedTaskId(isTaskExpanded ? null : task.id)}
+                        >
                           <div className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5" style={{ backgroundColor: catConfig.color }} />
                           <div className="flex-1 min-w-0">
                             <span className={`text-xs leading-relaxed ${
@@ -611,13 +622,37 @@ export function OccupationDashboard({ occupationKey, occupation, language, onRes
                               </div>
                             )}
                           </div>
-                          <Switch
-                            checked={active}
-                            onCheckedChange={() => handleToggleTask(task.id)}
-                            className="shrink-0 scale-[0.65]"
-                            data-testid={`task-toggle-${task.id}`}
-                          />
+                          <div className="flex items-center gap-1 shrink-0">
+                            {hasExp && (
+                              <ChevronDown className={`w-3 h-3 text-slate-300 transition-transform duration-200 ${isTaskExpanded ? 'rotate-180' : ''}`} />
+                            )}
+                            <Switch
+                              checked={active}
+                              onCheckedChange={() => handleToggleTask(task.id)}
+                              onClick={(e) => e.stopPropagation()}
+                              className="shrink-0 scale-[0.65]"
+                              data-testid={`task-toggle-${task.id}`}
+                            />
+                          </div>
                         </div>
+                        {isTaskExpanded && task.explanation && (
+                          <div className="px-4 pb-3 pt-1 border-t border-slate-100/60 bg-slate-50/40 animate-in fade-in slide-in-from-top-1 duration-200">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                              {[
+                                { key: 'what_it_means', title: language === 'de' ? 'Was das bedeutet' : 'What this means' },
+                                { key: 'why_it_fits', title: language === 'de' ? 'Warum diese Kategorie' : 'Why it fits here' },
+                                { key: 'what_stays_human', title: language === 'de' ? 'Was menschlich bleibt' : 'What stays human' },
+                              ].map(col => (
+                                <div key={col.key}>
+                                  <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400 mb-1">{col.title}</div>
+                                  <div className="text-[11px] text-slate-600 leading-relaxed">
+                                    {(task.explanation as Record<string, string>)[col.key]}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     );
                   })}
