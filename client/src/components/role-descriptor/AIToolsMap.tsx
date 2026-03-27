@@ -5,6 +5,138 @@ import {
 } from "@/lib/data";
 import { Bot, ExternalLink, ChevronDown, Sparkles, TrendingUp, Building2 } from "lucide-react";
 
+const TOOL_LOGO_DOMAINS: Record<string, string> = {
+  "ChatGPT":                  "openai.com",
+  "Claude":                   "anthropic.com",
+  "Claude Code":              "anthropic.com",
+  "Gemini":                   "google.com",
+  "GitHub Copilot":           "github.com",
+  "GitHub Actions":           "github.com",
+  "Cursor":                   "cursor.sh",
+  "Perplexity":               "perplexity.ai",
+  "Phind":                    "phind.com",
+  "Stack Overflow AI":        "stackoverflow.com",
+  "Notion AI":                "notion.so",
+  "Asana":                    "asana.com",
+  "Asana Intelligence":       "asana.com",
+  "Monday AI":                "monday.com",
+  "Jira AI":                  "atlassian.com",
+  "Trello AI":                "trello.com",
+  "Linear":                   "linear.app",
+  "MS Project Copilot":       "microsoft.com",
+  "Meisterplan":              "meisterplan.com",
+  "Planday AI":               "planday.com",
+  "Microsoft Copilot":        "microsoft.com",
+  "Microsoft Teams Copilot":  "microsoft.com",
+  "Excel Copilot":            "microsoft.com",
+  "Power BI Copilot":         "microsoft.com",
+  "Canva AI":                 "canva.com",
+  "Canva":                    "canva.com",
+  "Midjourney":               "midjourney.com",
+  "Adobe Firefly":            "adobe.com",
+  "Runway ML":                "runwayml.com",
+  "Synthesia":                "synthesia.io",
+  "Descript":                 "descript.com",
+  "Frame.io":                 "frame.io",
+  "Beautiful.ai":             "beautiful.ai",
+  "Gamma":                    "gamma.app",
+  "Genially":                 "genial.ly",
+  "Grammarly":                "grammarly.com",
+  "DeepL":                    "deepl.com",
+  "DeepL Write":              "deepl.com",
+  "Google Translate":         "google.com",
+  "Lokalise":                 "lokalise.com",
+  "Phrase AI":                "phrase.com",
+  "Otter.ai":                 "otter.ai",
+  "Fireflies":                "fireflies.ai",
+  "Loom AI":                  "loom.com",
+  "Zoom AI":                  "zoom.us",
+  "Riverside AI":             "riverside.fm",
+  "HubSpot AI":               "hubspot.com",
+  "HubSpot Content AI":       "hubspot.com",
+  "Jasper AI":                "jasper.ai",
+  "Surfer SEO":               "surferseo.com",
+  "Salesforce Einstein":      "salesforce.com",
+  "Intercom Fin":             "intercom.com",
+  "Pipedrive AI":             "pipedrive.com",
+  "Gong AI":                  "gong.io",
+  "Tableau AI":               "tableau.com",
+  "Julius AI":                "julius.ai",
+  "Rows AI":                  "rows.com",
+  "Amplitude":                "amplitude.com",
+  "Mixpanel":                 "mixpanel.com",
+  "Google Analytics AI":      "google.com",
+  "ThoughtSpot":              "thoughtspot.com",
+  "Causal":                   "causal.app",
+  "Databricks AI":            "databricks.com",
+  "Grafana AI":               "grafana.com",
+  "Minitab":                  "minitab.com",
+  "MATLAB AI":                "mathworks.com",
+  "SPSS AI":                  "ibm.com",
+  "NVivo AI":                 "lumivero.com",
+  "NotebookLM":               "google.com",
+  "Elicit":                   "elicit.org",
+  "Consensus":                "consensus.app",
+  "Semantic Scholar":         "semanticscholar.org",
+  "Citavi AI":                "citavi.com",
+  "Zotero AI":                "zotero.org",
+  "JSTOR AI":                 "jstor.org",
+  "AlphaSense":               "alpha-sense.com",
+  "Feedly AI":                "feedly.com",
+  "PubMed AI":                "ncbi.nlm.nih.gov",
+  "Harvey AI":                "harvey.ai",
+  "Luminance":                "luminance.com",
+  "Kira Systems":             "kirasystems.com",
+  "Westlaw Edge AI":          "thomsonreuters.com",
+  "Ironclad":                 "ironcladapp.com",
+  "DocuSign":                 "docusign.com",
+  "DocuSign IAM":             "docusign.com",
+  "HireVue":                  "hirevue.com",
+  "Eightfold AI":             "eightfold.ai",
+  "Textio":                   "textio.com",
+  "Personio":                 "personio.de",
+  "Zapier AI":                "zapier.com",
+  "UiPath":                   "uipath.com",
+  "Automation Anywhere":      "automationanywhere.com",
+  "n8n AI":                   "n8n.io",
+  "SAP AI":                   "sap.com",
+  "Autodesk AI":              "autodesk.com",
+  "Siemens NX AI":            "siemens.com",
+  "Siemens Opcenter":         "siemens.com",
+  "Ansys AI":                 "ansys.com",
+  "CrowdStrike Charlotte":    "crowdstrike.com",
+  "Darktrace":                "darktrace.com",
+  "Snyk AI":                  "snyk.io",
+  "Nuance DAX":               "nuance.com",
+  "Ada Health":               "ada.com",
+  "PathAI":                   "pathai.com",
+  "Blue Yonder":              "blueyonder.com",
+  "Coupa AI":                 "coupa.com",
+  "FourKites":                "fourkites.com",
+  "Google Classroom":         "google.com",
+  "Sudowrite":                "sudowrite.com",
+  "Writefull":                "writefull.com",
+  "Jupyter AI":               "jupyter.org",
+};
+
+function ToolLogo({ name, fallbackIcon }: { name: string; fallbackIcon: string }) {
+  const [failed, setFailed] = useState(false);
+  const domain = TOOL_LOGO_DOMAINS[name];
+
+  if (!domain || failed) {
+    return <span className="text-sm">{fallbackIcon}</span>;
+  }
+
+  return (
+    <img
+      src={`https://logo.clearbit.com/${domain}`}
+      alt={name}
+      className="w-5 h-5 object-contain rounded"
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
 interface AIToolsMapProps {
   tasks: TaskItem[];
   language: "en" | "de";
@@ -137,8 +269,8 @@ export function AIToolsMap({ tasks, language, occupationKey }: AIToolsMapProps) 
                         className="flex items-center gap-3 p-2.5 rounded-xl bg-white border border-slate-100 hover:border-slate-200 hover:shadow-sm transition-all group"
                         data-testid={`tool-example-${rec.toolTypeId}-${i}`}
                       >
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 flex items-center justify-center text-sm shrink-0">
-                          {rec.toolType.icon}
+                        <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shrink-0">
+                          <ToolLogo name={toolName} fallbackIcon={rec.toolType.icon} />
                         </div>
                         <div className="flex-1 min-w-0">
                           <span className="text-xs font-semibold text-slate-700">{toolName}</span>
