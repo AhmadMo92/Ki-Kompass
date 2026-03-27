@@ -5,20 +5,32 @@ import {
 } from "@/lib/data";
 import { Bot, ExternalLink, ChevronDown, Sparkles, TrendingUp, Building2 } from "lucide-react";
 
-const TOOL_LOGO_DOMAINS: Record<string, string> = {
-  "ChatGPT":                  "openai.com",
-  "Claude":                   "anthropic.com",
-  "Claude Code":              "anthropic.com",
-  "Gemini":                   "google.com",
-  "GitHub Copilot":           "github.com",
-  "GitHub Actions":           "github.com",
-  "Cursor":                   "cursor.sh",
+const LOCAL_LOGOS: Record<string, string> = {
+  "ChatGPT":              "/tool-logos/chatgpt.webp",
+  "Claude":               "/tool-logos/claude.png",
+  "Claude Code":          "/tool-logos/claude.png",
+  "Gemini":               "/tool-logos/gemini.png",
+  "GitHub Copilot":       "/tool-logos/github.png",
+  "GitHub Actions":       "/tool-logos/github.png",
+  "Cursor":               "/tool-logos/cursor.jpeg",
+  "Notion AI":            "/tool-logos/notion.png",
+  "Asana":                "/tool-logos/asana.png",
+  "Asana Intelligence":   "/tool-logos/asana.png",
+  "Canva AI":             "/tool-logos/canva.jpeg",
+  "Canva":                "/tool-logos/canva.jpeg",
+  "Midjourney":           "/tool-logos/midjourney.png",
+  "Grammarly":            "/tool-logos/grammarly.png",
+  "HubSpot AI":           "/tool-logos/hubspot.webp",
+  "HubSpot Content AI":   "/tool-logos/hubspot.webp",
+  "Jasper AI":            "/tool-logos/jasper.png",
+  "Otter.ai":             "/tool-logos/otter.png",
+  "Personio":             "/tool-logos/personio.png",
+};
+
+const CLEARBIT_DOMAINS: Record<string, string> = {
   "Perplexity":               "perplexity.ai",
   "Phind":                    "phind.com",
   "Stack Overflow AI":        "stackoverflow.com",
-  "Notion AI":                "notion.so",
-  "Asana":                    "asana.com",
-  "Asana Intelligence":       "asana.com",
   "Monday AI":                "monday.com",
   "Jira AI":                  "atlassian.com",
   "Trello AI":                "trello.com",
@@ -30,9 +42,6 @@ const TOOL_LOGO_DOMAINS: Record<string, string> = {
   "Microsoft Teams Copilot":  "microsoft.com",
   "Excel Copilot":            "microsoft.com",
   "Power BI Copilot":         "microsoft.com",
-  "Canva AI":                 "canva.com",
-  "Canva":                    "canva.com",
-  "Midjourney":               "midjourney.com",
   "Adobe Firefly":            "adobe.com",
   "Runway ML":                "runwayml.com",
   "Synthesia":                "synthesia.io",
@@ -41,20 +50,15 @@ const TOOL_LOGO_DOMAINS: Record<string, string> = {
   "Beautiful.ai":             "beautiful.ai",
   "Gamma":                    "gamma.app",
   "Genially":                 "genial.ly",
-  "Grammarly":                "grammarly.com",
   "DeepL":                    "deepl.com",
   "DeepL Write":              "deepl.com",
   "Google Translate":         "google.com",
   "Lokalise":                 "lokalise.com",
   "Phrase AI":                "phrase.com",
-  "Otter.ai":                 "otter.ai",
   "Fireflies":                "fireflies.ai",
   "Loom AI":                  "loom.com",
   "Zoom AI":                  "zoom.us",
   "Riverside AI":             "riverside.fm",
-  "HubSpot AI":               "hubspot.com",
-  "HubSpot Content AI":       "hubspot.com",
-  "Jasper AI":                "jasper.ai",
   "Surfer SEO":               "surferseo.com",
   "Salesforce Einstein":      "salesforce.com",
   "Intercom Fin":             "intercom.com",
@@ -94,7 +98,6 @@ const TOOL_LOGO_DOMAINS: Record<string, string> = {
   "HireVue":                  "hirevue.com",
   "Eightfold AI":             "eightfold.ai",
   "Textio":                   "textio.com",
-  "Personio":                 "personio.de",
   "Zapier AI":                "zapier.com",
   "UiPath":                   "uipath.com",
   "Automation Anywhere":      "automationanywhere.com",
@@ -121,15 +124,18 @@ const TOOL_LOGO_DOMAINS: Record<string, string> = {
 
 function ToolLogo({ name, fallbackIcon }: { name: string; fallbackIcon: string }) {
   const [failed, setFailed] = useState(false);
-  const domain = TOOL_LOGO_DOMAINS[name];
 
-  if (!domain || failed) {
+  const localSrc = LOCAL_LOGOS[name];
+  const clearbitDomain = CLEARBIT_DOMAINS[name];
+  const src = localSrc || (clearbitDomain ? `https://logo.clearbit.com/${clearbitDomain}` : null);
+
+  if (!src || failed) {
     return <span className="text-sm">{fallbackIcon}</span>;
   }
 
   return (
     <img
-      src={`https://logo.clearbit.com/${domain}`}
+      src={src}
       alt={name}
       className="w-5 h-5 object-contain rounded"
       onError={() => setFailed(true)}
